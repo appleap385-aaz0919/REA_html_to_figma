@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "timezone": "Asia/Seoul",
+  "status": "all_markdown_files_read_in_full",
+  "request": "세션 인계 문서와 모든 Markdown 파일을 끝까지 읽고 다음 작업을 이어갈 수 있도록 준비합니다.",
+  "scope": {
+    "root": ".",
+    "includeHidden": true,
+    "includeIgnored": true,
+    "extensionCaseInsensitive": true,
+    "expectedMarkdownFileCount": 41,
+    "readingMethod": "직접 전체 본문을 읽었습니다. 긴 파일은 빈틈없는 연속 구간으로 나눴고 잘린 출력은 다시 읽었습니다.",
+    "referencedArtifacts": "Markdown 본문 전체를 읽었으며 연결된 비Markdown 원본 전체를 재검사하거나 라이브 동작을 재검증한 것은 아닙니다."
+  },
+  "authoritativeFiles": {
+    "handoff": "docs/SESSION_HANDOFF.md",
+    "workHistory": "docs/WORK_HISTORY.md",
+    "sessionIndex": "docs/investigation-history.json",
+    "storyboardDelivery": "design-specs/figma-storyboard-revision-delivery.json",
+    "storyboardResume": "design-specs/revision-resume-state.json",
+    "storyboardAudit": "design-specs/revision-figma-audit.json",
+    "cmsResume": "cms-knowledge/master-cms/resume-state.json",
+    "cmsKnowledge": "cms-knowledge/master-cms/knowledge.json",
+    "latestCmsSession": "cms-knowledge/master-cms/session-20261111-phase77.json",
+    "latestCmsCoverage": "cms-knowledge/master-cms/coverage-supplement-20261111-phase77.json"
+  },
+  "resume": {
+    "status": "storyboard_ready_for_user_review",
+    "next": "사용자 검토 의견을 받으면 현재 Figma v0.4의 해당 기존 노드를 수정합니다.",
+    "figmaMasterIndexUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-20632",
+    "baseScreens": 30,
+    "popupComponents": 52,
+    "popupUiVariants": 71,
+    "preciseControls": 302,
+    "mappedSourceStates": 373,
+    "explicitScreenTransitions": 44,
+    "lastCmsEvidence": "3473-paper1094-reversed-range-final-independent-readback",
+    "confirmedMasterOperations": 95,
+    "paper1094": {
+      "detailId": 1191,
+      "status": "R",
+      "pages": [
+        1,
+        1
+      ],
+      "usage": "C",
+      "memberItemIds": [
+        2089238
+      ]
+    },
+    "copy2089239": {
+      "detailId": 2089104,
+      "status": "N"
+    },
+    "freshBrowserObservationRequiredBeforeScreenWork": true
+  },
+  "interpretationRules": [
+    "과거 중단 기록보다 최신 delivery·resume·기능별 근거를 우선합니다.",
+    "초기 research의 미검증 표시는 당시 범위입니다. 후속 세션에서 확인된 동작을 다시 미실행으로 분류하지 않습니다.",
+    "phase69의 조사 제안 8개는 phase70~77에서 후속 확인됐습니다.",
+    "사용자가 프로젝트 폴더명을 직접 변경했습니다. Markdown의 이전 절대 링크 1,891곳은 현재 폴더로 수정했으며 다른 형식의 과거 경로는 현재 저장소의 상대 경로로 대응합니다.",
+    "HML 편집기 저장·CMS 임시저장·전체반영, HTML·HML·저장 OMR, 문서 상태·검수 판정·Master 상태를 구분합니다.",
+    "현재 쌍둥이 관계와 생성 이력, 논리 세트와 쌍둥이 세트 수를 구분합니다.",
+    "관측·소스 선언·추론·미검증을 구분하며 DOM이나 이미지 로드를 픽셀 검토로 대체하지 않습니다.",
+    "해석 HML과 정상 Definition 세트 ZIP은 표본이 없다는 답변이 완료됐으며 사용자 응답 대기가 아닙니다."
+  ],
+  "knownObservedIssues": [
+    "오래된 수정폼에서 미수정 필드의 과거 값이 선행 저장값을 덮어쓴 재현이 있습니다.",
+    "같은 지문 형제의 쌍둥이 추가는 활성 후보로 표시된 뒤 500을 반환했고 오류가 비활성 탭에 숨었습니다.",
+    "HML 미저장 문제에서 해답으로 갔다 돌아오면 경고 없이 입력이 사라진 재현이 있습니다.",
+    "평가지 1094의 2~1 역전 페이지 범위는 저장됐으며 즉시 1~1로 복구됐습니다.",
+    "이 기록들은 근본 원인 규명이나 제품 정책 승인, 수정 후 회귀 통과를 뜻하지 않습니다."
+  ],
+  "unverified": [
+    "실제 해석 HML 파일의 편집·저장",
+    "정상 Definition 세트 ZIP의 등록·검수 및 혼합 검수",
+    "다른 계정 역할의 권한 차이와 일부 오류 상황",
+    "서버 내부 구현·DB 전체 정책",
+    "Service CMS의 배포 수신과 실제 학습자 채점"
+  ],
+  "activityDuringRead": {
+    "browserConnectionAttempted": false,
+    "browserUiChanged": false,
+    "cmsServerWrites": 0,
+    "figmaChanged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1755,
+      "lines": 14,
+      "sha256": "62dc7c483f5ee2f500ce2e6c7ab4785d80ddfa42b7191b5656448009b4ac7701",
+      "readInFull": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 1176,
+      "lines": 17,
+      "sha256": "b2054b5af8833ef47265c0b37eb2a96a8a13f1297d1ed4bf3fcdb50c374c407e",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/PAUSED-20261109-2235.md",
+      "bytes": 2278,
+      "lines": 15,
+      "sha256": "019262584bed5734e61fc50d48f524d727e44c0ab17a84bc855fa130023ad891",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/copied-set-shared-hml-file-isolation-20261110.md",
+      "bytes": 16333,
+      "lines": 71,
+      "sha256": "8bf5753adb397dda34001702bdb9f0746471eb0b905a1cbbc7012ee6437ab42b",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/copied-set-shared-html-temp-isolation-20261110.md",
+      "bytes": 13840,
+      "lines": 59,
+      "sha256": "801e322684982aac5dcfcbe31748caf3e1bff59b01e15f4b23b3222826047267",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-image-resources-roundtrip-20261110.md",
+      "bytes": 14203,
+      "lines": 73,
+      "sha256": "e407affc414150a0350ee56468e58f180d355e04adb8cbfebe26fd766b8f23a1",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-input-schema-review-20261110.md",
+      "bytes": 18059,
+      "lines": 150,
+      "sha256": "2340b787da8ee8ead32bb0dac79fc115fb2e9de4a53986028a61d0d8909a32ce",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-multi-review-preflight-20261110.md",
+      "bytes": 21655,
+      "lines": 107,
+      "sha256": "0617dabbfe92517cae241b24155ac7c7ceeeb9ab1b9529e299245d3ed2d58534",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-multi3-failure-static-review-20261110.md",
+      "bytes": 18287,
+      "lines": 160,
+      "sha256": "e9398cf7d750cab843e8d8a060eb148adadf2bd897b6c6bb160ab4dd94020b7d",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-qa-processing-review-20261109.md",
+      "bytes": 23248,
+      "lines": 88,
+      "sha256": "98be1041166d4718dac137c9ad9b3e4a9844219289b4af26628e99e0ca9fcbb6",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-resources-input-schema-20261110.md",
+      "bytes": 15698,
+      "lines": 153,
+      "sha256": "c897196ebc0c345954bbc8869738e26ee2b36803b667cc53be1e26c7b102919c",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-short-answer-type-policy-20261110.md",
+      "bytes": 13391,
+      "lines": 126,
+      "sha256": "ca1049254ba82ee1f01a3eaeb47b40f46f23397326dbaf321913911dcd2c977d",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+      "bytes": 15853,
+      "lines": 89,
+      "sha256": "ef780841cafa819752e2b182c792541435d4e8a6e3fabae7f215a51d1f25995b",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-state-review-20261109.md",
+      "bytes": 28743,
+      "lines": 88,
+      "sha256": "cabc02430ea355c73c73b393afc33a8ae196b6cbd57e32e31982e62e1c4a87a7",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+      "bytes": 13602,
+      "lines": 110,
+      "sha256": "9ad141bce349f4528f7b79597033fbad48f89c3cc30e8e12044e74b40e6c8ff6",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/hml-explanation-copy-isolation-direct-fullapply-20261110.md",
+      "bytes": 15611,
+      "lines": 110,
+      "sha256": "bfb311fdfcb93889286802354de34e54604d1015da18a21c1fd79ed11f625004",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/hml666-shared-passage-save-policy-20261110.md",
+      "bytes": 46786,
+      "lines": 173,
+      "sha256": "d39aefc02658ffad886dfa34d63f6aa7de243be2892235e00832d9e0d384d7e2",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/item-concurrent-edit-overwrite-20261110.md",
+      "bytes": 17508,
+      "lines": 69,
+      "sha256": "a8ee28437f58f29df76ed0b0d489abef56d1a93c1499633a0507725a6b90bbf1",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/item-temporary-save-policy-20261110.md",
+      "bytes": 15925,
+      "lines": 58,
+      "sha256": "8d6fdb2cf8e60b60fbbe26212609c10ef12d65382d12d9f4a5fb391a7bce7962",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/master-status-policy-review-20261109.md",
+      "bytes": 20719,
+      "lines": 87,
+      "sha256": "3b88098fc46c839f4d34995e8883f030e96a2390604629c4261b390ef00b834e",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/master-status-unused-and-discard-policy-20261110.md",
+      "bytes": 14150,
+      "lines": 57,
+      "sha256": "1c62ec4e7f6040e555071948ef771073edc7a8d543d672992157e6a8be708caa",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/paper1094-manual-set-membership-and-order-policy-20261110.md",
+      "bytes": 16194,
+      "lines": 61,
+      "sha256": "ad1abd0dc7f2e098dcc897ed283949c2750cbacbcf59d9bea247de007de56c94",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/paper1094-native-pointer-drag-policy-20261110.md",
+      "bytes": 12828,
+      "lines": 61,
+      "sha256": "72b60d37c2381b1249289df3fb9c7816589695ac6facc2e186ec60e23b3b1645",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/remaining-actionable-investigation-20261110-phase69.md",
+      "bytes": 13409,
+      "lines": 48,
+      "sha256": "bd0d952f742da6786b037337c1504145865a278ecf86a80cba29f61ef6e2682b",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/definition-registration-behavior.md",
+      "bytes": 67935,
+      "lines": 241,
+      "sha256": "991ac864a9c9626accc00ab7ea0681dbbffd9bcfdd3747ed7ab4d811c7d2f020",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/hml-editor-behavior.md",
+      "bytes": 49838,
+      "lines": 181,
+      "sha256": "44964002625a2b3c880fb5e7b897048c393b2e9b1fbe5d1ffc7f793862a89c06",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/hml-registration-behavior.md",
+      "bytes": 120445,
+      "lines": 396,
+      "sha256": "f36ecfa73893161ef1f45632747c33540e040afc5b6c683223b4716dcf661240",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/html-editor-behavior.md",
+      "bytes": 62147,
+      "lines": 169,
+      "sha256": "2e13a609e9e83e3fa776f851cf0ad9be2d24a1064ac1b861c51b9244a2edcddd",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/item-detail-behavior.md",
+      "bytes": 55078,
+      "lines": 174,
+      "sha256": "f0847728088f77a18d7feb6701dce649f5bf1269d7d924a655da5ecce1429523",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/item-edit-behavior.md",
+      "bytes": 128689,
+      "lines": 420,
+      "sha256": "a6575724cf011ceb3cd9a50926b4d380a69e2ca5fa5e39bc0cbbf9002caf51b9",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/research/item-edit-verification-checklist.md",
+      "bytes": 67695,
+      "lines": 194,
+      "sha256": "15a33b27af7c2d0e5b2a778cad2523e2aeeb143b4393b66830835664feb5a34f",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/set-ai-generation-lineage-and-content-20261110.md",
+      "bytes": 18968,
+      "lines": 187,
+      "sha256": "bd642541a8348a0624d4964654b86e1b5e99105567abfe99050ad7b5b8cf5a19",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/set-review-twin-copy-policy-20261110.md",
+      "bytes": 14917,
+      "lines": 62,
+      "sha256": "e29b03df6c8f1285d0aefe55e245c2e514fd504a5582abbb7e0a06972d45aadb",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/set-twin-membership-and-same-passage-error-20261110.md",
+      "bytes": 15012,
+      "lines": 60,
+      "sha256": "1684408ba84d0359725f962c88e3f043128552e994efd28134b5835259627351",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/set-whole-discard-membership-history-policy-20261110.md",
+      "bytes": 11255,
+      "lines": 80,
+      "sha256": "f36dcaaae8428bbd6a8b6fc6405c248274dd70c1d4e306f419c321b1fd403671",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/single-twin-linked-discard-and-history-policy-20261110.md",
+      "bytes": 12618,
+      "lines": 106,
+      "sha256": "23cd92090c2aa750a454cc66302c61b0371763b28c7a4fc1f60b9a76ac12fc77",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md",
+      "bytes": 25164,
+      "lines": 93,
+      "sha256": "39c8a7f28b9874b8182a01dcb3cc769e8b895002ffa47950ca82572cd76a0265",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/twin-generation-membership-review-20261109.md",
+      "bytes": 33377,
+      "lines": 123,
+      "sha256": "42b760dcbe7a50f24b5a269755c2df6bf58933bb79efe7e9477777a067482c0e",
+      "readInFull": true
+    },
+    {
+      "path": "cms-knowledge/master-cms/two-single-twin-groups-merge-policy-20261110.md",
+      "bytes": 11406,
+      "lines": 105,
+      "sha256": "fff329fb1ca56233710a25843c582824076eececcd2789bb50a12eba79e59e70",
+      "readInFull": true
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "bytes": 14792,
+      "lines": 116,
+      "sha256": "617c07b9dae8f7dbe2059d1efcb1751e683da022f5f5ecede6566d0671f715a0",
+      "readInFull": true
+    },
+    {
+      "path": "docs/WORK_HISTORY.md",
+      "bytes": 5403,
+      "lines": 41,
+      "sha256": "48489facf213e65dce46ad07ca5dc3ebf15d58308f1cfb6cd64dec6ca463ae0e",
+      "readInFull": true
+    }
+  ],
+  "projectDirectory": {
+    "currentRoot": "D:/jaehyuk.myung/claude_demo/Demo_21_출제 마법사_v2_REA",
+    "previousName": "Demo_36_REA_test",
+    "renamedByUser": true,
+    "markdownAbsoluteLinkRepairs": [
+      {
+        "path": "cms-knowledge/master-cms/research/definition-registration-behavior.md",
+        "replacements": 260
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/hml-editor-behavior.md",
+        "replacements": 141
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/hml-registration-behavior.md",
+        "replacements": 475
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/html-editor-behavior.md",
+        "replacements": 192
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/item-detail-behavior.md",
+        "replacements": 210
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/item-edit-behavior.md",
+        "replacements": 472
+      },
+      {
+        "path": "cms-knowledge/master-cms/research/item-edit-verification-checklist.md",
+        "replacements": 141
+      }
+    ]
+  },
+  "markdownFileCount": 41,
+  "totalMarkdownBytes": 1105990,
+  "totalMarkdownLines": 4792,
+  "completedAt": "2026-11-12T10:58:20+09:00",
+  "validation": {
+    "markdownFileCount": 41,
+    "repairedReportsContentUnchangedExceptRoot": true,
+    "absoluteLinksChecked": 1891,
+    "missingAbsoluteLinkTargets": [],
+    "stateJsonParsed": true,
+    "duplicateNewSections": false
+  }
+}
