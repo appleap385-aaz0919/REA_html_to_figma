@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2168-own-qa-twin-copy-final-dialog","command":["eval","--file","sources/runtime/qa2089216-open-twin-dialog.js"]},
+ {"label":"2169-own-qa-twin-copy-baseline-lock","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216'||document.querySelector('#twinCountText').innerText.trim()!=='0개')throw Error('QA twin baseline changed');return {count:document.querySelector('#twinCountText').innerText,selected:document.querySelector('#twinGenerateModal [name=sourceType]:checked').value,modalCount:document.querySelectorAll('.modal.show').length};})()"]},
+ {"label":"2170-own-qa-twin-copy-submit-once","command":["eval","--file","sources/runtime/qa2089216-submit-twin-copy-once.js"]},
+ {"label":"2171-own-qa-twin-copy-post-ui","command":["eval","--file","sources/runtime/hml664-master-item-observation.js"]},
+ {"label":"2172-own-qa-twin-copy-independent-readback","command":["eval","--file","sources/runtime/qa2089216-twin-readback.js"]}
+],"tailChars":350}

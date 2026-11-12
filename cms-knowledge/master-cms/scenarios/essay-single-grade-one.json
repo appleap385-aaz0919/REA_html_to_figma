@@ -1,0 +1,9 @@
+{
+  "steps": [
+    {"label":"819-single-essay-before-grade-one","command":["snapshot"]},
+    {"label":"820-single-essay-student-one","command":["fill","{ref}","1"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- textbox \"답을 작성해 주세요[.]\" \\[ref=(e\\d+)\\]"},
+    {"label":"821-single-essay-grade-one","command":["click","{ref}"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- button \"채점하기\" \\[ref=(e\\d+)\\]"},
+    {"label":"822-single-essay-grade-one-result","command":["snapshot"],"screenshot":true}
+  ],
+  "tailChars":3300
+}

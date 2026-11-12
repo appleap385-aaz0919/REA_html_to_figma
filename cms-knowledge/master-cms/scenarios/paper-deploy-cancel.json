@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1229-paper-deploy-cancel-seed","command":["snapshot"]},
+  {"label":"1230-paper-deploy-cancel","command":["click","{ref}"],"refPattern":"- button \"취소\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1231-paper-undeployed-items-link","command":["get","attr","{ref}","href"],"refPattern":"- link \"미배포 문항 2건 조회\" \\[ref=(e\\d+)\\]","expectMatches":2,"matchIndex":0},
+  {"label":"1232-paper-undeployed-items-open","command":["click","{ref}"],"refPattern":"- link \"미배포 문항 2건 조회\" \\[ref=(e\\d+)\\]","expectMatches":2,"matchIndex":0},
+  {"label":"1233-paper-undeployed-items-action-state","command":["snapshot"]}
+ ],"tailChars":1500
+}

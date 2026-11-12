@@ -1,0 +1,121 @@
+{
+  "steps": [
+    {
+      "label": "3336-own-lab-real-json-visual-select-owned-tab",
+      "command": [
+        "tab",
+        "t21"
+      ]
+    },
+    {
+      "label": "3337-lab-real-2089239-visual-select-type",
+      "command": [
+        "select",
+        "#omrTypeSel",
+        "OBSACN"
+      ]
+    },
+    {
+      "label": "3338-lab-real-2089239-restore-for-visual-documentation",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/omr-render.donga')throw Error('Lab only');const f={\"answer\":{\"allowed_answer\":[{\"case_sensitive\":false,\"space_sensitive\":false,\"value\":\"\\u2463\",\"value_type\":\"text\"}],\"rule_type\":\"VALUE\"},\"httpStatus\":200,\"identity\":\"2089239 (2089104)\",\"itemId\":2089239,\"omr\":[{\"options\":[{\"value\":\"\\u2460\",\"value_type\":\"text\"},{\"value\":\"\\u2461\",\"value_type\":\"text\"},{\"value\":\"\\u2462\",\"value_type\":\"text\"},{\"value\":\"\\u2463\",\"value_type\":\"text\"},{\"value\":\"\\u2464\",\"value_type\":\"text\"}]}],\"questionHeader\":\"\\ubb38\\ud56dID\\n                                2089239\\n                                \\n                                \\uc2b9\\uc778(\\ubbf8\\uc0ac\\uc6a9)\\n                                \\uc911\\n                                \\uac1d\\uad00\\uc2dd > \\ub2e8\\ub2f5\\ud615 > N\\uc9c0 \\uc120\\ub2e4\",\"questionType\":\"OBSACN\",\"viewFlag\":\"N\"};if(document.querySelector('#omrTypeSel').value!==f.questionType||!document.querySelector('#omrSlot [data-omr-code='+f.questionType+']'))throw Error('Matching form required');for(const [id,v] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(v);e.dispatchEvent(new Event('input',{bubbles:true}));}document.querySelector('#omrRestoreBtn').click();document.querySelector('.page-wrapper').scrollTop=0;return {visualDocumentationOnly:true,sourceItemId:f.itemId,type:f.questionType};})()"
+      ]
+    },
+    {
+      "label": "3339-lab-real-2089239-top-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=0;return {sourceItemId:2089239,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3340-lab-real-2089239-bottom-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=p.scrollHeight;return {sourceItemId:2089239,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3341-lab-real-2089242-visual-select-type",
+      "command": [
+        "select",
+        "#omrTypeSel",
+        "SBSANM"
+      ]
+    },
+    {
+      "label": "3342-lab-real-2089242-restore-for-visual-documentation",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/omr-render.donga')throw Error('Lab only');const f={\"answer\":{\"nodes\":[{\"allowed_answer\":[{\"case_sensitive\":false,\"space_sensitive\":false,\"value\":\"2\\\\times1\\\\text{\\ud589\\ub82c}\",\"value_type\":\"math\"}],\"rule_type\":\"VALUE\"}],\"rule_type\":\"ORDERED\"},\"httpStatus\":200,\"identity\":\"2089242 (2089052)\",\"itemId\":2089242,\"omr\":[{\"type\":\"TEXT\"}],\"questionHeader\":\"\\ubb38\\ud56dID\\n                                2089242\\n                                \\n                                \\uc2b9\\uc778(\\uc0ac\\uc6a9)\\n                                \\ucd5c\\ud558\\n                                \\uc8fc\\uad00\\uc2dd > \\ub2e8\\ub2f5\\ud615 > \\uc77c\\ubc18\\ud615\",\"questionType\":\"SBSANM\",\"viewFlag\":\"Y\"};if(document.querySelector('#omrTypeSel').value!==f.questionType||!document.querySelector('#omrSlot [data-omr-code='+f.questionType+']'))throw Error('Matching form required');for(const [id,v] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(v);e.dispatchEvent(new Event('input',{bubbles:true}));}document.querySelector('#omrRestoreBtn').click();document.querySelector('.page-wrapper').scrollTop=0;return {visualDocumentationOnly:true,sourceItemId:f.itemId,type:f.questionType};})()"
+      ]
+    },
+    {
+      "label": "3343-lab-real-2089242-top-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=0;return {sourceItemId:2089242,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3344-lab-real-2089242-bottom-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=p.scrollHeight;return {sourceItemId:2089242,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3345-lab-real-2089382-visual-select-type",
+      "command": [
+        "select",
+        "#omrTypeSel",
+        "SBSANM"
+      ]
+    },
+    {
+      "label": "3346-lab-real-2089382-restore-for-visual-documentation",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/omr-render.donga')throw Error('Lab only');const f={\"answer\":{\"nodes\":[{\"allowed_answer\":[{\"case_sensitive\":false,\"space_sensitive\":false,\"value\":\"2 TIMES 1\\ud589\\ub82c\",\"value_type\":\"text\"}],\"rule_type\":\"VALUE\"}],\"rule_type\":\"ORDERED\"},\"httpStatus\":200,\"identity\":\"2089382 (2089088)\",\"itemId\":2089382,\"omr\":[{\"type\":\"TEXT\"}],\"questionHeader\":\"\\ubb38\\ud56dID\\n                                2089382\\n                                \\n                                \\ucd08\\uc548\\n                                \\ucd5c\\ud558\\n                                \\uc8fc\\uad00\\uc2dd > \\ub2e8\\ub2f5\\ud615 > \\uc77c\\ubc18\\ud615\",\"questionType\":\"SBSANM\",\"viewFlag\":\"R\"};if(document.querySelector('#omrTypeSel').value!==f.questionType||!document.querySelector('#omrSlot [data-omr-code='+f.questionType+']'))throw Error('Matching form required');for(const [id,v] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(v);e.dispatchEvent(new Event('input',{bubbles:true}));}document.querySelector('#omrRestoreBtn').click();document.querySelector('.page-wrapper').scrollTop=0;return {visualDocumentationOnly:true,sourceItemId:f.itemId,type:f.questionType};})()"
+      ]
+    },
+    {
+      "label": "3347-lab-real-2089382-top-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=0;return {sourceItemId:2089382,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3348-lab-real-2089382-bottom-visual",
+      "command": [
+        "eval",
+        "(()=>{const p=document.querySelector('.page-wrapper');if(p.scrollHeight>2*p.clientHeight)throw Error('More frames required');p.scrollTop=p.scrollHeight;return {sourceItemId:2089382,code:document.querySelector('#omrTypeSel').value,top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight,message:document.querySelector('#omrRestoreMsg').innerText};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3349-lab-real-json-final-visual-reset",
+      "command": [
+        "select",
+        "#omrTypeSel",
+        ""
+      ]
+    },
+    {
+      "label": "3350-lab-real-json-after-visual-reset-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-omr-restore-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 120
+}

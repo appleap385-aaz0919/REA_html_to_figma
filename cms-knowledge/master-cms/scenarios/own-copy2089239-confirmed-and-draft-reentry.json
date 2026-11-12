@@ -1,0 +1,9 @@
+{"steps":[
+ {"label":"2434-own-copy2089239-confirmed-cancel-confirmation","command":["eval","--file","sources/runtime/own-copy2089239-confirmed-cancel-open.js"]},
+ {"label":"2435-own-copy2089239-confirmed-leave-without-save","command":["eval","--file","sources/runtime/own-copy2089239-confirmed-leave-without-save.js"]},
+ {"label":"2436-own-copy2089239-draft-retained-after-cancel","command":["eval","--file","sources/runtime/own-copy2089239-draft-check-read.js"]},
+ {"label":"2437-own-copy2089239-draft-choice-reopen","command":["eval","--file","sources/runtime/own-copy2089239-draft-gate-open.js"]},
+ {"label":"2438-own-copy2089239-choose-draft-version","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089239'||!document.querySelector('#draftLoadModal.show'))throw Error('Own draft choice required');const button=document.getElementById('draftEditDraft');if(button.matches(':disabled'))throw Error('Draft choice unavailable');button.click();return {clickedOnce:true,choice:'draft'};})()"]},
+ {"label":"2439-own-copy2089239-draft-version-live-state","command":["eval","--file","sources/runtime/own-copy2089239-live-edit-inspect.js"]},
+ {"label":"2440-own-copy2089239-draft-version-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":250}

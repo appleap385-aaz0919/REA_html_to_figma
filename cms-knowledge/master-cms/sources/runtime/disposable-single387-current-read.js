@@ -1,0 +1,6 @@
+(async()=>{
+ if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');
+ const itemId=2089387,r=await fetch('/item/all/detail.donga?itemId='+itemId,{credentials:'same-origin'});if(!r.ok||r.redirected)throw Error('Own disposable unavailable');
+ const d=new DOMParser().parseFromString(await r.text(),'text/html'),m=d.querySelector('.page-wrapper');
+ return {itemId,httpStatus:r.status,viewFlag:d.querySelector('#statusForm input[name=viewFlag][checked]')?.value,values:[...m.querySelectorAll('dl dt')].map(e=>({label:e.textContent.trim(),value:e.nextElementSibling?.textContent.trim()})),models:[...m.querySelectorAll('.qv-item')].map(e=>({attributes:{...e.dataset},models:[...e.querySelectorAll('script[type="application/json"]')].map(s=>JSON.parse(s.textContent))})),omrPreviews:[...m.querySelectorAll('.omr-preview-btn')].map(e=>({attributes:{...e.dataset}})),images:[...m.querySelectorAll('img')].map(e=>({alt:e.alt,src:e.getAttribute('src')})),statusEditDisabled:d.querySelector('[data-status-edit]')?.disabled,modifyActions:[...m.querySelectorAll('a.btn')].filter(e=>e.getAttribute('href')?.startsWith('/item/all/modify.donga')).map(e=>({text:e.textContent.trim(),href:e.getAttribute('href'),className:e.className,ariaDisabled:e.getAttribute('aria-disabled')}))};
+})()

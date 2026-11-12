@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "label": "2720-definition-five1-form-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"
+      ]
+    },
+    {
+      "label": "2721-definition-five1-zip-select",
+      "command": [
+        "upload",
+        "input.dz-hidden-input",
+        "D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261110-08-FIVE1.zip"
+      ]
+    },
+    {
+      "label": "2722-definition-five1-source13-select",
+      "command": [
+        "select",
+        "select[name=productId]",
+        "13"
+      ]
+    },
+    {
+      "label": "2723-definition-five1-unit20-fill",
+      "command": [
+        "fill",
+        "#unitCodeInput",
+        "22MMAT0KOK1001020000"
+      ]
+    },
+    {
+      "label": "2724-definition-five1-start-page-fill",
+      "command": [
+        "fill",
+        "input[name=startPageNum]",
+        "1"
+      ]
+    },
+    {
+      "label": "2725-definition-five1-end-page-fill",
+      "command": [
+        "fill",
+        "input[name=endPageNum]",
+        "3"
+      ]
+    },
+    {
+      "label": "2726-definition-five1-common-purpose-select",
+      "command": [
+        "select",
+        "select[name=serviceUsage]",
+        "C"
+      ]
+    },
+    {
+      "label": "2727-definition-five1-before-submit-verified",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/definition-five1-before-submit-verify.js"
+      ]
+    }
+  ],
+  "tailChars": 80
+}

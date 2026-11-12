@@ -1,0 +1,33 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_remaining_branches","evidenceRange":[1498,1587],"lastEvidence":"1587-lab-gallery-final-collapsed-state",
+ "summary":"랩 OMR복원 화면의 정상입력·양방향JSON반영·초기화·오류분기와14종기본폼왕복을검증했다. 갤러리의전체/분류별펼침닫기·폭·잠긴복사본동기화·값형식전환·행참조드롭다운수정삭제를실제로확인하고22개중첩스크롤위치로14종전체DOM구간을지났다. 픽셀검토와수식/각유형의모든입력조합은완료하지않았다.",
+ "observations":[
+  {"evidence":[1498,1499,1500],"result":"유형미선택상태에서복원은문항유형을먼저선택하세요경고를표시한다. 유형과두JSON입력은빈값이고실제폼은없다."},
+  {"evidence":[1501,1502,1506,1507],"result":"OBSACN선택은기본5선택지①~⑤·정답미선택폼과해당JSON을생성한다. 폼비우기는선택유형을유지하면서기본폼·기본JSON으로되돌리고기본폼으로되돌렸습니다안내를표시한다. 유형미선택으로돌아가면폼과JSON을모두비운다."},
+  {"evidence":[1503,1504,1505,1519,1520,1521],"result":"문법오류인OMRJSON과정답JSON은각각OMRJSON파싱오류/정답JSON파싱오류를표시하며기존입력폼을유지한다.1505는기본5행유지,1521은Gamma/Beta·정답Gamma를유지했다. 잘못된문자열은해당JSON입력칸에남는다."},
+  {"evidence":[1508,1509,1510,1511],"result":"OMR[{options:[Alpha,Beta]}]와VALUE정답Beta를입력해복원하면2행·Beta정답체크·복원완료가나온다. 최소2행이므로행삭제버튼이비활성화됐다. 직렬화기는정답에case_sensitive:false/space_sensitive:false를포함하는정규형을출력한다."},
+  {"evidence":[1512,1513,1514,1515],"result":"화면에서첫선택지를Gamma로바꾸면OMRJSON이Gamma/Beta로바뀌고정답Beta는유지됐다. 첫라디오를선택하자정답JSON도Gamma로바뀌었다. 복원된라디오는live-접두이름을사용해숨겨진원본폼과구분한다."},
+  {"evidence":[1516,1517,1518],"result":"OMR와정답각Pretty버튼은JSON을정렬하며Gamma/Beta·정답Gamma의의미를유지했다. 문법오류때Pretty의원문유지분기는소스에서확인했으나Pretty버튼으로직접실패를재현하지는않았다."},
+  {"evidence":[1522,1523,1524,1525],"result":"문법은맞지만OBSACN형식과맞지않는OMR[]을복원하면JSON모양이유형과맞지않습니다안내와기본5선택지폼으로돌아간다. 문법오류에서이전폼이유지되는것과처리가다르다. 원래입력한[]과정답JSON은그대로남는다."},
+  {"evidence":[1526,1527,1528,1529],"result":"양쪽JSON을비우고복원하면JSON이비어기본폼을표시합니다안내와5선택지기본폼이보인다. 두JSON입력은빈값을유지한다."},
+  {"evidence":[1530,1531,1532,1533,1534,1535,1536],"result":"넓게보기는col-lg-8→col-12및버튼좁게보기로바뀌었다. ESMA00유형변경은해당기본폼과새JSON으로초기화한다. 선택없음으로변경하면폼·두JSON·메시지를비우고넓게보기상태는유지했다."},
+  {"evidence":[1537,1538],"result":"실제14개유형선택change와복원버튼핸들러를각각실행했다. 모두serialize/hydrate가존재하고복원완료이며생성된기본폼의복원전후정규화JSON이동일했다. 결과·양쪽JSON·각폼DOM은lab-restore-default14-results-20261109.json에보존했다. 이는빈/기본폼왕복시험으로정상문항의모든정답·옵션·예외분기완료를뜻하지않는다."},
+  {"evidence":[1539,1540,1541,1542,1548,1549],"result":"갤러리초기는14종접힘이다. 전체열기는14종모두show,전체닫기는모두닫힘을실제확인했다. 접었다펴도샘플선택지LockProbe와정답선택을유지했다."},
+  {"evidence":[1543,1544,1545,1546,1547],"result":"비활성화보기는14개왼쪽편집폼을유지하고오른쪽에각폼의직렬화값을hydrate한disabledfieldset복사본을만든다. 오른쪽라디오이름은lock-접두라왼쪽과구분된다. OBSACN첫선택지LockProbe·첫정답선택이오른쪽에도동기화되는것을확인했다. MathLive는fieldset만으로잠기지않아소스에서별도disabled속성을설정한다."},
+  {"evidence":[1550,1551,1572,1574],"result":"넓게/좁게로전환하면잠긴복사본이제거되고편집값은유지된다. 좁게는col-lg-8,넓게와비활성화보기는col-12다. 하단시험카드도같은폭영향을받는구성이다."},
+  {"evidence":[1552,1553,1554,1555,1556,1557,1558],"result":"하단값형식시험의정답칸은text/math만허용해image버튼disabled,범례는3종허용,기호는text만허용한다. 정답QA-text를math로전환하면값이빈수식으로바뀌고text로되돌려도빈값이다. 범례를image로전환하면type=url입력이생성되고입력한기존개발CDN이미지URL이value_type:image로덤프에반영됐다. 이미지가실제로로드·표시됐다는픽셀검증은하지않았다."},
+  {"evidence":[1559,1560,1561,1562,1563],"result":"드롭다운원본0/1에Source-A/B를넣고연결A가1을참조하도록한뒤B를Source-B-edited로수정하자참조1은유지되고표시·resolved값만갱신됐다. 연결B는기존0/Source-A를유지했다."},
+  {"evidence":[1564,1565,1566,1567,1568,1569,1570,1571],"result":"원본0삭제후남은행의표시번호는1이지만참조ID1은유지됐다. 삭제된0을참조하던연결B도남은첫행1로선택이바뀌었다. 새행은ID2를부여받고연결B가2를선택할수있다. 선택된2삭제후양쪽은남은1로돌아가며최종한행의삭제버튼은disabled다."},
+  {"evidence":[1573,1574,1575,1576],"result":"14종전체펼침상태에서800px간격으로실제내부스크롤22개위치를이동했다. DOM교차영역집계에14종모두포함됐고최종16555+1071=17626으로끝까지도달했다. 백그라운드탭이라픽셀검토완료로계산하지않는다. 조사중뷰포트높이가1015→1071로바뀌어각증거의실제측정값을사용한다."},
+  {"evidence":[1577,1578,1579,1580,1581,1582,1583,1584,1585,1586,1587],"result":"분류별열기/닫기를실행해객관식4종,주관식7종,서술형3종만각각펼쳐짐을확인했다. 최종모두접힘·전환중인아코디언없음으로관찰됐다."}
+ ],
+ "persistentChanges":{"confirmedMasterOperations":20,"newMasterChangesInThisPhase":0,"localLabInputsOnly":true},
+ "remaining":[
+  "수식데모의실제편집기·블록변환/역변환·수식입력기/키보드/손글씨/placeholder를조사한다.",
+  "OMR갤러리의각14폼내모든분기·모니터/초기화·수식필드·이미지/수식드롭다운렌더·코드복사·잘못된JSON/형태전환의추가조합은남아있다.",
+  "OMR복원의모든14종실제저장정답/복합SET/추가경계입력·Pretty오류·서로어긋난정답값의동작을추가확인한다.",
+  "픽셀캡처문제로남은구간을보완한다. 출처·평가지·HML/Definition·쌍둥이기능의앞선phase잔여항목도이어간다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/lab/view/omr.donga","tab":"t21 research gallery, narrow, all collapsed, local sample values retained","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":"Local lab values only: OBSACN LockProbe first correct, legend image URL, one dropdown source optid1 Source-B-edited. No pending CMS save."},
+ "evidenceLimits":["모든분기또는100%완료를주장하지않는다.","기본폼왕복·소스검사·사용자조작결과·픽셀검토를구분한다.","문항저장정책의본체검증은omr-runtime-coverage.json과앞선phase를함께읽는다."]
+}

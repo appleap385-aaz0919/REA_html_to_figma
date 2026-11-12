@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "evidence_recorded_with_remaining_branches",
+  "evidenceRange": [
+    2456,
+    2494
+  ],
+  "lastEvidence": "2494-own-copy2089239-concurrent-final-visual-state",
+  "summary": "같은 자체 복제문항2089239/detail2089006을 정상 수정화면 두 개에서 열어 동시수정을 재현했다. A가 난이도3→4를 전체반영해2089011이 된 후에도 B는2089006/3을 유지했다. B에서OMR정답만④→⑤로 바꿔 정상 전체반영하자 충돌안내 없이2089013/난이도3/정답⑤로 저장돼 A의난이도4가덮였다. 이후OMR만④로복원해2089019/R/3이됐고표시메타·질문/지문·HML·OMR은phase42기준과버전외동일하다. 새테스트탭t60만닫고원래조사탭을유지했다. 원문/평가지는불변이다. 확정Master업무53회다.",
+  "observations": [
+    {
+      "evidence": [
+        2456,
+        2457,
+        2458,
+        2459,
+        2460,
+        2461,
+        2462
+      ],
+      "result": "기존조사탭A와새자체탭t60/B가같은2089006·난이도3·정답④를로드했음을확인했다. 새탭대상7DEE6B23E1A8F95D11D455F48D9F5F97은이번연구에서만들었다. A만난이도4로바꿨다."
+    },
+    {
+      "evidence": [
+        2463,
+        2464,
+        2465,
+        2466,
+        2467
+      ],
+      "result": "A의실제전체반영을한번제출했다. 독립GET에서2089011/R/난이도4·기존정답④·기존질문/지문/HML/OMR을확인했다. 임시본은없다."
+    },
+    {
+      "evidence": [
+        2468,
+        2469,
+        2470,
+        2471,
+        2472,
+        2473
+      ],
+      "result": "B는새로고침하지않았고실제DOM은여전히2089006/난이도3/정답④다. 같은B에서읽기GET한서버현행은2089011/난이도4였다. B의OMR탭을실제열고5번째정답라디오만눌렀다. 난이도는손대지않은3·선택지다섯개는같다. 정상전체반영확인창이열렸다."
+    },
+    {
+      "evidence": [
+        2474,
+        2475,
+        2476,
+        2477,
+        2478
+      ],
+      "result": "오래된B에서전체반영을한번제출했다. 정상반영안내후2089013/R/난이도3/OMR정답⑤가독립GET으로확인됐다. 충돌안내는관측되지않았다. 질문/지문모델·HML경로·OMR선택지는유지됐다. B에서고치지않은난이도3이A가저장한4를덮는시나리오가재현됐다."
+    },
+    {
+      "evidence": [
+        2479,
+        2480,
+        2481,
+        2482,
+        2483,
+        2484,
+        2485,
+        2486
+      ],
+      "result": "최신2089013에서정상수정으로재진입하고시험용OMR정답⑤만④로복원해전체반영했다. 현행2089019/R/난이도3·정답④이며phase42기준의표시값·질문/지문모델·HML경로·OMR/정답과버전번호외동일하다. 임시본은없다."
+    },
+    {
+      "evidence": [
+        2487,
+        2488,
+        2489,
+        2490,
+        2491,
+        2492,
+        2493,
+        2494
+      ],
+      "result": "A조사탭으로돌아온뒤이번에만든B대상만닫았다. A를최신2089019상세로다시열었다. 자체원문2089216/detail2088849/Y·출처13·OMR과평가지1093/detail1124/Y·문항2089216한건은그대로다. 현행상세2214px·모달없음·가로넘침없음을관찰했다."
+    }
+  ],
+  "artifacts": [
+    "own-copy2089239-concurrent-edit-intent-20261110.json",
+    "record-copy2089239-concurrent-a.py",
+    "record-copy2089239-concurrent-b.py",
+    "record-copy2089239-concurrent-restore.py"
+  ],
+  "persistentChanges": {
+    "confirmedMasterOperations": 53,
+    "newMasterChangesInThisPhase": 3,
+    "itemId": 2089239,
+    "beforeDetailId": 2089006,
+    "aDetailId": 2089011,
+    "bStaleSaveDetailId": 2089013,
+    "finalDetailId": 2089019,
+    "viewFlag": "R",
+    "finalDifficulty": "3",
+    "finalOmrAnswer": "④",
+    "draftAvailableAfter": false,
+    "originalRestorationPending": false,
+    "serviceDeployment": false
+  },
+  "confirmedIssue": {
+    "type": "stale_normal_edit_can_overwrite_newer_unedited_metadata",
+    "scope": "같은계정의정상수정폼두개에서자체R복제문항하나",
+    "scopeKorean": "같은계정의정상수정폼두개에서자체R복제문항하나",
+    "reproductionEvidence": [
+      2460,
+      2462,
+      2466,
+      2469,
+      2470,
+      2471,
+      2474,
+      2475,
+      2476
+    ],
+    "aChangedField": "difficulty3→4",
+    "bChangedField": "OMRanswer④→⑤",
+    "bUntouchedField": "difficulty3",
+    "afterB": "difficulty3/answer⑤",
+    "conflictWarningObserved": false,
+    "notGeneralizedToAllStatusesRolesOrServices": true
+  },
+  "remaining": [
+    "세트문항의쌍둥이복제에서공유지문·자식문항·생성기록과그룹관계가어떻게늘어나는지확인한다.",
+    "다른그룹합치기·공유세트임시저장·다른HML슬롯·디피니션복합자료등남은분기를이어간다.",
+    "동시수정의다른상태·임시본·다른역할·서비스CMS는별도미검증범위다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10",
+    "tab": "t21 own copy current detail at top; t60 owned test tab closed",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "unsavedState": null
+  },
+  "evidenceLimits": [
+    "같은계정·R상태자체복제문항의정상전체반영두화면에서재현했다. 모든권한·상태·API·세트·서비스CMS의충돌처리를확정하지않는다.",
+    "버전번호의중간증가원인이나동시에작업한다른사용자행동은추정하지않는다.",
+    "현재53회는Master업무작업이며관계수·버전행수·브라우저탭조작횟수가아니다.",
+    "새PNG를촬영하지않았다. phase42의전체스크롤PNG는이전상세2089006시점의화면근거다.",
+    "전체사이트100%완료를주장하지않는다."
+  ]
+}

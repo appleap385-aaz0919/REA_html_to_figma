@@ -1,0 +1,16 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"set_ai_generation_completed_structure_content_controls_and_omr_verified","evidenceRange":[2879,2902],"lastEvidence":"2902-own-set-ai-results-no-draft-readback",
+ "summary":"원본승인세트의AI요청1회가완료됐다. 신규지문2089381/문항2089382~85/detail2089088~91은모두R/SBSANM이고부모문항각대응·공유HML J파일/개별Q·A파일이생성됐다. 전체12문항은3세트관계를가지며원본각AI/COPY이력2건·기존COPY/신규AI각이력0건이다. 기존고유9대조문항의버전/상태/모델/OMR/이미지참조는불변이다. 신규지문에는HML편집표식이들어가고OMR허용답안은math에서text/TIMES문자열로달라졌다. 실제수정화면에서도확인했고저장은하지않았다. Master업무77회그대로,Service배포없음.",
+ "observations":[
+  {"evidence":[2879,2880,2881,2882,2883,2884,2885],"result":"새네문항의detail/edit를읽고지문2089381·각부모2089242~45·초안R·난이도1·SBSANM·원본파일/출처/평가지없음을확인했다. 공유HML은passage2089381/2004/J, 개별Q/A는신규문항/버전경로다. 모든12개에서3세트/각4행, 원본각생성이력2건/다른8개0건이다. 원본생성버튼은최신GET에서working=false로돌아왔다."},
+  {"evidence":[2848,2849,2880,2881],"result":"원본5개와COPY+control5개를전후비교했다. 중복control을제외한고유9개에서버전ID라벨·viewFlag·models·OMR미리보기데이터·이미지참조가정확히같다. 원격파일바이트불변을이비교만으로주장하지않는다."},
+  {"evidence":[2886,2887,2888,2889,2890,2891],"result":"신규첫자식상세의이미지9개가모두로드됐다. 전체2763/viewport1015에서0/875/1748스크롤의PNG3개를직접보았다. 네행렬은[4;5],[-5,6,5],[[2,0],[0,2]],[[5,-4,2],[2,5,-3]]이며각크기2×1/1×3/2×2/2×3답이표시된다. 공유지문과4문항의HTML/HML미리보기·상태·메타·하단까지확인했다."},
+  {"evidence":[2892,2893,2894,2895,2896,2897,2898,2899,2900,2901,2902],"result":"수정페이지의기본메타탭에서OMRvisiblehelper2894가범위오류를반환했다. 실제OMR탭을정상선택한후SBSANM입력값2 TIMES 1행렬/텍스트모드/대소문자·공백구분false와serializer결과TEXT/ORDERED/VALUE/text를읽었다.2900PNG를직접보며왼쪽정답2×1과오른쪽허용값TIMES의차이를확인했다.2901은동일0스크롤의중복캡처다. 저장하지않았고신규4개hasDraft=false다."},
+  {"evidence":[2847,2879],"result":"원본공유HTML에는QA-SHARED-HTML표식과단수본문, 신규AI공유HTML에는QA-SHARED-HML표식과기존HML편집본문이있다. 이번AI결과에HML편집본계열내용이반영된관측이며 실제요청페이로드·추출·캐시·입력우선순위는미확인이다."}
+ ],
+ "artifacts":["own-set-ai-generation-intent-20261110.json","own-set-ai-control-preservation-comparison-20261110.json","sources/own-set2089242-before-ai-20261110.html","sources/own-set2089242-ai-finished-20261110.html","sources/own-set-ai2089382-result-detail-20261110.html","sources/own-set-ai2089382-result-edit-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":77,"newMasterChangesInThisPhase":0,"completedEarlierOperation":76,"newPassageId":2089381,"newItemIds":[2089382,2089383,2089384,2089385],"newDetailIds":[2089088,2089089,2089090,2089091],"newStates":"all R","twinSetCount":3,"twinChildRows":12,"existingControlVersionsStatesModelsOmrAndImageReferencesUnchanged":true,"serviceDeployment":false},
+ "remaining":["자체F단건2089375를정상Master상태UI에서폐기D로처리하며확인문구·단건/문서연결·조회/편집잠금정책을확인한다.","HML복사편집격리와평가지세트추가/삭제정책등남은범위를이어간다.","TIMES텍스트와수식허용답안의차이는ServiceCMS실제채점미검증사항으로남긴다.다중Definition/정상세트ZIP·해석HML표본도미확정범위다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089382","tab":"t21 own AI child2089382 edit OMR tab; read-only inspection with no field changes or saves","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"popover":null,"unsavedState":null,"pendingServerOperation":null,"pendingVerification":null},
+ "evidenceLimits":["AI자동완료를추가업무로세지않고이미접수한76번업무의결과로연결했다.","신규행렬/정답표현의차이는실제저장값과화면관측이며서비스채점의오류를확정한것은아니다.","원본도OMR컴포넌트는TEXT였고허용답안value_type이math였다. 차이는새TEXT컴포넌트생성이아니라허용답안의math→text및TIMES리터럴이다.","원본·COPY의원격이미지파일바이트를전후비교하지않았으므로참조불변까지만확정한다.","전체100%완료를주장하지않는다."]
+}

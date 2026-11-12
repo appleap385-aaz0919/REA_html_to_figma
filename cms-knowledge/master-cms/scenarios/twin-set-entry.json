@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1124-twin-single-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1125-twin-return-list","command":["click","{ref}"],"refPattern":"- link \"[^\"]* 목록\" \\[ref=(e\\d+)\\]"},
+  {"label":"1126-twin-list-reentered","command":["snapshot"]},
+  {"label":"1127-twin-set-focus","command":["focus","{ref}"],"refPattern":"- link \"➜ [^\"]+\" \\[ref=(e\\d+)\\]"},
+  {"label":"1128-twin-set-enter","command":["press","Enter"]},
+  {"label":"1129-twin-set-detail","command":["snapshot"],"screenshot":true},
+  {"label":"1130-twin-set-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1131-twin-set-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":3500
+}

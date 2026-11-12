@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2247-own-set-child-actual-modify-link","command":["eval","(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own child required');const links=[...document.querySelectorAll('a[data-modify-item-id]')].filter(e=>e.dataset.modifyItemId==='2089242');if(links.length!==1)throw Error('Expected actual modify action');const href=links[0].getAttribute('href'),modifyUrl=links[0].dataset.modifyUrl;links[0].click();return {href,modifyUrl};})()"]},
+ {"label":"2248-own-set-child-modify-fresh-state","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]},
+ {"label":"2249-own-set-child-modify-baseline-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2250-own-set-child-hml-tab-select","command":["eval","(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own modify only');const tabs=[...document.querySelectorAll('[role=tab]')].filter(e=>e.textContent.includes('한글(HML) 수정'));if(tabs.length!==1)throw Error('Actual HML tab required');tabs[0].click();return {text:tabs[0].innerText,target:tabs[0].getAttribute('data-bs-target')};})()"]},
+ {"label":"2251-own-set-child-hml-slot-baseline","command":["eval","--file","sources/runtime/hml-parent-slots.js"]}
+],"tailChars":180}

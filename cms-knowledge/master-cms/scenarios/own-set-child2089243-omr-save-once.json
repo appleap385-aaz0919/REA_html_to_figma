@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"2506-own-set-child2089243-omr-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089243"]},
+ {"label":"2507-own-set-child2089243-omr-edit-open","command":["eval","(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089243'||document.querySelector('.modal.show'))throw Error('Own sibling detail required');const link=document.querySelector('a[data-modify-url]');if(!link?.dataset.modifyUrl.includes('itemId=2089243'))throw Error('Own actual modify link required');link.click();return {clicked:true,itemId:2089243};})()"]},
+ {"label":"2508-own-set-child2089243-before-omr-edit-state","command":["eval","--file","sources/runtime/own-set-sibling-form-omr-observation.js"]},
+ {"label":"2509-own-set-child2089243-omr-answer-local","command":["eval","--file","sources/runtime/own-set-sibling-omr-fill-local.js"]},
+ {"label":"2510-own-set-child2089243-omr-confirm-open","command":["eval","--file","sources/runtime/own-set-sibling-omr-apply-confirm-open.js"]},
+ {"label":"2511-own-set-child2089243-omr-submit-once","command":["eval","--file","sources/runtime/own-set-sibling-omr-apply-submit-once.js"]},
+ {"label":"2512-own-set-child2089243-omr-post-ui","command":["snapshot"]},
+ {"label":"2513-own-set-child2089243-omr-all-reference-read","command":["eval","--file","sources/runtime/hml666-modify-reference-baseline-read.js"]},
+ {"label":"2514-own-set-child2089243-omr-all-detail-read","command":["eval","--file","sources/runtime/hml666-own-items-baseline-read.js"]}
+],"tailChars":220}

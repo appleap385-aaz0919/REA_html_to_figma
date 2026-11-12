@@ -1,0 +1,35 @@
+/* 웹한글기안기 임베드 호스트. 기안기가 내부에서 자기 크기를 계산하므로 프레임 크기만 잡아준다. */
+.webhwp-frame {
+    width: 100%;
+    border: 1px solid var(--tblr-border-color, #dadfe5);
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* window.open 팝업 창: 편집기가 창 높이를 다 쓴다. 높이가 0 이면 기안기가 크기를 못 잡는다. */
+.webhwp-window {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.webhwp-window .webhwp-host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    padding: 8px 12px 12px;
+}
+
+.webhwp-window .webhwp-frame {
+    flex: 1 1 auto;
+    min-height: 300px;
+}
+
+.webhwp-toolbar {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+}

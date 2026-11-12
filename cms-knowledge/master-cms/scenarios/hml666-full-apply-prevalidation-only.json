@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"2254-own-set-child-form-omr-baseline","command":["eval","--file","sources/runtime/own-set2089242-form-omr-observation.js"]},
+ {"label":"2255-own-set-child-apply-prevalidation-only","command":["eval","(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242'||document.querySelector('.modal.show'))throw Error('Own clean modify only');const buttons=[...document.querySelectorAll('button')].filter(e=>e.innerText.trim()==='전체 반영'&&e.getClientRects().length);if(buttons.length!==1||buttons[0].matches(':disabled'))throw Error('Expected actual full apply entry');buttons[0].click();return {clickedEntryOnly:true,finalConfirmClicked:false,visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),activeTabs:[...document.querySelectorAll('.nav-tabs [role=tab].active')].map(e=>e.innerText)};})()"]},
+ {"label":"2256-own-set-child-after-apply-prevalidation","command":["eval","--file","sources/runtime/own-set2089242-form-omr-observation.js"]}
+],"tailChars":150}

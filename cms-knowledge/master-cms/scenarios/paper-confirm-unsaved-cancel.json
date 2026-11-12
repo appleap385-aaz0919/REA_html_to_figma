@@ -1,0 +1,7 @@
+{
+ "steps":[
+  {"label":"1213-paper-cancel-guard-fresh","command":["snapshot"]},
+  {"label":"1214-paper-leave-without-saving","command":["click","{ref}"],"refPattern":"- button \"저장 하지 않고 이동\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1215-paper-cancel-readback","command":["snapshot"],"screenshot":true}
+ ],"tailChars":1000
+}

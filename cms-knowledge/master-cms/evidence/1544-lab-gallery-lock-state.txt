@@ -1,0 +1,2031 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e14103]
+      - link "문제은행 마스터 CMS" [ref=e14104]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e14128]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e14129]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e14130]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e14131]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e14132]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e14109]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e14105]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "OMR 전체 유형 갤러리" [level=2, ref=e14106]
+    - StaticText "문항유형 14종 각 1파일(리프별 자족). 헤더 = [코드] 분류 › 답형 › 유형 (파일명)"
+    - button " 전체 열기" [ref=e14107]
+      - StaticText ""
+      - StaticText "전체 열기"
+    - button " 전체 닫기" [ref=e14108]
+      - StaticText ""
+      - StaticText "전체 닫기"
+    - group "보기 방식"
+      - radio " 좁게" [checked=false, ref=e14110]
+      - LabelText [ref=e14111] clickable [cursor:pointer]
+        - StaticText ""
+        - StaticText "좁게"
+      - radio " 넓게" [checked=false, ref=e14112]
+      - LabelText [ref=e14113] clickable [cursor:pointer]
+        - StaticText ""
+        - StaticText "넓게"
+      - radio " 비활성화" [checked=true, ref=e14114]
+      - LabelText [ref=e14115] clickable [cursor:pointer]
+        - StaticText ""
+        - StaticText "비활성화"
+    - generic
+      - generic
+        - heading "객관식" [level=3, ref=e14116]
+        - button "열기" [ref=e14117]
+        - button "닫기" [ref=e14118]
+        - generic
+          - heading "OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)" [level=2, ref=e14133]
+            - button "OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)" [expanded=true, ref=e14148]
+              - StaticText "OBSACN"
+              - button "" [ref=e14174]
+                - StaticText ""
+              - StaticText "객관식 > 단답형 > N지 선다"
+              - StaticText "(omr-OBSACN.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14194]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14195]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - radio [checked=false, ref=e14333]
+              - generic
+                - textbox "선택지" [ref=e14334]: ①
+                  - StaticText "①"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14335]
+                - StaticText ""
+              - button "삭제" [ref=e14336]
+              - radio [checked=false, ref=e14337]
+              - generic
+                - textbox "선택지" [ref=e14338]: ②
+                  - StaticText "②"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14339]
+                - StaticText ""
+              - button "삭제" [ref=e14340]
+              - radio [checked=false, ref=e14341]
+              - generic
+                - textbox "선택지" [ref=e14342]: ③
+                  - StaticText "③"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14343]
+                - StaticText ""
+              - button "삭제" [ref=e14344]
+              - radio [checked=false, ref=e14345]
+              - generic
+                - textbox "선택지" [ref=e14346]: ④
+                  - StaticText "④"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14347]
+                - StaticText ""
+              - button "삭제" [ref=e14348]
+              - radio [checked=false, ref=e14349]
+              - generic
+                - textbox "선택지" [ref=e14350]: ⑤
+                  - StaticText "⑤"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14351]
+                - StaticText ""
+              - button "삭제" [ref=e14352]
+              - button " 정답 추가" [ref=e14264]
+                - StaticText ""
+                - StaticText "정답 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14196]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14197]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14198]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14265]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"options\": [\n      {\n        \"value\": \"①\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"②\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"③\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"④\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"⑤\",\n        \"value_type\": \"text\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14266]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"VALUE\",\n  \"allowed_answer\": []\n}"
+          - group
+            - generic
+              - radio [checked=false, disabled, ref=e14623]
+              - generic
+                - textbox "선택지" [disabled, ref=e14624]: ①
+                  - StaticText "①"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14625]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14626]
+              - radio [checked=false, disabled, ref=e14627]
+              - generic
+                - textbox "선택지" [disabled, ref=e14628]: ②
+                  - StaticText "②"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14629]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14630]
+              - radio [checked=false, disabled, ref=e14631]
+              - generic
+                - textbox "선택지" [disabled, ref=e14632]: ③
+                  - StaticText "③"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14633]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14634]
+              - radio [checked=false, disabled, ref=e14635]
+              - generic
+                - textbox "선택지" [disabled, ref=e14636]: ④
+                  - StaticText "④"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14637]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14638]
+              - radio [checked=false, disabled, ref=e14639]
+              - generic
+                - textbox "선택지" [disabled, ref=e14640]: ⑤
+                  - StaticText "⑤"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14641]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14642]
+              - button " 정답 추가" [disabled, ref=e14582]
+                - StaticText ""
+                - StaticText "정답 추가"
+          - heading "OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)" [level=2, ref=e14134]
+            - button "OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)" [expanded=true, ref=e14149]
+              - StaticText "OBSAOX"
+              - button "" [ref=e14175]
+                - StaticText ""
+              - StaticText "객관식 > 단답형 > O/X 형"
+              - StaticText "(omr-OBSAOX.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14199]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14200]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - textbox [ref=e14267]
+            - radio [checked=false, ref=e14353]
+            - generic
+              - textbox [ref=e14354]: O
+                - StaticText "O"
+              - StaticText ""
+            - button "" [expanded=false, ref=e14355]
+              - StaticText ""
+            - radio [checked=false, ref=e14356]
+            - generic
+              - textbox [ref=e14357]: X
+                - StaticText "X"
+              - StaticText ""
+            - button "" [expanded=false, ref=e14358]
+              - StaticText ""
+          - StaticText "※ O/X 값 칸: 공백 입력 불가, 최대 4자"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14201]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14202]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14203]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14268]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"BUTTON\",\n    \"options\": [\n      {\n        \"value\": \"O\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"X\",\n        \"value_type\": \"text\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14269]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"VALUE\",\n  \"allowed_answer\": []\n}"
+          - group
+            - textbox [disabled, ref=e14583]
+            - radio [checked=false, disabled, ref=e14643]
+            - generic
+              - textbox [disabled, ref=e14644]: O
+                - StaticText "O"
+              - StaticText ""
+            - button "" [expanded=false, disabled, ref=e14645]
+              - StaticText ""
+            - radio [checked=false, disabled, ref=e14646]
+            - generic
+              - textbox [disabled, ref=e14647]: X
+                - StaticText "X"
+              - StaticText ""
+            - button "" [expanded=false, disabled, ref=e14648]
+              - StaticText ""
+          - heading "OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)" [level=2, ref=e14135]
+            - button "OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)" [expanded=true, ref=e14150]
+              - StaticText "OBMACN"
+              - button "" [ref=e14176]
+                - StaticText ""
+              - StaticText "객관식 > 다답형 > N지 선다"
+              - StaticText "(omr-OBMACN.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14204]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14205]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - checkbox [checked=false, ref=e14359]
+              - generic
+                - textbox "선택지" [ref=e14360]: ①
+                  - StaticText "①"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14361]
+                - StaticText ""
+              - button "삭제" [ref=e14362]
+              - checkbox [checked=false, ref=e14363]
+              - generic
+                - textbox "선택지" [ref=e14364]: ②
+                  - StaticText "②"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14365]
+                - StaticText ""
+              - button "삭제" [ref=e14366]
+              - checkbox [checked=false, ref=e14367]
+              - generic
+                - textbox "선택지" [ref=e14368]: ③
+                  - StaticText "③"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14369]
+                - StaticText ""
+              - button "삭제" [ref=e14370]
+              - checkbox [checked=false, ref=e14371]
+              - generic
+                - textbox "선택지" [ref=e14372]: ④
+                  - StaticText "④"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14373]
+                - StaticText ""
+              - button "삭제" [ref=e14374]
+              - checkbox [checked=false, ref=e14375]
+              - generic
+                - textbox "선택지" [ref=e14376]: ⑤
+                  - StaticText "⑤"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14377]
+                - StaticText ""
+              - button "삭제" [ref=e14378]
+              - button " 정답 추가" [ref=e14270]
+                - StaticText ""
+                - StaticText "정답 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14206]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14207]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14208]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14271]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"options\": [\n      {\n        \"value\": \"①\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"②\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"③\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"④\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"⑤\",\n        \"value_type\": \"text\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14272]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"UNORDERED\",\n  \"nodes\": []\n}"
+          - group
+            - generic
+              - checkbox [checked=false, disabled, ref=e14649]
+              - generic
+                - textbox "선택지" [disabled, ref=e14650]: ①
+                  - StaticText "①"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14651]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14652]
+              - checkbox [checked=false, disabled, ref=e14653]
+              - generic
+                - textbox "선택지" [disabled, ref=e14654]: ②
+                  - StaticText "②"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14655]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14656]
+              - checkbox [checked=false, disabled, ref=e14657]
+              - generic
+                - textbox "선택지" [disabled, ref=e14658]: ③
+                  - StaticText "③"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14659]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14660]
+              - checkbox [checked=false, disabled, ref=e14661]
+              - generic
+                - textbox "선택지" [disabled, ref=e14662]: ④
+                  - StaticText "④"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14663]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14664]
+              - checkbox [checked=false, disabled, ref=e14665]
+              - generic
+                - textbox "선택지" [disabled, ref=e14666]: ⑤
+                  - StaticText "⑤"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14667]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14668]
+              - button " 정답 추가" [disabled, ref=e14584]
+                - StaticText ""
+                - StaticText "정답 추가"
+          - heading "OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)" [level=2, ref=e14136]
+            - button "OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)" [expanded=true, ref=e14151]
+              - StaticText "OBMAOX"
+              - button "" [ref=e14177]
+                - StaticText ""
+              - StaticText "객관식 > 다답형 > O/X 형"
+              - StaticText "(omr-OBMAOX.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14209]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14210]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - textbox [ref=e14273]
+              - radio [checked=false, ref=e14274]
+              - generic
+                - textbox [ref=e14379]: O
+                  - StaticText "O"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14380]
+                - StaticText ""
+              - radio [checked=false, ref=e14275]
+              - generic
+                - textbox [ref=e14381]: X
+                  - StaticText "X"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14382]
+                - StaticText ""
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14383]
+                - StaticText "쉼표 구분여부"
+              - button "삭제" [disabled, ref=e14384]
+              - textbox [ref=e14276]
+              - radio [checked=false, ref=e14277]
+              - generic
+                - textbox [ref=e14385]: O
+                  - StaticText "O"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14386]
+                - StaticText ""
+              - radio [checked=false, ref=e14278]
+              - generic
+                - textbox [ref=e14387]: X
+                  - StaticText "X"
+                - StaticText ""
+              - button "" [expanded=false, ref=e14388]
+                - StaticText ""
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14389]
+                - StaticText "쉼표 구분여부"
+              - button "삭제" [disabled, ref=e14390]
+              - button " 정답 추가" [ref=e14279]
+                - StaticText ""
+                - StaticText "정답 추가"
+          - StaticText "※ O/X 값 칸: 공백 입력 불가, 최대 4자"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14211]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14212]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14213]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14280]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"BUTTON\",\n    \"options\": [\n      {\n        \"value\": \"O\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"X\",\n        \"value_type\": \"text\"\n      }\n    ]\n  },\n  {\n    \"type\": \"BUTTON\",\n    \"options\": [\n      {\n        \"value\": \"O\",\n        \"value_type\": \"text\"\n      },\n      {\n        \"value\": \"X\",\n        \"value_type\": \"text\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14281]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": []\n    },\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": []\n    }\n  ]\n}"
+          - group
+            - generic
+              - textbox [disabled, ref=e14585]
+              - radio [checked=false, disabled, ref=e14586]
+              - generic
+                - textbox [disabled, ref=e14669]: O
+                  - StaticText "O"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14670]
+                - StaticText ""
+              - radio [checked=false, disabled, ref=e14587]
+              - generic
+                - textbox [disabled, ref=e14671]: X
+                  - StaticText "X"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14672]
+                - StaticText ""
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14673]
+                - StaticText "쉼표 구분여부"
+              - button "삭제" [disabled, ref=e14674]
+              - textbox [disabled, ref=e14588]
+              - radio [checked=false, disabled, ref=e14589]
+              - generic
+                - textbox [disabled, ref=e14675]: O
+                  - StaticText "O"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14676]
+                - StaticText ""
+              - radio [checked=false, disabled, ref=e14590]
+              - generic
+                - textbox [disabled, ref=e14677]: X
+                  - StaticText "X"
+                - StaticText ""
+              - button "" [expanded=false, disabled, ref=e14678]
+                - StaticText ""
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14679]
+                - StaticText "쉼표 구분여부"
+              - button "삭제" [disabled, ref=e14680]
+              - button " 정답 추가" [disabled, ref=e14591]
+                - StaticText ""
+                - StaticText "정답 추가"
+        - separator
+        - heading "주관식" [level=3, ref=e14119]
+        - button "열기" [ref=e14120]
+        - button "닫기" [ref=e14121]
+        - generic
+          - heading "SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)" [level=2, ref=e14137]
+            - button "SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)" [expanded=true, ref=e14152]
+              - StaticText "SBSANM"
+              - button "" [ref=e14178]
+                - StaticText ""
+              - StaticText "주관식 > 단답형 > 일반형"
+              - StaticText "(omr-SBSANM.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14214]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14215]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - combobox [expanded=false, ref=e14282]: 입력 박스형
+                - MenuListPopup
+                  - option "입력 박스형" [selected, ref=e14518]
+                  - option "범례 선택형" [ref=e14519]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [ref=e14391] editable [tabindex, contenteditable]
+                  - textbox [ref=e14520]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                    - button "Menu Menu" [ref=e14554]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14392]
+              - button "" [expanded=false, ref=e14393]
+                - StaticText ""
+              - generic
+                - math "math input field" [ref=e14394] editable [tabindex, contenteditable]
+                  - textbox [ref=e14521]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                    - button "Menu Menu" [ref=e14555]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14395]
+              - button "" [expanded=false, ref=e14396]
+                - StaticText ""
+              - StaticText "정답"
+              - generic
+                - math "math input field" [ref=e14397] editable [tabindex, contenteditable]
+                  - textbox [ref=e14522]
+                  - generic
+                    - generic
+                      - StaticText "정답 입력"
+                    - button "Menu Menu" [ref=e14556]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14398]
+              - button "" [expanded=false, ref=e14399]
+                - StaticText ""
+              - LabelText
+                - checkbox "대소구분" [checked=false, ref=e14400]
+                - StaticText "대소구분"
+              - LabelText
+                - checkbox "공백구분" [checked=false, ref=e14401]
+                - StaticText "공백구분"
+              - button " 유사 정답 추가" [ref=e14283]
+                - StaticText ""
+                - StaticText "유사 정답 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14216]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14217]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14218]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14284]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"TEXT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14285]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - combobox [expanded=false, disabled, ref=e14592]: 입력 박스형
+                - MenuListPopup
+                  - option "입력 박스형" [disabled, ref=e14808]
+                  - option "범례 선택형" [disabled, ref=e14809]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [disabled, ref=e14681] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14810]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                  - status
+                - button "Σ" [ref=e14682]
+              - button "" [expanded=false, disabled, ref=e14683]
+                - StaticText ""
+              - generic
+                - math "math input field" [disabled, ref=e14684] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14811]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                  - status
+                - button "Σ" [ref=e14685]
+              - button "" [expanded=false, disabled, ref=e14686]
+                - StaticText ""
+              - StaticText "정답"
+              - generic
+                - math "math input field" [disabled, ref=e14687] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14812]
+                  - generic
+                    - generic
+                      - StaticText "정답 입력"
+                  - status
+                - button "Σ" [ref=e14688]
+              - button "" [expanded=false, disabled, ref=e14689]
+                - StaticText ""
+              - LabelText
+                - checkbox "대소구분" [checked=false, disabled, ref=e14690]
+                - StaticText "대소구분"
+              - LabelText
+                - checkbox "공백구분" [checked=false, disabled, ref=e14691]
+                - StaticText "공백구분"
+              - button " 유사 정답 추가" [disabled, ref=e14593]
+                - StaticText ""
+                - StaticText "유사 정답 추가"
+          - heading "SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)" [level=2, ref=e14138]
+            - button "SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)" [expanded=true, ref=e14153]
+              - StaticText "SBSADR"
+              - button "" [ref=e14179]
+                - StaticText ""
+              - StaticText "주관식 > 단답형 > 그리기형"
+              - StaticText "(omr-SBSADR.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14219]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14220]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - StaticText "타이틀"
+              - textbox "풀이 과정" [ref=e14286]
+              - StaticText "학생이 문제 이미지(좌표평면) 위에 직접 그리는 영역"
+              - StaticText "※ 그리기형은 자유 서술형과 같이 수동 채점 (관리자 입력 없음)"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14221]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14222]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14223]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14287]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"COMMENT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14288]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"MANUAL\"\n}"
+          - group
+            - generic
+              - StaticText "타이틀"
+              - textbox "풀이 과정" [disabled, ref=e14594]
+              - StaticText "학생이 문제 이미지(좌표평면) 위에 직접 그리는 영역"
+              - StaticText "※ 그리기형은 자유 서술형과 같이 수동 채점 (관리자 입력 없음)"
+          - heading "SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)" [level=2, ref=e14139]
+            - button "SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)" [expanded=true, ref=e14154]
+              - StaticText "SBSAAS"
+              - button "" [ref=e14180]
+                - StaticText ""
+              - StaticText "주관식 > 단답형 > 영역 선택형"
+              - StaticText "(omr-SBSAAS.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14224]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14225]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "설정"
+              - generic
+                - math "math input field" [ref=e14402] editable [tabindex, contenteditable]
+                  - textbox [ref=e14523]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                    - button "Menu Menu" [ref=e14557]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14403]
+              - button "" [expanded=false, ref=e14404]
+                - StaticText ""
+              - generic
+                - math "math input field" [ref=e14405] editable [tabindex, contenteditable]
+                  - textbox [ref=e14524]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                    - button "Menu Menu" [ref=e14558]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14406]
+              - button "" [expanded=false, ref=e14407]
+                - StaticText ""
+              - radio [checked=false, ref=e14408]
+              - generic
+                - math "math input field" [ref=e14409] editable [tabindex, contenteditable]
+                  - textbox [ref=e14525]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                    - button "Menu Menu" [ref=e14559]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14410]
+              - button "" [expanded=false, ref=e14411]
+                - StaticText ""
+              - button "삭제" [ref=e14412]
+              - radio [checked=false, ref=e14413]
+              - generic
+                - math "math input field" [ref=e14414] editable [tabindex, contenteditable]
+                  - textbox [ref=e14526]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                    - button "Menu Menu" [ref=e14560]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14415]
+              - button "" [expanded=false, ref=e14416]
+                - StaticText ""
+              - button "삭제" [ref=e14417]
+              - button " 선택지 추가" [ref=e14289]
+                - StaticText ""
+                - StaticText "선택지 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14226]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14227]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14228]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14290]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"SELECT\",\n    \"options\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14291]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"VALUE\",\n  \"allowed_answer\": []\n}"
+          - group
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "설정"
+              - generic
+                - math "math input field" [disabled, ref=e14692] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14813]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                  - status
+                - button "Σ" [ref=e14693]
+              - button "" [expanded=false, disabled, ref=e14694]
+                - StaticText ""
+              - generic
+                - math "math input field" [disabled, ref=e14695] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14814]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                  - status
+                - button "Σ" [ref=e14696]
+              - button "" [expanded=false, disabled, ref=e14697]
+                - StaticText ""
+              - radio [checked=false, disabled, ref=e14698]
+              - generic
+                - math "math input field" [disabled, ref=e14699] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14815]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                  - status
+                - button "Σ" [ref=e14700]
+              - button "" [expanded=false, disabled, ref=e14701]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14702]
+              - radio [checked=false, disabled, ref=e14703]
+              - generic
+                - math "math input field" [disabled, ref=e14704] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14816]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                  - status
+                - button "Σ" [ref=e14705]
+              - button "" [expanded=false, disabled, ref=e14706]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14707]
+              - button " 선택지 추가" [disabled, ref=e14595]
+                - StaticText ""
+                - StaticText "선택지 추가"
+          - heading "SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)" [level=2, ref=e14140]
+            - button "SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)" [expanded=true, ref=e14155]
+              - StaticText "SBMANM"
+              - button "" [ref=e14181]
+                - StaticText ""
+              - StaticText "주관식 > 다답형 > 일반형"
+              - StaticText "(omr-SBMANM.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14229]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14230]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - LabelText
+                - checkbox "OMR SET끼리 순서 고정(유순)" [checked=true, ref=e14418]
+                - StaticText "OMR SET끼리 순서 고정(유순)"
+              - StaticText "1"
+              - StaticText ") "
+              - StaticText "OMR SET"
+              - LabelText
+                - checkbox "순서 고정(유순)" [checked=true, ref=e14419]
+                - StaticText "순서 고정(유순)"
+              - button "SET 삭제" [disabled, ref=e14292]
+              - StaticText "1"
+              - StaticText ") "
+              - StaticText "정답 SET"
+              - combobox [expanded=false, ref=e14293]: 입력 박스형
+                - MenuListPopup
+                  - option "입력 박스형" [selected, ref=e14527]
+                  - option "범례 선택형" [ref=e14528]
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14420]
+                - StaticText "쉼표 구분여부"
+              - button "SET 삭제" [disabled, ref=e14294]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [ref=e14421] editable [tabindex, contenteditable]
+                  - textbox [ref=e14529]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                    - button "Menu Menu" [ref=e14561]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14422]
+              - button "" [expanded=false, ref=e14423]
+                - StaticText ""
+              - generic
+                - math "math input field" [ref=e14424] editable [tabindex, contenteditable]
+                  - textbox [ref=e14530]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                    - button "Menu Menu" [ref=e14562]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14425]
+              - button "" [expanded=false, ref=e14426]
+                - StaticText ""
+              - StaticText "정답"
+              - generic
+                - math "math input field" [ref=e14427] editable [tabindex, contenteditable]
+                  - textbox [ref=e14531]
+                  - generic
+                    - generic
+                      - StaticText "정답 입력"
+                    - button "Menu Menu" [ref=e14563]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14428]
+              - button "" [expanded=false, ref=e14429]
+                - StaticText ""
+              - LabelText
+                - checkbox "대소구분" [checked=false, ref=e14430]
+                - StaticText "대소구분"
+              - LabelText
+                - checkbox "공백구분" [checked=false, ref=e14431]
+                - StaticText "공백구분"
+              - button " 유사 정답 추가" [ref=e14295]
+                - StaticText ""
+                - StaticText "유사 정답 추가"
+              - button " 정답 SET 추가" [ref=e14296]
+                - StaticText ""
+                - StaticText "정답 SET 추가"
+              - button " OMR SET 추가" [ref=e14297]
+                - StaticText ""
+                - StaticText "OMR SET 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14231]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14232]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14233]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14298]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"TEXT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14299]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"ORDERED\",\n      \"nodes\": [\n        {\n          \"rule_type\": \"VALUE\",\n          \"allowed_answer\": [\n            {\n              \"value\": \"\",\n              \"value_type\": \"math\",\n              \"case_sensitive\": false,\n              \"space_sensitive\": false\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - generic
+              - LabelText
+                - checkbox "OMR SET끼리 순서 고정(유순)" [checked=true, disabled, ref=e14708]
+                - StaticText "OMR SET끼리 순서 고정(유순)"
+              - StaticText "1"
+              - StaticText ") "
+              - StaticText "OMR SET"
+              - LabelText
+                - checkbox "순서 고정(유순)" [checked=true, disabled, ref=e14709]
+                - StaticText "순서 고정(유순)"
+              - button "SET 삭제" [disabled, ref=e14596]
+              - StaticText "1"
+              - StaticText ") "
+              - StaticText "정답 SET"
+              - combobox [expanded=false, disabled, ref=e14597]: 입력 박스형
+                - MenuListPopup
+                  - option "입력 박스형" [disabled, ref=e14817]
+                  - option "범례 선택형" [disabled, ref=e14818]
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14710]
+                - StaticText "쉼표 구분여부"
+              - button "SET 삭제" [disabled, ref=e14598]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [disabled, ref=e14711] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14819]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                  - status
+                - button "Σ" [ref=e14712]
+              - button "" [expanded=false, disabled, ref=e14713]
+                - StaticText ""
+              - generic
+                - math "math input field" [disabled, ref=e14714] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14820]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                  - status
+                - button "Σ" [ref=e14715]
+              - button "" [expanded=false, disabled, ref=e14716]
+                - StaticText ""
+              - StaticText "정답"
+              - generic
+                - math "math input field" [disabled, ref=e14717] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14821]
+                  - generic
+                    - generic
+                      - StaticText "정답 입력"
+                  - status
+                - button "Σ" [ref=e14718]
+              - button "" [expanded=false, disabled, ref=e14719]
+                - StaticText ""
+              - LabelText
+                - checkbox "대소구분" [checked=false, disabled, ref=e14720]
+                - StaticText "대소구분"
+              - LabelText
+                - checkbox "공백구분" [checked=false, disabled, ref=e14721]
+                - StaticText "공백구분"
+              - button " 유사 정답 추가" [disabled, ref=e14599]
+                - StaticText ""
+                - StaticText "유사 정답 추가"
+              - button " 정답 SET 추가" [disabled, ref=e14600]
+                - StaticText ""
+                - StaticText "정답 SET 추가"
+              - button " OMR SET 추가" [disabled, ref=e14601]
+                - StaticText ""
+                - StaticText "OMR SET 추가"
+          - heading "SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)" [level=2, ref=e14141]
+            - button "SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)" [expanded=true, ref=e14156]
+              - StaticText "SBMAAS"
+              - button "" [ref=e14182]
+                - StaticText ""
+              - StaticText "주관식 > 다답형 > 영역선택형"
+              - StaticText "(omr-SBMAAS.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14234]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14235]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - textbox "기호" [ref=e14300]
+              - StaticText "정답 SET"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14432]
+                - StaticText "쉼표 구분여부"
+              - button "SET 삭제" [disabled, ref=e14301]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [ref=e14433] editable [tabindex, contenteditable]
+                  - textbox [ref=e14532]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                    - button "Menu Menu" [ref=e14564]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14434]
+              - button "" [expanded=false, ref=e14435]
+                - StaticText ""
+              - generic
+                - math "math input field" [ref=e14436] editable [tabindex, contenteditable]
+                  - textbox [ref=e14533]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                    - button "Menu Menu" [ref=e14565]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14437]
+              - button "" [expanded=false, ref=e14438]
+                - StaticText ""
+              - radio [checked=false, ref=e14439]
+              - generic
+                - math "math input field" [ref=e14440] editable [tabindex, contenteditable]
+                  - textbox [ref=e14534]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                    - button "Menu Menu" [ref=e14566]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14441]
+              - button "" [expanded=false, ref=e14442]
+                - StaticText ""
+              - button "삭제" [ref=e14443]
+              - radio [checked=false, ref=e14444]
+              - generic
+                - math "math input field" [ref=e14445] editable [tabindex, contenteditable]
+                  - textbox [ref=e14535]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                    - button "Menu Menu" [ref=e14567]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14446]
+              - button "" [expanded=false, ref=e14447]
+                - StaticText ""
+              - button "삭제" [ref=e14448]
+              - button " 선택지 추가" [ref=e14302]
+                - StaticText ""
+                - StaticText "선택지 추가"
+              - button " 정답 SET 추가" [ref=e14303]
+                - StaticText ""
+                - StaticText "정답 SET 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14236]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14237]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14238]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14304]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"SELECT\",\n    \"options\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ]\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14305]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"VALUE\",\n  \"allowed_answer\": []\n}"
+          - group
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - textbox "기호" [disabled, ref=e14602]
+              - StaticText "정답 SET"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14722]
+                - StaticText "쉼표 구분여부"
+              - button "SET 삭제" [disabled, ref=e14603]
+              - StaticText "설정"
+              - generic
+                - math "math input field" [disabled, ref=e14723] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14822]
+                  - generic
+                    - generic
+                      - StaticText "앞 수식어"
+                  - status
+                - button "Σ" [ref=e14724]
+              - button "" [expanded=false, disabled, ref=e14725]
+                - StaticText ""
+              - generic
+                - math "math input field" [disabled, ref=e14726] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14823]
+                  - generic
+                    - generic
+                      - StaticText "뒤 수식어"
+                  - status
+                - button "Σ" [ref=e14727]
+              - button "" [expanded=false, disabled, ref=e14728]
+                - StaticText ""
+              - radio [checked=false, disabled, ref=e14729]
+              - generic
+                - math "math input field" [disabled, ref=e14730] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14824]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                  - status
+                - button "Σ" [ref=e14731]
+              - button "" [expanded=false, disabled, ref=e14732]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14733]
+              - radio [checked=false, disabled, ref=e14734]
+              - generic
+                - math "math input field" [disabled, ref=e14735] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14825]
+                  - generic
+                    - generic
+                      - StaticText "선택지"
+                  - status
+                - button "Σ" [ref=e14736]
+              - button "" [expanded=false, disabled, ref=e14737]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14738]
+              - button " 선택지 추가" [disabled, ref=e14604]
+                - StaticText ""
+                - StaticText "선택지 추가"
+              - button " 정답 SET 추가" [disabled, ref=e14605]
+                - StaticText ""
+                - StaticText "정답 SET 추가"
+          - heading "SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)" [level=2, ref=e14142]
+            - button "SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)" [expanded=true, ref=e14157]
+              - StaticText "SBMALD"
+              - button "" [ref=e14183]
+                - StaticText ""
+              - StaticText "주관식 > 다답형 > 선그리기형"
+              - StaticText "(omr-SBMALD.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14239]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14240]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "1열 (연결 항목)"
+              - generic
+                - math "math input field" [ref=e14449] editable [tabindex, contenteditable]
+                  - textbox [ref=e14536]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                    - button "Menu Menu" [ref=e14568]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14450]
+              - button "" [expanded=false, ref=e14451]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, ref=e14452]
+                - StaticText "(빈 값)"
+              - button "삭제" [disabled, ref=e14453]
+              - button " 연결" [ref=e14454]
+                - StaticText ""
+                - StaticText "연결"
+              - button "행 삭제" [ref=e14455]
+              - generic
+                - math "math input field" [ref=e14456] editable [tabindex, contenteditable]
+                  - textbox [ref=e14537]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                    - button "Menu Menu" [ref=e14569]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14457]
+              - button "" [expanded=false, ref=e14458]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, ref=e14459]
+                - StaticText "(빈 값)"
+              - button "삭제" [disabled, ref=e14460]
+              - button " 연결" [ref=e14461]
+                - StaticText ""
+                - StaticText "연결"
+              - button "행 삭제" [ref=e14462]
+              - button " 1열 추가" [ref=e14306]
+                - StaticText ""
+                - StaticText "1열 추가"
+              - StaticText "2열 (범례)"
+              - generic
+                - math "math input field" [ref=e14463] editable [tabindex, contenteditable]
+                  - textbox [ref=e14538]
+                  - generic
+                    - generic
+                      - StaticText "범례 입력"
+                    - button "Menu Menu" [ref=e14570]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14464]
+              - button "" [expanded=false, ref=e14465]
+                - StaticText ""
+              - button "삭제" [ref=e14466]
+              - generic
+                - math "math input field" [ref=e14467] editable [tabindex, contenteditable]
+                  - textbox [ref=e14539]
+                  - generic
+                    - generic
+                      - StaticText "범례 입력"
+                    - button "Menu Menu" [ref=e14571]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14468]
+              - button "" [expanded=false, ref=e14469]
+                - StaticText ""
+              - button "삭제" [ref=e14470]
+              - button " 2열 추가" [ref=e14307]
+                - StaticText ""
+                - StaticText "2열 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14241]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14242]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14243]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14308]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"left_fields\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ],\n    \"right_fields\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ],\n    \"multi_flag\": \"Y\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14309]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    },\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "1열 (연결 항목)"
+              - generic
+                - math "math input field" [disabled, ref=e14739] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14826]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                  - status
+                - button "Σ" [ref=e14740]
+              - button "" [expanded=false, disabled, ref=e14741]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, disabled, ref=e14742]
+                - StaticText "(빈 값)"
+              - button "삭제" [disabled, ref=e14743]
+              - button " 연결" [disabled, ref=e14744]
+                - StaticText ""
+                - StaticText "연결"
+              - button "행 삭제" [disabled, ref=e14745]
+              - generic
+                - math "math input field" [disabled, ref=e14746] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14827]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                  - status
+                - button "Σ" [ref=e14747]
+              - button "" [expanded=false, disabled, ref=e14748]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, disabled, ref=e14749]
+                - StaticText "(빈 값)"
+              - button "삭제" [disabled, ref=e14750]
+              - button " 연결" [disabled, ref=e14751]
+                - StaticText ""
+                - StaticText "연결"
+              - button "행 삭제" [disabled, ref=e14752]
+              - button " 1열 추가" [disabled, ref=e14606]
+                - StaticText ""
+                - StaticText "1열 추가"
+              - StaticText "2열 (범례)"
+              - generic
+                - math "math input field" [disabled, ref=e14753] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14828]
+                  - generic
+                    - generic
+                      - StaticText "범례 입력"
+                  - status
+                - button "Σ" [ref=e14754]
+              - button "" [expanded=false, disabled, ref=e14755]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14756]
+              - generic
+                - math "math input field" [disabled, ref=e14757] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14829]
+                  - generic
+                    - generic
+                      - StaticText "범례 입력"
+                  - status
+                - button "Σ" [ref=e14758]
+              - button "" [expanded=false, disabled, ref=e14759]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14760]
+              - button " 2열 추가" [disabled, ref=e14607]
+                - StaticText ""
+                - StaticText "2열 추가"
+          - heading "SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)" [level=2, ref=e14143]
+            - button "SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)" [expanded=true, ref=e14158]
+              - StaticText "SBMADD"
+              - button "" [ref=e14184]
+                - StaticText ""
+              - StaticText "주관식 > 다답형 > 드래그앤 드롭형"
+              - StaticText "(omr-SBMADD.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14244]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14245]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "1열 (연결 항목)"
+              - generic
+                - math "math input field" [ref=e14471] editable [tabindex, contenteditable]
+                  - textbox [ref=e14540]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                    - button "Menu Menu" [ref=e14572]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14472]
+              - button "" [expanded=false, ref=e14473]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, ref=e14474]
+                - StaticText "(빈 값)"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14475]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [ref=e14476]
+              - generic
+                - math "math input field" [ref=e14477] editable [tabindex, contenteditable]
+                  - textbox [ref=e14541]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                    - button "Menu Menu" [ref=e14573]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14478]
+              - button "" [expanded=false, ref=e14479]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, ref=e14480]
+                - StaticText "(빈 값)"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e14481]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [ref=e14482]
+              - button " 1열 추가" [ref=e14310]
+                - StaticText ""
+                - StaticText "1열 추가"
+              - StaticText "2열 (보기)"
+              - generic
+                - math "math input field" [ref=e14483] editable [tabindex, contenteditable]
+                  - textbox [ref=e14542]
+                  - generic
+                    - generic
+                      - StaticText "보기"
+                    - button "Menu Menu" [ref=e14574]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14484]
+              - button "" [expanded=false, ref=e14485]
+                - StaticText ""
+              - button "삭제" [ref=e14486]
+              - generic
+                - math "math input field" [ref=e14487] editable [tabindex, contenteditable]
+                  - textbox [ref=e14543]
+                  - generic
+                    - generic
+                      - StaticText "보기"
+                    - button "Menu Menu" [ref=e14575]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e14488]
+              - button "" [expanded=false, ref=e14489]
+                - StaticText ""
+              - button "삭제" [ref=e14490]
+              - button " 2열 추가" [ref=e14311]
+                - StaticText ""
+                - StaticText "2열 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14246]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14247]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14248]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14312]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"left_fields\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ],\n    \"right_fields\": [\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      },\n      {\n        \"value\": \"\",\n        \"value_type\": \"math\"\n      }\n    ],\n    \"multi_flag\": \"N\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14313]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    },\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "1열 (연결 항목)"
+              - generic
+                - math "math input field" [disabled, ref=e14761] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14830]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                  - status
+                - button "Σ" [ref=e14762]
+              - button "" [expanded=false, disabled, ref=e14763]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, disabled, ref=e14764]
+                - StaticText "(빈 값)"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14765]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [disabled, ref=e14766]
+              - generic
+                - math "math input field" [disabled, ref=e14767] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14831]
+                  - generic
+                    - generic
+                      - StaticText "기호"
+                  - status
+                - button "Σ" [ref=e14768]
+              - button "" [expanded=false, disabled, ref=e14769]
+                - StaticText ""
+              - StaticText "→"
+              - button "(빈 값)" [expanded=false, disabled, ref=e14770]
+                - StaticText "(빈 값)"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14771]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [disabled, ref=e14772]
+              - button " 1열 추가" [disabled, ref=e14608]
+                - StaticText ""
+                - StaticText "1열 추가"
+              - StaticText "2열 (보기)"
+              - generic
+                - math "math input field" [disabled, ref=e14773] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14832]
+                  - generic
+                    - generic
+                      - StaticText "보기"
+                  - status
+                - button "Σ" [ref=e14774]
+              - button "" [expanded=false, disabled, ref=e14775]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14776]
+              - generic
+                - math "math input field" [disabled, ref=e14777] editable [tabindex, contenteditable]
+                  - textbox [disabled, ref=e14833]
+                  - generic
+                    - generic
+                      - StaticText "보기"
+                  - status
+                - button "Σ" [ref=e14778]
+              - button "" [expanded=false, disabled, ref=e14779]
+                - StaticText ""
+              - button "삭제" [disabled, ref=e14780]
+              - button " 2열 추가" [disabled, ref=e14609]
+                - StaticText ""
+                - StaticText "2열 추가"
+        - separator
+        - heading "서술형" [level=3, ref=e14122]
+        - button "열기" [ref=e14123]
+        - button "닫기" [ref=e14124]
+        - generic
+          - heading "ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)" [level=2, ref=e14144]
+            - button "ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)" [expanded=true, ref=e14159]
+              - StaticText "ESBA00"
+              - button "" [ref=e14185]
+                - StaticText ""
+              - StaticText "서술형 > 기본형 > 기본 서술형"
+              - StaticText "(omr-ESBA00.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14249]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14250]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - StaticText "타이틀"
+              - textbox "풀이 과정" [ref=e14314]
+              - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+              - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14251]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14252]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14253]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14315]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"COMMENT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14316]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"MANUAL\"\n}"
+          - group
+            - generic
+              - StaticText "타이틀"
+              - textbox "풀이 과정" [disabled, ref=e14610]
+              - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+              - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+          - heading "ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)" [level=2, ref=e14145]
+            - button "ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)" [expanded=true, ref=e14160]
+              - StaticText "ESSA00"
+              - button "" [ref=e14186]
+                - StaticText ""
+              - StaticText "서술형 > 단답형 > 단답 서술형"
+              - StaticText "(omr-ESSA00.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14254]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14255]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "풀이 과정" [ref=e14317]
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+            - button " 순서 바꾸기" [ref=e14491]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "정답" [ref=e14318]
+            - combobox [expanded=false, ref=e14319]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e14544]
+                - option "범례 선택형" [ref=e14545]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e14492] editable [tabindex, contenteditable]
+                - textbox [ref=e14546]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e14576]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14493]
+            - button "" [expanded=false, ref=e14494]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e14495] editable [tabindex, contenteditable]
+                - textbox [ref=e14547]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e14577]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14496]
+            - button "" [expanded=false, ref=e14497]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e14498] editable [tabindex, contenteditable]
+                - textbox [ref=e14548]
+                - generic
+                  - generic
+                    - StaticText "정답 입력"
+                  - button "Menu Menu" [ref=e14578]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14499]
+            - button "" [expanded=false, ref=e14500]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e14501]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e14502]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e14320]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14256]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14257]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14258]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14321]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"COMMENT\"\n  },\n  {\n    \"type\": \"TEXT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14322]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"MANUAL\"\n    },\n    {\n      \"rule_type\": \"VALUE\",\n      \"allowed_answer\": [\n        {\n          \"value\": \"\",\n          \"value_type\": \"math\",\n          \"case_sensitive\": false,\n          \"space_sensitive\": false\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "풀이 과정" [disabled, ref=e14611]
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+            - button " 순서 바꾸기" [disabled, ref=e14781]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "정답" [disabled, ref=e14612]
+            - combobox [expanded=false, disabled, ref=e14613]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [disabled, ref=e14834]
+                - option "범례 선택형" [disabled, ref=e14835]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [disabled, ref=e14782] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14836]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                - status
+              - button "Σ" [ref=e14783]
+            - button "" [expanded=false, disabled, ref=e14784]
+              - StaticText ""
+            - generic
+              - math "math input field" [disabled, ref=e14785] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14837]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                - status
+              - button "Σ" [ref=e14786]
+            - button "" [expanded=false, disabled, ref=e14787]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [disabled, ref=e14788] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14838]
+                - generic
+                  - generic
+                    - StaticText "정답 입력"
+                - status
+              - button "Σ" [ref=e14789]
+            - button "" [expanded=false, disabled, ref=e14790]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, disabled, ref=e14791]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, disabled, ref=e14792]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [disabled, ref=e14614]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+          - heading "ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)" [level=2, ref=e14146]
+            - button "ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)" [expanded=true, ref=e14161]
+              - StaticText "ESMA00"
+              - button "" [ref=e14187]
+                - StaticText ""
+              - StaticText "서술형 > 다답형 > 다답 서술형"
+              - StaticText "(omr-ESMA00.html)"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e14259]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e14260]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "풀이 과정" [ref=e14323]
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+            - button " 순서 바꾸기" [ref=e14503]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "정답" [ref=e14324]
+            - LabelText
+              - checkbox "OMR SET끼리 순서 고정(유순)" [checked=false, ref=e14504]
+              - StaticText "OMR SET끼리 순서 고정(유순)"
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "OMR SET"
+            - LabelText
+              - checkbox "순서 고정(유순)" [checked=false, ref=e14505]
+              - StaticText "순서 고정(유순)"
+            - button "SET 삭제" [disabled, ref=e14325]
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e14326]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e14549]
+                - option "범례 선택형" [ref=e14550]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e14506]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [disabled, ref=e14327]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e14507] editable [tabindex, contenteditable]
+                - textbox [ref=e14551]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e14579]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14508]
+            - button "" [expanded=false, ref=e14509]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e14510] editable [tabindex, contenteditable]
+                - textbox [ref=e14552]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e14580]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14511]
+            - button "" [expanded=false, ref=e14512]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e14513] editable [tabindex, contenteditable]
+                - textbox [ref=e14553]
+                - generic
+                  - generic
+                    - StaticText "정답 입력"
+                  - button "Menu Menu" [ref=e14581]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e14514]
+            - button "" [expanded=false, ref=e14515]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e14516]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e14517]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e14328]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - button " 정답 SET 추가" [ref=e14329]
+              - StaticText ""
+              - StaticText "정답 SET 추가"
+            - button " OMR SET 추가" [ref=e14330]
+              - StaticText ""
+              - StaticText "OMR SET 추가"
+          - generic
+            - heading "JSON 모니터 개발용" [level=3, ref=e14261]
+              - StaticText ""
+              - StaticText "JSON 모니터 "
+              - StaticText "개발용"
+            - button " 초기화" [ref=e14262]
+              - StaticText ""
+              - StaticText "초기화"
+            - button " 유효성 검사" [ref=e14263]
+              - StaticText ""
+              - StaticText "유효성 검사"
+            - StaticText "OMR (화면 마킹)"
+            - button "" [ref=e14331]
+              - StaticText ""
+            - StaticText "[\n  {\n    \"type\": \"COMMENT\"\n  },\n  {\n    \"type\": \"TEXT\"\n  }\n]"
+            - StaticText "정답 (채점 규칙)"
+            - button "" [ref=e14332]
+              - StaticText ""
+            - StaticText "{\n  \"rule_type\": \"ORDERED\",\n  \"nodes\": [\n    {\n      \"rule_type\": \"MANUAL\"\n    },\n    {\n      \"rule_type\": \"UNORDERED\",\n      \"nodes\": [\n        {\n          \"rule_type\": \"UNORDERED\",\n          \"nodes\": [\n            {\n              \"rule_type\": \"VALUE\",\n              \"allowed_answer\": [\n                {\n                  \"value\": \"\",\n                  \"value_type\": \"math\",\n                  \"case_sensitive\": false,\n                  \"space_sensitive\": false\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+          - group
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "풀이 과정" [disabled, ref=e14615]
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+            - button " 순서 바꾸기" [disabled, ref=e14793]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "정답" [disabled, ref=e14616]
+            - LabelText
+              - checkbox "OMR SET끼리 순서 고정(유순)" [checked=false, disabled, ref=e14794]
+              - StaticText "OMR SET끼리 순서 고정(유순)"
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "OMR SET"
+            - LabelText
+              - checkbox "순서 고정(유순)" [checked=false, disabled, ref=e14795]
+              - StaticText "순서 고정(유순)"
+            - button "SET 삭제" [disabled, ref=e14617]
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, disabled, ref=e14618]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [disabled, ref=e14839]
+                - option "범례 선택형" [disabled, ref=e14840]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, disabled, ref=e14796]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [disabled, ref=e14619]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [disabled, ref=e14797] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14841]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                - status
+              - button "Σ" [ref=e14798]
+            - button "" [expanded=false, disabled, ref=e14799]
+              - StaticText ""
+            - generic
+              - math "math input field" [disabled, ref=e14800] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14842]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                - status
+              - button "Σ" [ref=e14801]
+            - button "" [expanded=false, disabled, ref=e14802]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [disabled, ref=e14803] editable [tabindex, contenteditable]
+                - textbox [disabled, ref=e14843]
+                - generic
+                  - generic
+                    - StaticText "정답 입력"
+                - status
+              - button "Σ" [ref=e14804]
+            - button "" [expanded=false, disabled, ref=e14805]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, disabled, ref=e14806]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, disabled, ref=e14807]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [disabled, ref=e14620]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - button " 정답 SET 추가" [disabled, ref=e14621]
+              - StaticText ""
+              - StaticText "정답 SET 추가"
+            - button " OMR SET 추가" [disabled, ref=e14622]
+              - StaticText ""
+              - StaticText "OMR SET 추가"
+      - separator
+      - generic
+        - heading "수식 입력 테스트" [level=3, ref=e14125]
+          - StaticText ""
+          - StaticText "수식 입력 테스트"
+        - generic
+          - math "math input field" [ref=e14162] editable [tabindex, contenteditable]
+            - textbox [ref=e14188]
+            - generic
+              - button "Menu Menu" [ref=e14193]
+                - image "Menu"
+                - StaticText "Menu"
+            - status
+          - button "Σ" [ref=e14163]
+        - generic
+          - StaticText "LaTeX 값:"
+          - code
+        - generic
+          - StaticText "렌더:"
+      - separator
+      - generic
+        - heading "value_type 입력 형태 테스트" [level=3, ref=e14126]
+          - StaticText ""
+          - StaticText "value_type 입력 형태 테스트"
+        - generic
+          - generic
+            - StaticText "실제 전환 컴포넌트 — 앞 라벨은 외부 고정(룰), config(placeholder·allowed) 주입. 비허용 타입은 ⋮에서 회색(못 누름), 전환 시 값 버림."
+          - generic
+            - StaticText "정답 (text·math)"
+          - generic
+            - textbox "정답 입력" [ref=e14164]
+            - StaticText ""
+          - button "" [expanded=false, ref=e14165]
+            - StaticText ""
+          - generic
+            - StaticText "범례 (전체)"
+          - generic
+            - textbox "범례 입력" [ref=e14166]
+            - StaticText ""
+          - button "" [expanded=false, ref=e14167]
+            - StaticText ""
+          - generic
+            - StaticText "기호 (text만)"
+          - generic
+            - textbox "기호" [ref=e14168]
+            - StaticText ""
+          - button "" [expanded=false, ref=e14169]
+            - StaticText ""
+          - StaticText "getValue (실시간)"
+          - StaticText "[\n  {\n    \"value\": \"\",\n    \"value_type\": \"text\"\n  },\n  {\n    \"value\": \"\",\n    \"value_type\": \"text\"\n  },\n  {\n    \"value\": \"\",\n    \"value_type\": \"text\"\n  }\n]"
+      - separator
+      - generic
+        - heading "value-type-dropdown 테스트 (select 대체)" [level=3, ref=e14127]
+          - StaticText ""
+          - StaticText "value-type-dropdown 테스트 (select 대체)"
+        - generic
+          - generic
+            - StaticText "위 = 옵션 소스(value-type-input 행, 추가/삭제). 아래 dropdown 이 이를 미러링 — text=글자 · math=수식렌더 · image=썸네일. 선택값 = 행 참조(select 와 동일 계약, 소스 값 바뀌면 자동 반영)."
+          - generic
+            - StaticText "1"
+            - generic
+              - textbox "항목 입력" [ref=e14189]
+              - StaticText ""
+            - button "" [expanded=false, ref=e14190]
+              - StaticText ""
+            - button "삭제" [ref=e14170]
+            - StaticText "2"
+            - generic
+              - textbox "항목 입력" [ref=e14191]
+              - StaticText ""
+            - button "" [expanded=false, ref=e14192]
+              - StaticText ""
+            - button "삭제" [ref=e14171]
+          - button " 항목 추가" [ref=e14147]
+            - StaticText ""
+            - StaticText "항목 추가"
+          - separator
+          - StaticText "연결 A"
+          - button "(빈 값)" [expanded=false, ref=e14172]
+            - StaticText "(빈 값)"
+          - StaticText "연결 B"
+          - button "(빈 값)" [expanded=false, ref=e14173]
+            - StaticText "(빈 값)"
+          - StaticText "getValue (실시간) — 선택 value(참조) + 해석값"
+          - StaticText "[\n  {\n    \"dd\": 0,\n    \"value\": \"0\",\n    \"resolved\": {\n      \"value\": \"\",\n      \"value_type\": \"text\"\n    }\n  },\n  {\n    \"dd\": 1,\n    \"value\": \"0\",\n    \"resolved\": {\n      \"value\": \"\",\n      \"value_type\": \"text\"\n    }\n  }\n]"

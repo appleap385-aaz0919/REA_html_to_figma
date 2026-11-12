@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"3105-own-single-family-merge-baseline-controls","command":["eval","--file","sources/runtime/disposable-single-twin-original-controls-read.js"]},
+ {"label":"3106-own-single-family-merge-baseline-memberships-history","command":["eval","--file","sources/runtime/disposable-single-family-memberships-history-read.js"]},
+ {"label":"3107-own239-before-merge-generation-history","command":["eval","(async()=>{const r=await fetch('/item/all/twin-histories.donga?itemId=2089239',{credentials:'same-origin'});if(!r.ok||r.redirected)throw Error('Own239 history unavailable');return {itemId:2089239,status:r.status,histories:await r.json()};})()"]},
+ {"label":"3108-own-single216-merge-unlink-modal-open","command":["eval","--file","sources/runtime/qa2089216-open-current-twins.js"]},
+ {"label":"3109-own-single216-merge-unlink-current-review","command":["eval","(()=>{const m=document.querySelector('#itemTwinModal');return {shown:m.classList.contains('show'),transitioning:bootstrap.Modal.getInstance(m)?._isTransitioning,text:document.querySelector('#twinCurrent')?.innerText,buttons:[...m.querySelectorAll('#twinCurrent button[hx-post]')].map(e=>({post:e.getAttribute('hx-post'),disabled:e.matches(':disabled')}))};})()"]}
+],"tailChars":120}

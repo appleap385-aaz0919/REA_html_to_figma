@@ -1,0 +1,10 @@
+{
+ "steps":[
+  {"label":"1018-hml-search-seed","command":["snapshot"]},
+  {"label":"1019-hml-source-filter","command":["select","{ref}","HML 변환"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 생성 방식 전체"},
+  {"label":"1020-hml-filter-query","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 조회\" \\[ref=(e\\d+)\\]"},
+  {"label":"1021-hml-results-settled","command":["snapshot"]},
+  {"label":"1022-hml-hundred-per-page","command":["select","{ref}","100개씩 보기"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 10개씩 보기"},
+  {"label":"1023-hml-hundred-settled","command":["snapshot"]}
+ ],"tailChars":1800
+}

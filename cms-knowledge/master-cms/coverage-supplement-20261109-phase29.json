@@ -1,0 +1,6051 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "supplementary_feature_coverage_map",
+  "recordedDate": "2026-11-09",
+  "scope": {
+    "application": "문제은행 마스터 CMS",
+    "host": "dev-exambank.dongahub.com",
+    "latestCutoff": 1995,
+    "latestPhase": "session-20261109-phase29.json",
+    "serviceCmsIncluded": false,
+    "workPerformed": "로컬 기록의 정적 통합만 수행했습니다. 브라우저·네트워크·CMS 업무 API·전역 상태 파일을 조작하지 않았습니다."
+  },
+  "historicalBaseline": {
+    "coverageFile": "coverage-inventory.json",
+    "pageFile": "page-inventory.csv",
+    "cutoff": 354,
+    "historicalSurfaceRecords": 128,
+    "historicalFeatureGroupRecords": 232,
+    "meaning": "354시점의 역사적 기록입니다. 두 파일은 수정하지 않았고 이 수를 최신 사이트 화면·기능 총수로 사용하지 않습니다."
+  },
+  "completeness": {
+    "overallCompletionPercent": null,
+    "actualTotalSitePages": null,
+    "actualTotalSiteFunctions": null,
+    "denominatorKnown": false,
+    "allKnownBranchesComplete": false,
+    "statement": "알려진 기능의 표본·분기별 보충 지도입니다. 전체사이트나100%완료를 주장하지 않습니다."
+  },
+  "sourceBasis": {
+    "phaseFiles": [
+      "session-20261109-phase16.json",
+      "session-20261109-phase17.json",
+      "session-20261109-phase18.json",
+      "session-20261109-phase19.json",
+      "session-20261109-phase20.json",
+      "session-20261109-phase21.json",
+      "session-20261109-phase22.json",
+      "session-20261109-phase23.json",
+      "session-20261109-phase24.json",
+      "session-20261109-phase25.json",
+      "session-20261109-phase26.json",
+      "session-20261109-phase27.json",
+      "session-20261109-phase28.json",
+      "session-20261109-phase29.json"
+    ],
+    "omrCoverage": {
+      "file": "omr-runtime-coverage.json",
+      "cutoff": 1001,
+      "role": "OMR14유형의 앞선 폼·미리보기·전체반영·재진입 복원 결과를 가져왔습니다. 남은 분기의 오래된 문구는 확정 실행 근거로 보정합니다."
+    },
+    "resume": {
+      "file": "resume-state.json",
+      "latestPhase": "session-20261109-phase29.json",
+      "lastEvidence": 1995,
+      "role": "최신 요약과 다음 조사 대상입니다. 현재 브라우저 상태를 새로 관찰한 근거가 아닙니다."
+    },
+    "historicalPhaseMetadata": "앞선 OMR 근거 번호를 phase에 연결하기 위해 이전 세션의 evidenceRange만 보충 참조했습니다. 앞선 세션 전체를 새로 재검증하지 않았습니다."
+  },
+  "operationSummary": {
+    "confirmedMasterBusinessOperations": 29,
+    "countUnit": "확정 제출과 후속 결과가 기록된 Master 업무 작업 수입니다. DB 행 변경 수·UI 클릭 수·거부 요청·임시 편집 수가 아닙니다.",
+    "affectedDatabaseRows": null,
+    "newConfirmedOperationsInPhases16To29": 12,
+    "additionsByPhase": [
+      {
+        "phase": "session-20261109-phase16.json",
+        "count": 1,
+        "scope": "HML 문제 저장 결과의 Master 전체반영"
+      },
+      {
+        "phase": "session-20261109-phase20.json",
+        "count": 2,
+        "scope": "QA출처199 등록·수정"
+      },
+      {
+        "phase": "session-20261109-phase25.json",
+        "count": 2,
+        "scope": "평가지341 메타 수정·필드 복원"
+      },
+      {
+        "phase": "session-20261109-phase26.json",
+        "count": 2,
+        "scope": "평가지341 순서 저장·순서 복원"
+      },
+      {
+        "phase": "session-20261109-phase28.json",
+        "count": 2,
+        "scope": "Definition661 등록·최종 승인 제출"
+      },
+      {
+        "phase": "session-20261109-phase29.json",
+        "count": 3,
+        "scope": "Definition662 등록·폐기,663 빈 ZIP 등록"
+      }
+    ],
+    "serviceDeploymentSubmitted": false,
+    "cacheReloadSubmitted": false,
+    "roleLogoutSubmitted": false,
+    "hmlDocumentApprovalSubmitted": false,
+    "hmlDocumentDiscardSubmitted": false,
+    "labSaveIsMasterMutation": false,
+    "vendorTemporarySaveCount": "별도 의미로 기록하며29에 더하지 않습니다.",
+    "sourceRefs": [
+      "session-20261109-phase16.json",
+      "session-20261109-phase20.json",
+      "session-20261109-phase25.json",
+      "session-20261109-phase26.json",
+      "session-20261109-phase28.json",
+      "session-20261109-phase29.json",
+      "resume-state.json"
+    ]
+  },
+  "classificationDefinitions": {
+    "normal_flow_observed": "실제 정상흐름 확인. 완료된 것은 completedChecks에 적은 표본과 동작 범위입니다.",
+    "source_only": "소스만 확인. sourceOnlyChecks의 실행은 완료로 계산하지 않습니다.",
+    "exceptions_unverified": "예외미확인. 이미 확인한 정상흐름·선택된 예외를 부정하지 않으며 나머지 분기를 뜻합니다.",
+    "data_or_access_insufficient": "데이터나접근부족. 필요한 표본·권한·서비스CMS·서버 근거가 없습니다.",
+    "pixels_unverified": "픽셀미확인. DOM·스크롤·저장결과와 화면 픽셀 확인을 분리합니다.",
+    "observed_behavior_policy_unconfirmed": "실제 동작은 확인했으나 정상 요구사항과 일치하는지는 미확정입니다. 단순 미실행이나 정상완료로 바꾸지 않습니다."
+  },
+  "interpretationRules": [
+    "분류는 상호배타적이지 않습니다. 정상흐름이 완료된 기능도 예외·픽셀 검증이 남을 수 있습니다.",
+    "각 completed는 명시한 표본만 뜻합니다. 미실행 저장·승인·폐기·배포·캐시·세션 종료는 완료로 올리지 않습니다.",
+    "최신 phase의 실제 결과로 이전 remaining을 갱신합니다. 과거 목록에R/M이 없었다는 사실은 QA661의R/M 실제관찰을 무효화하지 않습니다.",
+    "모달열기·취소·로컬 선택과 최종 서버 제출·재조회를 구분합니다. Sortable 공개API 순서 검증은 포인터 드래그 검증이 아닙니다.",
+    "문서승인·문항승인·문항등록성공·평가지사용·서비스배포는 각각 다른 상태입니다.",
+    "도구실패·전환중·계획번호·가림·숨은DOM은 실제완료 근거로 바꾸지 않습니다.",
+    "이미지complete와비영자연크기는리소스로딩 근거이며 페이지 전체 픽셀 검토가 아닙니다.",
+    "후속검증은실행명령이아닙니다. 이파일은조사계획과커버리지의정적기록입니다."
+  ],
+  "navigation": [
+    {
+      "id": "NAV_HOME",
+      "parentId": null,
+      "name": "홈",
+      "kind": "main_menu",
+      "route": "/main.donga",
+      "coverageIds": [
+        "HOME_NAV"
+      ],
+      "evidencePhases": [
+        "coverage-inventory.json"
+      ],
+      "coverageMeaning": "354역사적표시만승계하며phase16~29의신규방문완료로세지않습니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "현재홈·계정·메뉴를새관찰로확인합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_ITEMS",
+      "parentId": null,
+      "name": "문항 관리",
+      "kind": "main_menu_expand",
+      "route": null,
+      "coverageIds": [
+        "ITEM_LIST",
+        "ITEM_DETAIL"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "하위4메뉴와권한별접근차이를최신화면에서대조합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_ALL",
+      "parentId": "NAV_ITEMS",
+      "name": "전체 문항",
+      "kind": "submenu",
+      "route": "/item/all/list.donga",
+      "coverageIds": [
+        "ITEM_LIST",
+        "ITEM_DETAIL",
+        "ITEM_HTML_EDITOR",
+        "ITEM_SAVE",
+        "ITEM_APPROVAL",
+        "ITEM_DEPLOY",
+        "ITEM_RELATION_LOOKUPS",
+        "ITEM_RELATION_MUTATIONS",
+        "ITEM_ASSETS"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "문항승인·연결변경·배포와남은편집예외를격리검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_HML",
+      "parentId": "NAV_ITEMS",
+      "name": "HML 문항 등록",
+      "kind": "submenu",
+      "route": "/item/hml/list.donga",
+      "coverageIds": [
+        "HML_LIST_STATES",
+        "HML_REVIEW_GUARDS",
+        "HML_REGISTER_E2E",
+        "HML_TAB_QUESTION",
+        "HML_TAB_ANSWER",
+        "HML_TAB_PASSAGE",
+        "HML_TAB_TRANSLATION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase27.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA파일로HML등록부터최종승인/평가지생성까지검증하고실제해석파일을확보합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_DIFI",
+      "parentId": "NAV_ITEMS",
+      "name": "디피니션 문항 등록",
+      "kind": "submenu",
+      "route": "/item/difi/list.donga",
+      "coverageIds": [
+        "DIFI_LIST_STATES",
+        "DIFI_REGISTER",
+        "DIFI_CLIENT_VALIDATION",
+        "DIFI_REVIEW_GUARDS",
+        "DIFI_APPROVE",
+        "DIFI_GENERATED_ITEM",
+        "DIFI_DISCARD",
+        "DIFI_EMPTY_FAILURE",
+        "DIFI_TRANSFER_FAILURES"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "다중JSON/세트/리소스·전송실패재시도와개별문항준비상태를검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_TWIN",
+      "parentId": "NAV_ITEMS",
+      "name": "쌍둥이 그룹 관리",
+      "kind": "submenu",
+      "route": "/item/twin/list.donga",
+      "coverageIds": [
+        "TWIN_LIST_DETAIL",
+        "TWIN_PAGINATION",
+        "ITEM_TWIN_COPY",
+        "ITEM_RELATION_MUTATIONS"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제연결변경과AI/세트생성·대표/수명정책을확인합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_PAPERS",
+      "parentId": null,
+      "name": "평가지 관리",
+      "kind": "main_menu",
+      "route": "/paper/list.donga",
+      "coverageIds": [
+        "PAPER_LIST_DETAIL",
+        "PAPER_EDIT_LOCAL",
+        "PAPER_META_SAVE",
+        "PAPER_ORDER_SAVE",
+        "PAPER_POINTER_SORT",
+        "PAPER_DEPLOY",
+        "PAPER_DEPLOY_EXEC"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase19.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "적격세트추가/제외저장·실제드래그·사용/배포가능대상을검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_SOURCES",
+      "parentId": null,
+      "name": "문항 출처 관리",
+      "kind": "main_menu",
+      "route": "/product/list.donga",
+      "coverageIds": [
+        "SOURCE_LIST_FILTER",
+        "SOURCE_FORM",
+        "SOURCE_CREATE_EDIT",
+        "SOURCE_ACTIVE_IMPACT"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "매핑출처상태저장의신규선택/기존연결/서비스영향과필터를검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "NAV_LAB",
+      "parentId": null,
+      "name": "랩",
+      "kind": "main_menu",
+      "route": "/lab/index.donga",
+      "coverageIds": [
+        "LAB_INDEX_VERSION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase23.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "관리도구와테스트화면의미실행/예외를구분해이어갑니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_BUILD",
+      "parentId": "NAV_LAB",
+      "name": "배포정보",
+      "kind": "display_card",
+      "route": null,
+      "coverageIds": [
+        "LAB_INDEX_VERSION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "새배포시서버시작/빌드정보와실제릴리스를대조합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_CACHE",
+      "parentId": "NAV_LAB",
+      "name": "캐시 reload",
+      "kind": "modal_card",
+      "route": "#cacheReloadModal",
+      "coverageIds": [
+        "LAB_CACHE_LOCAL",
+        "LAB_CACHE_EXEC"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "선택/취소와실제갱신을분리하고격리환경에서전후캐시를대조합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_BUNDLE",
+      "parentId": "NAV_LAB",
+      "name": "외부 번들 버전",
+      "kind": "modal_card",
+      "route": "#bundleVersionModal",
+      "coverageIds": [
+        "LAB_INDEX_VERSION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "로드실패/버전없음분기와새번들표시를확인합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_SESSION",
+      "parentId": "NAV_LAB",
+      "name": "역할별 로그아웃",
+      "kind": "modal_card",
+      "route": "#sessionExpireModal",
+      "coverageIds": [
+        "LAB_ROLE_LOCAL",
+        "LAB_ROLE_EXEC"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리다중계정으로만본인제외/선택역할범위의실제종료를검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_MATH_NAV",
+      "parentId": "NAV_LAB",
+      "name": "수식 입력기 데모",
+      "kind": "test_page_card",
+      "route": "/lab/view/math-demo.donga",
+      "coverageIds": [
+        "LAB_MATH",
+        "LAB_OCR"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase23.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "OCR성공·여러줄·빈수식/닫기/키패드변형과샘플이미지를보완합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_OMR_NAV",
+      "parentId": "NAV_LAB",
+      "name": "OMR 전체 유형",
+      "kind": "test_page_card",
+      "route": "/lab/view/omr.donga",
+      "coverageIds": [
+        "LAB_OMR_GALLERY",
+        "OMR_OBSACN",
+        "OMR_OBSAOX",
+        "OMR_OBMACN",
+        "OMR_OBMAOX",
+        "OMR_SBSANM",
+        "OMR_SBSADR",
+        "OMR_SBSAAS",
+        "OMR_SBMANM",
+        "OMR_SBMAAS",
+        "OMR_SBMALD",
+        "OMR_SBMADD",
+        "OMR_ESBA00",
+        "OMR_ESSA00",
+        "OMR_ESMA00"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "14폼하위분기·수식/이미지렌더·모니터/초기화와픽셀을검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_RESTORE_NAV",
+      "parentId": "NAV_LAB",
+      "name": "OMR 복원 테스트",
+      "kind": "test_page_card",
+      "route": "/lab/view/omr-render.donga",
+      "coverageIds": [
+        "LAB_OMR_RESTORE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제저장JSON과복합SET·상충/오류JSON의복원정책을검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "LAB_EDITOR_NAV",
+      "parentId": "NAV_LAB",
+      "name": "편집기 격리 테스트",
+      "kind": "test_page_card",
+      "route": "/lab/view/question-frame.donga",
+      "coverageIds": [
+        "LAB_EDITOR_ISOLATION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "연결된coverageIds의명시한표본과범위를따릅니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "보이는상태의기존/iframe레이아웃·높이·도구·미리보기재그리기를검증합니다."
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "id": "GLOBAL_ACCOUNT",
+      "parentId": null,
+      "name": "마스터 표시·접속자·로그아웃",
+      "kind": "header_controls",
+      "route": null,
+      "coverageIds": [
+        "HOME_NAV",
+        "ROLE_BACKEND"
+      ],
+      "evidencePhases": [
+        "coverage-inventory.json",
+        "session-20261109-phase21.json"
+      ],
+      "coverageMeaning": "사이드바의별도대메뉴가아닌전역상단컨트롤입니다.",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "새관찰로계정·마스터구분을확인하고로그아웃/세션만료는작업보존조건에서분리검증합니다."
+        }
+      ],
+      "unverified": []
+    }
+  ],
+  "features": [
+    {
+      "id": "HOME_NAV",
+      "name": "홈·사이드바·마스터 구분",
+      "domain": "navigation",
+      "normalFlow": {
+        "status": "historical_only",
+        "completedChecks": [
+          "354시점 홈 표시와 문항관리 메뉴 펼침이 기록돼 있습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "coverage-inventory.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [
+        "coverage-inventory.json"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "phase16~29에서 홈·로그아웃을 새로 검증하지 않았습니다.",
+        "다른 역할의 메뉴·접근 차이"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "현재 홈에 재진입해 메뉴·세션·계정 표시를 확인하고 다른 권한은 제공된 계정으로만 비교합니다."
+        }
+      ],
+      "executionBoundary": "홈 표시는 역사적 근거입니다. 로그아웃 실행은 완료로 올리지 않습니다.",
+      "classifications": [
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_LIST",
+      "name": "전체 문항 목록·필터·문항 이동",
+      "domain": "item",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "HML변환 필터·100행에서 세트 표본을 찾아 진입했습니다.",
+          "평가지 미배포 문항2개의 고정 ID검색 목록을 확인했습니다."
+        ],
+        "scope": "세트2088355 탐색 및 문항2087725/2087727 검색 표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase19.json"
+      ],
+      "evidenceNumbers": [
+        1017,
+        1019,
+        1023,
+        1027,
+        1028,
+        1034,
+        1231,
+        1232,
+        1234,
+        1235,
+        1236
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든필터·정렬·날짜·상태·페이지크기 조합",
+        "포인터가가려진 링크의 재현·권한별결과"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "같은검색조건의초기화/페이지/상세복귀를검증하고,ID목록검색과서비스동적필터를구분합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_DETAIL",
+      "name": "단건·세트 상세·현재문항·HTML/HML 표시",
+      "domain": "item",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "HML세트2088355와Definition세트2088663을비교했습니다.",
+          "QA단건2089175의초안·정답·메타·관계수·Q/A이미지로드를재조회했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1004,
+        1010,
+        1036,
+        1037,
+        1038,
+        1040,
+        1041,
+        1947,
+        1949,
+        1950
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든상태/권한/세트구성·버전·연결변형",
+        "전상태의픽셀·가로범위"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "phase29는문항전체DOM스크롤과이미지크기이며전체페이지픽셀확인은아닙니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "서로다른상태의단건/세트를열어HTML/HML/문항상태/등록성공/현재강조를각각대조합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_HTML_EDITOR",
+      "name": "HTML 편집·뷰어·HML과의 관계",
+      "domain": "item",
+      "normalFlow": {
+        "status": "observation_only",
+        "completedChecks": [
+          "HML문제의Master반영후HTML편집본문에는HML표식이자동반영되지않음을확인했습니다.",
+          "이전HTML편집조작은354시점인벤토리에보존돼있습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "coverage-inventory.json"
+      ],
+      "evidenceNumbers": [
+        1109
+      ],
+      "sourceRefs": [
+        "research/html-editor-behavior.md"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "HTML/HML동기화의의도된정책",
+        "실제HTML수정저장·유형변경시본문/선지보존의모든경계"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리문항에서HTML수정→저장→재조회와HML수정의상호반영여부를분리검증합니다."
+        }
+      ],
+      "executionBoundary": "HML저장이HTML까지바꾼다고추정하지않습니다.",
+      "classifications": [
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_SAVE",
+      "name": "문항 임시 저장·전체 반영·재진입",
+      "domain": "item",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "OMR14유형의전체반영·재진입복원이앞선런타임기록에있습니다.",
+          "O/X임시본선택복원과HML문제전체반영2088701을확인했습니다."
+        ],
+        "scope": "OMR14유형의정상전체반영과선택된O/X/HML표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "omr-runtime-coverage.json"
+      ],
+      "evidenceNumbers": [
+        335,
+        341,
+        343,
+        344,
+        1087,
+        1089,
+        1095,
+        1101,
+        1103
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "전체유형의임시저장분기",
+        "서버실패·중복제출·동시편집·오래된버전·저장중이탈"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "정상표본의임시본/확정본선택을재확인하고네트워크실패와동시수정경계를격리조건에서검증합니다."
+        }
+      ],
+      "executionBoundary": "각유형·저장경로의전체분기완료는아닙니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_APPROVAL",
+      "name": "문항 상태 수정·개별 승인 선행조건",
+      "domain": "item",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1947,
+        1950,
+        1954
+      ],
+      "sourceRefs": [
+        "sources/definition-qa-item2089175-detail-20261109.html"
+      ],
+      "sourceOnlyChecks": [
+        "approvalChecks에difficulty/behavior/omrData/answerData=null,unitCount0이며별도문항승인가드가있습니다."
+      ],
+      "exceptionsUnverified": [
+        "초안R→승인Y/N의실제차단·보완후저장·재조회",
+        "다른상태전이·세트전원검사"
+      ],
+      "dataOrAccessGaps": [
+        "기획상필수값·AI추천누락의원인과서버상태전이정책은미제공입니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA2089175에서현재누락값으로승인검사를실제확인하고,정책에맞게보완후승인·재조회를별도기록합니다."
+        }
+      ],
+      "executionBoundary": "문서661의Y를문항2089175의승인완료로올리지않습니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "ITEM_DEPLOY",
+      "name": "문항 배포·재배포·서비스 반영",
+      "domain": "distribution",
+      "normalFlow": {
+        "status": "not_executed",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1226,
+        1227,
+        1950
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "기존배포대상모달/조건선택·취소와현재초안배포disabled는실행과구분합니다."
+      ],
+      "exceptionsUnverified": [
+        "배포가능대상선택·최종제출·재배포·서비스재조회",
+        "실패·부분성공·취소·버전·복구"
+      ],
+      "dataOrAccessGaps": [
+        "서비스CMS접근과현재허용된배포가능대상의실증이없습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "승인및메타/OMR조건을충족한격리문항과배포가능서비스를준비하고Master결과·서비스수신·버전을함께확인합니다."
+        }
+      ],
+      "executionBoundary": "서비스배포최종제출0회로유지합니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "ITEM_RELATION_LOOKUPS",
+      "name": "문항의 출처·평가지·쌍둥이 연결 조회",
+      "domain": "item",
+      "normalFlow": {
+        "status": "observation_only",
+        "completedChecks": [
+          "QA문항의출처1·평가지0·쌍둥이0을확인했고평가지와쌍둥이상세에서역방향구성을읽었습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase17.json",
+        "session-20261109-phase18.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1123,
+        1124,
+        1157,
+        1158,
+        1950
+      ],
+      "sourceRefs": [
+        "research/item-detail-behavior.md"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "문항상세각조회모달의추가상태·링크·빈값/실패",
+        "연결변경후양방향재조회"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "각관계조회모달을실제열고원본ID·표시수·역방향화면이일치하는지대조합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_TWIN_COPY",
+      "name": "단건 COPY 복제·그룹 포함",
+      "domain": "twin",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "354시점단건COPY로2088985를생성했고후속쌍둥이그룹2088665의8멤버에원본2038004와검증복제2088985가포함됐습니다."
+        ],
+        "scope": "확정된단건COPY한표본과후속그룹조회입니다."
+      },
+      "evidencePhases": [
+        "coverage-inventory.json",
+        "session-20261109-phase17.json"
+      ],
+      "evidenceNumbers": [
+        309,
+        310,
+        311,
+        313,
+        1123,
+        1124
+      ],
+      "sourceRefs": [
+        "coverage-inventory.json"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "AI생성·세트COPY·생성실패·권한/상태행렬",
+        "대표문항/그룹생성·소멸정책"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리된단건/세트별생성전후그룹ID·대표·멤버·이력을대조하고AI경로는결과생성후재조회까지검증합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_RELATION_MUTATIONS",
+      "name": "쌍둥이·출처 연결 추가/수정/삭제",
+      "domain": "item",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "coverage-inventory.json",
+        "session-20261109-phase17.json",
+        "session-20261109-phase20.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [
+        "research/item-detail-behavior.md"
+      ],
+      "sourceOnlyChecks": [
+        "기존상세의연결모달과실행경로는정적연구로보존됐습니다."
+      ],
+      "exceptionsUnverified": [
+        "실제연결추가·해제·출처페이지수정·삭제저장",
+        "중복·동시성·대표/세트단위·관계수복원"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "검증용문항과출처로연결추가/수정/해제를실행하고양쪽목록·표시수·이력·원상복원을확인합니다."
+        }
+      ],
+      "executionBoundary": "모달열기·선택·취소나그룹조회는연결변경완료가아닙니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "ITEM_ASSETS",
+      "name": "썸네일·HTML/OMR 이미지 자산 업로드",
+      "domain": "item",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "coverage-inventory.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1552,
+        1558,
+        1950
+      ],
+      "sourceRefs": [
+        "research/item-edit-behavior.md"
+      ],
+      "sourceOnlyChecks": [
+        "자산업로드경로는기존편집소스에서만확인한부분이남습니다."
+      ],
+      "exceptionsUnverified": [
+        "실제새자산업로드·삭제·치환·실패·저장재조회",
+        "확장자/크기·외부URL·권한"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리자산으로업로드→본문/OMR적용→저장→재조회와삭제참조영향을구분검증합니다."
+        }
+      ],
+      "executionBoundary": "갤러리의이미지URL입력과기존Q/A이미지로드는새자산업로드실행이아닙니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "HML_LIST_STATES",
+      "name": "HML 문서 목록·상태별 상세",
+      "domain": "hml_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "교육과정22의116건을100+16행으로중복없이읽었습니다.",
+          "W/P/R/Y/D/F와파싱실패·메타추천실패의서로다른F상세7개를비교하고하단까지스크롤했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase27.json"
+      ],
+      "evidenceNumbers": [
+        1760,
+        1763,
+        1766,
+        1769,
+        1772,
+        1775,
+        1778,
+        1781,
+        1784,
+        1812,
+        1825
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든문서/교육과정·필터·원본다운로드·문항수정진입",
+        "실제W/P처리전이·역할차이"
+      ],
+      "dataOrAccessGaps": [
+        "당시M0건이며현재HML추천중실제표본이없습니다."
+      ],
+      "pixelGaps": [
+        "phase27상태별상세는DOM·스크롤이며픽셀확인미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "같은QA문서의상태전이를관찰하고교육과정15·필터·다운로드·수정임시본분기를추가검증합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "data_or_access_insufficient",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "HML_REVIEW_GUARDS",
+      "name": "HML 초안 검수·평가지선택·승인/폐기 확인",
+      "domain": "hml_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "세트묶음3블록/5문항·S/F/D선택을관찰했습니다.",
+          "모두D차단→평가지미선택차단·빈폐기사유차단·최종승인/폐기확인후취소·새GET복원을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase27.json"
+      ],
+      "evidenceNumbers": [
+        1781,
+        1786,
+        1789,
+        1793,
+        1799,
+        1801,
+        1806,
+        1809,
+        1811
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "최종확인수락시블록data-item-ids를itemIds/loadFlags로펼쳐제출합니다.",
+        "W→모두D→평가지미선택→확인순서는코드와선택된실제거절순서를구분합니다."
+      ],
+      "exceptionsUnverified": [
+        "F와세트/삭제선택의최종서버처리",
+        "W미검수경고·실제최종승인·폐기"
+      ],
+      "dataOrAccessGaps": [
+        "조사한6초안74블록이모두S이고W옵션disabled라W경고의실제재현자료가없습니다."
+      ],
+      "pixelGaps": [
+        "이초안상태/확인창의최신픽셀검토가남습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리QA문서에서검수S/F/D와평가지Y/N조합의최종처리및생성평가지·문항상태를재조회합니다."
+        }
+      ],
+      "executionBoundary": "로컬검수와확인/취소는완료됐고최종HML문서승인·폐기는미실행입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "HML_REGISTER_E2E",
+      "name": "HML 파일 등록·업로드·분리·승인·평가지 생성",
+      "domain": "hml_document",
+      "normalFlow": {
+        "status": "not_executed",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [
+        "research/hml-registration-behavior.md"
+      ],
+      "sourceOnlyChecks": [
+        "기존HML등록폼의출처·단원·페이지·용도·파일검증/업로드연결은정적문서에있습니다."
+      ],
+      "exceptionsUnverified": [
+        "실제파일선택/발급/전송/파싱·최종승인·메타완료",
+        "등록실패/부분실패·평가지Y생성·폐기·재시도"
+      ],
+      "dataOrAccessGaps": [
+        "정상/세트/실패용HML QA파일을준비해야합니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "표본HML을격리등록해업로드부터분리/검수/최종승인·평가지생성까지ID와상태를재조회합니다."
+        }
+      ],
+      "executionBoundary": "HML편집기SaveAs·PNG생성과기존문서조회는새HML문서등록성공이아닙니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "HML_SWITCH_SYNC",
+      "name": "HML 미저장 전환·저장·HTML 동기화 경계",
+      "domain": "hml_editor",
+      "normalFlow": {
+        "status": "observed_behavior_policy_unconfirmed",
+        "completedChecks": [],
+        "scope": "관찰은완료됐지만미저장손실/HTML비동기화가의도된정상정책인지는미확정입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1059,
+        1067,
+        1070,
+        1078,
+        1083,
+        1087,
+        1095,
+        1101,
+        1103,
+        1109
+      ],
+      "sourceRefs": [
+        "sources/hml-glue-20261109.manifest.json",
+        "sources/hml-glue-20261109.diff"
+      ],
+      "sourceOnlyChecks": [
+        "새webhwp glue의저장성공후같은슬롯문서재열기·실패시초기화분기를확인했습니다."
+      ],
+      "exceptionsUnverified": [
+        "의도된dirty경고/HTML동기화정책",
+        "다른탭·저장실패·반복저장·닫기/복구의데이터보존"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "미저장전환손실을별도재현하고요구사항과대조하며모든슬롯의저장전환/실패/닫기보존을검증합니다."
+        }
+      ],
+      "executionBoundary": "관찰된손실/비동기화는사실이며모든문서·탭의일반정책이나제품수정결론은아닙니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "observed_behavior_policy_unconfirmed"
+      ],
+      "observationStatus": "completed",
+      "completedObservationChecks": [
+        "미저장QA표식을해답으로갔다문제로돌아오면경고없이잃는선택흐름을확인했습니다.",
+        "편집기저장성공후부모pending값과CMS최종반영을구분했습니다.",
+        "최종반영후HML/PNG에는표식이남지만HTML본문에는없었습니다."
+      ]
+    },
+    {
+      "id": "DIFI_LIST_STATES",
+      "name": "Definition 목록·기존 상태별 상세",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "기존15건의교육과정22목록과W/P/D/F/Y8개상세를비교했습니다.",
+          "QA661으로R/M/Y를실제관찰해기존R/M데이터부족을부분해소했습니다.",
+          "D179의삭제카드잔존과D180무카드·F보조HML오류문구를구분했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1830,
+        1833,
+        1837,
+        1841,
+        1845,
+        1849,
+        1853,
+        1857,
+        1861,
+        1908,
+        1937,
+        1943
+      ],
+      "sourceRefs": [
+        "definition-state-review-20261109.md"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든필터·교육과정·문서·권한변형",
+        "R/M모든실패·편집제한·세트표본"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "현재상태별상세·신규QA전체페이지픽셀검토는완료하지않았습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "현목록의새QA상태를구분해필터를재조회하고R/M은실제표본의버튼/최종결과를따로확인합니다."
+        }
+      ],
+      "executionBoundary": "172/171은파일명과달리기존목록Y였습니다.과거R/M0건을현재상태미존재로확대하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_REGISTER",
+      "name": "Definition ZIP 등록·P/R·입력메타",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "974B QA ZIP등록으로661/문항2089175가생기고목록15→16,P→R을확인했습니다.",
+          "두번째980B QA ZIP으로662/문항2089204가생겼고문서페이지2~3·교사용T를확인했습니다."
+        ],
+        "scope": "두격리정상ZIP의문서등록및분리결과입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1904,
+        1906,
+        1908,
+        1955,
+        1963,
+        1966,
+        1969
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "주소발급POST→binary PUT→create POST순서가소스에있습니다."
+      ],
+      "exceptionsUnverified": [
+        "다중JSON·세트·첨부리소스·다른문항유형·부분파싱실패",
+        "개별문항에문서용도/출처페이지/단원이반영되는전조합"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "QA등록전체화면픽셀근거는미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "단건외다중JSON/세트/리소스QA파일을등록해생성수·구성·메타·원본보존·실패범위를재조회합니다."
+        }
+      ],
+      "executionBoundary": "최종결과는확인했지만각발급/PUT/create상태코드·본문은수집하지않았습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_CLIENT_VALIDATION",
+      "name": "ZIP 파일·필수정보·취소 검증",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "무파일HML경고·.txt반려제거·22BZIP로컬queued·메타누락차단을확인했습니다.",
+          "2번째파일반려·50MiB+1B반려·단원21→20자·페이지0invalid를확인했습니다.",
+          "취소창남기기는입력을보존하고저장없이이동은목록으로복귀했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json"
+      ],
+      "evidenceNumbers": [
+        1867,
+        1868,
+        1871,
+        1873,
+        1875,
+        1877,
+        1879,
+        1883,
+        1885,
+        1887,
+        1889,
+        1890
+      ],
+      "sourceRefs": [
+        "sources/definition-registration-form-current-20261109.html"
+      ],
+      "sourceOnlyChecks": [
+        "autoProcessQueue=false·크기>50*1024*1024반려·단원자동완성3자/300ms/20후보는코드에서확인했습니다."
+      ],
+      "exceptionsUnverified": [
+        "정확히50MiB·바로아래·대문자ZIP·변조MIME·파일교체/제거",
+        "서버단원존재/길이·출처조합·페이지역전/소수/큰값"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "파일경계와메타서버검증을격리요청으로확인하고클라이언트validity와서버수용을구분합니다."
+        }
+      ],
+      "executionBoundary": "로컬ZIP수용과파싱성공은다릅니다.무파일HML문구·영문파일수경고·크기반올림문구는관찰된문제입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_REVIEW_GUARDS",
+      "name": "Definition 초안 승인/폐기 가드",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "깨끗한661에서모두D승인차단·F선택후승인확인·빈폐기사유차단·사유후폐기확인·S승인확인을각창닫힘후검증했습니다.",
+          "Definition폼에는HML의paperReg컨트롤이없음을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json"
+      ],
+      "evidenceNumbers": [
+        1931,
+        1932,
+        1933,
+        1934
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "블록itemIds/loadFlags펼침·W/모두D/paperReg조건부검사·trim사유검사가있습니다."
+      ],
+      "exceptionsUnverified": [
+        "F선택의최종서버수용·혼합S/F/D·세트묶음",
+        "W미검수차단·모든가드우선순위·사유길이"
+      ],
+      "dataOrAccessGaps": [
+        "미검수W실제표본이없고비활성옵션을강제로활성화하지않았습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "복수블록QA문서로S/F/D혼합의최종처리와실제서버결과를검증하고미검수W는정상데이터로확보합니다."
+        }
+      ],
+      "executionBoundary": "1911~1928의모달겹침구간은정책완료근거에서제외했습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "DIFI_APPROVE",
+      "name": "QA 문서 승인·M→Y 후속 확인",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "661의최종승인실행후M을확인했고후속GET/UI에서Y를확인했습니다.",
+          "QA비고·본문·생성ID가유지됐고문항은R초안으로남았습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1935,
+        1937,
+        1941,
+        1943,
+        1945
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "AI내부요청/응답·추천항목별성공·누락원인·M정체/실패·중복승인",
+        "문항승인·배포선행조건"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "DOM·스크롤/후속GET은확인했지만현재전체페이지픽셀은미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "추천전후필드와문항승인을별도로대조하고격리조건에서M실패/재시도·중복제출을검증합니다."
+        }
+      ],
+      "executionBoundary": "완료는문서승인흐름입니다.모든메타·문항승인·OMR준비의완료는아닙니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_GENERATED_ITEM",
+      "name": "문서 승인 후 생성 문항의 준비 상태",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "2089175가R·SBMANM이며난이도/단원/성취기준/영역/교과역량/유형정보가미입력표시임을확인했습니다.",
+          "저장OMR/정답null로실제미리보기경고·모달/iframe0을확인했습니다.",
+          "Q/A이미지가492×218/492×277로로드됐습니다.",
+          "원본530의비교한ID·본문요약·정답·모드는유지됐고QA표식은없었습니다."
+        ],
+        "scope": "이한QA표본의정상조회와실제누락차단입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1941,
+        1947,
+        1949,
+        1950,
+        1953,
+        1954
+      ],
+      "sourceRefs": [
+        "definition-qa-processing-review-20261109.md"
+      ],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "입력SHORT_ANSWER_ORDERED→SBMANM의일반매핑/적정성",
+        "누락원인·개별문항승인·OMR보완저장/복원·정답규칙보존",
+        "원본전체DB/관계/원격객체불변"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "이미지로드치수는전체페이지픽셀근거가아닙니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "생성메타와저장OMR을보완한뒤승인/미리보기/배포조건을각각검증하고다른입력유형과대조합니다."
+        }
+      ],
+      "executionBoundary": "1951은잘못된모달기대에따른검사timeout입니다.차단사유는1954가실제포착했습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_DISCARD",
+      "name": "QA 문서 실제 폐기·자식문항 접근",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "662에사유를입력하고최종폐기를제출했습니다.",
+          "D후속GET에서QA본문·정답·풀이·삭제배지는남고문항ID/상세/수정/승인/폐기가숨겨졌습니다.",
+          "생성문항2089204상세GET은Master목록으로리다이렉트됐습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1970,
+        1973,
+        1975,
+        1976,
+        1978,
+        1979
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "혼합상태·세트·등록실패문항의폐기영향",
+        "모든목록필터/관계·서비스영향·원본물리삭제"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "이번폐기상세는전체화면픽셀확인미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "여러블록QA에서폐기전후자식조회/목록/연결을대조하고외부서비스영향은별도검증합니다."
+        }
+      ],
+      "executionBoundary": "확인된것은문서D·표시/접근변경입니다.물리적DB삭제나모든목록배제를추정하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_EMPTY_FAILURE",
+      "name": "빈 ZIP 서버 실패·원본 무결성",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "멤버0개인22BZIP을실제등록해663의F·생성문항0·재등록안내를확인했습니다.",
+          "원본프록시GET은200 application/zip22B였고해시가제출파일과일치했습니다.",
+          "F보조문구의HML오류표시를확인했습니다."
+        ],
+        "scope": "유효한ZIP컨테이너이지만내용0개인표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1980,
+        1985,
+        1988,
+        1990,
+        1993,
+        1994,
+        1995
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "손상ZIP·잘못된JSON·리소스누락·부분성공",
+        "다른입력유형/파서오류와상세서버코드"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "DOM으로한화면에맞음을확인했지만픽셀검사는완료하지않았습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "손상/부분실패용QA파일을분리등록해실패위치·생성물·원본보존·재등록을대조합니다."
+        }
+      ],
+      "executionBoundary": "중간P는관찰하지않았으므로663상태이력에추가하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "DIFI_TRANSFER_FAILURES",
+      "name": "발급·PUT·생성 실패와 재시도",
+      "domain": "definition_document",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [
+        "sources/definition-registration-form-current-20261109.html"
+      ],
+      "sourceOnlyChecks": [
+        "전송error토스트·버튼재활성·다음제출전QUEUED복원·단계연속afterRequest처리는코드에서만확인했습니다."
+      ],
+      "exceptionsUnverified": [
+        "주소발급반려·PUT중단/실패·create실패·중복제출·재시도·세션만료",
+        "객체만남은상태정리·부분성공복원"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리환경에서단계별실패를유도하고버튼복원/큐상태/문서ID/저장객체/중복생성을각각재조회합니다."
+        }
+      ],
+      "executionBoundary": "성공등록최종결과와빈ZIP파서실패는전송단계실패검증을대신하지않습니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "TWIN_LIST_DETAIL",
+      "name": "쌍둥이 그룹 목록·단건/세트 상세",
+      "domain": "twin",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "43그룹(단일32/세트11)목록·50행전체와상중하픽셀을확인했습니다.",
+          "단일2088665의8멤버,세트2087985의2세트각6멤버·단원/문항상태를비교했습니다.",
+          "그룹ID와대표문항ID·세트수와자식문항수를구분했습니다."
+        ],
+        "scope": "현재ADMIN의목록43행과선택된2그룹상세입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ],
+      "evidenceNumbers": [
+        1113,
+        1116,
+        1119,
+        1120,
+        1123,
+        1124,
+        1129,
+        1131,
+        1133,
+        1137
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "현계정목록/상세에그룹생성·수정·삭제컨트롤은관찰되지않았고멤버링크target/rel은소스입니다."
+      ],
+      "exceptionsUnverified": [
+        "다른권한·빈목록/오류·모든멤버링크새탭",
+        "그룹대표/수명·연결변경"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "멤버링크를실제열어동일문항을확인하고역할/빈결과·연결변경전후그룹을비교합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "TWIN_PAGINATION",
+      "name": "쌍둥이 페이지크기·화살표 규칙",
+      "domain": "twin",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "50→10행은1페이지로복원됐고마지막5페이지의41~43행을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ],
+      "evidenceNumbers": [
+        1135,
+        1136,
+        1138,
+        1140,
+        1141,
+        1142,
+        1143
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "30/100크기·6페이지이상데이터의이전/다음블록",
+        "마지막페이지에서이전disabled표시의의도"
+      ],
+      "dataOrAccessGaps": [
+        "현재43건/10행=5페이지라다음블록표본이부족합니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "5페이지를초과하는그룹자료가있을때화살표목적지·disabled·숫자블록을실제비교합니다."
+        }
+      ],
+      "executionBoundary": "출처목록에서확인한1→6규칙을이목록에자동적용하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "PAPER_LIST_DETAIL",
+      "name": "평가지 목록·초안/사용/폐기/대형 상세",
+      "domain": "paper",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "교육과정22의17평가지(초안13/사용3/폐기1)와주요필드를읽었습니다.",
+          "초안341·사용332·폐기266·120문항531의서로다른상태/메타/문항구성을비교했습니다.",
+          "평가지사용상태와자식문항사용상태·다중출처를구분했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase19.json"
+      ],
+      "evidenceNumbers": [
+        1146,
+        1150,
+        1154,
+        1157,
+        1161,
+        1221,
+        1223,
+        1249,
+        1255,
+        1257,
+        1270
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든검색·필터·날짜·정렬·원본문서/멤버링크",
+        "이전상세버전조회·서비스배포버전관계"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "531의4215~6089px구간픽셀은미완료이며전체120행DOM/스크롤과구분합니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "각상태의필터/링크/버전조회와사용변경후배포조건을재조회합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "PAPER_EDIT_LOCAL",
+      "name": "평가지 필수값·폐기 확인·세트 제외/추가·취소",
+      "domain": "paper",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "빈이름/시작페이지저장차단·폐기선택시페이지required해제·폐기최종확인후취소를확인했습니다.",
+          "세트3문항제외·단건2086650추가·중복이미포함차단·요약재계산을로컬에서확인했습니다.",
+          "저장없이이동후원래4문항/순서/메타를확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase18.json"
+      ],
+      "evidenceNumbers": [
+        1171,
+        1178,
+        1184,
+        1187,
+        1189,
+        1195,
+        1204,
+        1207,
+        1209,
+        1214,
+        1215
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "실제평가지폐기",
+        "적격세트추가/제외의저장·범위역전/최대행·동시변경"
+      ],
+      "dataOrAccessGaps": [
+        "현재동일출처후보표본은단건1개여서적격세트체크박스추가미실행입니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "적격세트가있는격리평가지에서추가/제외저장을하고재진입·요약·원상복원을검증합니다."
+        }
+      ],
+      "executionBoundary": "실제완료는로컬조작·확인취소·미저장이탈입니다.폐기나구성저장으로올리지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "PAPER_META_SAVE",
+      "name": "평가지 메타 저장·재진입·필드 복원",
+      "domain": "paper",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "341의이름/시작페이지2→3을저장해1095·재진입유지를확인했습니다.",
+          "원래값으로재저장해1096·4문항/순서/초안/교사용유지를확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase25.json"
+      ],
+      "evidenceNumbers": [
+        1717,
+        1718,
+        1722,
+        1723,
+        1726,
+        1730,
+        1732,
+        1733
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "사용상태전환·다른필드·이전버전복구·서버충돌"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "현재1098을기준으로다른필드와상태전이·과거버전접근을검증하고이력/현재값복원을구분합니다."
+        }
+      ],
+      "executionBoundary": "필드가복원돼도1095/1096의저장이력은남습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "PAPER_ORDER_SAVE",
+      "name": "평가지 세트 단위 순서 저장·복원",
+      "domain": "paper",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "Sortable공개sort/toArray/onEnd로세트3개→단건1개순서로바꾸고실제Save1097·재진입을확인했습니다.",
+          "원래순서를실제Save1098로복원했습니다.세트내부순서는유지됐습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase26.json"
+      ],
+      "evidenceNumbers": [
+        1741,
+        1743,
+        1744,
+        1747,
+        1749,
+        1750,
+        1753,
+        1755
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "실제포인터드래그",
+        "서로다른세트·경계드롭·새세트추가/제외저장·버전충돌"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "같은격리평가지에서실제핸들포인터드래그를한번관찰해순번·세트유지·저장복원을비교합니다."
+        }
+      ],
+      "executionBoundary": "공개API를통한순서데이터검증과실제드래그제스처검증을분리합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "PAPER_POINTER_SORT",
+      "name": "평가지 실제 포인터 정렬",
+      "domain": "paper",
+      "normalFlow": {
+        "status": "outcome_unknown_attempted",
+        "completedChecks": [],
+        "scope": "포인터조작을시도했지만도구timeout이라성공/실패모두미확정입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase26.json"
+      ],
+      "evidenceNumbers": [
+        1734,
+        1735,
+        1736,
+        1739,
+        1740
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "핸들시작→이동→드롭→순서/저장",
+        "스크롤중드롭·세트경계·잘못된드롭"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "도구상태를새로확인한후한번의실제드래그와후속DOM을검증하고unknown시같은조작을즉시반복하지않습니다."
+        }
+      ],
+      "executionBoundary": "최초조작은도구timeout/outcome_unknown이었고후속관찰은원래순서였습니다.성공·CMS결함모두미확정입니다.",
+      "classifications": [
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "PAPER_DEPLOY",
+      "name": "평가지 배포 모달·선행 문항 조회",
+      "domain": "distribution",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "초안341은사용평가지만배포가능안내로차단됐습니다.",
+          "사용332는모달이열렸으나양서비스모두미배포문항2건으로선택/최종배포disabled였습니다.",
+          "누락문항조회는고정ID2개의Master검색탭으로열렸습니다.",
+          "배포확인창은취소하고누락문항검색탭만닫았습니다."
+        ],
+        "scope": "모달·차단조건·누락문항조회·취소의표본흐름만완료했습니다.최종배포는미실행입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase19.json"
+      ],
+      "evidenceNumbers": [
+        1163,
+        1225,
+        1226,
+        1227,
+        1228,
+        1230,
+        1232,
+        1234
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "모든포함문항배포·Master폐기문항제외안내를실제선행조건과함께기록했습니다."
+      ],
+      "exceptionsUnverified": [
+        "배포가능대상·최종제출·재배포·서비스문항/평가지/버전·이력",
+        "실패·부분성공·폐기문항제외정책"
+      ],
+      "dataOrAccessGaps": [
+        "현재표본서비스대상은선행미배포문항으로차단됐고서비스CMS는미제공입니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "적격사용평가지와이미배포된자식문항·서비스CMS접근을확보한후두단계배포와수신이력을검증합니다."
+        }
+      ],
+      "executionBoundary": "모달안내가자동최초문항배포성공을증명하지않습니다.최종배포미실행입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "SOURCE_LIST_FILTER",
+      "name": "출처 목록·필터·페이지·빈결과",
+      "domain": "source",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "59→QA등록후60행·13열을보존하고상태N6건·교육과정15빈결과·코드완전검색·초기화후조회·실제하단을확인했습니다.",
+          "10행에서다음1→6,이전6→1의블록이동을실제확인했습니다.",
+          "빈결과의pageNum0링크표시를관찰했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ],
+      "evidenceNumbers": [
+        1273,
+        1309,
+        1366,
+        1368,
+        1370,
+        1375,
+        1378,
+        1381,
+        1384,
+        1388,
+        1394,
+        1401,
+        1712
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "출처명/날짜직접·빠른기간/분류·용도·상태전체해제·정렬",
+        "0페이지링크실제서버처리"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "출처목록/등록/상세/수정/영향모달의픽셀검토는캡처실패로남습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "대표필터를한개씩변경해조건·결과·상세복귀를검증하고빈결과의0링크는읽기목적지/응답을따로확인합니다."
+        }
+      ],
+      "executionBoundary": "미사용6건의매핑0은데이터표본이며일반정책이아닙니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "SOURCE_FORM",
+      "name": "출처 분류 연동·필수값·길이·취소",
+      "domain": "source",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "필수분류10개·학교급/교육과정연동선택초기화와선택카탈로그를관찰했습니다.",
+          "빈폼저장차단·노출명52→50/비고104→100제한·취소남기기/이탈을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ],
+      "evidenceNumbers": [
+        1281,
+        1287,
+        1290,
+        1295,
+        1694,
+        1696,
+        1697,
+        1700,
+        1704,
+        1706,
+        1711
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모든학교급/교육과정/과목/교재조합",
+        "서버직접길이/유효성·연도경계"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "출처폼의픽셀검토미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "대표분류별연동선택과상위변경초기화를검증하고허용값/길이의서버반려를분리기록합니다."
+        }
+      ],
+      "executionBoundary": "등록자의판형은내부publishYear이며선택2000~2050입니다.자동코드/명은저장전비활성으로비어있습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "SOURCE_CREATE_EDIT",
+      "name": "QA 출처 등록·수정·중복 거부",
+      "domain": "source",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "QA199를2049·미사용·0매핑으로등록하고상세/목록에서확인했습니다.",
+          "2048·교사용·노출명/비고로수정해코드/명재생성·수정정보·60건유지를확인했습니다.",
+          "동일9코드구성/다른용도의등록은이미등록된출처로거부됐습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json"
+      ],
+      "evidenceNumbers": [
+        1304,
+        1306,
+        1307,
+        1309,
+        1314,
+        1319,
+        1321,
+        1323,
+        1348,
+        1350,
+        1351
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "수정시코드충돌·동시변경·모든중복구성",
+        "매핑된출처분류변경저장영향"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "등록/수정결과의페이지픽셀미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "별도QA출처로수정충돌과코드재생성의다른조합을검증하며매핑여부별영향을비교합니다."
+        }
+      ],
+      "executionBoundary": "거부요청은확정Master변경수에더하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "SOURCE_ACTIVE_IMPACT",
+      "name": "출처 사용 여부 영향모달·취소 복원",
+      "domain": "source",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "사용출처134·102매핑에서Y→N영향모달을열고취소후hidden이벤트완료시Y복원을확인했습니다.",
+          "원래상세재진입에서도Y·102매핑을확인했고출처134는저장하지않았습니다."
+        ],
+        "scope": "영향모달선택/취소복원만완료이며실제Y/N저장영향은미검증입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json"
+      ],
+      "evidenceNumbers": [
+        1331,
+        1332,
+        1353,
+        1354,
+        1359,
+        1360,
+        1362
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "기존매핑/서비스노출유지·신규선택제외는모달의안내정책입니다."
+      ],
+      "exceptionsUnverified": [
+        "매핑출처Y/N실제저장·신규문항선택목록제외",
+        "기존매핑/서비스노출보존·분류변경영향"
+      ],
+      "dataOrAccessGaps": [
+        "서비스CMS에서실제노출을볼접근이없습니다."
+      ],
+      "pixelGaps": [
+        "영향모달·복원값의픽셀미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "먼저격리QA출처에연결문항을만들어Y/N저장을하고기존연결·신규선택·서비스노출을각각재조회합니다."
+        }
+      ],
+      "executionBoundary": "모달닫힘전N중간상태를취소실패로판정하지않습니다.매핑102건인원본은미저장입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_INDEX_VERSION",
+      "name": "랩 배포정보·외부 번들 버전",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "현재ADMIN의랩도구8개와서버시작/빌드표시를확인했습니다.",
+          "외부번들모달에서viewer1.13.6/editor0.3.10을읽고닫았습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1402,
+        1403,
+        1404,
+        1406,
+        1407
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "첫열기지정vendor로드·전역version조회·실패분리처리가있습니다."
+      ],
+      "exceptionsUnverified": [
+        "다른역할접근·번들로드실패·버전없음·새배포후값"
+      ],
+      "dataOrAccessGaps": [
+        "현재ADMIN외계정과배포서버근거는미제공입니다."
+      ],
+      "pixelGaps": [
+        "랩인덱스/관리모달의최신픽셀검토가남습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "제공된다른권한계정으로접근차이를확인하고새배포시표시버전과실제번들을대조합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_CACHE_LOCAL",
+      "name": "랩 캐시 reload 선택·취소",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "전체선택시공통코드/단원/사이트가선택되고reload버튼이활성화된뒤취소했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1408,
+        1410,
+        1411,
+        1413
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "부분선택·초기화·요청후성공/실패"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "캐시모달픽셀검토미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "부분선택/모달재열기의로컬동작을확인하고실제reload는운영영향을정의한별도검증범위에서만실행합니다."
+        }
+      ],
+      "executionBoundary": "현재완료는선택/취소입니다.캐시갱신은미실행입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_CACHE_EXEC",
+      "name": "랩 캐시 실제 갱신",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1403,
+        1412
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "전체는/cache/all-reload.donga1회,부분은code/unit/site명령별fetch와Promise.all응답ok판정입니다."
+      ],
+      "exceptionsUnverified": [
+        "전체/부분명령·다중서버반영·부분실패·동시성"
+      ],
+      "dataOrAccessGaps": [
+        "다중서버상태와캐시전후값에접근하지못했습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리환경/서버범위를확보해정의된캐시값변화와응답을대조합니다."
+        }
+      ],
+      "executionBoundary": "이GET은데이터를바꾸는명령입니다.정적분석을읽기실행으로바꾸지않았습니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "LAB_ROLE_LOCAL",
+      "name": "랩 역할별 로그아웃 선택·취소",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "MASTER/DOUCLASS×ADMIN/USER및전체선택을확인했습니다.",
+          "초기최종버튼disabled→MASTER:USER선택후enabled를확인하고취소했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1414,
+        1415,
+        1416,
+        1418,
+        1419
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "모달재열기·다중/전체선택·실제세션종료"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "역할별로그아웃모달픽셀검토미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "다른사용자의실세션을건드리지않는격리조건에서선택재설정과버튼가용성을추가확인합니다."
+        }
+      ],
+      "executionBoundary": "다른사용자/서비스세션은실제로종료하지않았습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_ROLE_EXEC",
+      "name": "랩 역할별 실제 세션 종료",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "source_only",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1403,
+        1418
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "targets반복form-urlencoded POST/lab/session/expire.donga,정상text종료수/오류redirect실패분기가있습니다."
+      ],
+      "exceptionsUnverified": [
+        "본인제외·역할/사이트범위·실패/redirect·종료수"
+      ],
+      "dataOrAccessGaps": [
+        "테스트역할별다중계정·세션관찰환경이없습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "제공된격리테스트계정의로그인전후와종료세션수를대조하고본인제외를확인합니다."
+        }
+      ],
+      "executionBoundary": "최종세션종료POST미실행입니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "LAB_MATH",
+      "name": "수식 데모 변환·키패드·수식 적용/취소",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "문제/정답/해설3블록변환·역변환과문자열차이를보존했습니다.",
+          "1+2적용/취소·3×2행렬취소·placeholder속성·인라인삽입/9수정·여러줄gathered블록변환을확인했습니다.",
+          "출력details를펼치고현재상태상단부터실제하단까지픽셀을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase23.json"
+      ],
+      "evidenceNumbers": [
+        1593,
+        1596,
+        1599,
+        1605,
+        1613,
+        1618,
+        1620,
+        1643,
+        1647,
+        1655,
+        1662,
+        1665,
+        1666,
+        1667,
+        1668,
+        1670
+      ],
+      "sourceRefs": [
+        "sources/lab-math-assets-20261109.manifest.json"
+      ],
+      "sourceOnlyChecks": [
+        "원자수식노드data-type/data-latex,cleanHTML정리·취소callback없음·모든키패드정의는소스입니다."
+      ],
+      "exceptionsUnverified": [
+        "블록버튼·빈값·Escape/배경닫기·단축키·긴누르기·문자/공백·모든행렬크기",
+        "변환정확성모든입력·실제CMS저장"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "빈수식/닫기와블록직접삽입을분리검증하고추가샘플의cleanHTML/역변환을정확대조합니다."
+        }
+      ],
+      "executionBoundary": "랩의인메모리시험이며CMS문항저장작업이아닙니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "LAB_OCR",
+      "name": "손글씨 입력·지우기·OCR 실패",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제한획을그려버튼활성·픽셀을확인했고한획지우기로빈상태를확인했습니다."
+        ],
+        "scope": "획입력/지우기정상흐름은완료됐고OCR은실패분기만확인했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase23.json"
+      ],
+      "evidenceNumbers": [
+        1625,
+        1631,
+        1632,
+        1636,
+        1638,
+        1641
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "경로/api/math-ocr,줄별PNG분할과gathered결합은소스입니다."
+      ],
+      "exceptionsUnverified": [
+        "OCR성공·결과적용·여러줄·전체지우기",
+        "실제HTTP상태·실패원인"
+      ],
+      "dataOrAccessGaps": [
+        "OCR응답상태를얻지못했고성공표본이없습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "OCR서비스가정상응답하는격리환경에서한줄/여러줄인식과결과적용을확인하고실패응답과UI를대조합니다."
+        }
+      ],
+      "executionBoundary": "완료는획입력/지우기와실패분기관찰입니다.OCR성공완료는아닙니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ],
+      "completedExceptionChecks": [
+        "OCR인식1회는실패안내를표시했으며같은요청을반복하지않았습니다."
+      ]
+    },
+    {
+      "id": "LAB_OMR_GALLERY",
+      "name": "OMR 갤러리 14폼·모드·값형식·행참조",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "14폼전체/분류별열기닫기·좁게/넓게·disabled복사본동기화를확인했습니다.",
+          "text→math→text의값초기화·imageURL덤프·행참조수정/삭제/ID유지/삭제대상대체를확인했습니다.",
+          "22개중첩스크롤위치로14종모든DOM영역을지났습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json"
+      ],
+      "evidenceNumbers": [
+        1424,
+        1539,
+        1542,
+        1547,
+        1549,
+        1551,
+        1554,
+        1558,
+        1563,
+        1565,
+        1571,
+        1575,
+        1576,
+        1587
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "MathLive는fieldset외별도disabled처리가필요한코드입니다."
+      ],
+      "exceptionsUnverified": [
+        "각폼모든하위입력·모니터/초기화·수식/이미지렌더·코드복사",
+        "모든disabled수식입력과실제포커스/수정차단"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "22위치DOM스크롤은픽셀확인완료가아닙니다.이미지URL입력도실제이미지렌더픽셀미확인입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "14폼별남은분기를돌며이미지/수식픽셀·모니터/초기화를확인하고인메모리조작을CMS저장과분리합니다."
+        }
+      ],
+      "executionBoundary": "갤러리로컬실행이며Master데이터저장없음입니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_OMR_RESTORE",
+      "name": "OMR JSON 복원·양방향 직렬화·14기본폼 왕복",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "유형미선택/파싱오류/형태불일치/빈JSON의실제서로다른처리를확인했습니다.",
+          "OBSACN2행Alpha/Beta복원→Gamma편집/정답선택·Pretty·기본폼초기화·폭/유형변경을확인했습니다.",
+          "14종기본폼serialize/hydrate왕복의정규화JSON동일을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json"
+      ],
+      "evidenceNumbers": [
+        1499,
+        1505,
+        1511,
+        1515,
+        1518,
+        1521,
+        1525,
+        1529,
+        1534,
+        1536,
+        1537,
+        1538
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "입력→복원250ms디바운스·미구현/실행예외·Pretty문법오류유지분기는소스확인만입니다."
+      ],
+      "exceptionsUnverified": [
+        "14종실제저장정답·복합SET/잘못된정답조합",
+        "Pretty오류·미구현·실행예외·상충JSON"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "갤러리/복원화면의전체상태픽셀검토는미완료입니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제저장된유형별JSON으로복원하고폼/JSON양방향·잘못된형태/값의각유지/초기화를대조합니다."
+        }
+      ],
+      "executionBoundary": "14기본폼왕복을14유형정상정답모든분기완료로확대하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "LAB_EDITOR_ISOLATION",
+      "name": "기존/iframe 편집기 격리·비교·복원",
+      "domain": "lab",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "문항JSON의양쪽save ok/issues[]·동일문서비교·고정640px을확인했습니다.",
+          "객관식켜기로한쪽만달라짐과탭별유지·destroy후없음·재로드동일을확인했습니다.",
+          "outType없는지문fixture거부후정상화한별도지문JSON의양쪽save/동일을확인했습니다."
+        ],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json"
+      ],
+      "evidenceNumbers": [
+        1433,
+        1434,
+        1441,
+        1444,
+        1447,
+        1458,
+        1460,
+        1466,
+        1468,
+        1482,
+        1489,
+        1493,
+        1496
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "미리보기재그리기·실제선지값·자동높이복귀·이미지/수식/표도구",
+        "CSS격리·뷰어높이0의보이는상태렌더"
+      ],
+      "dataOrAccessGaps": [
+        "백그라운드height0은화면표시조건검증전제품결함으로확정할수없습니다."
+      ],
+      "pixelGaps": [
+        "랩격리화면은미완료픽셀범위가남습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "보이는동일상태에서기존/iframe의레이아웃·자동높이와도구별문서보존/미리보기재그리기를대조합니다."
+        }
+      ],
+      "executionBoundary": "save는라이브러리인메모리검증입니다.CMS영구저장·문서삭제로세지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified",
+        "data_or_access_insufficient",
+        "pixels_unverified"
+      ]
+    },
+    {
+      "id": "SERVICE_CMS",
+      "name": "서비스 CMS·수신·편집·배포 이력",
+      "domain": "external_scope",
+      "normalFlow": {
+        "status": "blocked_by_data_or_access",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "Master→서비스문항/평가지배포·버전수신·재배포·서비스상태",
+        "서비스권한·모니터링/QA/스토리보드"
+      ],
+      "dataOrAccessGaps": [
+        "서비스CMS사이트/로그인/업무화면은아직제공되지않았습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "사용자가서비스CMS를제공하면별도범위로등록하고Master/서비스동일ID·버전·배포전후를연결검증합니다."
+        }
+      ],
+      "executionBoundary": "현재조사결과를서비스CMS학습완료로표현하지않습니다.",
+      "classifications": [
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "ROLE_BACKEND",
+      "name": "권한별 접근·백엔드/DB·동시성",
+      "domain": "cross_cutting",
+      "normalFlow": {
+        "status": "blocked_by_data_or_access",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase21.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "ADMIN외권한/다중계정·서버검증/트랜잭션·DB관계·동시성/복구",
+        "세션만료·권한변경직후접근"
+      ],
+      "dataOrAccessGaps": [
+        "다른역할계정·백엔드소스·DB·서비스서버관찰근거가없습니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "제공된테스트권한계정과필요한서버/DB읽기근거를확보한범위에서UI안내·서버거절·실제데이터를대조합니다."
+        }
+      ],
+      "executionBoundary": "현ADMIN의UI활성/비활성을서버권한보장으로일반화하지않습니다.",
+      "classifications": [
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    },
+    {
+      "id": "PAPER_DEPLOY_EXEC",
+      "name": "평가지 실제 배포·재배포",
+      "domain": "distribution",
+      "normalFlow": {
+        "status": "not_executed",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "가능대상선택·최종제출·서비스수신·버전/이력",
+        "폐기문항제외·부분실패·재배포"
+      ],
+      "dataOrAccessGaps": [
+        "현재332표본의양대상은차단됐고서비스CMS가미제공입니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "자식문항의선행배포와서비스접근이확보된격리평가지로최종배포→양쪽재조회·이력을검증합니다."
+        }
+      ],
+      "executionBoundary": "모달/취소완료와최종배포실행을분리합니다.",
+      "classifications": [
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    }
+  ],
+  "omrTypes": [
+    {
+      "id": "OMR_OBSACN",
+      "code": "OBSACN",
+      "name": "객관식 단답형 N지 선다",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase15.json"
+      ],
+      "evidenceNumbers": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        942,
+        943,
+        947,
+        948,
+        950,
+        951,
+        956,
+        957,
+        962,
+        967,
+        970,
+        973,
+        976,
+        980,
+        983,
+        985,
+        990,
+        991,
+        993,
+        996,
+        997,
+        999,
+        1000,
+        1001
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Original baseline plus edited Alpha/Beta2options: numeric1 correct983,2incorrect980; answer view985. Missing radio, duplicateAlpha and blank second guard Preview.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Whitespace/case/long labels",
+        "Other option-count persistence",
+        "HTML/OMR count reconciliation policy",
+        "Other stored-data/validation shapes"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "공백/대소문자/긴라벨과다른선택지개수를저장·재진입해HTML/OMR선택지수일치정책을대조합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_OBSAOX",
+      "code": "OBSAOX",
+      "name": "객관식 단답형 O/X",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase4.json"
+      ],
+      "evidenceNumbers": [
+        319,
+        321,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        335,
+        341,
+        343,
+        344,
+        347,
+        348,
+        350,
+        351
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Empty and X incorrect; O correct; answer-mode highlight.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "completed_for_OX_sample",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Custom label length and whitespace behavior",
+        "Blank/duplicate validation"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "빈값/중복/공백·긴사용자라벨과정답미선택을미리보기·임시/전체저장에서구분검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_OBMACN",
+      "code": "OBMACN",
+      "name": "객관식 다답형 N지 선다",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase4.json"
+      ],
+      "evidenceNumbers": [
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        366,
+        367,
+        369,
+        370
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Only1 incorrect; 1+3 correct.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "2-to-7 option boundaries",
+        "Single selected answer acceptance",
+        "Blank/duplicate/unselected validation"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "2~7선택지·정답1개만선택·무선택/중복/빈값의미리보기와저장/복원을검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_OBMAOX",
+      "code": "OBMAOX",
+      "name": "객관식 다답형 O/X",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase5.json"
+      ],
+      "evidenceNumbers": [
+        373,
+        374,
+        375,
+        376,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        390,
+        391,
+        393,
+        394
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "First SET alone incorrect; 가=O and 나=X together correct. Optional titles and comma shown.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "SET add/delete and lower bound",
+        "Custom-label boundaries",
+        "Missing correct selection per SET"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "SET추가/삭제하한·SET별정답누락·사용자라벨경계를저장전후검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBSANM",
+      "code": "SBSANM",
+      "name": "주관식 단답형 일반형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase5.json",
+        "session-20261106-phase6.json"
+      ],
+      "evidenceNumbers": [
+        397,
+        408,
+        409,
+        411,
+        412,
+        414,
+        415,
+        417,
+        418,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        427,
+        428,
+        430,
+        431,
+        432,
+        433,
+        434,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        445,
+        446,
+        448,
+        449,
+        452,
+        454,
+        455,
+        457,
+        458,
+        460,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        476,
+        477,
+        479,
+        480
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": null,
+      "modes": [
+        {
+          "mode": "box",
+          "previewEvidence": [
+            420,
+            421,
+            422,
+            423,
+            424,
+            425,
+            427,
+            428,
+            430,
+            431,
+            432,
+            433,
+            434,
+            436,
+            437,
+            438,
+            439,
+            440,
+            441,
+            442
+          ],
+          "previewResult": "Ab c main and XYZ similar. Both flags false accepts abc/xyz. Main case=true space=false rejects abc and accepts Abc. Both main flags true rejects Abc and accepts Ab c. Similar flags unchanged false. Prefix/suffix visible; student normal/math input toggle observed.",
+          "fullApplyEvidence": 445,
+          "restoreEvidence": [
+            446,
+            448,
+            449
+          ]
+        },
+        {
+          "mode": "legend",
+          "previewEvidence": [
+            460,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467
+          ],
+          "previewResult": "Alpha correct and Beta incorrect via student dropdown.",
+          "fullApplyEvidence": 476,
+          "restoreEvidence": [
+            477,
+            479,
+            480
+          ]
+        }
+      ],
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Similar-answer independent flag toggles",
+        "Math/image kinds in general form",
+        "Legend add/delete/validation boundaries"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "유사정답독립case/space플래그·math/image·범례추가삭제와비활성모드의재로드보존을검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "modeSwitchResult": "Both mode inputs survive in-page toggles. Inactive mode persistence after full reload is unverified.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBSADR",
+      "code": "SBSADR",
+      "name": "주관식 단답형 그리기형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase6.json"
+      ],
+      "evidenceNumbers": [
+        483,
+        484,
+        485,
+        487,
+        488,
+        489,
+        490,
+        491,
+        494,
+        495,
+        497,
+        498
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Optional title and manual-grading explanation. Student answer-writing and file-selection buttons appear. Grade reports unable to determine because MANUAL needs teacher review. Button invocations did not produce visible authoring/file UI; submission remains unverified.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Actual student drawing/file input and submission",
+        "Actual manual review outside this preview"
+      ],
+      "dataOrAccessGaps": [
+        "현재미리보기는교사수동검수나학생실제쓰기/파일제출을완결하지않습니다.외부학생/교사경로접근이필요합니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "학생실제그리기/파일입력과제출·교사수동채점은해당서비스환경에서검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBSAAS",
+      "code": "SBSAAS",
+      "name": "주관식 단답형 영역 선택형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase6.json"
+      ],
+      "evidenceNumbers": [
+        501,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        520,
+        521,
+        523,
+        524
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Math choices1/2 created using numeric keypad and Apply. Student dropdown shows both; 2 incorrect and1 correct.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Text/image choices",
+        "Choice add/delete and validation boundaries",
+        "Affix behavior on this leaf"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "524 is partially occluded. Only visible right OMR region proves math1/2 and selected first radio; settled master521/edit523 prove type and detail2088568. Unrelated overlay content is excluded."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "text/image·선택지추가삭제·수식어와정답경계를검증하고가림없는재진입픽셀을보완합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBMANM",
+      "code": "SBMANM",
+      "name": "주관식 다답형 일반형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261106-phase7.json",
+        "session-20261109-phase8.json"
+      ],
+      "evidenceNumbers": [
+        529,
+        532,
+        533,
+        536,
+        537,
+        538,
+        541,
+        542,
+        545,
+        546,
+        547,
+        563,
+        566,
+        579,
+        582,
+        587,
+        600,
+        603,
+        606,
+        607,
+        609,
+        610,
+        611
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Two-level independent order policies, group permutation and cross-group rejection verified. See phase8 matrix.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Legend/similar/affix/comma variations",
+        "Add/delete lower boundaries"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "이미검증한선택순서조합을유지하고추가내/외순서조합·범례/유사/수식어/쉼표·추가삭제하한을검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "staleRemainingCorrections": [
+        {
+          "old": "Full apply and restoration",
+          "resolution": "fullApply606·restore607/609/610/611로완료이므로미실행목록에서제외했습니다."
+        },
+        {
+          "old": "Inner/outer order flags independent comparisons",
+          "resolution": "선택된순서사례는previewResult의검증완료를유지하며나머지전체조합만예외미확인입니다."
+        }
+      ],
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBMAAS",
+      "code": "SBMAAS",
+      "name": "주관식 다답형 영역 선택형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase9.json"
+      ],
+      "evidenceNumbers": [
+        625,
+        628,
+        631,
+        632,
+        633,
+        634,
+        635,
+        638,
+        641,
+        642,
+        643,
+        644,
+        645,
+        650,
+        655,
+        658,
+        661,
+        662,
+        664,
+        665,
+        666
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Both SETs have math1/2; correct answers1/2.1/2 and2/1 correct;1/1 incorrect. Symbols and comma displayed.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "추가SET/행/값형식/입력경계·저장데이터이상의개별검증이남아있습니다."
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "추가SET/선택지하한·순서정책의나머지조합·text/image·기호/쉼표·잘못된정답저장을검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBMALD",
+      "code": "SBMALD",
+      "name": "주관식 다답형 선그리기형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase10.json"
+      ],
+      "evidenceNumbers": [
+        669,
+        673,
+        685,
+        695,
+        697,
+        699,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        718,
+        719,
+        724,
+        730,
+        731,
+        734
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Student[4,3]/[4] correct711;[4,3]/[3] incorrect714. Within-left multiple targets unordered; cross-left reuse accepted.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Post-reentry rendered pixel verification",
+        "Connection/row boundaries",
+        "Blank/duplicate values and duplicate targets",
+        "Text/image variants"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [
+        "저장후재진입은DOM/AX로복원됐지만렌더픽셀재확인이명시적으로남아있습니다."
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "재진입렌더픽셀을먼저보완하고연결/행경계·중복/빈값·중복타깃·text/image를검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "pixels_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_SBMADD",
+      "code": "SBMADD",
+      "name": "주관식 다답형 드래그앤드롭형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase11.json"
+      ],
+      "evidenceNumbers": [
+        735,
+        750,
+        751,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        769,
+        770,
+        772,
+        774,
+        776,
+        777
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Student3/4 correct760; reversed4/3 incorrect765. Current preview uses dropdowns. First comma rendered.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Row/choice boundaries",
+        "Blank/duplicates/repeated targets/unequal columns",
+        "Text/image variants"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "행/선택지경계·반복타깃·양쪽개수불일치·빈/중복·text/image를검증하고드래그라는명칭과학생실제컨트롤을구분합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_ESBA00",
+      "code": "ESBA00",
+      "name": "기본 서술형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase12.json"
+      ],
+      "evidenceNumbers": [
+        778,
+        779,
+        780,
+        781,
+        782,
+        783,
+        784,
+        785,
+        793,
+        794,
+        796,
+        798,
+        800
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Title reflected; MANUAL grade returns unknown/teacher review. Write/file events are unhandled by current preview route, supported by source.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Empty title default display",
+        "Source-only validation boundaries",
+        "Intended writer/file preview specification"
+      ],
+      "dataOrAccessGaps": [
+        "현재미리보기는교사수동검수나학생실제쓰기/파일제출을완결하지않습니다.외부학생/교사경로접근이필요합니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "빈제목기본표시·학생쓰기/파일이벤트의요구사항과실제수동검수경로를확인합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_ESSA00",
+      "code": "ESSA00",
+      "name": "단답 서술형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase13.json"
+      ],
+      "evidenceNumbers": [
+        803,
+        804,
+        808,
+        810,
+        811,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        833,
+        834,
+        836,
+        839,
+        840
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "Swapped answer/process blocks. Ordinary student1 correct822,2 incorrect826 while manual process blank; answer view gives MANUAL note828.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Legend mode",
+        "Similar/affix/case-space branches",
+        "Empty validation",
+        "Other grading/mode combinations"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "범례·유사정답·수식어·case/space·빈값·자동/수동채점조합을추가검증합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    },
+    {
+      "id": "OMR_ESMA00",
+      "code": "ESMA00",
+      "name": "다답 서술형",
+      "domain": "omr_type",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제폼·미리보기·전체반영·재진입복원의정상표본이기록돼있습니다."
+        ],
+        "scope": "검증문항2088985의해당유형과명시된입력/채점표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase14.json"
+      ],
+      "evidenceNumbers": [
+        841,
+        842,
+        869,
+        871,
+        873,
+        875,
+        876,
+        879,
+        890,
+        895,
+        901,
+        904,
+        916,
+        921,
+        923,
+        927,
+        928,
+        930,
+        933,
+        934,
+        936,
+        938,
+        940,
+        941
+      ],
+      "sourceRefs": [
+        "omr-runtime-coverage.json",
+        "research/omr-runtime-input-recipes.json"
+      ],
+      "previewResult": "2x2 cases:2,1/3,4 correct;2,1/4,3 wrong;outer-reversed3,4/2,1 wrong when fixed and correct when unfixed;crossmixed3,2/4,1 wrong. Process blank in all cases.",
+      "modes": null,
+      "formStatus": "completed",
+      "previewStatus": "completed_for_stated_result",
+      "fullApplyStatus": "completed",
+      "restoreStatus": "completed",
+      "temporarySaveStatus": "unverified_for_this_type",
+      "sourceOnlyChecks": [
+        "정적레시피의추가유효성조건과직렬화규칙은해당런타임근거없이실행완료로세지않습니다."
+      ],
+      "exceptionsUnverified": [
+        "Other order combinations",
+        "Legend/affix/similar/case-space/comma branches",
+        "Min/max/delete/validation boundaries"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "선택된2×2순서사례외의조합·범례/유사/case-space/쉼표·최소최대/삭제검증을추가합니다."
+        }
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "allBranchesVerified": false,
+      "executionBoundary": "기본폼왕복·전체반영·교사수동검수·서비스학생제출은별개의동작입니다.",
+      "pixelScopeNote": "기존표본의렌더근거만승계했습니다.모든모드/오류상태의전체픽셀완료를뜻하지않습니다."
+    }
+  ],
+  "hmlEditorTabs": [
+    {
+      "id": "HML_TAB_QUESTION",
+      "name": "문제 수정",
+      "domain": "hml_editor",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "실제원본을열고키보드표식을넣었습니다.",
+          "편집기SaveAs/PNG→부모pending→CMS전체반영2088701→재진입원본/PNG표식복원을확인했습니다."
+        ],
+        "scope": "QA문항2088985 문제슬롯 정상저장한표본입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1036,
+        1040,
+        1059,
+        1078,
+        1083,
+        1087,
+        1089,
+        1095,
+        1101,
+        1103
+      ],
+      "sourceRefs": [
+        "sources/hml-glue-20261109.diff"
+      ],
+      "sourceOnlyChecks": [
+        "업데이트된glue는성공후같은슬롯의저장문서를다시엽니다."
+      ],
+      "exceptionsUnverified": [
+        "반복저장·오류·임시저장버전·닫기·표/이미지/다페이지등도구"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "격리문항에서반복저장·CMS임시저장·저장실패/재열기실패·대기결과취소를검증합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "HML_TAB_ANSWER",
+      "name": "해답 수정",
+      "domain": "hml_editor",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "HML세트2088355의실제A.hml과단건해답문서를열고문제/해답전환을확인했습니다.",
+          "선택된1페이지문서의실제상하단을확인했습니다."
+        ],
+        "scope": "문서열기·전환·스크롤은완료,해답수정저장은미실행입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1036,
+        1039,
+        1041,
+        1045,
+        1064,
+        1067
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "실제해답수정·SaveAs/PNG·Master저장/복원·반복전환보존"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "검증복제해답에식별표식을넣어편집기저장과Master저장을각각확인하고재진입복원합니다."
+        }
+      ],
+      "executionBoundary": "문제슬롯저장성공을해답저장성공으로복제하지않습니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "HML_TAB_PASSAGE",
+      "name": "지문 수정",
+      "domain": "hml_editor",
+      "normalFlow": {
+        "status": "completed",
+        "completedChecks": [
+          "세트2088355의공유지문2088353_J.hml을열고문제/해답과의슬롯전환을확인했습니다.",
+          "실제원본과1/1페이지·하단스크롤을확인했습니다."
+        ],
+        "scope": "공유지문로드/전환만완료입니다.공유내용수정·전파는미실행입니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1036,
+        1037,
+        1038,
+        1043,
+        1044,
+        1048,
+        1049
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [],
+      "exceptionsUnverified": [
+        "공유지문수정·임시/최종저장·모든멤버/다른세트전파",
+        "지문버전·경합·원상복원"
+      ],
+      "dataOrAccessGaps": [],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "공유지문을쓰는격리세트에서지문저장전후모든멤버의참조/미리보기/HTML영향과복원을대조합니다."
+        }
+      ],
+      "executionBoundary": "기록된 실제 실행과 미실행 분기를 구분합니다.",
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ]
+    },
+    {
+      "id": "HML_TAB_TRANSLATION",
+      "name": "지문해석 수정",
+      "domain": "hml_editor",
+      "normalFlow": {
+        "status": "blocked_by_data_or_access",
+        "completedChecks": [],
+        "scope": "명시한 표본·동작만 검증했습니다."
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1004,
+        1010,
+        1036,
+        1041
+      ],
+      "sourceRefs": [],
+      "sourceOnlyChecks": [
+        "4번째영역의버튼/슬롯구조는알려져있습니다."
+      ],
+      "exceptionsUnverified": [
+        "실제파일로드·슬롯전환·편집기저장·Master저장/복원·공유영향"
+      ],
+      "dataOrAccessGaps": [
+        "조사한Definition세트와HML세트에지문해석파일이없어버튼이disabled였습니다.사이트전체에해석파일이없다는뜻은아닙니다."
+      ],
+      "pixelGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "실제지문해석HML이있는정상표본또는허가된QA파일을확보해다른세슬롯과독립로드/저장/복원을검증합니다."
+        }
+      ],
+      "executionBoundary": "빈새문서생성을실제기존해석파일로드로세지않습니다.",
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "REL_DIFI_ITEMS",
+      "from": "DefinitionDocument",
+      "to": "MasterQuestion",
+      "name": "Definition 분리/승인/폐기와 문항",
+      "status": "completed",
+      "confirmedScope": "661은1문항을생성했고문서Y후에도문항R,662는D후자식상세가목록리다이렉트,663은생성문항0입니다.",
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1908,
+        1943,
+        1950,
+        1978,
+        1979,
+        1990
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "모든변환유형·복합구성·관계영향"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "여러JSON/세트/부분실패에서문서상태와각자식의상태/접근을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_HML_ITEMS",
+      "from": "HmlDocument",
+      "to": "MasterQuestion",
+      "name": "HML 문서·검수 블록·분리 문항",
+      "status": "completed",
+      "confirmedScope": "기존초안141의3검수블록은단건2+세트3=5문항이고문서Y표본에도문항R이있었습니다.",
+      "evidencePhases": [
+        "session-20261109-phase27.json"
+      ],
+      "evidenceNumbers": [
+        1781,
+        1784,
+        1786,
+        1787
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "실제HML등록·최종승인/폐기"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA등록에서블록선택S/F/D가최종각문항에어떻게반영되는지재조회합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_HML_PAPER",
+      "from": "HmlDocument",
+      "to": "Paper",
+      "name": "HML 승인 시 평가지 등록 선택",
+      "status": "source_only",
+      "confirmedScope": "초안의paperRegY/N과미선택차단·최종확인취소는실제로확인했습니다. 기존평가지341이HML문서431을참조하는표시는확인했지만그생성작업을이번에실행한것은아닙니다.",
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase27.json"
+      ],
+      "evidenceNumbers": [
+        1157,
+        1158,
+        1789,
+        1804,
+        1806,
+        1809
+      ],
+      "classifications": [
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [
+        "평가지등록선택은HML에있고Definition661에는없습니다."
+      ],
+      "unverifiedBranches": [
+        "실제평가지생성/미생성결과"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA문서에서Y와N각최종처리후생성평가지·포함문항·메타를확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_PASSAGE_MEMBERS",
+      "from": "Passage",
+      "to": "MasterQuestion",
+      "name": "공유 지문과 세트 자식 문항",
+      "status": "completed",
+      "confirmedScope": "HML세트2088355/지문2088353의실제공유원본을열었고평가지정렬/제외는세트그룹단위였습니다.",
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase18.json",
+        "session-20261109-phase26.json",
+        "session-20261109-phase27.json"
+      ],
+      "evidenceNumbers": [
+        1037,
+        1044,
+        1187,
+        1743,
+        1787
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "공유내용저장전파·세트신규추가저장"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "공유지문저장전후모든자식/다른세트의원본참조와표시를비교합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_QUESTION_REVISION",
+      "from": "MasterQuestion",
+      "to": "QuestionRevision",
+      "name": "문항 저장과 상세 버전",
+      "status": "completed",
+      "confirmedScope": "OMR정상반영·HML문제반영2088701후재진입복원을확인했습니다.",
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "omr-runtime-coverage.json"
+      ],
+      "evidenceNumbers": [
+        1087,
+        1089,
+        1095,
+        1103
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "전역상세ID연속성/모든저장정책"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "임시/기준버전·이전버전조회·동시편집·서비스버전관계를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_QUESTION_OMR",
+      "from": "MasterQuestion",
+      "to": "OmrData",
+      "name": "문항 형태·저장 OMR·미리보기",
+      "status": "completed",
+      "confirmedScope": "14유형의정상저장복원과QA2089175의뷰어정답4/OMRnull차단이확인됐습니다.",
+      "evidencePhases": [
+        "omr-runtime-coverage.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1537,
+        1538,
+        1950,
+        1954
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "전체입력변환/검증·수동제출·경계"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "다른Definition유형의자동OMR생성과누락보완후저장/복원/채점을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_EDITOR_COMMIT",
+      "from": "HmlEditor",
+      "to": "QuestionRevision",
+      "name": "편집기 임시 결과→Master 반영",
+      "status": "completed",
+      "confirmedScope": "편집기SaveAs/PNG성공은부모pending만채우고CMS전체반영후2088701과새경로가생겼습니다.",
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1078,
+        1083,
+        1087,
+        1095
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "공유지문/해답/해석저장·실패정리"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "다른슬롯/임시저장·실패·미반영결과폐기를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_HML_PREVIEW",
+      "from": "HmlEditor",
+      "to": "HmlPreview",
+      "name": "HML 원본·미리보기 이미지",
+      "status": "completed",
+      "confirmedScope": "기존세트에서부모이미지실패여도편집기는원본을열었고QA2089175의Q/A이미지는실제로로드됐습니다.",
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1036,
+        1040,
+        1049,
+        1950
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "모든카드정상/원인·복구·픽셀품질"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "원본HML과PNG픽셀일치·오류시복구·다른슬롯을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_HML_HTML",
+      "from": "HmlEditor",
+      "to": "HtmlModel",
+      "name": "HML과 HTML의 독립 표시/동기화",
+      "status": "completed",
+      "confirmedScope": "QA문제HML표식저장후HTML본문은그대로였습니다.",
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1101,
+        1103,
+        1109
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "기획상정합성·변환/재생성규칙"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "의도된동기화정책을확인하고양쪽편집저장의상호영향을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_SOURCE_ITEM",
+      "from": "Source",
+      "to": "MasterQuestion",
+      "name": "출처 매핑·상태·선택목록",
+      "status": "observation_only",
+      "confirmedScope": "사용출처134의102매핑과Y→N영향안내취소복원을확인했고QA출처199는N/0매핑입니다.",
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ],
+      "evidenceNumbers": [
+        1332,
+        1354,
+        1360,
+        1362,
+        1712
+      ],
+      "classifications": [
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [
+        "기존매핑유지/신규선택제외안내"
+      ],
+      "unverifiedBranches": [
+        "실제상태저장영향/연결변경"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리연결후Y/N을실제저장해기존연결과신규선택·페이지정보를확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_TWIN_MEMBERS",
+      "from": "TwinGroup",
+      "to": "MasterQuestion",
+      "name": "단건/세트 쌍둥이 그룹 구성",
+      "status": "completed",
+      "confirmedScope": "단일8멤버에원본/QA복제포함,세트2개각6멤버구성과상태를확인했습니다.",
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ],
+      "evidenceNumbers": [
+        1123,
+        1124,
+        1129,
+        1131
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "그룹수명/연결변경·AI/세트생성"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "연결추가/해제·대표전환·마지막멤버·세트단위영향을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_PAPER_ITEMS",
+      "from": "Paper",
+      "to": "MasterQuestion",
+      "name": "평가지 구성·세트 단위·적격성",
+      "status": "completed",
+      "confirmedScope": "기존4문항/세트그룹·로컬제외/단건추가/중복차단·그룹순서저장복원을확인했습니다.",
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ],
+      "evidenceNumbers": [
+        1187,
+        1204,
+        1209,
+        1723,
+        1747,
+        1755
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "source_only",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [
+        "후보는사용/미사용승인·동일출처조건을표시합니다."
+      ],
+      "unverifiedBranches": [
+        "신규세트구성저장/전체적격조건"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "적격세트신규추가/제외를실제로저장하고문항집합/요약/상태를재조회합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_PAPER_SOURCE",
+      "from": "Paper",
+      "to": "Source",
+      "name": "평가지 출처·후보 출처 제한",
+      "status": "completed",
+      "confirmedScope": "사용평가지332에출처2개가보이고341추가모달의후보출처는고정됐습니다.",
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase19.json"
+      ],
+      "evidenceNumbers": [
+        1195,
+        1223
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "기존모의멤버가후보에서빠진정확한서버사유"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "다중출처평가지의추가후보정책과원본문서/문항출처의일치조건을확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_PAPER_REVISION",
+      "from": "Paper",
+      "to": "PaperRevision",
+      "name": "평가지 저장과 상세 이력",
+      "status": "completed",
+      "confirmedScope": "341은374→1095→1096→1097→1098로저장됐고현재필드/순서는원상복원됐습니다.",
+      "evidencePhases": [
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ],
+      "evidenceNumbers": [
+        1723,
+        1732,
+        1747,
+        1755
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "이력불변/복원·모든필드의버전생성정책"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "과거상세조회·복원·배포버전과의관계를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_MASTER_SERVICE_ITEM",
+      "from": "MasterQuestion",
+      "to": "ServiceQuestion",
+      "name": "문항 배포·재배포 수신",
+      "status": "blocked_by_data_or_access",
+      "confirmedScope": "배포최종제출/서비스수신을확인하지않았습니다.",
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1227,
+        1950
+      ],
+      "classifications": [
+        "data_or_access_insufficient",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "배포실행·실패/부분성공·서비스편집"
+      ],
+      "dataOrAccessGaps": [
+        "서비스CMS미제공·현재적격대상검증없음"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "승인준비문항과서비스접근확보후Master/서비스ID·버전·상태를대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_MASTER_SERVICE_PAPER",
+      "from": "Paper",
+      "to": "ServicePaper",
+      "name": "평가지 배포와 자식문항 선행 배포",
+      "status": "blocked_by_data_or_access",
+      "confirmedScope": "사용332의양대상은미배포문항2건으로차단됐고고정ID조회만확인했습니다.",
+      "evidencePhases": [
+        "session-20261109-phase19.json"
+      ],
+      "evidenceNumbers": [
+        1226,
+        1227,
+        1234
+      ],
+      "classifications": [
+        "data_or_access_insufficient",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "배포버전·폐기문항제외·재배포"
+      ],
+      "dataOrAccessGaps": [
+        "배포가능서비스표본/서비스CMS접근부족"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "선행문항배포후평가지배포·이력·서비스구성일치를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_SERVICE_SCOPE",
+      "from": "ServiceCms",
+      "to": "ServiceQuestion",
+      "name": "서비스 CMS 문항/평가지 운영",
+      "status": "blocked_by_data_or_access",
+      "confirmedScope": "Master의대상명/안내만있고서비스화면은미조사입니다.",
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [],
+      "classifications": [
+        "data_or_access_insufficient"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [],
+      "dataOrAccessGaps": [
+        "사이트/계정/화면미제공"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "서비스CMS제공후별도인벤토리로화면·권한·수신·업무흐름을조사합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_LAB_RUNTIME",
+      "from": "LabState",
+      "to": "HtmlModel",
+      "name": "랩 라이브러리 검증과 Master 저장의 경계",
+      "status": "completed",
+      "confirmedScope": "랩save/getDocument/destroy/JSON복원은로컬인스턴스상태이며CMS업무변경으로세지않았습니다.",
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase23.json"
+      ],
+      "evidenceNumbers": [
+        1444,
+        1460,
+        1496,
+        1538,
+        1665
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "전체도구·CSS·수동채점/학생제출연결"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제CMS문서저장과같은입력으로라이브러리출력/픽셀을비교하고경계를유지합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_DIFI_PAPER_SCOPE",
+      "from": "DefinitionDocument",
+      "to": "Paper",
+      "name": "Definition과 평가지 등록 선택의 구분",
+      "status": "observation_only",
+      "confirmedScope": "Definition661초안에는paperReg입력이없고생성문항2089175의평가지수는0입니다.기존목록의평가지등록열과실제생성경로는구분합니다.",
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1931,
+        1932,
+        1950
+      ],
+      "classifications": [
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "다른Definition문서/형식의평가지생성·연결정책"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "Definition의다른문서구성에서평가지연결/생성지원정책을대조하고문항/평가지관계를재조회합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_SOURCE_SERVICE",
+      "from": "Source",
+      "to": "ServiceQuestion",
+      "name": "출처 미사용과 서비스 노출 유지 안내",
+      "status": "source_only",
+      "confirmedScope": "출처134영향모달은기존매핑·서비스노출유지와신규등록선택제외를안내했지만실제상태저장/서비스조회는하지않았습니다.",
+      "evidencePhases": [
+        "session-20261109-phase20.json"
+      ],
+      "evidenceNumbers": [
+        1354,
+        1360,
+        1362
+      ],
+      "classifications": [
+        "source_only",
+        "exceptions_unverified",
+        "data_or_access_insufficient"
+      ],
+      "sourceOnlyChecks": [
+        "모달정책안내이며실제서비스노출결과가아닙니다."
+      ],
+      "unverifiedBranches": [
+        "Y/N저장후서비스전파·노출/검색/기존문항"
+      ],
+      "dataOrAccessGaps": [
+        "서비스CMS접근미제공"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리출처의Y/N저장전후서비스문항표시를별도CMS에서대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "REL_LAB_OMR",
+      "from": "LabState",
+      "to": "OmrData",
+      "name": "랩 기본/저장 JSON 왕복과 실제 문항 저장",
+      "status": "completed",
+      "confirmedScope": "랩14기본폼왕복과OBSACN편집의JSON동기화는완료됐지만Master정답저장이나모든실제저장JSON복원의완료가아닙니다.",
+      "evidencePhases": [
+        "session-20261109-phase22.json",
+        "omr-runtime-coverage.json"
+      ],
+      "evidenceNumbers": [
+        1511,
+        1515,
+        1537,
+        1538
+      ],
+      "classifications": [
+        "normal_flow_observed",
+        "exceptions_unverified"
+      ],
+      "sourceOnlyChecks": [],
+      "unverifiedBranches": [
+        "14유형복합실제저장JSON·상충/오류값·Master와의정규형대조"
+      ],
+      "dataOrAccessGaps": [],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "Master에서저장/복원된유형별JSON을랩에넣어같은정규형과폼/정답을복원하는지대조합니다."
+        }
+      ]
+    }
+  ],
+  "priorityGaps": [
+    {
+      "id": "G01_GENERATED_READY",
+      "priority": "P1",
+      "coverageIds": [
+        "DIFI_GENERATED_ITEM",
+        "ITEM_APPROVAL",
+        "DIFI_APPROVE"
+      ],
+      "whyThisPriority": "문서Y와문항R·메타/OMR누락이공존하여승인/배포/QA판정에직접영향을줍니다.",
+      "nextValidation": {
+        "action": "추천전후필드·문항승인선행조건·OMR보완저장/복원을분리검증합니다.",
+        "acceptanceEvidence": "각필드전후값·문항상태·별도최종제출·후속상세/미리보기결과"
+      },
+      "evidencePhases": [
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G02_MASTER_SERVICE",
+      "priority": "P1",
+      "coverageIds": [
+        "ITEM_DEPLOY",
+        "PAPER_DEPLOY_EXEC",
+        "SERVICE_CMS"
+      ],
+      "whyThisPriority": "원래목적의Master→Service배포실제흐름과서비스CMS가미검증입니다.",
+      "nextValidation": {
+        "action": "적격QA문항/사용평가지·배포가능대상·서비스접근을확보해양쪽ID/버전/상태/이력을대조합니다.",
+        "acceptanceEvidence": "Master최종배포결과와서비스수신후재조회·재배포/실패분기"
+      },
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G03_HML_E2E",
+      "priority": "P1",
+      "coverageIds": [
+        "HML_REGISTER_E2E",
+        "HML_REVIEW_GUARDS"
+      ],
+      "whyThisPriority": "HML문서자체의실제등록/파싱/승인/평가지생성·최종폐기가아직없습니다.",
+      "nextValidation": {
+        "action": "격리정상/세트/실패QA파일로최종실행과생성물재조회를검증합니다.",
+        "acceptanceEvidence": "문서ID·상태전이·문항/평가지ID·S/F/D처리·원본보존"
+      },
+      "evidencePhases": [
+        "session-20261109-phase27.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G04_DIFI_COMPLEX_FAILURE",
+      "priority": "P1",
+      "coverageIds": [
+        "DIFI_REGISTER",
+        "DIFI_REVIEW_GUARDS",
+        "DIFI_TRANSFER_FAILURES"
+      ],
+      "whyThisPriority": "단일JSON외구성과단계실패/부분성공은현재정상등록과빈ZIP실패로설명되지않습니다.",
+      "nextValidation": {
+        "action": "세트/여러JSON/첨부·혼합S/F/D와발급/전송/create실패·재시도를검증합니다.",
+        "acceptanceEvidence": "입력해시/구조·각단계응답·생성수·버전·객체/문서중복과복구"
+      },
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G05_HML_SHARED_SAVE",
+      "priority": "P1",
+      "coverageIds": [
+        "HML_TAB_TRANSLATION",
+        "HML_TAB_PASSAGE",
+        "HML_TAB_ANSWER",
+        "HML_SWITCH_SYNC"
+      ],
+      "whyThisPriority": "해석실파일이없고공유지문/다른슬롯저장과미저장전환손실의영향이남아있습니다.",
+      "nextValidation": {
+        "action": "실파일표본을확보해4슬롯로드/편집/임시·최종저장/왕복·공유자식영향을검증합니다.",
+        "acceptanceEvidence": "원본/PNG/pending/문항버전·모든참조자식전후값·dirty/실패시보존"
+      },
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G06_PAPER_CONFIG",
+      "priority": "P1",
+      "coverageIds": [
+        "PAPER_EDIT_LOCAL",
+        "PAPER_ORDER_SAVE",
+        "PAPER_POINTER_SORT"
+      ],
+      "whyThisPriority": "메타/순서저장은확인했지만포인터제스처와적격세트신규구성저장·실제폐기는남았습니다.",
+      "nextValidation": {
+        "action": "격리평가지에적격세트를추가/제외해실제저장하고포인터정렬·범위/상태변경을별도확인합니다.",
+        "acceptanceEvidence": "재진입문항집합·세트내순서·요약·새상세ID·원상필드/순서복원"
+      },
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ]
+    },
+    {
+      "id": "G07_SOURCE_STATE",
+      "priority": "P1",
+      "coverageIds": [
+        "SOURCE_ACTIVE_IMPACT",
+        "ITEM_RELATION_MUTATIONS"
+      ],
+      "whyThisPriority": "미사용저장의신규선택/기존매핑/서비스노출정책은모달안내와취소까지만확인됐습니다.",
+      "nextValidation": {
+        "action": "격리QA출처에문항을연결하고상태를저장해신규선택·기존연결·역방향조회를대조합니다.",
+        "acceptanceEvidence": "Y/N전후상세/목록/선택후보·기존문항·서비스표시"
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ]
+    },
+    {
+      "id": "G08_ROLES_DATA",
+      "priority": "P1",
+      "coverageIds": [
+        "ROLE_BACKEND",
+        "LAB_ROLE_EXEC",
+        "LAB_CACHE_EXEC"
+      ],
+      "whyThisPriority": "ADMIN표시만으로서버권한/타사이트세션/다중서버효과를확정할수없습니다.",
+      "nextValidation": {
+        "action": "제공된테스트계정·서버읽기범위로역할별접근/거절·본인제외·캐시전후를격리검증합니다.",
+        "acceptanceEvidence": "실제권한별응답·세션/캐시전후값과영향대상구분"
+      },
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase21.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G09_TWIN_MUTATIONS",
+      "priority": "P2",
+      "coverageIds": [
+        "ITEM_TWIN_COPY",
+        "ITEM_RELATION_MUTATIONS",
+        "TWIN_LIST_DETAIL",
+        "TWIN_PAGINATION"
+      ],
+      "whyThisPriority": "단건COPY/읽기구성외AI·세트생성·연결변경·그룹대표/수명정책이미확인입니다.",
+      "nextValidation": {
+        "action": "검증용단건/세트의생성/연결추가해제와대표·마지막멤버영향을재조회합니다.",
+        "acceptanceEvidence": "그룹ID/대표/멤버수·세트수·이력·실패/중복·원상복원"
+      },
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ]
+    },
+    {
+      "id": "G10_OMR_BOUNDARIES",
+      "priority": "P2",
+      "coverageIds": [
+        "OMR_OBSACN",
+        "OMR_OBSAOX",
+        "OMR_OBMACN",
+        "OMR_OBMAOX",
+        "OMR_SBSANM",
+        "OMR_SBSADR",
+        "OMR_SBSAAS",
+        "OMR_SBMANM",
+        "OMR_SBMAAS",
+        "OMR_SBMALD",
+        "OMR_SBMADD",
+        "OMR_ESBA00",
+        "OMR_ESSA00",
+        "OMR_ESMA00"
+      ],
+      "whyThisPriority": "14유형정상저장복원은완료했지만전체분기완료유형은0입니다.",
+      "nextValidation": {
+        "action": "유형별nextValidation에따라행/SET/정답/순서/값형식/공백·유사정답·수동제출경계를돌립니다.",
+        "acceptanceEvidence": "폼·미리보기채점·최종저장·재진입·JSON·오류/유지값을각각연결"
+      },
+      "evidencePhases": [
+        "omr-runtime-coverage.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G11_LAB_DEEP",
+      "priority": "P2",
+      "coverageIds": [
+        "LAB_MATH",
+        "LAB_OCR",
+        "LAB_OMR_GALLERY",
+        "LAB_OMR_RESTORE",
+        "LAB_EDITOR_ISOLATION"
+      ],
+      "whyThisPriority": "OCR성공·실제저장JSON복합복원·도구/변환경계·보이는iframe품질이미완료입니다.",
+      "nextValidation": {
+        "action": "한성공OCR와복합JSON·빈/틀린형태·도구/높이·샘플이미지경로를추가검증합니다.",
+        "acceptanceEvidence": "이벤트/JSON/cleanHTML·픽셀·성공/실패응답을인메모리시험으로구분"
+      },
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase23.json"
+      ]
+    },
+    {
+      "id": "G12_FILTERS_SERVER",
+      "priority": "P2",
+      "coverageIds": [
+        "ITEM_LIST",
+        "SOURCE_LIST_FILTER",
+        "SOURCE_CREATE_EDIT",
+        "DIFI_CLIENT_VALIDATION",
+        "PAPER_LIST_DETAIL"
+      ],
+      "whyThisPriority": "선택된검색/검증외분류·날짜·중복수정·서버메타입력경계가남았습니다.",
+      "nextValidation": {
+        "action": "각분류/날짜/상태대표조건과수정충돌·단원실재/허용길이·페이지역전을조합검증합니다.",
+        "acceptanceEvidence": "입력조건·주소·결과·반려문구·재진입기본값의대응"
+      },
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json",
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G13_PIXELS",
+      "priority": "P2",
+      "coverageIds": [
+        "SOURCE_LIST_FILTER",
+        "SOURCE_FORM",
+        "SOURCE_CREATE_EDIT",
+        "SOURCE_ACTIVE_IMPACT",
+        "PAPER_LIST_DETAIL",
+        "HML_LIST_STATES",
+        "HML_REVIEW_GUARDS",
+        "DIFI_LIST_STATES",
+        "DIFI_REGISTER",
+        "DIFI_APPROVE",
+        "DIFI_DISCARD",
+        "DIFI_EMPTY_FAILURE",
+        "LAB_INDEX_VERSION",
+        "LAB_CACHE_LOCAL",
+        "LAB_ROLE_LOCAL",
+        "LAB_EDITOR_ISOLATION",
+        "LAB_OMR_GALLERY",
+        "LAB_OMR_RESTORE",
+        "OMR_SBMALD",
+        "OMR_SBSAAS"
+      ],
+      "whyThisPriority": "DOM/저장검증이완료된곳에도대형중간영역과주요관리/문서화면픽셀이누락됐습니다.",
+      "nextValidation": {
+        "action": "knownPixelGaps의대표상태/중첩위치를보완하고수식데모의해소범위와분리합니다.",
+        "acceptanceEvidence": "정상PNG파일·실제표시범위·겹치는스크롤/모달·가림없는렌더"
+      },
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase20.json",
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase24.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ]
+    },
+    {
+      "id": "G14_HOME_SESSION",
+      "priority": "P3",
+      "coverageIds": [
+        "HOME_NAV"
+      ],
+      "whyThisPriority": "홈/전역세션은과거기록만승계한범위가있습니다.",
+      "nextValidation": {
+        "action": "현재홈·로그아웃/만료·뒤로가기/복원등을작업상태를보존한조건에서새관찰합니다.",
+        "acceptanceEvidence": "실제계정/메뉴·세션전후·입력보존·새elementref"
+      },
+      "evidencePhases": [
+        "coverage-inventory.json",
+        "session-20261109-phase21.json"
+      ]
+    }
+  ],
+  "knownEvidenceExclusions": [
+    {
+      "evidence": [
+        1024
+      ],
+      "phase": "session-20261109-phase16.json",
+      "rule": "가린td로포인터가차단된시도이며1027~28키보드진입과구분합니다."
+    },
+    {
+      "evidence": [
+        1088
+      ],
+      "phase": "session-20261109-phase16.json",
+      "rule": "저장후busy전환중입니다.성공은1089이후재조회로확인했고재제출하지않았습니다."
+    },
+    {
+      "evidence": [
+        1212
+      ],
+      "phase": "session-20261109-phase18.json",
+      "rule": "파일명과달리취소확인창입니다.복원상세근거는1215입니다."
+    },
+    {
+      "evidence": [
+        1242,
+        1243,
+        1244,
+        1245,
+        1246
+      ],
+      "phase": "session-20261109-phase19.json",
+      "rule": "파일명과달리평가지목록입니다.폐기상세근거에서제외합니다."
+    },
+    {
+      "evidence": [
+        1262,
+        1263,
+        1264,
+        1267,
+        1268,
+        1269
+      ],
+      "phase": "session-20261109-phase19.json",
+      "rule": "PNG캡처실패로파일이없습니다.DOM/스크롤범위와픽셀미검토를구분합니다."
+    },
+    {
+      "evidence": [
+        1278,
+        1279,
+        1280,
+        1328,
+        1329
+      ],
+      "phase": "session-20261109-phase20.json",
+      "rule": "이전페이지가남은포인터/전환시도입니다.성공파일명으로진입을가정하지않습니다."
+    },
+    {
+      "evidence": [
+        1355,
+        1356,
+        1357,
+        1358
+      ],
+      "phase": "session-20261109-phase20.json",
+      "rule": "모달닫힘전중간상태와Modal missing시도입니다.취소복원은1359~1360새관찰로판정합니다."
+    },
+    {
+      "evidence": [
+        1673,
+        1674,
+        1675,
+        1676,
+        1677
+      ],
+      "phase": "session-20261109-phase24.json",
+      "rule": "PNG실패이며픽셀확인완료로올리지않습니다."
+    },
+    {
+      "evidence": [
+        1678,
+        1679,
+        1680,
+        1681,
+        1682,
+        1683,
+        1684,
+        1685,
+        1686,
+        1687,
+        1688,
+        1689,
+        1690,
+        1691,
+        1692
+      ],
+      "phase": "session-20261109-phase24.json",
+      "rule": "실행하지않은계획번호입니다.증거파일이나시도횟수로세지않습니다."
+    },
+    {
+      "evidence": [
+        1702
+      ],
+      "phase": "session-20261109-phase24.json",
+      "rule": "확인창이열린중간상태에서목록을가정한scope mismatch입니다.실제창은1704로확인했습니다."
+    },
+    {
+      "evidence": [
+        1734,
+        1735,
+        1736
+      ],
+      "phase": "session-20261109-phase26.json",
+      "rule": "포인터정렬도구timeout/outcome_unknown입니다.드래그성공/제품결함모두미확정입니다."
+    },
+    {
+      "evidence": [
+        1737,
+        1738
+      ],
+      "phase": "session-20261109-phase26.json",
+      "rule": "미실행계획번호입니다."
+    },
+    {
+      "evidence": [
+        1911,
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921,
+        1922,
+        1923,
+        1924,
+        1925,
+        1926,
+        1927,
+        1928
+      ],
+      "phase": "session-20261109-phase28.json",
+      "rule": "모달겹침·닫힘미완료구간은깨끗한가드정책검증에서제외합니다.1931~34재검증을사용합니다."
+    },
+    {
+      "evidence": [
+        1930
+      ],
+      "phase": "session-20261109-phase28.json",
+      "rule": "스크린샷10060실패입니다.픽셀증거없음입니다."
+    },
+    {
+      "evidence": [
+        1951
+      ],
+      "phase": "session-20261109-phase29.json",
+      "rule": "모달이열릴것이라는검사기대가틀린timeout입니다.실제OMR누락차단문구는1954입니다."
+    },
+    {
+      "evidence": [
+        1980,
+        1985,
+        1988,
+        1990
+      ],
+      "phase": "session-20261109-phase29.json",
+      "rule": "빈ZIP663의관찰되지않은중간P를추가하지않고실제F만기록합니다."
+    }
+  ],
+  "knownPixelGaps": [
+    {
+      "id": "PX_SOURCE",
+      "coverageIds": [
+        "SOURCE_LIST_FILTER",
+        "SOURCE_FORM",
+        "SOURCE_CREATE_EDIT",
+        "SOURCE_ACTIVE_IMPACT"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json"
+      ],
+      "gap": "출처목록·등록·상세·수정·영향모달의픽셀검토미완료",
+      "domOrBehaviorAlreadyKnown": "60행·실제하단3338+1015=4353과저장/거부/취소결과는유지",
+      "nextValidation": "각대표상태를보이는연구탭에서상하중첩PNG로확인합니다."
+    },
+    {
+      "id": "PX_PAPER_LARGE",
+      "coverageIds": [
+        "PAPER_LIST_DETAIL"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ],
+      "gap": "평가지531의약4215~6089px사이픽셀공백",
+      "domOrBehaviorAlreadyKnown": "120행전체DOM/원본·13공유지문그룹·하단6089+1015=7104확인",
+      "nextValidation": "4000/4800/5600주변의겹치는실제화면을확인하고캡처실패를CMS실패로세지않습니다."
+    },
+    {
+      "id": "PX_HML_STATES",
+      "coverageIds": [
+        "HML_LIST_STATES",
+        "HML_REVIEW_GUARDS"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase27.json"
+      ],
+      "gap": "새상태별HML상세와확인창전체픽셀미완료",
+      "domOrBehaviorAlreadyKnown": "7개상태별상세/실제하단·가드/취소검증",
+      "nextValidation": "133/134/138/139/136/141/140의대표상중하와확인창을픽셀로검토합니다."
+    },
+    {
+      "id": "PX_DIFI",
+      "coverageIds": [
+        "DIFI_LIST_STATES",
+        "DIFI_REGISTER",
+        "DIFI_APPROVE",
+        "DIFI_DISCARD",
+        "DIFI_EMPTY_FAILURE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "gap": "기존상태상세·QA661/662/663및생성문항의완전페이지픽셀미완료",
+      "domOrBehaviorAlreadyKnown": "실제스크롤·상태전이/최종실행·후속GET·Q/A비영크기로딩확인",
+      "nextValidation": "각상태와가드/누락경고를실제픽셀로확인합니다."
+    },
+    {
+      "id": "PX_LAB_NON_MATH",
+      "coverageIds": [
+        "LAB_INDEX_VERSION",
+        "LAB_CACHE_LOCAL",
+        "LAB_ROLE_LOCAL",
+        "LAB_EDITOR_ISOLATION",
+        "LAB_OMR_GALLERY",
+        "LAB_OMR_RESTORE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json"
+      ],
+      "gap": "랩관리·격리편집기·갤러리/복원의전체픽셀·iframe레이아웃미완료",
+      "domOrBehaviorAlreadyKnown": "실제조작·14기본폼왕복·22위치DOM스크롤은확인",
+      "nextValidation": "동일입력의보이는상태에서기존/iframe·14폼·오류패널을확인합니다."
+    },
+    {
+      "id": "PX_OMR_LD",
+      "coverageIds": [
+        "OMR_SBMALD"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase10.json"
+      ],
+      "gap": "선그리기형의저장후재진입렌더픽셀재확인",
+      "domOrBehaviorAlreadyKnown": "저장/재진입DOM·AX·선택채점결과는확인",
+      "nextValidation": "실제렌더연결과복원값을가림없는화면으로확인합니다."
+    },
+    {
+      "id": "PX_OMR_AS",
+      "coverageIds": [
+        "OMR_SBSAAS"
+      ],
+      "evidencePhases": [
+        "session-20261106-phase6.json"
+      ],
+      "gap": "524의부분가림으로전체화면완료근거부족",
+      "domOrBehaviorAlreadyKnown": "보이는오른쪽수식1/2·첫정답및settled521/523의타입/버전은확인",
+      "nextValidation": "같은저장값의깨끗한재진입전체픽셀을보완합니다."
+    }
+  ],
+  "observedIssues": [
+    {
+      "id": "HML_UNSAVED_SWITCH_LOSS",
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1059,
+        1067,
+        1070
+      ],
+      "finding": "선택흐름에서미저장표식이탭왕복후경고없이사라졌습니다.",
+      "notEstablished": "모든문서·슬롯의dirty정책/요구사항",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리문항에서같은왕복을다시재현하고dirty경고/보존요구사항과대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "HML_HTML_NO_AUTOSYNC",
+      "evidencePhases": [
+        "session-20261109-phase16.json"
+      ],
+      "evidenceNumbers": [
+        1101,
+        1103,
+        1109
+      ],
+      "finding": "저장HML/PNG표식이HTML본문에는자동반영되지않았습니다.",
+      "notEstablished": "의도된동기화정책",
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "양쪽편집의의도된동기화정책을확인한뒤각저장경로의전후본문을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "SOURCE_EMPTY_PAGE_ZERO",
+      "evidencePhases": [
+        "session-20261109-phase20.json"
+      ],
+      "evidenceNumbers": [
+        1370,
+        1388
+      ],
+      "finding": "빈결과에0페이지링크가생겼습니다.",
+      "notEstablished": "실제클릭/서버응답",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "빈결과0페이지링크의목적지와실제읽기응답을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "DIFI_HML_MESSAGES",
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "evidenceNumbers": [
+        1868,
+        1853,
+        1990
+      ],
+      "finding": "Definition무파일경고와F빈영역보조문구에HML이표시됩니다.",
+      "notEstablished": "수정완료/재검증",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "ZIP화면의각차단/실패문구를요구사항과대조하고수정이제공되면재검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "DIFI_ENGLISH_LIMIT_AND_ROUNDING",
+      "evidencePhases": [
+        "session-20261109-phase28.json"
+      ],
+      "evidenceNumbers": [
+        1877,
+        1879
+      ],
+      "finding": "파일수제한영문문구,50MiB+1B가50MB/최대50MB로반올림표시됐습니다.",
+      "notEstablished": "다른언어/정확한경계실행",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "정확한크기경계/반올림/언어문구를대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "LAB_OCR_FAILURE",
+      "evidencePhases": [
+        "session-20261109-phase23.json"
+      ],
+      "evidenceNumbers": [
+        1632,
+        1636
+      ],
+      "finding": "OCR1회가실패안내로종료됐습니다.",
+      "notEstablished": "HTTP상태/서버장애원인/성공",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "정상OCR응답환경에서성공·실패응답과UI를연결해확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "LAB_SAMPLE_IMAGE_FAILED",
+      "evidencePhases": [
+        "session-20261109-phase23.json"
+      ],
+      "evidenceNumbers": [
+        1667,
+        1668,
+        1671
+      ],
+      "finding": "해설샘플이미지2개가naturalWidth/Height0이고상대경로가랩경로로해석됐습니다.",
+      "notEstablished": "서버파일유무/전체화면영향",
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제리소스주소와원본샘플경로를대조하고다른환경의정상로드를확인합니다."
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "MasterQuestion",
+      "name": "마스터 문항",
+      "keyMeaning": "itemId와개별상세/버전ID는구분합니다.",
+      "relationshipIds": [
+        "REL_DIFI_ITEMS",
+        "REL_HML_ITEMS",
+        "REL_PASSAGE_MEMBERS",
+        "REL_QUESTION_REVISION",
+        "REL_QUESTION_OMR",
+        "REL_SOURCE_ITEM",
+        "REL_TWIN_MEMBERS",
+        "REL_PAPER_ITEMS",
+        "REL_MASTER_SERVICE_ITEM"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase16.json",
+        "session-20261109-phase18.json",
+        "session-20261109-phase26.json",
+        "omr-runtime-coverage.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json",
+        "session-20261109-phase17.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase19.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "여러JSON/세트/부분실패에서문서상태와각자식의상태/접근을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "QuestionRevision",
+      "name": "문항 상세 버전",
+      "keyMeaning": "저장/반영에따라새상세ID가생긴표본을확인했습니다.",
+      "relationshipIds": [
+        "REL_QUESTION_REVISION",
+        "REL_EDITOR_COMMIT"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "omr-runtime-coverage.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "임시/기준버전·이전버전조회·동시편집·서비스버전관계를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "Passage",
+      "name": "공유 지문·세트",
+      "keyMeaning": "지문ID·세트그룹·자식문항수와검수블록수는구분합니다.",
+      "relationshipIds": [
+        "REL_PASSAGE_MEMBERS"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase18.json",
+        "session-20261109-phase26.json",
+        "session-20261109-phase27.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "공유지문저장전후모든자식/다른세트의원본참조와표시를비교합니다."
+        }
+      ]
+    },
+    {
+      "id": "HmlDocument",
+      "name": "HML 등록 문서",
+      "keyMeaning": "문서상태와분리문항상태·평가지생성선택이별개입니다.",
+      "relationshipIds": [
+        "REL_HML_ITEMS",
+        "REL_HML_PAPER"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase27.json",
+        "session-20261109-phase18.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA등록에서블록선택S/F/D가최종각문항에어떻게반영되는지재조회합니다."
+        }
+      ]
+    },
+    {
+      "id": "DefinitionDocument",
+      "name": "Definition 등록 문서",
+      "keyMeaning": "문서Y가자식문항R/메타누락/OMR부재와공존합니다.",
+      "relationshipIds": [
+        "REL_DIFI_ITEMS",
+        "REL_DIFI_PAPER_SCOPE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "여러JSON/세트/부분실패에서문서상태와각자식의상태/접근을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "OmrData",
+      "name": "OMR 필드·정답 트리",
+      "keyMeaning": "뷰어JSON의본문정답/채점모델과저장OMR/answerData는다릅니다.",
+      "relationshipIds": [
+        "REL_QUESTION_OMR",
+        "REL_LAB_OMR"
+      ],
+      "evidencePhases": [
+        "omr-runtime-coverage.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "다른Definition유형의자동OMR생성과누락보완후저장/복원/채점을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "HtmlModel",
+      "name": "HTML 뷰어/편집 모델",
+      "keyMeaning": "HML저장표식의자동반영은확인되지않았습니다.",
+      "relationshipIds": [
+        "REL_HML_HTML",
+        "REL_LAB_RUNTIME"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase23.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "의도된동기화정책을확인하고양쪽편집저장의상호영향을대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "HmlEditor",
+      "name": "한글 편집기·임시 저장 결과",
+      "keyMeaning": "SaveAs/PNG임시결과와Master최종반영이별도단계입니다.",
+      "relationshipIds": [
+        "REL_EDITOR_COMMIT",
+        "REL_HML_PREVIEW",
+        "REL_HML_HTML"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "다른슬롯/임시저장·실패·미반영결과폐기를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "HmlPreview",
+      "name": "HML 카드 미리보기 이미지",
+      "keyMeaning": "원본미리보기이미지가정상사양이며누락/로드오류/실제로딩을구분합니다.",
+      "relationshipIds": [
+        "REL_HML_PREVIEW"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase16.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "원본HML과PNG픽셀일치·오류시복구·다른슬롯을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "TwinGroup",
+      "name": "쌍둥이 그룹",
+      "keyMeaning": "groupId·대표문항·세트수·자식수는서로다릅니다.",
+      "relationshipIds": [
+        "REL_TWIN_MEMBERS"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase17.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "연결추가/해제·대표전환·마지막멤버·세트단위영향을검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "Paper",
+      "name": "평가지",
+      "keyMeaning": "paperId와상세ID·자식문항상태·사용여부를구분합니다.",
+      "relationshipIds": [
+        "REL_HML_PAPER",
+        "REL_PAPER_ITEMS",
+        "REL_PAPER_SOURCE",
+        "REL_PAPER_REVISION",
+        "REL_MASTER_SERVICE_PAPER",
+        "REL_DIFI_PAPER_SCOPE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase18.json",
+        "session-20261109-phase27.json",
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json",
+        "session-20261109-phase19.json",
+        "session-20261109-phase28.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "QA문서에서Y와N각최종처리후생성평가지·포함문항·메타를확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "PaperRevision",
+      "name": "평가지 상세 버전",
+      "keyMeaning": "필드복원후에도새저장이력은남습니다.",
+      "relationshipIds": [
+        "REL_PAPER_REVISION"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase25.json",
+        "session-20261109-phase26.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "과거상세조회·복원·배포버전과의관계를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "Source",
+      "name": "문항 출처",
+      "keyMeaning": "ID·자동코드/명·용도/노출/사용여부·매핑문항은별개입니다.",
+      "relationshipIds": [
+        "REL_SOURCE_ITEM",
+        "REL_PAPER_SOURCE",
+        "REL_SOURCE_SERVICE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase20.json",
+        "session-20261109-phase24.json",
+        "session-20261109-phase18.json",
+        "session-20261109-phase19.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "격리연결후Y/N을실제저장해기존연결과신규선택·페이지정보를확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "ServiceCms",
+      "name": "서비스 CMS",
+      "keyMeaning": "Master에서배포받는별도범위이며아직미제공입니다.",
+      "containsEntityIds": [
+        "ServiceQuestion",
+        "ServicePaper"
+      ],
+      "relationshipIds": [
+        "REL_SERVICE_SCOPE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "서비스CMS제공후별도인벤토리로화면·권한·수신·업무흐름을조사합니다."
+        }
+      ]
+    },
+    {
+      "id": "ServiceQuestion",
+      "name": "서비스 문항",
+      "keyMeaning": "배포수신·서비스상태·버전미검증입니다.",
+      "relationshipIds": [
+        "REL_MASTER_SERVICE_ITEM",
+        "REL_SERVICE_SCOPE",
+        "REL_SOURCE_SERVICE"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase19.json",
+        "session-20261109-phase29.json",
+        "session-20261109-phase20.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "승인준비문항과서비스접근확보후Master/서비스ID·버전·상태를대조합니다."
+        }
+      ]
+    },
+    {
+      "id": "ServicePaper",
+      "name": "서비스 평가지",
+      "keyMeaning": "평가지배포와포함문항의선행배포상태는별도조건입니다.",
+      "relationshipIds": [
+        "REL_MASTER_SERVICE_PAPER"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase19.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P1",
+          "action": "선행문항배포후평가지배포·이력·서비스구성일치를검증합니다."
+        }
+      ]
+    },
+    {
+      "id": "LabState",
+      "name": "랩 인메모리 상태",
+      "keyMeaning": "라이브러리save/destroy/복원은Master저장/삭제가아닙니다.",
+      "relationshipIds": [
+        "REL_LAB_RUNTIME",
+        "REL_LAB_OMR"
+      ],
+      "evidencePhases": [
+        "session-20261109-phase21.json",
+        "session-20261109-phase22.json",
+        "session-20261109-phase23.json",
+        "omr-runtime-coverage.json"
+      ],
+      "nextValidation": [
+        {
+          "priority": "P2",
+          "action": "실제CMS문서저장과같은입력으로라이브러리출력/픽셀을비교하고경계를유지합니다."
+        }
+      ]
+    }
+  ],
+  "pixelGapCorrections": [
+    {
+      "evidencePhases": [
+        "session-20261109-phase23.json"
+      ],
+      "scope": "수식데모의현재시험상태",
+      "result": "1647/1662/1665와중첩스크롤1666~1668에서상단부터하단까지픽셀을확인했으므로그상태를여전히전부픽셀미확인이라고기록하지않습니다.",
+      "limitation": "다른랩페이지나수식데모의모든분기까지해소한것은아닙니다."
+    }
+  ],
+  "summary": {
+    "knownNavigationRecords": 18,
+    "mainMenuRecords": 5,
+    "itemManagementSubmenus": 4,
+    "labToolCards": 8,
+    "featureGroupRecords": 49,
+    "omrTypeRecords": 14,
+    "hmlEditorTabRecords": 4,
+    "relationshipRecords": 21,
+    "coverageRecordCount": 67,
+    "coverageRecordsByNormalFlowState": {
+      "historical_only": 1,
+      "completed": 50,
+      "observation_only": 2,
+      "source_only": 6,
+      "not_executed": 3,
+      "observed_behavior_policy_unconfirmed": 1,
+      "outcome_unknown_attempted": 1,
+      "blocked_by_data_or_access": 3
+    },
+    "classificationRecordCounts": {
+      "normal_flow_observed": 50,
+      "source_only": 37,
+      "exceptions_unverified": 67,
+      "data_or_access_insufficient": 21,
+      "pixels_unverified": 22,
+      "observed_behavior_policy_unconfirmed": 1
+    },
+    "omrTypesWithNormalFullApplyAndRestore": 14,
+    "omrTypesWithAllBranchesVerified": 0,
+    "hmlTabsWithExistingFileLoadVerified": 3,
+    "hmlTabsWithMasterSaveAndRestoreVerified": 1,
+    "confirmedMasterBusinessOperations": 29,
+    "overallCompletionPercent": null,
+    "countMeaning": "기록수/분류수는이보충파일의묶음수입니다.실제사이트전체화면·기능수나완료율이아닙니다.복수분류수는서로더하지않습니다.",
+    "priorityGapRecords": 14,
+    "classificationCountMeaning": "정상흐름분류수는사이트완료기능수가아닙니다.명시한묶음의표본정상범위만집계합니다."
+  }
+}

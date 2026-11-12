@@ -1,0 +1,182 @@
+{
+  "status": "paused",
+  "date": "2026-11-10",
+  "plannedResumeDate": "2026-11-11",
+  "reason": "User explicitly asked to pause and continue tomorrow.",
+  "authorization": "Do not resume browser research or background analysis until the user asks to resume.",
+  "objective": "Learn Master CMS pages, fields, policies, workflows, exceptions, source-visible behavior, single items and sets for later QA, monitoring and storyboards.",
+  "lastEvidence": "3350-lab-real-json-after-visual-reset-state",
+  "latestSession": "session-20261110-phase71.json",
+  "confirmedMasterServerOperations": 91,
+  "serviceServerOperations": 0,
+  "completionPercent": null,
+  "pauseActions": {
+    "browserCommandsAfterPause": 0,
+    "activeResearchAgent": "/root/item_detail_research was interrupted immediately.",
+    "unfinishedAgentArtifact": "lab-actual-saved-omr-restore-policy-20261110.md was not present at pause; do not assume completed.",
+    "pendingSiteMutation": null,
+    "pendingDraft": null,
+    "pendingDialog": null,
+    "pendingCleanup": null
+  },
+  "browser": {
+    "controller": "agent-browser explicit CDP",
+    "sessionFile": "agent-browser-session.json",
+    "session": "cms-master-20261109",
+    "tab": "t21",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "lastKnownUrl": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+    "lastKnownState": "Lab reset: type unselected; OMR and answer JSON empty; no live form or serializer; no modal or pending save.",
+    "freshObservationRequired": true,
+    "nativeMouseKeyboardUsed": false,
+    "preserveUserTabs": [
+      "t12, item2088806",
+      "t5, item2088985"
+    ],
+    "lastOwnedHmlPopupClosed": "t71, evidence3254",
+    "reconnectNote": "Reuse existing logged-in Chrome connection; connection approval may be required if expired. Identify tabs from fresh inventory. Never assume old tab IDs or element references are still valid."
+  },
+  "latestCompleted": [
+    {
+      "phase": 69,
+      "topic": "Copied single explanation HML save and file isolation",
+      "result": "COPY239/N now detail2089104. Direct FullApply after vendor Save, without CMS TempSave. Explanation HML/PNG match vendor bytes, original assets unchanged, HTML/OMR/meta/groups preserved, drafts absent, owned popup closed. All three detail scroll captures viewed.",
+      "report": "hml-explanation-copy-isolation-direct-fullapply-20261110.md",
+      "comparison": "explanation239-direct-fullapply-isolation-comparison-20261110.json"
+    },
+    {
+      "phase": 70,
+      "topic": "Actual paper drag with browser pointer",
+      "result": "Nine trusted native browser events and Sortable events prove single-before-set reorder. Normal cancel restored paper1094 detail1177/R/sole238 exactly; no server write.",
+      "report": "paper1094-native-pointer-drag-policy-20261110.md",
+      "comparison": "paper1094-native-pointer-drag-comparison-20261110.json"
+    },
+    {
+      "phase": 71,
+      "topic": "Lab restores actual persisted OMR/answer JSON",
+      "result": "COPY239 OBSACN, original242 SBSANM math and AI9382 SBSANM text all round-trip exactly. Local answer choice/text/case/space changes auto-update JSON. Source records unchanged. Six top/bottom PNGs directly viewed. Lab reset.",
+      "comparison": "lab-real-saved-omr-roundtrip-comparison-20261110.json",
+      "fixtures": "fixtures/lab-real-saved-omr-20261110.json",
+      "reportPending": "lab-actual-saved-omr-restore-policy-20261110.md"
+    }
+  ],
+  "resumeSequence": [
+    "Read this file, resume-state.json, phase71, phase70 and phase69, then obtain fresh browser inventory/state only after the user's resume request.",
+    "Optionally finish the interrupted Lab report from existing evidence only; avoid repeating completed browser cases.",
+    "Inspect normal mixed single/set Twin candidate policy in both directions: owned single2089246/R/Twin0 versus original set child2089242/Y/passage2089241. Read fresh baselines first. No mutation before an ordinary single-only cleanup route is clear. If disabled, record the exact reason and do not bypass.",
+    "Continue the remaining triage listed below, updating evidence, operation ledger and per-topic restoration checks after each mutation."
+  ],
+  "remainingTriage": [
+    "Separate N/COPY generation-button conditions: COPY239 N-to-Y, observe normal generation controls without generating, then normal Y-to-N restoration if the ordinary route is available.",
+    "Inspect enabled/disabled pageNum0 pagination on empty source results using normal controls only.",
+    "Lab math empty Apply, Escape/backdrop closing and direct block insertion; Lab-only cleanup by reload.",
+    "Own COPY239 explanation vendor Save followed by normal parent CMS Cancel/stay/leave-without-save. Verify current9104/N, files, HTML, OMR and drafts unchanged; do not infer physical deletion of vendor temp files.",
+    "Paper1094 reversed page range2-to1 normal Save validation. If accepted, restore1-to1 immediately; preserve member238/title/statusR."
+  ],
+  "currentFixtures": {
+    "copySingle239": {
+      "itemId": 2089239,
+      "detailId": 2089104,
+      "status": "N",
+      "savedAnswer": "④",
+      "questionPath": "/item/208/2089216/2088849/hml/2089216_Q.hml",
+      "explanationPath": "/item/208/2089239/2089104/hml/2089239_A.hml"
+    },
+    "paper1094": {
+      "paperId": 1094,
+      "detailId": 1177,
+      "status": "R",
+      "memberItemIds": [
+        2089238
+      ],
+      "pages": [
+        1,
+        1
+      ]
+    },
+    "controlSingle246": {
+      "itemId": 2089246,
+      "detailId": 2088877,
+      "status": "R",
+      "twinCount": 0,
+      "savedOmrAbsent": true
+    },
+    "originalSet": {
+      "passageId": 2089241,
+      "childIds": [
+        2089242,
+        2089243,
+        2089244,
+        2089245
+      ],
+      "status": "Y"
+    },
+    "copySet": {
+      "passageId": 2089357,
+      "childIds": [
+        2089358,
+        2089359,
+        2089360,
+        2089361
+      ],
+      "status": "R"
+    },
+    "aiSet": {
+      "passageId": 2089381,
+      "childIds": [
+        2089382,
+        2089383,
+        2089384,
+        2089385
+      ],
+      "status": "R"
+    },
+    "originalSetTwinFamily": "3 sets / 12 children preserved",
+    "disposableSingle": {
+      "itemId": 2089387,
+      "status": "D",
+      "ownTwinCount": 0,
+      "parentHistoryRetained": true
+    },
+    "disposableSet": {
+      "passageId": 2089388,
+      "childIds": [
+        2089389,
+        2089390,
+        2089391,
+        2089392
+      ],
+      "allStatus": "D",
+      "ownTwinCount": 0,
+      "parentHistoryRetained": true
+    }
+  },
+  "knownUnavailable": [
+    "User has no actual translation HML sample and no normally registered Definition set ZIP sample. This is not proof the features are unsupported.",
+    "Service CMS has not been provided; no actual deployment or learner grading was performed.",
+    "Backend repository and database were not available; browser frontend code and runtime/server responses were investigated."
+  ],
+  "references": {
+    "latestCoverageMap": "coverage-supplement-20261110-phase69.json",
+    "latestCoverageMapCutoff": 3258,
+    "laterDeltas": [
+      "session-20261110-phase70.json",
+      "session-20261110-phase71.json"
+    ],
+    "priorTriage": "remaining-actionable-investigation-20261110-phase69.md",
+    "mutationLedger": "mutation-ledger.json",
+    "controllerLessons": "controller-observations-20261110.json"
+  },
+  "cautions": [
+    "OMR data-omr-saved is an empty marker. Actual persisted JSON is data-saved-omr and data-saved-answer.",
+    "SBSANM answer is ORDERED.nodes[0].VALUE; identical TEXT component can render math or plain text by value_type.",
+    "Do not count template/prefix/suffix controls as actual answers.",
+    "HML GetTextFile(TEXT) omits equations. Compare XML SCRIPT separately where required.",
+    "HML vendor Save and CMS TempSave/FullApply are different operations.",
+    "Do not repeat uncertain mutations before independent readback.",
+    "Screenshot connection timeouts and pre-input helper guards are not proven CMS errors.",
+    "Use Python -X utf8 and explicit UTF-8 files. Avoid PowerShell-piped Korean literals.",
+    "Every agent-browser command must include explicit CDP, own session, pin-tab and no-auto-dialog. No native OS pointer needed.",
+    "Never claim overall 100 percent completion or infer production/Service behavior."
+  ]
+}

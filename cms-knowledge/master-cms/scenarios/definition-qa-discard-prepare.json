@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "label": "1955-definition-qa-discard-registration-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"
+      ]
+    },
+    {
+      "label": "1956-definition-qa-discard-file-select",
+      "command": [
+        "upload",
+        "input.dz-hidden-input",
+        "D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261109-02-DISCARD.zip"
+      ]
+    },
+    {
+      "label": "1957-definition-qa-discard-source-select",
+      "command": [
+        "select",
+        "select[name=productId]",
+        "69"
+      ]
+    },
+    {
+      "label": "1958-definition-qa-discard-unit-fill",
+      "command": [
+        "fill",
+        "#unitCodeInput",
+        "22EMAT0NGS31"
+      ]
+    },
+    {
+      "label": "1959-definition-qa-discard-start-fill",
+      "command": [
+        "fill",
+        "input[name=startPageNum]",
+        "2"
+      ]
+    },
+    {
+      "label": "1960-definition-qa-discard-end-fill",
+      "command": [
+        "fill",
+        "input[name=endPageNum]",
+        "3"
+      ]
+    },
+    {
+      "label": "1961-definition-qa-discard-purpose-select",
+      "command": [
+        "select",
+        "select[name=serviceUsage]",
+        "T"
+      ]
+    },
+    {
+      "label": "1962-definition-qa-discard-before-submit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/registration-upload-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 450
+}

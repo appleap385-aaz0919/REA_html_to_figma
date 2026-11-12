@@ -1,0 +1,8 @@
+{
+ "steps":[
+  {"label":"1144-paper-entry-seed","command":["snapshot"]},
+  {"label":"1145-paper-main-open","command":["click","{ref}"],"refPattern":"- link \"[^\"]* 평가지 관리\" \\[ref=(e\\d+)\\]"},
+  {"label":"1146-paper-main-loaded","command":["snapshot"],"screenshot":true},
+  {"label":"1147-paper-list-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":15000
+}

@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "status": "in_progress",
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [
+    667,
+    734
+  ],
+  "testItemId": 2088985,
+  "savedDetailId": 2088695,
+  "controllerTransition": {
+    "from": "Orca native computer",
+    "to": "agent-browser 0.41.2 via explicit CDP URL",
+    "configuration": "agent-browser-session.json",
+    "captureHelper": "agent_capture.py",
+    "installation": "Version-pinned npm exec cache; no project dependency or global package change.",
+    "authorization": "User requested agent-browser assessment and confirmed clicking Chrome Allow. Existing logged-in session retained.",
+    "evidence": [
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685
+    ],
+    "verified": "Explicit CDP attachment and binding to existing test-item edit target.685 full screenshot preserves unsaved first-left math1. Later math entry and preview actions work through CDP.",
+    "connectionIssues": [
+      "Initial auto-connect attempts exceeded Chrome permission wait and left repeated consent prompts. User subsequently clicked Allow; direct WebSocket attachment succeeded.",
+      "A command without explicit CDP selected an owned blank browser rather than the attached CMS. Always pass explicit CDP, session, pin-tab and no-auto-dialog.685 confirms intended CMS binding.",
+      "684 native consent click found a stale frame because the prompt had already disappeared. It is not evidence of a CMS defect."
+    ],
+    "userGuidance": "User may work in other apps/tabs. Preserve existing item2088985 edit tab. Inspect and temporary blank tabs may close. Native file dialogs need separate coordination.",
+    "privacy": "No credentials/cookies extracted, no Chrome profile copied. Tab inventory was used to identify the already-open development CMS target."
+  },
+  "observations": [
+    {
+      "code": "SBMALD",
+      "evidence": [
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        685,
+        687,
+        688,
+        689,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695
+      ],
+      "result": "Form starts with two left symbols and two right legends. Left values math1/2 and right math3/4 entered through Sigma keypad Apply;695 screenshot shows all four. Each left initially has one connection; connection delete disabled at one. Legend updates automatically populate previously blank connections with first legend3."
+    },
+    {
+      "code": "SBMALD",
+      "evidence": [
+        697,
+        698,
+        699,
+        700,
+        701
+      ],
+      "result": "Adding a second first-left connection initially repeats first target3. Changed it to4; second-left target changed to4. Final configuration is left1->[3,4], left2->[4]. Cross-left reuse of legend4 is accepted by preview."
+    },
+    {
+      "code": "SBMALD",
+      "evidence": [
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711
+      ],
+      "result": "Preview is a modal with cross-origin OMR iframe, not a direct line-drawing canvas. Each left symbol has a choice dropdown and Add answer. Student first-left [4,3], second-left [4] grades correct711, demonstrating order-insensitive multiple connections within the first left item. No server full apply yet."
+    },
+    {
+      "code": "SBMALD",
+      "evidence": [
+        712,
+        713,
+        714,
+        715,
+        716,
+        717,
+        718,
+        719
+      ],
+      "result": "Student first-left[4,3],second-left[3] grades incorrect714. Full apply confirmation717 and Save718 navigate to Master detail2088695;719 confirms type and new detail."
+    },
+    {
+      "code": "SBMALD",
+      "evidence": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734
+      ],
+      "result": "Observed edit-link href is detail URL with openModify=Y722. Initial pointer click did not produce verified edit entry; direct known modify route723 reenters persisted detail2088695. OMR pointer click725 did not activate tab; focus729 + Enter730 does. Fresh AX restores links1->[3,4],2->[4]. Read-only DOM731/734 restores MathLive1/2/3/4 and typeSBMALD. Scoped internal scroll733 reaches page-wrapper bottom734 (146+1015=1161)."
+    }
+  ],
+  "qualityNotes": [
+    {
+      "evidence": 686,
+      "rule": "Unquoted @ref was consumed by PowerShell and CLI reported missing click argument; no UI action occurred. Quote every @ref in shell commands."
+    },
+    {
+      "evidence": 696,
+      "rule": "Read-only eval quoting failed (math is not defined). No model read was obtained; rendered values are proved by695 screenshot. This is not a CMS defect."
+    },
+    {
+      "evidence": [
+        695,
+        702,
+        703
+      ],
+      "rule": "Some immediate AX snapshots lag rendered MathLive/Bootstrap changes. Screenshot695 shows value4 while snapshot still contains old placeholder;702 screenshot shows open preview before AX dialog appears703. Inspect pixels and obtain settled state before asserting absence."
+    },
+    {
+      "evidence": [
+        725,
+        726,
+        727,
+        731,
+        732,
+        733,
+        734
+      ],
+      "rule": "Do not call726/727 OMR restoration pixel proof: screenshots show metadata because tab click had not activated.732 screenshot returns outcome_unknown and no PNG exists. Form values and connections are restored in DOM/AX730/731/734. Generic page scroll727 did not move the actual .page-wrapper; targeted scroll733 is verified734. Background tab visibility is hidden. Preserve this distinction."
+    }
+  ],
+  "remaining": [
+    "SBMALD duplicate-target and min/max boundaries, text/image variants, post-reentry pixel verification.",
+    "SBMADD and three essay forms; edited OBSACN save and boundaries.",
+    "HML four document slots and remaining Master modules."
+  ]
+}

@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2309-own-hml-passage-slot-actual-open","command":["click","button[data-slot=passage]"]},
+ {"label":"2310-own-hml-passage-frame-state","command":["eval","--file","sources/runtime/hml-frame-observation.js"]},
+ {"label":"2311-own-hml-passage-editable-controls","command":["eval","--file","sources/runtime/hml-editable-controls.js"]},
+ {"label":"2312-own-hml-passage-control-methods","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242'||document.querySelector('[data-slot=passage]').classList.contains('active')!==true)throw Error('Own passage slot required');const control=document.getElementById('webhwpFrame').contentWindow.HwpCtrl;const methods=[];let p=control;for(let i=0;p&&i<4;i++,p=Object.getPrototypeOf(p))methods.push(Object.getOwnPropertyNames(p));return {status:document.querySelector('[data-webhwp-status]').innerText,methods,selectedFunctionSources:Object.fromEntries(['Run','GetTextFile','InsertText','CreateAction','GetPos','SetPos'].filter(k=>typeof control[k]==='function').map(k=>[k,control[k].toString().slice(0,1800)]))};})()"]}
+],"tailChars":130}

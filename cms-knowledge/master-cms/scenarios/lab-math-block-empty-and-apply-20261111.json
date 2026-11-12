@@ -1,0 +1,104 @@
+{
+  "steps": [
+    {
+      "label": "3409-lab-math-block-toolbar-open-empty",
+      "command": [
+        "eval",
+        "(()=>{const d=window.MathFieldDialog.get();if(location.pathname!=='/lab/view/math-demo.donga'||document.activeElement.id!=='mre1'||d.backdrop.style.display!=='none')throw Error('Focused inline editor required');const button=[...document.querySelectorAll('.tox-toolbar button,.tox-toolbar__primary button')].find(e=>e.textContent.trim()==='블록 수식'&&e.getClientRects().length);if(!button)throw Error('Visible Block Math toolbar control unavailable');button.click();return {open:d.backdrop.style.display!=='none',latex:d.mf.value};})()"
+      ]
+    },
+    {
+      "label": "3410-lab-math-empty-block-apply",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-apply-blank-answer.js"
+      ]
+    },
+    {
+      "label": "3411-lab-math-empty-block-no-insertion",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-edge-observation.js"
+      ]
+    },
+    {
+      "label": "3412-lab-math-block-insertion-focus",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/math-demo.donga'||window.MathFieldDialog.get().backdrop.style.display!=='none')throw Error('Closed math dialog required');const e=window.tinymce.get('mre1');e.focus();e.selection.select(e.getBody().querySelector('p'),true);e.selection.collapse(false);return {active:document.activeElement.id};})()"
+      ]
+    },
+    {
+      "label": "3413-lab-math-block-insertion-normal-toolbar-open",
+      "command": [
+        "eval",
+        "(()=>{const d=window.MathFieldDialog.get();if(location.pathname!=='/lab/view/math-demo.donga'||document.activeElement.id!=='mre1'||d.backdrop.style.display!=='none')throw Error('Focused inline editor required');const button=[...document.querySelectorAll('.tox-toolbar button,.tox-toolbar__primary button')].find(e=>e.textContent.trim()==='블록 수식'&&e.getClientRects().length);if(!button)throw Error('Visible Block Math toolbar control unavailable');button.click();return {open:d.backdrop.style.display!=='none',latex:d.mf.value};})()"
+      ]
+    },
+    {
+      "label": "3414-lab-math-block-insertion-nine",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-keypad-nine.js"
+      ]
+    },
+    {
+      "label": "3415-lab-math-block-insertion-confirm",
+      "command": [
+        "eval",
+        "(()=>{const d=window.MathFieldDialog.get();if(location.pathname!=='/lab/view/math-demo.donga'||d.backdrop.style.display==='none'||d.mf.value!=='9')throw Error('Expected one-digit block math');d.backdrop.querySelector('.math-dialog__confirm').click();return {closed:d.backdrop.style.display==='none'};})()"
+      ]
+    },
+    {
+      "label": "3416-lab-math-block-insertion-result",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-edge-observation.js"
+      ]
+    },
+    {
+      "label": "3417-lab-math-block-insertion-top-visual",
+      "command": [
+        "eval",
+        "(async()=>{const p=document.querySelector('.page-wrapper');if(location.pathname!=='/lab/view/math-demo.donga'||window.MathFieldDialog.get().backdrop.style.display!=='none')throw Error('Expected math Lab without dialog');p.scrollTop=0;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return {top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3418-lab-math-block-insertion-middle-visual",
+      "command": [
+        "eval",
+        "(async()=>{const p=document.querySelector('.page-wrapper');if(location.pathname!=='/lab/view/math-demo.donga'||window.MathFieldDialog.get().backdrop.style.display!=='none')throw Error('Expected math Lab without dialog');p.scrollTop=650;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return {top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3419-lab-math-block-insertion-bottom-visual",
+      "command": [
+        "eval",
+        "(async()=>{const p=document.querySelector('.page-wrapper');if(location.pathname!=='/lab/view/math-demo.donga'||window.MathFieldDialog.get().backdrop.style.display!=='none')throw Error('Expected math Lab without dialog');p.scrollTop=p.scrollHeight;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return {top:p.scrollTop,height:p.clientHeight,total:p.scrollHeight};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3420-lab-math-edge-reset-reload",
+      "command": [
+        "reload"
+      ]
+    },
+    {
+      "label": "3421-lab-math-edge-final-clean-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-edge-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 90,
+  "stopOnScreenshotFailure": false
+}

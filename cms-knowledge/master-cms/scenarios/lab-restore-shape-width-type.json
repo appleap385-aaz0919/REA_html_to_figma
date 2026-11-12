@@ -1,0 +1,17 @@
+{"steps":[
+ {"label":"1522-lab-restore-valid-answer-again","command":["fill","#ansJsonIn","{\"rule_type\":\"VALUE\",\"allowed_answer\":[{\"value\":\"Gamma\",\"value_type\":\"text\"}]}"]},
+ {"label":"1523-lab-restore-wrong-shape-omr","command":["fill","#omrJsonIn","[]"]},
+ {"label":"1524-lab-restore-wrong-shape-apply","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore valid JSON of incompatible shape'};})()"]},
+ {"label":"1525-lab-restore-wrong-shape-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1526-lab-restore-empty-omr","command":["fill","#omrJsonIn",""]},
+ {"label":"1527-lab-restore-empty-answer","command":["fill","#ansJsonIn",""]},
+ {"label":"1528-lab-restore-empty-apply","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore with both JSON fields empty'};})()"]},
+ {"label":"1529-lab-restore-empty-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1530-lab-restore-width-toggle","command":["eval","(() => {document.querySelector('#omrNarrowToggle').click();return {action:'Toggle restore form to wide'};})()"]},
+ {"label":"1531-lab-restore-wide-state","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1532-lab-restore-select-essay-multiple","command":["select","#omrTypeSel","ESMA00"]},
+ {"label":"1533-lab-restore-essay-default-state","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1534-lab-restore-type-reset-unselected","command":["select","#omrTypeSel",""]},
+ {"label":"1535-lab-restore-unselected-reset-state","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1536-lab-restore-final-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":700}

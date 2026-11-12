@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"1734-paper341-sort-modify-open","command":["open","https://dev-exambank.dongahub.com/paper/modify.donga?paperId=341&curriculum=22&pageNum=1&pageSize=30"]},
+ {"label":"1735-paper341-sort-before-values","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+ {"label":"1736-paper341-sort-drag-single-after-set","command":["drag","#paperItemTable tbody[data-sort-group]:first-of-type [data-sort-handle]","#paperItemTable tbody[data-sort-group]:last-of-type tr:last-child td:last-child"]},
+ {"label":"1737-paper341-sort-after-gesture-values","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+ {"label":"1738-paper341-sort-after-gesture-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":700}

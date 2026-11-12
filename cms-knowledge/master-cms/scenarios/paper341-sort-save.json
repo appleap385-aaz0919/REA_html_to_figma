@@ -1,0 +1,51 @@
+{
+  "steps": [
+    {
+      "label": "1742-paper341-sort-public-api-reorder",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-sort-api-reverse.js"
+      ]
+    },
+    {
+      "label": "1743-paper341-sort-reordered-fields",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1744-paper341-sort-save-submit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-sort-save.js"
+      ]
+    },
+    {
+      "label": "1745-paper341-sort-save-readback",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "1746-paper341-sort-save-detail-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "1747-paper341-sort-save-detail-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 500
+}

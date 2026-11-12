@@ -1,0 +1,24 @@
+import json,re
+from pathlib import Path
+r=Path(__file__).resolve().parent
+def read(n):return json.loads((r/n).read_text(encoding='utf-8'))
+def write(n,o):(r/n).write_text(json.dumps(o,ensure_ascii=False,indent=2),encoding='utf-8')
+intent=read('paper341-sort-intent.json');d=read('evidence/1754-paper341-sort-restored-detail-values.json')['action']['data']['result'];values={x['label']:x['value'] for x in d['values']}
+order=[re.search(r'\d+',t['cells'][1]).group() for t in d['tables'][1]['rows']]
+assert order==intent['restoreOrder'] and values['평가지 ID']=='341 (1098)'
+assert values['평가지명']==intent['metadata']['paperName'] and values['페이지']=='2 ~ 22' and values['문항 수']=='4문항' and values['상태']=='초안' and values['용도']=='교사용'
+ledger=read('mutation-ledger.json');assert len(ledger['entries'])==23
+ledger['entries'].append({'operation':'Restore original paper341 group order after persistent order probe','paperId':341,'beforeDetailId':1097,'afterDetailId':1098,'submitEvidence':1752,'readbackEvidence':[1753,1754,1755],'afterOrder':order,'metadataUnchanged':True,'status':'Original group order, all4members and metadata confirmed restored. Saved version history remains.'});ledger['entries'][-2]['status']='Reordered group persistence confirmed; original order subsequently restored at operation24/detail1098.';write('mutation-ledger.json',ledger)
+intent.update({'status':'restored_confirmed','restorationRequired':False,'currentDetailId':1098,'restoreSubmitEvidence':1752,'restoreReadbackEvidence':[1753,1754,1755]});write('paper341-sort-intent.json',intent)
+phase={'schemaVersion':1,'date':'2026-11-09','status':'evidence_recorded_with_explicit_gesture_gap','evidenceRange':[1734,1755],'lastEvidence':'1755-paper341-sort-restored-detail-source',
+ 'summary':'평가지341의 정렬 데이터를 실제 저장·재진입으로 확인하고 원래 순서로 복원했다. Sortable 공개 API로 세트 전체를 이동했으며 포인터 드래그는 도구 응답 시간 초과로 미검증이다. 상세ID1097/1098의 저장 이력이 추가됐고 현재 원래 문항4개·순서·메타데이터를 유지한다.',
+ 'observations':[
+  {'evidence':[1734,1735,1736,1739,1740],'result':'단건을 세트 뒤로 드래그하는 조작은 도구의30초 응답 시간 초과(outcome_unknown)로 끝났다. 같은 조작을 재실행하지 않았다. 새 관찰에서 원래 순서와 활성 드래그 요소 없음이 확인됐다.1737~1738은 실행하지 않은 계획 번호다. 이 결과를 CMS 드래그 결함 또는 드래그 성공으로 단정하지 않는다.'},
+  {'evidence':[1741,1742,1743],'result':'라이브 Sortable 인스턴스의 공개 sort/toArray/option API와 등록된onEnd 콜백을 확인해 사용했다. DOM 그룹의 순서를 반전하고 동일한 순번 갱신 콜백을 호출했다. 세트2087757의 세 자식2087758/59/60이 내부 순서를 유지한 채 앞에 오고 단건2087755가 뒤로 갔다. 표시 순번은1~4로 갱신됐다. 이는 공개 API를 이용한 시험이며 실제 포인터 드래그 증명이 아니다.'},
+  {'evidence':[1744,1745,1746,1747,1748,1749],'result':'실제 Save 버튼으로 저장한 상세341(1097)과 수정 페이지 재진입에서 세트3개→단건1개 순서가 유지됐다. 이름·페이지2~22·초안·교사용 및 포함 문항 집합은 유지됐다. 확정 Master 저장 작업23번이다.'},
+  {'evidence':[1750,1751,1752,1753,1754,1755],'result':'같은 정렬 API로 원래 단건→세트 순서를 복원하고 실제 저장했다. 상세341(1098)의 문항순서2087755/2087758/2087759/2087760과 원래 메타데이터를 확인했다. 확정 저장 작업24번이다. 저장 이력1097/1098은 남는다.'}
+ ],'persistentChanges':{'confirmedMasterOperations':24,'newMasterChangesInThisPhase':2,'paperId':341,'currentDetailId':1098,'restoredOrder':order,'metadataRestored':True,'pointerDragVerified':False},
+ 'remaining':['HML 등록 및 Definition의 상태별 상세·처리 정책과 남은 실제 조작을 조사한다.','평가지의 실제 포인터 정렬, 세트 단위 신규 추가/제외의 저장, 페이지 범위 경계·배포 가능 대상·이력은 추가 검증이 필요하다.','출처·HML편집기·쌍둥이·랩의 앞선 잔여 분기와 픽셀 누락을 이어간다.'],
+ 'resume':{'url':d['url'],'tab':'t21 research paper341 restored detail1098','targetId':'C06F56F8973F594BE8196DCB15B2DEBC','modal':None,'unsavedState':None},'evidenceLimits':['API를 통한 정렬 데이터 검증과 포인터 드래그 검증을 구분한다.','전체 CMS 또는 모든 분기 완료를 뜻하지 않는다.']}
+write('session-20261109-phase26.json',phase)
+print(json.dumps({'paperId':341,'currentDetailId':1098,'confirmedMasterOperations':24,'restored':True}))

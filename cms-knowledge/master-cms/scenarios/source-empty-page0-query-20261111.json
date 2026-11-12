@@ -1,0 +1,23 @@
+{
+  "steps": [
+    {
+      "label": "3384-source-empty-page0-select-curriculum15",
+      "command": [
+        "select",
+        "#curriculumSelect",
+        "15"
+      ]
+    },
+    {
+      "label": "3385-source-empty-page0-normal-query",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/source-empty-page0-query.js"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 80,
+  "stopOnScreenshotFailure": false
+}

@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"1896-definition-qa-registration-open","command":["open","https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1897-definition-qa-file-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261109-01.zip"]},
+ {"label":"1898-definition-qa-source-select","command":["select","select[name=productId]","69"]},
+ {"label":"1899-definition-qa-unit-fill","command":["fill","#unitCodeInput","22EMAT0NGS31"]},
+ {"label":"1900-definition-qa-start-fill","command":["fill","input[name=startPageNum]","1"]},
+ {"label":"1901-definition-qa-end-fill","command":["fill","input[name=endPageNum]","1"]},
+ {"label":"1902-definition-qa-purpose-select","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"1903-definition-qa-before-submit","command":["eval","--file","sources/runtime/registration-upload-observation.js"]}
+],"tailChars":450}

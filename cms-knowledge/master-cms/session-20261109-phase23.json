@@ -1,0 +1,37 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_remaining_branches","evidenceRange":[1588,1671],"lastEvidence":"1671-lab-math-sample-image-status",
+ "summary":"랩 수식 데모에서 세 샘플 블록의 변환·역변환, 단독 답안의 수식 적용/취소·placeholder, 행렬, 손글씨 그리기/지우기·인식 실패, 하이브리드 수식 삽입/수정과 여러 줄의 블록 처리를 검증했다. 사용자 정의 스크립트8개를 보존했고, 출력 패널을 펼쳐 페이지 끝까지 픽셀을 확인했다. OCR 성공과 나머지 도구·경계 분기는 남아 있다.",
+ "observations":[
+  {"evidence":[1588,1589,1590,1591],"result":"TinyMCE inline 편집기 mre1/mre4 두 개와 MathLive가 초기화된 것을 확인했다. 사용자 정의 수식 스크립트8개를 페이지가 선언한 같은 출처 URL에서 읽어 보존했다. 파일과 SHA-256은 sources/lab-math-assets-20261109.manifest.json에 기록했다. 쿠키·저장소·CSRF 값은 읽거나 반환하지 않았다."},
+  {"evidence":[1592,1593,1594,1595,1596,1597,1598,1599],"result":"samples.json의 문제/정답/해설 블록을 각각 선택하고 변환+로드를 실행했다. 원문 $...$ 수식이 data-latex를 가진 편집 노드로 변환되고, 편집 HTML 및 저장용 $...$ 원문이 생성됐다. 문제의 d-question/d-input 및 속성, 해설의 이미지·폰트 span이 결과 HTML에 남았다."},
+  {"evidence":[1593,1596,1599],"result":"변환 후 저장 원문은 정답 블록에서 문자열까지 동일했다. 문제는252→255자로 줄바꿈이 추가됐고, 공백만 있는 텍스트 노드를 제외한 HTML 트리는 같았다. 해설은560→558자로 수식 구분자 안의 앞뒤 공백, span 사이의 공백과 문단 줄바꿈이 정리됐다. 정확한 diff는 lab-math-roundtrip-comparison-20261109.json에 남겼으며 문자열 완전 보존을 주장하지 않는다."},
+  {"evidence":[1600,1601,1644,1645,1646,1647],"result":"실제 TinyMCE 툴바는 Bold/Italic/수식/블록 수식이다. 페이지 안내문에는 초등 수식/일반 수식이라는 예전 버튼명이 남아 있다. 현재 소스는 학교급에 관계없이 공통 high 키패드를 열도록 되어 있다.1647에서 실제 툴바 픽셀을 확인했다."},
+  {"evidence":[1602,1603,1604,1605],"result":"단독 답안 오른쪽Σ 트리거로 수식 입력기가 열리고 기존 답안 값이 복원됐다. 키보드/손글씨 탭, 숫자·연산·기호/알파벳·그리스 문자 키패드, 행렬 창, 취소/적용을 제공한다. 처음 키보드 탭의 키93개를 DOM으로 기록했다. 비어 있는 손글씨에서는 지우기/인식 버튼이 비활성화된다."},
+  {"evidence":[1606,1607,1608,1609,1610,1611,1612,1613],"result":"MathLive의 공개 value 속성으로 시험 입력을 비운 뒤 실제 키패드 pointerdown/up 핸들러로1,+,2를 눌렀다. 취소하면 기존 근의 공식 답안을 유지했고, 재시도 후 적용하면 단독 답안 및 LaTeX 출력이1+2가 됐다. 키패드 입력 동작과 자동화 초기값 설정 방식을 구분해 기록했다."},
+  {"evidence":[1614,1615,1616,1617,1618,1619,1620],"result":"행렬 키를 누르면 행/열 기본값2×2의 창이 열린다. 각 선택 옵션은1~4다.3행2열을 선택해 추가하면 pmatrix와6개 placeholder가 입력됐다. 최종 취소 후 단독 답안1+2는 유지됐다. 모든 행렬 크기와 셀 편집은 검증하지 않았다."},
+  {"evidence":[1621,1622,1623,1624,1625,1626,1627,1628,1629,1630,1631],"result":"손글씨 탭의 실제 캔버스에 CDP 마우스로 수직 한 획을 그렸다. 캔버스 원본은520×280이고 화면 CSS 크기는940×507.0625였다. 빈 상태에서 비활성화됐던 지우기/인식 버튼들이 획 입력 뒤 활성화됐다.1625의 빈 화면과1631의 실제 그어진 획 픽셀을 확인했다. 운영체제 마우스를 직접 제어하지 않았다."},
+  {"evidence":[1632,1633,1634,1635,1636],"result":"실제 인식 버튼을 한 번 눌렀고 인식에 실패했습니다.OCR 서버 상태를 확인해 주세요 안내가 나타났다. 같은 요청을 반복하지 않았다. Performance Resource Timing에서 해당 요청의 상태를 얻지 못해 HTTP 상태·실패 원인은 미확정이다. 소스의 호출 경로는 /api/math-ocr이며, 화면의 실패 안내만으로 서버 장애를 단정하지 않는다. 실패 화면1636을 확인했다."},
+  {"evidence":[1637,1638,1639,1640,1641],"result":"한 획 지우기를 누르면 strokeCount0이 되고 캔버스가 비며 지우기/인식 버튼이 다시 비활성화됐다. 키보드 탭으로 돌아가도 기존 입력값1+2가 유지됐고, 취소 후 단독 답안도 유지됐다. 전체 지우기·여러 줄 손글씨·OCR 성공/결과 적용은 추가 검증이 필요하다."},
+  {"evidence":[1642,1643],"result":"placeholder 입력을 LaTeX 문자열 text{QA answer}로 바꾸자 MathLive placeholder 속성에 반영됐고 답안1+2는 유지됐다. 답안을 모두 지운 상태에서의 placeholder 픽셀 표시는 추가 확인이 필요하다."},
+  {"evidence":[1648,1649,1650,1651,1652,1653,1654,1655],"result":"실제 수식 툴바 버튼에서1+2를 입력해 인라인 노드를 삽입했다. 삽입된 수식 노드를 클릭해 입력기를 다시 열고9로 바꿔 적용했다. data-latex 및 읽기 전용 렌더와 저장 HTML이9를 반영했다. CMS 문항 자체를 저장한 작업은 아니다."},
+  {"evidence":[1656,1657,1658,1659,1660,1661,1662,1663,1664,1665],"result":"일반 수식 삽입 버튼에서1+2,줄바꿈,3을 입력하면 MathLive 원문은 displaylines가 된다. 적용 시 gathered로 변환되고, 인라인 삽입 경로였어도 data-type=block-math div가 만들어졌다. 기존 인라인9와 새 블록 수식 및 원래 문장은 유지됐다. 픽셀과 펼친 저장 HTML을 함께 확인했다."},
+  {"evidence":[1663,1664],"result":"저장될 HTML 출력은 native details 안에 있다. 접힌 상태에서 innerText가 빈 값으로 관찰된 초기 기록을 출력 데이터 없음으로 해석하면 안 된다. details를 펼치고 textContent를 읽어 실제 clean HTML을 확인하도록 관찰 도구를 보완했다."},
+  {"evidence":[1647,1662,1665,1666,1667,1668,1670],"result":"실제 확인한 화면은 툴바1647, 삽입 결과1662, 출력 펼침1665, 스크롤800/1600/2316의1666~1668이다. 마지막2316+1071=3387로 페이지 끝까지 도달했다. 초기 캡처 실패가 있었지만 이 수식 데모의 현재 상태는 중첩 구간을 포함해 상단부터 하단까지 픽셀을 확인했다. 다른 페이지의 픽셀 누락이 함께 해소된 것은 아니다."},
+  {"evidence":[1667,1668,1671],"result":"샘플 해설의 이미지가 편집기와 읽기 전용 영역 모두에서 깨진 것으로 보였다. 두 img 모두complete=true/naturalWidth=0/naturalHeight=0이다. 상대 src resource/image/2987/...는 현재 /lab/view/resource/image/2987/...로 해석된다. 이 샘플 이미지 로드 실패를 기록했으며 서버 파일 유무나 다른 화면 영향은 미검증이다."}
+ ],
+ "staticPolicies":[
+  "MathRichEditor는 inline TinyMCE, 수식은 contenteditable=false 원자 노드와 data-type/data-latex를 저장 원본으로 사용한다. clean HTML은 렌더 내부와 data-mce 속성을 제거한다.",
+  "수식 입력기의 취소·배경 클릭·닫기는 callback 없이 닫고, 적용은 MathCompat 변환 후 callback을 호출한다. 빈 수식은 하이브리드 삽입·수정 callback에서 무시한다. 배경/Escape/빈 값의 실제 분기는 추가 확인이 필요하다.",
+  "손글씨는 흰 배경·검정 펜 고정, Y축 공백으로 줄을 나눠 각 PNG를 OCR에 보내고 여러 결과는 gathered로 합친다. 실제 다중 줄 OCR 성공은 미검증이다.",
+  "키패드 긴 누르기 변형·대문자·기호·선택 이동·공백 등의 정의는 캡처한 MathKeypad/Layouts 소스에 보존했다. 모든 키를 실제로 누른 것은 아니다."
+ ],
+ "persistentChanges":{"confirmedMasterOperations":20,"newMasterChangesInThisPhase":0,"ocrUiAttempts":1,"ocrHttpStatus":"unknown","labInputsOnly":true},
+ "remaining":[
+  "캡처가 다시 가능한 동안 출처/평가지/랩의 앞선 픽셀 누락을 보완한다.",
+  "수식 데모의 블록 버튼·빈 입력·단축키·키패드 변형/문자/공백·손글씨 전체 지우기/여러 줄/OCR 성공·placeholder 빈 값·샘플 변환의 추가 경계를 확인한다.",
+  "OMR 갤러리/복원 및 편집기 격리 테스트의 미검증 분기와 출처·평가지·HML/Definition·쌍둥이의 앞선 잔여 항목을 이어간다.",
+  "OCR 실패와 샘플 이미지 실패의 원인은 현재 미확정이며, 사용자 요청 범위는 조사이므로 제품 코드를 임의로 수정하지 않는다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/lab/view/math-demo.donga","tab":"t21 research math demo at bottom","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":"Local lab values only: inline9 and multiline gathered in hybrid editor; standalone1+2; placeholder QA answer; explanation sample loaded. Reproducible from retained scenarios. No pending CMS save or OCR request."},
+ "evidenceLimits":["요청한전체CMS조사가완료됐다는뜻은아니다.","실제관찰·정적소스·미확정원인을구분한다."]
+}

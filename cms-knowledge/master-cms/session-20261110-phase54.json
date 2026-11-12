@@ -1,0 +1,16 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_body_image_roundtrip_confirmed","evidenceRange":[2760,2788],"lastEvidence":"2788-definition698-approved-image-readback",
+ "summary":"ASSET3의 본문 이미지 입력을 JSON1개·PNG1개의 단독 ZIP으로 분리하고 정상 등록했다. 문서698/R, 카드2089378/2089085와 이미지1개 로드를 확인한 뒤 S 최종승인을1회 실행했다. 최종 문서Y·Master R/OBSACN·OMRnull이고 이미지 참조는 유지됐다. 실제 CDN 이미지14018B/SHA가 원본 PNG와 바이트 전체 일치한다. Master업무71회,Service배포없음.",
+ "observations":[
+  {"evidence":[2760,2761,2762,2763,2764,2765,2766,2767],"result":"본문/선지/SHORT 세 개의 단건 로컬 준비물을 만들고 기존 ASSET3의 멤버 바이트·CRC·경로를 검증했다. 본문ZIP14933B/SHA16e9351919f1ff55d76a15879a044b56694c13d29222e65227422a020bb3f020를 선택하고 실제 브라우저 해시와 동일한 등록메타를 확인했다."},
+  {"evidence":[2768,2769,2770,2771,2772,2773,2774],"result":"정상 등록버튼을1회 눌러 문서698/P→R/한 카드를 확인했다. 원래 img ID2116111106은 유지되고 src는 /item/208/2089378/2089085/asset/image-1.png로 재작성됐다. assets에 img-1/role question/mime image/png가 생성됐다."},
+  {"evidence":[2775,2776],"result":"총높이1494/viewport1015에서0→479스크롤로 전체카드를 확인하고 PNG2개를 직접 보았다. 수직선 그림과 선지5개·정답③·풀이·승인/폐기·목록이 표시된다."},
+  {"evidence":[2777,2778,2779,2780,2781,2782,2783,2784,2785,2786,2787,2788],"result":"브라우저 JS의 직접 CDN GET은TypeError였지만 이미지 표시는 이미 로드됐다. 정상S승인을1회 실행한 뒤 새GET으로 문서Y/MasterR·실제qtCurrent OBSACN·이미지 로드 유지를 확인했다. 별도 인증없는 HTTP GET에서는 CDN200/14018B/SHAff5cc1481912007ed6b5919acb67977c405ab4938efb67f9935027f0640b6762/원본바이트일치다."}
+ ],
+ "artifacts":["definition-body1-control-intent-20261110.json","definition-choice1-control-intent-20261110.json","definition-short1-control-intent-20261110.json","definition698-s-approval-intent-20261110.json","definition698-image-integrity-20261110.json","sources/definition698-body-draft-20261110.html","sources/definition698-body-s-approved-final-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":71,"newMasterChangesInThisPhase":2,"newDefinitionDocumentId":698,"finalDocumentState":"Y","masterItemId":2089378,"masterDetailId":2089085,"masterViewFlag":"R","masterType":"OBSACN","persistedPngBytesEqualSource":true,"serviceDeployment":false},
+ "remaining":["이미지 선지5개인 CHOICE1을 정상 단건 등록해 선지순서·리소스배열순서·서버자산순서의 관계와 실제 표시/바이트를 확인한다.","SHORT_ANSWER 단건의 실제 생성타입을 확인한다.","다중JSON/정상세트ZIP 제약과 해석HML 파일 실행은 정상표본이 없으므로 미확정으로 유지하고 다른 HML·세트AI·평가지·상태정책 조사를 이어간다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=698&curriculum=22&pageNum=1&pageSize=100","tab":"t21 own approved body-image Definition698","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "localPreparationNote":"첫 로컬 분리 helper가 ZipInfo 객체를 재사용해 메모리의 source offset을 변경한 탓에 검증용 재읽기가 실패했다. 원본 디스크파일은 변경되지 않았다. ZipInfo를 복사하고 모든 원본바이트를 미리 읽도록 수정한 뒤 기존 생성ZIP을 덮어쓰지 않고 재검증했다.2767의 첫 시도는 helper파일 미생성으로 브라우저명령 전 실패하여 증거파일/커서가 생성되지 않았다. 이후 검증된2767만 보존했다. 등록2768은 그 검증 후1회다.",
+ "evidenceLimits":["본문 이미지 한 사례의 저장·정규화·표시·원본바이트 보존을 입증하며 모든 이미지형식/외부리소스/실패처리를 일반화하지 않는다.","브라우저fetch TypeError의 정확한 원인은미확정이며 CDN 이미지실패로 분류하지 않는다. 이미지 실제로드와 외부HTTP200/SHA일치를 별도로 확인했다.","CHOICE1/SHORT1은 현재 로컬준비만 됐고 등록/승인하지 않았다.","전체100%완료를 주장하지 않는다."]
+}

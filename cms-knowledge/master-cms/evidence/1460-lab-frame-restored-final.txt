@@ -1,0 +1,748 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13540]
+      - link "문제은행 마스터 CMS" [ref=e13541]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13551]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13552]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13553]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13554]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13555]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13544]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e13542]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "편집기 격리 테스트 (기존 ↔ iframe)" [level=2, ref=e13543]
+    - StaticText "같은 문서를 지금 방식(페이지에 직접)과 iframe 안에 띄워 Tabler CSS 영향 · 편집기 API 동작을 비교. 탭마다 편집 상태가 따로 유지되고, [불러오기]만 두 탭을 처음 문서로 되돌린다."
+    - generic
+      - heading "문서 JSON" [level=3, ref=e13545]
+        - StaticText ""
+        - StaticText "문서 JSON"
+      - textbox "문항 · 지문 문서 컬럼 값을 그대로 붙여넣기" [ref=e13550]: {"assets": [{"alt": "", "path": "/item/203/2038004/1/asset/binitem-35.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "③", "promptText": "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?", "correctHtml": "<p><span class=\"font-s20\">③</span></p>", "questionHtml": "<d-question><p><span class=\"font-s20\">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 <u>아닌</u> 것은?</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/203/2038004/1/asset/binitem-35.png\" alt=\"image\" data-hml-binitem=\"35\" width=\"125\" height=\"84\" data-asset-id=\"img-1\"></span></p></d-question>", "explanationHtml": "<p><span class=\"font-s20\">$y=ax~(a\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면</span></p><p><span class=\"font-s20\">$-2=6a$<span class=\"hml-align-space\" style=\"display:inline-block;width:1.5em;white-space:pre\">   </span>$\\therefore \\hspace{0.25em} a=- \\dfrac{1}{3}$</span></p><p><span class=\"font-s20\">$\\therefore \\hspace{0.25em} y=- \\dfrac{1}{3} x$</span></p><p><span class=\"font-s20\">③ $y=- \\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면</span></p><p><span class=\"hml-align-space\" style=\"display:inline-block;width:1.5em;white-space:pre\">   </span><span class=\"font-s20\">$-3\\not=- \\dfrac{1}{3} \\times 1$</span></p>", "explanationText": "$y=ax~(a\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면\n$-2=6a$ $\\therefore \\hspace{0.25em} a=- \\dfrac{1}{3}$\n$\\therefore \\hspace{0.25em} y=- \\dfrac{1}{3} x$\n③ $y=- \\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면\n$-3\\not=- \\dfrac{1}{3} \\times 1$", "modelAnswerHtml": "", "explanationLines": ["$y=ax~(a\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면", "$-2=6a$ $\\therefore \\hspace{0.25em} a=- \\dfrac{1}{3}$", "$\\therefore \\hspace{0.25em} y=- \\dfrac{1}{3} x$", "③ $y=- \\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면", "$-3\\not=- \\dfrac{1}{3} \\times 1$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "③", "choices": [3]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}
+        - StaticText "{\"assets\": [{\"alt\": \"\", \"path\": \"/item/203/2038004/1/asset/binitem-35.png\", \"role\": \"question\", \"type\": \"image\", \"width\": null, \"height\": null, \"assetId\": \"img-1\", \"external\": false, \"mimeType\": \"image/png\"}], \"content\": {\"choices\": [], \"answerText\": \"③\", \"promptText\": \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\", \"correctHtml\": \"<p><span class=\\\"font-s20\\\">③</span></p>\", \"questionHtml\": \"<d-question><p><span class=\\\"font-s20\\\">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 <u>아닌</u> 것은?</span></p><p class=\\\"align-c\\\"><span class=\\\"font-s20\\\"><img src=\\\"/item/203/2038004/1/asset/binitem-35.png\\\" alt=\\\"image\\\" data-hml-binitem=\\\"35\\\" width=\\\"125\\\" height=\\\"84\\\" data-asset-id=\\\"img-1\\\"></span></p></d-question>\", \"explanationHtml\": \"<p><span class=\\\"font-s20\\\">$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면</span></p><p><span class=\\\"font-s20\\\">$-2=6a$<span class=\\\"hml-align-space\\\" style=\\\"display:inline-block;width:1.5em;white-space:pre\\\">   </span>$\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$</span></p><p><span class=\\\"font-s20\\\">$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$</span></p><p><span class=\\\"font-s20\\\">③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면</span></p><p><span class=\\\"hml-align-space\\\" style=\\\"display:inline-block;width:1.5em;white-space:pre\\\">   </span><span class=\\\"font-s20\\\">$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$</span></p>\", \"explanationText\": \"$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면\\n$-2=6a$ $\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$\\n$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$\\n③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면\\n$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$\", \"modelAnswerHtml\": \"\", \"explanationLines\": [\"$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면\", \"$-2=6a$ $\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$\", \"$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$\", \"③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면\", \"$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$\"], \"gradingCriteriaHtml\": \"\"}, \"grading\": {\"mode\": \"choice\", \"value\": \"③\", \"choices\": [3]}, \"outType\": \"split\", \"passageKey\": \"\", \"contentVersion\": \"v3\"}"
+      - button " 불러오기" [ref=e13546]
+        - StaticText ""
+        - StaticText "불러오기"
+      - button " getDocument 비교" [ref=e13547]
+        - StaticText ""
+        - StaticText "getDocument 비교"
+    - tablist
+      - tab "기존" [selected, ref=e13548]
+      - tab "iframe" [ref=e13549]
+    - tabpanel
+      - generic
+        - heading "문항 편집" [level=3, ref=e13556]
+          - StaticText ""
+          - StaticText "문항 편집"
+        - button "save()" [ref=e13557]
+        - button "getDocument()" [ref=e13558]
+        - button "객관식 켜기" [ref=e13559]
+        - button "객관식 끄기" [ref=e13560]
+        - button "destroy()" [ref=e13561]
+        - generic
+          - generic
+            - StaticText "문항 편집"
+            - button "↶ 실행취소" [ref=e13692]
+            - button "↷ 다시실행" [ref=e13693]
+            - combobox "문단 정렬" [expanded=false, ref=e13694]: 정렬: 기본
+              - MenuListPopup
+                - option "정렬: 기본" [selected, ref=e13718]
+                - option "왼쪽" [ref=e13719]
+                - option "가운데" [ref=e13720]
+                - option "오른쪽" [ref=e13721]
+            - button "문단" [ref=e13695]
+            - button "B" [ref=e13696]
+            - button "I" [ref=e13697]
+            - button "U" [ref=e13698]
+            - button "A" [ref=e13699]
+            - button "+ 수식" [ref=e13700]
+            - button "🖼 이미지" [ref=e13701]
+            - button "⊞ 표" [ref=e13702]
+            - button "글상자" [ref=e13703]
+            - button "d-box" [ref=e13704]
+            - button "d-input" [ref=e13705]
+            - button "특수문자" [ref=e13706]
+            - button "글자 겹치기" [ref=e13707]
+          - StaticText "본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다"
+          - heading "문제" [level=3, ref=e13687]
+          - article
+            - generic [ref=e13708] editable [contenteditable]: 다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?
+
+
+
+              - paragraph
+                - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+              - paragraph
+                - image "image"
+                - LineBreak "\n"
+          - heading "정답" [level=3, ref=e13688]
+          - article
+            - generic [ref=e13709] editable [contenteditable]: ③
+              - paragraph
+                - StaticText "③"
+          - heading "풀이" [level=3, ref=e13689]
+          - article
+            - generic [ref=e13710] editable [contenteditable]: 𝑦
+=
+𝑎
+𝑥
+ 
+(
+𝑎
+≠
+0
+)
+y=ax (a
+
+=0)로 놓고 
+𝑥
+=
+6
+,
+ 
+𝑦
+=
+−
+2
+x=6, y=−2를 대입하면
+
+−
+2
+=
+6
+𝑎
+−2=6a   
+∴
+𝑎
+=
+−
+1
+3
+∴a=−
+3
+1
+	​
+
+
+
+
+∴
+𝑦
+=
+−
+1
+3
+𝑥
+∴y=−
+3
+1
+	​
+
+x
+
+
+③ 
+𝑦
+=
+−
+1
+3
+𝑥
+y=−
+3
+1
+	​
+
+x에 
+𝑥
+=
+1
+,
+ 
+𝑦
+=
+−
+3
+x=1, y=−3을 대입하면
+
+   
+−
+3
+≠
+−
+1
+3
+×
+1
+−3
+
+=−
+3
+1
+	​
+
+×1
+
+              - paragraph
+                - generic [ref=e13722] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLText
+                        - MathMLOperator
+                          - StaticText "("
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLNumber
+                          - StaticText "0"
+                        - MathMLOperator
+                          - StaticText ")"
+                - StaticText "로 놓고 "
+                - generic [ref=e13723] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                - StaticText "를 대입하면"
+              - paragraph
+                - generic [ref=e13724] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                - generic [ref=e13725] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                - LineBreak "\n"
+              - paragraph
+                - generic [ref=e13726] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - LineBreak "\n"
+              - paragraph
+                - StaticText "③"
+                - generic [ref=e13727] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - StaticText "에 "
+                - generic [ref=e13728] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                - StaticText "을 대입하면"
+              - paragraph
+                - generic [ref=e13729] clickable [cursor:pointer]
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "1"
+                - LineBreak "\n"
+          - heading "모범 답안" [level=3, ref=e13690]
+          - article
+            - generic [ref=e13711] editable [contenteditable]: 
+
+              - paragraph
+                - LineBreak "\n"
+          - heading "채점 기준" [level=3, ref=e13691]
+          - article
+            - generic [ref=e13712] editable [contenteditable]: 
+
+              - paragraph
+                - LineBreak "\n"
+          - paragraph
+            - StaticText "미리보기 (실서비스 뷰어 렌더)"
+          - article
+            - generic
+              - heading "문제" [level=3, ref=e13713]
+              - paragraph
+                - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+              - paragraph
+                - image "image"
+            - generic
+              - heading "정답" [level=3, ref=e13714]
+              - paragraph
+                - StaticText "③"
+            - generic
+              - heading "풀이" [level=3, ref=e13715]
+              - generic
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLText
+                        - MathMLOperator
+                          - StaticText "("
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLNumber
+                          - StaticText "0"
+                        - MathMLOperator
+                          - StaticText ")"
+                  - StaticText "로 놓고 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                  - StaticText "를 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - paragraph
+                  - StaticText "③"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                  - StaticText "에 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                  - StaticText "을 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "1"
+        - StaticText "마운트\n완료"
+      - generic
+        - heading "문항" [level=3, ref=e13562]
+          - StaticText ""
+          - StaticText "문항"
+        - button " 미리보기 다시 그리기" [ref=e13563]
+          - StaticText ""
+          - StaticText "미리보기 다시 그리기"
+        - article
+          - paragraph
+            - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+          - paragraph
+            - image "image"
+          - generic
+            - heading "정답" [level=3, ref=e13716]
+            - paragraph
+              - StaticText "③"
+          - generic
+            - heading "풀이" [level=3, ref=e13717]
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑦"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLText
+                    - MathMLOperator
+                      - StaticText "("
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText "≠"
+                    - MathMLNumber
+                      - StaticText "0"
+                    - MathMLOperator
+                      - StaticText ")"
+              - StaticText "로 놓고 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLNumber
+                      - StaticText "6"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLText
+                    - MathMLIdentifier
+                      - StaticText "𝑦"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "2"
+              - StaticText "를 대입하면"
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "2"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLNumber
+                      - StaticText "6"
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLOperator
+                      - StaticText "∴"
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLNumber
+                          - StaticText "3"
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLOperator
+                      - StaticText "∴"
+                    - MathMLIdentifier
+                      - StaticText "𝑦"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLNumber
+                          - StaticText "3"
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+            - paragraph
+              - StaticText "③"
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑦"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLNumber
+                          - StaticText "3"
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+              - StaticText "에 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLNumber
+                      - StaticText "1"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLText
+                    - MathMLIdentifier
+                      - StaticText "𝑦"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "3"
+              - StaticText "을 대입하면"
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "3"
+                    - MathMLOperator
+                      - StaticText "≠"
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLNumber
+                          - StaticText "3"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLNumber
+                      - StaticText "1"
+  - alert [ref=e13730] clickable [cursor:pointer]
+    - StaticText ""
+    - StaticText "두 문서가 같습니다"

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1815-hml134-scroll-review-walk",
+  "startedUtc": "2026-11-09T07:23:16.533010+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/page-scroll-walk.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/hml/detail.donga?examDocumentId=134&curriculum=22&pageNum=2&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.127
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/hml/detail.donga?examDocumentId=134&curriculum=22&pageNum=2&pageSize=100",
+      "result": {
+        "atBottom": true,
+        "note": "Actual overlapping internal scroll positions. DOM coverage is distinct from pixel inspection.",
+        "positions": [
+          {
+            "clientHeight": 1071,
+            "scrollHeight": 1071,
+            "scrollTop": 0,
+            "visibleHeadings": [
+              "HML 상세",
+              "기본 정보",
+              "분리 문항 리스트"
+            ]
+          }
+        ],
+        "url": "https://dev-exambank.dongahub.com/item/hml/detail.donga?examDocumentId=134&curriculum=22&pageNum=2&pageSize=100",
+        "visibility": "visible"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.132
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/hml/detail.donga?examDocumentId=134&curriculum=22&pageNum=2&pageSize=100",
+      "refs": {
+        "e19597": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e19598": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e19599": {
+          "name": "HML 상세",
+          "role": "heading"
+        },
+        "e19600": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e19601": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e19602": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e19603": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e19604": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e19605": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e19606": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e19607": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e19608": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e19609": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e19610": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e19611": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e19612": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e19613": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e19614": {
+          "name": " 다운로드",
+          "role": "button"
+        },
+        "e19615": {
+          "name": "등록",
+          "role": "radio"
+        },
+        "e19616": {
+          "name": "미등록",
+          "role": "radio"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e19597]\n      - link \"문제은행 마스터 CMS\" [ref=e19598]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e19605]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e19606]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e19607]\n          - link \"HML 문항 등록\" [ref=e19608]\n          - link \"디피니션 문항 등록\" [ref=e19609]\n          - link \"쌍둥이 그룹 관리\" [ref=e19610]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e19611]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e19612]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e19613]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e19601]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"HML 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"HML 상세\" [level=2, ref=e19599]\n      - StaticText \"등록중\"\n      - generic\n        - StaticText \"파싱이 진행 중입니다.\"\n        - StaticText \"완료되면 문항 리스트가 채워집니다. 페이지를 닫아도 파싱은 계속됩니다.\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e19602]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"134\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"[MOCK-P] 템플릿_시험지2.hml\"\n            - button \" 다운로드\" [ref=e19614]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-H-MA-D1-2-1-DCL-MS-2024]\"\n            - StaticText \"22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22EMAT0NGS3102060000]\"\n            - StaticText \"22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 평면도형 > 정사각형은 무엇일까요 > >\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"2 ~ 22\"\n          - term \"용도\"\n          - definition\n            - StaticText \"교사용\"\n          - term \"등록\"\n          - definition\n            - StaticText \"sangwon.jo · 2026-09-17\"\n          - term \"수정\"\n          - definition\n            - StaticText \"-\"\n        - LabelText\n          - StaticText \"평가지 등록여부\"\n        - generic\n          - LabelText\n            - radio \"등록\" [checked=false, disabled, ref=e19615]\n            - StaticText \"등록\"\n          - LabelText\n            - radio \"미등록\" [checked=false, disabled, ref=e19616]\n            - StaticText \"미등록\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [disabled, ref=e19604]\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e19603]\n        - StaticText \"\"\n        - paragraph\n          - StaticText \"문항을 분리하는 중입니다\"\n        - paragraph\n          - StaticText \"완료되면 이 자리에 분리된 문항이 표시됩니다.\"\n      - link \"목록\" [ref=e19600]"
+    },
+    "error": null,
+    "localSeconds": 0.114
+  }
+}

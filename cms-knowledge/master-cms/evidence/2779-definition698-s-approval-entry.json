@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2779-definition698-s-approval-entry",
+  "startedUtc": "2026-11-10T04:21:25.129135+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/definition698-s-entry.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=698&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.104
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=698&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "entryClicked": true,
+        "finalSubmitted": false
+      }
+    },
+    "error": null,
+    "localSeconds": 0.15
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=698&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e37129": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e37130": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e37131": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e37132": {
+          "name": "디피니션 상세",
+          "role": "heading"
+        },
+        "e37133": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e37134": {
+          "name": "폐기",
+          "role": "button"
+        },
+        "e37135": {
+          "name": "승인",
+          "role": "button"
+        },
+        "e37136": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e37137": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e37138": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e37139": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e37140": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e37141": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e37142": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e37143": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e37144": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e37145": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e37146": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e37147": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e37148": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e37149": {
+          "name": " 다운로드",
+          "role": "button"
+        },
+        "e37150": {
+          "name": "등록대기",
+          "role": "option"
+        },
+        "e37151": {
+          "name": "등록성공",
+          "role": "option"
+        },
+        "e37152": {
+          "name": "등록실패",
+          "role": "option"
+        },
+        "e37153": {
+          "name": "삭제",
+          "role": "option"
+        },
+        "e37154": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e37155": {
+          "name": "풀이",
+          "role": "heading"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e37129]\n      - link \"문제은행 마스터 CMS\" [ref=e37130]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e37138]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e37139]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e37140]\n          - link \"HML 문항 등록\" [ref=e37141]\n          - link \"디피니션 문항 등록\" [ref=e37142]\n          - link \"쌍둥이 그룹 관리\" [ref=e37143]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e37144]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e37145]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e37146]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e37131]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"디피니션 상세\" [level=2, ref=e37132]\n      - StaticText \"초안\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e37136]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"698\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"QA-DIFI-20261110-09-BODY1.zip\"\n            - button \" 다운로드\" [ref=e37149]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-M-MA-T0-1-1-SMT-TP-2022]\"\n            - StaticText \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22MMAT0KOK1001020000]\"\n            - StaticText \"22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 소인수분해 > 소인수분해 > >\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"1 ~ 3\"\n          - term \"용도\"\n          - definition\n            - StaticText \"공통\"\n          - term \"등록\"\n          - definition\n            - StaticText \"jaehyuk.myung · 2026-11-10\"\n          - term \"수정\"\n          - definition\n            - StaticText \"-\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [ref=e37147]: QA-DIFI-20261110-09-BODY1 S review and persisted image verification; development research.\n          - StaticText \"QA-DIFI-20261110-09-BODY1 S review and persisted image verification; development research.\"\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e37137]\n        - generic\n          - StaticText \"#1\"\n          - StaticText \"문항ID 2089378 (2089085)\"\n          - combobox [expanded=false, ref=e37148]: 등록성공\n            - MenuListPopup\n              - option \"등록대기\" [disabled, ref=e37150]\n              - option \"등록성공\" [selected, ref=e37151]\n              - option \"등록실패\" [ref=e37152]\n              - option \"삭제\" [ref=e37153]\n          - article\n            - paragraph\n              - StaticText \"[QA-DIFI-20261110-05-BODYIMG]\"\n            - paragraph\n              - StaticText \"다음 수직선으로 설명할 수 있는 덧셈식은?\"\n            - image \"750396\"\n            - listitem [level=1]\n              - generic\n                - StaticText \"①\"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"3\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"5\"\n            - listitem [level=1]\n              - generic\n                - StaticText \"②\"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"5\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"7\"\n            - listitem [level=1]\n              - generic\n                - StaticText \"③\"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"5\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"3\"\n            - listitem [level=1]\n              - generic\n                - StaticText \"④\"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"3\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"5\"\n            - listitem [level=1]\n              - generic\n                - StaticText \"⑤\"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"−\"\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLNumber\n                        - StaticText \"5\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLNumber\n                        - StaticText \"3\"\n            - generic\n              - heading \"정답\" [level=3, ref=e37154]\n              - paragraph\n                - StaticText \"③\"\n            - generic\n              - heading \"풀이\" [level=3, ref=e37155]\n              - paragraph\n                - StaticText \"주어진 그림은 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"0\"\n                - StaticText \"을 나타내는 점에서 왼쪽으로 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"5\"\n                - StaticText \"만큼 이동한 다음 오른쪽으로 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"2\"\n                - StaticText \"만큼 이동한 것이 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"0\"\n                - StaticText \"을 나타내는 점에서 왼쪽으로 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"3\"\n                - StaticText \"만큼 이동한 것과 같음을 나타내므로 주어진 수직선으로 설명할 수 있는 덧셈식은 ③이다.\"\n      - link \"목록\" [ref=e37133]\n      - button \"폐기\" [ref=e37134]\n      - button \"승인\" [ref=e37135]"
+    },
+    "error": null,
+    "localSeconds": 0.151
+  }
+}

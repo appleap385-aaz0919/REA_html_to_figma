@@ -1,0 +1,162 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e21640]
+      - link "문제은행 마스터 CMS" [ref=e21641]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e21648]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e21649]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e21650]
+          - link "HML 문항 등록" [ref=e21651]
+          - link "디피니션 문항 등록" [ref=e21652]
+          - link "쌍둥이 그룹 관리" [ref=e21653]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e21654]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e21655]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e21656]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e21643]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "신규 등록"
+      - heading "ZIP 신규 등록" [level=2, ref=e21642]
+      - form
+        - generic
+          - heading "ZIP 파일 업로드*" [level=3, ref=e21646]
+            - StaticText "ZIP 파일 업로드*"
+          - generic
+            - StaticText ""
+            - StaticText "QA-DIFI-20261109-03-EMPTY.zip"
+            - generic
+              - strong
+                - StaticText "22"
+              - StaticText " b"
+            - link "파일 제거" [ref=e21724]
+              - StaticText ""
+        - generic
+          - heading "메타정보 입력 (파싱 성공 시 생성 문항에 적용)" [level=3, ref=e21647]
+          - generic
+            - LabelText
+              - StaticText "출처*"
+            - generic
+              - combobox [expanded=false, ref=e21661]: 출처 선택
+                - MenuListPopup
+                  - option "출처 선택" [selected, ref=e21669]
+                  - option "22-M-MA-T0-1-0-DCL-MA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025)" [ref=e21670]
+                  - option "22-H-MA-C1-1-0-DCL-KI-2025(22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025)" [ref=e21671]
+                  - option "22-E-MA-T0-5-1-DCL-FB-2026(22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026)" [ref=e21672]
+                  - option "22-E-MA-T0-4-2-DCL-FB-2025(22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025)" [ref=e21673]
+                  - option "22-E-MA-T0-4-1-DCL-FB-2005(22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005)" [ref=e21674]
+                  - option "22-E-MA-T0-3-2-DCL-FB-2025(22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025)" [ref=e21675]
+                  - option "22-E-MA-T0-3-1-DCL-FB-2025(22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025)" [ref=e21676]
+                  - option "22-M-MA-T0-1-0-DCL-DA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025)" [ref=e21677]
+                  - option "22-H-MA-B2-2-1-DCL-FA-2025(22-고등-수학군-기본수학2-고등2-1학기-두클래스-기말고사 대비-2025)" [ref=e21678]
+                  - option "22-H-MA-B1-1-2-DCL-MA-2025(22-고등-수학군-기본수학1-고등1-2학기-두클래스-중간고사 대비-2025)" [ref=e21679]
+                  - option "22-H-MA-U0-3-2-DCL-SV-2025(22-고등-수학군-수학과 문화-고등3-2학기-두클래스-소단원 평가_발전-2025)" [ref=e21680]
+                  - option "22-H-MA-P0-3-1-DCL-SF-2024(22-고등-수학군-직무수학-고등3-1학기-두클래스-소단원 평가_기초-2024)" [ref=e21681]
+                  - option "22-H-MA-C2-4-2-ABG-MN-2023(22-고등-수학군-공통수학2-고등 공통-2학기-절대등급-본책-2023)" [ref=e21682]
+                  - option "22-H-MA-C1-4-1-NLS-MN-2023(22-고등-수학군-공통수학1-고등 공통-1학기-날선유형스타트-본책-2023)" [ref=e21683]
+                  - option "22-H-MA-G0-3-2-SMB-MN-2022(22-고등-수학군-기하-고등3-2학기-수매씽-본책-2022)" [ref=e21684]
+                  - option "22-H-MA-S0-2-1-SMB-MN-2022(22-고등-수학군-확률과통계-고등2-1학기-수매씽-본책-2022)" [ref=e21685]
+                  - option "22-H-MA-D1-2-2-ABG-MN-2025(22-고등-수학군-미적분1-고등2-2학기-절대등급-본책-2025)" [ref=e21686]
+                  - option "22-H-MA-A0-1-1-SMB-MN-2025(22-고등-수학군-대수-고등1-1학기-수매씽-본책-2025)" [ref=e21687]
+                  - option "22-H-MA-T2-1-2-SMB-MN-2025(22-고등-수학군-수학2-고등1-2학기-수매씽-본책-2025)" [ref=e21688]
+                  - option "22-H-MA-T1-1-1-NLS-MN-2025(22-고등-수학군-수학1-고등1-1학기-날선유형스타트-본책-2025)" [ref=e21689]
+                  - option "22-H-MA-G0-3-1-NLS-MN-2024(22-고등-수학군-기하-고등3-1학기-날선유형스타트-본책-2024)" [ref=e21690]
+                  - option "22-H-MA-S0-3-2-DCL-TW-2024(22-고등-수학군-확률과통계-고등3-2학기-두클래스-쌍둥이 문제-2024)" [ref=e21691]
+                  - option "22-H-MA-D2-3-1-DCL-KI-2024(22-고등-수학군-미적분2-고등3-1학기-두클래스-기출문제 자료집-2024)" [ref=e21692]
+                  - option "22-H-MA-D1-2-1-DCL-MS-2024(22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024)" [ref=e21693]
+                  - option "22-H-MA-A0-2-1-DCL-FA-2023(22-고등-수학군-대수-고등2-1학기-두클래스-기말고사 대비-2023)" [ref=e21694]
+                  - option "22-H-MA-T2-2-2-DCL-MA-2023(22-고등-수학군-수학2-고등2-2학기-두클래스-중간고사 대비-2023)" [ref=e21695]
+                  - option "22-H-MA-T1-2-1-DCL-ES-2023(22-고등-수학군-수학1-고등2-1학기-두클래스-서술형 평가-2023)" [ref=e21696]
+                  - option "22-H-MA-B2-1-2-DCL-DA-2023(22-고등-수학군-기본수학2-고등1-2학기-두클래스-대단원 평가-2023)" [ref=e21697]
+                  - option "22-H-MA-B1-1-1-DCL-SV-2022(22-고등-수학군-기본수학1-고등1-1학기-두클래스-소단원 평가_발전-2022)" [ref=e21698]
+                  - option "22-H-MA-C2-4-0-DCL-SB-2022(22-고등-수학군-공통수학2-고등 공통-공통학기-두클래스-소단원 평가_기본-2022)" [ref=e21699]
+                  - option "22-H-MA-C1-4-0-DCL-SF-2022(22-고등-수학군-공통수학1-고등 공통-공통학기-두클래스-소단원 평가_기초-2022)" [ref=e21700]
+                  - option "22-M-MA-T0-3-1-DCL-DA-2022(22-중학-수학군-수학-중학3-1학기-두클래스-수준별 문제집_대단원 평가-2022)" [ref=e21701]
+                  - option "22-M-MA-T0-2-2-DCL-SB-2025(22-중학-수학군-수학-중학2-2학기-두클래스-수준별 문제집_소단원 평가_기본-2025)" [ref=e21702]
+                  - option "22-M-MA-T0-1-2-DCL-SF-2025(22-중학-수학군-수학-중학1-2학기-두클래스-수준별 문제집_소단원 평가_기초-2025)" [ref=e21703]
+                  - option "22-M-MA-T0-3-2-DCL-TW-2025(22-중학-수학군-수학-중학3-2학기-두클래스-해결해요 추가_쌍둥이 문제-2025)" [ref=e21704]
+                  - option "22-M-MA-T0-3-1-DCL-PR-2024(22-중학-수학군-수학-중학3-1학기-두클래스-준비 학습지-2024)" [ref=e21705]
+                  - option "22-M-MA-T0-3-1-EXG-SP-2024(22-중학-수학군-수학-중학3-1학기-특급기출-부록-2024)" [ref=e21706]
+                  - option "22-M-MA-T0-2-1-EXG-MN-2024(22-중학-수학군-수학-중학2-1학기-특급기출-본책-2024)" [ref=e21707]
+                  - option "22-M-MA-T0-2-2-SMK-WB-2023(22-중학-수학군-수학-중학2-2학기-수매씽 개념-워크북-2023)" [ref=e21708]
+                  - option "22-M-MA-T0-2-1-SMK-KN-2023(22-중학-수학군-수학-중학2-1학기-수매씽 개념-개념북-2023)" [ref=e21709]
+                  - option "22-M-MA-T0-1-1-ABG-MN-2023(22-중학-수학군-수학-중학1-1학기-절대등급-본책-2023)" [ref=e21710]
+                  - option "22-M-MA-T0-1-2-SMT-WB-2022(22-중학-수학군-수학-중학1-2학기-수매씽 유형-워크북-2022)" [ref=e21711]
+                  - option "22-M-MA-T0-1-1-SMT-TP-2022(22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022)" [ref=e21712]
+                  - option "22-E-MA-T0-6-2-DCL-CA-2025(22-초등-수학군-수학-초등6-2학기-두클래스-연산 학습지-2025)" [ref=e21713]
+                  - option "22-E-MA-T0-6-1-DCL-FA-2025(22-초등-수학군-수학-초등6-1학기-두클래스-기말 평가-2025)" [ref=e21714]
+                  - option "22-E-MA-T0-5-1-DCL-ES-2024(22-초등-수학군-수학-초등5-1학기-두클래스-서술형 평가-2024)" [ref=e21715]
+                  - option "22-E-MA-T0-4-2-DCL-PA-2024(22-초등-수학군-수학-초등4-2학기-두클래스-수행 평가-2024)" [ref=e21716]
+                  - option "22-E-MA-T0-4-1-DCL-DH-2023(22-초등-수학군-수학-초등4-1학기-두클래스-단원 평가_심화-2023)" [ref=e21717]
+                  - option "22-E-MA-T0-3-2-DCL-DC-2023(22-초등-수학군-수학-초등3-2학기-두클래스-단원 평가_보충-2023)" [ref=e21718]
+                  - option "22-E-MA-T0-3-1-DCL-DA-2023(22-초등-수학군-수학-초등3-1학기-두클래스-단원 평가_기본-2023)" [ref=e21719]
+                  - option "22-E-MA-T0-2-2-DCL-FB-2022(22-초등-수학군-수학-초등2-2학기-두클래스-형성 평가_기본-2022)" [ref=e21720]
+                  - option "22-E-MA-T0-2-1-DCL-FO-2022(22-초등-수학군-수학-초등2-1학기-두클래스-형성 평가_기초-2022)" [ref=e21721]
+                  - option "22-E-MA-T0-1-1-DCL-DG-2022(22-초등-수학군-수학-초등1-1학기-두클래스-진단 평가-2022)" [ref=e21722]
+                  - option "22-E-MA-T0-1-1-TCD-MN-2022(22-초등-수학군-수학-초등1-1학기-전자책 등-본책-2022)" [ref=e21723]
+              - button " 조회" [ref=e21662]
+                - StaticText ""
+                - StaticText "조회"
+            - LabelText
+              - StaticText "단원 코드*"
+            - generic
+              - combobox "3자 이상 입력하면 자동완성" [expanded=false, required, ref=e21664]
+              - button " 조회" [ref=e21665]
+                - StaticText ""
+                - StaticText "조회"
+            - StaticText "※ 학기(12자리) · 대단원(14자리) · 전체(20자리) 중 하나로 입력"
+            - LabelText
+              - StaticText "페이지 시작*"
+            - spinbutton "예: 24" [required, ref=e21658]
+            - LabelText
+              - StaticText "페이지 끝*"
+            - spinbutton "예: 25" [required, ref=e21659]
+            - LabelText
+              - StaticText "용도*"
+            - combobox [expanded=false, ref=e21660]: 용도 선택
+              - MenuListPopup
+                - option "용도 선택" [selected, ref=e21666]
+                - option "공통" [ref=e21667]
+                - option "교사용" [ref=e21668]
+            - LabelText
+              - StaticText "등록자"
+            - generic
+              - textbox [disabled, ref=e21663]: jaehyuk.myung
+                - StaticText "jaehyuk.myung"
+              - StaticText ""
+        - link "취소" [ref=e21644]
+        - button "등록 시작" [ref=e21645]

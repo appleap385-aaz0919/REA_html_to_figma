@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1887-definition-registration-cancel-retained",
+  "startedUtc": "2026-11-09T07:47:55.857922+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/registration-upload-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.141
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "alerts": [],
+        "dropzones": [
+          {
+            "acceptedCount": 1,
+            "acceptedFiles": ".zip",
+            "elementId": "hmlDropzone",
+            "files": [
+              {
+                "accepted": true,
+                "name": "qa-empty-20261109.zip",
+                "previewText": "qa-empty-20261109.zip\n22 b",
+                "size": 22,
+                "status": "queued",
+                "type": "application/x-zip-compressed"
+              }
+            ],
+            "maxFiles": 1,
+            "maxFilesize": 50
+          }
+        ],
+        "fileInputs": [
+          {
+            "accept": ".zip",
+            "classes": "dz-hidden-input",
+            "disabled": false,
+            "id": "",
+            "multiple": false
+          }
+        ],
+        "form": {
+          "action": "/item/difi/upload-url.donga",
+          "documentId": "",
+          "fields": [
+            {
+              "disabled": false,
+              "id": "",
+              "max": "",
+              "maxLength": -1,
+              "message": "",
+              "min": "",
+              "name": "examDocumentId",
+              "required": false,
+              "type": "hidden",
+              "valid": true,
+              "value": ""
+            },
+            {
+              "disabled": false,
+              "id": "",
+              "message": "목록에서 항목을 선택하세요.",
+              "name": "productId",
+              "optionCount": 55,
+              "required": true,
+              "type": "select-one",
+              "valid": false,
+              "value": ""
+            },
+            {
+              "disabled": false,
+              "id": "unitCodeInput",
+              "max": "",
+              "maxLength": 20,
+              "message": "",
+              "min": "",
+              "name": "unitCode",
+              "required": true,
+              "type": "text",
+              "valid": true,
+              "value": "12345678901234567890"
+            },
+            {
+              "disabled": false,
+              "id": "",
+              "max": "",
+              "maxLength": -1,
+              "message": "값은 1 이상이어야 합니다.",
+              "min": "1",
+              "name": "startPageNum",
+              "required": true,
+              "type": "number",
+              "valid": false,
+              "value": "0"
+            },
+            {
+              "disabled": false,
+              "id": "",
+              "max": "",
+              "maxLength": -1,
+              "message": "값은 1 이상이어야 합니다.",
+              "min": "1",
+              "name": "endPageNum",
+              "required": true,
+              "type": "number",
+              "valid": false,
+              "value": "0"
+            },
+            {
+              "disabled": false,
+              "id": "",
+              "message": "목록에서 항목을 선택하세요.",
+              "name": "serviceUsage",
+              "optionCount": 3,
+              "required": true,
+              "type": "select-one",
+              "valid": false,
+              "value": ""
+            },
+            {
+              "disabled": true,
+              "id": "",
+              "max": "",
+              "maxLength": -1,
+              "message": "",
+              "min": "",
+              "name": "",
+              "required": false,
+              "type": "text",
+              "valid": true,
+              "value": "jaehyuk.myung"
+            }
+          ],
+          "request": "/item/difi/upload-url.donga",
+          "submitDisabled": false
+        },
+        "modals": [],
+        "scroll": [
+          {
+            "clientHeight": 1071,
+            "scrollHeight": 1071,
+            "scrollTop": 0
+          }
+        ],
+        "uploadEvents": [
+          {
+            "event": "addedfile",
+            "name": "qa-invalid-extension-20261109.txt",
+            "size": 102,
+            "status": "added"
+          },
+          {
+            "accepted": false,
+            "event": "removedfile",
+            "name": "qa-invalid-extension-20261109.txt",
+            "size": 102,
+            "status": "error"
+          },
+          {
+            "accepted": false,
+            "event": "error",
+            "message": ".ZIP 파일만 업로드할 수 있습니다.",
+            "name": "qa-invalid-extension-20261109.txt",
+            "size": 102,
+            "status": "error"
+          },
+          {
+            "event": "addedfile",
+            "name": "qa-empty-20261109.zip",
+            "size": 22,
+            "status": "added"
+          },
+          {
+            "event": "addedfile",
+            "name": "qa-second-empty-20261109.zip",
+            "size": 22,
+            "status": "added"
+          },
+          {
+            "accepted": false,
+            "event": "removedfile",
+            "name": "qa-second-empty-20261109.zip",
+            "size": 22,
+            "status": "error"
+          },
+          {
+            "accepted": false,
+            "event": "error",
+            "message": "You cannot upload any more files.",
+            "name": "qa-second-empty-20261109.zip",
+            "size": 22,
+            "status": "error"
+          },
+          {
+            "accepted": false,
+            "event": "maxfilesexceeded",
+            "name": "qa-second-empty-20261109.zip",
+            "size": 22,
+            "status": "error"
+          },
+          {
+            "event": "addedfile",
+            "name": "qa-oversize-20261109.zip",
+            "size": 52428801,
+            "status": "added"
+          },
+          {
+            "accepted": false,
+            "event": "removedfile",
+            "name": "qa-oversize-20261109.zip",
+            "size": 52428801,
+            "status": "error"
+          },
+          {
+            "accepted": false,
+            "event": "error",
+            "message": "파일이 너무 큽니다(50MB). 최대 50MB.",
+            "name": "qa-oversize-20261109.zip",
+            "size": 52428801,
+            "status": "error"
+          }
+        ],
+        "url": "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.265
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e20325": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e20326": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e20327": {
+          "name": "ZIP 신규 등록",
+          "role": "heading"
+        },
+        "e20328": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e20329": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e20330": {
+          "name": "등록 시작",
+          "role": "button"
+        },
+        "e20331": {
+          "name": "ZIP 파일 업로드*",
+          "role": "heading"
+        },
+        "e20332": {
+          "name": "메타정보 입력 (파싱 성공 시 생성 문항에 적용)",
+          "role": "heading"
+        },
+        "e20333": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e20334": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e20335": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e20336": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e20337": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e20338": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e20339": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e20340": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e20341": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e20343": {
+          "name": "예: 24",
+          "role": "spinbutton"
+        },
+        "e20344": {
+          "name": "예: 25",
+          "role": "spinbutton"
+        },
+        "e20345": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e20346": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e20347": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e20348": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e20349": {
+          "name": "3자 이상 입력하면 자동완성",
+          "role": "combobox"
+        },
+        "e20350": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e20351": {
+          "name": "용도 선택",
+          "role": "option"
+        },
+        "e20352": {
+          "name": "공통",
+          "role": "option"
+        },
+        "e20353": {
+          "name": "교사용",
+          "role": "option"
+        },
+        "e20354": {
+          "name": "출처 선택",
+          "role": "option"
+        },
+        "e20355": {
+          "name": "22-M-MA-T0-1-0-DCL-MA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025)",
+          "role": "option"
+        },
+        "e20356": {
+          "name": "22-H-MA-C1-1-0-DCL-KI-2025(22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025)",
+          "role": "option"
+        },
+        "e20357": {
+          "name": "22-E-MA-T0-5-1-DCL-FB-2026(22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026)",
+          "role": "option"
+        },
+        "e20358": {
+          "name": "22-E-MA-T0-4-2-DCL-FB-2025(22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025)",
+          "role": "option"
+        },
+        "e20359": {
+          "name": "22-E-MA-T0-4-1-DCL-FB-2005(22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005)",
+          "role": "option"
+        },
+        "e20360": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025(22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025)",
+          "role": "option"
+        },
+        "e20361": {
+          "name": "22-E-MA-T0-3-1-DCL-FB-2025(22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025)",
+          "role": "option"
+        },
+        "e20362": {
+          "name": "22-M-MA-T0-1-0-DCL-DA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025)",
+          "role": "option"
+        },
+        "e20363": {
+          "name": "22-H-MA-B2-2-1-DCL-FA-2025(22-고등-수학군-기본수학2-고등2-1학기-두클래스-기말고사 대비-2025)",
+          "role": "option"
+        },
+        "e20364": {
+          "name": "22-H-MA-B1-1-2-DCL-MA-2025(22-고등-수학군-기본수학1-고등1-2학기-두클래스-중간고사 대비-2025)",
+          "role": "option"
+        },
+        "e20365": {
+          "name": "22-H-MA-U0-3-2-DCL-SV-2025(22-고등-수학군-수학과 문화-고등3-2학기-두클래스-소단원 평가_발전-2025)",
+          "role": "option"
+        },
+        "e20366": {
+          "name": "22-H-MA-P0-3-1-DCL-SF-2024(22-고등-수학군-직무수학-고등3-1학기-두클래스-소단원 평가_기초-2024)",
+          "role": "option"
+        },
+        "e20367": {
+          "name": "22-H-MA-C2-4-2-ABG-MN-2023(22-고등-수학군-공통수학2-고등 공통-2학기-절대등급-본책-2023)",
+          "role": "option"
+        },
+        "e20368": {
+          "name": "22-H-MA-C1-4-1-NLS-MN-2023(22-고등-수학군-공통수학1-고등 공통-1학기-날선유형스타트-본책-2023)",
+          "role": "option"
+        },
+        "e20369": {
+          "name": "22-H-MA-G0-3-2-SMB-MN-2022(22-고등-수학군-기하-고등3-2학기-수매씽-본책-2022)",
+          "role": "option"
+        },
+        "e20370": {
+          "name": "22-H-MA-S0-2-1-SMB-MN-2022(22-고등-수학군-확률과통계-고등2-1학기-수매씽-본책-2022)",
+          "role": "option"
+        },
+        "e20371": {
+          "name": "22-H-MA-D1-2-2-ABG-MN-2025(22-고등-수학군-미적분1-고등2-2학기-절대등급-본책-2025)",
+          "role": "option"
+        },
+        "e20372": {
+          "name": "22-H-MA-A0-1-1-SMB-MN-2025(22-고등-수학군-대수-고등1-1학기-수매씽-본책-2025)",
+          "role": "option"
+        },
+        "e20373": {
+          "name": "22-H-MA-T2-1-2-SMB-MN-2025(22-고등-수학군-수학2-고등1-2학기-수매씽-본책-2025)",
+          "role": "option"
+        },
+        "e20374": {
+          "name": "22-H-MA-T1-1-1-NLS-MN-2025(22-고등-수학군-수학1-고등1-1학기-날선유형스타트-본책-2025)",
+          "role": "option"
+        },
+        "e20375": {
+          "name": "22-H-MA-G0-3-1-NLS-MN-2024(22-고등-수학군-기하-고등3-1학기-날선유형스타트-본책-2024)",
+          "role": "option"
+        },
+        "e20376": {
+          "name": "22-H-MA-S0-3-2-DCL-TW-2024(22-고등-수학군-확률과통계-고등3-2학기-두클래스-쌍둥이 문제-2024)",
+          "role": "option"
+        },
+        "e20377": {
+          "name": "22-H-MA-D2-3-1-DCL-KI-2024(22-고등-수학군-미적분2-고등3-1학기-두클래스-기출문제 자료집-2024)",
+          "role": "option"
+        },
+        "e20378": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024(22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024)",
+          "role": "option"
+        },
+        "e20379": {
+          "name": "22-H-MA-A0-2-1-DCL-FA-2023(22-고등-수학군-대수-고등2-1학기-두클래스-기말고사 대비-2023)",
+          "role": "option"
+        },
+        "e20380": {
+          "name": "22-H-MA-T2-2-2-DCL-MA-2023(22-고등-수학군-수학2-고등2-2학기-두클래스-중간고사 대비-2023)",
+          "role": "option"
+        },
+        "e20381": {
+          "name": "22-H-MA-T1-2-1-DCL-ES-2023(22-고등-수학군-수학1-고등2-1학기-두클래스-서술형 평가-2023)",
+          "role": "option"
+        },
+        "e20382": {
+          "name": "22-H-MA-B2-1-2-DCL-DA-2023(22-고등-수학군-기본수학2-고등1-2학기-두클래스-대단원 평가-2023)",
+          "role": "option"
+        },
+        "e20383": {
+          "name": "22-H-MA-B1-1-1-DCL-SV-2022(22-고등-수학군-기본수학1-고등1-1학기-두클래스-소단원 평가_발전-2022)",
+          "role": "option"
+        },
+        "e20384": {
+          "name": "22-H-MA-C2-4-0-DCL-SB-2022(22-고등-수학군-공통수학2-고등 공통-공통학기-두클래스-소단원 평가_기본-2022)",
+          "role": "option"
+        },
+        "e20385": {
+          "name": "22-H-MA-C1-4-0-DCL-SF-2022(22-고등-수학군-공통수학1-고등 공통-공통학기-두클래스-소단원 평가_기초-2022)",
+          "role": "option"
+        },
+        "e20386": {
+          "name": "22-M-MA-T0-3-1-DCL-DA-2022(22-중학-수학군-수학-중학3-1학기-두클래스-수준별 문제집_대단원 평가-2022)",
+          "role": "option"
+        },
+        "e20387": {
+          "name": "22-M-MA-T0-2-2-DCL-SB-2025(22-중학-수학군-수학-중학2-2학기-두클래스-수준별 문제집_소단원 평가_기본-2025)",
+          "role": "option"
+        },
+        "e20388": {
+          "name": "22-M-MA-T0-1-2-DCL-SF-2025(22-중학-수학군-수학-중학1-2학기-두클래스-수준별 문제집_소단원 평가_기초-2025)",
+          "role": "option"
+        },
+        "e20389": {
+          "name": "22-M-MA-T0-3-2-DCL-TW-2025(22-중학-수학군-수학-중학3-2학기-두클래스-해결해요 추가_쌍둥이 문제-2025)",
+          "role": "option"
+        },
+        "e20390": {
+          "name": "22-M-MA-T0-3-1-DCL-PR-2024(22-중학-수학군-수학-중학3-1학기-두클래스-준비 학습지-2024)",
+          "role": "option"
+        },
+        "e20391": {
+          "name": "22-M-MA-T0-3-1-EXG-SP-2024(22-중학-수학군-수학-중학3-1학기-특급기출-부록-2024)",
+          "role": "option"
+        },
+        "e20392": {
+          "name": "22-M-MA-T0-2-1-EXG-MN-2024(22-중학-수학군-수학-중학2-1학기-특급기출-본책-2024)",
+          "role": "option"
+        },
+        "e20393": {
+          "name": "22-M-MA-T0-2-2-SMK-WB-2023(22-중학-수학군-수학-중학2-2학기-수매씽 개념-워크북-2023)",
+          "role": "option"
+        },
+        "e20394": {
+          "name": "22-M-MA-T0-2-1-SMK-KN-2023(22-중학-수학군-수학-중학2-1학기-수매씽 개념-개념북-2023)",
+          "role": "option"
+        },
+        "e20395": {
+          "name": "22-M-MA-T0-1-1-ABG-MN-2023(22-중학-수학군-수학-중학1-1학기-절대등급-본책-2023)",
+          "role": "option"
+        },
+        "e20396": {
+          "name": "22-M-MA-T0-1-2-SMT-WB-2022(22-중학-수학군-수학-중학1-2학기-수매씽 유형-워크북-2022)",
+          "role": "option"
+        },
+        "e20397": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2022(22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022)",
+          "role": "option"
+        },
+        "e20398": {
+          "name": "22-E-MA-T0-6-2-DCL-CA-2025(22-초등-수학군-수학-초등6-2학기-두클래스-연산 학습지-2025)",
+          "role": "option"
+        },
+        "e20399": {
+          "name": "22-E-MA-T0-6-1-DCL-FA-2025(22-초등-수학군-수학-초등6-1학기-두클래스-기말 평가-2025)",
+          "role": "option"
+        },
+        "e20400": {
+          "name": "22-E-MA-T0-5-1-DCL-ES-2024(22-초등-수학군-수학-초등5-1학기-두클래스-서술형 평가-2024)",
+          "role": "option"
+        },
+        "e20401": {
+          "name": "22-E-MA-T0-4-2-DCL-PA-2024(22-초등-수학군-수학-초등4-2학기-두클래스-수행 평가-2024)",
+          "role": "option"
+        },
+        "e20402": {
+          "name": "22-E-MA-T0-4-1-DCL-DH-2023(22-초등-수학군-수학-초등4-1학기-두클래스-단원 평가_심화-2023)",
+          "role": "option"
+        },
+        "e20403": {
+          "name": "22-E-MA-T0-3-2-DCL-DC-2023(22-초등-수학군-수학-초등3-2학기-두클래스-단원 평가_보충-2023)",
+          "role": "option"
+        },
+        "e20404": {
+          "name": "22-E-MA-T0-3-1-DCL-DA-2023(22-초등-수학군-수학-초등3-1학기-두클래스-단원 평가_기본-2023)",
+          "role": "option"
+        },
+        "e20405": {
+          "name": "22-E-MA-T0-2-2-DCL-FB-2022(22-초등-수학군-수학-초등2-2학기-두클래스-형성 평가_기본-2022)",
+          "role": "option"
+        },
+        "e20406": {
+          "name": "22-E-MA-T0-2-1-DCL-FO-2022(22-초등-수학군-수학-초등2-1학기-두클래스-형성 평가_기초-2022)",
+          "role": "option"
+        },
+        "e20407": {
+          "name": "22-E-MA-T0-1-1-DCL-DG-2022(22-초등-수학군-수학-초등1-1학기-두클래스-진단 평가-2022)",
+          "role": "option"
+        },
+        "e20408": {
+          "name": "22-E-MA-T0-1-1-TCD-MN-2022(22-초등-수학군-수학-초등1-1학기-전자책 등-본책-2022)",
+          "role": "option"
+        },
+        "e20411": {
+          "name": "파일 제거",
+          "role": "link"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e20325]\n      - link \"문제은행 마스터 CMS\" [ref=e20326]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e20333]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e20334]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e20335]\n          - link \"HML 문항 등록\" [ref=e20336]\n          - link \"디피니션 문항 등록\" [ref=e20337]\n          - link \"쌍둥이 그룹 관리\" [ref=e20338]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e20339]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e20340]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e20341]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e20328]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"신규 등록\"\n      - heading \"ZIP 신규 등록\" [level=2, ref=e20327]\n      - form\n        - generic\n          - heading \"ZIP 파일 업로드*\" [level=3, ref=e20331]\n            - StaticText \"ZIP 파일 업로드*\"\n          - generic\n            - StaticText \"\"\n            - StaticText \"qa-empty-20261109.zip\"\n            - generic\n              - strong\n                - StaticText \"22\"\n              - StaticText \" b\"\n            - link \"파일 제거\" [ref=e20411]\n              - StaticText \"\"\n        - generic\n          - heading \"메타정보 입력 (파싱 성공 시 생성 문항에 적용)\" [level=3, ref=e20332]\n          - generic\n            - LabelText\n              - StaticText \"출처*\"\n            - generic\n              - combobox [expanded=false, ref=e20346]: 출처 선택\n                - MenuListPopup\n                  - option \"출처 선택\" [selected, ref=e20354]\n                  - option \"22-M-MA-T0-1-0-DCL-MA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025)\" [ref=e20355]\n                  - option \"22-H-MA-C1-1-0-DCL-KI-2025(22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025)\" [ref=e20356]\n                  - option \"22-E-MA-T0-5-1-DCL-FB-2026(22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026)\" [ref=e20357]\n                  - option \"22-E-MA-T0-4-2-DCL-FB-2025(22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025)\" [ref=e20358]\n                  - option \"22-E-MA-T0-4-1-DCL-FB-2005(22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005)\" [ref=e20359]\n                  - option \"22-E-MA-T0-3-2-DCL-FB-2025(22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025)\" [ref=e20360]\n                  - option \"22-E-MA-T0-3-1-DCL-FB-2025(22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025)\" [ref=e20361]\n                  - option \"22-M-MA-T0-1-0-DCL-DA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025)\" [ref=e20362]\n                  - option \"22-H-MA-B2-2-1-DCL-FA-2025(22-고등-수학군-기본수학2-고등2-1학기-두클래스-기말고사 대비-2025)\" [ref=e20363]\n                  - option \"22-H-MA-B1-1-2-DCL-MA-2025(22-고등-수학군-기본수학1-고등1-2학기-두클래스-중간고사 대비-2025)\" [ref=e20364]\n                  - option \"22-H-MA-U0-3-2-DCL-SV-2025(22-고등-수학군-수학과 문화-고등3-2학기-두클래스-소단원 평가_발전-2025)\" [ref=e20365]\n                  - option \"22-H-MA-P0-3-1-DCL-SF-2024(22-고등-수학군-직무수학-고등3-1학기-두클래스-소단원 평가_기초-2024)\" [ref=e20366]\n                  - option \"22-H-MA-C2-4-2-ABG-MN-2023(22-고등-수학군-공통수학2-고등 공통-2학기-절대등급-본책-2023)\" [ref=e20367]\n                  - option \"22-H-MA-C1-4-1-NLS-MN-2023(22-고등-수학군-공통수학1-고등 공통-1학기-날선유형스타트-본책-2023)\" [ref=e20368]\n                  - option \"22-H-MA-G0-3-2-SMB-MN-2022(22-고등-수학군-기하-고등3-2학기-수매씽-본책-2022)\" [ref=e20369]\n                  - option \"22-H-MA-S0-2-1-SMB-MN-2022(22-고등-수학군-확률과통계-고등2-1학기-수매씽-본책-2022)\" [ref=e20370]\n                  - option \"22-H-MA-D1-2-2-ABG-MN-2025(22-고등-수학군-미적분1-고등2-2학기-절대등급-본책-2025)\" [ref=e20371]\n                  - option \"22-H-MA-A0-1-1-SMB-MN-2025(22-고등-수학군-대수-고등1-1학기-수매씽-본책-2025)\" [ref=e20372]\n                  - option \"22-H-MA-T2-1-2-SMB-MN-2025(22-고등-수학군-수학2-고등1-2학기-수매씽-본책-2025)\" [ref=e20373]\n                  - option \"22-H-MA-T1-1-1-NLS-MN-2025(22-고등-수학군-수학1-고등1-1학기-날선유형스타트-본책-2025)\" [ref=e20374]\n                  - option \"22-H-MA-G0-3-1-NLS-MN-2024(22-고등-수학군-기하-고등3-1학기-날선유형스타트-본책-2024)\" [ref=e20375]\n                  - option \"22-H-MA-S0-3-2-DCL-TW-2024(22-고등-수학군-확률과통계-고등3-2학기-두클래스-쌍둥이 문제-2024)\" [ref=e20376]\n                  - option \"22-H-MA-D2-3-1-DCL-KI-2024(22-고등-수학군-미적분2-고등3-1학기-두클래스-기출문제 자료집-2024)\" [ref=e20377]\n                  - option \"22-H-MA-D1-2-1-DCL-MS-2024(22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024)\" [ref=e20378]\n                  - option \"22-H-MA-A0-2-1-DCL-FA-2023(22-고등-수학군-대수-고등2-1학기-두클래스-기말고사 대비-2023)\" [ref=e20379]\n                  - option \"22-H-MA-T2-2-2-DCL-MA-2023(22-고등-수학군-수학2-고등2-2학기-두클래스-중간고사 대비-2023)\" [ref=e20380]\n                  - option \"22-H-MA-T1-2-1-DCL-ES-2023(22-고등-수학군-수학1-고등2-1학기-두클래스-서술형 평가-2023)\" [ref=e20381]\n                  - option \"22-H-MA-B2-1-2-DCL-DA-2023(22-고등-수학군-기본수학2-고등1-2학기-두클래스-대단원 평가-2023)\" [ref=e20382]\n                  - option \"22-H-MA-B1-1-1-DCL-SV-2022(22-고등-수학군-기본수학1-고등1-1학기-두클래스-소단원 평가_발전-2022)\" [ref=e20383]\n                  - option \"22-H-MA-C2-4-0-DCL-SB-2022(22-고등-수학군-공통수학2-고등 공통-공통학기-두클래스-소단원 평가_기본-2022)\" [ref=e20384]\n                  - option \"22-H-MA-C1-4-0-DCL-SF-2022(22-고등-수학군-공통수학1-고등 공통-공통학기-두클래스-소단원 평가_기초-2022)\" [ref=e20385]\n                  - option \"22-M-MA-T0-3-1-DCL-DA-2022(22-중학-수학군-수학-중학3-1학기-두클래스-수준별 문제집_대단원 평가-2022)\" [ref=e20386]\n                  - option \"22-M-MA-T0-2-2-DCL-SB-2025(22-중학-수학군-수학-중학2-2학기-두클래스-수준별 문제집_소단원 평가_기본-2025)\" [ref=e20387]\n                  - option \"22-M-MA-T0-1-2-DCL-SF-2025(22-중학-수학군-수학-중학1-2학기-두클래스-수준별 문제집_소단원 평가_기초-2025)\" [ref=e20388]\n                  - option \"22-M-MA-T0-3-2-DCL-TW-2025(22-중학-수학군-수학-중학3-2학기-두클래스-해결해요 추가_쌍둥이 문제-2025)\" [ref=e20389]\n                  - option \"22-M-MA-T0-3-1-DCL-PR-2024(22-중학-수학군-수학-중학3-1학기-두클래스-준비 학습지-2024)\" [ref=e20390]\n                  - option \"22-M-MA-T0-3-1-EXG-SP-2024(22-중학-수학군-수학-중학3-1학기-특급기출-부록-2024)\" [ref=e20391]\n                  - option \"22-M-MA-T0-2-1-EXG-MN-2024(22-중학-수학군-수학-중학2-1학기-특급기출-본책-2024)\" [ref=e20392]\n                  - option \"22-M-MA-T0-2-2-SMK-WB-2023(22-중학-수학군-수학-중학2-2학기-수매씽 개념-워크북-2023)\" [ref=e20393]\n                  - option \"22-M-MA-T0-2-1-SMK-KN-2023(22-중학-수학군-수학-중학2-1학기-수매씽 개념-개념북-2023)\" [ref=e20394]\n                  - option \"22-M-MA-T0-1-1-ABG-MN-2023(22-중학-수학군-수학-중학1-1학기-절대등급-본책-2023)\" [ref=e20395]\n                  - option \"22-M-MA-T0-1-2-SMT-WB-2022(22-중학-수학군-수학-중학1-2학기-수매씽 유형-워크북-2022)\" [ref=e20396]\n                  - option \"22-M-MA-T0-1-1-SMT-TP-2022(22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022)\" [ref=e20397]\n                  - option \"22-E-MA-T0-6-2-DCL-CA-2025(22-초등-수학군-수학-초등6-2학기-두클래스-연산 학습지-2025)\" [ref=e20398]\n                  - option \"22-E-MA-T0-6-1-DCL-FA-2025(22-초등-수학군-수학-초등6-1학기-두클래스-기말 평가-2025)\" [ref=e20399]\n                  - option \"22-E-MA-T0-5-1-DCL-ES-2024(22-초등-수학군-수학-초등5-1학기-두클래스-서술형 평가-2024)\" [ref=e20400]\n                  - option \"22-E-MA-T0-4-2-DCL-PA-2024(22-초등-수학군-수학-초등4-2학기-두클래스-수행 평가-2024)\" [ref=e20401]\n                  - option \"22-E-MA-T0-4-1-DCL-DH-2023(22-초등-수학군-수학-초등4-1학기-두클래스-단원 평가_심화-2023)\" [ref=e20402]\n                  - option \"22-E-MA-T0-3-2-DCL-DC-2023(22-초등-수학군-수학-초등3-2학기-두클래스-단원 평가_보충-2023)\" [ref=e20403]\n                  - option \"22-E-MA-T0-3-1-DCL-DA-2023(22-초등-수학군-수학-초등3-1학기-두클래스-단원 평가_기본-2023)\" [ref=e20404]\n                  - option \"22-E-MA-T0-2-2-DCL-FB-2022(22-초등-수학군-수학-초등2-2학기-두클래스-형성 평가_기본-2022)\" [ref=e20405]\n                  - option \"22-E-MA-T0-2-1-DCL-FO-2022(22-초등-수학군-수학-초등2-1학기-두클래스-형성 평가_기초-2022)\" [ref=e20406]\n                  - option \"22-E-MA-T0-1-1-DCL-DG-2022(22-초등-수학군-수학-초등1-1학기-두클래스-진단 평가-2022)\" [ref=e20407]\n                  - option \"22-E-MA-T0-1-1-TCD-MN-2022(22-초등-수학군-수학-초등1-1학기-전자책 등-본책-2022)\" [ref=e20408]\n              - button \" 조회\" [ref=e20347]\n                - StaticText \"\"\n                - StaticText \"조회\"\n            - LabelText\n              - StaticText \"단원 코드*\"\n            - generic\n              - combobox \"3자 이상 입력하면 자동완성\" [expanded=false, required, ref=e20349]: 12345678901234567890\n                - StaticText \"12345678901234567890\"\n              - button \" 조회\" [ref=e20350]\n                - StaticText \"\"\n                - StaticText \"조회\"\n            - StaticText \"※ 학기(12자리) · 대단원(14자리) · 전체(20자리) 중 하나로 입력\"\n            - LabelText\n              - StaticText \"페이지 시작*\"\n            - spinbutton \"예: 24\" [required, ref=e20343]: 0\n              - StaticText \"0\"\n            - LabelText\n              - StaticText \"페이지 끝*\"\n            - spinbutton \"예: 25\" [required, ref=e20344]: 0\n              - StaticText \"0\"\n            - LabelText\n              - StaticText \"용도*\"\n            - combobox [expanded=false, ref=e20345]: 용도 선택\n              - MenuListPopup\n                - option \"용도 선택\" [selected, ref=e20351]\n                - option \"공통\" [ref=e20352]\n                - option \"교사용\" [ref=e20353]\n            - LabelText\n              - StaticText \"등록자\"\n            - generic\n              - textbox [disabled, ref=e20348]: jaehyuk.myung\n                - StaticText \"jaehyuk.myung\"\n              - StaticText \"\"\n        - link \"취소\" [ref=e20329]\n        - button \"등록 시작\" [ref=e20330]"
+    },
+    "error": null,
+    "localSeconds": 0.229
+  }
+}

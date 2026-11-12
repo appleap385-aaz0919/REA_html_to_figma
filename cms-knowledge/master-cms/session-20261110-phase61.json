@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "copied_set_hml_file_isolation_baseline_and_popup_ready",
+  "evidenceRange": [
+    2923,
+    2935
+  ],
+  "lastEvidence": "2935-copy-hml-popup-initial-ui-state",
+  "summary": "COPY세트공유HML격리실험의원본/COPY/control모델·참조·9개draft없음을새로읽었다. 원본과복사본은동일P.hml/PNG를참조하며두실파일을인증정보없는GET으로보존하고SHA기준을확보했다. 정상복사본9358/9078의HML탭에서편집기버튼을눌러새popup t61을열었다. 현재기본문제파일이열렸고controlReady=true/PageCount1/수정false다. 실제4탭중해석은파일없음으로disabled다. 아직HML텍스트편집/편집기저장/CMS저장은실행하지않았다. Master업무78회유지.",
+  "observations": [
+    {
+      "evidence": [
+        2923,
+        2924,
+        2925,
+        2926
+      ],
+      "result": "원본4Y/detail9052/9053/9054/9051, COPY4R/detail9078~81, control246R/8877과전체9개draft없음을확인했다.복사본공유HML은원본/passage/208/2089241/1966/hml/2089241_P.hml과동일하고공유PNG도원본1966/image/P.png다."
+    },
+    {
+      "evidence": [
+        2924,
+        2926
+      ],
+      "result": "실제로참조하는HML24490B/SHA5b887826732a8b792320e594268d7f2530354c55a1baca5f8670818b259f6cad와PNG5415B/SHA7e77ba42ab137a00dba6dacbc84bf6bf6b00b9a3b8be41c7f667b00da36afa75를보존했다. HML XML CHAR에는QA-SHARED-HML표식과단수본문이있다. 신규AI의복수형본문과완전같은문장이라는추론은하지않는다."
+    },
+    {
+      "evidence": [
+        2927,
+        2928,
+        2929,
+        2930,
+        2931
+      ],
+      "result": "정상COPY9358/9078수정의HML탭에진입했다.기존COPY HTML표식/기존P파일/미저장결과0을검증했다.2930은부모상태관측이라는라벨이지만실제명령은현재선언된편집기페이지와webhwp glue15,067자읽기다.관측한e082해시자산은기존보존소스와정확히같다."
+    },
+    {
+      "evidence": [
+        2932,
+        2933,
+        2934,
+        2935
+      ],
+      "result": "기존개발CMS HML편집창이없음을확인한뒤정상버튼으로popup1개를열었다. t61/target1345045935A453460BBF0355AA16063B는9358/9078이며opener는본래t21이다. 현재문제파일2089242_Q.hml이열려controlReady/PageCount1/IsModifiedfalse다.지문/문제/해답은활성가능하고지문해석은data-webhwp-empty=true/disabled다."
+    }
+  ],
+  "artifacts": [
+    "copied-set-shared-hml-isolation-intent-20261110.json",
+    "copied-set-hml-binary-baseline-20261110.json",
+    "fixtures/copied-set-hml-isolation-20261110/before-original-shared.hml",
+    "fixtures/copied-set-hml-isolation-20261110/before-original-shared.png",
+    "copied-set-hml-popup-before-20261110.json",
+    "copied-set-hml-popup-current-20261110.json",
+    "sources/hml-glue-current-copy-isolation-20261110.manifest.json"
+  ],
+  "persistentChanges": {
+    "confirmedMasterOperations": 78,
+    "newMasterChangesInThisPhase": 0,
+    "popupOpened": true,
+    "hmlEdited": false,
+    "hmlEditorSaved": false,
+    "cmsSaved": false,
+    "serviceDeployment": false
+  },
+  "remaining": [
+    "popup t61의지문탭을정상선택하고현재텍스트/파일/수정false를확인한후QA-COPY-SHARED-HML표식을1회추가한다.",
+    "편집기저장후부모의pending파일과서버의원본/COPY참조·원본HML/PNG바이트를CMS저장전에대조한다.",
+    "정상CMSTempSave와선택draft재진입/FullApply를각1회수행해선택자식draft와COPY4형제공유반영범위를확인한다.",
+    "원본4Y와기존질문/해답/OMR/HTML을각단계에서보존했는지검증하고popup을정리한다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078",
+    "tab": "t61 own HML popup; default question slot loaded, unmodified",
+    "targetId": "1345045935A453460BBF0355AA16063B",
+    "parentTab": "t21",
+    "parentTargetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "parentUrl": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089358",
+    "modal": null,
+    "popover": null,
+    "unsavedState": null,
+    "pendingServerOperation": null,
+    "pendingVerification": null
+  },
+  "evidenceLimits": [
+    "The new HML copy-file isolation outcome is not yet tested.",
+    "The translation tab is disabled without a file; actual translation-file editing remains unverified.",
+    "No Service deployment; no100percent completion claim."
+  ]
+}

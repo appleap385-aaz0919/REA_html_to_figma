@@ -1,0 +1,8 @@
+(async()=>{
+ const q=new URLSearchParams(location.search);if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/item/webhwp/editor.donga'||q.get('itemId')!=='2089239'||q.get('itemDetailId')!=='2089019'||window.__qaExplain239EditorSaveAttempted||!window.__qaExplain239NoDraftObserved||document.querySelector('.modal.show')||!document.querySelector('[data-slot=explain].active'))throw Error('Own unsubmitted explanation popup required');
+ const c=document.querySelector('#webhwpFrame').contentWindow.HwpCtrl,p=window.opener,o=p?.document.querySelector('[data-editor-url]'),b=document.querySelector('[data-webhwp-action=save]');
+ if(!c.IsModified||c.PageCount!==1||b.matches(':disabled')||new URL(p.location.href).searchParams.get('itemId')!=='2089239'||o?.dataset.itemDetailId!=='2089019'||!p.__qaExplain239ParentBaseline||[...p.document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Exact modified explanation and unchanged parent required');
+ const current=await new Promise((resolve,reject)=>{let done=false;const finish=v=>{if(done)return;done=true;clearTimeout(timer);resolve(typeof v==='string'?v:typeof v?.data==='string'?v.data:null);};const timer=setTimeout(()=>reject(Error('Text callback timed out; no Save sent')),7000);const v=c.GetTextFile('TEXT','',finish);if(typeof v==='string'&&v)finish(v);});
+ if(current!=='[QA-EXPLANATION-HML-20261110] '+window.__qaExplain239BeforeText||current.split('[QA-EXPLANATION-HML-20261110]').length!==2)throw Error('Exact single prefix and preserved text required');
+ window.__qaExplain239EditorSaveAttempted=true;b.click();return {editorSaveClickedOnce:true,itemId:2089239,itemDetailId:2089019,slot:'explain',verifiedTextCharacters:current.length,cmsSaveSubmitted:false};
+})()

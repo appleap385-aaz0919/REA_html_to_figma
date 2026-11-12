@@ -1,0 +1,156 @@
+[
+  {
+    "screen": "REV_HOME_01",
+    "key": "01",
+    "anchor": {
+      "x": 836,
+      "y": 164,
+      "w": 372,
+      "h": 24
+    },
+    "reason": "기존 (900,220)은 환영 카드에서 안내 문구 아래의 빈 영역이다. home.png를 직접 확인하여 실제 접속 완료 제목이 표시된 영역으로 옮긴다. 이 제목은 home.json controls에는 수집되지 않았다."
+  },
+  {
+    "screen": "REV_ITM_01",
+    "key": "01",
+    "anchor": {
+      "x": 281,
+      "y": 195,
+      "w": 100,
+      "h": 24
+    },
+    "reason": "기존 (300,170)은 브레드크럼 위치이다. 직접 확인한 128-all-items-current.png의 실제 전체 문항 제목 영역으로 옮긴다. 이 화면은 브라우저 상단이 포함된 1826×1226 원본 PNG 좌표이다."
+  },
+  {
+    "screen": "REV_ITM_01",
+    "key": "02",
+    "anchor": {
+      "x": 301,
+      "y": 257,
+      "w": 104,
+      "h": 32
+    },
+    "reason": "기존 (300,210)은 전체 문항 제목 위치로 검색 조건을 가리키지 않는다. 128-all-items-current.png에서 실제 교육과정 22 선택 드롭다운을 직접 확인했다. 원본 PNG 좌표이다."
+  },
+  {
+    "screen": "REV_ITM_01",
+    "key": "03",
+    "anchor": {
+      "x": 661,
+      "y": 494,
+      "w": 130,
+      "h": 32
+    },
+    "reason": "기존 (300,250)은 왼쪽 단원 패널의 빈 영역이다. 128-all-items-current.png에서 실제 표시 개수 선택인 10개씩 보기 드롭다운을 직접 확인했다. 원본 PNG 좌표이다."
+  },
+  {
+    "screen": "REV_ITM_04",
+    "key": "02",
+    "anchor": {
+      "x": 1501.15625,
+      "y": 231.140625,
+      "w": 62,
+      "h": 40
+    },
+    "reason": "기존 (1049,465)은 해답 제목으로 반영 대기·취소 설명과 다르다. 실제 취소 버튼에 연결한다. 근거: design-specs/revision-captures/item-hml.json의 취소 controls bbox."
+  },
+  {
+    "screen": "REV_LAB_02",
+    "key": "01",
+    "anchor": {
+      "x": 606.5,
+      "y": 220,
+      "w": 828,
+      "h": 28
+    },
+    "reason": "기존 (606,200)은 첫 데모 제목 위의 여백이다. 하이브리드 에디터 영역의 실제 제목으로 옮긴다. 근거: design-specs/revision-captures/lab-math.json의 1. 하이브리드 에디터 (텍스트 + 수식) controls bbox."
+  },
+  {
+    "screen": "REV_LAB_02",
+    "key": "02",
+    "anchor": {
+      "x": 732.890625,
+      "y": 761.125,
+      "w": 280,
+      "h": 27.140625
+    },
+    "reason": "기존 (606,720)은 단독 답안 섹션 제목과 설명 사이이며 입력 필드를 가리키지 않는다. 빈 값·placeholder 확인에 쓰는 실제 입력 필드로 옮긴다. 근거: design-specs/revision-captures/lab-math.json의 answerPlaceholder controls bbox."
+  },
+  {
+    "screen": "REV_LAB_02",
+    "key": "REV_LAB_MATRIX",
+    "anchor": {
+      "x": 548,
+      "y": 688,
+      "w": 20,
+      "h": 20
+    },
+    "reason": "이 좌표는 기본 lab-math.png가 아니라 cms-knowledge/master-cms/evidence/3402-lab-math-backdrop-point-observe.png의 원본 1810×1075 좌표이다. 열린 수식입력기 키보드의 다섯째 행 세 번째 행렬 버튼 내부를 가리킨다. 기본 화면의 Σ 진입점과 구분하여 REV_LAB_MATH 팝업 내부 번호에만 적용해야 한다. 기본 화면 앵커로 직접 적용하면 안 된다."
+  },
+  {
+    "screen": "REV_LAB_03",
+    "key": "01",
+    "anchor": {
+      "x": 272,
+      "y": 176,
+      "w": 94.21875,
+      "h": 32
+    },
+    "reason": "기존 (293,160)은 제목 아래 여백이다. 실제 전체 열기 버튼으로 옮긴다. 근거: design-specs/revision-captures/lab-omr.json의 전체 열기 controls bbox."
+  },
+  {
+    "screen": "REV_LAB_03",
+    "key": "02",
+    "anchor": {
+      "x": 1679,
+      "y": 176,
+      "w": 90,
+      "h": 32
+    },
+    "reason": "기존 (1600,160)은 보기 방식 컨트롤 위의 빈 영역이다. 실제 보기 방식 중 비활성화 라벨로 옮긴다. 세 라디오 input의 수집 좌표가 중복되어 있어 보이는 LABEL의 bbox를 사용한다. 근거: design-specs/revision-captures/lab-omr.json의 비활성화 controls bbox."
+  },
+  {
+    "screen": "REV_LAB_03",
+    "key": "04",
+    "anchor": {
+      "x": 293,
+      "y": 1378.84375,
+      "w": 143.25,
+      "h": 24
+    },
+    "reason": "기존 (293,2400)은 아래쪽 드롭다운 테스트 안내 부근이다. 수식·값 유형 테스트 설명의 실제 수식 입력 테스트 제목으로 옮긴다. 값 유형 테스트는 그 아래 별도 카드에 있다. 근거: design-specs/revision-captures/lab-omr.json의 수식 입력 테스트 controls bbox."
+  },
+  {
+    "screen": "REV_LAB_03",
+    "key": "05",
+    "anchor": {
+      "x": 1193.65625,
+      "y": 2443.34375,
+      "w": 50,
+      "h": 32
+    },
+    "reason": "기존 (293,2800)은 하단 출력 영역이며 삭제 컨트롤을 가리키지 않는다. 실제 드롭다운 항목 첫 행의 삭제 버튼으로 옮긴다. 근거: design-specs/revision-captures/lab-omr.json의 삭제 controls bbox."
+  },
+  {
+    "screen": "REV_LAB_05",
+    "key": "01",
+    "anchor": {
+      "x": 293,
+      "y": 262,
+      "w": 1455,
+      "h": 140
+    },
+    "reason": "기존 (293,245)은 문서 JSON 입력 상단의 빈 간격이다. 실제 문서 JSON textarea로 옮긴다. 근거: design-specs/revision-captures/lab-frame.json의 frameDocInput controls bbox."
+  },
+  {
+    "screen": "REV_LAB_05",
+    "key": "03",
+    "anchor": {
+      "x": 325,
+      "y": 512,
+      "w": 65.921875,
+      "h": 38
+    },
+    "reason": "기존 (293,1296)은 미리보기 카드의 문항 제목으로 탭별 변경 설명과 다르다. 실제 iframe 탭 선택 링크로 옮긴다. 근거: design-specs/revision-captures/lab-frame.json의 iframe controls bbox."
+  }
+]

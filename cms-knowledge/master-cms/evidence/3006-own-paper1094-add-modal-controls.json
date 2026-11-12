@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3006-own-paper1094-add-modal-controls",
+  "startedUtc": "2026-11-10T06:21:32.064460+00:00",
+  "command": [
+    "eval",
+    "(()=>{const m=document.querySelector('#paperItemAddModal');if(!m.classList.contains('show'))throw Error('Expected modal');return {controls:[...m.querySelectorAll('input,select,button')].map(e=>({tag:e.tagName,name:e.name,type:e.type,value:e.value,checked:e.checked,disabled:e.disabled,text:e.tagName==='BUTTON'?e.textContent.trim():null,options:e.tagName==='SELECT'?[...e.options].map(o=>({value:o.value,text:o.text})):null})),result:m.querySelector('#paperItemAddResult').innerText};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.086
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: Expected modal\n    at <anonymous>:1:99\n    at <anonymous>:1:487",
+    "localSeconds": 0.086
+  }
+}

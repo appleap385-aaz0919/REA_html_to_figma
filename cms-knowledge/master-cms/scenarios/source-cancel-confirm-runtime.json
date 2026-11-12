@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"1705-source-cancel-confirm-dismiss","command":["eval","--file","sources/runtime/dismiss-cancel-confirm-observed.js"]},
+ {"label":"1706-source-cancel-kept-input-state","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"1707-source-cancel-confirm-reopen","command":["eval","(() => {const f=document.querySelector('form[action=\"/product/create.donga\"]');[...f.querySelectorAll('a[href]')].find(e=>e.textContent.trim()==='취소').click();return {action:'Open registration cancellation confirmation again'};})()"]},
+ {"label":"1708-source-cancel-confirm-ready","command":["snapshot"]},
+ {"label":"1709-source-cancel-discard-local-input","command":["eval","(() => {const m=document.querySelector('#cancelConfirmModal.show');if(!m)throw Error('Cancel confirmation not ready');const b=m.querySelector('[data-action-ok]');if(!b||b.disabled)throw Error('Navigation confirmation unavailable');b.click();return {action:'Choose leave without saving local registration inputs'};})()"]},
+ {"label":"1710-source-cancel-return-readback","command":["snapshot"]},
+ {"label":"1711-source-cancel-return-list-state","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1712-source-validation-final-inventory","command":["eval","--file","sources/runtime/source-read-inventory.js"]}
+],"tailChars":500}

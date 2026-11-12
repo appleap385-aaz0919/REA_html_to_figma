@@ -1,0 +1,1 @@
+import{a as e}from"./aVcGJ-7_.js";import"./aPnuNhlI.js";import{v as t}from"#entry";var n=()=>t(`student:session-replaced`,()=>null),r=t=>{let r=t,i=r?.data?.data;if(r?.statusCode!==401||i?.code!==`SESSION_REPLACED`)return!1;let a=n();return a.value||={classCode:i.class_code??``,live:!e().isHydrating},!0};export{n,r as t};

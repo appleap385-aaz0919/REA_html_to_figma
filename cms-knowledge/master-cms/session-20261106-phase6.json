@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "active",
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [
+    448,
+    525
+  ],
+  "testItemId": 2088985,
+  "observations": [
+    {
+      "code": "SBSANM",
+      "evidence": [
+        448,
+        449
+      ],
+      "result": "Reentry restores input-box answer Ab c (case and space both true), similar XYZ (both flags false), text prefix 답: and suffix cm. Full-apply445 hydration verified."
+    },
+    {
+      "code": "SBSANM",
+      "evidence": [
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468
+      ],
+      "result": "Legend mode defaults to two math-kind cells and independent correct radio. Explicitly changed to text Alpha/Beta, correct Alpha. Student preview uses dropdown; Beta incorrect and Alpha correct. Prefix/suffix displayed."
+    },
+    {
+      "code": "SBSANM",
+      "evidence": [
+        469,
+        470,
+        471,
+        472,
+        473,
+        474
+      ],
+      "result": "In-page box/legend mode switching preserves each mode's values: Ab c/XYZ and Alpha/Beta. Distinct from leaf-type changes which recreate the form."
+    },
+    {
+      "code": "SBSANM",
+      "evidence": [
+        475,
+        476,
+        477,
+        478,
+        479,
+        480
+      ],
+      "result": "Full apply legend mode. New detail2088552 and edit reentry restore legend mode, Alpha/Beta, correct Alpha and prefix/suffix. Hidden inactive box values after full reload are not verified."
+    },
+    {
+      "code": "SBSADR",
+      "evidence": [
+        481,
+        482,
+        483,
+        484,
+        485,
+        487
+      ],
+      "result": "Drawing CMS form has optional title and explicit manual-grading guidance, with no correct-answer input. Title 그래프를 그려 보세요 preview has answer-writing and file-selection entry points. Runtime exploration in progress."
+    },
+    {
+      "code": "SBSADR",
+      "evidence": [
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496,
+        497,
+        498
+      ],
+      "result": "Answer-writing click487, settled488 and coordinate489 showed no new UI; file-selection491 likewise no visible dialog. Grade490 states cannot determine because MANUAL requires teacher confirmation. Full apply494 and reentry498 restore drawing type and title; student drawing/file submission remain unverified."
+    },
+    {
+      "code": "SBSAAS",
+      "evidence": [
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524
+      ],
+      "result": "Area-selection defaults math cells. Direct paste503 did not prove model input. Numeric keypad Apply505-509 creates math1/2; student dropdown shows both, 2 incorrect514 and1 correct517. Full apply520 gives detail2088568, restoration524 confirmed in visible right region only."
+    }
+  ],
+  "evidenceQuality": [
+    {
+      "unusedLabels": [
+        461,
+        486
+      ],
+      "rule": "Preview already loaded in460/485; no redundant capture made."
+    },
+    {
+      "evidence": 503,
+      "rule": "Paste delivery unverified; no actual value rendering. Not a CMS defect."
+    },
+    {
+      "evidence": 524,
+      "rule": "Other app overlays left side. Exclude unrelated content. Only visible right OMR region eligible."
+    },
+    {
+      "evidence": 525,
+      "rule": "Synthetic dropdown click did not reveal options; interaction effect unproven. Stop GUI until CMS visible."
+    }
+  ],
+  "remaining": [
+    "Drawing preview authoring and persistence",
+    "Remaining subjective and essay leaves",
+    "N-choice actual edit/save and boundaries",
+    "HML passage/translation actual editor runtime",
+    "Remaining Master CMS menu families"
+  ],
+  "resumeNote": "User explicitly resumed; fresh526 observation required."
+}

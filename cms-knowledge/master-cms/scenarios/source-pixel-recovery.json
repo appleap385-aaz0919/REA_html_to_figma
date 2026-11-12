@@ -1,0 +1,23 @@
+{"steps":[
+ {"label":"1672-source-pixels-list-open","command":["open","https://dev-exambank.dongahub.com/product/list.donga?pageSize=100&pageNum=1"]},
+ {"label":"1673-source-pixels-list-top","command":["snapshot"],"screenshot":true},
+ {"label":"1674-source-pixels-list-scroll1","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1675-source-pixels-list-scroll2","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1676-source-pixels-list-scroll3","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1677-source-pixels-list-scroll4","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1678-source-pixels-list-bottom-readback","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1679-source-pixels-test199-detail-open","command":["open","https://dev-exambank.dongahub.com/product/detail.donga?id=199&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1680-source-pixels-test199-detail","command":["snapshot"],"screenshot":true},
+ {"label":"1681-source-pixels-test199-modify-open","command":["open","https://dev-exambank.dongahub.com/product/modify.donga?id=199&curriculum=22&pageNum=1&pageSize=10"]},
+ {"label":"1682-source-pixels-test199-modify","command":["snapshot"],"screenshot":true},
+ {"label":"1683-source-pixels-test199-modify-bottom","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1684-source-pixels-mapped134-modify-open","command":["open","https://dev-exambank.dongahub.com/product/modify.donga?id=134&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1685-source-pixels-mapped134-modify","command":["snapshot"],"screenshot":true},
+ {"label":"1686-source-pixels-mapped134-impact-select","command":["select","#useFlagSelect","N"]},
+ {"label":"1687-source-pixels-mapped134-impact","command":["snapshot"],"screenshot":true},
+ {"label":"1688-source-pixels-mapped134-impact-cancel","command":["eval","--file","sources/runtime/source-impact-cancel-observed.js"]},
+ {"label":"1689-source-pixels-blank-form-open","command":["open","https://dev-exambank.dongahub.com/product/form.donga?curriculum=22&pageNum=1&pageSize=10"]},
+ {"label":"1690-source-pixels-blank-form","command":["snapshot"],"screenshot":true},
+ {"label":"1691-source-pixels-blank-form-bottom","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1692-source-pixels-blank-form-state","command":["eval","--file","sources/runtime/source-form-observation.js"]}
+],"tailChars":500}

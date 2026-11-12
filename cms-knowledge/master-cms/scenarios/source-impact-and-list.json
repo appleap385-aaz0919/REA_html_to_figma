@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"1355-source-impact-cancel","command":["eval","(() => {const m=document.querySelector('#mappingImpactModal.show');if(!m)throw Error('Modal missing');m.querySelector('.modal-footer [data-bs-dismiss]').click();return {action:'Cancel impact dialog without Save'};})()"]},
+ {"label":"1356-source-impact-cancel-restored","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"1357-source-impact-reselect-unused","command":["select","#useFlagSelect","N"]},
+ {"label":"1358-source-impact-accept-locally","command":["eval","(() => {const m=document.querySelector('#mappingImpactModal.show');if(!m)throw Error('Modal missing');m.querySelector('[data-action-ok]').click();return {action:'Accept N locally; no form Save'};})()"]},
+ {"label":"1359-source-impact-accepted-state","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"1360-source134-no-save-readback","command":["open","https://dev-exambank.dongahub.com/product/detail.donga?id=134&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1361-source-list-all100-open","command":["open","https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1362-source-list-all100-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":1500}

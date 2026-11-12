@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/6f20adfa-tabler.min-8497cabbf265b335c86458729f06f306.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/8f71cfdf-tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/be63e6ff-tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/c005bb55-custom-4f213f104c14367e2495ee02d06e6fb6.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/65eb897d-math-input-0ba1dc5714db950c06470655d7cf87e3.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/65eb897d-math-input-0ba1dc5714db950c06470655d7cf87e3.css" rel="stylesheet"/><style>html,body{margin:0!important;background:#fff!important}body{padding:12px!important;pointer-events:none!important}.modal{display:block!important;position:relative!important;inset:auto!important;opacity:1!important;overflow:visible!important}.modal-dialog{margin:0 auto!important;transform:none!important;min-height:0!important}.modal-body{max-height:none!important;overflow:visible!important}.matrix-dialog-backdrop{display:flex!important;position:relative!important;inset:auto!important;background:transparent!important;padding:0!important;width:100%!important;height:auto!important}</style></head><body><div aria-modal="true" class="modal show" id="itemProductModal" role="dialog" style="display:block;" tabindex="-1">
+<div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title mb-0 me-2"><i class="ti ti-book me-1"></i>출처 관리</h5>
+<span class="text-secondary me-1">문항 ID</span>
+<span class="me-2">2089216</span>
+<button aria-label="Close" class="btn-close ms-auto" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="card-tabs">
+<ul class="nav nav-tabs flex-nowrap" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-selected="false" class="nav-link fs-3" data-bs-target="#productCurrentPane" data-bs-toggle="tab" role="tab" tabindex="-1" type="button">
+                                    현재 출처
+                                    <span class="badge bg-secondary-lt ms-1" id="productCountBadge">2</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-selected="true" class="nav-link fs-3 active" data-bs-target="#productAddPane" data-bs-toggle="tab" id="productAddTabBtn" role="tab" type="button">
+<i class="ti ti-plus me-1"></i>출처 추가
+                                </button>
+</li>
+</ul>
+</div>
+<div class="card" style="border-start-start-radius: 0;">
+<div class="card-body">
+<div class="tab-content">
+<div class="tab-pane fade" id="productCurrentPane" role="tabpanel">
+<!-- 로드 시 조회, 액션 시 재조회 -->
+<div id="productCurrent">
+<div class="table-responsive">
+<table class="table card-table table-vcenter">
+<thead>
+<tr>
+<th>출처코드 · 출처명</th>
+<th class="text-center" style="width: 11%;">용도</th>
+<th class="text-center" style="width: 8%;">사용여부</th>
+<th class="text-center" style="width: 11%;">페이지</th>
+<th class="text-center" style="width: 13%;">문항번호</th>
+<th class="text-center" style="width: 16%;">액션</th>
+</tr>
+</thead>
+<tbody>
+<tr data-product-row="">
+<td class="text-truncate" style="max-width: 0;">
+<div>22-M-MA-T0-1-1-SMT-TP-2022</div>
+<div class="text-secondary">22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022</div>
+</td>
+<td class="text-center">공통</td>
+<td class="text-center">사용</td>
+<td class="text-center">
+<input class="form-control form-control-sm text-center" name="mapPageNum" placeholder="필수" type="number" value="2"/>
+</td>
+<td class="text-center">
+<input class="form-control form-control-sm text-center" name="mapQuestionNum" type="text" value=""/>
+</td>
+<td class="text-center">
+<button class="btn btn-sm" data-product-update="" type="button">수정</button>
+<button class="btn btn-sm btn-outline-danger" data-product-remove="" type="button"><i class="ti ti-x me-1"></i>해제</button>
+</td>
+</tr>
+<tr data-product-row="">
+<td class="text-truncate" style="max-width: 0;">
+<div>22-M-MA-T0-1-1-SMT-TP-2048</div>
+<div class="text-secondary">22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048</div>
+</td>
+<td class="text-center">교사용</td>
+<td class="text-center">미사용</td>
+<td class="text-center">
+<input class="form-control form-control-sm text-center" name="mapPageNum" placeholder="필수" type="number" value="1"/>
+</td>
+<td class="text-center">
+<input class="form-control form-control-sm text-center" name="mapQuestionNum" type="text" value="1"/>
+</td>
+<td class="text-center">
+<button class="btn btn-sm" data-product-update="" type="button">수정</button>
+<button class="btn btn-sm btn-outline-danger" data-product-remove="" type="button"><i class="ti ti-x me-1"></i>해제</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div aria-labelledby="productAddTabBtn" class="tab-pane fade show active" id="productAddPane" role="tabpanel">
+<div>
+<div class="card mb-3" data-filter="" id="itemProductFilter">
+<div class="card-body">
+<div class="d-flex flex-nowrap gap-2 mb-2">
+<div style="width: 15%;">
+<select class="form-select cursor-pointer" name="keywordType">
+<option value="productCode">출처코드</option>
+<option value="productName">출처명</option>
+</select>
+</div>
+<div class="flex-fill">
+<input class="form-control" name="keyword" placeholder="출처코드 / 출처명" type="text"/>
+</div>
+</div>
+<div class="d-flex flex-nowrap gap-2 mb-3">
+<div class="flex-fill">
+<select class="form-select cursor-pointer" data-code-source="curriculum" data-default-value="22" id="itemProductCurriculumSelect" name="curriculum"><option value="">교육과정 전체</option><option value="22">22</option><option value="15">15</option></select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" data-code-parent="classtype" data-code-source="classtype" name="classType">
+<option value="">학교급 전체</option>
+<option value="E">초등</option>
+<option value="M">중학</option>
+<option value="H">고등</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" data-code-source="subjectcategory" id="itemProductSubjectCategorySelect" name="subjectCategory"><option value="">과목군 전체</option><option value="MA">수학군</option></select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" data-code-multi-child="curriculum,classtype,subjectcategory" disabled="" name="subject">
+<option value="">과목 전체</option>
+<option data-code-classtype="E" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="T0">수학</option>
+<option data-code-classtype="M" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="T0">수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="C1">공통수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="C2">공통수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="B1">기본수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="B2">기본수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="T1">수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="T2">수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="A0">대수</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="D1">미적분1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="D2">미적분2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="S0">확률과통계</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="G0">기하</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="P0">직무수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="I0">인공지능수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" disabled="" hidden="" value="U0">수학과 문화</option>
+<option data-code-classtype="M" data-code-curriculum="15" data-code-subjectcategory="MA" disabled="" hidden="" value="T0">수학</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" data-code-child="classtype" disabled="" name="grade">
+<option value="">학년 전체</option>
+<option data-code-parent-value="M" disabled="" hidden="" value="1">중학1</option>
+<option data-code-parent-value="H" disabled="" hidden="" value="1">고등1</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="1">초등1</option>
+<option data-code-parent-value="M" disabled="" hidden="" value="2">중학2</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="2">초등2</option>
+<option data-code-parent-value="H" disabled="" hidden="" value="2">고등2</option>
+<option data-code-parent-value="H" disabled="" hidden="" value="3">고등3</option>
+<option data-code-parent-value="M" disabled="" hidden="" value="3">중학3</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="3">초등3</option>
+<option data-code-parent-value="H" disabled="" hidden="" value="4">고등 공통</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="4">초등4</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="5">초등5</option>
+<option data-code-parent-value="E" disabled="" hidden="" value="6">초등6</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" name="term">
+<option value="">학기 전체</option>
+<option value="0">공통학기</option>
+<option value="1">1학기</option>
+<option value="2">2학기</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer" name="serviceUsage">
+<option value="">용도 전체</option>
+<option value="C">공통</option>
+<option value="T">교사용</option>
+</select>
+</div>
+</div>
+<div class="d-flex align-items-center gap-2">
+<input name="anchorItemId" type="hidden" value="2089216"/>
+<div class="ms-auto">
+<button class="btn" data-product-reset="" type="button"><i class="ti ti-refresh me-1"></i>초기화</button>
+<button class="btn btn-primary" type="button"><i class="ti ti-search me-1"></i>조회</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 추가 탭 첫 진입에만 기본 조회(productAddLoad 를 껍데기가 1회 발사). 탭 전환엔 유지, 모달 닫으면 리셋 -->
+<div id="itemProductAddResult"><div>
+<input name="pageNum" type="hidden" value="1"/>
+<div class="table-responsive">
+<table class="table card-table table-vcenter">
+<thead>
+<tr>
+<th>출처코드 · 출처명</th>
+<th class="text-center" style="width: 10%;">용도</th>
+<th class="text-center" style="width: 8%;">사용여부</th>
+<th class="text-center" style="width: 11%;">페이지</th>
+<th class="text-center" style="width: 13%;">문항번호</th>
+<th class="text-center" style="width: 8%;">추가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-truncate" style="max-width: 0;">
+<div>22-M-MA-T0-1-1-SMT-TP-2048</div>
+<div class="text-secondary">22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048</div>
+</td>
+<td class="text-center">교사용</td>
+<td class="text-center">미사용</td>
+<td class="text-center text-muted" colspan="2">이미 매핑된 출처</td>
+<td class="text-center">
+<button class="btn btn-sm btn-primary" data-product-add="" disabled="disabled" type="button"><i class="ti ti-plus"></i></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn" data-bs-dismiss="modal" type="button">닫기</button>
+</div>
+</div>
+</div>
+</div></body></html>

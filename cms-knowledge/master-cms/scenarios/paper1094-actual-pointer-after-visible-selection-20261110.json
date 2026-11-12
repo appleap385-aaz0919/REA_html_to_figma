@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "label": "3280-own-paper1094-pointer-test-geometry-events-before",
+      "command": [
+        "eval",
+        "(()=>{const t=document.querySelector('#paperItemTable');if(document.visibilityState!=='visible'||!document.hasFocus()||document.querySelector('.modal.show')||[...t.querySelectorAll('tr[data-item-id]')].map(e=>e.dataset.itemId).join(',')!=='2089242,2089243,2089244,2089245,2089238'||!window.Sortable?.get?.(t))throw Error('Visible focused exact local groups required');window.__qa1094PointerEvents=[];for(const type of ['pointerdown','pointerup','mousedown','mouseup','dragstart','dragover','drop','dragend','start','end','update','sort'])t.addEventListener(type,e=>{if(window.__qa1094PointerEvents.length<160)window.__qa1094PointerEvents.push({type:e.type,isTrusted:e.isTrusted,x:e.clientX,y:e.clientY,oldIndex:e.oldIndex,newIndex:e.newIndex,targetTag:e.target.tagName});},true);const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};};return {visibility:document.visibilityState,focused:document.hasFocus(),source:rect(t.querySelector('tbody:last-of-type [data-sort-handle]')),target:rect(t.querySelector('tbody:first-of-type tr:first-child [data-seq]')),scroller:{top:document.querySelector('.page-wrapper').scrollTop,height:document.querySelector('.page-wrapper').clientHeight,total:document.querySelector('.page-wrapper').scrollHeight}};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3281-own-paper1094-pointer-test-actual-drag-single-before-set",
+      "command": [
+        "drag",
+        "#paperItemTable>tbody:last-of-type [data-sort-handle]",
+        "#paperItemTable>tbody:first-of-type tr:first-child [data-seq]"
+      ]
+    },
+    {
+      "label": "3282-own-paper1094-pointer-test-order-and-events-after",
+      "command": [
+        "eval",
+        "(()=>{const t=document.querySelector('#paperItemTable');return {itemIds:[...t.querySelectorAll('tr[data-item-id]')].map(e=>e.dataset.itemId),sequences:[...t.querySelectorAll('[data-seq]')].map(e=>e.textContent),groups:[...t.querySelectorAll(':scope>tbody')].map(g=>({passageId:g.dataset.passageId,itemIds:[...g.querySelectorAll('tr[data-item-id]')].map(e=>e.dataset.itemId)})),events:window.__qa1094PointerEvents,visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id)};})()"
+      ]
+    },
+    {
+      "label": "3283-own-paper1094-pointer-test-after-drag-visual",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3284-own-paper1094-pointer-test-after-drag-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 120
+}

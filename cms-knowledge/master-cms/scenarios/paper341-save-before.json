@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "label": "1715-paper341-save-modify-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=341&curriculum=22&pageNum=1&pageSize=30"
+      ]
+    },
+    {
+      "label": "1716-paper341-save-before-fields",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1717-paper341-save-before-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 900
+}

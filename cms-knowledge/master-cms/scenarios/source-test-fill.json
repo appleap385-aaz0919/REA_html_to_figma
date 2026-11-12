@@ -1,0 +1,11 @@
+{
+ "steps":[
+  {"label":"1298-source-test-subtype","command":["select","#productCategorySubSelect","유형북"]},
+  {"label":"1299-source-test-year","command":["select","select[name=publishYear]","2049"]},
+  {"label":"1300-source-test-purpose","command":["select","select[name=serviceUsage]","공통"]},
+  {"label":"1301-source-test-unused","command":["select","select[name=useFlag]","미사용"]},
+  {"label":"1302-source-test-display-name","command":["fill","input[name=viewName]","QA-SOURCE-20261109"]},
+  {"label":"1303-source-test-remark","command":["fill","textarea[name=remark]","QA investigation source 2026-11-09; no mapped questions."]},
+  {"label":"1304-source-test-pre-submit-state","command":["eval","--file","sources/runtime/source-form-observation.js"]}
+ ],"tailChars":600
+}

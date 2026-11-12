@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2228-hml666-retain-set-paper-no","command":["check","input[name=paperRegYn][value=N]"]},
+ {"label":"2229-hml666-retain-set-remark","command":["fill","textarea[name=remark]","QA-HML-20261109-03: keep active set and single for shared-passage editing; no paper."]},
+ {"label":"2230-hml666-retain-set-approval-dialog","command":["eval","(async()=>{const s=[...document.querySelectorAll('[data-exam-judge]')];if(location.hostname!=='dev-exambank.dongahub.com'||new URLSearchParams(location.search).get('examDocumentId')!=='666'||document.querySelector('.modal.show')||s.length!==2||s[0].dataset.itemIds!=='2089242,2089243,2089244,2089245'||s[0].value!=='S'||s[1].dataset.itemIds!=='2089246'||s[1].value!=='S'||!document.querySelector('[name=paperRegYn][value=N]:checked'))throw Error('Own active set S/S paperN required');const m=document.getElementById('examApproveModal');await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Approval shown timeout')),5000);m.addEventListener('shown.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});document.querySelector('[data-exam-approve]').click();});return {id:m.id,text:m.innerText};})()"]},
+ {"label":"2231-hml666-before-approval-state","command":["eval","--file","sources/runtime/hml-draft-local-observation.js"]}
+],"tailChars":150}

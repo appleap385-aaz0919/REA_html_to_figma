@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "evidence_recorded_with_remaining_branches",
+  "evidenceRange": [2343, 2396],
+  "lastEvidence": "2396-own-source199-paper1093-control-read",
+  "summary": "자체 출처199를 사용으로 바꾸고 자체 문항2089216에 페이지1·문항번호1로 연결한 뒤 다시 미사용으로 저장했다. 기존 출처13과 신규199의 연결은 유지됐고 문항 상세번호2088849·승인상태Y·OMR 및 평가지1093/detail1124/Y는 그대로다. 미사용 출처는 새 문항 등록 선택 목록에서는 제외되지만 수동 출처 추가 검색에는 비활성 행으로 남는다. 페이지 공란은 요청 전 안내로 차단됐다. 확정 Master 업무 작업은46회이며 서비스 노출은 검증하지 않았다.",
+  "observations": [
+    {"evidence": [2343,2346,2348,2349], "result": "초기 미사용 출처199는 연결문항0건이고 자체 문항에는 출처13만 있었다. 수동 출처 추가 검색에는199가 미사용 출처로 표시되며 추가 버튼이 비활성이다."},
+    {"evidence": [2351,2355,2357,2358,2362,2363], "result": "실제 출처 수정 폼에서 사용Y를 저장하고 독립GET으로 확인했다. 코드·교사용·기타 메타데이터는 유지됐다. 수동 추가 검색의199 추가 버튼이 활성화됐다."},
+    {"evidence": [2364,2365,2366], "result": "페이지를 비운 실제 추가 클릭은 페이지를 입력해주세요 안내로 차단됐다. 관찰 범위에서 htmx:beforeRequest는 없었고 서버 연결은 변하지 않았다. 거절된 시도는 확정 업무 변경에 세지 않는다."},
+    {"evidence": [2369,2370,2371,2372], "result": "페이지1·문항번호1로 실제 추가했다. 독립GET에서 기존 출처13의 페이지2·문항번호공란을 유지하면서199가 연결됐다. 문항 상세번호·Y상태·OMR은 유지됐다. 문항 전체반영 없이 관계가 즉시 저장됐다."},
+    {"evidence": [2377,2378,2379,2380,2382,2384,2385,2386,2387], "result": "미사용 선택 시 연결문항1건과 기존매핑·서비스노출유지 및 신규등록제외 안내가 나타났다. 로컬 확인 뒤 출처 저장을 한 번 제출했다. 저장 전 서버Y의 HML/디피니션 등록 선택에는199가 있었고 저장 후 서버N에서는 모두 빠졌다. 기존 두 연결은 유지됐다. 서비스노출유지는 안내 문구이며 실제 서비스 검증이 아니다."},
+    {"evidence": [2390,2392,2393,2394,2395,2396], "result": "서버 재진입 후 현재출처199는 미사용이면서 페이지·문항번호 입력과 수정·해제 버튼이 활성이다. 추가검색에서는 이미 매핑된 출처로 표시되며 추가는 비활성이다. 모달은 닫았다. 문항2089216/detail2088849/Y·출처2개 및 평가지1093/detail1124/Y·구성2089216 한 건을 독립GET으로 확인했다."}
+  ],
+  "artifacts": ["source199-lifecycle-intent-20261110.json", "record-source199-activated.py", "record-source199-mapping-confirmed.py", "record-source199-deactivated.py"],
+  "persistentChanges": {"confirmedMasterOperations":46,"newMasterChangesInThisPhase":3,"sourceId":199,"sourceUseFlag":"N","mappedItemCount":1,"itemId":2089216,"itemDetailId":2088849,"itemViewFlag":"Y","currentSourceIds":[13,199],"qaMapPageNum":"1","qaMapQuestionNum":"1","controlPaperId":1093,"controlPaperDetailId":1124,"controlPaperViewFlag":"Y","serviceDeployment":false,"serviceExposureVerified":false,"originalRestorationPending":false},
+  "remaining": [
+    "미사용 출처199의 기존 연결에 대해 수정·해제 버튼이 서버에서도 동작하는지 확인한다. 원래 출처13은 보존한다.",
+    "CMS 임시저장·버전 충돌·세트 쌍둥이 생성·그룹 합치기·디피니션 복합 자료 등 남은 분기를 이어간다.",
+    "번역 슬롯의 실제 파일과 역할별 동작은 아직 확인할 자료가 필요하다. 서비스 CMS는 제공 전이며 배포는 제출하지 않는다."
+  ],
+  "resume": {"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216","tab":"t21 own approved single; modal closed","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+  "evidenceLimits": [
+    "수정·해제 버튼의 활성 표시는 실제 서버 성공을 뜻하지 않으며 다음 단계에서 별도로 검증한다.",
+    "클라이언트 요청 이벤트 관찰은 브라우저 전체 네트워크 패킷 캡처가 아니다.",
+    "서비스 노출 유지 안내를 실제 서비스 CMS의 확인 결과로 기록하지 않는다.",
+    "확정 작업 수는 UI 클릭 수나 DB 행 변경 수가 아니다. 전체 CMS100% 완료를 주장하지 않는다."
+  ]
+}

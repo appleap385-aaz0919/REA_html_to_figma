@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2282-own-paper1093-select-use-local","command":["check","input[name=viewFlag][value=Y]"]},
+ {"label":"2283-own-paper1093-before-use-save","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+ {"label":"2284-own-paper1093-use-with-failed-item-save-once","command":["eval","(() => {if(location.pathname!=='/paper/modify.donga'||new URLSearchParams(location.search).get('paperId')!=='1093'||document.querySelector('.modal.show')||window.__qaPaper1093UseAttempted)throw Error('Own paper edit only');const f=document.getElementById('paperModifyForm'),ids=[...f.querySelectorAll('[name=itemIds]')].map(e=>e.value);if(f.elements.paperId.value!=='1093'||f.elements.paperName.value!=='QA-HML-20261109-01-SET'||ids.join(',')!=='2089215,2089216'||!f.querySelector('[name=viewFlag][value=Y]:checked')||f.elements.startPageNum.value!=='2'||f.elements.endPageNum.value!=='22'||!f.checkValidity())throw Error('Own mixed paper baseline mismatch');window.__qaPaper1093UseAttempted=true;f.querySelector('[data-paper-save]').click();return {clickedOnce:true,paperId:1093,viewFlag:'Y',itemIds:ids,serviceDeployment:false};})()"]},
+ {"label":"2285-own-paper1093-after-use-save-ui","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]},
+ {"label":"2286-own-paper1093-use-independent-server-readback","command":["eval","--file","sources/runtime/own-paper1093-server-readback.js"]},
+ {"label":"2287-own-paper1093-use-outcome-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":150}

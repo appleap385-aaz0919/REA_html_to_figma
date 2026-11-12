@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"1759-hml-list-size100","command":["select","select[name=pageSize]","100"]},
+ {"label":"1760-hml-inventory-first100","command":["eval","--file","sources/runtime/registration-page-observation.js"]},
+ {"label":"1761-hml-inventory-first-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1762-hml-inventory-last-page-click","command":["eval","(() => {const a=document.querySelector('.pagination a[aria-label=\"맨 뒤\"]');if(!a||a.closest('li').classList.contains('disabled'))throw Error('Last page unavailable');const request=a.getAttribute('hx-get');a.click();return {action:'Open observed last page of HML inventory',request};})()"]},
+ {"label":"1763-hml-inventory-last16","command":["eval","--file","sources/runtime/registration-page-observation.js"]},
+ {"label":"1764-hml-inventory-last-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":500}

@@ -1,0 +1,567 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e1416]
+      - link "문제은행 마스터 CMS" [ref=e1417]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e1430]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e1431]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e1432]
+          - link "HML 문항 등록" [ref=e1433]
+          - link "디피니션 문항 등록" [ref=e1434]
+          - link "쌍둥이 그룹 관리" [ref=e1435]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e1436]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e1437]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e1438]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e1418]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 수정"
+      - heading "문항 수정" [level=2, ref=e1419]
+      - StaticText "문항 ID"
+      - StaticText "2088985 (2088698)"
+      - StaticText "지문 ID"
+      - StaticText "-"
+      - StaticText "원본 파일"
+      - StaticText "-"
+      - StaticText "상태"
+      - StaticText "초안"
+      - StaticText "배포 여부"
+      - StaticText "미배포"
+      - StaticText "생성 방식"
+      - StaticText "복제"
+      - tablist
+        - tab "메타정보 수정" [ref=e1426]
+        - tab "한글(HML) 수정" [ref=e1427]
+        - tab "HTML 수정" [ref=e1428]
+        - tab "OMR 수정" [selected, ref=e1429]
+      - link "취소" [ref=e1420]
+      - button "임시 저장" [ref=e1421]
+      - button "전체 반영" [ref=e1422]
+      - generic
+        - generic
+          - heading "문항 형태 *" [level=3, ref=e1473]
+            - StaticText ""
+            - StaticText "문항 형태 *"
+          - combobox [expanded=false, ref=e1476]: 서술형
+            - MenuListPopup
+              - option "객관식" [ref=e1486]
+              - option "주관식" [ref=e1487]
+              - option "서술형" [selected, ref=e1488]
+          - combobox [expanded=false, ref=e1477]: 다답형
+            - MenuListPopup
+              - option "기본형" [ref=e1489]
+              - option "단답형" [ref=e1490]
+              - option "다답형" [selected, ref=e1491]
+          - combobox [expanded=false, ref=e1478]: 다답 서술형
+            - MenuListPopup
+              - option "다답 서술형" [selected, ref=e1525]
+        - generic
+          - heading "이미지 업로드" [level=3, ref=e1474]
+            - StaticText ""
+            - StaticText "이미지 업로드"
+          - button " 업로드" [ref=e1479]
+            - StaticText ""
+            - StaticText "업로드"
+        - tabpanel
+          - generic
+            - heading "문항 2088985" [level=3, ref=e1475]
+              - StaticText ""
+              - StaticText "문항 2088985"
+            - article
+              - paragraph
+                - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+              - paragraph
+                - image "image"
+              - generic
+                - heading "정답" [level=3, ref=e1526]
+                - paragraph
+                  - StaticText "③"
+              - generic
+                - heading "풀이" [level=3, ref=e1527]
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLText
+                        - MathMLOperator
+                          - StaticText "("
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLNumber
+                          - StaticText "0"
+                        - MathMLOperator
+                          - StaticText ")"
+                  - StaticText "로 놓고 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                  - StaticText "를 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - paragraph
+                  - StaticText "③"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                  - StaticText "에 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                  - StaticText "을 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "1"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e1515]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e1516]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "정답" [ref=e1518]: QA-multi-answer
+              - StaticText "QA-multi-answer"
+            - LabelText
+              - checkbox "OMR SET끼리 순서 고정(유순)" [checked=false, ref=e1529]
+              - StaticText "OMR SET끼리 순서 고정(유순)"
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "OMR SET"
+            - LabelText
+              - checkbox "순서 고정(유순)" [checked=false, ref=e1530]
+              - StaticText "순서 고정(유순)"
+            - button "SET 삭제" [ref=e1519]
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1520]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1543]
+                - option "범례 선택형" [ref=e1544]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1531]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1521]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1532] editable [tabindex, contenteditable]
+                - textbox [ref=e2009]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e2021]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1533]
+            - button "" [expanded=false, ref=e1534]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1535] editable [tabindex, contenteditable]
+                - textbox [ref=e2010]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e2022]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1536]
+            - button "" [expanded=false, ref=e1537]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1538] editable [tabindex, contenteditable]
+                - textbox [ref=e2011]
+                - generic
+                  - button "Menu Menu" [ref=e2023]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1539]
+            - button "" [expanded=false, ref=e1540]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1541]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1542]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1522]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - StaticText "2"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1652]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1667]
+                - option "범례 선택형" [ref=e1668]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1655]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1653]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1656] editable [tabindex, contenteditable]
+                - textbox [ref=e2012]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e2024]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1657]
+            - button "" [expanded=false, ref=e1658]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1659] editable [tabindex, contenteditable]
+                - textbox [ref=e2013]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e2025]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1660]
+            - button "" [expanded=false, ref=e1661]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1662] editable [tabindex, contenteditable]
+                - textbox [ref=e2014]
+                - generic
+                  - button "Menu Menu" [ref=e2026]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1663]
+            - button "" [expanded=false, ref=e1664]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1665]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1666]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1654]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - button " 정답 SET 추가" [ref=e1523]
+              - StaticText ""
+              - StaticText "정답 SET 추가"
+            - StaticText "2"
+            - StaticText ") "
+            - StaticText "OMR SET"
+            - LabelText
+              - checkbox "순서 고정(유순)" [checked=true, ref=e1775]
+              - StaticText "순서 고정(유순)"
+            - button "SET 삭제" [ref=e1770]
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1771]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1788]
+                - option "범례 선택형" [ref=e1789]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1776]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1772]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1777] editable [tabindex, contenteditable]
+                - textbox [ref=e2015]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e2027]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1778]
+            - button "" [expanded=false, ref=e1779]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1780] editable [tabindex, contenteditable]
+                - textbox [ref=e2016]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e2028]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1781]
+            - button "" [expanded=false, ref=e1782]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1783] editable [tabindex, contenteditable]
+                - textbox [ref=e2017]
+                - generic
+                  - button "Menu Menu" [ref=e2029]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1784]
+            - button "" [expanded=false, ref=e1785]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1786]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1787]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1773]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - StaticText "2"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1891]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1906]
+                - option "범례 선택형" [ref=e1907]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1894]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1892]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1895] editable [tabindex, contenteditable]
+                - textbox [ref=e2018]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e2030]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1896]
+            - button "" [expanded=false, ref=e1897]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1898] editable [tabindex, contenteditable]
+                - textbox [ref=e2019]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e2031]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1899]
+            - button "" [expanded=false, ref=e1900]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1901] editable [tabindex, contenteditable]
+                - textbox [ref=e2020]
+                - generic
+                  - button "Menu Menu" [ref=e2032]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1902]
+            - button "" [expanded=false, ref=e1903]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1904]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1905]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1893]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - button " 정답 SET 추가" [ref=e1774]
+              - StaticText ""
+              - StaticText "정답 SET 추가"
+            - button " OMR SET 추가" [ref=e1524]
+              - StaticText ""
+              - StaticText "OMR SET 추가"
+            - button " 순서 바꾸기" [ref=e1528]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "풀이 과정" [ref=e1517]: QA-multi-process
+              - StaticText "QA-multi-process"
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+      - link "취소" [ref=e1423]
+      - button "임시 저장" [ref=e1424]
+      - button "전체 반영" [ref=e1425]
+      - dialog
+        - generic
+          - heading "OMR 미리보기" [level=5, ref=e2033]
+            - StaticText ""
+            - StaticText "OMR 미리보기"
+          - button "닫기" [ref=e2034]
+          - Iframe "OMR 미리보기" [ref=e2053]
+          - button "닫기" [ref=e2035]

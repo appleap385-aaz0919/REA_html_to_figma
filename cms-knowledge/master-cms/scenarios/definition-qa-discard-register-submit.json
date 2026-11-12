@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"1963-definition-qa-discard-register-submit","command":["eval","(() => {const f=document.querySelector('#examForm'),files=Dropzone.instances[0].getAcceptedFiles();if(location.pathname!=='/item/difi/form.donga'||files.length!==1||files[0].name!=='QA-DIFI-20261109-02-DISCARD.zip'||files[0].size!==980||f.elements.examDocumentId.value||f.elements.productId.value!=='69'||f.elements.unitCode.value!=='22EMAT0NGS31'||f.elements.startPageNum.value!=='2'||f.elements.endPageNum.value!=='3'||f.elements.serviceUsage.value!=='T'||!f.checkValidity()||f.querySelector('button[type=submit]').disabled)throw Error('QA discard import precondition mismatch');f.querySelector('button[type=submit]').click();return {action:'Submit second isolated QA ZIP once'};})()"]},
+ {"label":"1964-definition-qa-discard-register-post","command":["eval","--file","sources/runtime/registration-page-observation.js"]}
+],"tailChars":500}

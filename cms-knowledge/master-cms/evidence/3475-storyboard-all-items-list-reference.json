@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3475-storyboard-all-items-list-reference",
+  "startedUtc": "2026-11-11T02:20:37.400217+00:00",
+  "command": [
+    "eval",
+    "(()=>{const p=document.querySelector(.page-wrapper);return {url:location.href,width:innerWidth,height:innerHeight,scroll:{height:p.clientHeight,total:p.scrollHeight},filters:[...document.querySelectorAll([data-filter]",
+    "input,[data-filter]",
+    "select)].filter(e=>!/(token|csrf)/i.test(e.name)).map(e=>({name:e.name,type:e.type,value:e.value})),tables:[...document.querySelectorAll(table)].map(e=>({headers:[...e.querySelectorAll(th)].map(t=>t.innerText),rowCount:e.querySelectorAll(tbody",
+    "tr).length}))};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/list.donga?unitCurriculum=22"
+    },
+    "error": null,
+    "localSeconds": 0.099
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: SyntaxError: Unexpected token '.'",
+    "localSeconds": 0.085
+  }
+}

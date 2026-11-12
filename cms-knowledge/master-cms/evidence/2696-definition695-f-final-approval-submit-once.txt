@@ -1,0 +1,189 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e35659]
+      - link "문제은행 마스터 CMS" [ref=e35660]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e35668]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e35669]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e35670]
+          - link "HML 문항 등록" [ref=e35671]
+          - link "디피니션 문항 등록" [ref=e35672]
+          - link "쌍둥이 그룹 관리" [ref=e35673]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e35674]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e35675]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e35676]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e35661]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "디피니션 상세" [level=2, ref=e35662]
+      - StaticText "초안"
+      - generic
+        - heading "기본 정보" [level=3, ref=e35666]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "695"
+          - term "원본 파일"
+          - definition
+            - StaticText "QA-DIFI-20261110-06-ORDERED1.zip"
+            - button " 다운로드" [ref=e35679]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-M-MA-T0-1-1-SMT-TP-2022]"
+            - StaticText "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22MMAT0KOK1001020000]"
+            - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 소인수분해 > 소인수분해 > >"
+          - term "페이지"
+          - definition
+            - StaticText "1 ~ 3"
+          - term "용도"
+          - definition
+            - StaticText "공통"
+          - term "등록"
+          - definition
+            - StaticText "jaehyuk.myung · 2026-11-10"
+          - term "수정"
+          - definition
+            - StaticText "-"
+        - LabelText
+          - StaticText "비고"
+        - textbox [ref=e35677]: QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research.
+          - StaticText "QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research."
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e35667]
+        - generic
+          - StaticText "#1"
+          - StaticText "문항ID 2089375 (2089082)"
+          - combobox [expanded=false, ref=e35678]: 등록실패
+            - MenuListPopup
+              - option "등록대기" [disabled, ref=e35680]
+              - option "등록성공" [ref=e35681]
+              - option "등록실패" [selected, ref=e35682]
+              - option "삭제" [ref=e35683]
+          - article
+            - paragraph
+              - StaticText "[QA-DIFI-20261110-04-ORDERED]"
+            - paragraph
+              - StaticText "다음 □ 안에 알맞은 자연수들의 합을 구하시오."
+            - paragraph
+            - StaticText "(가) 가장 작은 소수는 □이다."
+            - LineBreak "\n"
+            - StaticText "(나) 짝수인 소수는 □개이다."
+            - LineBreak "\n"
+            - StaticText "(다) □은 소수도 아니고 합성수도 아니다."
+            - paragraph
+            - generic
+              - heading "정답" [level=3, ref=e35684]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "4"
+            - generic
+              - heading "풀이" [level=3, ref=e35685]
+              - paragraph
+                - StaticText "(가) 가장 작은 소수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "2"
+                - StaticText "이다."
+                - LineBreak "\n"
+                - StaticText "(나) 짝수인 소수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "2"
+                - StaticText "의 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "1"
+                - StaticText "개이다."
+                - LineBreak "\n"
+                - StaticText "(다) "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "1"
+                - StaticText "은 소수도 아니고 합성수도 아니다."
+                - LineBreak "\n"
+                - StaticText "따라서 □ 안에 알맞은 자연수들의 합은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "+"
+                      - MathMLNumber
+                        - StaticText "1"
+                      - MathMLOperator
+                        - StaticText "+"
+                      - MathMLNumber
+                        - StaticText "1"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "4"
+      - link "목록" [ref=e35663]
+      - button "폐기" [ref=e35664]
+      - button "승인" [ref=e35665]
+      - dialog
+        - generic
+          - heading "시험지 승인" [level=5, ref=e35686]
+          - button "닫기" [ref=e35687]
+          - generic
+            - StaticText "승인하시겠습니까?"
+            - LineBreak "\n"
+            - StaticText "AI 메타 추천이 시작되며 되돌릴 수 없습니다."
+          - button "취소" [ref=e35688]
+          - button "승인" [ref=e35689]

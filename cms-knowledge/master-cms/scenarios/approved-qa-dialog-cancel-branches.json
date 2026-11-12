@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"2158-twin-ai-choice-local-only","command":["eval","(() => {const m=document.querySelector('#twinGenerateModal.show');if(!m||new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own QA twin dialog only');m.querySelector('[name=sourceType][value=AI]').click();return {selection:m.querySelector('[name=sourceType]:checked').value,text:m.innerText,submitted:false};})()"],"screenshot":true},
+ {"label":"2159-twin-generate-cancel","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]},
+ {"label":"2160-twin-generate-reopen-after-cancel","command":["eval","--file","sources/runtime/qa2089216-open-twin-dialog.js"]},
+ {"label":"2161-twin-generate-second-cancel","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]},
+ {"label":"2162-approved-qa-deploy-targets-dialog","command":["eval","--file","sources/runtime/qa2089216-open-deploy-dialog.js"],"screenshot":true},
+ {"label":"2163-deploy-select-devservice-local-only","command":["eval","(() => {const m=document.querySelector('#deployModal.show');if(!m||new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own QA deploy dialog only');const e=m.querySelector('[name=deployTargets][value=DEVSERVICE]');if(e.matches(':disabled'))throw Error('Target disabled');e.click();return {targets:[...m.querySelectorAll('[name=deployTargets]')].map(e=>({value:e.value,checked:e.checked,disabled:e.matches(':disabled')})),confirmDisabled:m.querySelector('[data-action-ok]').matches(':disabled'),notice:m.querySelector('#deployRedeployNotice').innerText,noticeVisible:!m.querySelector('#deployRedeployNotice').classList.contains('d-none'),submitted:false};})()"]},
+ {"label":"2164-deploy-cancel-without-submit","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]},
+ {"label":"2165-deploy-reopen-selection-reset","command":["eval","--file","sources/runtime/qa2089216-open-deploy-dialog.js"]},
+ {"label":"2166-deploy-final-cancel-without-submit","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]}
+],"tailChars":300}

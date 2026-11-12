@@ -1,0 +1,2173 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1965-definition-qa-discard-register-fresh",
+  "startedUtc": "2026-11-09T08:30:10.242399+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/registration-page-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.105
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "actions": [
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": null,
+            "text": "7일"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": null,
+            "text": "30일"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": null,
+            "text": "90일"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": null,
+            "text": "전체"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": null,
+            "text": "초기화"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "request": "/item/difi/list.donga",
+            "text": "조회"
+          },
+          {
+            "disabled": false,
+            "href": "/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100",
+            "id": "",
+            "request": null,
+            "text": "ZIP 등록"
+          }
+        ],
+        "fields": [
+          {
+            "disabled": false,
+            "id": "",
+            "name": "keywordType",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "시험지 ID",
+                "value": "examDocumentId"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "파일명",
+                "value": "fileOrgName"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "출처코드",
+                "value": "productCode"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "등록자 ID",
+                "value": "adminMemberUserId"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": "examDocumentId"
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "keyword",
+            "readOnly": false,
+            "required": false,
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "curriculumSelect",
+            "name": "curriculum",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "교육과정 전체",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "22",
+                "value": "22"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "15",
+                "value": "15"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": "22"
+          },
+          {
+            "disabled": false,
+            "id": "classTypeSelect",
+            "name": "classType",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "학교급 전체",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "초등",
+                "value": "E"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "중학",
+                "value": "M"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "고등",
+                "value": "H"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "subjectCategorySelect",
+            "name": "subjectCategory",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "과목군 전체",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "수학군",
+                "value": "MA"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "id": "subjectSelect",
+            "name": "subject",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "과목 전체",
+                "value": ""
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학",
+                "value": "T0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학",
+                "value": "T0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "공통수학1",
+                "value": "C1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "공통수학2",
+                "value": "C2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "기본수학1",
+                "value": "B1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "기본수학2",
+                "value": "B2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학1",
+                "value": "T1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학2",
+                "value": "T2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "대수",
+                "value": "A0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "미적분1",
+                "value": "D1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "미적분2",
+                "value": "D2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "확률과통계",
+                "value": "S0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "기하",
+                "value": "G0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "직무수학",
+                "value": "P0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "인공지능수학",
+                "value": "I0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학과 문화",
+                "value": "U0"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "수학",
+                "value": "T0"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "id": "gradeSelect",
+            "name": "grade",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "학년 전체",
+                "value": ""
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "중학1",
+                "value": "1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "고등1",
+                "value": "1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등1",
+                "value": "1"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "중학2",
+                "value": "2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등2",
+                "value": "2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "고등2",
+                "value": "2"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "고등3",
+                "value": "3"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "중학3",
+                "value": "3"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등3",
+                "value": "3"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "고등 공통",
+                "value": "4"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등4",
+                "value": "4"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등5",
+                "value": "5"
+              },
+              {
+                "disabled": true,
+                "hidden": true,
+                "text": "초등6",
+                "value": "6"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "term",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "학기 전체",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "공통학기",
+                "value": "0"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "1학기",
+                "value": "1"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "2학기",
+                "value": "2"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "registDays",
+            "readOnly": false,
+            "required": false,
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "registStart",
+            "readOnly": false,
+            "required": false,
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "registEnd",
+            "readOnly": false,
+            "required": false,
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "",
+            "readOnly": true,
+            "required": false,
+            "type": "text",
+            "value": ""
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "W"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "P"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "R"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "M"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "Y"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "D"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "maxLength": -1,
+            "name": "statuses",
+            "readOnly": false,
+            "required": false,
+            "type": "checkbox",
+            "value": "F"
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "pageSize",
+            "options": [
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "10개씩 보기",
+                "value": "10"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "30개씩 보기",
+                "value": "30"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "50개씩 보기",
+                "value": "50"
+              },
+              {
+                "disabled": false,
+                "hidden": false,
+                "text": "100개씩 보기",
+                "value": "100"
+              }
+            ],
+            "required": false,
+            "type": "select-one",
+            "value": "100"
+          }
+        ],
+        "headings": [
+          "디피니션 문항 등록"
+        ],
+        "modals": [],
+        "scroll": [
+          {
+            "clientHeight": 1071,
+            "scrollHeight": 1550,
+            "scrollTop": 0
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "시험지 ID",
+              "파일명",
+              "출처",
+              "과목",
+              "학년 · 학기",
+              "평가지 등록여부",
+              "상태",
+              "등록자 · 등록일"
+            ],
+            "id": "",
+            "rows": [
+              {
+                "cells": [
+                  "662",
+                  "QA-DIFI-20261109-02-DISCARD.zip",
+                  "22-E-MA-T0-3-2-DCL-FB-2025",
+                  "수학",
+                  "초등3 · 2학기",
+                  "-",
+                  "등록중",
+                  "jaehyuk.myung\n2026-11-09"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=662&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "QA-DIFI-20261109-02-DISCARD.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "661",
+                  "QA-DIFI-20261109-01.zip",
+                  "22-E-MA-T0-3-2-DCL-FB-2025",
+                  "수학",
+                  "초등3 · 2학기",
+                  "미등록",
+                  "승인",
+                  "jaehyuk.myung\n2026-11-09"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=661&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "QA-DIFI-20261109-01.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "530",
+                  "750774.zip",
+                  "22-E-MA-T0-3-2-DCL-FB-2025",
+                  "수학",
+                  "초등3 · 2학기",
+                  "미등록",
+                  "승인",
+                  "hari.im\n2026-10-15"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=530&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "750774.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "529",
+                  "750772.zip",
+                  "22-E-MA-T0-5-1-DCL-FB-2026",
+                  "수학",
+                  "초등5 · 1학기",
+                  "미등록",
+                  "승인",
+                  "hari.im\n2026-10-15"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=529&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "750772.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "430",
+                  "108093600.zip",
+                  "22-E-MA-T0-4-1-DCL-FB-2005",
+                  "수학",
+                  "초등4 · 1학기",
+                  "미등록",
+                  "승인",
+                  "jaehyuk.myung\n2026-10-12"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=430&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "108093600.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "299",
+                  "디피니션 문항 샘플.zip",
+                  "22-H-MA-B1-1-2-DCL-MA-2025",
+                  "기본수학1",
+                  "고등1 · 2학기",
+                  "-",
+                  "실패",
+                  "minhye.park\n2026-10-02"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=299&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "디피니션 문항 샘플.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "180",
+                  "DIFI_107131800.zip",
+                  "22-H-MA-S0-3-2-DCL-TW-2024",
+                  "확률과통계",
+                  "고등3 · 2학기",
+                  "-",
+                  "폐기",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=180&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "DIFI_107131800.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "179",
+                  "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "폐기",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=179&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-D] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "178",
+                  "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "폐기",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=178&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-D] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "175",
+                  "[MOCK-DIFI-F] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "-",
+                  "실패",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=175&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-F] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "174",
+                  "[MOCK-DIFI-X] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "폐기",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=174&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-X] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "173",
+                  "[MOCK-DIFI-A] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "승인",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=173&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-A] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "172",
+                  "[MOCK-DIFI-M] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "승인",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=172&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-M] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "171",
+                  "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "미등록",
+                  "승인",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=171&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-D] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "170",
+                  "[MOCK-DIFI-P] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "-",
+                  "등록중",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=170&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-P] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "169",
+                  "[MOCK-DIFI-W] 템플릿_시험지2.zip",
+                  "22-H-MA-D1-2-1-DCL-MS-2024",
+                  "미적분1",
+                  "고등2 · 1학기",
+                  "-",
+                  "등록대기",
+                  "sangwon.jo\n2026-09-23"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=169&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "[MOCK-DIFI-W] 템플릿_시험지2.zip"
+                  }
+                ]
+              },
+              {
+                "cells": [
+                  "3",
+                  "6학년_수학_분수의곱셈_01.zip",
+                  "22-E-MA-T0-1-1-TCD-MN-2022",
+                  "수학",
+                  "초등1 · 1학기",
+                  "미등록",
+                  "승인",
+                  "sangwon.jo\n2026-08-07"
+                ],
+                "data": {},
+                "links": [
+                  {
+                    "href": "/item/difi/detail.donga?examDocumentId=3&curriculum=22&pageNum=1&pageSize=100",
+                    "text": "6학년_수학_분수의곱셈_01.zip"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tail": "\n조회\n10개씩 보기\n30개씩 보기\n50개씩 보기\n100개씩 보기\n검색결과 : 17건\nZIP 등록\n시험지 ID\t파일명\t출처\t과목\t학년 · 학기\t평가지 등록여부\t상태\t등록자 · 등록일\n662\tQA-DIFI-20261109-02-DISCARD.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t-\t등록중\t\njaehyuk.myung\n2026-11-09\n\n661\tQA-DIFI-20261109-01.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-09\n\n530\t750774.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t미등록\t승인\t\nhari.im\n2026-10-15\n\n529\t750772.zip\t22-E-MA-T0-5-1-DCL-FB-2026\t수학\t초등5 · 1학기\t미등록\t승인\t\nhari.im\n2026-10-15\n\n430\t108093600.zip\t22-E-MA-T0-4-1-DCL-FB-2005\t수학\t초등4 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-10-12\n\n299\t디피니션 문항 샘플.zip\t22-H-MA-B1-1-2-DCL-MA-2025\t기본수학1\t고등1 · 2학기\t-\t실패\t\nminhye.park\n2026-10-02\n\n180\tDIFI_107131800.zip\t22-H-MA-S0-3-2-DCL-TW-2024\t확률과통계\t고등3 · 2학기\t-\t폐기\t\nsangwon.jo\n2026-09-23\n\n179\t[MOCK-DIFI-D] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t폐기\t\nsangwon.jo\n2026-09-23\n\n178\t[MOCK-DIFI-D] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t폐기\t\nsangwon.jo\n2026-09-23\n\n175\t[MOCK-DIFI-F] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t-\t실패\t\nsangwon.jo\n2026-09-23\n\n174\t[MOCK-DIFI-X] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t폐기\t\nsangwon.jo\n2026-09-23\n\n173\t[MOCK-DIFI-A] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t승인\t\nsangwon.jo\n2026-09-23\n\n172\t[MOCK-DIFI-M] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t승인\t\nsangwon.jo\n2026-09-23\n\n171\t[MOCK-DIFI-D] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t미등록\t승인\t\nsangwon.jo\n2026-09-23\n\n170\t[MOCK-DIFI-P] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t-\t등록중\t\nsangwon.jo\n2026-09-23\n\n169\t[MOCK-DIFI-W] 템플릿_시험지2.zip\t22-H-MA-D1-2-1-DCL-MS-2024\t미적분1\t고등2 · 1학기\t-\t등록대기\t\nsangwon.jo\n2026-09-23\n\n3\t6학년_수학_분수의곱셈_01.zip\t22-E-MA-T0-1-1-TCD-MN-2022\t수학\t초등1 · 1학기\t미등록\t승인\t\nsangwon.jo\n2026-08-07\n총 17건 중 1∼17 표시\n1",
+        "title": "디피니션 문항 등록 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22&pageNum=1&pageSize=100",
+        "visibility": "hidden"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.113
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e21303": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e21304": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e21305": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e21306": {
+          "name": "디피니션 문항 등록",
+          "role": "heading"
+        },
+        "e21307": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21308": {
+          "name": " ZIP 등록",
+          "role": "link"
+        },
+        "e21309": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e21310": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e21311": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e21312": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e21313": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e21314": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e21315": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e21316": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e21317": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e21318": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21319": {
+          "name": "시험지 ID / 파일명 / 출처코드 / 등록자 ID",
+          "role": "textbox"
+        },
+        "e21320": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21321": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21322": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21323": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21324": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21325": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e21326": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21327": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21328": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21329": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21330": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21331": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21332": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21333": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e21334": {
+          "name": "시작일 ~ 종료일",
+          "role": "textbox"
+        },
+        "e21335": {
+          "name": "7일",
+          "role": "button"
+        },
+        "e21336": {
+          "name": "30일",
+          "role": "button"
+        },
+        "e21337": {
+          "name": "90일",
+          "role": "button"
+        },
+        "e21338": {
+          "name": "전체",
+          "role": "button"
+        },
+        "e21339": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e21340": {
+          "name": "등록대기",
+          "role": "checkbox"
+        },
+        "e21341": {
+          "name": "등록중",
+          "role": "checkbox"
+        },
+        "e21342": {
+          "name": "초안",
+          "role": "checkbox"
+        },
+        "e21343": {
+          "name": "메타추천중",
+          "role": "checkbox"
+        },
+        "e21344": {
+          "name": "승인",
+          "role": "checkbox"
+        },
+        "e21345": {
+          "name": "폐기",
+          "role": "checkbox"
+        },
+        "e21346": {
+          "name": "실패",
+          "role": "checkbox"
+        },
+        "e21347": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e21348": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e21349": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e21350": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e21351": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e21352": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e21353": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e21354": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e21355": {
+          "name": "1",
+          "role": "link"
+        },
+        "e21356": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e21357": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e21358": {
+          "name": "시험지 ID",
+          "role": "option"
+        },
+        "e21359": {
+          "name": "파일명",
+          "role": "option"
+        },
+        "e21360": {
+          "name": "출처코드",
+          "role": "option"
+        },
+        "e21361": {
+          "name": "등록자 ID",
+          "role": "option"
+        },
+        "e21362": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e21363": {
+          "name": "22",
+          "role": "option"
+        },
+        "e21364": {
+          "name": "15",
+          "role": "option"
+        },
+        "e21365": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e21366": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e21367": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e21368": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e21369": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e21370": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e21371": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e21372": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e21373": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e21374": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e21375": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e21376": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e21377": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e21378": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e21379": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e21380": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e21381": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e21382": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e21383": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e21384": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e21385": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e21386": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e21387": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e21388": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e21389": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e21390": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e21391": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e21392": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e21393": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e21394": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e21395": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e21396": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e21397": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e21398": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e21399": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e21400": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e21401": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e21402": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e21403": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e21404": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e21405": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e21406": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e21407": {
+          "name": "662",
+          "role": "cell"
+        },
+        "e21408": {
+          "name": "QA-DIFI-20261109-02-DISCARD.zip",
+          "role": "cell"
+        },
+        "e21409": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e21410": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21411": {
+          "name": "초등3 · 2학기",
+          "role": "cell"
+        },
+        "e21412": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21413": {
+          "name": "등록중",
+          "role": "cell"
+        },
+        "e21414": {
+          "name": "jaehyuk.myung 2026-11-09",
+          "role": "cell"
+        },
+        "e21415": {
+          "name": "661",
+          "role": "cell"
+        },
+        "e21416": {
+          "name": "QA-DIFI-20261109-01.zip",
+          "role": "cell"
+        },
+        "e21417": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e21418": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21419": {
+          "name": "초등3 · 2학기",
+          "role": "cell"
+        },
+        "e21420": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21421": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21422": {
+          "name": "jaehyuk.myung 2026-11-09",
+          "role": "cell"
+        },
+        "e21423": {
+          "name": "530",
+          "role": "cell"
+        },
+        "e21424": {
+          "name": "750774.zip",
+          "role": "cell"
+        },
+        "e21425": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e21426": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21427": {
+          "name": "초등3 · 2학기",
+          "role": "cell"
+        },
+        "e21428": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21429": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21430": {
+          "name": "hari.im 2026-10-15",
+          "role": "cell"
+        },
+        "e21431": {
+          "name": "529",
+          "role": "cell"
+        },
+        "e21432": {
+          "name": "750772.zip",
+          "role": "cell"
+        },
+        "e21433": {
+          "name": "22-E-MA-T0-5-1-DCL-FB-2026",
+          "role": "cell"
+        },
+        "e21434": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21435": {
+          "name": "초등5 · 1학기",
+          "role": "cell"
+        },
+        "e21436": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21437": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21438": {
+          "name": "hari.im 2026-10-15",
+          "role": "cell"
+        },
+        "e21439": {
+          "name": "430",
+          "role": "cell"
+        },
+        "e21440": {
+          "name": "108093600.zip",
+          "role": "cell"
+        },
+        "e21441": {
+          "name": "22-E-MA-T0-4-1-DCL-FB-2005",
+          "role": "cell"
+        },
+        "e21442": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21443": {
+          "name": "초등4 · 1학기",
+          "role": "cell"
+        },
+        "e21444": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21445": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21446": {
+          "name": "jaehyuk.myung 2026-10-12",
+          "role": "cell"
+        },
+        "e21447": {
+          "name": "299",
+          "role": "cell"
+        },
+        "e21448": {
+          "name": "디피니션 문항 샘플.zip",
+          "role": "cell"
+        },
+        "e21449": {
+          "name": "22-H-MA-B1-1-2-DCL-MA-2025",
+          "role": "cell"
+        },
+        "e21450": {
+          "name": "기본수학1",
+          "role": "cell"
+        },
+        "e21451": {
+          "name": "고등1 · 2학기",
+          "role": "cell"
+        },
+        "e21452": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21453": {
+          "name": "실패",
+          "role": "cell"
+        },
+        "e21454": {
+          "name": "minhye.park 2026-10-02",
+          "role": "cell"
+        },
+        "e21455": {
+          "name": "180",
+          "role": "cell"
+        },
+        "e21456": {
+          "name": "DIFI_107131800.zip",
+          "role": "cell"
+        },
+        "e21457": {
+          "name": "22-H-MA-S0-3-2-DCL-TW-2024",
+          "role": "cell"
+        },
+        "e21458": {
+          "name": "확률과통계",
+          "role": "cell"
+        },
+        "e21459": {
+          "name": "고등3 · 2학기",
+          "role": "cell"
+        },
+        "e21460": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21461": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e21462": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21463": {
+          "name": "179",
+          "role": "cell"
+        },
+        "e21464": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21465": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21466": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21467": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21468": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21469": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e21470": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21471": {
+          "name": "178",
+          "role": "cell"
+        },
+        "e21472": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21473": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21474": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21475": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21476": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21477": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e21478": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21479": {
+          "name": "175",
+          "role": "cell"
+        },
+        "e21480": {
+          "name": "[MOCK-DIFI-F] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21481": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21482": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21483": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21484": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21485": {
+          "name": "실패",
+          "role": "cell"
+        },
+        "e21486": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21487": {
+          "name": "174",
+          "role": "cell"
+        },
+        "e21488": {
+          "name": "[MOCK-DIFI-X] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21489": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21490": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21491": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21492": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21493": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e21494": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21495": {
+          "name": "173",
+          "role": "cell"
+        },
+        "e21496": {
+          "name": "[MOCK-DIFI-A] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21497": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21498": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21499": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21500": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21501": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21502": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21503": {
+          "name": "172",
+          "role": "cell"
+        },
+        "e21504": {
+          "name": "[MOCK-DIFI-M] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21505": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21506": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21507": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21508": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21509": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21510": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21511": {
+          "name": "171",
+          "role": "cell"
+        },
+        "e21512": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21513": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21514": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21515": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21516": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21517": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21518": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21519": {
+          "name": "170",
+          "role": "cell"
+        },
+        "e21520": {
+          "name": "[MOCK-DIFI-P] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21521": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21522": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21523": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21524": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21525": {
+          "name": "등록중",
+          "role": "cell"
+        },
+        "e21526": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21527": {
+          "name": "169",
+          "role": "cell"
+        },
+        "e21528": {
+          "name": "[MOCK-DIFI-W] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e21529": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e21530": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e21531": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e21532": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e21533": {
+          "name": "등록대기",
+          "role": "cell"
+        },
+        "e21534": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e21535": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e21536": {
+          "name": "6학년_수학_분수의곱셈_01.zip",
+          "role": "cell"
+        },
+        "e21537": {
+          "name": "22-E-MA-T0-1-1-TCD-MN-2022",
+          "role": "cell"
+        },
+        "e21538": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e21539": {
+          "name": "초등1 · 1학기",
+          "role": "cell"
+        },
+        "e21540": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e21541": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e21542": {
+          "name": "sangwon.jo 2026-08-07",
+          "role": "cell"
+        },
+        "e21543": {
+          "name": "시험지 ID",
+          "role": "columnheader"
+        },
+        "e21544": {
+          "name": "파일명",
+          "role": "columnheader"
+        },
+        "e21545": {
+          "name": "출처",
+          "role": "columnheader"
+        },
+        "e21546": {
+          "name": "과목",
+          "role": "columnheader"
+        },
+        "e21547": {
+          "name": "학년 · 학기",
+          "role": "columnheader"
+        },
+        "e21548": {
+          "name": "평가지 등록여부",
+          "role": "columnheader"
+        },
+        "e21549": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e21550": {
+          "name": "등록자 · 등록일",
+          "role": "columnheader"
+        },
+        "e21551": {
+          "name": "QA-DIFI-20261109-02-DISCARD.zip",
+          "role": "link"
+        },
+        "e21552": {
+          "name": "QA-DIFI-20261109-01.zip",
+          "role": "link"
+        },
+        "e21553": {
+          "name": "750774.zip",
+          "role": "link"
+        },
+        "e21554": {
+          "name": "750772.zip",
+          "role": "link"
+        },
+        "e21555": {
+          "name": "108093600.zip",
+          "role": "link"
+        },
+        "e21556": {
+          "name": "디피니션 문항 샘플.zip",
+          "role": "link"
+        },
+        "e21557": {
+          "name": "DIFI_107131800.zip",
+          "role": "link"
+        },
+        "e21558": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21559": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21560": {
+          "name": "[MOCK-DIFI-F] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21561": {
+          "name": "[MOCK-DIFI-X] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21562": {
+          "name": "[MOCK-DIFI-A] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21563": {
+          "name": "[MOCK-DIFI-M] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21564": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21565": {
+          "name": "[MOCK-DIFI-P] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21566": {
+          "name": "[MOCK-DIFI-W] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e21567": {
+          "name": "6학년_수학_분수의곱셈_01.zip",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e21218",
+        "@e21219",
+        "@e21220",
+        "@e21221",
+        "@e21222",
+        "@e21223",
+        "@e21224",
+        "@e21225",
+        "@e21226",
+        "@e21227",
+        "@e21228",
+        "@e21229",
+        "@e21230",
+        "@e21231",
+        "@e21232",
+        "@e21233",
+        "@e21234",
+        "@e21236",
+        "@e21237",
+        "@e21238",
+        "@e21239",
+        "@e21240",
+        "@e21241",
+        "@e21242",
+        "@e21243",
+        "@e21244",
+        "@e21245",
+        "@e21246",
+        "@e21247",
+        "@e21248",
+        "@e21249",
+        "@e21250",
+        "@e21251",
+        "@e21252",
+        "@e21253",
+        "@e21254",
+        "@e21255",
+        "@e21256",
+        "@e21257",
+        "@e21258",
+        "@e21259",
+        "@e21260",
+        "@e21261",
+        "@e21262",
+        "@e21263",
+        "@e21264",
+        "@e21265",
+        "@e21266",
+        "@e21267",
+        "@e21268",
+        "@e21269",
+        "@e21270",
+        "@e21271",
+        "@e21272",
+        "@e21273",
+        "@e21274",
+        "@e21275",
+        "@e21276",
+        "@e21277",
+        "@e21278",
+        "@e21279",
+        "@e21280",
+        "@e21281",
+        "@e21282",
+        "@e21283",
+        "@e21284",
+        "@e21285",
+        "@e21286",
+        "@e21287",
+        "@e21288",
+        "@e21289",
+        "@e21290",
+        "@e21291",
+        "@e21292",
+        "@e21293",
+        "@e21294",
+        "@e21295",
+        "@e21296",
+        "@e21297",
+        "@e21298",
+        "@e21299",
+        "@e21300",
+        "@e21301",
+        "@e21302"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e21303]\n      - link \"문제은행 마스터 CMS\" [ref=e21304]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e21309]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e21310]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e21311]\n          - link \"HML 문항 등록\" [ref=e21312]\n          - link \"디피니션 문항 등록\" [ref=e21313]\n          - link \"쌍둥이 그룹 관리\" [ref=e21314]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e21315]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e21316]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e21317]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e21305]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n      - heading \"디피니션 문항 등록\" [level=2, ref=e21306]\n      - generic\n        - combobox [expanded=false, ref=e21318]: 시험지 ID\n          - MenuListPopup\n            - option \"시험지 ID\" [selected, ref=e21358]\n            - option \"파일명\" [ref=e21359]\n            - option \"출처코드\" [ref=e21360]\n            - option \"등록자 ID\" [ref=e21361]\n        - textbox \"시험지 ID / 파일명 / 출처코드 / 등록자 ID\" [ref=e21319]\n        - combobox [expanded=false, ref=e21320]: 22\n          - MenuListPopup\n            - option \"교육과정 전체\" [ref=e21362]\n            - option \"22\" [selected, ref=e21363]\n            - option \"15\" [ref=e21364]\n        - combobox [expanded=false, ref=e21321]: 학교급 전체\n          - MenuListPopup\n            - option \"학교급 전체\" [selected, ref=e21365]\n            - option \"초등\" [ref=e21366]\n            - option \"중학\" [ref=e21367]\n            - option \"고등\" [ref=e21368]\n        - combobox [expanded=false, ref=e21322]: 과목군 전체\n          - MenuListPopup\n            - option \"과목군 전체\" [selected, ref=e21369]\n            - option \"수학군\" [ref=e21370]\n        - combobox [expanded=false, disabled, ref=e21323]: 과목 전체\n          - MenuListPopup\n            - option \"과목 전체\" [disabled, ref=e21371]\n            - option \"수학\" [disabled, ref=e21372]\n            - option \"수학\" [disabled, ref=e21373]\n            - option \"공통수학1\" [disabled, ref=e21374]\n            - option \"공통수학2\" [disabled, ref=e21375]\n            - option \"기본수학1\" [disabled, ref=e21376]\n            - option \"기본수학2\" [disabled, ref=e21377]\n            - option \"수학1\" [disabled, ref=e21378]\n            - option \"수학2\" [disabled, ref=e21379]\n            - option \"대수\" [disabled, ref=e21380]\n            - option \"미적분1\" [disabled, ref=e21381]\n            - option \"미적분2\" [disabled, ref=e21382]\n            - option \"확률과통계\" [disabled, ref=e21383]\n            - option \"기하\" [disabled, ref=e21384]\n            - option \"직무수학\" [disabled, ref=e21385]\n            - option \"인공지능수학\" [disabled, ref=e21386]\n            - option \"수학과 문화\" [disabled, ref=e21387]\n            - option \"수학\" [disabled, ref=e21388]\n        - combobox [expanded=false, disabled, ref=e21324]: 학년 전체\n          - MenuListPopup\n            - option \"학년 전체\" [disabled, ref=e21389]\n            - option \"중학1\" [disabled, ref=e21390]\n            - option \"고등1\" [disabled, ref=e21391]\n            - option \"초등1\" [disabled, ref=e21392]\n            - option \"중학2\" [disabled, ref=e21393]\n            - option \"초등2\" [disabled, ref=e21394]\n            - option \"고등2\" [disabled, ref=e21395]\n            - option \"고등3\" [disabled, ref=e21396]\n            - option \"중학3\" [disabled, ref=e21397]\n            - option \"초등3\" [disabled, ref=e21398]\n            - option \"고등 공통\" [disabled, ref=e21399]\n            - option \"초등4\" [disabled, ref=e21400]\n            - option \"초등5\" [disabled, ref=e21401]\n            - option \"초등6\" [disabled, ref=e21402]\n        - combobox [expanded=false, ref=e21325]: 학기 전체\n          - MenuListPopup\n            - option \"학기 전체\" [selected, ref=e21403]\n            - option \"공통학기\" [ref=e21404]\n            - option \"1학기\" [ref=e21405]\n            - option \"2학기\" [ref=e21406]\n        - StaticText \"등록일\"\n        - generic\n          - textbox \"시작일 ~ 종료일\" [ref=e21334]\n          - StaticText \"\"\n        - generic\n          - button \"7일\" [ref=e21335]\n          - button \"30일\" [ref=e21336]\n          - button \"90일\" [ref=e21337]\n          - button \"전체\" [ref=e21338]\n        - StaticText \"상태\"\n        - LabelText [ref=e21326] clickable [cursor:pointer]\n          - checkbox \"전체\" [checked=true, ref=e21339]\n          - StaticText \"전체\"\n        - LabelText [ref=e21327] clickable [cursor:pointer]\n          - checkbox \"등록대기\" [checked=true, ref=e21340]\n          - StaticText \"등록대기\"\n        - LabelText [ref=e21328] clickable [cursor:pointer]\n          - checkbox \"등록중\" [checked=true, ref=e21341]\n          - StaticText \"등록중\"\n        - LabelText [ref=e21329] clickable [cursor:pointer]\n          - checkbox \"초안\" [checked=true, ref=e21342]\n          - StaticText \"초안\"\n        - LabelText [ref=e21330] clickable [cursor:pointer]\n          - checkbox \"메타추천중\" [checked=true, ref=e21343]\n          - StaticText \"메타추천중\"\n        - LabelText [ref=e21331] clickable [cursor:pointer]\n          - checkbox \"승인\" [checked=true, ref=e21344]\n          - StaticText \"승인\"\n        - LabelText [ref=e21332] clickable [cursor:pointer]\n          - checkbox \"폐기\" [checked=true, ref=e21345]\n          - StaticText \"폐기\"\n        - LabelText [ref=e21333] clickable [cursor:pointer]\n          - checkbox \"실패\" [checked=true, ref=e21346]\n          - StaticText \"실패\"\n        - generic\n          - button \" 초기화\" [ref=e21347]\n            - StaticText \"\"\n            - StaticText \"초기화\"\n          - button \" 조회\" [ref=e21348]\n            - StaticText \"\"\n            - StaticText \"조회\"\n      - generic\n        - combobox [expanded=false, ref=e21307]: 100개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [ref=e21349]\n            - option \"30개씩 보기\" [ref=e21350]\n            - option \"50개씩 보기\" [ref=e21351]\n            - option \"100개씩 보기\" [selected, ref=e21352]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"17\"\n        - StaticText \"건\"\n        - link \" ZIP 등록\" [ref=e21308]\n          - StaticText \"\"\n          - StaticText \"ZIP 등록\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"시험지 ID\" [ref=e21543]\n              - columnheader \"파일명\" [ref=e21544]\n              - columnheader \"출처\" [ref=e21545]\n              - columnheader \"과목\" [ref=e21546]\n              - columnheader \"학년 · 학기\" [ref=e21547]\n              - columnheader \"평가지 등록여부\" [ref=e21548]\n              - columnheader \"상태\" [ref=e21549]\n              - columnheader \"등록자 · 등록일\" [ref=e21550]\n          - row\n            - cell \"662\" [ref=e21407]\n            - cell \"QA-DIFI-20261109-02-DISCARD.zip\" [ref=e21408]\n              - link \"QA-DIFI-20261109-02-DISCARD.zip\" [ref=e21551]\n            - cell \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e21409]\n            - cell \"수학\" [ref=e21410]\n            - cell \"초등3 · 2학기\" [ref=e21411]\n            - cell \"-\" [ref=e21412]\n            - cell \"등록중\" [ref=e21413]\n            - cell \"jaehyuk.myung 2026-11-09\" [ref=e21414]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-11-09\"\n          - row\n            - cell \"661\" [ref=e21415]\n            - cell \"QA-DIFI-20261109-01.zip\" [ref=e21416]\n              - link \"QA-DIFI-20261109-01.zip\" [ref=e21552]\n            - cell \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e21417]\n            - cell \"수학\" [ref=e21418]\n            - cell \"초등3 · 2학기\" [ref=e21419]\n            - cell \"미등록\" [ref=e21420]\n            - cell \"승인\" [ref=e21421]\n            - cell \"jaehyuk.myung 2026-11-09\" [ref=e21422]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-11-09\"\n          - row\n            - cell \"530\" [ref=e21423]\n            - cell \"750774.zip\" [ref=e21424]\n              - link \"750774.zip\" [ref=e21553]\n            - cell \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e21425]\n            - cell \"수학\" [ref=e21426]\n            - cell \"초등3 · 2학기\" [ref=e21427]\n            - cell \"미등록\" [ref=e21428]\n            - cell \"승인\" [ref=e21429]\n            - cell \"hari.im 2026-10-15\" [ref=e21430]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-15\"\n          - row\n            - cell \"529\" [ref=e21431]\n            - cell \"750772.zip\" [ref=e21432]\n              - link \"750772.zip\" [ref=e21554]\n            - cell \"22-E-MA-T0-5-1-DCL-FB-2026\" [ref=e21433]\n            - cell \"수학\" [ref=e21434]\n            - cell \"초등5 · 1학기\" [ref=e21435]\n            - cell \"미등록\" [ref=e21436]\n            - cell \"승인\" [ref=e21437]\n            - cell \"hari.im 2026-10-15\" [ref=e21438]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-15\"\n          - row\n            - cell \"430\" [ref=e21439]\n            - cell \"108093600.zip\" [ref=e21440]\n              - link \"108093600.zip\" [ref=e21555]\n            - cell \"22-E-MA-T0-4-1-DCL-FB-2005\" [ref=e21441]\n            - cell \"수학\" [ref=e21442]\n            - cell \"초등4 · 1학기\" [ref=e21443]\n            - cell \"미등록\" [ref=e21444]\n            - cell \"승인\" [ref=e21445]\n            - cell \"jaehyuk.myung 2026-10-12\" [ref=e21446]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-10-12\"\n          - row\n            - cell \"299\" [ref=e21447]\n            - cell \"디피니션 문항 샘플.zip\" [ref=e21448]\n              - link \"디피니션 문항 샘플.zip\" [ref=e21556]\n            - cell \"22-H-MA-B1-1-2-DCL-MA-2025\" [ref=e21449]\n            - cell \"기본수학1\" [ref=e21450]\n            - cell \"고등1 · 2학기\" [ref=e21451]\n            - cell \"-\" [ref=e21452]\n            - cell \"실패\" [ref=e21453]\n            - cell \"minhye.park 2026-10-02\" [ref=e21454]\n              - StaticText \"minhye.park\"\n              - StaticText \"2026-10-02\"\n          - row\n            - cell \"180\" [ref=e21455]\n            - cell \"DIFI_107131800.zip\" [ref=e21456]\n              - link \"DIFI_107131800.zip\" [ref=e21557]\n            - cell \"22-H-MA-S0-3-2-DCL-TW-2024\" [ref=e21457]\n            - cell \"확률과통계\" [ref=e21458]\n            - cell \"고등3 · 2학기\" [ref=e21459]\n            - cell \"-\" [ref=e21460]\n            - cell \"폐기\" [ref=e21461]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21462]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"179\" [ref=e21463]\n            - cell \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21464]\n              - link \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21558]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21465]\n            - cell \"미적분1\" [ref=e21466]\n            - cell \"고등2 · 1학기\" [ref=e21467]\n            - cell \"미등록\" [ref=e21468]\n            - cell \"폐기\" [ref=e21469]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21470]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"178\" [ref=e21471]\n            - cell \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21472]\n              - link \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21559]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21473]\n            - cell \"미적분1\" [ref=e21474]\n            - cell \"고등2 · 1학기\" [ref=e21475]\n            - cell \"미등록\" [ref=e21476]\n            - cell \"폐기\" [ref=e21477]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21478]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"175\" [ref=e21479]\n            - cell \"[MOCK-DIFI-F] 템플릿_시험지2.zip\" [ref=e21480]\n              - link \"[MOCK-DIFI-F] 템플릿_시험지2.zip\" [ref=e21560]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21481]\n            - cell \"미적분1\" [ref=e21482]\n            - cell \"고등2 · 1학기\" [ref=e21483]\n            - cell \"-\" [ref=e21484]\n            - cell \"실패\" [ref=e21485]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21486]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"174\" [ref=e21487]\n            - cell \"[MOCK-DIFI-X] 템플릿_시험지2.zip\" [ref=e21488]\n              - link \"[MOCK-DIFI-X] 템플릿_시험지2.zip\" [ref=e21561]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21489]\n            - cell \"미적분1\" [ref=e21490]\n            - cell \"고등2 · 1학기\" [ref=e21491]\n            - cell \"미등록\" [ref=e21492]\n            - cell \"폐기\" [ref=e21493]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21494]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"173\" [ref=e21495]\n            - cell \"[MOCK-DIFI-A] 템플릿_시험지2.zip\" [ref=e21496]\n              - link \"[MOCK-DIFI-A] 템플릿_시험지2.zip\" [ref=e21562]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21497]\n            - cell \"미적분1\" [ref=e21498]\n            - cell \"고등2 · 1학기\" [ref=e21499]\n            - cell \"미등록\" [ref=e21500]\n            - cell \"승인\" [ref=e21501]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21502]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"172\" [ref=e21503]\n            - cell \"[MOCK-DIFI-M] 템플릿_시험지2.zip\" [ref=e21504]\n              - link \"[MOCK-DIFI-M] 템플릿_시험지2.zip\" [ref=e21563]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21505]\n            - cell \"미적분1\" [ref=e21506]\n            - cell \"고등2 · 1학기\" [ref=e21507]\n            - cell \"미등록\" [ref=e21508]\n            - cell \"승인\" [ref=e21509]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21510]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"171\" [ref=e21511]\n            - cell \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21512]\n              - link \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e21564]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21513]\n            - cell \"미적분1\" [ref=e21514]\n            - cell \"고등2 · 1학기\" [ref=e21515]\n            - cell \"미등록\" [ref=e21516]\n            - cell \"승인\" [ref=e21517]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21518]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"170\" [ref=e21519]\n            - cell \"[MOCK-DIFI-P] 템플릿_시험지2.zip\" [ref=e21520]\n              - link \"[MOCK-DIFI-P] 템플릿_시험지2.zip\" [ref=e21565]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21521]\n            - cell \"미적분1\" [ref=e21522]\n            - cell \"고등2 · 1학기\" [ref=e21523]\n            - cell \"-\" [ref=e21524]\n            - cell \"등록중\" [ref=e21525]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21526]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"169\" [ref=e21527]\n            - cell \"[MOCK-DIFI-W] 템플릿_시험지2.zip\" [ref=e21528]\n              - link \"[MOCK-DIFI-W] 템플릿_시험지2.zip\" [ref=e21566]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e21529]\n            - cell \"미적분1\" [ref=e21530]\n            - cell \"고등2 · 1학기\" [ref=e21531]\n            - cell \"-\" [ref=e21532]\n            - cell \"등록대기\" [ref=e21533]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e21534]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"3\" [ref=e21535]\n            - cell \"6학년_수학_분수의곱셈_01.zip\" [ref=e21536]\n              - link \"6학년_수학_분수의곱셈_01.zip\" [ref=e21567]\n            - cell \"22-E-MA-T0-1-1-TCD-MN-2022\" [ref=e21537]\n            - cell \"수학\" [ref=e21538]\n            - cell \"초등1 · 1학기\" [ref=e21539]\n            - cell \"미등록\" [ref=e21540]\n            - cell \"승인\" [ref=e21541]\n            - cell \"sangwon.jo 2026-08-07\" [ref=e21542]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-08-07\"\n        - generic\n          - StaticText \"총 17건 중 1∼17 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e21353]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e21354]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e21355]\n          - listitem [level=1]\n            - link \"다음\" [ref=e21356]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e21357]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.289
+  }
+}

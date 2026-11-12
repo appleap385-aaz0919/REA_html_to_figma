@@ -1,0 +1,22 @@
+{
+  "schemaVersion":1,
+  "date":"2026-11-09",
+  "status":"in_progress",
+  "evidenceRange":[942,1001],
+  "testItemId":2088985,
+  "savedDetailId":2088700,
+  "observations":[
+    {"code":"OBSACN","evidence":[942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958],"result":"Switching category selects default single N-choice form,5circled labels and no checked answer. Two added rows are blank. At7Add disabled (is enabled=false948). Selected seventh radio then deleted it; all remaining radios false951. Deleted down to2; both Delete buttons disabled (is enabled=false957). Inputs are editable text with DOMmaxLength=-1; no general HTML length limit inferred from that alone."},
+    {"code":"OBSACN","evidence":[959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976],"result":"Labels Alpha/Beta accepted. Missing radio blocks Preview with 정답을 선택해주세요. Duplicate Alpha blocks with 같은 값이 있습니다(Alpha). Empty second label blocks with 빈 값이 있습니다. Value-kind menu shows general text available; math editor/image URL disabled. Preview shows numeric buttons1/2 although serialized option values are Alpha/Beta."},
+    {"code":"OBSACN","evidence":[977,978,979,980,981,982,983,984,985,986,987],"result":"Student button2 wrong980;button1 correct983. Answer view highlights correct position. Client serialization987 contains options textAlpha/Beta and VALUE allowed textAlpha, confirming display index versus stored label distinction."},
+    {"code":"OBSACN","evidence":[988,989,990,991,992,993,994,995,996,997,998,999,1000,1001],"result":"Full apply990 creates Master detail2088700. Reentry restores2labels Alpha/Beta, first selected, same serialized data. Internal-container bottom verified241+1015=1256 at1000. Rendered form captured999/1001."}
+  ],
+  "validationMessages":[
+    {"case":"No selected correct answer","message":"OMR 미리보기 불가\n정답을 선택해주세요.","evidence":962},
+    {"case":"Duplicate text","message":"OMR 미리보기 불가\n같은 값이 있습니다(Alpha).","evidence":967},
+    {"case":"Empty label","message":"OMR 미리보기 불가\n빈 값이 있습니다.","evidence":970}
+  ],
+  "crossChannelObservation":"Question HTML viewer still displays five choice labels while OMR is two Alpha/Beta options, including after full apply. This case confirms that those counts were not forced equal here. Intended count-matching policy is not established; do not automatically label the permitted test state a production defect.",
+  "qualityNotes":["Toast stacking970 includes both preceding duplicate and current blank warnings; preserve action order and exact text.","14 leaf normal apply/restoration coverage now means at least one selected flow per known leaf, not every branch, validation, data shape or whole CMS completion.","Evidence labels now support3-5digits for continued investigation; historical labels are unchanged."],
+  "remaining":["OBSACN whitespace/case/long-label behavior, other persistence counts and reconciliation policy with HTML choices.","Untested branches across all14OMR leaves.","HML four editor slots, remaining Master modules and deployment/service propagation."]
+}

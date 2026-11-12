@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1310-source-test-edit-link",
+  "startedUtc": "2026-11-09T05:10:41.916118+00:00",
+  "command": [
+    "get",
+    "attr",
+    "@e8881",
+    "href"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/product/detail.donga?curriculum=22&pageNum=1&pageSize=10&id=199"
+    },
+    "error": null,
+    "localSeconds": 0.123
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/detail.donga?curriculum=22&pageNum=1&pageSize=10&id=199",
+      "value": "/product/modify.donga?id=199&curriculum=22&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.089
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/detail.donga?curriculum=22&pageNum=1&pageSize=10&id=199",
+      "refs": {
+        "e8877": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e8878": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e8879": {
+          "name": "출처 상세",
+          "role": "heading"
+        },
+        "e8880": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e8881": {
+          "name": "수정",
+          "role": "link"
+        },
+        "e8882": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e8883": {
+          "name": "기본 정보 (출처ID : 199)",
+          "role": "heading"
+        },
+        "e8884": {
+          "name": "비고",
+          "role": "heading"
+        },
+        "e8885": {
+          "name": "시스템 정보",
+          "role": "heading"
+        },
+        "e8886": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8887": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8888": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8889": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8890": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8891": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8892": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8893": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8894": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8895": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8896": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8897": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8898": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8899": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e8900": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e8901": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e8902": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e8903": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e8904": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8905": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8906": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8907": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e8908": {
+          "name": "",
+          "role": "textbox"
+        }
+      },
+      "removedRefs": [
+        "@e8876"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e8877]\n      - link \"문제은행 마스터 CMS\" [ref=e8878]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e8899]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e8900]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e8901]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e8902]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e8903]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e8882]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"출처 상세\" [level=2, ref=e8879]\n      - generic\n        - heading \"기본 정보 (출처ID : 199)\" [level=3, ref=e8883]\n          - StaticText \"기본 정보 (출처ID : 199)\"\n        - generic\n          - LabelText\n            - StaticText \"교육과정\"\n          - textbox [disabled, ref=e8886]: 22\n            - StaticText \"22\"\n          - LabelText\n            - StaticText \"학교급\"\n          - textbox [disabled, ref=e8887]: 중학\n            - StaticText \"중학\"\n          - LabelText\n            - StaticText \"과목군\"\n          - textbox [disabled, ref=e8888]: 수학군\n            - StaticText \"수학군\"\n          - LabelText\n            - StaticText \"과목\"\n          - textbox [disabled, ref=e8889]: 수학\n            - StaticText \"수학\"\n          - LabelText\n            - StaticText \"학년\"\n          - textbox [disabled, ref=e8890]: 중학1\n            - StaticText \"중학1\"\n          - LabelText\n            - StaticText \"학기\"\n          - textbox [disabled, ref=e8891]: 1학기\n            - StaticText \"1학기\"\n          - LabelText\n            - StaticText \"교재명\"\n          - textbox [disabled, ref=e8892]: 수매씽 유형\n            - StaticText \"수매씽 유형\"\n          - LabelText\n            - StaticText \"교재 세부명\"\n          - textbox [disabled, ref=e8893]: 유형북\n            - StaticText \"유형북\"\n          - LabelText\n            - StaticText \"판형\"\n          - textbox [disabled, ref=e8894]: 2049\n            - StaticText \"2049\"\n          - LabelText\n            - StaticText \"출처코드\"\n          - generic\n            - textbox [disabled, ref=e8904]: 22-M-MA-T0-1-1-SMT-TP-2049\n              - StaticText \"22-M-MA-T0-1-1-SMT-TP-2049\"\n            - StaticText \"\"\n          - LabelText\n            - StaticText \"출처명\"\n          - generic\n            - textbox [disabled, ref=e8905]: 22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2049\n              - StaticText \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2049\"\n            - StaticText \"\"\n          - LabelText\n            - StaticText \"서비스 노출명\"\n          - textbox [disabled, ref=e8895]: QA-SOURCE-20261109\n            - StaticText \"QA-SOURCE-20261109\"\n          - LabelText\n            - StaticText \"용도\"\n          - textbox [disabled, ref=e8896]: 공통\n            - StaticText \"공통\"\n          - LabelText\n            - StaticText \"사용 여부\"\n          - textbox [disabled, ref=e8897]: 미사용\n            - StaticText \"미사용\"\n      - generic\n        - heading \"비고\" [level=3, ref=e8884]\n        - textbox [disabled, ref=e8898]: QA investigation source 2026-11-09; no mapped questions.\n          - StaticText \"QA investigation source 2026-11-09; no mapped questions.\"\n      - generic\n        - heading \"시스템 정보\" [level=3, ref=e8885]\n        - LabelText\n          - StaticText \"등록\"\n        - generic\n          - textbox [disabled, ref=e8906]: jaehyuk.myung · 2026-11-09 14:09\n            - StaticText \"jaehyuk.myung · 2026-11-09 14:09\"\n          - StaticText \"\"\n        - LabelText\n          - StaticText \"수정\"\n        - generic\n          - textbox [disabled, ref=e8907]: -\n            - StaticText \"-\"\n          - StaticText \"\"\n        - LabelText\n          - StaticText \"매핑 문항 수\"\n        - generic\n          - textbox [disabled, ref=e8908]: 0\n            - StaticText \"0\"\n          - StaticText \"\"\n      - link \"목록\" [ref=e8880]\n      - link \"수정\" [ref=e8881]"
+    },
+    "error": null,
+    "localSeconds": 0.279
+  }
+}

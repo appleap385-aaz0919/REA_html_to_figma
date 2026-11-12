@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2289-own-paper1093-remove-failed-member-local-confirm",
+  "startedUtc": "2026-11-10T00:13:18.722492+00:00",
+  "command": [
+    "eval",
+    "(async()=>{const modal=document.querySelector('#removeGroupModal.show');if(new URLSearchParams(location.search).get('paperId')!=='1093'||!modal||document.querySelectorAll('.modal.show').length!==1||!modal.querySelector('[data-remove-target]').innerText.includes('2089215'))throw Error('Exact own failed group required');const hidden=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Remove hidden timeout')),5000);modal.addEventListener('hidden.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});});modal.querySelector('[data-action-ok]').click();await hidden;return {remainingItemIds:[...document.querySelectorAll('#paperItemTable [name=itemIds]')].map(e=>e.value),removeDisabled:document.querySelector('#paperItemTable [data-remove-group]').matches(':disabled'),persistentSaveSubmitted:false};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1093&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.081
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1093&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "persistentSaveSubmitted": false,
+        "remainingItemIds": [
+          "2089216"
+        ],
+        "removeDisabled": true
+      }
+    },
+    "error": null,
+    "localSeconds": 0.396
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1093&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e30226": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e30227": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e30228": {
+          "name": "평가지 수정",
+          "role": "heading"
+        },
+        "e30229": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e30230": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e30231": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e30232": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e30233": {
+          "name": "포함 문항 (1)",
+          "role": "heading"
+        },
+        "e30234": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e30235": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e30236": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e30237": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e30238": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e30239": {
+          "name": " 문항 추가",
+          "role": "button"
+        },
+        "e30249": {
+          "name": "",
+          "role": "cell"
+        },
+        "e30250": {
+          "name": "1",
+          "role": "cell"
+        },
+        "e30251": {
+          "name": "2089216",
+          "role": "cell"
+        },
+        "e30252": {
+          "name": "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$",
+          "role": "cell"
+        },
+        "e30253": {
+          "name": "객관식 > 단답형 > N지 선다",
+          "role": "cell"
+        },
+        "e30254": {
+          "name": "하",
+          "role": "cell"
+        },
+        "e30255": {
+          "name": "22MMAT0KOK1004040000",
+          "role": "cell"
+        },
+        "e30256": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e30257": {
+          "name": "제외",
+          "role": "cell"
+        },
+        "e30258": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e30259": {
+          "name": "664 | QA-HML-20261109-01-SET.hml",
+          "role": "link"
+        },
+        "e30260": {
+          "name": "예: 24",
+          "role": "spinbutton"
+        },
+        "e30261": {
+          "name": "예: 25",
+          "role": "spinbutton"
+        },
+        "e30262": {
+          "name": "",
+          "role": "columnheader"
+        },
+        "e30263": {
+          "name": "순서",
+          "role": "columnheader"
+        },
+        "e30264": {
+          "name": "문항 ID",
+          "role": "columnheader"
+        },
+        "e30265": {
+          "name": "문제",
+          "role": "columnheader"
+        },
+        "e30266": {
+          "name": "형태",
+          "role": "columnheader"
+        },
+        "e30267": {
+          "name": "난이도",
+          "role": "columnheader"
+        },
+        "e30268": {
+          "name": "단원 코드",
+          "role": "columnheader"
+        },
+        "e30269": {
+          "name": "문항 상태",
+          "role": "columnheader"
+        },
+        "e30270": {
+          "name": "제외",
+          "role": "columnheader"
+        },
+        "e30273": {
+          "name": "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$",
+          "role": "link"
+        },
+        "e30274": {
+          "name": "제외",
+          "role": "button"
+        },
+        "e30275": {
+          "name": "초안",
+          "role": "radio"
+        },
+        "e30276": {
+          "name": "사용",
+          "role": "radio"
+        },
+        "e30277": {
+          "name": "미사용",
+          "role": "radio"
+        },
+        "e30278": {
+          "name": "폐기",
+          "role": "radio"
+        },
+        "e30279": {
+          "name": "공통",
+          "role": "radio"
+        },
+        "e30280": {
+          "name": "교사용",
+          "role": "radio"
+        }
+      },
+      "removedRefs": [
+        "@e30240",
+        "@e30241",
+        "@e30242",
+        "@e30243",
+        "@e30244",
+        "@e30245",
+        "@e30246",
+        "@e30247",
+        "@e30248",
+        "@e30271",
+        "@e30272",
+        "@e30282",
+        "@e30283",
+        "@e30284",
+        "@e30285"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e30226]\n      - link \"문제은행 마스터 CMS\" [ref=e30227]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e30234]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e30235]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e30236]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e30237]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e30238]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e30229]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"수정\"\n      - heading \"평가지 수정\" [level=2, ref=e30228]\n      - form\n        - generic\n          - heading \"기본 정보\" [level=3, ref=e30232]\n          - DescriptionList\n            - term \"평가지 ID\"\n            - definition\n              - StaticText \"1093 (1101)\"\n            - term \"평가지명 *\"\n              - StaticText \"평가지명\"\n              - StaticText \"*\"\n            - definition\n              - textbox [required, ref=e30258]: QA-HML-20261109-01-SET\n                - StaticText \"QA-HML-20261109-01-SET\"\n            - term \"상태\"\n            - definition\n              - LabelText\n                - radio \"초안\" [checked=false, ref=e30275]\n                - StaticText \"초안\"\n              - LabelText\n                - radio \"사용\" [checked=true, ref=e30276]\n                - StaticText \"사용\"\n              - LabelText\n                - radio \"미사용\" [checked=false, ref=e30277]\n                - StaticText \"미사용\"\n              - LabelText\n                - radio \"폐기\" [checked=false, ref=e30278]\n                - StaticText \"폐기\"\n            - term \"생성 방식\"\n            - definition\n              - StaticText \"HML 생성\"\n            - term \"단원 코드\"\n            - definition\n              - StaticText \"[22MMAT0KOK1004040000]\"\n              - StaticText \"22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 반비례와 그 그래프 > >\"\n            - term \"등록\"\n            - definition\n              - StaticText \"jaehyuk.myung · 2026-11-09\"\n          - DescriptionList\n            - term \"시험지\"\n            - definition\n              - link \"664 | QA-HML-20261109-01-SET.hml\" [ref=e30259]\n            - term \"출처\"\n            - definition\n              - StaticText \"[22-M-MA-T0-1-1-SMT-TP-2022]\"\n              - StaticText \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022\"\n            - term \"페이지 *\"\n              - StaticText \"페이지\"\n              - StaticText \"*\"\n            - definition\n              - spinbutton \"예: 24\" [required, ref=e30260]: 2\n                - StaticText \"2\"\n              - StaticText \"~\"\n              - spinbutton \"예: 25\" [required, ref=e30261]: 22\n                - StaticText \"22\"\n            - term \"용도 *\"\n              - StaticText \"용도\"\n              - StaticText \"*\"\n            - definition\n              - LabelText\n                - radio \"공통\" [checked=false, ref=e30279]\n                - StaticText \"공통\"\n              - LabelText\n                - radio \"교사용\" [checked=true, ref=e30280]\n                - StaticText \"교사용\"\n            - term \"문제 구성\"\n            - definition\n              - StaticText \"객관식 > 단답형 > N지 선다 (1)\"\n            - term \"문항 수\"\n            - definition\n              - StaticText \"1문항\"\n        - generic\n          - heading \"포함 문항 (1)\" [level=3, ref=e30233]\n            - StaticText \"포함 문항 (\"\n            - StaticText \"1\"\n            - StaticText \")\"\n          - button \" 문항 추가\" [ref=e30239]\n            - StaticText \"\"\n            - StaticText \"문항 추가\"\n          - table\n            - rowgroup\n              - row\n                - columnheader [ref=e30262]\n                - columnheader \"순서\" [ref=e30263]\n                - columnheader \"문항 ID\" [ref=e30264]\n                - columnheader \"문제\" [ref=e30265]\n                - columnheader \"형태\" [ref=e30266]\n                - columnheader \"난이도\" [ref=e30267]\n                - columnheader \"단원 코드\" [ref=e30268]\n                - columnheader \"문항 상태\" [ref=e30269]\n                - columnheader \"제외\" [ref=e30270]\n            - row\n              - cell \"\" [ref=e30249]\n                - StaticText \"\"\n              - cell \"1\" [ref=e30250]\n              - cell \"2089216\" [ref=e30251]\n                - StaticText \"2089216\"\n              - cell \"다음 중 그림과 같은 반비례 관계 $y=\\\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$\" [ref=e30252]\n                - link \"다음 중 그림과 같은 반비례 관계 $y=\\\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$\" [ref=e30273]\n              - cell \"객관식 > 단답형 > N지 선다\" [ref=e30253]\n              - cell \"하\" [ref=e30254]\n              - cell \"22MMAT0KOK1004040000\" [ref=e30255]\n                - StaticText \"22MMAT0KOK1004040000\"\n              - cell \"승인(사용)\" [ref=e30256]\n              - cell \"제외\" [ref=e30257]\n                - button \"제외\" [disabled, ref=e30274]\n                  - StaticText \"\"\n        - link \"취소\" [ref=e30230]\n        - button \"저장\" [ref=e30231]"
+    },
+    "error": null,
+    "localSeconds": 0.126
+  }
+}

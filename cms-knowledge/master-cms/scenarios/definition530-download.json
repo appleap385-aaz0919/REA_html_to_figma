@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"1891-definition530-download-open","command":["open","https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=530&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1892-definition530-download-before","command":["eval","(() => {if(location.pathname!=='/item/difi/detail.donga'||new URLSearchParams(location.search).get('examDocumentId')!=='530')throw Error('Expected known Definition530');const b=document.querySelector('[data-download-url]');return {url:location.href,visibility:document.visibilityState,download:b?{text:b.innerText,path:b.dataset.downloadUrl,name:b.dataset.downloadName}:null,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText)};})()"]},
+ {"label":"1893-definition530-original-download","command":["download","button[data-download-name='750774.zip']","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/definition530-original-20261109.zip"]},
+ {"label":"1894-definition530-download-after","command":["snapshot"]}
+],"tailChars":400}

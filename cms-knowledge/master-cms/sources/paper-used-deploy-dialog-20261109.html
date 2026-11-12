@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>평가지 상세 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>
+<body class="modal-open" style="overflow: hidden; padding-right: 0px;">
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item  active">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">평가지 관리</li>
+    
+    <li class="breadcrumb-item">상세</li>
+</ol>
+        <div class="d-flex align-items-center gap-2">
+            <h2 class="page-title mb-0">평가지 상세</h2>
+        </div>
+    </div>
+
+    <div class="card mt-3 mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">기본 정보</h3>
+        </div>
+        <div class="card-body">
+            <div class="row g-3 gx-5">
+
+                <div class="col-md-6">
+                    <dl class="row mb-0 dl-detail">
+                        <dt class="col-2 form-label fw-semibold mb-0">평가지 ID</dt>
+                        
+                        <dd class="col-10">332 (379)</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">평가지명</dt>
+                        <dd class="col-10">[MOCK-HML-M] 템플릿_시험지2 (복제1)+</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">상태</dt>
+                        <dd class="col-10">사용</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">생성 방식</dt>
+                        <dd class="col-10">HML 생성</dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">단원 코드</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            <div class="mb-2">
+                                <div>[22MMAT0KOK1002050000]</div>
+                                <div class="text-secondary">22 &gt; 중학 &gt; 수학군 &gt; 수학 &gt; 강옥기 &gt; 중학1 &gt; 공통학기 &gt; 정수와 유리수 &gt; 정수와 유리수의 곱셈 &gt;  &gt; </div>
+                            </div>
+                            <div>
+                                <div>[22MMAT0KOK1003040000]</div>
+                                <div class="text-secondary">22 &gt; 중학 &gt; 수학군 &gt; 수학 &gt; 강옥기 &gt; 중학1 &gt; 공통학기 &gt; 문자의 사용과 식 &gt; 일차식의 덧셈과 뺄셈 &gt;  &gt; </div>
+                            </div>
+                            
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">등록</dt>
+                        <dd class="col-10">sangwon.jo · 2026-10-19</dd>
+                    </dl>
+                </div>
+
+                <div class="col-md-6">
+                    <dl class="row mb-0 dl-detail">
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">시험지</dt>
+                        <dd class="col-10">
+                            <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/hml/detail.donga?examDocumentId=431">431 | [MOCK-HML-M] 템플릿_시험지2.hml</a>
+                            
+                        </dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">출처</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            <div class="mb-2">
+                                <div>[22-M-MA-T0-1-0-DCL-MA-2025]</div>
+                                <div class="text-secondary">22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025</div>
+                            </div>
+                            <div>
+                                <div>[22-H-MA-C1-1-0-DCL-KI-2025]</div>
+                                <div class="text-secondary">22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025</div>
+                            </div>
+                            
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">페이지</dt>
+                        <dd class="col-10">2 ~ 21</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">용도</dt>
+                        <dd class="col-10">교사용</dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">문제 구성</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            <div>주관식 &gt; 단답형 &gt; 일반형 (1)</div>
+                            <div>서술형 &gt; 단답형 &gt; 단답 서술형 (1)</div>
+                            
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">문항 수</dt>
+                        <dd class="col-10">2문항</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">배포</h3>
+            
+            <div class="card-actions">
+                
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperDeployModal"><i class="ti ti-upload me-1"></i>배포하기</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table card-table table-vcenter" style="table-layout: fixed;">
+                <thead>
+                <tr>
+                    <th class="text-center">서비스</th>
+                    <th class="text-center" style="width: 12%;">배포 버전</th>
+                    <th class="text-center" style="width: 12%;">승인 여부</th>
+                    <th class="text-center" style="width: 12%;">서비스 상태</th>
+                    <th class="text-center" style="width: 14%;">최근 배포</th>
+                    <th class="text-center" style="width: 20%;">배포</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>AI출제마법사 CMS</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                        
+                        -
+                    </td>
+                    <td class="text-center">
+                        
+                        
+                        
+                            <div>불가</div>
+                            <a class="btn btn-sm mt-1" target="_blank" rel="noopener" href="/item/all/list.donga?keywordType=itemId&amp;keyword=2087725,2087727">미배포 문항 2건 조회</a>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>개발 서비스</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                        
+                        -
+                    </td>
+                    <td class="text-center">
+                        
+                        
+                        
+                            <div>불가</div>
+                            <a class="btn btn-sm mt-1" target="_blank" rel="noopener" href="/item/all/list.donga?keywordType=itemId&amp;keyword=2087725,2087727">미배포 문항 2건 조회</a>
+                        
+                    </td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">포함 문항 (2)</h3>
+        </div>
+        <div class="table-responsive">
+            <table class="table card-table table-vcenter" style="table-layout: fixed;">
+                <thead>
+                <tr>
+                    <th class="text-center" style="width: 5%;">순서</th>
+                    <th class="text-center" style="width: 10%;">문항 ID</th>
+                    <th class="text-center">문제</th>
+                    <th class="text-center" style="width: 15%;">형태</th>
+                    <th class="text-center" style="width: 5%;">난이도</th>
+                    <th class="text-center" style="width: 18%;">단원 코드</th>
+                    <th class="text-center" style="width: 8%;">문항 상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center">
+                        <div>2087725</div>
+                        
+                    </td>
+                    <td class="text-truncate" title="$- \dfrac{5}{2} a+4+ \dfrac{1}{3} a- \dfrac{8}{3}$을 간단히 하시오.">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087725">$- \dfrac{5}{2} a+4+ \dfrac{1}{3} a- \dfrac{8}{3}$을 간단히 하시오.</a>
+                    </td>
+                    <td class="text-center">주관식 &gt; 단답형 &gt; 일반형</td>
+                    <td class="text-center">하</td>
+                    <td class="text-center">
+                        
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1003040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 문자의 사용과 식 &amp;gt; 일차식의 덧셈과 뺄셈 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22MMAT0KOK1003040000</div>
+
+                    </td>
+                    <td class="text-center">승인(사용)</td>
+                </tr>
+                
+                <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-center">
+                        <div>2087727</div>
+                        
+                    </td>
+                    <td class="text-truncate" title="$xy&lt;0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오.">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087727">$xy&lt;0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오.</a>
+                    </td>
+                    <td class="text-center">서술형 &gt; 단답형 &gt; 단답 서술형</td>
+                    <td class="text-center">하</td>
+                    <td class="text-center">
+                        
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1002050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 정수와 유리수 &amp;gt; 정수와 유리수의 곱셈 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22MMAT0KOK1002050000</div>
+
+                    </td>
+                    <td class="text-center">승인(사용)</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-2 mb-3">
+        <a class="btn" data-loading="" href="/paper/list.donga?curriculum=22&amp;pageNum=1&amp;pageSize=30">목록</a>
+        <a class="btn btn-primary" data-loading="" href="/paper/modify.donga?paperId=332&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30">수정</a>
+        
+        
+    </div>
+
+    
+    
+    <div>
+    <div class="modal modal-blur fade show" id="paperDeployModal" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-info-circle text-primary"></i><span>평가지 배포</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3">선택한 서비스에 배포하시겠습니까?</div>
+                    <form id="paperDeployBody" hx-swap="none" hx-post="/paper/deploy.donga">
+            <input type="hidden" name="paperId" value="332">
+            
+            <div class="border rounded p-3 mb-3">
+                <div class="fw-semibold">포함 문항 2개가 모두 배포됩니다.</div>
+                <div class="small mt-1">※ 마스터에서 폐기된 문항은 제외하고 배포됩니다.</div>
+            </div>
+            <div class="form-label">배포 대상</div>
+            <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                <label class="form-selectgroup-item flex-fill">
+                    <input class="form-selectgroup-input" type="checkbox" name="deployTargets" value="DOUCLASS" disabled="disabled">
+                    <div class="form-selectgroup-label d-flex align-items-center p-3">
+                        <div class="me-3">
+                            <span class="form-selectgroup-check"></span>
+                        </div>
+                        <div class="form-selectgroup-label-content text-start">
+                            <div>AI출제마법사 CMS</div>
+                            <div class="text-secondary small">불가 · 미배포 문항 2건</div>
+                        </div>
+                    </div>
+                </label><label class="form-selectgroup-item flex-fill">
+                    <input class="form-selectgroup-input" type="checkbox" name="deployTargets" value="DEVSERVICE" disabled="disabled">
+                    <div class="form-selectgroup-label d-flex align-items-center p-3">
+                        <div class="me-3">
+                            <span class="form-selectgroup-check"></span>
+                        </div>
+                        <div class="form-selectgroup-label-content text-start">
+                            <div>개발 서비스</div>
+                            <div class="text-secondary small">불가 · 미배포 문항 2건</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+            
+            
+        </form>
+                </div>
+                <div class="modal-footer py-2"><div class="text-warning small me-auto d-none" id="paperDeployRedeployNotice">※ 재배포 대상이 포함되어 있습니다.</div>
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok="" disabled="">배포</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <script>
+        (function () {
+            const modalEl = document.getElementById('paperDeployModal');
+            const form = document.getElementById('paperDeployBody');
+            const okButton = modalEl.querySelector('[data-action-ok]');
+            const redeployNotice = document.getElementById('paperDeployRedeployNotice');
+            modalEl.querySelector('.modal-footer').prepend(redeployNotice);
+
+            function syncSelection() {
+                okButton.disabled = !form.querySelector('input[name="deployTargets"]:checked');
+                redeployNotice.classList.toggle('d-none', !form.querySelector('input[data-redeploy]:checked'));
+            }
+
+            form.addEventListener('change', syncSelection);
+            modalEl.addEventListener('show.bs.modal', function () {
+                form.reset();
+                syncSelection();
+            });
+
+            okButton.addEventListener('click', function () {
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+                form.requestSubmit();
+            });
+
+            // 사이트 판정 결과(성공 · 일부 실패 · 전부 실패)는 다시 읽음(카드에 새 상태) — 토스트는 재로드로 사라지므로 세션에 담아 넘김. 그 밖의 반려는 공통 처리가 바로 띄우고 화면 유지
+            form.addEventListener('htmx:afterRequest', function (e) {
+                const trigger = e.detail.xhr.getResponseHeader('HX-Trigger');
+                if (!trigger) return;
+
+                const result = JSON.parse(trigger).deployed;
+                if (!result) return;
+
+                if (result.successMessage) toastAfterMove(result.successMessage);
+                if (result.failMessage) toastAfterMove(result.failMessage, 'danger');
+                showLoadingOverlay();
+                location.reload();
+            });
+        })();
+    </script>
+    
+
+    
+    <script>
+    document.addEventListener('mouseover', function (e) {
+        const trigger = e.target.closest('[data-bs-toggle="tooltip"]');
+        if (trigger && window.bootstrap) bootstrap.Tooltip.getOrCreateInstance(trigger).show();
+    });
+</script>
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+
+
+<div class="modal-backdrop fade show"></div></body></html>

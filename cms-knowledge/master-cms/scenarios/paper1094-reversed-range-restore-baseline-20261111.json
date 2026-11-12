@@ -1,0 +1,59 @@
+{
+  "steps": [
+    {
+      "label": "3467-paper1094-reversed-range-persisted-detail",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "3468-paper1094-reversed-range-normal-modify-for-restore",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/paper/detail.donga'||new URL(location.href).searchParams.get('paperId')!=='1094'||document.querySelector('.page-wrapper dl dt')?.nextElementSibling?.textContent.trim()!=='1094 (1190)')throw Error('Expected newly saved test paper');const links=[...document.querySelectorAll('a[href]')].filter(e=>{const u=new URL(e.href);return u.pathname==='/paper/modify.donga'&&u.searchParams.get('paperId')==='1094';});if(links.length!==1||links[0].matches('.disabled'))throw Error('Own paper modify unavailable');links[0].click();return {clicked:true};})()"
+      ]
+    },
+    {
+      "label": "3469-paper1094-reversed-range-restore-input-preflight",
+      "command": [
+        "eval",
+        "(()=>{const f=document.querySelector('#paperModifyForm');if(location.pathname!=='/paper/modify.donga'||f?.elements.paperId.value!=='1094'||f.elements.startPageNum.value!=='2'||f.elements.endPageNum.value!=='1'||f.elements.viewFlag.value!=='R'||f.elements.serviceUsage.value!=='C')throw Error('Expected persisted reverse range and baseline metadata');return {id:f.elements.paperId.value,start:f.elements.startPageNum.value,end:f.elements.endPageNum.value};})()"
+      ]
+    },
+    {
+      "label": "3470-paper1094-reversed-range-restore-start1",
+      "command": [
+        "fill",
+        "#paperModifyForm input[name=startPageNum]",
+        "1"
+      ]
+    },
+    {
+      "label": "3471-paper1094-reversed-range-restore-save-once",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper1094-restore-baseline-save-once.js"
+      ]
+    },
+    {
+      "label": "3472-paper1094-reversed-range-restored-detail",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "3473-paper1094-reversed-range-final-independent-readback",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper1094-reversed-range-independent-read.js"
+      ]
+    }
+  ],
+  "tailChars": 100
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2255-own-set-child-apply-prevalidation-only",
+  "startedUtc": "2026-11-09T23:54:44.450334+00:00",
+  "command": [
+    "eval",
+    "(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242'||document.querySelector('.modal.show'))throw Error('Own clean modify only');const buttons=[...document.querySelectorAll('button')].filter(e=>e.innerText.trim()==='전체 반영'&&e.getClientRects().length);if(buttons.length!==1||buttons[0].matches(':disabled'))throw Error('Expected actual full apply entry');buttons[0].click();return {clickedEntryOnly:true,finalConfirmClicked:false,visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),activeTabs:[...document.querySelectorAll('.nav-tabs [role=tab].active')].map(e=>e.innerText)};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.131
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: Expected actual full apply entry\n    at <anonymous>:1:380\n    at <anonymous>:1:764",
+    "localSeconds": 0.148
+  }
+}

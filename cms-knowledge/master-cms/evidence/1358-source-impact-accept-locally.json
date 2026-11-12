@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1358-source-impact-accept-locally",
+  "startedUtc": "2026-11-09T05:23:05.554079+00:00",
+  "command": [
+    "eval",
+    "(() => {const m=document.querySelector('#mappingImpactModal.show');if(!m)throw Error('Modal missing');m.querySelector('[data-action-ok]').click();return {action:'Accept N locally; no form Save'};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/product/modify.donga?id=134&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.056
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: Modal missing\n    at <anonymous>:1:80\n    at <anonymous>:1:198",
+    "localSeconds": 0.095
+  }
+}

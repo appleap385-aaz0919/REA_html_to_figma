@@ -1,0 +1,21 @@
+{"steps":[
+ {"label":"1333-source-duplicate-form-open","command":["open","https://dev-exambank.dongahub.com/product/form.donga?curriculum=22&pageNum=1&pageSize=10"]},
+ {"label":"1334-source-duplicate-curriculum","command":["select","#curriculumSelect","22"]},
+ {"label":"1335-source-duplicate-school","command":["select","#classTypeSelect","M"]},
+ {"label":"1336-source-duplicate-subject-category","command":["select","#subjectCategorySelect","MA"]},
+ {"label":"1337-source-duplicate-subject","command":["select","#subjectSelect","T0"]},
+ {"label":"1338-source-duplicate-grade","command":["select","#gradeSelect","1"]},
+ {"label":"1339-source-duplicate-term","command":["select","#termSelect","1"]},
+ {"label":"1340-source-duplicate-textbook","command":["select","#productCategorySelect","SMT"]},
+ {"label":"1341-source-duplicate-subtype","command":["select","#productCategorySubSelect","TP"]},
+ {"label":"1342-source-duplicate-year","command":["select","select[name=publishYear]","2048"]},
+ {"label":"1343-source-duplicate-purpose","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"1344-source-duplicate-unused","command":["select","select[name=useFlag]","N"]},
+ {"label":"1345-source-duplicate-label","command":["fill","input[name=viewName]","QA-SOURCE-DUPLICATE-20261109"]},
+ {"label":"1346-source-duplicate-remark","command":["fill","textarea[name=remark]","QA duplicate-code probe for isolated source199; unused and unmapped."]},
+ {"label":"1347-source-duplicate-form-values","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"1348-source-duplicate-submit","command":["eval","--file","sources/runtime/source-submit-duplicate-test.js"]},
+ {"label":"1349-source-duplicate-readback","command":["snapshot"]},
+ {"label":"1350-source-duplicate-response-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1351-source-duplicate-inventory","command":["eval","--file","sources/runtime/source-read-inventory.js"]}
+],"tailChars":1800}

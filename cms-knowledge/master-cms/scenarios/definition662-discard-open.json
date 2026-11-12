@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"1970-definition662-discard-reason-fill","command":["fill","textarea[name=remark]","QA-DIFI-20261109-02-DISCARD: isolated development test of final document discard."]},
+ {"label":"1971-definition662-final-discard-open","command":["eval","(async()=>{if(location.pathname!=='/item/difi/detail.donga'||new URLSearchParams(location.search).get('examDocumentId')!=='662'||document.querySelector('[data-exam-judge]')?.dataset.itemIds!=='2089204'||document.querySelector('.modal.show'))throw Error('Expected isolated QA662 draft');const m=document.getElementById('examDiscardModal');await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Discard modal did not finish opening')),3500);m.addEventListener('shown.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});document.querySelector('[data-exam-discard]').click();});return {modalId:m.id,text:m.innerText};})()"]},
+ {"label":"1972-definition662-discard-before-final","command":["eval","--file","sources/runtime/registration-page-observation.js"]}
+],"tailChars":700}

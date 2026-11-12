@@ -1,0 +1,6 @@
+(async()=>{
+ if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');
+ const path='/item/all/detail.donga?itemId=2088663',response=await fetch(path,{credentials:'same-origin'});const responsePath=new URL(response.url).pathname;if(!response.ok||response.redirected)return {path,httpStatus:response.status,redirected:response.redirected,responsePath};
+ const doc=new DOMParser().parseFromString(await response.text(),'text/html'),main=doc.querySelector('.page-wrapper');
+ return {path,httpStatus:response.status,responsePath,viewFlag:doc.querySelector('#statusForm [name="viewFlag"][checked]')?.value,values:[...main.querySelectorAll('dl dt')].map(e=>({label:e.textContent.trim(),value:e.nextElementSibling?.textContent.trim()})),downloadControls:[...main.querySelectorAll('[data-download-url]')].map(e=>{const u=new URL(e.dataset.downloadUrl,location.origin);return {name:e.dataset.downloadName,urlWithoutQuery:u.origin+u.pathname,hasQuery:!!u.search};}),links:[...main.querySelectorAll('a[href]')].filter(e=>/difi|definition|examDocumentId/.test(e.getAttribute('href'))).map(e=>({text:e.textContent.trim(),href:e.getAttribute('href')})),questionCardCount:main.querySelectorAll('.qv-item').length,passageHeadText:[...main.querySelectorAll('.qv-passage')].map(e=>e.textContent.replace(/\s+/g,' ').trim().slice(0,300))};
+})()

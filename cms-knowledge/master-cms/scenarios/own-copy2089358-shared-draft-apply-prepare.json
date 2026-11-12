@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2623-own-copy2089358-shared-draft-gate-open","command":["eval","--file","sources/runtime/own-copy2089358-shared-draft-gate-open.js"]},
+ {"label":"2624-own-copy2089358-shared-draft-version-choose","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#draftLoadModal.show'))throw Error('Own saved draft choice required');const button=document.getElementById('draftEditDraft');if(button.matches(':disabled'))throw Error('Draft choice unavailable');button.click();return {clicked:true,choice:'draft',itemId:2089358};})()"]},
+ {"label":"2625-own-copy2089358-shared-draft-html-tab-open","command":["eval","--file","sources/runtime/own-copy2089358-html-tab-open.js"]},
+ {"label":"2626-own-copy2089358-shared-draft-restored-review","command":["eval","--file","sources/runtime/own-copy2089358-shared-draft-review.js"]},
+ {"label":"2627-own-copy2089358-shared-draft-apply-confirm-open","command":["eval","--file","sources/runtime/own-copy2089358-shared-draft-apply-confirm-open.js"]},
+ {"label":"2628-own-copy2089358-shared-draft-apply-confirm-pixels","command":["snapshot"],"screenshot":true}
+],"tailChars":220}

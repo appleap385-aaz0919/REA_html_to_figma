@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "status": "source_empty_numeric_zero_link_and_reset_recovery_verified",
+  "evidenceRange": [
+    3382,
+    3389
+  ],
+  "lastEvidence": "3389-source-empty-page0-reset-and-query-recovery",
+  "summary": "Source curriculum15 normal search returned HTTP200 and 0 records at pageNum1. Numeric 0 remains enabled while four directional links have disabled CSS. Clicking the enabled numeric 0 sent a normal HTMX GET and returned HTTP200; URL became pageNum=0 and the empty result persisted. Reset changes filter fields to curriculum22 without changing the old fragment or URL. A separate normal Search restored pageNum1, 60 total, 10 displayed and own source199/unused/zero mappings. Empty screen PNG3385 viewed, page height equals viewport. Master93; no writes in this phase.",
+  "observations": [
+    {
+      "evidence": [
+        3385,
+        3386
+      ],
+      "result": "Page0 request and stable empty page confirmed."
+    },
+    {
+      "evidence": [
+        3387,
+        3388,
+        3389
+      ],
+      "result": "Reset alone only changes filter controls; Search reloads result and URL."
+    }
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageSize=10&pageNum=1",
+    "tab": "t8",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "pendingServerOperation": null,
+    "pendingVerification": null,
+    "unsavedState": null,
+    "savedDraft": null
+  },
+  "remaining": [
+    "Check Lab math empty Apply, Escape/backdrop and direct block insertion.",
+    "Check HML vendor-pending parent cancel.",
+    "Check reversed paper page range."
+  ],
+  "serviceDeployment": false
+}

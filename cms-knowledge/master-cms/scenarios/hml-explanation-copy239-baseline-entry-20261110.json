@@ -1,0 +1,9 @@
+{"steps":[
+ {"label":"3196-own-copy239-explanation-baseline-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"]},
+ {"label":"3197-own-copy239-explanation-family-baseline-controls","command":["eval","--file","sources/runtime/disposable-single-twin-original-controls-read.js"]},
+ {"label":"3198-own-copy239-explanation-baseline-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3199-own-copy239-explanation-normal-modify-open","command":["open","https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089239"]},
+ {"label":"3200-own-copy239-explanation-baseline-edit-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3201-own-copy239-explanation-hml-tab-open","command":["eval","(()=>{if(new URLSearchParams(location.search).get('itemId')!=='2089239'||document.querySelector('.modal.show'))throw Error('Clean own239 edit');document.querySelector('a[href=\"#tabHml\"]').click();return {clicked:true};})()"]},
+ {"label":"3202-own-copy239-explanation-file-slot-baseline","command":["eval","(()=>{const b=document.querySelector('[data-editor-url]');return {url:location.href,owner:b?{...b.dataset}:null,activeHml:document.querySelector('#tabHml').classList.contains('active'),slots:[...document.querySelectorAll('[data-webhwp-path]')].map(e=>({slot:e.dataset.webhwpPath,path:e.value})),pending:[...document.querySelectorAll('[data-webhwp-result]')].map(e=>({slot:e.dataset.webhwpResult,value:e.value})),omr:[...document.querySelectorAll('.omr-preview-btn')].map(e=>({data:{...e.dataset}})),statusInputs:[...document.querySelectorAll('[name=viewFlag]')].map(e=>({value:e.value,checked:e.checked,disabled:e.matches(':disabled')})),images:[...document.querySelectorAll('#tabHml img')].map(e=>({alt:e.alt,src:e.getAttribute('src'),loaded:e.complete&&e.naturalWidth>0}))};})()"]}
+],"tailChars":120}

@@ -1,0 +1,199 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e8751]
+      - link "문제은행 마스터 CMS" [ref=e8752]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e8759]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e8760]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e8761]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e8762]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e8763]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e8754]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "등록"
+      - heading "출처 등록" [level=2, ref=e8753]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e8757]
+          - generic
+            - LabelText
+              - StaticText "교육과정*"
+            - combobox [expanded=false, ref=e8764]: 22
+              - MenuListPopup
+                - option "교육과정 선택" [ref=e8779]
+                - option "22" [selected, ref=e8780]
+                - option "15" [ref=e8781]
+            - LabelText
+              - StaticText "학교급*"
+            - combobox [expanded=false, ref=e8765]: 중학
+              - MenuListPopup
+                - option "학교급 선택" [ref=e8782]
+                - option "초등" [ref=e8783]
+                - option "중학" [selected, ref=e8784]
+                - option "고등" [ref=e8785]
+            - LabelText
+              - StaticText "과목군*"
+            - combobox [expanded=false, ref=e8766]: 수학군
+              - MenuListPopup
+                - option "과목군 선택" [ref=e8854]
+                - option "수학군" [selected, ref=e8855]
+            - LabelText
+              - StaticText "과목*"
+            - combobox [expanded=false, ref=e8767]: 수학
+              - MenuListPopup
+                - option "과목 선택" [ref=e8863]
+                - option "수학" [selected, ref=e8864]
+            - LabelText
+              - StaticText "학년*"
+            - combobox [expanded=false, ref=e8768]: 중학1
+              - MenuListPopup
+                - option "학년 선택" [ref=e8857]
+                - option "중학1" [selected, ref=e8858]
+                - option "중학2" [ref=e8859]
+                - option "중학3" [ref=e8860]
+            - LabelText
+              - StaticText "학기*"
+            - combobox [expanded=false, ref=e8769]: 1학기
+              - MenuListPopup
+                - option "학기 선택" [disabled, ref=e8789]
+                - option "공통학기" [disabled, ref=e8790]
+                - option "1학기" [disabled, ref=e8791]
+                - option "2학기" [disabled, ref=e8792]
+            - LabelText
+              - StaticText "교재명*"
+            - combobox [expanded=false, ref=e8770]: 수매씽 유형
+              - MenuListPopup
+                - option "교재명 선택" [ref=e8865]
+                - option "수매씽 유형" [selected, ref=e8866]
+                - option "절대등급" [ref=e8867]
+                - option "수매씽 개념" [ref=e8868]
+                - option "특급기출" [ref=e8869]
+                - option "두클래스" [ref=e8870]
+                - option "교과서" [ref=e8871]
+            - LabelText
+              - StaticText "교재 세부명*"
+            - combobox [expanded=false, ref=e8771]: 교재 세부명 선택
+              - MenuListPopup
+                - option "교재 세부명 선택" [selected, ref=e8873]
+                - option "유형북" [ref=e8874]
+                - option "워크북" [ref=e8875]
+            - LabelText
+              - StaticText "판형*"
+            - combobox [expanded=false, ref=e8772]: 판형 선택
+              - MenuListPopup
+                - option "판형 선택" [selected, ref=e8795]
+                - option "2000" [ref=e8796]
+                - option "2001" [ref=e8797]
+                - option "2002" [ref=e8798]
+                - option "2003" [ref=e8799]
+                - option "2004" [ref=e8800]
+                - option "2005" [ref=e8801]
+                - option "2006" [ref=e8802]
+                - option "2007" [ref=e8803]
+                - option "2008" [ref=e8804]
+                - option "2009" [ref=e8805]
+                - option "2010" [ref=e8806]
+                - option "2011" [ref=e8807]
+                - option "2012" [ref=e8808]
+                - option "2013" [ref=e8809]
+                - option "2014" [ref=e8810]
+                - option "2015" [ref=e8811]
+                - option "2016" [ref=e8812]
+                - option "2017" [ref=e8813]
+                - option "2018" [ref=e8814]
+                - option "2019" [ref=e8815]
+                - option "2020" [ref=e8816]
+                - option "2021" [ref=e8817]
+                - option "2022" [ref=e8818]
+                - option "2023" [ref=e8819]
+                - option "2024" [ref=e8820]
+                - option "2025" [ref=e8821]
+                - option "2026" [ref=e8822]
+                - option "2027" [ref=e8823]
+                - option "2028" [ref=e8824]
+                - option "2029" [ref=e8825]
+                - option "2030" [ref=e8826]
+                - option "2031" [ref=e8827]
+                - option "2032" [ref=e8828]
+                - option "2033" [ref=e8829]
+                - option "2034" [ref=e8830]
+                - option "2035" [ref=e8831]
+                - option "2036" [ref=e8832]
+                - option "2037" [ref=e8833]
+                - option "2038" [ref=e8834]
+                - option "2039" [ref=e8835]
+                - option "2040" [ref=e8836]
+                - option "2041" [ref=e8837]
+                - option "2042" [ref=e8838]
+                - option "2043" [ref=e8839]
+                - option "2044" [ref=e8840]
+                - option "2045" [ref=e8841]
+                - option "2046" [ref=e8842]
+                - option "2047" [ref=e8843]
+                - option "2048" [ref=e8844]
+                - option "2049" [ref=e8845]
+                - option "2050" [ref=e8846]
+            - LabelText
+              - StaticText "출처코드"
+            - generic
+              - textbox "자동생성" [disabled, ref=e8777]
+              - StaticText ""
+            - LabelText
+              - StaticText "출처명"
+            - generic
+              - textbox "자동생성" [disabled, ref=e8778]
+              - StaticText ""
+            - LabelText
+              - StaticText "서비스 노출명"
+            - textbox [ref=e8773]
+            - LabelText
+              - StaticText "용도*"
+            - combobox [expanded=false, ref=e8774]: 용도 선택
+              - MenuListPopup
+                - option "용도 선택" [selected, ref=e8847]
+                - option "공통" [ref=e8848]
+                - option "교사용" [ref=e8849]
+            - LabelText
+              - StaticText "사용 여부"
+            - combobox [expanded=false, ref=e8775]: 사용
+              - MenuListPopup
+                - option "사용" [selected, ref=e8850]
+                - option "미사용" [ref=e8851]
+        - generic
+          - heading "비고" [level=3, ref=e8758]
+          - textbox [ref=e8776]
+        - link "취소" [ref=e8755]
+        - button "저장" [ref=e8756]

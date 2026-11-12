@@ -1,0 +1,77 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13540]
+      - link "문제은행 마스터 CMS" [ref=e13541]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13551]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13552]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13553]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13554]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13555]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13544]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e13542]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "편집기 격리 테스트 (기존 ↔ iframe)" [level=2, ref=e13543]
+    - StaticText "같은 문서를 지금 방식(페이지에 직접)과 iframe 안에 띄워 Tabler CSS 영향 · 편집기 API 동작을 비교. 탭마다 편집 상태가 따로 유지되고, [불러오기]만 두 탭을 처음 문서로 되돌린다."
+    - generic
+      - heading "문서 JSON" [level=3, ref=e13545]
+        - StaticText ""
+        - StaticText "문서 JSON"
+      - textbox "문항 · 지문 문서 컬럼 값을 그대로 붙여넣기" [ref=e13550]: {broken
+        - StaticText "{broken"
+      - button " 불러오기" [ref=e13546]
+        - StaticText ""
+        - StaticText "불러오기"
+      - button " getDocument 비교" [ref=e13547]
+        - StaticText ""
+        - StaticText "getDocument 비교"
+    - tablist
+      - tab "기존" [selected, ref=e13548]
+      - tab "iframe" [ref=e13549]
+    - tabpanel
+      - generic
+        - heading "문항 편집" [level=3, ref=e13556]
+          - StaticText ""
+          - StaticText "문항 편집"
+        - button "save()" [ref=e13557]
+        - button "getDocument()" [ref=e13558]
+        - button "객관식 켜기" [ref=e13559]
+        - button "객관식 끄기" [ref=e13560]
+        - button "destroy()" [ref=e13561]
+        - StaticText "-"
+      - generic
+        - heading "문항" [level=3, ref=e13562]
+          - StaticText ""
+          - StaticText "문항"
+        - button " 미리보기 다시 그리기" [ref=e13563]
+          - StaticText ""
+          - StaticText "미리보기 다시 그리기"
+  - alert [ref=e13564] clickable [cursor:pointer]
+    - StaticText ""
+    - StaticText "두 탭을 한 번씩 열어 편집기를 띄우세요"

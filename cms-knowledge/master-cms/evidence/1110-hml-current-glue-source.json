@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1110-hml-current-glue-source",
+  "startedUtc": "2026-11-09T04:10:48.784802+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/read-current-hml-glue.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "0EFB900C688AC111C33EDFA475104F9D",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.077
+  },
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+      "result": {
+        "assetStatus": 200,
+        "assetUrl": "https://dev-exambank.dongahub.com/js/webhwp/webhwp-e082bada3ae14916759b8d44db43d953.js",
+        "contentType": "text/javascript;charset=UTF-8",
+        "pageStatus": 200,
+        "pageUrl": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2088985&itemDetailId=2088701",
+        "source": "// 한컴 웹한글기안기 V2 글루. item/webhwp-editor.html 의 .webhwp-host 를 배선한다.\n// window.open 으로 뜨는 편집 창에서만 돈다.\n//\n// 구조: 이 창 → /webhwpctrl/resources/hwpctrlframe.html(동일 오리진) → 기안기 서버 프레임.\n// 로더 프레임이 동일 오리진이라 frame.contentWindow.HwpCtrl 로 API 를 직접 호출할 수 있다.\n//\n// 편집기는 이 창에 1벌뿐이다. 파일 전환은 인스턴스를 새로 만들지 않고 Open 으로 문서만 교체한다.\n// 저장하면 기안기가 벤더 서버의 임시 주소를 돌려준다. 그 주소를 부모 창에 넘기는 데까지가 이 파일의 몫이고,\n// 우리 저장소로 옮기는 것은 문항 저장 때 서버가 한다.\n(function () {\n    'use strict';\n\n    var FRAME_PATH = '/webhwpctrl/resources/hwpctrlframe.html';\n    // HML(HWPML 2.x) 파일이라 저장 포맷도 HWP 가 아닌 HWPML2X 여야 확장자와 내용이 맞는다\n    var HML_FORMAT = 'HWPML2X';\n\n    var hosts = {};\n\n    // 이 창이 어느 문항 것인지. 주소는 열릴 때 한 번 고정이라, 부모가 다른 문항으로 옮겨가도 따라 변하지 않는다\n    var owner = new URLSearchParams(location.search);\n\n    function toast(message, variant) {\n        if (window.showToast) window.showToast(message, variant || 'success');\n        else console.log('[webhwp] ' + message);\n    }\n\n    function ctrlOf(host) {\n        try {\n            return host.frame.contentWindow.HwpCtrl;\n        } catch (e) {\n            return null;\n        }\n    }\n\n    function setBusy(host, busy) {\n        host.busy = busy;\n        host.buttons.forEach(function (btn) {\n            // 파일이 없어 애초에 비활성인 버튼은 계속 비활성으로 둔다\n            if (btn.dataset.webhwpEmpty === 'true') return;\n            btn.disabled = busy || !host.ready;\n        });\n    }\n\n    function setStatus(host, text, variant) {\n        if (!host.status) return;\n        host.status.textContent = text || '';\n        host.status.className = 'text-secondary small mb-2' + (variant ? ' text-' + variant : '');\n    }\n\n    // iframe 은 한 번만 띄운다. 숨은 상태로 로드하면 기안기가 크기를 0 으로 잡는다.\n    function mount(host) {\n        if (host.mounted) return;\n        host.mounted = true;\n\n        setStatus(host, '기안기를 불러오는 중입니다...');\n        host.frame.src = FRAME_PATH + '?frameId=' + encodeURIComponent(host.frame.id);\n    }\n\n    // 열 파일의 출처는 부모 창이다. 이 창은 문항을 조회하지 않아 단독으로는 열 파일을 알 수 없다.\n    function hasOpener() {\n        try {\n            return !!window.opener && !window.opener.closed\n                && typeof window.opener.webhwpSlot === 'function';\n        } catch (e) {\n            return false;\n        }\n    }\n\n    function slotFromOpener(slot) {\n        try {\n            if (!window.opener || window.opener.closed) return null;\n            if (typeof window.opener.webhwpSlot !== 'function') return null;\n\n            return window.opener.webhwpSlot(slot);\n        } catch (e) {\n            return null;    // 오리진이 다르면 접근 자체가 막힌다\n        }\n    }\n\n    // 주소는 부모가 cdnBaseUrl 과 합쳐 넘겨준 값을 그대로 쓴다(JS 재조립 금지).\n    // 클릭할 때마다 부모에게 다시 묻는다 — 저장 직후 재편집이면 방금 결과를 열어야 한다.\n    function openFile(host, btn) {\n        if (!ctrlOf(host)) return;\n\n        var source = slotFromOpener(btn.dataset.slot);\n        var url = source && source.url;\n        if (!url && source && btn.hasAttribute('data-webhwp-new')) {\n            openBlank(host, btn);\n            return;\n        }\n        if (!url) {\n            toast('열 파일을 찾지 못했습니다.', 'warning');\n            return;\n        }\n\n        host.current = btn;\n        // 되저장할 원본 경로. 주소가 아니라 저장값이라 부모의 path 를 그대로 쓴다\n        host.filename = source.path || '';\n        // 저장 결과를 부모 창의 어느 칸에 넣을지 가르는 키(지문/지문해석/문제/해답)\n        host.slot = btn.dataset.slot || '';\n        markCurrent(host);\n\n        openUrl(host, url, function (name, res) { failOpen(host, name, res); });\n    }\n\n    // 기안기가 URL 을 직접 받아 스스로 가져온다. 포맷을 HWPML2X 로 명시해야 HML 로 해석한다.\n    // 열 슬롯(host.current/filename/slot)은 호출하는 쪽이 정해둔다.\n    function openUrl(host, url, onFail) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        // 기안기 내 파일은 localhost로 접근\n        url = url.replaceAll(\"https://dev-webhwp.dongahub.com/\", \"http://localhost:8080/\");\n\n        var name = url.split('?')[0].split('/').pop();\n\n        setBusy(host, true);\n        setStatus(host, name + ' 을(를) 여는 중입니다...');\n\n        var opened = ctrl.Open(url, HML_FORMAT, 'lock:false', function (res) {\n            // 성공 표시가 있을 때만 성공으로 본다(SaveAs·CreatePageImageEx 와 같은 방침)\n            if (res && res.result === true) {\n                setBusy(host, false);\n                setStatus(host, name + ' 을(를) 열었습니다.');\n            } else {\n                onFail(name, res);\n            }\n        });\n\n        // Open 은 내부 예외를 삼키고 false 를 돌려준다(webhwpctrl.js HwpCtrl.prototype.Open)\n        if (opened === false) onFail(name, opened);\n    }\n\n    // 창이 처음 뜨면 문제 파일부터 연다(가장 자주 고치는 파일). 파일이 없으면 열지 않는다 —\n    // 빈 문서를 문제 슬롯으로 잡아두면 의도 없이 누른 저장이 새 문제 파일을 만든다\n    function openInitial(host) {\n        var btn = host.fileButtons.filter(function (b) { return b.dataset.slot === 'question'; })[0];\n        var source = btn && slotFromOpener('question');\n        if (!source || !source.url) return;\n\n        openFile(host, btn);\n    }\n\n    // 파일이 없는 문제/해답은 빈 문서에서 새로 쓴다. 저장 경로는 서버가 itemId 로 새로 만들므로\n    // filename 은 SaveAs·이미지에 쓸 이름일 뿐이다\n    function openBlank(host, btn) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        ctrl.Clear(1);\n\n        host.current = btn;\n        host.slot = btn.dataset.slot || '';\n        host.filename = host.slot + '.hml';\n        markCurrent(host);\n\n        setStatus(host, '새 문서입니다. 작성 후 저장하세요.');\n    }\n\n    function failOpen(host, name, res) {\n        setBusy(host, false);\n        setStatus(host, '파일을 열지 못했습니다.', 'danger');\n        console.error('[webhwp] 파일 열기 실패', name, res);\n        toast('파일을 불러오지 못했습니다.', 'danger');\n    }\n\n    function markCurrent(host) {\n        host.fileButtons.forEach(function (btn) {\n            btn.classList.toggle('active', btn === host.current);\n        });\n    }\n\n    // 저장 대상은 지금 열려 있는 파일이다. 내 PC 파일을 연 상태면 되저장할 원본 경로가 없다.\n    function save(host) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        if (!host.filename) {\n            toast('저장할 원본 파일 경로가 없습니다.', 'warning');\n            return;\n        }\n        \n        setBusy(host, true);\n        setStatus(host, '저장 중입니다...');\n\n        var name = host.filename.split('/').pop();\n\n        // 저장 결과는 벤더 서버의 임시 다운로드 주소로 온다. 이미지까지 만든 뒤 함께 부모 창으로 넘긴다.\n        ctrl.SaveAs(name, HML_FORMAT, '', function (res) {\n            if (res && res.result === true) {\n                saveImage(host, res.downloadUrl);\n            } else {\n                setBusy(host, false);\n                setStatus(host, '저장 결과를 읽지 못했습니다.', 'danger');\n                console.error('[webhwp] SaveAs 실패', res);\n                toast('저장에 실패했습니다.', 'danger');\n            }\n        });\n    }\n\n    // 편집 창은 부모(all-modify.html)가 window.open 으로 띄운 팝업이다. 단독으로 열면 opener 가 없다.\n    function notifyParent(host, hmlUrl, imageUrl) {\n        if (!window.opener || window.opener.closed) return;\n        \n        window.opener.postMessage({\n            type: 'webhwp-saved',\n            slot: host.slot,\n            itemId: owner.get('itemId'),\n            itemDetailId: owner.get('itemDetailId'),\n            filePath: host.filename,\n            hmlUrl: hmlUrl,\n            imageUrl: imageUrl\n        }, location.origin);\n    }\n\n    function saveImage(host, hmlUrl) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        if (!host.filename) {\n            toast('저장할 원본 파일 경로가 없습니다.', 'warning');\n            return;\n        }\n\n        setBusy(host, true);\n        setStatus(host, '저장 중입니다...');\n\n        // 이미지 파일명은 원본 HML 이름을 따른다(벤더가 결과 파일명으로 그대로 쓴다)\n        var imageName = host.filename.split('/').pop().replace(/\\.[^.]*$/, '') + '.png';\n\n        var hwp_Ctrl = ctrl.HeadCtrl; // 문서 내 최상위 컨트롤\n        var hwp_ColDefSet = ctrl.CreateSet(\"ColDef\");\n        \n        hwp_ColDefSet.SetItem(\"Count\", 1);  // 다단 설정 (단 설정 1)\n        hwp_ColDefSet.SetItem(\"ApplyTo\", 6);  // 문서 전체\n        \n        while (hwp_Ctrl != null) {\n            if (hwp_Ctrl.CtrlID == \"cold\") {\n                hwp_Ctrl.Properties = hwp_ColDefSet;\n            }\n            \n            hwp_Ctrl = hwp_Ctrl.Next;\n        }\n        \n        var hwp_PageSetupAction = ctrl.CreateAction(\"PageSetup\");\n        \n        var hwp_SecDefSet = hwp_PageSetupAction.CreateSet();\n        \n        hwp_PageSetupAction.GetDefault(hwp_SecDefSet);\n        \n        hwp_SecDefSet.SetItem(\"ApplyTo\", 3);   // 문서전체 용지 설정\n        \n        var hwp_PageDefSet = hwp_SecDefSet.CreateItemSet(\"PageDef\", \"PageDef\");\n        \n        hwp_PageDefSet.SetItem(\"TopMargin\", 0);\n        hwp_PageDefSet.SetItem(\"BottomMargin\", 600);\n        hwp_PageDefSet.SetItem(\"LeftMargin\", 600);\n        hwp_PageDefSet.SetItem(\"RightMargin\", 800);\n        \n        hwp_PageDefSet.SetItem(\"HeaderLen\", 0);\n        hwp_PageDefSet.SetItem(\"FooterLen\", 0);\n        hwp_PageDefSet.SetItem(\"GutterLen\", 0);\n        \n        hwp_PageDefSet.SetItem(\"PaperWidth\", 25000);\n        hwp_PageDefSet.SetItem(\"PaperHeight\", 2835);\n        \n        hwp_PageSetupAction.Execute(hwp_SecDefSet);\n        \n        var resizingCount = 0;\n        var pageCount = 0;\n        var paperHeight = 0;\n        \n        while ((pageCount = ctrl.PageCount) > 1 && resizingCount < 200) {\n            paperHeight += 500;\n            \n            hwp_PageDefSet.SetItem(\"PaperHeight\", paperHeight);\n            \n            hwp_PageSetupAction.Execute(hwp_SecDefSet);\n            \n            resizingCount ++;\n        }\n        \n        ctrl.CreatePageImageEx(imageName, 0, 143, 24, \"png\", \"\", function(res) {\n            if (res && res.result === true) {\n                // 다시 열기가 실패하면 clear() 가 slot 을 비우므로 부모 통지가 먼저다\n                notifyParent(host, hmlUrl, res.downloadUrl);\n\n                // 위에서 이미지용으로 바꾼 용지·다단을 되돌리려, 바꾸기 전에 저장한 HML 을 같은 슬롯으로 다시 연다\n                openUrl(host, hmlUrl, function (name, openRes) {\n                    // 바뀐 레이아웃으로 재저장되지 않게 빈 문서로 돌린다\n                    clear(host);\n                    setBusy(host, false);\n                    setStatus(host, '저장은 되었지만 파일을 다시 열지 못했습니다.', 'warning');\n                    console.error('[webhwp] 저장 후 다시 열기 실패', name, openRes);\n                });\n\n                var savedModal = document.getElementById('webhwpSavedModal');\n                if (savedModal) bootstrap.Modal.getOrCreateInstance(savedModal).show();\n            } else {\n                setBusy(host, false);\n                setStatus(host, '저장 결과를 읽지 못했습니다.', 'danger');\n                console.error('[webhwp] CreatePageImageEx 저장 오류', res);\n                toast('저장에 실패했습니다.', 'danger');\n            }\n        });\n    }\n    \n    // 현재 편집중인 문서의 내용을 닫고 빈문서 편집 상태로 돌아간다.\n    function clear(host) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        ctrl.Clear(1);\n\n        // 빈 문서로 돌아갔으니 저장 대상과 파일 버튼 선택 표시도 함께 푼다\n        host.filename = '';\n        host.slot = '';\n        host.current = null;\n        markCurrent(host);\n    }\n\n    function download(host) {\n        var ctrl = ctrlOf(host);\n        if (!ctrl) return;\n\n        var name = host.filename ? host.filename.split('/').pop() : 'document.hml';\n        ctrl.SaveAs(name, HML_FORMAT, 'download:true;', function () {}, { tempUrl: location.href });\n    }\n\n    function openLocal(host) {\n        host.fileInput.click();\n    }\n\n    function bind(el) {\n        var frame = el.querySelector('.webhwp-frame');\n        if (!frame || !frame.id) return;\n\n        var fileButtons = Array.prototype.slice.call(el.querySelectorAll('[data-webhwp-open]'));\n        var actionButtons = Array.prototype.slice.call(el.querySelectorAll('[data-webhwp-action]'));\n\n        var host = {\n            el: el,\n            frame: frame,\n            // 지금 열려 있는 파일의 CDN 상대경로(새 문서면 임시 이름). 저장 파일명으로만 쓴다 — 저장 경로는 서버가 만든다.\n            filename: '',\n            // 지금 열려 있는 파일의 슬롯 키(passage/translation/question/explain)\n            slot: '',\n            current: null,\n            fileButtons: fileButtons,\n            buttons: fileButtons.concat(actionButtons),\n            status: el.querySelector('[data-webhwp-status]'),\n            fileInput: el.querySelector('[data-webhwp-file]'),\n            // 부모 창 없이 이 주소로 직접 들어온 상태. 열 파일도 저장할 곳도 없다\n            detached: !hasOpener(),\n            mounted: false,\n            ready: false,\n            busy: false\n        };\n\n        var actions = { local: openLocal, save: save, download: download };\n\n        // 문항이 갖고 있지 않은 슬롯은 준비 완료 후에도 계속 비활성이어야 한다(새로 작성 가능한 문제/해답 제외).\n        // 판정 기준을 부모에게 물어보므로 슬롯마다 한 번씩만 조회한다\n        fileButtons.forEach(function (btn) {\n            var source = slotFromOpener(btn.dataset.slot);\n            var creatable = !!source && btn.hasAttribute('data-webhwp-new');\n            if (!creatable && (!source || !source.url)) btn.dataset.webhwpEmpty = 'true';\n\n            btn.addEventListener('click', function () {\n                if (host.busy || !host.ready) return;\n                openFile(host, btn);\n            });\n        });\n\n        actionButtons.forEach(function (btn) {\n            btn.addEventListener('click', function () {\n                if (host.busy || !host.ready) return;\n                var fn = actions[btn.getAttribute('data-webhwp-action')];\n                if (fn) fn(host);\n            });\n        });\n\n        // 부모가 없으면 저장까지 할 일이 없다 — 준비가 끝나도 풀리지 않게 잠근다\n        if (host.detached) {\n            host.buttons.forEach(function (btn) { btn.dataset.webhwpEmpty = 'true'; });\n        }\n\n        // 준비 완료(webhwp-ready) 전까지는 전부 잠근다. webhwpEmpty 인 것만 그 뒤로도 안 풀린다\n        host.buttons.forEach(function (btn) { btn.disabled = true; });\n\n        if (host.fileInput) {\n            host.fileInput.addEventListener('change', function () {\n                var ctrl = ctrlOf(host);\n                var file = this.files && this.files[0];\n                if (!ctrl || !file) return;\n\n                // 내 PC 파일은 되저장할 원본 경로가 없다 → 저장 대상 해제\n                host.filename = '';\n                host.slot = '';\n                host.current = null;\n                markCurrent(host);\n\n                setBusy(host, true);\n                ctrl.Open(file, '', 'lock:false', function () {\n                    setBusy(host, false);\n                    setStatus(host, file.name + ' 을(를) 열었습니다.');\n                });\n                // 같은 파일을 다시 골라도 change 가 뜨도록 초기화\n                this.value = '';\n            });\n        }\n\n        hosts[frame.id] = host;\n\n        // 편집기 전용 창이라 숨겨진 상태가 없다 → 바로 띄운다\n        mount(host);\n    }\n\n    window.addEventListener('message', function (e) {\n        if (e.origin !== location.origin || !e.data) return;\n\n        var host = hosts[e.data.frameId];\n        if (!host) return;\n\n        if (e.data.type === 'webhwp-ready') {\n            host.ready = true;\n            setBusy(host, false);\n            setStatus(host, host.detached\n                ? '문항 수정 화면에서 [한글 편집기 열기]로 열어야 파일을 편집할 수 있습니다.'\n                : '준비되었습니다. 편집할 파일을 선택하세요.', host.detached ? 'warning' : null);\n            if (!host.detached) openInitial(host);\n        } else if (e.data.type === 'webhwp-error') {\n            host.ready = false;\n            setStatus(host, e.data.message || '기안기를 불러오지 못했습니다.', 'danger');\n            console.error('[webhwp] ' + e.data.message);\n        }\n    });\n\n    document.addEventListener('DOMContentLoaded', function () {\n        document.querySelectorAll('.webhwp-host').forEach(bind);\n    });\n})();\n"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.206
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+      "refs": {
+        "e4415": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e4416": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e4417": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e4418": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e4419": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e4420": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e4421": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e4422": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e4423": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e4424": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e4425": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e4426": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e4427": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e4428": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e4429": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e4430": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e4431": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e4432": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e4433": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e4434": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e4435": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e4436": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e4437": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e4485": {
+          "name": "문항 형태 *",
+          "role": "heading"
+        },
+        "e4486": {
+          "name": "이미지 업로드",
+          "role": "heading"
+        },
+        "e4487": {
+          "name": "문항 편집",
+          "role": "heading"
+        },
+        "e4488": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e4489": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e4490": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e4491": {
+          "name": " 업로드",
+          "role": "button"
+        },
+        "e4492": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e4493": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e4494": {
+          "name": "풀이",
+          "role": "heading"
+        },
+        "e4495": {
+          "name": "모범 답안",
+          "role": "heading"
+        },
+        "e4496": {
+          "name": "채점 기준",
+          "role": "heading"
+        },
+        "e4497": {
+          "name": "객관식",
+          "role": "option"
+        },
+        "e4498": {
+          "name": "주관식",
+          "role": "option"
+        },
+        "e4499": {
+          "name": "서술형",
+          "role": "option"
+        },
+        "e4500": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e4501": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e4502": {
+          "name": "N지 선다",
+          "role": "option"
+        },
+        "e4503": {
+          "name": "O/X 형",
+          "role": "option"
+        },
+        "e4504": {
+          "name": "↶ 실행취소",
+          "role": "button"
+        },
+        "e4505": {
+          "name": "↷ 다시실행",
+          "role": "button"
+        },
+        "e4506": {
+          "name": "문단 정렬",
+          "role": "combobox"
+        },
+        "e4507": {
+          "name": "문단",
+          "role": "button"
+        },
+        "e4508": {
+          "name": "B",
+          "role": "button"
+        },
+        "e4509": {
+          "name": "I",
+          "role": "button"
+        },
+        "e4510": {
+          "name": "U",
+          "role": "button"
+        },
+        "e4511": {
+          "name": "A",
+          "role": "button"
+        },
+        "e4512": {
+          "name": "+ 수식",
+          "role": "button"
+        },
+        "e4513": {
+          "name": "🖼 이미지",
+          "role": "button"
+        },
+        "e4514": {
+          "name": "⊞ 표",
+          "role": "button"
+        },
+        "e4515": {
+          "name": "글상자",
+          "role": "button"
+        },
+        "e4516": {
+          "name": "d-box",
+          "role": "button"
+        },
+        "e4517": {
+          "name": "d-input",
+          "role": "button"
+        },
+        "e4518": {
+          "name": "특수문자",
+          "role": "button"
+        },
+        "e4519": {
+          "name": "글자 겹치기",
+          "role": "button"
+        },
+        "e4520": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4521": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4522": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4523": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4524": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4525": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e4526": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e4527": {
+          "name": "풀이",
+          "role": "heading"
+        },
+        "e4528": {
+          "name": "정렬: 기본",
+          "role": "option"
+        },
+        "e4529": {
+          "name": "왼쪽",
+          "role": "option"
+        },
+        "e4530": {
+          "name": "가운데",
+          "role": "option"
+        },
+        "e4531": {
+          "name": "오른쪽",
+          "role": "option"
+        },
+        "e4532": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4533": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4534": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4535": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4536": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4537": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4538": {
+          "name": "",
+          "role": "generic"
+        },
+        "e4539": {
+          "name": "",
+          "role": "generic"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e4415]\n      - link \"문제은행 마스터 CMS\" [ref=e4416]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e4429]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e4430]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e4431]\n          - link \"HML 문항 등록\" [ref=e4432]\n          - link \"디피니션 문항 등록\" [ref=e4433]\n          - link \"쌍둥이 그룹 관리\" [ref=e4434]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e4435]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e4436]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e4437]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e4417]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e4418]\n      - StaticText \"문항 ID\"\n      - StaticText \"2088985 (2088701)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"-\"\n      - StaticText \"원본 파일\"\n      - StaticText \"-\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"복제\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e4425]\n        - tab \"한글(HML) 수정\" [ref=e4426]\n        - tab \"HTML 수정\" [selected, ref=e4427]\n        - tab \"OMR 수정\" [ref=e4428]\n      - link \"취소\" [ref=e4419]\n      - button \"임시 저장\" [ref=e4420]\n      - button \"전체 반영\" [ref=e4421]\n      - generic\n        - generic\n          - heading \"문항 형태 *\" [level=3, ref=e4485]\n            - StaticText \"\"\n            - StaticText \"문항 형태 *\"\n          - combobox [expanded=false, ref=e4488]: 객관식\n            - MenuListPopup\n              - option \"객관식\" [selected, ref=e4497]\n              - option \"주관식\" [ref=e4498]\n              - option \"서술형\" [ref=e4499]\n          - combobox [expanded=false, ref=e4489]: 단답형\n            - MenuListPopup\n              - option \"단답형\" [selected, ref=e4500]\n              - option \"다답형\" [ref=e4501]\n          - combobox [expanded=false, ref=e4490]: N지 선다\n            - MenuListPopup\n              - option \"N지 선다\" [selected, ref=e4502]\n              - option \"O/X 형\" [ref=e4503]\n        - generic\n          - heading \"이미지 업로드\" [level=3, ref=e4486]\n            - StaticText \"\"\n            - StaticText \"이미지 업로드\"\n          - button \" 업로드\" [ref=e4491]\n            - StaticText \"\"\n            - StaticText \"업로드\"\n        - tabpanel\n          - generic\n            - heading \"문항 편집\" [level=3, ref=e4487]\n              - StaticText \"\"\n              - StaticText \"문항 편집\"\n            - generic\n              - generic\n                - StaticText \"문항 편집\"\n                - button \"↶ 실행취소\" [ref=e4504]\n                - button \"↷ 다시실행\" [ref=e4505]\n                - combobox \"문단 정렬\" [expanded=false, ref=e4506]: 정렬: 기본\n                  - MenuListPopup\n                    - option \"정렬: 기본\" [selected, ref=e4528]\n                    - option \"왼쪽\" [ref=e4529]\n                    - option \"가운데\" [ref=e4530]\n                    - option \"오른쪽\" [ref=e4531]\n                - button \"문단\" [ref=e4507]\n                - button \"B\" [ref=e4508]\n                - button \"I\" [ref=e4509]\n                - button \"U\" [ref=e4510]\n                - button \"A\" [ref=e4511]\n                - button \"+ 수식\" [ref=e4512]\n                - button \"🖼 이미지\" [ref=e4513]\n                - button \"⊞ 표\" [ref=e4514]\n                - button \"글상자\" [ref=e4515]\n                - button \"d-box\" [ref=e4516]\n                - button \"d-input\" [ref=e4517]\n                - button \"특수문자\" [ref=e4518]\n                - button \"글자 겹치기\" [ref=e4519]\n              - StaticText \"본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다\"\n              - heading \"문제\" [level=3, ref=e4492]\n              - article\n                - generic [ref=e4520] editable [contenteditable]: 다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                  - paragraph\n                    - StaticText \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\"\n                  - paragraph\n                    - image \"image\"\n                    - LineBreak \"\\n\"\n                  - listitem [level=1]\n                    - generic\n                      - StaticText \"①\"\n                      - LineBreak \"\\n\"\n                  - listitem [level=1]\n                    - generic\n                      - StaticText \"②\"\n                      - LineBreak \"\\n\"\n                  - listitem [level=1]\n                    - generic\n                      - StaticText \"③\"\n                      - LineBreak \"\\n\"\n                  - listitem [level=1]\n                    - generic\n                      - StaticText \"④\"\n                      - LineBreak \"\\n\"\n                  - listitem [level=1]\n                    - generic\n                      - StaticText \"⑤\"\n                      - LineBreak \"\\n\"\n              - heading \"정답\" [level=3, ref=e4493]\n              - article\n                - generic [ref=e4521] editable [contenteditable]: ③\n                  - paragraph\n                    - StaticText \"③\"\n              - heading \"풀이\" [level=3, ref=e4494]\n              - article\n                - generic [ref=e4522] editable [contenteditable]: 𝑦\n=\n𝑎\n𝑥\n \n(\n𝑎\n≠\n0\n)\ny=ax (a\n\n=0)로 놓고 \n𝑥\n=\n6\n,\n \n𝑦\n=\n−\n2\nx=6, y=−2를 대입하면\n\n−\n2\n=\n6\n𝑎\n−2=6a   \n∴\n𝑎\n=\n−\n1\n3\n∴a=−\n3\n1\n\t​\n\n\n\n\n∴\n𝑦\n=\n−\n1\n3\n𝑥\n∴y=−\n3\n1\n\t​\n\nx\n\n\n③ \n𝑦\n=\n−\n1\n3\n𝑥\ny=−\n3\n1\n\t​\n\nx에 \n𝑥\n=\n1\n,\n \n𝑦\n=\n−\n3\nx=1, y=−3을 대입하면\n\n   \n−\n3\n≠\n−\n1\n3\n×\n1\n−3\n\n=−\n3\n1\n\t​\n\n×1\n\n                  - paragraph\n                    - generic [ref=e4532] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLText\n                            - MathMLOperator\n                              - StaticText \"(\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLOperator\n                              - StaticText \"≠\"\n                            - MathMLNumber\n                              - StaticText \"0\"\n                            - MathMLOperator\n                              - StaticText \")\"\n                    - StaticText \"로 놓고 \"\n                    - generic [ref=e4533] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"6\"\n                            - MathMLOperator\n                              - StaticText \",\"\n                            - MathMLText\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"2\"\n                    - StaticText \"를 대입하면\"\n                  - paragraph\n                    - generic [ref=e4534] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"2\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"6\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                    - generic [ref=e4535] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"∴\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                    - LineBreak \"\\n\"\n                  - paragraph\n                    - generic [ref=e4536] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"∴\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                    - LineBreak \"\\n\"\n                  - paragraph\n                    - StaticText \"③\"\n                    - generic [ref=e4537] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                    - StaticText \"에 \"\n                    - generic [ref=e4538] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"1\"\n                            - MathMLOperator\n                              - StaticText \",\"\n                            - MathMLText\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"3\"\n                    - StaticText \"을 대입하면\"\n                  - paragraph\n                    - generic [ref=e4539] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"3\"\n                            - MathMLOperator\n                              - StaticText \"≠\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLOperator\n                              - StaticText \"×\"\n                            - MathMLNumber\n                              - StaticText \"1\"\n                    - LineBreak \"\\n\"\n              - heading \"모범 답안\" [level=3, ref=e4495]\n              - article\n                - generic [ref=e4523] editable [contenteditable]: \n\n                  - paragraph\n                    - LineBreak \"\\n\"\n              - heading \"채점 기준\" [level=3, ref=e4496]\n              - article\n                - generic [ref=e4524] editable [contenteditable]: \n\n                  - paragraph\n                    - LineBreak \"\\n\"\n              - paragraph\n                - StaticText \"미리보기 (실서비스 뷰어 렌더)\"\n              - article\n                - generic\n                  - heading \"문제\" [level=3, ref=e4525]\n                  - generic\n                    - paragraph\n                      - StaticText \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\"\n                    - paragraph\n                      - image \"image\"\n                    - listitem [level=1]\n                      - StaticText \"①\"\n                    - listitem [level=1]\n                      - StaticText \"②\"\n                    - listitem [level=1]\n                      - StaticText \"③\"\n                    - listitem [level=1]\n                      - StaticText \"④\"\n                    - listitem [level=1]\n                      - StaticText \"⑤\"\n                - generic\n                  - heading \"정답\" [level=3, ref=e4526]\n                  - paragraph\n                    - StaticText \"③\"\n                - generic\n                  - heading \"풀이\" [level=3, ref=e4527]\n                  - generic\n                    - paragraph\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLText\n                            - MathMLOperator\n                              - StaticText \"(\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLOperator\n                              - StaticText \"≠\"\n                            - MathMLNumber\n                              - StaticText \"0\"\n                            - MathMLOperator\n                              - StaticText \")\"\n                      - StaticText \"로 놓고 \"\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"6\"\n                            - MathMLOperator\n                              - StaticText \",\"\n                            - MathMLText\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"2\"\n                      - StaticText \"를 대입하면\"\n                    - paragraph\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"2\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"6\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"∴\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                    - paragraph\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"∴\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                    - paragraph\n                      - StaticText \"③\"\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                      - StaticText \"에 \"\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLNumber\n                              - StaticText \"1\"\n                            - MathMLOperator\n                              - StaticText \",\"\n                            - MathMLText\n                            - MathMLIdentifier\n                              - StaticText \"𝑦\"\n                            - MathMLOperator\n                              - StaticText \"=\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"3\"\n                      - StaticText \"을 대입하면\"\n                    - paragraph\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLNumber\n                              - StaticText \"3\"\n                            - MathMLOperator\n                              - StaticText \"≠\"\n                            - MathMLOperator\n                              - StaticText \"−\"\n                            - MathMLRow\n                              - MathMLFraction\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                            - MathMLOperator\n                              - StaticText \"×\"\n                            - MathMLNumber\n                              - StaticText \"1\"\n      - link \"취소\" [ref=e4422]\n      - button \"임시 저장\" [ref=e4423]\n      - button \"전체 반영\" [ref=e4424]"
+    },
+    "error": null,
+    "localSeconds": 0.182
+  }
+}

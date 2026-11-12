@@ -1,0 +1,601 @@
+{
+  "schemaVersion": 1,
+  "scope": "Master development CMS only",
+  "evidenceCutoff": 1001,
+  "testItemId": 2088985,
+  "staticRecipes": "research/omr-runtime-input-recipes.json",
+  "sourceChecklist": "research/item-edit-verification-checklist.md",
+  "coverageRule": "A displayed form, preview grading, full apply, reentry restoration and boundary tests are distinct. No leaf below has all branches and boundary cases verified. Static recipes do not count as runtime success.",
+  "leaves": [
+    {
+      "code": "OBSACN",
+      "name": "객관식 단답형 N지 선다",
+      "formEvidence": [
+        942,
+        943,
+        947,
+        951,
+        956,
+        973,
+        999,
+        1001
+      ],
+      "previewEvidence": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        962,
+        967,
+        970,
+        976,
+        980,
+        983,
+        985
+      ],
+      "previewResult": "Original baseline plus edited Alpha/Beta2options: numeric1 correct983,2incorrect980; answer view985. Missing radio, duplicateAlpha and blank second guard Preview.",
+      "fullApplyEvidence": 990,
+      "restoreEvidence": [
+        991,
+        993,
+        996,
+        997,
+        999,
+        1000,
+        1001
+      ],
+      "remaining": [
+        "Whitespace/case/long labels",
+        "Other option-count persistence",
+        "HTML/OMR count reconciliation policy",
+        "Other stored-data/validation shapes"
+      ],
+      "runtimeStatus": "normal_flow_applied_restored_rendered",
+      "boundaryEvidence": [
+        947,
+        948,
+        950,
+        951,
+        956,
+        957,
+        962,
+        967,
+        970,
+        973
+      ]
+    },
+    {
+      "code": "OBSAOX",
+      "name": "객관식 단답형 O/X",
+      "formEvidence": [
+        319,
+        321
+      ],
+      "previewEvidence": [
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331
+      ],
+      "previewResult": "Empty and X incorrect; O correct; answer-mode highlight.",
+      "tempSaveEvidence": 335,
+      "tempRestoreEvidence": [
+        341,
+        343,
+        344
+      ],
+      "fullApplyEvidence": 347,
+      "restoreEvidence": [
+        348,
+        350,
+        351
+      ],
+      "remaining": [
+        "Custom label length and whitespace behavior",
+        "Blank/duplicate validation"
+      ]
+    },
+    {
+      "code": "OBMACN",
+      "name": "객관식 다답형 N지 선다",
+      "formEvidence": [
+        354,
+        355,
+        356
+      ],
+      "previewEvidence": [
+        357,
+        358,
+        359,
+        360,
+        361
+      ],
+      "previewResult": "Only1 incorrect; 1+3 correct.",
+      "fullApplyEvidence": 366,
+      "restoreEvidence": [
+        367,
+        369,
+        370
+      ],
+      "remaining": [
+        "2-to-7 option boundaries",
+        "Single selected answer acceptance",
+        "Blank/duplicate/unselected validation"
+      ]
+    },
+    {
+      "code": "OBMAOX",
+      "name": "객관식 다답형 O/X",
+      "formEvidence": [
+        373,
+        374,
+        375,
+        376,
+        378,
+        379,
+        380
+      ],
+      "previewEvidence": [
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387
+      ],
+      "previewResult": "First SET alone incorrect; 가=O and 나=X together correct. Optional titles and comma shown.",
+      "fullApplyEvidence": 390,
+      "restoreEvidence": [
+        391,
+        393,
+        394
+      ],
+      "remaining": [
+        "SET add/delete and lower bound",
+        "Custom-label boundaries",
+        "Missing correct selection per SET"
+      ]
+    },
+    {
+      "code": "SBSANM",
+      "name": "주관식 단답형 일반형",
+      "formEvidence": [
+        397,
+        408,
+        409,
+        411,
+        412,
+        414,
+        415,
+        417,
+        418,
+        452,
+        454,
+        455,
+        457,
+        458
+      ],
+      "modes": [
+        {
+          "mode": "box",
+          "previewEvidence": [
+            420,
+            421,
+            422,
+            423,
+            424,
+            425,
+            427,
+            428,
+            430,
+            431,
+            432,
+            433,
+            434,
+            436,
+            437,
+            438,
+            439,
+            440,
+            441,
+            442
+          ],
+          "previewResult": "Ab c main and XYZ similar. Both flags false accepts abc/xyz. Main case=true space=false rejects abc and accepts Abc. Both main flags true rejects Abc and accepts Ab c. Similar flags unchanged false. Prefix/suffix visible; student normal/math input toggle observed.",
+          "fullApplyEvidence": 445,
+          "restoreEvidence": [
+            446,
+            448,
+            449
+          ]
+        },
+        {
+          "mode": "legend",
+          "previewEvidence": [
+            460,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467
+          ],
+          "previewResult": "Alpha correct and Beta incorrect via student dropdown.",
+          "fullApplyEvidence": 476,
+          "restoreEvidence": [
+            477,
+            479,
+            480
+          ]
+        }
+      ],
+      "modeSwitchEvidence": [
+        469,
+        470,
+        471,
+        472,
+        473,
+        474
+      ],
+      "modeSwitchResult": "Both mode inputs survive in-page toggles. Inactive mode persistence after full reload is unverified.",
+      "remaining": [
+        "Similar-answer independent flag toggles",
+        "Math/image kinds in general form",
+        "Legend add/delete/validation boundaries"
+      ]
+    },
+    {
+      "code": "SBSADR",
+      "name": "주관식 단답형 그리기형",
+      "formEvidence": [
+        483,
+        484
+      ],
+      "previewEvidence": [
+        485,
+        487,
+        488,
+        489,
+        490,
+        491
+      ],
+      "previewResult": "Optional title and manual-grading explanation. Student answer-writing and file-selection buttons appear. Grade reports unable to determine because MANUAL needs teacher review. Button invocations did not produce visible authoring/file UI; submission remains unverified.",
+      "fullApplyEvidence": 494,
+      "restoreEvidence": [
+        495,
+        497,
+        498
+      ],
+      "remaining": [
+        "Actual student drawing/file input and submission",
+        "Actual manual review outside this preview"
+      ]
+    },
+    {
+      "code": "SBSAAS",
+      "name": "주관식 단답형 영역 선택형",
+      "formEvidence": [
+        501,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510
+      ],
+      "previewEvidence": [
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517
+      ],
+      "previewResult": "Math choices1/2 created using numeric keypad and Apply. Student dropdown shows both; 2 incorrect and1 correct.",
+      "fullApplyEvidence": 520,
+      "restoreEvidence": [
+        521,
+        523,
+        524
+      ],
+      "restoreLimit": "524 is partially occluded. Only visible right OMR region proves math1/2 and selected first radio; settled master521/edit523 prove type and detail2088568. Unrelated overlay content is excluded.",
+      "remaining": [
+        "Text/image choices",
+        "Choice add/delete and validation boundaries",
+        "Affix behavior on this leaf"
+      ]
+    },
+    {
+      "code": "SBMANM",
+      "name": "주관식 다답형 일반형",
+      "formEvidence": [
+        529,
+        532,
+        533,
+        536,
+        537,
+        538,
+        541,
+        542,
+        545,
+        546
+      ],
+      "previewEvidence": [
+        547,
+        563,
+        566,
+        579,
+        582,
+        587,
+        600,
+        603
+      ],
+      "previewResult": "Two-level independent order policies, group permutation and cross-group rejection verified. See phase8 matrix.",
+      "fullApplyEvidence": 606,
+      "restoreEvidence": [
+        607,
+        609,
+        610,
+        611
+      ],
+      "runtimeStatus": "normal_flow_persistence_and_selected_order_branches_verified",
+      "remaining": [
+        "Inner/outer order flags independent comparisons",
+        "Full apply and restoration",
+        "Legend/similar/affix/comma variations",
+        "Add/delete lower boundaries"
+      ]
+    },
+    {
+      "code": "SBMAAS",
+      "name": "주관식 다답형 영역 선택형",
+      "runtimeStatus": "normal_flow_and_unordered_grading_verified",
+      "formEvidence": [
+        625,
+        628,
+        631,
+        632,
+        633,
+        634,
+        635,
+        638,
+        641,
+        642,
+        643,
+        644
+      ],
+      "previewEvidence": [
+        645,
+        650,
+        655,
+        658
+      ],
+      "previewResult": "Both SETs have math1/2; correct answers1/2.1/2 and2/1 correct;1/1 incorrect. Symbols and comma displayed.",
+      "fullApplyEvidence": 661,
+      "restoreEvidence": [
+        662,
+        664,
+        665,
+        666
+      ]
+    },
+    {
+      "code": "SBMALD",
+      "name": "주관식 다답형 선그리기형",
+      "runtimeStatus": "normal_flow_applied_and_dom_ax_restored_pixel_recheck_pending",
+      "formEvidence": [
+        669,
+        673,
+        685,
+        695,
+        697,
+        699,
+        701
+      ],
+      "previewEvidence": [
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714
+      ],
+      "previewResult": "Student[4,3]/[4] correct711;[4,3]/[3] incorrect714. Within-left multiple targets unordered; cross-left reuse accepted.",
+      "remaining": [
+        "Post-reentry rendered pixel verification",
+        "Connection/row boundaries",
+        "Blank/duplicate values and duplicate targets",
+        "Text/image variants"
+      ],
+      "fullApplyEvidence": 718,
+      "restoreEvidence": [
+        719,
+        724,
+        730,
+        731,
+        734
+      ]
+    },
+    {
+      "code": "SBMADD",
+      "name": "주관식 다답형 드래그앤드롭형",
+      "runtimeStatus": "normal_flow_applied_restored_rendered",
+      "formEvidence": [
+        735,
+        750,
+        751,
+        753,
+        777
+      ],
+      "previewEvidence": [
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765
+      ],
+      "previewResult": "Student3/4 correct760; reversed4/3 incorrect765. Current preview uses dropdowns. First comma rendered.",
+      "fullApplyEvidence": 769,
+      "restoreEvidence": [
+        770,
+        772,
+        774,
+        776,
+        777
+      ],
+      "remaining": [
+        "Row/choice boundaries",
+        "Blank/duplicates/repeated targets/unequal columns",
+        "Text/image variants"
+      ]
+    },
+    {
+      "code": "ESBA00",
+      "name": "기본 서술형",
+      "runtimeStatus": "normal_flow_applied_and_restored",
+      "formEvidence": [
+        778,
+        779,
+        798
+      ],
+      "previewEvidence": [
+        780,
+        781,
+        782,
+        783,
+        784,
+        785,
+        800
+      ],
+      "previewResult": "Title reflected; MANUAL grade returns unknown/teacher review. Write/file events are unhandled by current preview route, supported by source.",
+      "fullApplyEvidence": 793,
+      "restoreEvidence": [
+        794,
+        796,
+        798,
+        800
+      ],
+      "remaining": [
+        "Empty title default display",
+        "Source-only validation boundaries",
+        "Intended writer/file preview specification"
+      ]
+    },
+    {
+      "code": "ESSA00",
+      "name": "단답 서술형",
+      "runtimeStatus": "normal_flow_applied_restored_rendered",
+      "formEvidence": [
+        803,
+        804,
+        808,
+        810,
+        811,
+        813
+      ],
+      "previewEvidence": [
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828
+      ],
+      "previewResult": "Swapped answer/process blocks. Ordinary student1 correct822,2 incorrect826 while manual process blank; answer view gives MANUAL note828.",
+      "fullApplyEvidence": 833,
+      "restoreEvidence": [
+        834,
+        836,
+        839,
+        840
+      ],
+      "remaining": [
+        "Legend mode",
+        "Similar/affix/case-space branches",
+        "Empty validation",
+        "Other grading/mode combinations"
+      ]
+    },
+    {
+      "code": "ESMA00",
+      "name": "다답 서술형",
+      "runtimeStatus": "normal_flow_applied_restored_rendered",
+      "formEvidence": [
+        841,
+        842,
+        869,
+        871,
+        873,
+        875,
+        876
+      ],
+      "previewEvidence": [
+        879,
+        890,
+        895,
+        901,
+        904,
+        916,
+        921,
+        923
+      ],
+      "previewResult": "2x2 cases:2,1/3,4 correct;2,1/4,3 wrong;outer-reversed3,4/2,1 wrong when fixed and correct when unfixed;crossmixed3,2/4,1 wrong. Process blank in all cases.",
+      "fullApplyEvidence": 927,
+      "restoreEvidence": [
+        928,
+        930,
+        933,
+        934,
+        936,
+        938,
+        940,
+        941
+      ],
+      "remaining": [
+        "Other order combinations",
+        "Legend/affix/similar/case-space/comma branches",
+        "Min/max/delete/validation boundaries"
+      ]
+    }
+  ],
+  "counts": {
+    "leafTaxonomy": 14,
+    "leavesWithRuntimeFormEvidence": 14,
+    "leavesWithNormalFlowFullApplyAndRestoration": 14,
+    "allBranchesVerifiedLeaves": 0,
+    "overallSiteCompletionPercent": null
+  },
+  "inputEvidenceCaution": "UIA set-value on MathLive internal edit can echo a value without changing the rendered model. 399-405 and keyboard paste503 are not valid math-input proof. Keypad Apply505-509 is verified through visible rendering, preview grading and saved restoration."
+}

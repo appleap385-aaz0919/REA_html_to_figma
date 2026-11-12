@@ -1,0 +1,51 @@
+{
+  "steps": [
+    {
+      "label": "2314-own-hml-passage-caret-move",
+      "command": [
+        "mouse",
+        "move",
+        "309",
+        "326"
+      ]
+    },
+    {
+      "label": "2315-own-hml-passage-caret-down",
+      "command": [
+        "mouse",
+        "down"
+      ]
+    },
+    {
+      "label": "2316-own-hml-passage-caret-up",
+      "command": [
+        "mouse",
+        "up"
+      ]
+    },
+    {
+      "label": "2317-own-hml-passage-document-start",
+      "command": [
+        "press",
+        "Control+Home"
+      ]
+    },
+    {
+      "label": "2318-own-hml-passage-marker-type",
+      "command": [
+        "keyboard",
+        "type",
+        "[QA-SHARED-HML-20261110] "
+      ]
+    },
+    {
+      "label": "2319-own-hml-passage-edited-text-read",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-hml-passage-text-read.js"
+      ]
+    }
+  ],
+  "tailChars": 150
+}

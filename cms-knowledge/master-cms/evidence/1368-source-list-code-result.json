@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1368-source-list-code-result",
+  "startedUtc": "2026-11-09T05:25:12.649931+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/source-list-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/product/list.donga?keywordType=productCode&keyword=22-M-MA-T0-1-1-SMT-TP-2048&curriculum=22&pageSize=100&pageNum=1"
+    },
+    "error": null,
+    "localSeconds": 0.077
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/list.donga?keywordType=productCode&keyword=22-M-MA-T0-1-1-SMT-TP-2048&curriculum=22&pageSize=100&pageNum=1",
+      "result": {
+        "filters": [
+          {
+            "disabled": false,
+            "id": "",
+            "name": "keywordType",
+            "type": "select-one",
+            "value": "productCode"
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "keyword",
+            "type": "text",
+            "value": "22-M-MA-T0-1-1-SMT-TP-2048"
+          },
+          {
+            "disabled": false,
+            "id": "curriculumSelect",
+            "name": "curriculum",
+            "type": "select-one",
+            "value": "22"
+          },
+          {
+            "disabled": false,
+            "id": "classTypeSelect",
+            "name": "classType",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "subjectCategorySelect",
+            "name": "subjectCategory",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "id": "subjectSelect",
+            "name": "subject",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "id": "gradeSelect",
+            "name": "grade",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "term",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "publishYear",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "serviceUsage",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "registDays",
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "registStart",
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "registEnd",
+            "type": "hidden",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "id": "",
+            "name": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "name": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "name": "useFlags",
+            "type": "checkbox",
+            "value": "Y"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "id": "",
+            "name": "useFlags",
+            "type": "checkbox",
+            "value": "N"
+          }
+        ],
+        "headers": [
+          "출처 ID",
+          "출처코드",
+          "출처명",
+          "과목",
+          "교육과정",
+          "판형",
+          "용도",
+          "학교급",
+          "학년",
+          "학기",
+          "상태",
+          "매핑문항",
+          "등록자 · 등록일"
+        ],
+        "nav": [
+          {
+            "href": "/lab/index.donga",
+            "text": "랩"
+          }
+        ],
+        "pageSize": "100",
+        "pagination": [
+          {
+            "active": false,
+            "disabled": true,
+            "label": "맨 앞",
+            "request": "/product/list.donga?pageNum=1&pageSize=100",
+            "text": ""
+          },
+          {
+            "active": false,
+            "disabled": true,
+            "label": "이전",
+            "request": "/product/list.donga?pageNum=1&pageSize=100",
+            "text": ""
+          },
+          {
+            "active": true,
+            "disabled": false,
+            "label": null,
+            "request": "/product/list.donga?pageNum=1&pageSize=100",
+            "text": "1"
+          },
+          {
+            "active": false,
+            "disabled": true,
+            "label": "다음",
+            "request": "/product/list.donga?pageNum=1&pageSize=100",
+            "text": ""
+          },
+          {
+            "active": false,
+            "disabled": true,
+            "label": "맨 뒤",
+            "request": "/product/list.donga?pageNum=1&pageSize=100",
+            "text": ""
+          }
+        ],
+        "rows": [
+          {
+            "cells": [
+              "199",
+              "22-M-MA-T0-1-1-SMT-TP-2048",
+              "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048",
+              "수학",
+              "22",
+              "2048",
+              "교사용",
+              "중학",
+              "중학1",
+              "1학기",
+              "미사용",
+              "0",
+              "jaehyuk.myung\n2026-11-09"
+            ],
+            "href": "/product/detail.donga?id=199&keywordType=productCode&keyword=22-M-MA-T0-1-1-SMT-TP-2048&curriculum=22&pageNum=1&pageSize=100"
+          }
+        ],
+        "scroll": [
+          {
+            "clientHeight": 1015,
+            "scrollHeight": 1015,
+            "scrollTop": 0
+          }
+        ],
+        "tail": "100개씩 보기\n검색결과 : 1건\n등록\n출처 ID\t출처코드\t출처명\t과목\t교육과정\t판형\t용도\t학교급\t학년\t학기\t상태\t매핑문항\t등록자 · 등록일\n199\t22-M-MA-T0-1-1-SMT-TP-2048\t22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\t수학\t22\t2048\t교사용\t중학\t중학1\t1학기\t미사용\t0\t\njaehyuk.myung\n2026-11-09\n총 1건 중 1∼1 표시\n1",
+        "url": "https://dev-exambank.dongahub.com/product/list.donga?keywordType=productCode&keyword=22-M-MA-T0-1-1-SMT-TP-2048&curriculum=22&pageSize=100&pageNum=1",
+        "visibility": "hidden"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.067
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/list.donga?keywordType=productCode&keyword=22-M-MA-T0-1-1-SMT-TP-2048&curriculum=22&pageSize=100&pageNum=1",
+      "refs": {
+        "e10571": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e10572": {
+          "name": " 등록",
+          "role": "link"
+        },
+        "e10573": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e10574": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e10575": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e10576": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e10577": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e10578": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e10579": {
+          "name": "1",
+          "role": "link"
+        },
+        "e10580": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e10581": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e10582": {
+          "name": "199",
+          "role": "cell"
+        },
+        "e10583": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2048",
+          "role": "cell"
+        },
+        "e10584": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048",
+          "role": "cell"
+        },
+        "e10585": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e10586": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e10587": {
+          "name": "2048",
+          "role": "cell"
+        },
+        "e10588": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e10589": {
+          "name": "중학",
+          "role": "cell"
+        },
+        "e10590": {
+          "name": "중학1",
+          "role": "cell"
+        },
+        "e10591": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e10592": {
+          "name": "미사용",
+          "role": "cell"
+        },
+        "e10593": {
+          "name": "0",
+          "role": "cell"
+        },
+        "e10594": {
+          "name": "jaehyuk.myung 2026-11-09",
+          "role": "cell"
+        },
+        "e10595": {
+          "name": "출처 ID",
+          "role": "columnheader"
+        },
+        "e10596": {
+          "name": "출처코드",
+          "role": "columnheader"
+        },
+        "e10597": {
+          "name": "출처명",
+          "role": "columnheader"
+        },
+        "e10598": {
+          "name": "과목",
+          "role": "columnheader"
+        },
+        "e10599": {
+          "name": "교육과정",
+          "role": "columnheader"
+        },
+        "e10600": {
+          "name": "판형",
+          "role": "columnheader"
+        },
+        "e10601": {
+          "name": "용도",
+          "role": "columnheader"
+        },
+        "e10602": {
+          "name": "학교급",
+          "role": "columnheader"
+        },
+        "e10603": {
+          "name": "학년",
+          "role": "columnheader"
+        },
+        "e10604": {
+          "name": "학기",
+          "role": "columnheader"
+        },
+        "e10605": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e10606": {
+          "name": "매핑문항",
+          "role": "columnheader"
+        },
+        "e10607": {
+          "name": "등록자 · 등록일",
+          "role": "columnheader"
+        },
+        "e10608": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2048",
+          "role": "link"
+        },
+        "e10609": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048",
+          "role": "link"
+        },
+        "e9514": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e9515": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e9516": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e9517": {
+          "name": "문항 출처 관리",
+          "role": "heading"
+        },
+        "e9520": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e9521": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e9522": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e9523": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e9524": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e9525": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9526": {
+          "name": "출처코드 / 출처명",
+          "role": "textbox"
+        },
+        "e9527": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9528": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9529": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9530": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9531": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9532": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9533": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9534": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e9535": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e9536": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e9537": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e9538": {
+          "name": "시작일 ~ 종료일",
+          "role": "textbox"
+        },
+        "e9539": {
+          "name": "7일",
+          "role": "button"
+        },
+        "e9540": {
+          "name": "30일",
+          "role": "button"
+        },
+        "e9541": {
+          "name": "90일",
+          "role": "button"
+        },
+        "e9542": {
+          "name": "전체",
+          "role": "button"
+        },
+        "e9543": {
+          "name": "사용",
+          "role": "checkbox"
+        },
+        "e9544": {
+          "name": "미사용",
+          "role": "checkbox"
+        },
+        "e9545": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e9546": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e9556": {
+          "name": "출처코드",
+          "role": "option"
+        },
+        "e9557": {
+          "name": "출처명",
+          "role": "option"
+        },
+        "e9558": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e9559": {
+          "name": "22",
+          "role": "option"
+        },
+        "e9560": {
+          "name": "15",
+          "role": "option"
+        },
+        "e9561": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e9562": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e9563": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e9564": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e9565": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e9566": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e9567": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e9568": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e9569": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e9570": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e9571": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e9572": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e9573": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e9574": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e9575": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e9576": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e9577": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e9578": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e9579": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e9580": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e9581": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e9582": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e9583": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e9584": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e9585": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e9586": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e9587": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e9588": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e9589": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e9590": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e9591": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e9592": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e9593": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e9594": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e9595": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e9596": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e9597": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e9598": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e9599": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e9600": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e9601": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e9602": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e9603": {
+          "name": "판형",
+          "role": "option"
+        },
+        "e9604": {
+          "name": "2000",
+          "role": "option"
+        },
+        "e9605": {
+          "name": "2001",
+          "role": "option"
+        },
+        "e9606": {
+          "name": "2002",
+          "role": "option"
+        },
+        "e9607": {
+          "name": "2003",
+          "role": "option"
+        },
+        "e9608": {
+          "name": "2004",
+          "role": "option"
+        },
+        "e9609": {
+          "name": "2005",
+          "role": "option"
+        },
+        "e9610": {
+          "name": "2006",
+          "role": "option"
+        },
+        "e9611": {
+          "name": "2007",
+          "role": "option"
+        },
+        "e9612": {
+          "name": "2008",
+          "role": "option"
+        },
+        "e9613": {
+          "name": "2009",
+          "role": "option"
+        },
+        "e9614": {
+          "name": "2010",
+          "role": "option"
+        },
+        "e9615": {
+          "name": "2011",
+          "role": "option"
+        },
+        "e9616": {
+          "name": "2012",
+          "role": "option"
+        },
+        "e9617": {
+          "name": "2013",
+          "role": "option"
+        },
+        "e9618": {
+          "name": "2014",
+          "role": "option"
+        },
+        "e9619": {
+          "name": "2015",
+          "role": "option"
+        },
+        "e9620": {
+          "name": "2016",
+          "role": "option"
+        },
+        "e9621": {
+          "name": "2017",
+          "role": "option"
+        },
+        "e9622": {
+          "name": "2018",
+          "role": "option"
+        },
+        "e9623": {
+          "name": "2019",
+          "role": "option"
+        },
+        "e9624": {
+          "name": "2020",
+          "role": "option"
+        },
+        "e9625": {
+          "name": "2021",
+          "role": "option"
+        },
+        "e9626": {
+          "name": "2022",
+          "role": "option"
+        },
+        "e9627": {
+          "name": "2023",
+          "role": "option"
+        },
+        "e9628": {
+          "name": "2024",
+          "role": "option"
+        },
+        "e9629": {
+          "name": "2025",
+          "role": "option"
+        },
+        "e9630": {
+          "name": "2026",
+          "role": "option"
+        },
+        "e9631": {
+          "name": "2027",
+          "role": "option"
+        },
+        "e9632": {
+          "name": "2028",
+          "role": "option"
+        },
+        "e9633": {
+          "name": "2029",
+          "role": "option"
+        },
+        "e9634": {
+          "name": "2030",
+          "role": "option"
+        },
+        "e9635": {
+          "name": "2031",
+          "role": "option"
+        },
+        "e9636": {
+          "name": "2032",
+          "role": "option"
+        },
+        "e9637": {
+          "name": "2033",
+          "role": "option"
+        },
+        "e9638": {
+          "name": "2034",
+          "role": "option"
+        },
+        "e9639": {
+          "name": "2035",
+          "role": "option"
+        },
+        "e9640": {
+          "name": "2036",
+          "role": "option"
+        },
+        "e9641": {
+          "name": "2037",
+          "role": "option"
+        },
+        "e9642": {
+          "name": "2038",
+          "role": "option"
+        },
+        "e9643": {
+          "name": "2039",
+          "role": "option"
+        },
+        "e9644": {
+          "name": "2040",
+          "role": "option"
+        },
+        "e9645": {
+          "name": "2041",
+          "role": "option"
+        },
+        "e9646": {
+          "name": "2042",
+          "role": "option"
+        },
+        "e9647": {
+          "name": "2043",
+          "role": "option"
+        },
+        "e9648": {
+          "name": "2044",
+          "role": "option"
+        },
+        "e9649": {
+          "name": "2045",
+          "role": "option"
+        },
+        "e9650": {
+          "name": "2046",
+          "role": "option"
+        },
+        "e9651": {
+          "name": "2047",
+          "role": "option"
+        },
+        "e9652": {
+          "name": "2048",
+          "role": "option"
+        },
+        "e9653": {
+          "name": "2049",
+          "role": "option"
+        },
+        "e9654": {
+          "name": "2050",
+          "role": "option"
+        },
+        "e9655": {
+          "name": "용도 전체",
+          "role": "option"
+        },
+        "e9656": {
+          "name": "공통",
+          "role": "option"
+        },
+        "e9657": {
+          "name": "교사용",
+          "role": "option"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e9514]\n      - link \"문제은행 마스터 CMS\" [ref=e9515]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e9520]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e9521]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e9522]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e9523]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e9524]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e9516]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 출처 관리\"\n      - heading \"문항 출처 관리\" [level=2, ref=e9517]\n      - generic\n        - combobox [expanded=false, ref=e9525]: 출처코드\n          - MenuListPopup\n            - option \"출처코드\" [selected, ref=e9556]\n            - option \"출처명\" [ref=e9557]\n        - textbox \"출처코드 / 출처명\" [ref=e9526]: 22-M-MA-T0-1-1-SMT-TP-2048\n          - StaticText \"22-M-MA-T0-1-1-SMT-TP-2048\"\n        - combobox [expanded=false, ref=e9527]: 22\n          - MenuListPopup\n            - option \"교육과정 전체\" [ref=e9558]\n            - option \"22\" [selected, ref=e9559]\n            - option \"15\" [ref=e9560]\n        - combobox [expanded=false, ref=e9528]: 학교급 전체\n          - MenuListPopup\n            - option \"학교급 전체\" [selected, ref=e9561]\n            - option \"초등\" [ref=e9562]\n            - option \"중학\" [ref=e9563]\n            - option \"고등\" [ref=e9564]\n        - combobox [expanded=false, ref=e9529]: 과목군 전체\n          - MenuListPopup\n            - option \"과목군 전체\" [selected, ref=e9565]\n            - option \"수학군\" [ref=e9566]\n        - combobox [expanded=false, disabled, ref=e9530]: 과목 전체\n          - MenuListPopup\n            - option \"과목 전체\" [disabled, ref=e9567]\n            - option \"수학\" [disabled, ref=e9568]\n            - option \"수학\" [disabled, ref=e9569]\n            - option \"공통수학1\" [disabled, ref=e9570]\n            - option \"공통수학2\" [disabled, ref=e9571]\n            - option \"기본수학1\" [disabled, ref=e9572]\n            - option \"기본수학2\" [disabled, ref=e9573]\n            - option \"수학1\" [disabled, ref=e9574]\n            - option \"수학2\" [disabled, ref=e9575]\n            - option \"대수\" [disabled, ref=e9576]\n            - option \"미적분1\" [disabled, ref=e9577]\n            - option \"미적분2\" [disabled, ref=e9578]\n            - option \"확률과통계\" [disabled, ref=e9579]\n            - option \"기하\" [disabled, ref=e9580]\n            - option \"직무수학\" [disabled, ref=e9581]\n            - option \"인공지능수학\" [disabled, ref=e9582]\n            - option \"수학과 문화\" [disabled, ref=e9583]\n            - option \"수학\" [disabled, ref=e9584]\n        - combobox [expanded=false, disabled, ref=e9531]: 학년 전체\n          - MenuListPopup\n            - option \"학년 전체\" [disabled, ref=e9585]\n            - option \"중학1\" [disabled, ref=e9586]\n            - option \"고등1\" [disabled, ref=e9587]\n            - option \"초등1\" [disabled, ref=e9588]\n            - option \"중학2\" [disabled, ref=e9589]\n            - option \"초등2\" [disabled, ref=e9590]\n            - option \"고등2\" [disabled, ref=e9591]\n            - option \"고등3\" [disabled, ref=e9592]\n            - option \"중학3\" [disabled, ref=e9593]\n            - option \"초등3\" [disabled, ref=e9594]\n            - option \"고등 공통\" [disabled, ref=e9595]\n            - option \"초등4\" [disabled, ref=e9596]\n            - option \"초등5\" [disabled, ref=e9597]\n            - option \"초등6\" [disabled, ref=e9598]\n        - combobox [expanded=false, ref=e9532]: 학기 전체\n          - MenuListPopup\n            - option \"학기 전체\" [selected, ref=e9599]\n            - option \"공통학기\" [ref=e9600]\n            - option \"1학기\" [ref=e9601]\n            - option \"2학기\" [ref=e9602]\n        - combobox [expanded=false, ref=e9533]: 판형\n          - MenuListPopup\n            - option \"판형\" [selected, ref=e9603]\n            - option \"2000\" [ref=e9604]\n            - option \"2001\" [ref=e9605]\n            - option \"2002\" [ref=e9606]\n            - option \"2003\" [ref=e9607]\n            - option \"2004\" [ref=e9608]\n            - option \"2005\" [ref=e9609]\n            - option \"2006\" [ref=e9610]\n            - option \"2007\" [ref=e9611]\n            - option \"2008\" [ref=e9612]\n            - option \"2009\" [ref=e9613]\n            - option \"2010\" [ref=e9614]\n            - option \"2011\" [ref=e9615]\n            - option \"2012\" [ref=e9616]\n            - option \"2013\" [ref=e9617]\n            - option \"2014\" [ref=e9618]\n            - option \"2015\" [ref=e9619]\n            - option \"2016\" [ref=e9620]\n            - option \"2017\" [ref=e9621]\n            - option \"2018\" [ref=e9622]\n            - option \"2019\" [ref=e9623]\n            - option \"2020\" [ref=e9624]\n            - option \"2021\" [ref=e9625]\n            - option \"2022\" [ref=e9626]\n            - option \"2023\" [ref=e9627]\n            - option \"2024\" [ref=e9628]\n            - option \"2025\" [ref=e9629]\n            - option \"2026\" [ref=e9630]\n            - option \"2027\" [ref=e9631]\n            - option \"2028\" [ref=e9632]\n            - option \"2029\" [ref=e9633]\n            - option \"2030\" [ref=e9634]\n            - option \"2031\" [ref=e9635]\n            - option \"2032\" [ref=e9636]\n            - option \"2033\" [ref=e9637]\n            - option \"2034\" [ref=e9638]\n            - option \"2035\" [ref=e9639]\n            - option \"2036\" [ref=e9640]\n            - option \"2037\" [ref=e9641]\n            - option \"2038\" [ref=e9642]\n            - option \"2039\" [ref=e9643]\n            - option \"2040\" [ref=e9644]\n            - option \"2041\" [ref=e9645]\n            - option \"2042\" [ref=e9646]\n            - option \"2043\" [ref=e9647]\n            - option \"2044\" [ref=e9648]\n            - option \"2045\" [ref=e9649]\n            - option \"2046\" [ref=e9650]\n            - option \"2047\" [ref=e9651]\n            - option \"2048\" [ref=e9652]\n            - option \"2049\" [ref=e9653]\n            - option \"2050\" [ref=e9654]\n        - combobox [expanded=false, ref=e9534]: 용도 전체\n          - MenuListPopup\n            - option \"용도 전체\" [selected, ref=e9655]\n            - option \"공통\" [ref=e9656]\n            - option \"교사용\" [ref=e9657]\n        - StaticText \"등록일\"\n        - generic\n          - textbox \"시작일 ~ 종료일\" [ref=e9538]\n          - StaticText \"\"\n        - generic\n          - button \"7일\" [ref=e9539]\n          - button \"30일\" [ref=e9540]\n          - button \"90일\" [ref=e9541]\n          - button \"전체\" [ref=e9542]\n        - StaticText \"상태\"\n        - checkbox \"전체\" [checked=true, ref=e9535]\n        - LabelText [ref=e9536] clickable [cursor:pointer]\n          - checkbox \"사용\" [checked=true, ref=e9543]\n          - StaticText \"사용\"\n        - LabelText [ref=e9537] clickable [cursor:pointer]\n          - checkbox \"미사용\" [checked=true, ref=e9544]\n          - StaticText \"미사용\"\n        - generic\n          - button \" 초기화\" [ref=e9545]\n            - StaticText \"\"\n            - StaticText \"초기화\"\n          - button \" 조회\" [ref=e9546]\n            - StaticText \"\"\n            - StaticText \"조회\"\n      - generic\n        - combobox [expanded=false, ref=e10571]: 100개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [ref=e10573]\n            - option \"30개씩 보기\" [ref=e10574]\n            - option \"50개씩 보기\" [ref=e10575]\n            - option \"100개씩 보기\" [selected, ref=e10576]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"1\"\n        - StaticText \"건\"\n        - link \" 등록\" [ref=e10572]\n          - StaticText \"\"\n          - StaticText \"등록\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"출처 ID\" [ref=e10595]\n              - columnheader \"출처코드\" [ref=e10596]\n              - columnheader \"출처명\" [ref=e10597]\n              - columnheader \"과목\" [ref=e10598]\n              - columnheader \"교육과정\" [ref=e10599]\n              - columnheader \"판형\" [ref=e10600]\n              - columnheader \"용도\" [ref=e10601]\n              - columnheader \"학교급\" [ref=e10602]\n              - columnheader \"학년\" [ref=e10603]\n              - columnheader \"학기\" [ref=e10604]\n              - columnheader \"상태\" [ref=e10605]\n              - columnheader \"매핑문항\" [ref=e10606]\n              - columnheader \"등록자 · 등록일\" [ref=e10607]\n          - row\n            - cell \"199\" [ref=e10582]\n            - cell \"22-M-MA-T0-1-1-SMT-TP-2048\" [ref=e10583]\n              - link \"22-M-MA-T0-1-1-SMT-TP-2048\" [ref=e10608]\n            - cell \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\" [ref=e10584]\n              - link \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\" [ref=e10609]\n            - cell \"수학\" [ref=e10585]\n            - cell \"22\" [ref=e10586]\n            - cell \"2048\" [ref=e10587]\n            - cell \"교사용\" [ref=e10588]\n            - cell \"중학\" [ref=e10589]\n            - cell \"중학1\" [ref=e10590]\n            - cell \"1학기\" [ref=e10591]\n            - cell \"미사용\" [ref=e10592]\n            - cell \"0\" [ref=e10593]\n            - cell \"jaehyuk.myung 2026-11-09\" [ref=e10594]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-11-09\"\n        - generic\n          - StaticText \"총 1건 중 1∼1 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e10577]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e10578]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e10579]\n          - listitem [level=1]\n            - link \"다음\" [ref=e10580]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e10581]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.102
+  }
+}

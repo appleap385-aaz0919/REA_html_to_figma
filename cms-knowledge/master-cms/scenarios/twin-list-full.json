@@ -1,0 +1,8 @@
+{
+ "steps":[
+  {"label":"1114-twin-list-fresh","command":["snapshot"]},
+  {"label":"1115-twin-all-fifty","command":["select","{ref}","50개씩 보기"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 10개씩 보기"},
+  {"label":"1116-twin-all-rows-settled","command":["snapshot"],"screenshot":true},
+  {"label":"1117-twin-all-list-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":2200
+}

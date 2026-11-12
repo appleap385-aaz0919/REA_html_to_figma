@@ -1,0 +1,9 @@
+(async()=>{
+ if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');
+ const ids=[2089382,2089383,2089384,2089385],items=[];
+ for(let n=0;n<ids.length;n+=2){items.push(...await Promise.all(ids.slice(n,n+2).map(async itemId=>{
+  const pages=await Promise.all(['detail','modify'].map(async kind=>{const path='/item/all/'+kind+'.donga?itemId='+itemId,r=await fetch(path,{signal:AbortSignal.timeout(15000)});if(!r.ok||r.redirected)throw Error('Observed own AI item unavailable '+itemId);const d=new DOMParser().parseFromString(await r.text(),'text/html'),m=d.querySelector('.page-wrapper'),saved={};for(const id of ['savedOmrData','savedAnswerData','questionEditorData','passageEditorData']){const s=d.getElementById(id);saved[id]=s?.textContent.trim()?JSON.parse(s.textContent):null;}return {kind,path,status:r.status,title:d.title,viewFlag:d.querySelector('#statusForm input[name=viewFlag][checked]')?.value,values:[...m.querySelectorAll('dl dt')].map(e=>({label:e.textContent.trim(),value:e.nextElementSibling?.textContent.trim()})),qtCurrent:d.getElementById('qtCurrent')?.value,difficulty:d.getElementById('mfDifficulty')?.value,saved,models:[...m.querySelectorAll('.qv-item,.qv-passage')].map(e=>({attributes:{...e.dataset},models:[...e.querySelectorAll('script[type="application/json"]')].map(s=>JSON.parse(s.textContent))})),omrPreviews:[...m.querySelectorAll('.omr-preview-btn')].map(e=>({...e.dataset})),hmlSlots:[...d.querySelectorAll('[data-webhwp-path]')].map(e=>({slot:e.dataset.webhwpPath,path:e.value,url:e.dataset.url})),images:[...m.querySelectorAll('img')].map(e=>({src:e.getAttribute('src'),alt:e.alt}))};}));
+  return {itemId,pages};
+ })));}
+ return {sourceHistoryEvidence:2878,method:'Read-only own four AI result detail/edit GETs; inert DOM parse, four requests maximum in flight',items};
+})()

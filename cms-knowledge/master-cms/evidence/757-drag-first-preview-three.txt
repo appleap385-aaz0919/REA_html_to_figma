@@ -1,0 +1,383 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e449]
+      - link "문제은행 마스터 CMS" [ref=e450]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e463]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e464]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e465]
+          - link "HML 문항 등록" [ref=e466]
+          - link "디피니션 문항 등록" [ref=e467]
+          - link "쌍둥이 그룹 관리" [ref=e468]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e469]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e470]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e471]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e451]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 수정"
+      - heading "문항 수정" [level=2, ref=e452]
+      - StaticText "문항 ID"
+      - StaticText "2088985 (2088695)"
+      - StaticText "지문 ID"
+      - StaticText "-"
+      - StaticText "원본 파일"
+      - StaticText "-"
+      - StaticText "상태"
+      - StaticText "초안"
+      - StaticText "배포 여부"
+      - StaticText "미배포"
+      - StaticText "생성 방식"
+      - StaticText "복제"
+      - tablist
+        - tab "메타정보 수정" [ref=e459]
+        - tab "한글(HML) 수정" [ref=e460]
+        - tab "HTML 수정" [ref=e461]
+        - tab "OMR 수정" [selected, ref=e462]
+      - link "취소" [ref=e453]
+      - button "임시 저장" [ref=e454]
+      - button "전체 반영" [ref=e455]
+      - generic
+        - generic
+          - heading "문항 형태 *" [level=3, ref=e506]
+            - StaticText ""
+            - StaticText "문항 형태 *"
+          - combobox [expanded=false, ref=e509]: 주관식
+            - MenuListPopup
+              - option "객관식" [ref=e517]
+              - option "주관식" [selected, ref=e518]
+              - option "서술형" [ref=e519]
+          - combobox [expanded=false, ref=e510]: 다답형
+            - MenuListPopup
+              - option "단답형" [ref=e520]
+              - option "다답형" [selected, ref=e521]
+          - combobox [expanded=false, ref=e511]: 드래그앤 드롭형
+            - MenuListPopup
+              - option "일반형" [ref=e522]
+              - option "영역선택형" [ref=e523]
+              - option "선그리기형" [ref=e524]
+              - option "드래그앤 드롭형" [selected, ref=e525]
+        - generic
+          - heading "이미지 업로드" [level=3, ref=e507]
+            - StaticText ""
+            - StaticText "이미지 업로드"
+          - button " 업로드" [ref=e512]
+            - StaticText ""
+            - StaticText "업로드"
+        - tabpanel
+          - generic
+            - heading "문항 2088985" [level=3, ref=e508]
+              - StaticText ""
+              - StaticText "문항 2088985"
+            - article
+              - paragraph
+                - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+              - paragraph
+                - image "image"
+              - generic
+                - heading "정답" [level=3, ref=e564]
+                - paragraph
+                  - StaticText "③"
+              - generic
+                - heading "풀이" [level=3, ref=e565]
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLText
+                        - MathMLOperator
+                          - StaticText "("
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLNumber
+                          - StaticText "0"
+                        - MathMLOperator
+                          - StaticText ")"
+                  - StaticText "로 놓고 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                  - StaticText "를 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - paragraph
+                  - StaticText "③"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                  - StaticText "에 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                  - StaticText "을 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "1"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e560]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e561]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - generic
+              - generic
+                - StaticText "정답 *"
+              - StaticText "1열 (연결 항목)"
+              - generic
+                - math "math input field" [ref=e566] editable [tabindex, contenteditable]
+                  - textbox [ref=e586]
+                  - generic
+                    - button "Menu Menu" [ref=e590]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e567]
+              - button "" [expanded=false, ref=e568]
+                - StaticText ""
+              - StaticText "→"
+              - button "3" [expanded=false, ref=e569]
+                - StaticText "3"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=true, ref=e570]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [ref=e571]
+              - generic
+                - math "math input field" [ref=e572] editable [tabindex, contenteditable]
+                  - textbox [ref=e587]
+                  - generic
+                    - button "Menu Menu" [ref=e591]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e573]
+              - button "" [expanded=false, ref=e574]
+                - StaticText ""
+              - StaticText "→"
+              - button "4" [expanded=false, ref=e575]
+                - StaticText "4"
+              - LabelText
+                - checkbox "쉼표 구분여부" [checked=false, ref=e576]
+                - StaticText "쉼표 구분여부"
+              - button "행 삭제" [ref=e577]
+              - button " 1열 추가" [ref=e562]
+                - StaticText ""
+                - StaticText "1열 추가"
+              - StaticText "2열 (보기)"
+              - generic
+                - math "math input field" [ref=e578] editable [tabindex, contenteditable]
+                  - textbox [ref=e588]
+                  - generic
+                    - button "Menu Menu" [ref=e592]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e579]
+              - button "" [expanded=false, ref=e580]
+                - StaticText ""
+              - button "삭제" [ref=e581]
+              - generic
+                - math "math input field" [ref=e582] editable [tabindex, contenteditable]
+                  - textbox [ref=e589]
+                  - generic
+                    - button "Menu Menu" [ref=e593]
+                      - image "Menu"
+                      - StaticText "Menu"
+                  - status
+                - button "Σ" [ref=e583]
+              - button "" [expanded=false, ref=e584]
+                - StaticText ""
+              - button "삭제" [ref=e585]
+              - button " 2열 추가" [ref=e563]
+                - StaticText ""
+                - StaticText "2열 추가"
+      - link "취소" [ref=e456]
+      - button "임시 저장" [ref=e457]
+      - button "전체 반영" [ref=e458]
+      - dialog
+        - generic
+          - heading "OMR 미리보기" [level=5, ref=e887]
+            - StaticText ""
+            - StaticText "OMR 미리보기"
+          - button "닫기" [ref=e888]
+          - Iframe "OMR 미리보기" [ref=e890]
+            - LabelText
+              - StaticText "정답 보기"
+              - switch [checked=false, ref=e891]
+            - StaticText "번호"
+            - StaticText "답 란"
+            - generic
+              - StaticText "01"
+              - StaticText "1234"
+              - StaticText "-"
+              - button "3" [ref=e893]
+                - StaticText "3"
+              - StaticText ","
+              - StaticText "2"
+              - StaticText "-"
+              - button "선택" [ref=e894]
+                - StaticText "선택"
+            - button "채점하기" [ref=e892]
+            - status
+          - button "닫기" [ref=e889]

@@ -1,0 +1,1 @@
+import{r as e}from"./CzFqmaqM.js";var t=e(`/images/douclass-mark.svg`);export{t};

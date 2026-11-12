@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "paused_at_user_request",
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [
+    371,
+    447
+  ],
+  "testItemId": 2088985,
+  "observations": [
+    {
+      "type": "OBMAOX",
+      "evidence": [
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387
+      ],
+      "inputs": {
+        "sets": [
+          {
+            "title": "가",
+            "answer": "O",
+            "comma": true
+          },
+          {
+            "title": "나",
+            "answer": "X",
+            "comma": false
+          }
+        ]
+      },
+      "result": "Two separate O/X radio groups, optional titles and comma per SET. First answer alone grades incorrect; both correct answers grade correct.",
+      "scopeLimit": "SET add/remove and custom four-character option boundaries are not yet runtime tested."
+    },
+    {
+      "type": "OBMAOX",
+      "evidence": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394
+      ],
+      "result": "Full apply followed by master-detail and edit reentry restores both titles, O/X correct selections and comma flags.",
+      "savedDetailId": 2088527
+    },
+    {
+      "type": "SBSANM",
+      "evidence": [
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421
+      ],
+      "result": "Category change selects subjective/single/general. Default value cells are math editors; each cell offers general text, math editor and image URL, with allowed kinds dependent on field. Main answer and similar answer have independent case/space flags. Prefix and suffix are optional. Actual text-mode inputs and preview display verified.",
+      "inputs": {
+        "prefix": "답:",
+        "suffix": "cm",
+        "answer": "Ab c",
+        "similarAnswer": "XYZ"
+      },
+      "limit": "Math-mode UIA set-value readbacks399-405 did not prove actual MathLive model input. Pixels still showed placeholders and preview did not open. Normal text selected explicitly before successful tests. No CMS defect inferred."
+    },
+    {
+      "type": "SBSANM",
+      "evidence": [
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442
+      ],
+      "result": "Main Ab c with case=false/space=false accepts abc. Similar XYZ with case=false/space=false accepts xyz. Main case=true/space=false rejects abc and accepts Abc. Main case=true/space=true rejects Abc and accepts Ab c. Preview has math/general input toggle. Each preview opens a fresh student input state.",
+      "notYetVerified": [
+        "Similar-answer flag toggles",
+        "Legend mode",
+        "MathLive actual keyboard editing",
+        "Empty-field error wording"
+      ]
+    },
+    {
+      "type": "SBSANM",
+      "evidence": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "result": "Full apply submitted. Settled detail446 confirms subjective/single/general and new detail2088547. Edit-entry click447 issued; paused before settled edit and OMR hydration verification.",
+      "savedDetailId": 2088547,
+      "valuesRestoredAfterReentry": null
+    }
+  ],
+  "evidenceQuality": [
+    {
+      "evidence": 377,
+      "rule": "windowNotFound. Second X selection was not proven until successful retry379."
+    },
+    {
+      "evidence": 384,
+      "rule": "Fresh observation after explicit resume confirms retained first student O selection and open preview."
+    },
+    {
+      "evidence": [
+        399,
+        401,
+        402,
+        403,
+        404,
+        405
+      ],
+      "rule": "UIA readback alone on MathLive internal editable is insufficient. Actual rendered values/model not proven. Exclude as valid input or validation failure proof."
+    },
+    {
+      "evidence": 406,
+      "rule": "Synthetic index-click did not open value-kind dropdown. Coordinate407 opened it; text choice408 and subsequent actual normal inputs are valid."
+    },
+    {
+      "evidence": 429,
+      "rule": "Unused label; no capture was required because preview was already loaded in428."
+    }
+  ],
+  "remaining": [
+    "Remaining subjective and essay OMR runtime tests",
+    "Single-answer N-choice save and option boundaries",
+    "HML passage/translation editor runtime and save",
+    "Other Master CMS menu families and policies"
+  ]
+}

@@ -1,0 +1,301 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e5921]
+      - link "문제은행 마스터 CMS" [ref=e5922]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e5951]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e5952]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e5953]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e5954]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e5955]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e5923]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+      - heading "평가지 관리" [level=2, ref=e5920]
+      - generic
+        - combobox [expanded=false, ref=e5924]: 평가지 ID
+          - MenuListPopup
+            - option "평가지 ID" [selected, ref=e5956]
+            - option "평가지명" [ref=e5957]
+            - option "등록자 ID" [ref=e5958]
+        - textbox "평가지 ID / 평가지명 / 등록자 ID" [ref=e5925]
+        - combobox [expanded=false, ref=e5926]: 22
+          - MenuListPopup
+            - option "교육과정 전체" [ref=e6102]
+            - option "22" [selected, ref=e6103]
+            - option "15" [ref=e6104]
+        - combobox [expanded=false, ref=e5927]: 학교급 전체
+          - MenuListPopup
+            - option "학교급 전체" [selected, ref=e5960]
+            - option "초등" [ref=e5961]
+            - option "중학" [ref=e5962]
+            - option "고등" [ref=e5963]
+        - combobox [expanded=false, ref=e5928]: 과목군 전체
+          - MenuListPopup
+            - option "과목군 전체" [selected, ref=e6105]
+            - option "수학군" [ref=e6106]
+        - combobox [expanded=false, disabled, ref=e5929]: 과목 전체
+          - MenuListPopup
+            - option "과목 전체" [disabled, ref=e5965]
+            - option "수학" [disabled, ref=e5966]
+            - option "수학" [disabled, ref=e5967]
+            - option "공통수학1" [disabled, ref=e5968]
+            - option "공통수학2" [disabled, ref=e5969]
+            - option "기본수학1" [disabled, ref=e5970]
+            - option "기본수학2" [disabled, ref=e5971]
+            - option "수학1" [disabled, ref=e5972]
+            - option "수학2" [disabled, ref=e5973]
+            - option "대수" [disabled, ref=e5974]
+            - option "미적분1" [disabled, ref=e5975]
+            - option "미적분2" [disabled, ref=e5976]
+            - option "확률과통계" [disabled, ref=e5977]
+            - option "기하" [disabled, ref=e5978]
+            - option "직무수학" [disabled, ref=e5979]
+            - option "인공지능수학" [disabled, ref=e5980]
+            - option "수학과 문화" [disabled, ref=e5981]
+            - option "수학" [disabled, ref=e5982]
+        - combobox [expanded=false, disabled, ref=e5930]: 학년 전체
+          - MenuListPopup
+            - option "학년 전체" [disabled, ref=e5983]
+            - option "중학1" [disabled, ref=e5984]
+            - option "고등1" [disabled, ref=e5985]
+            - option "초등1" [disabled, ref=e5986]
+            - option "중학2" [disabled, ref=e5987]
+            - option "초등2" [disabled, ref=e5988]
+            - option "고등2" [disabled, ref=e5989]
+            - option "고등3" [disabled, ref=e5990]
+            - option "중학3" [disabled, ref=e5991]
+            - option "초등3" [disabled, ref=e5992]
+            - option "초등4" [disabled, ref=e5993]
+            - option "고등 공통" [disabled, ref=e5994]
+            - option "초등5" [disabled, ref=e5995]
+            - option "초등6" [disabled, ref=e5996]
+        - combobox [expanded=false, ref=e5931]: 학기 전체
+          - MenuListPopup
+            - option "학기 전체" [selected, ref=e5997]
+            - option "공통학기" [ref=e5998]
+            - option "1학기" [ref=e5999]
+            - option "2학기" [ref=e6000]
+        - textbox "단원 코드 입력" [ref=e5932]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e5933]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e5934]
+          - button "30일" [ref=e5935]
+          - button "90일" [ref=e5936]
+          - button "전체" [ref=e5937]
+        - StaticText "상태"
+        - LabelText [ref=e5938] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e5945]
+          - StaticText "전체"
+        - LabelText [ref=e5939] clickable [cursor:pointer]
+          - checkbox "초안" [checked=true, ref=e5946]
+          - StaticText "초안"
+        - LabelText [ref=e5940] clickable [cursor:pointer]
+          - checkbox "사용" [checked=true, ref=e5947]
+          - StaticText "사용"
+        - LabelText [ref=e5941] clickable [cursor:pointer]
+          - checkbox "미사용" [checked=true, ref=e5948]
+          - StaticText "미사용"
+        - LabelText [ref=e5942] clickable [cursor:pointer]
+          - checkbox "폐기" [checked=true, ref=e5949]
+          - StaticText "폐기"
+        - generic
+          - button " 초기화" [ref=e5943]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e5944]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e5950]: 30개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [ref=e6081]
+            - option "30개씩 보기" [selected, ref=e6082]
+            - option "50개씩 보기" [ref=e6083]
+            - option "100개씩 보기" [ref=e6084]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "17"
+        - StaticText "건"
+        - table
+          - rowgroup
+            - row
+              - columnheader "평가지 ID" [ref=e6085]
+              - columnheader "평가지명" [ref=e6086]
+              - columnheader "단원 코드" [ref=e6087]
+              - columnheader "문항 수" [ref=e6088]
+              - columnheader "생성 방식" [ref=e6089]
+              - columnheader "상태" [ref=e6090]
+              - columnheader "등록자 · 등록일" [ref=e6091]
+          - row
+            - cell "531" [ref=e6001]
+            - cell "중1-2_수매씽유형_유형북_8-08단원 (1)" [ref=e6002]
+              - link "중1-2_수매씽유형_유형북_8-08단원 (1)" [ref=e6092]
+            - cell "22MMAT0KOK1208010000 등 4개" [ref=e6003]
+              - StaticText "22MMAT0KOK1208010000 등 4개"
+            - cell "120" [ref=e6004]
+            - cell "HML 생성" [ref=e6005]
+            - cell "초안" [ref=e6006]
+            - cell "hari.im 2026-10-27" [ref=e6007]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "530" [ref=e6008]
+            - cell "행렬세트" [ref=e6009]
+              - link "행렬세트" [ref=e6093]
+            - cell "22HMAC1GHG1006010000" [ref=e6010]
+              - StaticText "22HMAC1GHG1006010000"
+            - cell "35" [ref=e6011]
+            - cell "HML 생성" [ref=e6012]
+            - cell "초안" [ref=e6013]
+            - cell "hari.im 2026-10-27" [ref=e6014]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "341" [ref=e6015]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제10)" [ref=e6016]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제10)" [ref=e6094]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6017]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6018]
+            - cell "HML 생성" [ref=e6019]
+            - cell "초안" [ref=e6020]
+            - cell "sangwon.jo 2026-10-19" [ref=e6021]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "340" [ref=e6022]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제9)" [ref=e6023]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제9)" [ref=e6095]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6024]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6025]
+            - cell "HML 생성" [ref=e6026]
+            - cell "초안" [ref=e6027]
+            - cell "sangwon.jo 2026-10-19" [ref=e6028]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "339" [ref=e6029]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제8)" [ref=e6030]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제8)" [ref=e6096]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6031]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6032]
+            - cell "HML 생성" [ref=e6033]
+            - cell "초안" [ref=e6034]
+            - cell "sangwon.jo 2026-10-19" [ref=e6035]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "338" [ref=e6036]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제7)" [ref=e6037]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제7)" [ref=e6097]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6038]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6039]
+            - cell "HML 생성" [ref=e6040]
+            - cell "초안" [ref=e6041]
+            - cell "sangwon.jo 2026-10-19" [ref=e6042]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "337" [ref=e6043]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제6)" [ref=e6044]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제6)" [ref=e6098]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6045]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6046]
+            - cell "HML 생성" [ref=e6047]
+            - cell "초안" [ref=e6048]
+            - cell "sangwon.jo 2026-10-19" [ref=e6049]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "336" [ref=e6050]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제5)" [ref=e6051]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제5)" [ref=e6099]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6052]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6053]
+            - cell "HML 생성" [ref=e6054]
+            - cell "초안" [ref=e6055]
+            - cell "sangwon.jo 2026-10-19" [ref=e6056]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "335" [ref=e6057]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제4)" [ref=e6058]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제4)" [ref=e6100]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6059]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6060]
+            - cell "HML 생성" [ref=e6061]
+            - cell "초안" [ref=e6062]
+            - cell "sangwon.jo 2026-10-19" [ref=e6063]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+          - row
+            - cell "334" [ref=e6064]
+            - cell "[MOCK-HML-M] 템플릿_시험지2 (복제3)" [ref=e6065]
+              - link "[MOCK-HML-M] 템플릿_시험지2 (복제3)" [ref=e6101]
+            - cell "22EMAT0NGS3101070000 등 9개" [ref=e6066]
+              - StaticText "22EMAT0NGS3101070000 등 9개"
+            - cell "4" [ref=e6067]
+            - cell "HML 생성" [ref=e6068]
+            - cell "초안" [ref=e6069]
+            - cell "sangwon.jo 2026-10-19" [ref=e6070]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-10-19"
+        - generic
+          - StaticText "총 17건 중 1∼10 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e6071]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e6072]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e6073]
+          - listitem [level=1]
+            - link "2" [ref=e6074]
+          - listitem [level=1]
+            - link "다음" [ref=e6075]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e6076]
+              - StaticText ""

@@ -1,0 +1,10 @@
+{
+ "steps":[
+  {"label":"1248-paper-discarded-observed-url-open","command":["open","https://dev-exambank.dongahub.com/paper/detail.donga?paperId=266&curriculum=22&pageNum=1&pageSize=30"]},
+  {"label":"1249-paper-discarded-real-detail","command":["snapshot"],"screenshot":true},
+  {"label":"1250-paper-discarded-real-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1251-paper-discarded-real-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1252-paper-discarded-real-bottom","command":["scroll","down","700","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1253-paper-discarded-real-bottom-measure","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":7500
+}

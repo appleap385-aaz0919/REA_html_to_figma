@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "label": "3357-mixed-twin-single-candidate-visual",
+      "command": [
+        "eval",
+        "(()=>{const m=document.querySelector('#itemTwinModal.show');return {visible:document.visibilityState,dialog:m?.id,scrollers:[...m.querySelectorAll('*')].filter(e=>e.clientHeight>0&&e.scrollHeight>e.clientHeight+2&&['auto','scroll'].includes(getComputedStyle(e).overflowY)).map(e=>({class:e.className,top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight}))};})()"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3358-mixed-twin-close-single246-dialog",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/mixed-twin-dismiss-dialog.js"
+      ]
+    },
+    {
+      "label": "3359-mixed-twin-open-set242",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242"
+      ]
+    },
+    {
+      "label": "3360-mixed-twin-set242-search-single246",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/mixed-twin-candidate-policy.js"
+      ]
+    },
+    {
+      "label": "3361-mixed-twin-set-candidate-visual",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3362-mixed-twin-close-set242-dialog",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/mixed-twin-dismiss-dialog.js"
+      ]
+    },
+    {
+      "label": "3363-mixed-twin-original-set-and-single246-after",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml666-own-items-baseline-read.js"
+      ]
+    },
+    {
+      "label": "3364-mixed-twin-twelve-memberships-and-history-after",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-set-ai-twelve-memberships-read.js"
+      ]
+    }
+  ],
+  "tailChars": 100,
+  "stopOnScreenshotFailure": false
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion":1,
+  "date":"2026-11-09",
+  "status":"in_progress",
+  "scope":"dev-exambank.dongahub.com",
+  "evidenceRange":[576,611],
+  "testItemId":2088985,
+  "savedDetailId":2088675,
+  "observations":[
+    {"code":"SBMANM","evidence":[576,577,578,579],"result":"Friday unsaved2x2 form and three student inputs survived weekend. With first inner order off and second inner order fixed,2,1/3,4 grades correct579. This corroborates requested first-inner Toggle568."},
+    {"code":"SBMANM","evidence":[580,581,582],"result":"Same flags:2,1/4,3 grades incorrect. Each OMR SET internal order flag applies independently."},
+    {"code":"SBMANM","evidence":[583,584,585,586,587],"result":"Outer order fixed, first inner order off and second inner order fixed:3,4/2,1 grades incorrect."},
+    {"code":"SBMANM","evidence":[588,589,590,591,592,593,594,595,596,597,598,599,600],"result":"Outer order disabled. Screenshot590 shows outer and first-inner unchecked. Same3,4/2,1 grades correct600. Group permutation accepted while preserving each group's own order rule."},
+    {"code":"SBMANM","evidence":[601,602,603],"result":"Outer order off, first inner off and second inner fixed: cross-mixed3,2/4,1 grades incorrect. Matching retains OMR SET grouping rather than accepting an unrestricted flat permutation."},
+    {"code":"SBMANM","evidence":[604,605,606,607,608,609,610,611],"result":"Full apply606 produces detail2088675. Master displays subjective/multiple/general. Edit reentry and top/bottom screenshots restore math1/2 and3/4, outer=false, inner1=false, inner2=true. Student preview answers do not replace administrator correct values."}
+  ],
+  "runtimePolicyMatrix":[
+    {"outerFixed":true,"innerFixed":[true,true],"student":[2,1,3,4],"result":"incorrect","evidence":563},
+    {"outerFixed":true,"innerFixed":[true,true],"student":[1,2,3,4],"result":"correct","evidence":566},
+    {"outerFixed":true,"innerFixed":[false,true],"student":[2,1,3,4],"result":"correct","evidence":579},
+    {"outerFixed":true,"innerFixed":[false,true],"student":[2,1,4,3],"result":"incorrect","evidence":582},
+    {"outerFixed":true,"innerFixed":[false,true],"student":[3,4,2,1],"result":"incorrect","evidence":587},
+    {"outerFixed":false,"innerFixed":[false,true],"student":[3,4,2,1],"result":"correct","evidence":600},
+    {"outerFixed":false,"innerFixed":[false,true],"student":[3,2,4,1],"result":"incorrect","evidence":603}
+  ],
+  "limitations":["Both inner flags off and other group counts remain untested.","Legend, similar answers, affixes and comma variants on SBMANM remain untested.","Source analysis is recorded separately from runtime and server persistence."],
+  "nextActions":["Refresh today's item-edit source and compare with earlier sanitized source.","Continue SBMAAS/SBMALD/SBMADD and essay runtime forms.","Complete HML four slots and remaining Master menu families."]
+}

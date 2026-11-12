@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"1325-source-mapped134-open","command":["open","https://dev-exambank.dongahub.com/product/detail.donga?id=134&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1326-source-mapped134-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1327-source-mapped134-modify","command":["click","{ref}"],"refPattern":"- link \"수정\" \\[ref=(e\\d+)\\]","expectMatches":1},
+ {"label":"1328-source-mapped134-edit-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1329-source-mapped134-form-state","command":["eval","--file","sources/runtime/source-form-observation.js"]}
+],"tailChars":1200}

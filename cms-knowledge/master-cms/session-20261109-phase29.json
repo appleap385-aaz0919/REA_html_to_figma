@@ -1,0 +1,23 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_remaining_branches","evidenceRange":[1941,1995],"lastEvidence":"1995-definition663-original-integrity",
+ "summary":"QA Definition661의 자동 최종승인Y와 생성문항2089175의 초안R·메타/OMR 누락·정상 Q/A이미지를 확인했다. 두 번째 QA문서662를 등록하고 실제 폐기해 D상태·본문보존·개별문항 조회의 목록 리다이렉트를 확인했다. 빈 ZIP663은 실제 서버처리에서F가 됐고 원본다운로드22B의 해시가 제출파일과 일치했다. 확정 Master 업무변경은29회다.",
+ "observations":[
+  {"evidence":[1941,1942,1943,1944,1945],"result":"문서661을 읽기GET으로 다시 확인하니M→Y 자동처리가 끝났고 실제화면의 승인상태와 상세/수정 버튼을 확인했다. QA비고·본문·문항ID2089175/detail2088808이 유지됐다. 문서Y에도 자식문항은R초안이다. 원본530도같이GET해 기존문항2087992/detail2087125·비고·표시메타·질문요약/정답/채점모드가이전자료와일치하고QA표시는없음을확인했다. 이비교는전체DB/관계/원격파일불변의증명은아니다. 승인상세 실제스크롤329+1071=1400에 도달했다."},
+  {"evidence":[1946,1947,1948,1949,1950],"result":"새문항2089175의 Master상세는생성방식디피니션·초안R·주관식>다답형>일반형(SBMANM),용도공통,출처1개,평가지/쌍둥이0개다. 난이도/단원코드/성취기준/내용/행동영역/교과역량/유형정보는비어있고배포/쌍둥이생성이차단된다. QA입력JSON의SHORT_ANSWER_ORDERED가이표본에서SBMANM으로생성된대응만확인했으며모든서버변환규칙으로일반화하지않는다. HML카드Q/A이미지는complete=true이고492×218/492×277로실제로로드됐다. 전체페이지스크린샷을본것과구분한다. 상세실제스크롤891+1071=1962에 도달했다."},
+  {"evidence":[1951,1952,1953,1954],"result":"1951은버튼을누르면모달이열릴것으로잘못기대한검사시간초과다. 이를사이트모달실패로분류하지않았다. 새관찰에서모달/iframe이없고저장OMR/정답속성이누락된것을확인했다.1954에서같은읽기용버튼을눌러즉시토스트를포착하니OMR미리보기불가/OMR이입력되지않았습니다가표시됐다. 타입은SBMANM이고data-saved-omr/answer는null,모달0/iframe0이다. 클라이언트소스도저장OMR을검사한후반려하도록구현돼있다. 생성JSON의정답/채점정보와저장OMR이같은데이터라고가정하면안된다."},
+  {"evidence":[1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969],"result":"두번째QA파일980B,별도외부ID2116110911/12/13,QA표시와폐기의도를보존한후실제등록을한번수행했다. 문서662 P→R,새문항2089204/detail2088837,페이지2~3/교사용T가확인됐다. 문서단위파싱성공과입력메타를확인했으나개별문항상세의T/출처페이지반영까지조회한것은아니다. 실제스크롤329+1071=1400에 도달했다."},
+  {"evidence":[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979],"result":"QA662의폐기사유를입력하고최종확인창의ID/신규문항ID/사유를검증한뒤실제폐기를한번수행했다. 폐기되었습니다토스트와D,조회만가능/복원불가안내가나왔다. 새GET에서도QA본문·정답·풀이와삭제배지를유지하지만문항ID가숨겨지고상세/수정/승인/폐기버튼이없으며다운로드/목록만남는다. 비고는disabled=true다. 실제스크롤399+1071=1470에 도달했다. 같은신규문항2089204의상세읽기GET은전체문항목록으로리다이렉트됐다. 물리적DB삭제나모든목록필터배제를추론하지않는다."},
+  {"evidence":[1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995],"result":"유효한ZIP컨테이너지만멤버가0개인22B파일을별도QA로실제등록했다. 문서663이F로목록에생겼고상세는ZIP파일자체오류로파싱을시작하지못했다/원본수정후재등록안내,생성문항없음,다운로드/목록만제공한다. 아래빈영역의보조문구는HML파일자체오류로잘못표시된다. 실제관찰에서중간P는보지못했으므로상태이력에추가하지않는다. 원본버튼주소에따른프록시GET은200 application/zip22B였고SHA256이제출한빈파일과정확히일치했다. 업로드객체가실제로보존됐음을확인했지만각업로드단계의HTTP상태를모두본것은아니다. 화면높이1071에전체영역이맞는다."}
+ ],
+ "artifacts":["definition-qa-processing-review-20261109.md","definition-qa-import-intent.json","definition-qa-discard-intent.json","definition-qa-empty-intent.json","sources/definition661-approved-20261109.html","sources/definition-qa-item2089175-detail-20261109.html","sources/definition662-draft-20261109.html","sources/definition662-discarded-20261109.html","sources/definition663-empty-failed-20261109.html"],
+ "persistentChanges":{"confirmedMasterOperations":29,"newMasterChangesInThisPhase":3,"qaDocuments":[{"id":661,"state":"Y","itemId":2089175,"itemState":"R"},{"id":662,"state":"D","ownCreatedItemId":2089204,"itemDetailGet":"Redirects to Master list"},{"id":663,"state":"F","generatedQuestionCards":0}],"originalRestorationPending":false,"serviceDeployment":false},
+ "tooling":{"targetOnlyActiveRenderingOverride":"Cleared automatically after1200seconds. Helper process ended cleanly; browser-render-override-state.json active=false. No native window focus was changed.","pixelEvidence":"No new complete-page pixel proof in this phase. Loaded image dimensions are not a page screenshot.","incorrectModalExpectationEvidence":1951},
+ "remaining":[
+  "HML 문서의 실제 업로드/파싱/승인, 세트/삭제와 등록실패 선택의 최종처리를 별도 QA자료로 확인한다.",
+  "Definition의 세트/여러JSON/첨부리소스/유형별 서버변환/부분파싱실패와 서버 메타 검증, 발급/전송/생성 실패 및 재시도는 미확인이다.",
+  "승인된 문서의 문항수정 진입에서 임시저장 유무 선택, 추천결과의 내부처리/누락이유, 개별문항승인과 배포선행조건을 추가 확인한다.",
+  "HML 편집기의 실제 번역파일/다른슬롯 저장/공유지문, 출처의 남은필터, 쌍둥이/평가지/OMR/랩의 남은분기와 누락픽셀을 이어간다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=663&curriculum=22&pageNum=1&pageSize=100","tab":"t21 research Definition663 failed empty ZIP","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["문서승인Y와문항승인상태를구분한다.","AI추천처리완료Y가모든메타의생성이나정확성을보장한다고추론하지않는다.","화면안내/정적코드/실제제출결과/독립재조회/도구검사오류를구분한다.","전체CMS또는모든분기의100%완료를주장하지않는다."]
+}

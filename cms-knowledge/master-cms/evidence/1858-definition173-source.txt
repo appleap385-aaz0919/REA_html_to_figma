@@ -1,0 +1,305 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e20274]
+      - link "문제은행 마스터 CMS" [ref=e20275]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e20281]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e20282]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e20283]
+          - link "HML 문항 등록" [ref=e20284]
+          - link "디피니션 문항 등록" [ref=e20285]
+          - link "쌍둥이 그룹 관리" [ref=e20286]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e20287]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e20288]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e20289]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e20276]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "디피니션 상세" [level=2, ref=e20277]
+      - StaticText "승인"
+      - generic
+        - heading "기본 정보" [level=3, ref=e20279]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "173"
+          - term "원본 파일"
+          - definition
+            - StaticText "[MOCK-DIFI-A] 템플릿_시험지2.zip"
+            - button " 다운로드" [ref=e20293]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-H-MA-D1-2-1-DCL-MS-2024]"
+            - StaticText "22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22EMAT0NGS3102060000]"
+            - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 평면도형 > 정사각형은 무엇일까요 > >"
+          - term "페이지"
+          - definition
+            - StaticText "2 ~ 22"
+          - term "용도"
+          - definition
+            - StaticText "교사용"
+          - term "등록"
+          - definition
+            - StaticText "sangwon.jo · 2026-09-23"
+          - term "수정"
+          - definition
+            - StaticText "sangwon.jo · 2026-09-23"
+        - LabelText
+          - StaticText "비고"
+        - textbox [disabled, ref=e20290]: 목데이터 비고
+          - StaticText "목데이터 비고"
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e20280]
+        - generic
+          - StaticText "#1"
+          - StaticText "문항ID 2085993 (2084091)"
+          - link "문항 상세" [ref=e20291]
+          - button "문항 수정" [ref=e20292]
+          - StaticText "승인(미사용)"
+          - StaticText "등록성공"
+          - article
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "5"
+                        - MathMLNumber
+                          - StaticText "24"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText ", "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "7"
+                        - MathMLNumber
+                          - StaticText "30"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText "의 값이 모두 자연수가 되도록 하는 자연수 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText "의 값 중 가장 작은 수를 구하시오."
+            - generic
+              - heading "정답" [level=3, ref=e20294]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "120"
+            - generic
+              - heading "풀이" [level=3, ref=e20295]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                - StaticText "은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                - StaticText "와 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                - StaticText "의 공배수이므로 가장 작은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                - StaticText "의 값은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                - StaticText "와 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                - StaticText "의 최소공배수이다. "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLOperator
+                        - StaticText "⋯"
+                - StaticText "➊"
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                          - MathMLOperator
+                            - StaticText "×"
+                          - MathMLNumber
+                            - StaticText "3"
+                - StaticText ", "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "5"
+                - StaticText "이므로"
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                          - MathMLOperator
+                            - StaticText "×"
+                          - MathMLNumber
+                            - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "5"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "120"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLOperator
+                        - StaticText "⋯"
+                - StaticText "➋"
+            - generic
+              - heading "채점 기준" [level=3, ref=e20296]
+              - table
+                - row
+                  - cell "채점 기준" [ref=e20297]
+                    - paragraph
+                      - StaticText "채점 기준"
+                  - cell "배점" [ref=e20298]
+                    - paragraph
+                      - StaticText "배점"
+                - row
+                  - cell "➊ 구하는 값은 와 의 최소공배수임을 설명하기" [ref=e20299]
+                    - paragraph
+                      - StaticText "➊ 구하는 값은 "
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "24"
+                      - StaticText "와 "
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "30"
+                      - StaticText "의 최소공배수임을 설명하기"
+                  - cell "점" [ref=e20300]
+                    - paragraph
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "3"
+                      - StaticText "점"
+                - row
+                  - cell "➋ 답 구하기" [ref=e20301]
+                    - paragraph
+                      - StaticText "➋ 답 구하기"
+                  - cell "점" [ref=e20302]
+                    - paragraph
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "3"
+                      - StaticText "점"
+      - link "목록" [ref=e20278]

@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "in_progress",
+  "userSteering": [
+    "Prioritize runtime checks for all 14 OMR forms and the four HML document-editor slots.",
+    "Development CMS data changes are explicitly authorized for detailed policy and feature research."
+  ],
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [
+    292,
+    370
+  ],
+  "evidenceQuality": [
+    {
+      "evidence": [
+        293,
+        294
+      ],
+      "rule": "Existing first browser tab was an itemcms.dongahub.com production page. Exclude from development CMS coverage. No production edits."
+    },
+    {
+      "evidence": 307,
+      "rule": "Pixels show desktop rather than CMS. Exclude from visual UI evidence; 308 confirms the actual COPY dialog."
+    },
+    {
+      "evidence": 320,
+      "rule": "No preview modal or validation message captured. Do not infer validation rejection, successful preview, or root cause."
+    },
+    {
+      "evidence": 322,
+      "rule": "windowNotFound on temporary-save attempt. Save execution/persistence unproven; requery before retrying."
+    }
+  ],
+  "testItem": {
+    "id": 2088985,
+    "initialDetailId": 2088491,
+    "sourceItemId": 2038004,
+    "creationMethod": "COPY twin generation",
+    "creationSubmitEvidence": 309,
+    "creationReadbackEvidence": [
+      310,
+      311,
+      313
+    ],
+    "initialState": "Draft, not deployed, copied question, single-answer multiple-choice, answer3",
+    "history": "2088985, COPY, jaehyuk.myung, 2026-11-06 13:55",
+    "observedEffects": [
+      "Original source twin count7->8",
+      "All-item count35535->35536",
+      "New copied question detail opens successfully"
+    ],
+    "ledger": "mutation-ledger.json",
+    "currentDetailId": 2088494,
+    "originalSourceContentUnedited": true
+  },
+  "observedPolicies": [
+    {
+      "evidence": [
+        303,
+        306
+      ],
+      "observation": "Draft2088806 does not show twin-generation controls; approved-used2038004 shows generation/history controls. Scope is these samples; complete permission/status matrix unproven."
+    },
+    {
+      "evidence": [
+        300,
+        301,
+        302
+      ],
+      "observation": "Cancel from edit opens a leave-without-saving confirmation and confirmed leave returns to detail."
+    },
+    {
+      "evidence": [
+        303,
+        306
+      ],
+      "observation": "Question/answer HML preview images render for these single items. User-reported missing-image issue is partial, not evidence that all HML cards are blank."
+    }
+  ],
+  "omrRuntime": {
+    "OBSACN": {
+      "formEvidence": [
+        316,
+        317
+      ],
+      "observation": "Copied baseline has five option rows and radio answer3. Existing earlier sample preview grading is documented separately. Persistence not yet verified."
+    },
+    "OBSAOX": {
+      "transitionEvidence": [
+        317,
+        318,
+        319
+      ],
+      "observation": "Type dropdown offers N-choice and O/X. Selecting O/X changes five choice rows to two text rows O and X, optional title, and no answer initially selected. Escape closes dropdown while O/X form remains.",
+      "answerInputEvidence": 321,
+      "answerInputResult": "O radio is visibly selected in retained PNG.",
+      "emptyPreviewEvidence": 320,
+      "emptyPreviewResult": "No modal/message captured; unresolved.",
+      "temporarySaveAttemptEvidence": 322,
+      "temporarySaveResult": "Tool cannot find closed window. No persistence claim.",
+      "validPreviewEvidence": [
+        324,
+        325
+      ],
+      "validPreviewResult": "Preview modal opens. Student controls expose correct/incorrect choices and grading. Content/grading checks continue.",
+      "grading": {
+        "evidence": [
+          326,
+          327,
+          328,
+          329,
+          330,
+          331
+        ],
+        "result": "Empty response and X grade incorrect; O grades correct. Answer mode highlights O and hides grading."
+      },
+      "tempSave": {
+        "evidence": [
+          335,
+          339,
+          341,
+          343,
+          344
+        ],
+        "detailId": 2088492,
+        "result": "Master baseline stays N-choice; draft=Y restores O/X and selected O."
+      },
+      "fullApply": {
+        "evidence": [
+          347,
+          348,
+          350,
+          351
+        ],
+        "detailId": 2088493,
+        "result": "Master shows O/X. Edit reentry without draft selector restores O/X and selected O; temporary warning absent."
+      }
+    },
+    "remainingForms": [
+      "OBMAOX",
+      "SBSANM",
+      "SBSADR",
+      "SBSAAS",
+      "SBMANM",
+      "SBMAAS",
+      "SBMALD",
+      "SBMADD",
+      "ESBA00",
+      "ESSA00",
+      "ESMA00"
+    ],
+    "remainingCommonChecks": [
+      "All forms: valid input, invalid boundary, preview, save, reload/hydrate",
+      "Single O/X: confirm whether temporary save persisted before retrying",
+      "N-choice: save/readback remains unverified"
+    ],
+    "OBMACN": {
+      "formEvidence": [
+        353,
+        354,
+        355,
+        356,
+        363
+      ],
+      "form": "Five option rows, checkbox answers1 and3, add/delete controls.",
+      "previewEvidence": [
+        357,
+        358,
+        359,
+        360,
+        361
+      ],
+      "preview": "Only1 incorrect;1+3 correct.",
+      "fullApply": {
+        "submit": 366,
+        "readback": [
+          367,
+          369,
+          370
+        ],
+        "detailId": 2088494,
+        "result": "Master multiple-answer N-choice;1 and3 visibly selected after edit reentry."
+      },
+      "htmlObservation": "Returning from O/X to N-choice regenerated five empty choice bodies. Confirmation and full save still succeeded. Requirement classification pending."
+    }
+  },
+  "currentConnection": {
+    "windowId": 6755210,
+    "status": "recovered",
+    "evidence": 323,
+    "correction": "Window disappearance from native inventory did not prove closure. Same window returned with the unsaved O/X form and O selection intact. User confirms window is open.",
+    "nextAction": "Continue remaining OMR types, starting objective multiple-answer N-choice."
+  },
+  "outstandingHml": "Runtime test passage and passage-translation slots on suitable examples; four slot buttons are known, single-item question and answer loading observed earlier.",
+  "outstandingMasterMenus": [
+    "Remaining Definition statuses",
+    "Twin groups",
+    "Papers",
+    "Sources",
+    "Lab"
+  ],
+  "originalSourceContentUnedited": true,
+  "confirmedServerOperations": 4
+}

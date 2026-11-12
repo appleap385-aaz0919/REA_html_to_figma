@@ -1,0 +1,128 @@
+{
+  "steps": [
+    {
+      "label": "1461-lab-frame-activate-iframe-for-choice",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabFrame\"]').click();return {action:'Activate iframe test pane'};})()"
+      ]
+    },
+    {
+      "label": "1462-lab-frame-local-choice-on",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=frame] [data-call=mcOn]').click();return {action:'Enable multiple choice in iframe test only'};})()"
+      ]
+    },
+    {
+      "label": "1463-lab-frame-changed-compare",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare after enabling choices on one side'};})()"
+      ]
+    },
+    {
+      "label": "1464-lab-frame-changed-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1465-lab-frame-direct-switch-after-change",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabDirect\"]').click();return {action:'Switch direct without reload'};})()"
+      ]
+    },
+    {
+      "label": "1466-lab-frame-after-switch-compare",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare after returning to direct'};})()"
+      ]
+    },
+    {
+      "label": "1467-lab-frame-reopen-changed-iframe",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabFrame\"]').click();return {action:'Reopen modified iframe without reload'};})()"
+      ]
+    },
+    {
+      "label": "1468-lab-frame-change-retained-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1469-lab-frame-reload-for-reset",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocLoad').click();return {action:'Reset both panes from original input'};})()"
+      ]
+    },
+    {
+      "label": "1470-lab-frame-direct-reset-remount",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabDirect\"]').click();return {action:'Mount direct original after reset'};})()"
+      ]
+    },
+    {
+      "label": "1471-lab-frame-reset-both-compare",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare reset documents'};})()"
+      ]
+    },
+    {
+      "label": "1472-lab-frame-passage-json-input",
+      "command": [
+        "fill",
+        "#frameDocInput",
+        "{\"content\": {\"passageHtml\": \"<p>$N=360=2^a\\\\times3^b\\\\times5^c$이고, $a,b,c$는 자연수입니다. 다음 물음에 답하시오.</p>\"}, \"test_fixture\": {\"kind\": \"set\", \"operation\": \"seed-20261104-side-24m-5s-set5\"}, \"contentVersion\": \"v3\"}"
+      ]
+    },
+    {
+      "label": "1473-lab-frame-passage-load",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocLoad').click();return {action:'Load retained set passage document locally'};})()"
+      ]
+    },
+    {
+      "label": "1474-lab-frame-passage-direct-save",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=direct] [data-call=save]').click();return {action:'Validate passage editor save locally'};})()"
+      ]
+    },
+    {
+      "label": "1475-lab-frame-passage-iframe-open",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabFrame\"]').click();return {action:'Open passage iframe editor'};})()"
+      ]
+    },
+    {
+      "label": "1476-lab-frame-passage-compare",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare passage document render methods'};})()"
+      ]
+    },
+    {
+      "label": "1477-lab-frame-passage-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 1100
+}

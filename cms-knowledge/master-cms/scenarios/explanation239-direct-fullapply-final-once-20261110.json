@@ -1,0 +1,9 @@
+{"steps":[
+ {"label":"3244-own-copy239-explanation-direct-fullapply-final-once","command":["eval","--file","sources/runtime/explanation239-direct-fullapply-final-once.js"]},
+ {"label":"3245-own-copy239-explanation-direct-fullapply-current-ui","command":["eval","(()=>({url:location.href,path:location.pathname,status:document.querySelector('#statusForm input[name=viewFlag]:checked')?.value,identity:document.querySelector('.page-wrapper dl dt')?.nextElementSibling?.textContent.trim(),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id)}))()"]},
+ {"label":"3246-own-explanation239-family-after-direct-fullapply","command":["eval","--file","sources/runtime/disposable-single-twin-original-controls-read.js"]},
+ {"label":"3247-own-copy239-after-explanation-direct-fullapply-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3248-own-copy239-after-explanation-current-edit-refs","command":["eval","(async()=>{const r=await fetch('/item/all/modify.donga?itemId=2089239',{credentials:'same-origin'});if(!r.ok||r.redirected)throw Error('Own copy edit readback unavailable');const d=new DOMParser().parseFromString(await r.text(),'text/html');return {httpStatus:r.status,owner:{...d.querySelector('[data-editor-url]').dataset},slots:[...d.querySelectorAll('[data-webhwp-path]')].map(e=>({slot:e.dataset.webhwpPath,path:e.value})),images:[...d.querySelectorAll('#tabHml img')].map(e=>({alt:e.alt,src:e.getAttribute('src')}))};})()"]},
+ {"label":"3249-own-explanation239-family-drafts-after-fullapply","command":["eval","--file","sources/runtime/explanation239-family-draft-checks-read.js"]},
+ {"label":"3250-own-explanation239-family-memberships-history-after-fullapply","command":["eval","--file","sources/runtime/disposable-single-family-memberships-history-read.js"]}
+],"tailChars":120}

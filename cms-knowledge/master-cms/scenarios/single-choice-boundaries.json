@@ -1,0 +1,174 @@
+{
+  "steps": [
+    {
+      "label": "944-single-choice-initial-five",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "945-single-choice-add-to-6",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 추가\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "946-single-choice-add-to-7",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 추가\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "947-single-choice-max-seven",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "948-single-choice-max-add-enabled",
+      "command": [
+        "is",
+        "enabled",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 추가\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "949-single-choice-select-seventh",
+      "command": [
+        "check",
+        "{ref}"
+      ],
+      "refPattern": "- radio \\[checked=false, ref=(e\\d+)\\]",
+      "expectMatches": 7,
+      "matchIndex": 6
+    },
+    {
+      "label": "950-single-choice-delete-selected-seventh",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 7,
+      "matchIndex": 6
+    },
+    {
+      "label": "951-single-choice-after-selected-delete",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/read-visible-omr-controls.js"
+      ]
+    },
+    {
+      "label": "952-single-choice-delete-from-6",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 6,
+      "matchIndex": 5
+    },
+    {
+      "label": "953-single-choice-delete-from-5",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 5,
+      "matchIndex": 4
+    },
+    {
+      "label": "954-single-choice-delete-from-4",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 3
+    },
+    {
+      "label": "955-single-choice-delete-from-3",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 3,
+      "matchIndex": 2
+    },
+    {
+      "label": "956-single-choice-min-two",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "957-single-choice-min-delete-enabled",
+      "command": [
+        "is",
+        "enabled",
+        "{ref}"
+      ],
+      "refPattern": "- button \"삭제\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "958-single-choice-min-control-properties",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/read-visible-omr-controls.js"
+      ]
+    },
+    {
+      "label": "959-single-choice-label-alpha",
+      "command": [
+        "fill",
+        "{ref}",
+        "Alpha"
+      ],
+      "refPattern": "- textbox \"선택지\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "960-single-choice-label-beta",
+      "command": [
+        "fill",
+        "{ref}",
+        "Beta"
+      ],
+      "refPattern": "- textbox \"선택지\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "961-single-choice-no-correct-preview",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "962-single-choice-no-correct-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 5000
+}

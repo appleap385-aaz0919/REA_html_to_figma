@@ -1,0 +1,36 @@
+{
+  "steps": [
+    {
+      "label": "2305-own-hml-editor-target-select",
+      "command": [
+        "tab",
+        "C2D425453C876C056127BB64B954B318"
+      ]
+    },
+    {
+      "label": "2306-own-hml-editor-frame-observation",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-frame-observation.js"
+      ]
+    },
+    {
+      "label": "2307-own-hml-editor-opener-and-slots",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-parent-slots.js"
+      ]
+    },
+    {
+      "label": "2308-own-hml-editor-root-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 180
+}

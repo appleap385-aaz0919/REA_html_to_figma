@@ -1,0 +1,288 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e29916]
+      - link "문제은행 마스터 CMS" [ref=e29917]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e29930]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e29931]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e29932]
+          - link "HML 문항 등록" [ref=e29933]
+          - link "디피니션 문항 등록" [ref=e29934]
+          - link "쌍둥이 그룹 관리" [ref=e29935]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e29936]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e29937]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e29938]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e29918]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 수정"
+      - heading "문항 수정" [level=2, ref=e29919]
+      - StaticText "문항 ID"
+      - StaticText "2089242 (2088873)"
+      - StaticText "지문 ID"
+      - StaticText "2089241"
+      - StaticText "원본 파일"
+      - StaticText "QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml"
+      - button "" [ref=e29939]
+        - StaticText ""
+      - StaticText "상태"
+      - StaticText "초안"
+      - StaticText "배포 여부"
+      - StaticText "미배포"
+      - StaticText "생성 방식"
+      - StaticText "HML 변환"
+      - tablist
+        - tab "메타정보 수정" [ref=e29926]
+        - tab "한글(HML) 수정" [ref=e29927]
+        - tab "HTML 수정" [selected, ref=e29928]
+        - tab "OMR 수정" [ref=e29929]
+      - link "취소" [ref=e29920]
+      - button "임시 저장" [ref=e29921]
+      - button "전체 반영" [ref=e29922]
+      - generic
+        - generic
+          - heading "문항 형태 *" [level=3, ref=e29993]
+            - StaticText ""
+            - StaticText "문항 형태 *"
+          - combobox [expanded=false, ref=e29997]: 주관식
+            - MenuListPopup
+              - option "객관식" [ref=e30005]
+              - option "주관식" [selected, ref=e30006]
+              - option "서술형" [ref=e30007]
+          - combobox [expanded=false, ref=e29998]: 단답형
+            - MenuListPopup
+              - option "단답형" [selected, ref=e30008]
+              - option "다답형" [ref=e30009]
+          - combobox [expanded=false, ref=e29999]: 일반형
+            - MenuListPopup
+              - option "일반형" [selected, ref=e30010]
+              - option "그리기형" [ref=e30011]
+              - option "영역 선택형" [ref=e30012]
+        - generic
+          - heading "이미지 업로드" [level=3, ref=e29994]
+            - StaticText ""
+            - StaticText "이미지 업로드"
+          - button " 업로드" [ref=e30000]
+            - StaticText ""
+            - StaticText "업로드"
+        - tabpanel
+          - generic
+            - heading "지문 편집" [level=3, ref=e30033]
+              - StaticText ""
+              - StaticText "지문 편집"
+            - generic
+              - generic
+                - StaticText "지문 passage:2089241 편집"
+                - button "↶ 실행취소" [ref=e30042]
+                - button "↷ 다시실행" [ref=e30043]
+                - combobox "문단 정렬" [expanded=false, ref=e30044]: 정렬: 기본
+                  - MenuListPopup
+                    - option "정렬: 기본" [selected, ref=e30081]
+                    - option "왼쪽" [ref=e30082]
+                    - option "가운데" [ref=e30083]
+                    - option "오른쪽" [ref=e30084]
+                - button "문단" [ref=e30045]
+                - button "B" [ref=e30046]
+                - button "I" [ref=e30047]
+                - button "U" [ref=e30048]
+                - button "A" [ref=e30049]
+                - button "+ 수식" [ref=e30050]
+                - button "🖼 이미지" [ref=e30051]
+                - button "⊞ 표" [ref=e30052]
+                - button "글상자" [ref=e30053]
+                - button "d-box" [ref=e30054]
+                - button "d-input" [ref=e30055]
+                - button "특수문자" [ref=e30056]
+                - button "글자 겹치기" [ref=e30057]
+              - StaticText "본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다"
+              - heading "지문" [level=3, ref=e30035]
+              - generic [ref=e30036] editable [contenteditable]:  [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오.
+                - paragraph
+                  - StaticText " [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오."
+              - paragraph
+                - StaticText "미리보기 (실서비스 뷰어 렌더)"
+              - paragraph
+                - StaticText " [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오."
+          - generic
+            - heading "문항 편집" [level=3, ref=e30034]
+              - StaticText ""
+              - StaticText "문항 편집"
+            - generic
+              - generic
+                - StaticText "문항 편집"
+                - button "↶ 실행취소" [ref=e30058]
+                - button "↷ 다시실행" [ref=e30059]
+                - combobox "문단 정렬" [expanded=false, ref=e30060]: 정렬: 기본
+                  - MenuListPopup
+                    - option "정렬: 기본" [selected, ref=e30085]
+                    - option "왼쪽" [ref=e30086]
+                    - option "가운데" [ref=e30087]
+                    - option "오른쪽" [ref=e30088]
+                - button "문단" [ref=e30061]
+                - button "B" [ref=e30062]
+                - button "I" [ref=e30063]
+                - button "U" [ref=e30064]
+                - button "A" [ref=e30065]
+                - button "+ 수식" [ref=e30066]
+                - button "🖼 이미지" [ref=e30067]
+                - button "⊞ 표" [ref=e30068]
+                - button "글상자" [ref=e30069]
+                - button "d-box" [ref=e30070]
+                - button "d-input" [ref=e30071]
+                - button "특수문자" [ref=e30072]
+                - button "글자 겹치기" [ref=e30073]
+              - StaticText "본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다"
+              - heading "문제" [level=3, ref=e30037]
+              - article
+                - generic [ref=e30074] editable [contenteditable]: (
+2
+
+
+3
+)
+(
+2
+3
+	​
+
+)
+
+                  - paragraph
+                    - generic [ref=e30089] clickable [cursor:pointer]
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLOperator
+                              - StaticText "("
+                            - MathMLTable
+                              - MathMLTableRow
+                                - MathMLTableCell
+                                  - MathMLRow
+                                    - MathMLNumber
+                                      - StaticText "2"
+                              - MathMLTableRow
+                                - MathMLTableCell
+                                  - MathMLRow
+                                    - MathMLNumber
+                                      - StaticText "3"
+                            - MathMLOperator
+                              - StaticText ")"
+                    - LineBreak "\n"
+              - heading "정답" [level=3, ref=e30038]
+              - article
+                - generic [ref=e30075] editable [contenteditable]: 2
+×
+1
+2×1행렬
+                  - paragraph
+                    - generic [ref=e30090] clickable [cursor:pointer]
+                      - MathMLMath
+                        - MathMLRow
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "2"
+                            - MathMLOperator
+                              - StaticText "×"
+                            - MathMLNumber
+                              - StaticText "1"
+                    - StaticText "행렬"
+              - heading "풀이" [level=3, ref=e30039]
+              - article
+                - generic [ref=e30076] editable [contenteditable]: 
+
+                  - paragraph
+                    - LineBreak "\n"
+              - heading "모범 답안" [level=3, ref=e30040]
+              - article
+                - generic [ref=e30077] editable [contenteditable]: 
+
+                  - paragraph
+                    - LineBreak "\n"
+              - heading "채점 기준" [level=3, ref=e30041]
+              - article
+                - generic [ref=e30078] editable [contenteditable]: 
+
+                  - paragraph
+                    - LineBreak "\n"
+              - paragraph
+                - StaticText "미리보기 (실서비스 뷰어 렌더)"
+              - article
+                - generic
+                  - heading "문제" [level=3, ref=e30079]
+                  - paragraph
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLOperator
+                            - StaticText "("
+                          - MathMLTable
+                            - MathMLTableRow
+                              - MathMLTableCell
+                                - MathMLRow
+                                  - MathMLNumber
+                                    - StaticText "2"
+                            - MathMLTableRow
+                              - MathMLTableCell
+                                - MathMLRow
+                                  - MathMLNumber
+                                    - StaticText "3"
+                          - MathMLOperator
+                            - StaticText ")"
+                - generic
+                  - heading "정답" [level=3, ref=e30080]
+                  - paragraph
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "2"
+                          - MathMLOperator
+                            - StaticText "×"
+                          - MathMLNumber
+                            - StaticText "1"
+                    - StaticText "행렬"
+      - link "취소" [ref=e29923]
+      - button "임시 저장" [ref=e29924]
+      - button "전체 반영" [ref=e29925]
+      - dialog
+        - generic
+          - heading "전체 반영" [level=5, ref=e30091]
+          - button "닫기" [ref=e30092]
+          - StaticText "저장하시겠습니까?"
+          - button "취소" [ref=e30093]
+          - button "저장" [ref=e30094]

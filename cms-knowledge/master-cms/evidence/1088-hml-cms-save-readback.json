@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1088-hml-cms-save-readback",
+  "startedUtc": "2026-11-09T04:03:54.361637+00:00",
+  "command": [
+    "snapshot"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "0EFB900C688AC111C33EDFA475104F9D",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.071
+  },
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+      "refs": {
+        "e2398": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e2399": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e2400": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e2401": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e2402": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e2403": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e2404": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e2405": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e2406": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e2407": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e2408": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e2409": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e2410": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e2411": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e2412": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e2413": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e2414": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e2415": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e2416": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e2417": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e2418": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e2419": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e2420": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e4346": {
+          "name": "한글(HML) 수정",
+          "role": "heading"
+        },
+        "e4347": {
+          "name": "한글 편집기 열기",
+          "role": "button"
+        },
+        "e4348": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e4349": {
+          "name": "해답",
+          "role": "heading"
+        },
+        "e4351": {
+          "name": "해답",
+          "role": "link"
+        },
+        "e4362": {
+          "name": "",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e4363",
+        "@e4364",
+        "@e4365",
+        "@e4366"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e2398]\n      - link \"문제은행 마스터 CMS\" [ref=e2399]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e2412]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e2413]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e2414]\n          - link \"HML 문항 등록\" [ref=e2415]\n          - link \"디피니션 문항 등록\" [ref=e2416]\n          - link \"쌍둥이 그룹 관리\" [ref=e2417]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e2418]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e2419]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e2420]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e2400]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e2401]\n      - StaticText \"문항 ID\"\n      - StaticText \"2088985 (2088700)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"-\"\n      - StaticText \"원본 파일\"\n      - StaticText \"-\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"복제\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e2408]\n        - tab \"한글(HML) 수정\" [selected, ref=e2409]\n        - tab \"HTML 수정\" [ref=e2410]\n        - tab \"OMR 수정\" [ref=e2411]\n      - link \"취소\" [ref=e2402]\n      - button \"임시 저장\" [ref=e2403]\n      - button \"전체 반영\" [ref=e2404]\n      - generic\n        - tabpanel\n          - generic\n            - heading \"한글(HML) 수정\" [level=3, ref=e4346]\n            - button \"한글 편집기 열기\" [ref=e4347]\n            - generic\n              - alert\n                - StaticText \"\"\n                - StaticText \"한글 편집기에서 저장한 내용은 아직 문항에 반영되지 않습니다. [임시 저장] 또는 [전체 반영]을 눌러야 반영됩니다.\"\n              - generic\n                - heading \"문제\" [level=4, ref=e4348]\n                - link [ref=e4362]\n                  - image\n              - generic\n                - heading \"해답\" [level=4, ref=e4349]\n                - link \"해답\" [ref=e4351]\n                  - image \"해답\"\n      - link \"취소\" [ref=e2405]\n      - button \"임시 저장\" [ref=e2406]\n      - button \"전체 반영\" [ref=e2407]\n  - status"
+    },
+    "error": null,
+    "localSeconds": 0.141
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+      "refs": {
+        "e2398": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e2399": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e2400": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e2401": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e2402": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e2403": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e2404": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e2405": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e2406": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e2407": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e2408": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e2409": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e2410": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e2411": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e2412": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e2413": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e2414": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e2415": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e2416": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e2417": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e2418": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e2419": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e2420": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e4346": {
+          "name": "한글(HML) 수정",
+          "role": "heading"
+        },
+        "e4347": {
+          "name": "한글 편집기 열기",
+          "role": "button"
+        },
+        "e4348": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e4349": {
+          "name": "해답",
+          "role": "heading"
+        },
+        "e4351": {
+          "name": "해답",
+          "role": "link"
+        },
+        "e4362": {
+          "name": "",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e4363",
+        "@e4364",
+        "@e4365",
+        "@e4366"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e2398]\n      - link \"문제은행 마스터 CMS\" [ref=e2399]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e2412]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e2413]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e2414]\n          - link \"HML 문항 등록\" [ref=e2415]\n          - link \"디피니션 문항 등록\" [ref=e2416]\n          - link \"쌍둥이 그룹 관리\" [ref=e2417]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e2418]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e2419]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e2420]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e2400]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e2401]\n      - StaticText \"문항 ID\"\n      - StaticText \"2088985 (2088700)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"-\"\n      - StaticText \"원본 파일\"\n      - StaticText \"-\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"복제\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e2408]\n        - tab \"한글(HML) 수정\" [selected, ref=e2409]\n        - tab \"HTML 수정\" [ref=e2410]\n        - tab \"OMR 수정\" [ref=e2411]\n      - link \"취소\" [ref=e2402]\n      - button \"임시 저장\" [ref=e2403]\n      - button \"전체 반영\" [ref=e2404]\n      - generic\n        - tabpanel\n          - generic\n            - heading \"한글(HML) 수정\" [level=3, ref=e4346]\n            - button \"한글 편집기 열기\" [ref=e4347]\n            - generic\n              - alert\n                - StaticText \"\"\n                - StaticText \"한글 편집기에서 저장한 내용은 아직 문항에 반영되지 않습니다. [임시 저장] 또는 [전체 반영]을 눌러야 반영됩니다.\"\n              - generic\n                - heading \"문제\" [level=4, ref=e4348]\n                - link [ref=e4362]\n                  - image\n              - generic\n                - heading \"해답\" [level=4, ref=e4349]\n                - link \"해답\" [ref=e4351]\n                  - image \"해답\"\n      - link \"취소\" [ref=e2405]\n      - button \"임시 저장\" [ref=e2406]\n      - button \"전체 반영\" [ref=e2407]\n  - status"
+    },
+    "error": null,
+    "localSeconds": 0.141
+  },
+  "screenshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "path": "D:\\jaehyuk.myung\\claude_demo\\Demo_36_REA_test\\cms-knowledge\\master-cms\\evidence\\1088-hml-cms-save-readback.png"
+    },
+    "error": null,
+    "localSeconds": 0.226
+  }
+}

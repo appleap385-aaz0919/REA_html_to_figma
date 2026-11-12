@@ -1,0 +1,16 @@
+{
+  "schemaVersion":1,
+  "date":"2026-11-09",
+  "status":"in_progress",
+  "evidenceRange":[801,840],
+  "testItemId":2088985,
+  "savedDetailId":2088698,
+  "observations":[
+    {"code":"ESSA00","evidence":[803,804,805,806,807,808,809,810,811,812,813],"result":"Two fixed blocks: COMMENT process and a general single answer with box/legend mode, affixes, case/space flags and similar answers. Filled titles QA-process/QA-answer and math answer1. Swap moves answer before process while preserving both titles and value. Pixel813 shows swapped complete lower form and bottom controls."},
+    {"code":"ESSA00","evidence":[814,815,816,817,818,819,820,821,822,823,824,825,826,827,828],"result":"Preview preserves swapped order. Switched student answer from math-button mode to offered ordinary input. Student1 grades correct822;2 incorrect826 with process unanswered in both cases. Answer view828 shows math1 and separate second-field MANUAL note, and hides Grade. This runtime case differs from all-MANUAL basic essay unknown result; do not generalize to service grading policy."},
+    {"code":"ESSA00","evidence":[829,830,831,832,833,834,835,836,837,838,839,840],"result":"Full apply833 creates Master detail2088698. Reentry restores ESSA00, math1, answer-first/process-second order, titles and unchecked case/space flags.840 retains rendered form."}
+  ],
+  "tooling":{"boundedRunner":"run-cms-steps.py","plans":"scenarios/essay-single-*.json","rule":"Each step captures post-state; controls resolve from fresh observed refs with match-count guards. Existing agent-browser session, explicit CDP and domain guard remain in force. No fixed sleeps."},
+  "qualityNotes":[{"rule":"A JSON regex escape error prevented the first grading plan from loading. No UI actions occurred before correction; labels819-822 were then executed once."}],
+  "remaining":["ESSA00 legend/similar/affix/case-space branches and empty validation.","ESMA00, actual OBSACN form save and remaining OMR boundaries.","HML four editor slots and remaining Master modules."]
+}

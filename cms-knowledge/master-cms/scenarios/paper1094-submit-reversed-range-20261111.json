@@ -1,0 +1,23 @@
+{
+  "steps": [
+    {
+      "label": "3465-paper1094-reversed-range-normal-save-once",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper1094-submit-reversed-range-once.js"
+      ]
+    },
+    {
+      "label": "3466-paper1094-reversed-range-response-and-readback",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper1094-reversed-range-independent-read.js"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 220,
+  "stopOnScreenshotFailure": false
+}

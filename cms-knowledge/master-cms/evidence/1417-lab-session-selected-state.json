@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1417-lab-session-selected-state",
+  "startedUtc": "2026-11-09T05:33:52.200412+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/lab-page-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/lab/index.donga"
+    },
+    "error": null,
+    "localSeconds": 0.092
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/index.donga",
+      "result": {
+        "controls": [
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "target": "#cacheReloadModal",
+            "text": "캐시 reload\n모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "target": "#bundleVersionModal",
+            "text": "외부 번들 버전\n문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "target": "#sessionExpireModal",
+            "text": "역할별 로그아웃\n권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "href": "/lab/view/math-demo.donga",
+            "id": "",
+            "name": "",
+            "tag": "A",
+            "text": "수식 입력기 데모\nKaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)",
+            "type": ""
+          },
+          {
+            "href": "/lab/view/omr.donga",
+            "id": "",
+            "name": "",
+            "tag": "A",
+            "text": "OMR 전체 유형\n문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)",
+            "type": ""
+          },
+          {
+            "href": "/lab/view/omr-render.donga",
+            "id": "",
+            "name": "",
+            "tag": "A",
+            "text": "OMR 복원 테스트\nOMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)",
+            "type": ""
+          },
+          {
+            "href": "/lab/view/question-frame.donga",
+            "id": "",
+            "name": "",
+            "tag": "A",
+            "text": "편집기 격리 테스트\n문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)",
+            "type": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "dataGroup": "roleTarget",
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "MASTER:ADMIN"
+          },
+          {
+            "checked": true,
+            "dataGroup": "roleTarget",
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "MASTER:USER"
+          },
+          {
+            "checked": false,
+            "dataGroup": "roleTarget",
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "DOUCLASS:ADMIN"
+          },
+          {
+            "checked": false,
+            "dataGroup": "roleTarget",
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "DOUCLASS:USER"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "취소",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "로그아웃",
+            "type": "button",
+            "value": ""
+          }
+        ],
+        "iframes": [],
+        "scroll": [
+          {
+            "clientHeight": 1015,
+            "scrollHeight": 1015,
+            "scrollTop": 0
+          }
+        ],
+        "title": "랩 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/lab/index.donga",
+        "visibility": "hidden",
+        "visibleModals": [
+          {
+            "controls": [
+              {
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "BUTTON",
+                "text": "",
+                "type": "button",
+                "value": ""
+              },
+              {
+                "checked": false,
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "INPUT",
+                "text": "",
+                "type": "checkbox",
+                "value": "on"
+              },
+              {
+                "checked": false,
+                "dataGroup": "roleTarget",
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "INPUT",
+                "text": "",
+                "type": "checkbox",
+                "value": "MASTER:ADMIN"
+              },
+              {
+                "checked": true,
+                "dataGroup": "roleTarget",
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "INPUT",
+                "text": "",
+                "type": "checkbox",
+                "value": "MASTER:USER"
+              },
+              {
+                "checked": false,
+                "dataGroup": "roleTarget",
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "INPUT",
+                "text": "",
+                "type": "checkbox",
+                "value": "DOUCLASS:ADMIN"
+              },
+              {
+                "checked": false,
+                "dataGroup": "roleTarget",
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "INPUT",
+                "text": "",
+                "type": "checkbox",
+                "value": "DOUCLASS:USER"
+              },
+              {
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "BUTTON",
+                "text": "취소",
+                "type": "button",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "href": null,
+                "id": "",
+                "name": "",
+                "tag": "BUTTON",
+                "text": "로그아웃",
+                "type": "button",
+                "value": ""
+              }
+            ],
+            "id": "sessionExpireModal",
+            "text": "역할별 로그아웃\n로그아웃할 사이트 · 역할을 고르세요.\n고른 사이트 세션만 끊기고, 본인 세션은 제외됩니다.\n전체\n[MASTER] 관리자 (ADMIN)\n[MASTER] 사용자 (USER)\n[DOUCLASS] 관리자 (ADMIN)\n[DOUCLASS] 사용자 (USER)\n취소\n로그아웃"
+          }
+        ],
+        "visibleText": "랩\n메뉴에 없는 개발·운영 보조 도구 모음\n관리자\n배포 정보\n서버 시작 2026-11-09 10:05 · 빌드 2026-11-09 09:15\n캐시 reload\n모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)\n외부 번들 버전\n문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)\n역할별 로그아웃\n권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)\n테스트 · 확인\n수식 입력기 데모\nKaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)\nOMR 전체 유형\n문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)\nOMR 복원 테스트\nOMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)\n편집기 격리 테스트\n문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)\n역할별 로그아웃\n로그아웃할 사이트 · 역할을 고르세요.\n고른 사이트 세션만 끊기고, 본인 세션은 제외됩니다.\n전체\n[MASTER] 관리자 (ADMIN)\n[MASTER] 사용자 (USER)\n[DOUCLASS] 관리자 (ADMIN)\n[DOUCLASS] 사용자 (USER)\n취소\n로그아웃"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.096
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/index.donga",
+      "refs": {
+        "e13334": {
+          "name": "랩",
+          "role": "heading"
+        },
+        "e13335": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e13336": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e13337": {
+          "name": "관리자",
+          "role": "heading"
+        },
+        "e13338": {
+          "name": " 캐시 reload 모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)",
+          "role": "button"
+        },
+        "e13339": {
+          "name": " 외부 번들 버전 문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)",
+          "role": "button"
+        },
+        "e13340": {
+          "name": " 역할별 로그아웃 권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)",
+          "role": "button"
+        },
+        "e13341": {
+          "name": "테스트 · 확인",
+          "role": "heading"
+        },
+        "e13342": {
+          "name": " 수식 입력기 데모 KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)",
+          "role": "link"
+        },
+        "e13343": {
+          "name": " OMR 전체 유형 문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)",
+          "role": "link"
+        },
+        "e13344": {
+          "name": " OMR 복원 테스트 OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)",
+          "role": "link"
+        },
+        "e13345": {
+          "name": " 편집기 격리 테스트 문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)",
+          "role": "link"
+        },
+        "e13346": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e13347": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e13348": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e13349": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e13350": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e13351": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e13369": {
+          "name": "역할별 로그아웃",
+          "role": "heading"
+        },
+        "e13370": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e13371": {
+          "name": "취소",
+          "role": "button"
+        },
+        "e13372": {
+          "name": "로그아웃",
+          "role": "button"
+        },
+        "e13373": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e13374": {
+          "name": "[MASTER] 관리자 (ADMIN)",
+          "role": "checkbox"
+        },
+        "e13375": {
+          "name": "[MASTER] 사용자 (USER)",
+          "role": "checkbox"
+        },
+        "e13376": {
+          "name": "[DOUCLASS] 관리자 (ADMIN)",
+          "role": "checkbox"
+        },
+        "e13377": {
+          "name": "[DOUCLASS] 사용자 (USER)",
+          "role": "checkbox"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e13335]\n      - link \"문제은행 마스터 CMS\" [ref=e13336]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e13347]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e13348]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e13349]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e13350]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e13351]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e13346]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - heading \"랩\" [level=2, ref=e13334]\n    - StaticText \"메뉴에 없는 개발·운영 보조 도구 모음\"\n    - generic\n      - heading \"관리자\" [level=3, ref=e13337]\n      - generic\n        - StaticText \"\"\n        - StaticText \"배포 정보\"\n        - StaticText \"서버 시작 2026-11-09 10:05 · 빌드 2026-11-09 09:15\"\n      - button \" 캐시 reload 모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)\" [ref=e13338]\n        - StaticText \"\"\n        - StaticText \"캐시 reload\"\n        - StaticText \"모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)\"\n      - button \" 외부 번들 버전 문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)\" [ref=e13339]\n        - StaticText \"\"\n        - StaticText \"외부 번들 버전\"\n        - StaticText \"문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)\"\n      - button \" 역할별 로그아웃 권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)\" [ref=e13340]\n        - StaticText \"\"\n        - StaticText \"역할별 로그아웃\"\n        - StaticText \"권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)\"\n    - generic\n      - heading \"테스트 · 확인\" [level=3, ref=e13341]\n      - link \" 수식 입력기 데모 KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)\" [ref=e13342]\n        - StaticText \"\"\n        - StaticText \"수식 입력기 데모\"\n        - StaticText \"KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)\"\n      - link \" OMR 전체 유형 문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)\" [ref=e13343]\n        - StaticText \"\"\n        - StaticText \"OMR 전체 유형\"\n        - StaticText \"문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)\"\n      - link \" OMR 복원 테스트 OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)\" [ref=e13344]\n        - StaticText \"\"\n        - StaticText \"OMR 복원 테스트\"\n        - StaticText \"OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)\"\n      - link \" 편집기 격리 테스트 문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)\" [ref=e13345]\n        - StaticText \"\"\n        - StaticText \"편집기 격리 테스트\"\n        - StaticText \"문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)\"\n    - dialog\n      - generic\n        - heading \"역할별 로그아웃\" [level=5, ref=e13369]\n        - button \"닫기\" [ref=e13370]\n        - generic\n          - StaticText \"로그아웃할 사이트 · 역할을 고르세요.\"\n          - StaticText \"고른 사이트 세션만 끊기고, 본인 세션은 제외됩니다.\"\n          - LabelText\n            - checkbox \"전체\" [checked=false, ref=e13373]\n            - StaticText \"전체\"\n          - LabelText\n            - checkbox \"[MASTER] 관리자 (ADMIN)\" [checked=false, ref=e13374]\n            - StaticText \"[MASTER] 관리자 (ADMIN)\"\n          - LabelText\n            - checkbox \"[MASTER] 사용자 (USER)\" [checked=true, ref=e13375]\n            - StaticText \"[MASTER] 사용자 (USER)\"\n          - LabelText\n            - checkbox \"[DOUCLASS] 관리자 (ADMIN)\" [checked=false, ref=e13376]\n            - StaticText \"[DOUCLASS] 관리자 (ADMIN)\"\n          - LabelText\n            - checkbox \"[DOUCLASS] 사용자 (USER)\" [checked=false, ref=e13377]\n            - StaticText \"[DOUCLASS] 사용자 (USER)\"\n        - button \"취소\" [ref=e13371]\n        - button \"로그아웃\" [ref=e13372]"
+    },
+    "error": null,
+    "localSeconds": 0.113
+  }
+}

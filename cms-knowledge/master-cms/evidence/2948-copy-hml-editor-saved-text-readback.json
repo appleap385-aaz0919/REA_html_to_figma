@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2948-copy-hml-editor-saved-text-readback",
+  "startedUtc": "2026-11-10T05:41:17.801221+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/copy-hml-passage-text-read.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "1345045935A453460BBF0355AA16063B",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078"
+    },
+    "error": null,
+    "localSeconds": 0.094
+  },
+  "targetIdBefore": "1345045935A453460BBF0355AA16063B",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078",
+      "result": {
+        "caretClick": {
+          "x": 309,
+          "y": 325
+        },
+        "modified": false,
+        "pageCount": 1,
+        "status": "585f76df-b0d0-4325-8233-4d5d10cebf1b.hwpml2x 을(를) 열었습니다.",
+        "text": {
+          "method": "GetTextFile TEXT callback",
+          "responseKeys": [],
+          "value": "[QA-COPY-SHARED-HML-20261110] [QA-SHARED-HML-20261110] \r\n다음 행렬의 꼴을 말하시오.\r\n"
+        }
+      }
+    },
+    "error": null,
+    "localSeconds": 0.082
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078",
+      "refs": {
+        "e38907": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e38908": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e38909": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e38910": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e38911": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e38912": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e38913": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e38914": {
+          "name": "한글 편집",
+          "role": "heading"
+        },
+        "e38915": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e38916": {
+          "name": "확인",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [ref=e38909]\n    - button \"지문해석 수정\" [disabled, ref=e38910]\n    - button \"문제 수정\" [ref=e38911]\n    - button \"해답 수정\" [ref=e38912]\n  - button \"저장\" [ref=e38907]\n  - StaticText \"585f76df-b0d0-4325-8233-4d5d10cebf1b.hwpml2x 을(를) 열었습니다.\"\n  - Iframe [ref=e38908]\n    - Iframe [ref=e38913]\n  - dialog\n    - generic\n      - heading \"한글 편집\" [level=5, ref=e38914]\n      - button \"닫기\" [ref=e38915]\n      - generic\n        - StaticText \"CMS 에서 ‘임시 저장’ 또는\"\n        - LineBreak \"\\n\"\n        - StaticText \"‘전체 반영’ 버튼을 눌러주세요\"\n      - button \"확인\" [ref=e38916]"
+    },
+    "error": null,
+    "localSeconds": 0.086
+  }
+}

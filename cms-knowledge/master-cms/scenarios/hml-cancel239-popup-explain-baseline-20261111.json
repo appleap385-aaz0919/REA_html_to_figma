@@ -1,0 +1,35 @@
+{
+  "steps": [
+    {
+      "label": "3429-hml-vendor-pending-cancel-select-owned-popup",
+      "command": [
+        "tab",
+        "t15"
+      ]
+    },
+    {
+      "label": "3430-hml-vendor-pending-cancel-popup-before-slot-switch",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-popup-ui-observation.js"
+      ]
+    },
+    {
+      "label": "3431-hml-vendor-pending-cancel-explanation-slot",
+      "command": [
+        "click",
+        "[data-slot=explain]"
+      ]
+    },
+    {
+      "label": "3432-hml-vendor-pending-cancel-explanation-loaded",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-popup-text-and-caret-read.js"
+      ]
+    }
+  ],
+  "tailChars": 100
+}

@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "label": "2819-definition-short1-form-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"
+      ]
+    },
+    {
+      "label": "2820-definition-short1-zip-select",
+      "command": [
+        "upload",
+        "input.dz-hidden-input",
+        "D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261110-11-SHORT1.zip"
+      ]
+    },
+    {
+      "label": "2821-definition-short1-source13-select",
+      "command": [
+        "select",
+        "select[name=productId]",
+        "13"
+      ]
+    },
+    {
+      "label": "2822-definition-short1-unit20-fill",
+      "command": [
+        "fill",
+        "#unitCodeInput",
+        "22MMAT0KOK1001020000"
+      ]
+    },
+    {
+      "label": "2823-definition-short1-start-page-fill",
+      "command": [
+        "fill",
+        "input[name=startPageNum]",
+        "1"
+      ]
+    },
+    {
+      "label": "2824-definition-short1-end-page-fill",
+      "command": [
+        "fill",
+        "input[name=endPageNum]",
+        "3"
+      ]
+    },
+    {
+      "label": "2825-definition-short1-common-purpose-select",
+      "command": [
+        "select",
+        "select[name=serviceUsage]",
+        "C"
+      ]
+    },
+    {
+      "label": "2826-definition-short1-before-submit-verified",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/definition-short1-before-submit-verify.js"
+      ]
+    }
+  ],
+  "tailChars": 80
+}

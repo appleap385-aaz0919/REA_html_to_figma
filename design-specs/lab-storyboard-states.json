@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "title": "랩 메뉴 전체 스토리보드 상태 카탈로그",
+  "asOf": "2026-11-11",
+  "declaredDemoLinks": [
+    {"title": "수식 입력기 데모", "href": "/lab/view/math-demo.donga", "screenIds": ["MST_LAB_10", "MST_LAB_11", "MST_LAB_12"], "evidence": "cms-knowledge/master-cms/sources/lab-index-20261109.html"},
+    {"title": "OMR 전체 유형", "href": "/lab/view/omr.donga", "screenIds": ["MST_LAB_06", "MST_LAB_08", "MST_LAB_09"], "evidence": "cms-knowledge/master-cms/sources/lab-index-20261109.html"},
+    {"title": "OMR 복원 테스트", "href": "/lab/view/omr-render.donga", "screenIds": ["MST_LAB_07"], "evidence": "cms-knowledge/master-cms/sources/lab-index-20261109.html"},
+    {"title": "편집기 격리 테스트", "href": "/lab/view/question-frame.donga", "screenIds": ["MST_LAB_05"], "evidence": "cms-knowledge/master-cms/sources/lab-index-20261109.html"}
+  ],
+  "administratorEntries": ["배포 정보", "캐시 reload", "외부 번들 버전", "역할별 로그아웃"],
+  "omrTypeCodes": ["OBSACN", "OBSAOX", "OBMACN", "OBMAOX", "SBSANM", "SBSADR", "SBSAAS", "SBMANM", "SBMAAS", "SBMALD", "SBMADD", "ESBA00", "ESSA00", "ESMA00"],
+  "scope": "기존 로컬 HTML·JS·관찰 JSON·PNG만 읽어 작성했습니다. 브라우저·CMS 요청·클립보드·다른 파일을 변경하지 않았습니다. OMR14 유형의 상세 설정 규칙은 문항 관리의 기존 카탈로그와 함께 사용하고, 여기서는 랩의 비교·복원·직렬화·입력 수정·오류 상태를 정리합니다.",
+  "evidencePolicy": [
+    "evidence와 screenshot은 작업 폴더를 기준으로 한 실존 상대 경로입니다. 해당 상태의 PNG가 없으면 screenshot은 null입니다.",
+    "실제 검증, 정적 선언, 미검증을 정책 문장에 구분합니다. DOM 관찰과 PNG 시각 검증은 다릅니다.",
+    "phase71의 실제 저장 OMR JSON 3표본 복원과 phase75의 수식 빈 적용·Escape·배경 닫기·블록 삽입 결과를 반영했습니다. 이전의 미확인 항목을 후속 결과로 보정합니다.",
+    "캐시 reload는 서버 캐시를 다시 읽는 기능입니다. 브라우저 캐시 삭제나 문항 삭제로 설명하지 않습니다. 실제 reload와 타인 세션 무효화는 실행하지 않았습니다.",
+    "랩의 편집기 save()·OMR 수정·JSON 복원은 해당 페이지의 컴포넌트 검증입니다. 문항 관리의 임시저장·전체반영 또는 서비스 CMS 저장으로 표현하지 않습니다.",
+    "현재 계정의 관리자 카드 노출과 소스의 ADMIN 주석만으로 다른 역할의 접근 권한·서버 검증을 확정하지 않습니다.",
+    "값 유형·드롭다운·수식 입력 테스트 카드는 OMR 전체 유형 페이지 안에 있습니다. 인덱스에 없는 독립 메뉴 링크를 새로 만들지 않습니다."
+  ],
+  "screens": [
+    {
+      "id": "MST_LAB_01",
+      "title": "랩 인덱스",
+      "states": [
+        {
+          "title": "전체 도구 목록과 배포 정보",
+          "trigger": "공통 메뉴에서 랩으로 진입합니다.",
+          "visibleChanges": ["‘랩’ 제목과 ‘메뉴에 없는 개발·운영 보조 도구 모음’ 안내를 표시합니다.", "관리자 카드에 배포 정보·캐시 reload·외부 번들 버전·역할별 로그아웃을 표시합니다.", "테스트·확인 카드에 이 파일의 declaredDemoLinks에 열거한 네 링크를 순서대로 표시합니다."],
+          "policy": ["[소스·실제 관찰] 보존 인덱스가 선언한 데모 링크는 네 개입니다. 각 데모에는 랩으로 돌아가는 링크가 있습니다.", "[실제 관찰] 배포 정보는 서버 시작과 빌드 시각을 표시합니다. 2026-11-09의 시각은 당시 관측값이며 고정 문구가 아닙니다.", "[권한 경계] ADMIN 전용 카드라는 소스 주석과 현재 계정의 카드 노출을 확인했습니다."],
+          "exceptions": ["다른 계정·역할에서의 카드 미노출과 관리자 API의 서버 권한 검증은 미확인입니다.", "배포 정보는 읽기 표시입니다. 이 카드에 서비스 배포 실행 버튼을 임의로 붙이지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html", "cms-knowledge/master-cms/evidence/1403-lab-index-source.json", "cms-knowledge/master-cms/evidence/1405-lab-bundle-version-state.json"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_02",
+      "title": "외부 번들 버전 모달",
+      "states": [
+        {
+          "title": "최초 조회와 버전 표시",
+          "trigger": "랩에서 외부 번들 버전을 선택합니다.",
+          "visibleChanges": ["번들·버전 열에 donga-question-viewer와 donga-question-editor를 표시합니다.", "각 버전 셀은 ‘불러오는 중’에서 로드된 전역 객체의 version으로 바뀌는 코드입니다.", "X·닫기를 제공합니다."],
+          "policy": ["[정적 선언] 이 모달을 처음 열 때 두 스크립트를 삽입합니다. loaded 플래그 때문에 같은 페이지에서 재열어도 다시 삽입하지 않습니다.", "[실제 관찰] viewer 1.13.6, editor 0.3.10이 표시됐습니다. 해당 보존 번들의 버전이며 항상 최신이라는 뜻은 아닙니다.", "[읽기 경계] 모달을 열고 닫은 관찰입니다. 번들 교체·업데이트나 배포를 실행하는 도구가 아닙니다."],
+          "exceptions": ["버전 문자열을 서버 빌드 시각이나 CDN의 모든 배포본 버전과 동일시하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html", "cms-knowledge/master-cms/sources/lab-bundle-version-20261109.html", "cms-knowledge/master-cms/evidence/1405-lab-bundle-version-state.json", "cms-knowledge/master-cms/evidence/1407-lab-bundle-version-close.json"],
+          "screenshot": null
+        },
+        {
+          "title": "번들 로드 오류와 버전 미제공",
+          "trigger": "삽입한 스크립트가 로드에 실패하거나 전역 객체에 version이 없습니다.",
+          "visibleChanges": ["로드 오류 셀에는 ‘불러오기 실패’를, 전역 객체나 version이 없으면 ‘-’를 표시하는 코드입니다."],
+          "policy": ["[정적 선언] script.onerror와 onload의 분기입니다. 실제 로드 실패를 유발해 검증하지 않았습니다.", "[정적 선언] loaded는 요청 전에 true가 됩니다. 같은 페이지의 모달 재열기를 자동 재시도라고 설명하지 않습니다."],
+          "exceptions": ["네트워크 오류·캐시·버전 불일치의 서버 원인과 복구 정책은 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_03",
+      "title": "캐시 reload 모달",
+      "states": [
+        {
+          "title": "미선택·전체 선택·취소",
+          "trigger": "캐시 reload를 열고 전체 또는 개별 대상을 선택한 뒤 취소합니다.",
+          "visibleChanges": ["‘다시 읽을 캐시를 고르세요.’와 ‘모든 서버에 적용됩니다.’ 안내를 표시합니다.", "전체·공통코드·단원·사이트 체크박스와 취소·reload를 제공합니다.", "열 때는 모두 미선택이고 실행 버튼을 비활성화하는 코드입니다. 전체 선택 관찰에서는 하위 세 개도 선택되고 reload가 활성화됐습니다."],
+          "policy": ["[실제 관찰] 전체 선택과 체크박스·버튼 상태를 확인한 뒤 취소했습니다. 실제 캐시 요청은 실행하지 않았습니다.", "[정적 선언] 열 때 선택을 초기화하고 대상이 하나도 없으면 실행을 비활성화합니다.", "[용어] 서버 공통코드·단원·사이트 캐시 다시 읽기입니다. 브라우저 저장소나 캐시 삭제 버튼으로 그리지 않습니다."],
+          "exceptions": ["1409의 최초 관찰에는 visibleModals가 비어 있습니다. 이 한 기록만을 안정된 열린 모달의 완료 근거로 사용하지 않습니다.", "모든 개별 체크 조합과 재열기 초기화를 실제 반복 검증한 것은 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html", "cms-knowledge/master-cms/sources/lab-cache-dialog-20261109.html", "cms-knowledge/master-cms/evidence/1411-lab-cache-selected-state.json", "cms-knowledge/master-cms/evidence/1413-lab-cache-cancel.json"],
+          "screenshot": null
+        },
+        {
+          "title": "실제 reload의 실행·성공·실패 경계",
+          "trigger": "선택 후 reload를 누르는 소스 경로를 설명합니다. 이 경로는 실제 실행하지 않았습니다.",
+          "visibleChanges": ["모달을 닫고 선택 대상의 요청을 실행하는 코드입니다.", "모든 결과가 성공이면 ‘선택명 캐시 reload 완료’, 하나라도 실패하면 ‘선택명 캐시 reload 실패’ 토스트를 표시합니다."],
+          "policy": ["[정적 선언] 전체 선택이면 /cache/all-reload.donga 한 번, 아니면 선택한 code/unit/site-reload.donga별 fetch를 Promise.all로 실행합니다.", "[정적 선언] fetch의 기본 방식은 GET이지만 서버 캐시 변경 기능입니다. 읽기 전용 조회로 분류하지 않습니다.", "[정적 선언] res.ok를 성공 기준으로 쓰고 네트워크 예외는 false로 처리합니다. 실제 파괴·변경 검증은 미수행입니다."],
+          "exceptions": ["다중 대상 중 일부 성공을 개별 결과로 표시하는 UI는 이 코드에 없습니다.", "이 경로는 redirected를 별도로 검사하지 않습니다. 로그인 HTML 리다이렉트가 실제로 어떻게 처리되는지는 미검증입니다.", "모든 서버 반영·실패 시 롤백·역할 권한·실제 캐시 일치 여부는 소스만으로 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_04",
+      "title": "역할별 로그아웃 모달",
+      "states": [
+        {
+          "title": "대상 역할 선택과 취소",
+          "trigger": "역할별 로그아웃을 열고 MASTER 사용자만 선택한 뒤 취소합니다.",
+          "visibleChanges": ["‘로그아웃할 사이트·역할을 고르세요.’와 선택 사이트 세션만 종료하며 본인은 제외된다는 안내를 표시합니다.", "전체, MASTER 관리자/사용자, DOUCLASS 관리자/사용자의 네 대상을 표시합니다.", "미선택에서 로그아웃은 비활성이고 MASTER:USER 선택 후 활성화됩니다."],
+          "policy": ["[실제 관찰] 미선택·MASTER:USER의 로컬 선택·취소를 확인했습니다. 타인 세션 무효화는 실행하지 않았습니다.", "[정적 선언] 열 때 선택을 모두 해제합니다. 대상 값은 사이트:역할 형식입니다.", "[표시 정책] 본인 제외와 선택 사이트 범위는 안내 문구입니다. 실제 서버에서 이를 집행하는지 검증하지 않았습니다."],
+          "exceptions": ["사용자 자신에게 보이는 공통 헤더 로그아웃과 이 관리자 도구를 구분합니다.", "본인 제외·다른 사이트·역할별 세션 종료 결과와 권한은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html", "cms-knowledge/master-cms/sources/lab-session-dialog-20261109.html", "cms-knowledge/master-cms/evidence/1415-lab-session-initial-state.json", "cms-knowledge/master-cms/evidence/1417-lab-session-selected-state.json", "cms-knowledge/master-cms/evidence/1419-lab-session-cancel.json"],
+          "screenshot": null
+        },
+        {
+          "title": "세션 무효화 제출과 응답 경계",
+          "trigger": "선택 후 위험색 로그아웃 버튼을 누르는 소스 경로를 설명합니다. 실제로 제출하지 않았습니다.",
+          "visibleChanges": ["모달을 닫고 요청하는 코드입니다.", "성공 시 ‘N건 로그아웃: 세션 응답값개’, 실패 시 ‘N건 로그아웃 실패’ 토스트를 표시합니다."],
+          "policy": ["[정적 선언] /lab/session/expire.donga에 POST하고 반복 targets 필드에 선택한 사이트:역할을 담습니다.", "[정적 선언] 응답 !ok 또는 redirected를 오류로 분류하고 성공 응답 본문을 text로 읽습니다.", "[검증 경계] 세션 파괴 요청과 성공·실패 수는 소스 선언뿐입니다. 실제 관찰 결과로 쓰지 않습니다."],
+          "exceptions": ["N은 선택한 대상 수이고 실제 종료 세션 수는 응답값입니다. 두 수를 동일시하지 않습니다.", "빈 대상 우회·세션 수의 숫자 검증·서버 권한·다른 계정 영향·부분 실패는 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-index-20261109.html"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_05",
+      "title": "편집기 격리 테스트: 기존과 iframe 비교",
+      "states": [
+        {
+          "title": "JSON 입력 전과 잘못된 JSON",
+          "trigger": "격리 테스트에 진입해 불러오기 전 비교를 누르거나 잘못된 JSON을 불러옵니다.",
+          "visibleChanges": ["문서 JSON 입력란, 불러오기·getDocument 비교, 기존/iframe 탭을 표시합니다.", "양쪽 미마운트 상태의 비교는 ‘두 탭을 한 번씩 열어 편집기를 띄우세요’ 경고를 내는 코드입니다.", "파싱 실패 시 ‘JSON 형식이 아닙니다’ 토스트를 표시하고 새 마운트를 시작하지 않습니다."],
+          "policy": ["[실제 조작·정적 선언] 불러오기 전 비교와 잘못된 JSON 입력·불러오기 경로를 조사했습니다. 결과 설명은 보존 이벤트 코드와 함께 사용합니다.", "[정적 선언] 문항과 지문 문서 JSON을 받습니다. 단순 JSON 문법 통과와 편집기가 받아들일 문서 구조는 다른 조건입니다."],
+          "exceptions": ["파싱 가능한 모든 JSON의 스키마 오류를 같은 토스트가 처리한다고 확장하지 않습니다.", "JSON 입력은 랩의 로컬 자료입니다. 문항 저장 요청이 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-editor-frame-20261109.html", "cms-knowledge/master-cms/evidence/1432-lab-frame-compare-before-load.json", "cms-knowledge/master-cms/evidence/1434-lab-frame-invalid-json-load.json"],
+          "screenshot": null
+        },
+        {
+          "title": "문항 로드와 두 탭의 동일 문서",
+          "trigger": "정상 문항 JSON을 불러온 뒤 기존과 iframe 탭을 한 번씩 열고 비교합니다.",
+          "visibleChanges": ["각 탭에 문항 편집기와 해당 문서의 뷰어를 표시합니다.", "마운트 완료·준비 시간과 API 호출 결과를 출력합니다.", "동일한 getDocument 결과이면 ‘두 문서가 같습니다’를 표시하는 코드입니다."],
+          "policy": ["[정적 선언] 보이는 탭부터 마운트하고 숨은 탭은 첫 표시 때 마운트합니다. 탭 왕복 때마다 자동 재생성하지 않습니다.", "[정적 선언] iframe의 srcdoc은 Tabler/custom.css 없이 해당 번들만 로드합니다. 기존 탭과 CSS 영향을 비교하는 목적입니다.", "[실제 검증] 양쪽 save()가 ok=true·issues=[]·documentLength=1972인 같은 문항 표본을 확인했습니다.", "[중요] 여기의 save()는 편집기 결과 검증입니다. CMS 임시저장·전체반영 또는 서버 문항 변경으로 표시하지 않습니다."],
+          "exceptions": ["같은 표본의 비교를 모든 문서·레이아웃·브라우저에서 CSS 영향이 없다는 결론으로 확대하지 않습니다.", "비교는 JSON.stringify 값의 동일성을 사용합니다. 의미적으로만 같은 문서의 별도 동치 검사는 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-editor-frame-20261109.html", "cms-knowledge/master-cms/evidence/1442-lab-frame-compare-loaded.json", "cms-knowledge/master-cms/evidence/1447-lab-frame-save-readback.json"],
+          "screenshot": null
+        },
+        {
+          "title": "iframe 높이와 API·미리보기 호출",
+          "trigger": "높이 모드를 바꾸거나 각 탭의 API 버튼을 선택합니다.",
+          "visibleChanges": ["iframe 높이를 내용에 맞춤 또는 640px 고정/내부 스크롤로 전환합니다.", "save()는 ok·issues·문서 길이, getDocument()는 문서 길이를 해당 탭의 출력란에 표시합니다.", "미리보기 다시 그리기는 그 탭 편집기의 현재 getDocument 문서로 뷰어를 다시 그립니다."],
+          "policy": ["[실제 관찰] 높이 고정 모드와 양쪽 API 호출 결과를 확인했습니다.", "[정적 선언] 자동 높이는 ResizeObserver로 iframe body 높이를 추적합니다. 높이 설정은 문서 내용 저장과 별개입니다.", "[정적 선언] iframe 편집기·뷰어 번들 미로드와 문서 생성 실패는 해당 출력란의 안내 분기를 가집니다."],
+          "exceptions": ["API 결과의 documentLength는 상세 버전ID가 아닙니다.", "모든 번들 실패·ResizeObserver·내부 스크롤 경계의 실제 재현은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-editor-frame-20261109.html", "cms-knowledge/master-cms/evidence/1444-lab-frame-fixed-state.json", "cms-knowledge/master-cms/evidence/1447-lab-frame-save-readback.json"],
+          "screenshot": null
+        },
+        {
+          "title": "한쪽 객관식 변경·탭 보존·destroy와 재로드",
+          "trigger": "iframe에서 객관식 켜기를 선택해 비교하고, 탭을 왕복하거나 destroy 뒤 다시 불러옵니다.",
+          "visibleChanges": ["한쪽의 setMultipleChoice(true)가 changed=true이면 ‘두 문서가 다릅니다’ 비교 결과가 나타납니다.", "탭 왕복 후에도 각 탭의 편집 상태를 유지합니다.", "destroy 뒤 API 호출은 ‘편집기가 없습니다 — [불러오기] 먼저’를 출력하는 코드입니다. 다시 불러오면 양쪽을 입력 JSON 기준으로 되돌립니다."],
+          "policy": ["[실제 검증] changed=true의 한쪽 수정과 다른 문서 비교, 탭 보존, 재불러오기 후 같은 문서 비교를 조사했습니다.", "[검증 보정] 앞선 객관식 끄기는 changed=false였습니다. 그 동작을 실제 분기 차이 발생으로 세지 않습니다.", "[정적 선언] destroy는 선택한 탭의 편집기 참조를 해제합니다. 다른 탭을 동시에 파괴하는 제어가 아닙니다."],
+          "exceptions": ["destroy가 기존 뷰어 내용까지 지운다고 확정하지 않습니다.", "변경 없는 API 호출·객관식 전환·문서 재로드는 서버 저장 횟수가 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-editor-frame-20261109.html", "cms-knowledge/master-cms/evidence/1451-lab-frame-direct-retained-state.json", "cms-knowledge/master-cms/evidence/1455-lab-frame-get-after-destroy.json", "cms-knowledge/master-cms/evidence/1464-lab-frame-changed-state.json", "cms-knowledge/master-cms/evidence/1471-lab-frame-reset-both-compare.json"],
+          "screenshot": null
+        },
+        {
+          "title": "지문 문서의 구조 호환과 정상 복원",
+          "trigger": "지문 JSON을 불러오고 정상화된 지문 문서로 다시 비교합니다.",
+          "visibleChanges": ["content.passageHtml이 있으면 카드 제목을 지문 편집/지문으로 바꾸는 코드입니다.", "초기 지문 표본에서는 양쪽 편집기가 없다는 상태가 관찰됐습니다.", "정상화된 지문 표본은 양쪽 마운트와 save ok=true·issues=[]·documentLength=169 및 동일 비교 결과를 보였습니다."],
+          "policy": ["[실제 검증] 초기 표본의 실패와 정상화 후 성공을 별도 상태로 보존합니다.", "[검증 구분] content.passageHtml의 존재로 제목을 바꾸는 조건과 vendor 문서 스키마가 수용되는 조건을 같다고 설명하지 않습니다.", "[실제 검증] 지문 편집기·뷰어도 기존/iframe 비교에 사용할 수 있는 정상 표본을 확인했습니다."],
+          "exceptions": ["초기 표본의 문제를 랩의 모든 지문 미지원이나 숨김 탭 문제 하나로 단정하지 않습니다.", "정상화된 한 표본으로 모든 과거 문서의 자동 변환 규칙을 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/1485-lab-passage-final-state.json", "cms-knowledge/master-cms/evidence/1496-lab-passage-normalized-final.json", "cms-knowledge/master-cms/lab-passage-normalized-test-input.json", "cms-knowledge/master-cms/sources/lab-editor-frame-passage-loaded-20261109.html"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_06",
+      "title": "OMR 전체 유형 갤러리",
+      "states": [
+        {
+          "title": "14유형 아코디언과 전체·분류별 열기",
+          "trigger": "OMR 전체 유형으로 진입해 전체 또는 객관식·주관식·서술형의 열기/닫기를 선택합니다.",
+          "visibleChanges": ["14코드를 분류별 아코디언으로 표시합니다. 각 헤더는 코드·분류·답형·유형을 표시합니다.", "각 유형에 OMR 편집·미리보기와 개발용 JSON 모니터를 배치합니다.", "전체 또는 특정 대분류의 아코디언을 열고 닫습니다."],
+          "policy": ["[실제 관찰] 전체14종 열림/닫힘과 객관식만·주관식만·서술형만 열기를 확인했습니다.", "[범위] 각 유형의 상세 정답 설정·경계값 정책은 문항 관리의 OMR 카탈로그를 참조합니다. 같은14설정을 여기서 기계적으로 복제하지 않습니다.", "[정적 선언] 코드 복사 아이콘은 아코디언 토글 전파를 막고 클립보드 복사를 시도하며 체크 아이콘을 잠시 표시합니다."],
+          "exceptions": ["복사 함수 존재와 실제 클립보드 성공은 다릅니다. 이번 정리는 클립보드를 읽거나 바꾸지 않았습니다.", "큰 페이지의 전체 스크롤 관찰을 모든 유형·보기 모드의 PNG 시각 검증으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/evidence/1542-lab-gallery-open-all-state.json", "cms-knowledge/master-cms/evidence/1549-lab-gallery-close-state.json", "cms-knowledge/master-cms/evidence/1579-lab-gallery-objective-only-state.json", "cms-knowledge/master-cms/evidence/1582-lab-gallery-subjective-only-state.json", "cms-knowledge/master-cms/evidence/1585-lab-gallery-essay-only-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "좁게·넓게와 비활성 비교 보기",
+          "trigger": "보기 방식을 좁게·넓게·비활성화로 바꿉니다.",
+          "visibleChanges": ["좁게는 col-lg-8, 넓게와 비활성화는 col-12를 사용합니다.", "비활성화 보기에서는 왼쪽 편집 폼 옆에 현재 직렬화 값으로 복원한 잠긴 비교 폼을 표시합니다.", "좁게/넓게로 돌아가면 잠긴 비교 폼을 지우는 코드입니다."],
+          "policy": ["[실제 관찰] lock 모드와 각 폼의 liveData/lockData가 대응하는 것을 확인했습니다.", "[정적 선언] 오른쪽은 disabled fieldset이며 math-field에는 disabled를 따로 설정합니다. name에 lock- 접두어를 붙여 왼쪽 라디오와 분리합니다.", "[정적 선언] 복원 거절·예외가 생기면 오른쪽의 직전 표시를 유지합니다. lock은 왼쪽 전체를 비활성으로 만드는 기능이 아닙니다."],
+          "exceptions": ["관측한 disabled 개수에는 메뉴의 비허용 옵션도 섞이므로 실제 답안 개수로 세지 않습니다.", "잠긴 비교는 서비스 상세의 실제 저장·배포 결과를 자동 검증한다는 뜻이 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/evidence/1544-lab-gallery-lock-state.json", "cms-knowledge/master-cms/evidence/1551-lab-gallery-wide-state.json", "cms-knowledge/master-cms/evidence/1572-lab-gallery-narrow-mode.json"],
+          "screenshot": null
+        },
+        {
+          "title": "왼쪽 값 수정과 JSON·잠긴 비교 갱신",
+          "trigger": "lock 보기에서 왼쪽 OBSACN 선택지와 정답을 바꿉니다.",
+          "visibleChanges": ["왼쪽 입력 변경을 JSON 모니터에 반영하고 오른쪽 잠긴 폼을 다시 만듭니다.", "실제 LockProbe 표본에서 선택지 값과 선택된 정답이 liveData와 lockData에 같은 값으로 나타났습니다."],
+          "policy": ["[실제 검증] 왼쪽의 값 변경·정답 선택 후 직렬화 결과와 잠긴 복원의 일치를 확인했습니다.", "[정적 선언] input/change/click/vt:change/vtd:change 중 왼쪽 이벤트를 모아 다음 틱에 한 번 갱신합니다.", "[범위] 랩 내부 수정입니다. CMS 문항을 저장하지 않습니다."],
+          "exceptions": ["일부 중간 입력에서 오른쪽이 직전 값일 수 있다는 선언을 모든 동기화 오류의 정상 판정으로 사용하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/evidence/1547-lab-gallery-lock-sync-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "JSON 모니터·초기화·검증·미리보기 경계",
+          "trigger": "유형 내 JSON 모니터의 초기화·유효성 검사·복사 또는 OMR 미리보기를 사용합니다.",
+          "visibleChanges": ["OMR 필드 배열과 정답 rule_type 트리를 표시합니다.", "초기화는 해당 유형의 기본 폼을 되돌리고 검증은 해당 직렬화기의 오류/완료 안내를 표시하는 컴포넌트입니다.", "미리보기는 OMR 미리보기 모달의 stage와 오류 영역을 사용합니다."],
+          "policy": ["[정적 선언] 공통 omrMonitor와 omrPreview를 사용합니다. 유형별 검증 내용은 기존 문항 관리의 규칙과 함께 확인합니다.", "[검증 구분] 갤러리14종의 기본 표시와 일부 로컬 동기화 관찰을 모든 유형의 실제 채점 성공으로 세지 않습니다.", "[정적 선언] 미리보기에 넘길 직렬화·검증과 외부 미리보기 로딩은 별도의 경계입니다."],
+          "exceptions": ["외부 채점·학습자 서비스의 모든 유형 결과는 이 갤러리 조사만으로 검증되지 않았습니다.", "JSON 복사 버튼 선언을 실제 클립보드 완료로 표기하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/sources/assets/omrMonitor-023b42ef6d70938f6d9e24d4cdb01e3f.js", "cms-knowledge/master-cms/sources/assets/omrPreview-c59d76018482dcb8bfb460b8d8e6698c.js"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_07",
+      "title": "OMR 복원 테스트: JSON과 화면의 왕복",
+      "states": [
+        {
+          "title": "유형 미선택과 기본 폼",
+          "trigger": "복원 테스트에 진입하거나 유형 선택을 바꿉니다.",
+          "visibleChanges": ["유형 코드 선택, OMR/정답 JSON 입력란과 각각의 Pretty, 폼 비우기·복원, 실제 화면 영역, 넓게/좁게 보기를 표시합니다.", "미선택에서 복원을 누르면 ‘문항유형을 먼저 선택하세요.’를 표시합니다.", "유형을 고르면 해당 기본 폼과 그 폼의 직렬화 JSON을 표시합니다."],
+          "policy": ["[실제 검증] 미선택 경고·OBSACN 기본 폼·다른 유형 전환·미선택 복귀를 확인했습니다.", "[정적 선언] 숨김 소스에서 폼을 새로 만들고 name에 live- 접두어를 붙입니다.", "[실제 검증] 미선택으로 바꾸면 폼과 두 JSON 입력이 비워집니다. 넓게/좁게는 표시 폭 전환입니다."],
+          "exceptions": ["기본 폼의 빈 정답은 정상 저장 문항의 검증 완료와 다릅니다.", "보이는 답안 수에 숨김 소스·template·앞뒤 수식어 입력을 더하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-restore-20261109.html", "cms-knowledge/master-cms/evidence/1500-lab-restore-no-type-result.json", "cms-knowledge/master-cms/evidence/1502-lab-restore-choice-default.json", "cms-knowledge/master-cms/evidence/1535-lab-restore-unselected-reset-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "유효 JSON 복원과 화면 편집의 자동 직렬화",
+          "trigger": "유형에 맞는 OMR/정답 JSON을 넣고 복원하거나 복원된 화면을 편집합니다.",
+          "visibleChanges": ["성공하면 ‘복원 완료.’를 표시합니다.", "Alpha/Beta 두 선택지와 Beta 정답이 복원됐습니다. 첫 값을 Gamma로 바꾸고 정답을 선택하자 JSON도 갱신됐습니다."],
+          "policy": ["[정적 선언] JSON 입력은250ms 디바운스로 조용한 자동 복원을 시도하고 복원 버튼은 명시적 오류 안내를 사용합니다.", "[정적 선언] 복원은 새 폼을 만든 뒤 hydrate하며 syncing으로 역방향 직렬화의 순환을 막습니다.", "[실제 검증] 화면 input/change에서 OMR과 정답 JSON이 실시간 변경되는 것을 확인했습니다."],
+          "exceptions": ["화면을 복원했다는 뜻이며 유효성·서버 저장·채점 성공까지 뜻하지 않습니다.", "입력 도중 파싱 실패를 조용히 무시하는 경로를 최종 복원 버튼의 오류 미표시와 혼동하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-restore-20261109.html", "cms-knowledge/master-cms/evidence/1511-lab-restore-two-options-result.json", "cms-knowledge/master-cms/evidence/1513-lab-restore-live-edit-json-sync.json", "cms-knowledge/master-cms/evidence/1515-lab-restore-answer-json-sync.json"],
+          "screenshot": null
+        },
+        {
+          "title": "파싱 오류와 유형에 맞지 않는 구조",
+          "trigger": "잘못된 OMR JSON, 잘못된 정답 JSON 또는 유형과 맞지 않는 구조를 복원합니다.",
+          "visibleChanges": ["OMR JSON과 정답 JSON의 파싱 오류를 각각 구분해 표시합니다.", "문법은 유효하지만 hydrate가 거절하면 ‘복원 불가: JSON 모양이 [코드] 유형과 맞지 않습니다. 빈 폼을 유지합니다.’를 표시합니다."],
+          "policy": ["[실제 검증] OMR 파싱 오류, 정답 파싱 오류, OBSACN 구조 불일치를 확인했습니다.", "[실제 검증·정적 선언] 파싱 실패는 새 폼을 만들기 전에 반환해 직전 폼이 남았습니다. 구조 불일치는 폼을 새로 만든 뒤 거절돼 기본 폼이 남았습니다.", "[정적 선언] hydrate 미구현·컨테이너 없음·hydrate 예외는 각각 다른 메시지 분기입니다. 해당 분기의 실제 실패는 미검증입니다."],
+          "exceptions": ["브라우저의 상세 JSON 파싱 문구는 런타임에 따라 달라질 수 있습니다.", "한 잘못된 구조의 거절을 모든 비정상 JSON의 완전한 검증으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-restore-20261109.html", "cms-knowledge/master-cms/evidence/1505-lab-restore-invalid-omr-result.json", "cms-knowledge/master-cms/evidence/1521-lab-restore-invalid-answer-result.json", "cms-knowledge/master-cms/evidence/1525-lab-restore-wrong-shape-result.json"],
+          "screenshot": null
+        },
+        {
+          "title": "빈 JSON·폼 비우기·Pretty",
+          "trigger": "두 JSON을 비운 뒤 복원하거나 폼 비우기/Pretty를 선택합니다.",
+          "visibleChanges": ["유형이 있는 채 두 JSON이 비면 ‘JSON 이 비어 기본 폼을 표시합니다.’를 표시합니다.", "폼 비우기는 선택 유형이 있으면 기본 폼으로 되돌리고 없으면 폼과 JSON을 비우는 코드입니다.", "Pretty는 해당 JSON 입력란만 들여쓰기를 정리합니다."],
+          "policy": ["[실제 검증] 빈 JSON 복원·기본 복귀·각 Pretty·미선택 비우기를 조사했습니다.", "[정적 선언] Pretty 파싱 실패는 원문을 유지하고 해당 오류 메시지를 표시합니다.", "[용어] 선택 유형이 있을 때 ‘폼 비우기’는 모든 제어를 없애는 동작이 아니라 기본 폼과 그 직렬화 JSON으로 복귀하는 코드입니다."],
+          "exceptions": ["빈 문자열과 JSON의 null·빈 배열·빈 객체는 같지 않습니다. 모든 조합의 결과는 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-restore-20261109.html", "cms-knowledge/master-cms/evidence/1507-lab-restore-clear-readback.json", "cms-knowledge/master-cms/evidence/1518-lab-restore-pretty-readback.json", "cms-knowledge/master-cms/evidence/1529-lab-restore-empty-result.json", "cms-knowledge/master-cms/evidence/1535-lab-restore-unselected-reset-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "14유형 기본값 왕복",
+          "trigger": "각 유형의 생성된 기본 JSON을 정상 선택·복원 제어로 다시 복원합니다.",
+          "visibleChanges": ["14코드 모두 hydrate·serialize 등록과 ‘복원 완료.’를 확인했습니다.", "복원 전후 기본 OMR·정답 구조가 같은 것으로 기록됐습니다."],
+          "policy": ["[실제 검증] lab-restore-default14-results의14행 모두 roundtripEqual=true입니다.", "[범위] 생성된 빈 기본 폼의 왕복입니다. 실제 저장 문항·모든 중첩/경계·전체 채점 분기의14종 검증 완료로 표시하지 않습니다.", "[중복 방지] 같은14유형 설정 화면을 랩의 새14개 업무 화면으로 다시 세지 않습니다."],
+          "exceptions": ["기본값은 빈 정답을 포함할 수 있습니다. 정상 문항 승인에 필요한 데이터 충족을 뜻하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/lab-restore-default14-results-20261109.json", "cms-knowledge/master-cms/evidence/1537-lab-restore-default14-roundtrips.json"],
+          "screenshot": null
+        },
+        {
+          "title": "실제 저장 OBSACN 복원과 정답 변경",
+          "trigger": "COPY2089239/N의 실제 저장 OMR·정답 JSON을 랩에서 복원합니다.",
+          "visibleChanges": ["5개 기호 선택지와 정답④가 복원됩니다.", "로컬에서⑤를 고르면 allowed_answer 값이⑤로 자동 변경되고5개 선택지는 유지됩니다."],
+          "policy": ["[후속 실제 검증: phase71] 실제 저장값의 구조·값·배열 순서가 복원 직후 직렬화 값과 정확히 일치했습니다.", "[실제 검증] 4번에서5번으로 로컬 정답을 바꾼 결과를 JSON에서 확인했습니다.", "[범위] 랩 로컬 변경이며 원본 문항을 저장하지 않았습니다. 종료 후 미선택·빈 입력 상태로 복구했습니다."],
+          "exceptions": ["구조 동치이며 원문 JSON의 들여쓰기·객체 키 순서까지 동일하다는 뜻은 아닙니다.", "이 복원 결과로 학습자 채점을 검증한 것은 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/session-20261110-phase71.json", "cms-knowledge/master-cms/lab-real-saved-omr-roundtrip-comparison-20261110.json", "cms-knowledge/master-cms/evidence/3303-own-lab-actual239-restored-roundtrip-check.json", "cms-knowledge/master-cms/evidence/3339-lab-real-2089239-top-visual.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3339-lab-real-2089239-top-visual.png"
+        },
+        {
+          "title": "실제 저장 SBSANM의 수식·텍스트 위젯 차이",
+          "trigger": "원본2089242/Y의 math 정답과 AI2089382/R의 text 정답을 각각 복원합니다.",
+          "visibleChanges": ["두 표본의 OMR 배열은 같은 TEXT 컴포넌트 하나이지만, 정답 value_type=math는 math-field, text는 일반 텍스트 입력으로 나타납니다.", "AI 표본의 ‘2 TIMES 1행렬’ 저장 문자열을 그대로 표시합니다.", "정답 구조는 ORDERED.nodes 안의 VALUE.allowed_answer입니다."],
+          "policy": ["[후속 실제 검증: phase71] 두 실제 저장 구조·값·배열 순서를 정확히 복원했습니다.", "[검증 보정] SBSANM 답을 평평한 VALUE 객체 하나라고 가정한 초기 자동화 검사는 입력 전에 중단됐습니다. 실제 중첩 구조를 기준으로 정리합니다.", "[실제 시각 검토] 각1230px 페이지의 상·하단 PNG를 검토했습니다. 아래 screenshot은 AI 텍스트 표본 상단이며 수식 표본은 evidence에 따로 연결합니다."],
+          "exceptions": ["같은 TEXT OMR이라는 이유로 답안 위젯이나 값 유형도 같다고 설명하지 않습니다.", "TIMES가 그대로 복원된 사실을 서비스 채점의 동의어 정규화·오답 판정으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/session-20261110-phase71.json", "cms-knowledge/master-cms/lab-real-saved-omr-roundtrip-comparison-20261110.json", "cms-knowledge/master-cms/evidence/3343-lab-real-2089242-top-visual.png", "cms-knowledge/master-cms/evidence/3344-lab-real-2089242-bottom-visual.png", "cms-knowledge/master-cms/evidence/3347-lab-real-2089382-top-visual.json", "cms-knowledge/master-cms/evidence/3348-lab-real-2089382-bottom-visual.png"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3347-lab-real-2089382-top-visual.png"
+        },
+        {
+          "title": "실제 저장 텍스트·민감도 플래그 수정과 종료 복구",
+          "trigger": "AI 텍스트 답에 [LAB]를 붙이고 대소문자·공백 구분을 켠 뒤 랩을 초기화합니다.",
+          "visibleChanges": ["답안 문자열과 case_sensitive/space_sensitive가 실시간 JSON에 반영됩니다.", "미선택 초기화·재조회 후 유형·JSON·폼·복원 메시지가 비어 있는 상태로 돌아갑니다."],
+          "policy": ["[후속 실제 검증: phase71] 정상 input/change 이벤트로 텍스트와 두 플래그 변경을 확인했습니다.", "[실제 검증] 복원에 쓴 실제3문항의 신선한 조회 결과는 최초 자료와 정확히 같았습니다.", "[범위] 이 단계는 랩 로컬 검증이며 CMS 업무 저장0회입니다."],
+          "exceptions": ["이3표본은2개 유형 코드와 SBSANM의2개 값 유형을 다룹니다. 새 OMR3유형으로 세지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/session-20261110-phase71.json", "cms-knowledge/master-cms/lab-real-saved-omr-roundtrip-comparison-20261110.json", "cms-knowledge/master-cms/evidence/3350-lab-real-json-after-visual-reset-state.json"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_08",
+      "title": "OMR 갤러리 하단: 수식·value_type 입력 테스트",
+      "states": [
+        {
+          "title": "수식 입력과 LaTeX·렌더 출력",
+          "trigger": "갤러리 하단의 수식 입력 테스트에서 직접 입력하거나 Σ를 선택합니다.",
+          "visibleChanges": ["math-field와 Σ 제어를 표시합니다.", "입력값의 LaTeX 문자열과 MathLive 렌더를 실시간으로 출력하는 코드입니다."],
+          "policy": ["[정적 선언] mfAnswer의 input 이벤트를 사용하며 Σ 적용도 input 이벤트로 들어옵니다.", "[위치] 별도 랩 메뉴가 아니라 OMR 전체 유형 페이지의 하단 카드입니다. 공통 수식 대화상자의 실제 검증은 MST_LAB_11과 함께 봅니다."],
+          "exceptions": ["이 단독 카드의 모든 키 입력·렌더 오류·빈값을 실제 검증했다고 표시하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html"],
+          "screenshot": null
+        },
+        {
+          "title": "세 가지 허용 범위와 getValue 덤프",
+          "trigger": "value_type 입력 형태 테스트 카드의 ⋮ 메뉴를 엽니다.",
+          "visibleChanges": ["정답 입력은 text/math, 범례는 text/math/image, 기호는 text만 허용합니다.", "허용하지 않는 메뉴 항목도 표시하되 비활성화합니다.", "각 셀의 {value,value_type} 배열을 실시간 JSON으로 출력합니다."],
+          "policy": ["[실제 관찰·정적 선언] 셀별 허용 목록과 메뉴의 비활성 상태를 확인했습니다.", "[정적 선언] 덤프는 해당 카드의 셀만 포함하며 갤러리와 드롭다운 소스의 셀은 제외합니다.", "[위치] OMR의 답안 유형을 고르는 업무 메뉴가 아니라 재사용 값 컴포넌트 검증 카드입니다."],
+          "exceptions": ["한 셀의 허용값을 모든 OMR 필드의 허용값으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/sources/assets/value-type-input-e9baf9376abc1252905dc6460081bd77.js", "cms-knowledge/master-cms/evidence/1554-lab-value-math-switch-state.json", "cms-knowledge/master-cms/evidence/1558-lab-value-final-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "형태 전환의 값 초기화와 이미지 URL",
+          "trigger": "입력한 text를 math로 바꾸고 text로 돌아오거나 범례를 image로 바꿉니다.",
+          "visibleChanges": ["수식 전환 후 새 math-field가 비어 있고 text로 돌아와도 이전 text가 복구되지 않습니다.", "이미지는 URL 입력란으로 바뀌며 입력한 경로와 value_type=image를 덤프에 표시합니다."],
+          "policy": ["[실제 검증] text→math→text에서 값 초기화와 범례 이미지 URL 입력을 확인했습니다.", "[정적 선언] 전환은 입력 DOM을 다시 만듭니다. 과거 값을 유형별로 보관하는 왕복 탭이 아닙니다.", "[정적 선언] 이미지 아이콘 hover는 URL의 이미지 팝오버를 그리는 코드입니다. 이 동작의 전체 성공을 실제 확인한 것은 아닙니다."],
+          "exceptions": ["image는 파일 업로드가 아니라 URL 값입니다.", "URL이 덤프에 저장된 것과 이미지 다운로드·자연 크기·실제 픽셀 정상은 별도 검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/assets/value-type-input-e9baf9376abc1252905dc6460081bd77.js", "cms-knowledge/master-cms/evidence/1554-lab-value-math-switch-state.json", "cms-knowledge/master-cms/evidence/1555-lab-value-return-text.json", "cms-knowledge/master-cms/evidence/1558-lab-value-final-state.json"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_09",
+      "title": "OMR 갤러리 하단: value-type-dropdown 테스트",
+      "states": [
+        {
+          "title": "소스 행과 참조값·해석값 표시",
+          "trigger": "소스 행A/B에 값을 넣고 드롭다운에서 참조할 행을 선택합니다.",
+          "visibleChanges": ["옵션 소스의 값 셀과 두 드롭다운, 항목 추가·행 삭제, 참조/실제 값 JSON 덤프를 표시합니다.", "덤프는 dd 번호, 소스 행의 optid 참조 value, 그 행의 {value,value_type}인 resolved를 표시합니다."],
+          "policy": ["[실제 검증] 첫 드롭다운이 B를 참조한 뒤 B를 Source-B-edited로 바꾸자 같은 참조1의 해석값이 갱신됐습니다.", "[정적 선언] 표시 라벨과 참조 ID는 별개입니다. 화면의 행 번호와 optid를 같다고 설명하지 않습니다.", "[정적 선언] 수식은 렌더·텍스트 대체, 이미지는 썸네일, 빈 값은 안내를 표시하는 컴포넌트입니다."],
+          "exceptions": ["같은 카드의 두 드롭다운이 항상 서로 다른 대상을 골라야 한다는 제약은 없습니다.", "이미지 깨짐에 대한 폴백은 소스에 없으며 정상 로딩을 보장하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/sources/assets/value-type-dropdown-7af64cf1cc9a3dad481b4c4bc3c4cad4.js", "cms-knowledge/master-cms/evidence/1563-lab-dropdown-reference-updated-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "항목 추가·삭제와 사라진 선택의 대체",
+          "trigger": "소스A를 삭제하거나 새C를 추가·선택한 뒤 C를 삭제합니다.",
+          "visibleChanges": ["소스가 한 행 남으면 삭제 버튼을 비활성화합니다.", "A 삭제 후 두 드롭다운 모두 남은B를 참조했습니다.", "새C는 새 optid2를 받았고 선택된C를 삭제하자 B로 돌아갔습니다."],
+          "policy": ["[실제 검증] 삭제 최소1행과 사라진 선택의 첫 옵션 대체를 확인했습니다.", "[정적 선언] 살아 있는 참조는 옵션 목록 갱신에서 유지하고 유효하지 않은 참조는 첫 옵션으로 바꿉니다.", "[정적 선언] 표시 행 번호는 재배열하지만 새 optid는 증가시킵니다."],
+          "exceptions": ["행 삭제는 랩의 옵션 소스 삭제입니다. 문항·범례의 서버 삭제로 표현하지 않습니다.", "외부 데이터의 중복 optid와 빈 옵션 배열 등 모든 비정상 입력은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html", "cms-knowledge/master-cms/sources/assets/value-type-dropdown-7af64cf1cc9a3dad481b4c4bc3c4cad4.js", "cms-knowledge/master-cms/evidence/1565-lab-dropdown-one-row-state.json", "cms-knowledge/master-cms/evidence/1569-lab-dropdown-two-reference-state.json", "cms-knowledge/master-cms/evidence/1571-lab-dropdown-delete-selected-state.json"],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_10",
+      "title": "수식 입력기 데모: 하이브리드 편집과 출력",
+      "states": [
+        {
+          "title": "네 검증 영역과 실제 툴바",
+          "trigger": "수식 입력기 데모에 진입해 본문 편집기를 활성화합니다.",
+          "visibleChanges": ["1 하이브리드 에디터, 2 수식 단독 답안 입력, 3 KaTeX 렌더 전용, 4 실제 문제 데이터 변환·로드를 표시합니다.", "본문은 텍스트·수식을 함께 편집하며 수식 노드 표·저장될 HTML 출력·읽기전용 렌더를 제공합니다.", "실제 TinyMCE 툴바는 굵게·기울임과 수식·블록 수식 제어를 제공합니다."],
+          "policy": ["[실제 관찰·소스] KaTeX·MathLive·TinyMCE 통합 검증 페이지입니다. 문항 관리의 donga-question-editor와 동일한 화면으로 합치지 않습니다.", "[표시 보정] 본문 설명의 ‘초등 수식/일반 수식’ 문구만으로 실제 툴바를 그리지 않습니다. 보존 플러그인과 실제 툴바는 수식·블록 수식입니다.", "[범위] 저장될 HTML은 로컬 직렬화 출력이며 서버 문항 저장이 아닙니다."],
+          "exceptions": ["정적 설명 문구와 실제 런타임 제어가 다를 때 실제 제어와 근거를 주석으로 구분합니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-math-demo-20261109.html", "cms-knowledge/master-cms/sources/assets/tinymceMathPlugin-5d0fc8f7aed89373566bf45c29853778.js", "cms-knowledge/master-cms/evidence/1646-lab-math-inline-toolbar-observation.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1647-lab-math-inline-toolbar-screen.png"
+        },
+        {
+          "title": "인라인 삽입·기존 노드 수정·여러 줄 변환",
+          "trigger": "수식 툴바로 삽입하거나 기존 수식을 클릭해 수정하고 여러 줄 수식을 적용합니다.",
+          "visibleChanges": ["적용한 수식이 data-type·data-latex를 가진 노드와 KaTeX 렌더로 나타납니다.", "기존 노드의 수식을9로 바꾸거나 여러 줄 수식을 적용하면 수식 노드 표와 깨끗한 HTML 출력·읽기전용 렌더도 갱신됩니다."],
+          "policy": ["[실제 검증] 인라인 삽입, 기존 노드 수정, 여러 줄 입력·적용을 조사했습니다.", "[정적 선언] 여러 줄 LaTeX는 블록 수식으로 처리하고 저장 HTML은 렌더 DOM을 정리한 data-type/data-latex를 보존합니다.", "[범위] 툴바 동작·직렬화·렌더 대응이며 서버 저장은 없습니다."],
+          "exceptions": ["모든 LaTeX 문법·수학적 정확성·TinyMCE 선택 범위 경계는 미검증입니다.", "실제 노드와 읽기전용 미리보기의 같은 수식을 합쳐 중복 삽입으로 세지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/assets/tinymceMathPlugin-5d0fc8f7aed89373566bf45c29853778.js", "cms-knowledge/master-cms/evidence/1651-lab-math-hybrid-inline-result.json", "cms-knowledge/master-cms/evidence/1655-lab-math-hybrid-edited-result.json", "cms-knowledge/master-cms/evidence/1660-lab-math-hybrid-multiline-result.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1662-lab-math-hybrid-final-screen.png"
+        },
+        {
+          "title": "빈 블록 적용과 실제 블록 삽입",
+          "trigger": "블록 수식 추가에서 빈 값을 적용한 뒤 다시 열어9를 적용합니다.",
+          "visibleChanges": ["빈 값 적용은 대화상자를 닫고 본문 HTML을 그대로 유지합니다.", "9 적용은 편집기에 가운데 블록 하나, 수식 노드 표 한 행, 정리된 HTML에 block-math DIV 하나를 만듭니다."],
+          "policy": ["[후속 실제 검증: phase75] 빈 삽입은 노드를 만들지 않았고 실제 블록 툴바+9+적용은 블록 하나를 만들었습니다.", "[검증 보정] live descendant 조사에는 일치 노드2개가 잡혔지만 편집기와 읽기전용 렌더가 함께 포함됐습니다. 저장 HTML의 삽입은1개입니다.", "[실제 시각 검토] 2156px 전체 페이지를 상·중·하단 PNG로 확인하고 재로드 후 기준 HTML·답안으로 복원했습니다."],
+          "exceptions": ["단독 답안의 빈 적용은 기존 답을 지웁니다. 본문 수식 추가의 빈 적용과 같은 규칙으로 묶지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/session-20261111-phase75.json", "cms-knowledge/master-cms/evidence/3411-lab-math-empty-block-no-insertion.json", "cms-knowledge/master-cms/evidence/3416-lab-math-block-insertion-result.json", "cms-knowledge/master-cms/evidence/3418-lab-math-block-insertion-middle-visual.png", "cms-knowledge/master-cms/evidence/3419-lab-math-block-insertion-bottom-visual.png", "cms-knowledge/master-cms/evidence/3421-lab-math-edge-final-clean-state.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3417-lab-math-block-insertion-top-visual.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_11",
+      "title": "수식 단독 답안과 공통 수식입력기",
+      "states": [
+        {
+          "title": "단독 답안·placeholder·실시간 렌더",
+          "trigger": "답안 math-field에 직접 입력하거나 placeholder 입력값을 바꿉니다.",
+          "visibleChanges": ["답안 수식, LaTeX 출력, KaTeX 블록 렌더를 함께 표시합니다.", "placeholder(LaTeX) 입력값을 답안 필드의 placeholder 속성에 반영합니다.", "필드가 비면 placeholder를 표시한다는 안내가 있습니다."],
+          "policy": ["[실제 관찰] 초기 근의 공식과 placeholder를 QA answer로 바꾼 속성 값을 확인했습니다.", "[정적 선언] 답안 input 이벤트가 LaTeX와 렌더를 갱신합니다. 한글 placeholder에는 LaTeX text 표현을 사용하는 설명입니다."],
+          "exceptions": ["placeholder 속성 설정과 모든 빈 필드 상황의 픽셀 표현은 구분합니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-math-demo-20261109.html", "cms-knowledge/master-cms/sources/assets/mathDemoPage-7624caa310d0693b3435f2642257ded7.js", "cms-knowledge/master-cms/evidence/1643-lab-math-placeholder-property-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "키보드·키패드의 적용과 취소",
+          "trigger": "답안 옆Σ로 수식입력기를 열고1+2를 입력해 취소하거나 적용합니다.",
+          "visibleChanges": ["수식입력기 제목, 키보드/손글씨 탭, 직접 입력과 수식 키패드, 취소·적용을 표시합니다.", "키보드에는 숫자·연산·기호와 알파벳·그리스 문자 그룹이 있습니다.", "취소는 기존 답안을 유지하고 적용은 답안·LaTeX 출력·렌더에1+2를 반영했습니다."],
+          "policy": ["[실제 검증] 대화상자에서 편집 중인 값과 원래 답안이 분리돼 있음을 취소/적용으로 확인했습니다.", "[정적 선언] 키패드는 포커스를 보존하고 입력 동작을 MathLive로 전달합니다. 모든 기호의 정상 입력을 검증한 것은 아닙니다."],
+          "exceptions": ["대화상자에1+2가 남아 있어도 닫힌 뒤 원래 답안이 바뀌었다는 뜻은 아닙니다.", "실제 관찰은 일반/고등 키패드 표본입니다. 소개 문구만으로 모든 레벨의 레이아웃을 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/assets/mathFieldDialog-243503a382e6056d44d1aab98ad33544.js", "cms-knowledge/master-cms/evidence/1605-lab-math-dialog-keyboard-contract.json", "cms-knowledge/master-cms/evidence/1609-lab-math-cancel-answer-retained.json", "cms-knowledge/master-cms/evidence/1613-lab-math-applied-answer-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "빈 적용·Escape·배경 클릭",
+          "trigger": "단독 답안을 빈 값으로 적용하거나9로 편집한 대화상자를 Escape 또는 배경 클릭으로 닫습니다.",
+          "visibleChanges": ["빈 적용은 기존 답안과 LaTeX 출력을 지우고 닫습니다.", "Escape와 배경 클릭은 대화상자만 닫고 적용 전 답안을 유지합니다.", "다시 열면 버린9가 아닌 현재 답안 값에서 시작합니다."],
+          "policy": ["[후속 실제 검증: phase75] 빈 적용·Escape·실제 배경 포인터 입력·재열기 결과를 확인했습니다.", "[검증 구분] 단독 답안의 빈 적용은 지우기이며 본문 새 수식의 빈 적용은 삽입하지 않기입니다.", "[정적 선언] Escape는 행렬 하위창이 열려 있으면 그 창을 먼저 닫는 분기를 가집니다. 이 중첩 Escape 분기는 실제 검증과 구분합니다."],
+          "exceptions": ["당시 두 사이드바 지점은 배경 위에 표시돼 메뉴 링크가 hit-test에 잡혔습니다. 실제 메뉴 이동을 실행한 것은 아닙니다.", "연결한3402 PNG는 배경을 누르기 전 표면 관찰입니다. 닫기 완료 결과는3407 JSON을 근거로 사용합니다.", "배경 닫기의 현재 성공을 모든 레이아웃·중첩 창·모바일 동작으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/session-20261111-phase75.json", "cms-knowledge/master-cms/evidence/3395-lab-math-empty-apply-confirm.json", "cms-knowledge/master-cms/evidence/3399-lab-math-escape-after-state.json", "cms-knowledge/master-cms/evidence/3407-lab-math-backdrop-closed-local-state.json", "cms-knowledge/master-cms/sources/assets/mathFieldDialog-243503a382e6056d44d1aab98ad33544.js"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3402-lab-math-backdrop-point-observe.png"
+        },
+        {
+          "title": "행렬 선택 하위창",
+          "trigger": "키패드에서 행렬을 열고3행2열을 골라 추가합니다.",
+          "visibleChanges": ["행렬 선택 하위창에 행·열 선택과 추가·닫기를 표시합니다.", "추가 뒤 대화상자 입력에3행2열의 placeholder 행렬 LaTeX를 삽입하고 하위창을 닫습니다.", "상위 수식입력기 적용 전에는 원래 답안이 유지됩니다."],
+          "policy": ["[실제 검증]3행2열의 pmatrix와6개 placeholder가 대화상자에 들어갔고 상위창은 취소했습니다.", "[정적 선언] 행렬 추가는 상위 대화상자의 편집 값 변경입니다. 최종 답안 적용과 다릅니다."],
+          "exceptions": ["행·열의 모든 선택값·빈 원소·행렬 편집 결과의 최종 적용은 이 표본만으로 검증되지 않았습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/assets/mathFieldDialog-243503a382e6056d44d1aab98ad33544.js", "cms-knowledge/master-cms/sources/assets/mathKeypadLayouts-112c1863ddb28152ad9dd40343882fe5.js", "cms-knowledge/master-cms/evidence/1619-lab-math-matrix-state.json", "cms-knowledge/master-cms/evidence/1620-lab-math-matrix-cancel.json"],
+          "screenshot": null
+        },
+        {
+          "title": "손글씨 빈 캔버스·그리기·한 획 지우기",
+          "trigger": "손글씨 탭에서 빈 캔버스를 확인하고 획을 그린 뒤 한 획 지우기를 선택합니다.",
+          "visibleChanges": ["캔버스와 한 획 지우기·전체 지우기·인식하기 제어를 표시합니다.", "빈 캔버스에서는 세 제어가 비활성입니다. 획이 있으면 활성화됩니다.", "한 획 지우기 뒤 빈 상태로 돌아가고 세 제어가 다시 비활성화됐습니다."],
+          "policy": ["[실제 검증] 실제 포인터 획, 캔버스의 비어 있음 상태와 버튼 활성, undo 결과를 확인했습니다.", "[범위] 손글씨 획 조작이며 CMS 문항 내용 저장이 아닙니다."],
+          "exceptions": ["한 획만 조사한 결과를 복수 획·여러 줄 분할·전체 지우기·인식 성공의 검증으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/1623-lab-math-ink-empty-state.json", "cms-knowledge/master-cms/evidence/1630-lab-math-ink-drawn-state.json", "cms-knowledge/master-cms/evidence/1638-lab-math-ink-undo-state.json", "cms-knowledge/master-cms/sources/assets/mathInkCanvas-beb3362b80d91f30d679f18da3fa27e8.js"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1631-lab-math-ink-drawn-screen.png"
+        },
+        {
+          "title": "손글씨 인식 실패",
+          "trigger": "획이 있는 상태에서 인식하기를 선택합니다.",
+          "visibleChanges": ["‘인식에 실패했습니다. OCR 서버 상태를 확인해 주세요.’ 오류를 표시했습니다.", "원래 답안1+2와 대화상자 LaTeX는 유지됐고 인식 결과는 비어 있었습니다.", "실패 뒤 한 획 지우기를 해도 오류 문구가 남은 관찰이 있습니다."],
+          "policy": ["[실제 검증] 실제 인식 조작 뒤 오류 상태·기존 값 보존을 확인했습니다.", "[정적 선언] 설정한 OCR endpoint로 줄별 인식을 요청하고 결과 LaTeX를 합치는 코드입니다. 정상 OCR 성공은 미검증입니다.", "[검증 구분] 보존 네트워크 메타는 requests=[]이므로 실제 HTTP 상태·서버 내부 장애 원인을 단정하지 않습니다."],
+          "exceptions": ["화면의 실패 안내를 곧바로 HTTP500·백엔드 장애의 확정 근거로 쓰지 않습니다.", "오류 후 재요청·부분 줄 성공·정상 인식·다른 계정의 동작은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/1633-lab-math-ink-recognize-readback.json", "cms-knowledge/master-cms/evidence/1635-lab-math-ocr-response-metadata.json", "cms-knowledge/master-cms/evidence/1638-lab-math-ink-undo-state.json", "cms-knowledge/master-cms/sources/assets/mathFieldDialog-243503a382e6056d44d1aab98ad33544.js"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1636-lab-math-ink-failure-screen.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_LAB_12",
+      "title": "실제 문제 데이터 변환·로드·역변환 비교",
+      "states": [
+        {
+          "title": "문제·정답·해설 샘플 선택과 변환",
+          "trigger": "블록에서 문제·정답·해설을 선택하거나 원본 text를 수정하고 변환+로드를 선택합니다.",
+          "visibleChanges": ["선택한 블록의 원본 text를 입력란에 표시합니다.", "달러 구분 수식을 편집 가능한 수식 노드로 바꿔 하이브리드 편집기에 로드합니다.", "① 원본, ② 변환된 입력 HTML, ③ 편집 후 출력 HTML, ④ 수식 역변환 text와 수식 노드·읽기전용 렌더를 표시합니다."],
+          "policy": ["[실제 검증] 문제·정답·해설 각각의 변환·로드 결과를 조사했습니다.", "[정적 선언] 샘플은 정적 자료에서 불러오고 원본 입력을 바꿔 로컬 변환을 시험하는 페이지입니다.", "[정적 선언] d-question/d-input·font span·이미지 같은 커스텀 태그를 보존하며 수식은 data-latex로 다루는 경로입니다."],
+          "exceptions": ["샘플 로드 실패와 모든 원본 문서 형태·수식 구분자 조합의 호환은 미검증입니다.", "④의 ‘저장’은 역변환 결과 표시입니다. CMS 서버 저장이 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/lab-math-demo-20261109.html", "cms-knowledge/master-cms/sources/assets/mathDemoPage-7624caa310d0693b3435f2642257ded7.js", "cms-knowledge/master-cms/evidence/1593-lab-math-question-converted-state.json", "cms-knowledge/master-cms/evidence/1596-lab-math-answer-converted-state.json", "cms-knowledge/master-cms/evidence/1599-lab-math-explanation-converted-state.json"],
+          "screenshot": null
+        },
+        {
+          "title": "왕복 비교의 공백 차이와 깨진 샘플 이미지",
+          "trigger": "미편집 변환 결과를 원본 text와 비교하고 해설 이미지를 확인합니다.",
+          "visibleChanges": ["정답 표본은 원문 문자열과 같고 문제 표본은 줄바꿈 차이가 있습니다.", "해설 표본은 수식 주변/본문의 공백 일부가 달라졌습니다.", "해설의 상대 이미지 경로는 현재 페이지 기준으로 해석돼 편집기·읽기전용 렌더에서 자연 크기0으로 관찰됐습니다."],
+          "policy": ["[실제 정적 대조] 문제는 exactEqual=false이나 공백만의 text node를 무시한 HTML 트리는 같았습니다. 정답은 exactEqual=true입니다.", "[실제 정적 대조] 해설은 exactEqual=false이며 같은 HTML 트리 비교도 false였습니다. ‘왕복이 모두 원문 바이트와 같다’고 설명하지 않습니다.", "[실제 관찰] 이미지 complete=true라도 naturalWidth/Height=0이었습니다. complete만으로 정상 로딩이라고 표시하지 않습니다."],
+          "exceptions": ["상대 경로 해석 관찰을 원격 파일의 물리 삭제나 HTTP 상태의 확정으로 확대하지 않습니다.", "샘플1개의 공백 차이·이미지 실패를 모든 문항의 변환 실패로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/lab-math-roundtrip-comparison-20261109.json", "cms-knowledge/master-cms/evidence/1671-lab-math-sample-image-status.json", "cms-knowledge/master-cms/evidence/1664-lab-math-full-output-state.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1669-lab-math-scroll-fourth-screen.png"
+        }
+      ]
+    }
+  ]
+}

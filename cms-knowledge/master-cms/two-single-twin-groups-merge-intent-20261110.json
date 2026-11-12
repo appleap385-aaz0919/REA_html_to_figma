@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "completed_two_nonempty_groups_merged_and_all_baselines_restored",
+  "baselineFamilyIds": [
+    2089216,
+    2089239,
+    2089240
+  ],
+  "baselineStatuses": {
+    "2089216": "Y",
+    "2089239": "N",
+    "2089240": "R"
+  },
+  "baselineWholeControlEvidence": 3088,
+  "existingDisposable387Status": "D; do not touch",
+  "plan": [
+    "Unlink own239 normally from the three-member family, preserving216+240 as groupA.",
+    "If the normal N generation control is enabled, COPY239 once to create a disposable new child and groupB239+new child.",
+    "Add239 to216 through normal Twin Add and verify all four members merge.",
+    "Discard only the new disposable COPY through normal R-to-D status to exclude it and restore baseline216/239/240 membership."
+  ],
+  "expectedPersistentArtifact": "No new copy or history is needed in adapted plan. Restore all original memberships/content/status/version and histories.",
+  "newDisposableItemId": null,
+  "pendingServerOperation": null,
+  "cleanupRequired": false,
+  "serviceDeployment": false,
+  "baselineControlEvidence": 3105,
+  "baselineMembershipEvidence": 3106,
+  "parent239HistoryBeforeEvidence": 3107,
+  "unlinkSubmitEvidence": 3110,
+  "unlinkReadbackEvidence": [
+    3117,
+    3118
+  ],
+  "confirmedMasterOperations": 88,
+  "controlItemId": 2089246,
+  "controlBaselineEvidence": 3124,
+  "observedNCloneGenerationButtonAbsentEvidence": 3123,
+  "observedAbsenceLimit": "COPY239 is N and has no generation button. This does not isolate status from generation-source policy.",
+  "adaptedPlan": [
+    "Keep groupA216+240 after unlink239.",
+    "Normal Add existing owned control246 to independent239, forming groupB239+246 if accepted.",
+    "Normal Add239 at216 to verify merging both nonempty groups.",
+    "Normal unlink only control246 from the merged group to restore baseline original three and control246 Twin0."
+  ],
+  "secondGroupSubmitEvidence": 3129,
+  "twoGroupReadbackEvidence": 3130,
+  "mergeCandidateEvidence": 3138,
+  "mergeSubmitEvidence": 3140,
+  "mergeReadbackEvidence": 3141,
+  "cleanupSubmitEvidence": 3145,
+  "finalSafeStateEvidence": 3151,
+  "comparison": "two-single-twin-groups-merge-restoration-comparison-20261110.json"
+}

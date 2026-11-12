@@ -1,0 +1,321 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e19800]
+      - link "문제은행 마스터 CMS" [ref=e19801]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e19806]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e19807]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e19808]
+          - link "HML 문항 등록" [ref=e19809]
+          - link "디피니션 문항 등록" [ref=e19810]
+          - link "쌍둥이 그룹 관리" [ref=e19811]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e19812]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e19813]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e19814]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e19802]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+      - heading "디피니션 문항 등록" [level=2, ref=e19803]
+      - generic
+        - combobox [expanded=false, ref=e19815]: 시험지 ID
+          - MenuListPopup
+            - option "시험지 ID" [selected, ref=e19856]
+            - option "파일명" [ref=e19857]
+            - option "출처코드" [ref=e19858]
+            - option "등록자 ID" [ref=e19859]
+        - textbox "시험지 ID / 파일명 / 출처코드 / 등록자 ID" [ref=e19816]
+        - combobox [expanded=false, ref=e19817]: 22
+          - MenuListPopup
+            - option "교육과정 전체" [ref=e19860]
+            - option "22" [selected, ref=e19861]
+            - option "15" [ref=e19862]
+        - combobox [expanded=false, ref=e19818]: 학교급 전체
+          - MenuListPopup
+            - option "학교급 전체" [selected, ref=e19863]
+            - option "초등" [ref=e19864]
+            - option "중학" [ref=e19865]
+            - option "고등" [ref=e19866]
+        - combobox [expanded=false, ref=e19819]: 과목군 전체
+          - MenuListPopup
+            - option "과목군 전체" [selected, ref=e19867]
+            - option "수학군" [ref=e19868]
+        - combobox [expanded=false, disabled, ref=e19820]: 과목 전체
+          - MenuListPopup
+            - option "과목 전체" [disabled, ref=e19869]
+            - option "수학" [disabled, ref=e19870]
+            - option "수학" [disabled, ref=e19871]
+            - option "공통수학1" [disabled, ref=e19872]
+            - option "공통수학2" [disabled, ref=e19873]
+            - option "기본수학1" [disabled, ref=e19874]
+            - option "기본수학2" [disabled, ref=e19875]
+            - option "수학1" [disabled, ref=e19876]
+            - option "수학2" [disabled, ref=e19877]
+            - option "대수" [disabled, ref=e19878]
+            - option "미적분1" [disabled, ref=e19879]
+            - option "미적분2" [disabled, ref=e19880]
+            - option "확률과통계" [disabled, ref=e19881]
+            - option "기하" [disabled, ref=e19882]
+            - option "직무수학" [disabled, ref=e19883]
+            - option "인공지능수학" [disabled, ref=e19884]
+            - option "수학과 문화" [disabled, ref=e19885]
+            - option "수학" [disabled, ref=e19886]
+        - combobox [expanded=false, disabled, ref=e19821]: 학년 전체
+          - MenuListPopup
+            - option "학년 전체" [disabled, ref=e19887]
+            - option "중학1" [disabled, ref=e19888]
+            - option "고등1" [disabled, ref=e19889]
+            - option "초등1" [disabled, ref=e19890]
+            - option "중학2" [disabled, ref=e19891]
+            - option "초등2" [disabled, ref=e19892]
+            - option "고등2" [disabled, ref=e19893]
+            - option "고등3" [disabled, ref=e19894]
+            - option "중학3" [disabled, ref=e19895]
+            - option "초등3" [disabled, ref=e19896]
+            - option "고등 공통" [disabled, ref=e19897]
+            - option "초등4" [disabled, ref=e19898]
+            - option "초등5" [disabled, ref=e19899]
+            - option "초등6" [disabled, ref=e19900]
+        - combobox [expanded=false, ref=e19822]: 학기 전체
+          - MenuListPopup
+            - option "학기 전체" [selected, ref=e19901]
+            - option "공통학기" [ref=e19902]
+            - option "1학기" [ref=e19903]
+            - option "2학기" [ref=e19904]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e19831]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e19832]
+          - button "30일" [ref=e19833]
+          - button "90일" [ref=e19834]
+          - button "전체" [ref=e19835]
+        - StaticText "상태"
+        - LabelText [ref=e19823] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e19836]
+          - StaticText "전체"
+        - LabelText [ref=e19824] clickable [cursor:pointer]
+          - checkbox "등록대기" [checked=true, ref=e19837]
+          - StaticText "등록대기"
+        - LabelText [ref=e19825] clickable [cursor:pointer]
+          - checkbox "등록중" [checked=true, ref=e19838]
+          - StaticText "등록중"
+        - LabelText [ref=e19826] clickable [cursor:pointer]
+          - checkbox "초안" [checked=true, ref=e19839]
+          - StaticText "초안"
+        - LabelText [ref=e19827] clickable [cursor:pointer]
+          - checkbox "메타추천중" [checked=true, ref=e19840]
+          - StaticText "메타추천중"
+        - LabelText [ref=e19828] clickable [cursor:pointer]
+          - checkbox "승인" [checked=true, ref=e19841]
+          - StaticText "승인"
+        - LabelText [ref=e19829] clickable [cursor:pointer]
+          - checkbox "폐기" [checked=true, ref=e19842]
+          - StaticText "폐기"
+        - LabelText [ref=e19830] clickable [cursor:pointer]
+          - checkbox "실패" [checked=true, ref=e19843]
+          - StaticText "실패"
+        - generic
+          - button " 초기화" [ref=e19844]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e19845]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e19804]: 10개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [selected, ref=e19846]
+            - option "30개씩 보기" [ref=e19847]
+            - option "50개씩 보기" [ref=e19848]
+            - option "100개씩 보기" [ref=e19849]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "15"
+        - StaticText "건"
+        - link " ZIP 등록" [ref=e19805]
+          - StaticText ""
+          - StaticText "ZIP 등록"
+        - table
+          - rowgroup
+            - row
+              - columnheader "시험지 ID" [ref=e19985]
+              - columnheader "파일명" [ref=e19986]
+              - columnheader "출처" [ref=e19987]
+              - columnheader "과목" [ref=e19988]
+              - columnheader "학년 · 학기" [ref=e19989]
+              - columnheader "평가지 등록여부" [ref=e19990]
+              - columnheader "상태" [ref=e19991]
+              - columnheader "등록자 · 등록일" [ref=e19992]
+          - row
+            - cell "530" [ref=e19905]
+            - cell "750774.zip" [ref=e19906]
+              - link "750774.zip" [ref=e19993]
+            - cell "22-E-MA-T0-3-2-DCL-FB-2025" [ref=e19907]
+            - cell "수학" [ref=e19908]
+            - cell "초등3 · 2학기" [ref=e19909]
+            - cell "미등록" [ref=e19910]
+            - cell "승인" [ref=e19911]
+            - cell "hari.im 2026-10-15" [ref=e19912]
+              - StaticText "hari.im"
+              - StaticText "2026-10-15"
+          - row
+            - cell "529" [ref=e19913]
+            - cell "750772.zip" [ref=e19914]
+              - link "750772.zip" [ref=e19994]
+            - cell "22-E-MA-T0-5-1-DCL-FB-2026" [ref=e19915]
+            - cell "수학" [ref=e19916]
+            - cell "초등5 · 1학기" [ref=e19917]
+            - cell "미등록" [ref=e19918]
+            - cell "승인" [ref=e19919]
+            - cell "hari.im 2026-10-15" [ref=e19920]
+              - StaticText "hari.im"
+              - StaticText "2026-10-15"
+          - row
+            - cell "430" [ref=e19921]
+            - cell "108093600.zip" [ref=e19922]
+              - link "108093600.zip" [ref=e19995]
+            - cell "22-E-MA-T0-4-1-DCL-FB-2005" [ref=e19923]
+            - cell "수학" [ref=e19924]
+            - cell "초등4 · 1학기" [ref=e19925]
+            - cell "미등록" [ref=e19926]
+            - cell "승인" [ref=e19927]
+            - cell "jaehyuk.myung 2026-10-12" [ref=e19928]
+              - StaticText "jaehyuk.myung"
+              - StaticText "2026-10-12"
+          - row
+            - cell "299" [ref=e19929]
+            - cell "디피니션 문항 샘플.zip" [ref=e19930]
+              - link "디피니션 문항 샘플.zip" [ref=e19996]
+            - cell "22-H-MA-B1-1-2-DCL-MA-2025" [ref=e19931]
+            - cell "기본수학1" [ref=e19932]
+            - cell "고등1 · 2학기" [ref=e19933]
+            - cell "-" [ref=e19934]
+            - cell "실패" [ref=e19935]
+            - cell "minhye.park 2026-10-02" [ref=e19936]
+              - StaticText "minhye.park"
+              - StaticText "2026-10-02"
+          - row
+            - cell "180" [ref=e19937]
+            - cell "DIFI_107131800.zip" [ref=e19938]
+              - link "DIFI_107131800.zip" [ref=e19997]
+            - cell "22-H-MA-S0-3-2-DCL-TW-2024" [ref=e19939]
+            - cell "확률과통계" [ref=e19940]
+            - cell "고등3 · 2학기" [ref=e19941]
+            - cell "-" [ref=e19942]
+            - cell "폐기" [ref=e19943]
+            - cell "sangwon.jo 2026-09-23" [ref=e19944]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+          - row
+            - cell "179" [ref=e19945]
+            - cell "[MOCK-DIFI-D] 템플릿_시험지2.zip" [ref=e19946]
+              - link "[MOCK-DIFI-D] 템플릿_시험지2.zip" [ref=e19998]
+            - cell "22-H-MA-D1-2-1-DCL-MS-2024" [ref=e19947]
+            - cell "미적분1" [ref=e19948]
+            - cell "고등2 · 1학기" [ref=e19949]
+            - cell "미등록" [ref=e19950]
+            - cell "폐기" [ref=e19951]
+            - cell "sangwon.jo 2026-09-23" [ref=e19952]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+          - row
+            - cell "178" [ref=e19953]
+            - cell "[MOCK-DIFI-D] 템플릿_시험지2.zip" [ref=e19954]
+              - link "[MOCK-DIFI-D] 템플릿_시험지2.zip" [ref=e19999]
+            - cell "22-H-MA-D1-2-1-DCL-MS-2024" [ref=e19955]
+            - cell "미적분1" [ref=e19956]
+            - cell "고등2 · 1학기" [ref=e19957]
+            - cell "미등록" [ref=e19958]
+            - cell "폐기" [ref=e19959]
+            - cell "sangwon.jo 2026-09-23" [ref=e19960]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+          - row
+            - cell "175" [ref=e19961]
+            - cell "[MOCK-DIFI-F] 템플릿_시험지2.zip" [ref=e19962]
+              - link "[MOCK-DIFI-F] 템플릿_시험지2.zip" [ref=e20000]
+            - cell "22-H-MA-D1-2-1-DCL-MS-2024" [ref=e19963]
+            - cell "미적분1" [ref=e19964]
+            - cell "고등2 · 1학기" [ref=e19965]
+            - cell "-" [ref=e19966]
+            - cell "실패" [ref=e19967]
+            - cell "sangwon.jo 2026-09-23" [ref=e19968]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+          - row
+            - cell "174" [ref=e19969]
+            - cell "[MOCK-DIFI-X] 템플릿_시험지2.zip" [ref=e19970]
+              - link "[MOCK-DIFI-X] 템플릿_시험지2.zip" [ref=e20001]
+            - cell "22-H-MA-D1-2-1-DCL-MS-2024" [ref=e19971]
+            - cell "미적분1" [ref=e19972]
+            - cell "고등2 · 1학기" [ref=e19973]
+            - cell "미등록" [ref=e19974]
+            - cell "폐기" [ref=e19975]
+            - cell "sangwon.jo 2026-09-23" [ref=e19976]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+          - row
+            - cell "173" [ref=e19977]
+            - cell "[MOCK-DIFI-A] 템플릿_시험지2.zip" [ref=e19978]
+              - link "[MOCK-DIFI-A] 템플릿_시험지2.zip" [ref=e20002]
+            - cell "22-H-MA-D1-2-1-DCL-MS-2024" [ref=e19979]
+            - cell "미적분1" [ref=e19980]
+            - cell "고등2 · 1학기" [ref=e19981]
+            - cell "미등록" [ref=e19982]
+            - cell "승인" [ref=e19983]
+            - cell "sangwon.jo 2026-09-23" [ref=e19984]
+              - StaticText "sangwon.jo"
+              - StaticText "2026-09-23"
+        - generic
+          - StaticText "총 15건 중 1∼10 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e19850]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e19851]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e19852]
+          - listitem [level=1]
+            - link "2" [ref=e19853]
+          - listitem [level=1]
+            - link "다음" [ref=e19854]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e19855]
+              - StaticText ""

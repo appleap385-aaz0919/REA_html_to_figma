@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2188-own-qa-twin-add-tab-default",
+  "startedUtc": "2026-11-09T10:46:30.629538+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/qa2089216-open-twin-add-tab.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216"
+    },
+    "error": null,
+    "localSeconds": 0.113
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: Add pane already populated; observe before replay\n    at <anonymous>:3:97\n    at <anonymous>:7:3",
+    "localSeconds": 0.112
+  }
+}

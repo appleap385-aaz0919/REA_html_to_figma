@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2201-own-qa-ai-generation-dialog","command":["eval","--file","sources/runtime/qa2089216-open-twin-dialog.js"]},
+ {"label":"2202-own-qa-ai-generation-selection","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own anchor only');const m=document.querySelector('#twinGenerateModal.show');if(!m)throw Error('Expected dialog');m.querySelector('[name=sourceType][value=AI]').click();return {selected:m.querySelector('[name=sourceType]:checked').value,fields:[...m.querySelectorAll('input')].filter(e=>['itemId','sourceType'].includes(e.name)).map(e=>({name:e.name,value:e.value,checked:e.checked}))};})()"]},
+ {"label":"2203-own-qa-ai-generation-submit-once","command":["eval","--file","sources/runtime/qa2089216-submit-twin-ai-once.js"]},
+ {"label":"2204-own-qa-ai-generation-server-state","command":["eval","--file","sources/runtime/qa2089216-twin-working-state.js"]},
+ {"label":"2205-own-qa-ai-generation-initial-history","command":["eval","--file","sources/runtime/qa2089216-twin-readback.js"]}
+],"tailChars":200}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "asOfEvidence": 3294,
+  "controller": "agent-browser0.41.2 via explicit existing authenticated Chrome CDP",
+  "ownedMainTargetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "nativeOsInputUsed": false,
+  "observations": [
+    {
+      "topic": "Background DOM and server reads",
+      "evidence": [
+        3233,
+        3234,
+        3236,
+        3237
+      ],
+      "result": "Explicitly scoped eval and page fetch operate without native input."
+    },
+    {
+      "topic": "Hidden-tab click versus selected-tab popup open",
+      "evidence": [
+        3207,
+        3208,
+        3210,
+        3211,
+        3212,
+        3213,
+        3214,
+        3215
+      ],
+      "result": "Synthetic popup click was blocked and trusted click while hidden opened no popup. Selecting ownedt21 made it visible/focused and trusted click opened the correctly ownedt71. Do not blindly treat click-success as feature completion."
+    },
+    {
+      "topic": "Screenshot scope",
+      "evidence": [
+        3091,
+        3092,
+        3218,
+        3220,
+        3229,
+        3235,
+        3241,
+        3256,
+        3257,
+        3258
+      ],
+      "result": "A direct CDP capture of the hidden tab succeeded after user consent; agent-browser hidden middle capture timed out. Captures after selecting the owned tab/popup succeeded. Preserve actual image viewing separately from loaded-image flags."
+    },
+    {
+      "topic": "OMR attributes",
+      "evidence": [
+        3197,
+        3204
+      ],
+      "result": "data-omr-saved is an empty marker. Parse data-saved-omr and data-saved-answer; their combined object exactly matched the valid copy239 live serializer."
+    },
+    {
+      "topic": "Unknown mutation response",
+      "evidence": [
+        3110,
+        3117,
+        3118
+      ],
+      "result": "The old response-listener helper timed out after unlink, but fresh server reads confirmed success. Never repeat an uncertain mutation before independent readback."
+    },
+    {
+      "topic": "Guard failure before mutation",
+      "evidence": [
+        3047,
+        3052,
+        3056,
+        3057,
+        3058,
+        3059
+      ],
+      "result": "Save guards refused while a stable shown remove modal remained after too-fast opening confirmation. No Save was sent. Normal dismissal then successful single restoration Save was used."
+    },
+    {
+      "topic": "HML TEXT versus equation preservation",
+      "evidence": [
+        3221,
+        3228,
+        3231
+      ],
+      "manifest": "explanation239-editor-temp-and-original-binaries-20261110.json",
+      "result": "GetTextFile TEXT omits equation content. Compare XML SCRIPT values independently; all8 equation strings were preserved."
+    },
+    {
+      "topic": "HML save boundaries",
+      "evidence": [
+        3231,
+        3232,
+        3233,
+        3234,
+        3237,
+        3244,
+        3246,
+        3248,
+        3249
+      ],
+      "result": "Editor Save creates vendor temporary HML/PNG and parent pending files. It does not create a CMS draft/current version. Normal direct FullApply is a separate confirmed business operation."
+    },
+    {
+      "topic": "Trusted drag may work despite hidden visibility",
+      "evidence": [
+        3278,
+        3279,
+        3280,
+        3285,
+        3286,
+        3287
+      ],
+      "result": "Overstrict visible/focused guards refused before input. A scope-only probe then observed hidden/focused=true, nine trusted native pointer/drag events, four Sortable events and correct whole-group reordering. Visibility is not a universal prerequisite; validate actual events and postconditions instead."
+    },
+    {
+      "topic": "Search result readiness",
+      "evidence": [
+        3264,
+        3265,
+        3266,
+        3275,
+        3276,
+        3277
+      ],
+      "result": "An early synthetic search was followed by ten stale candidate rows and no matching filtered result. A stable normal Search produced HTTP200 and the sole242 candidate. The initial cause is unconfirmed; do not classify this as a CMS race without request-level evidence."
+    }
+  ],
+  "scopeLimit": "These are observed behaviors of this connection and application version, not universal browser guarantees."
+}

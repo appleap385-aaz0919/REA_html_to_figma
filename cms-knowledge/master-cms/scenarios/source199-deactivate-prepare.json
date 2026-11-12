@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2373-own-source199-mapped-modal-close","command":["eval","--file","sources/runtime/own-item2089216-product-modal-dismiss.js"]},
+ {"label":"2374-own-source199-mapped-edit-open","command":["open","https://dev-exambank.dongahub.com/product/modify.donga?id=199&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2375-own-source199-mapped-live-baseline","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"2376-own-source199-unused-remark-local","command":["fill","textarea[name=remark]","QA source lifecycle 2026-11-10; own item2089216 mapped; unused final."]},
+ {"label":"2377-own-source199-use-n-local-select","command":["select","select[name=useFlag]","N"]},
+ {"label":"2378-own-source199-deactivation-local-state","command":["eval","(() => {if(location.pathname!=='/product/modify.donga'||new URLSearchParams(location.search).get('id')!=='199')throw Error('Own source edit only');return {useFlag:document.querySelector('[name=useFlag]').value,modals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),buttons:[...document.querySelectorAll('.modal.show button')].map(e=>({text:e.innerText,attributes:{...e.dataset}}))};})()"]}
+],"tailChars":180}

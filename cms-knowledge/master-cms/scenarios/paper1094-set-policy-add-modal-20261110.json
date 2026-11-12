@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"3004-own-paper1094-add-modal-open","command":["click","[data-bs-target='#paperItemAddModal']"]},
+ {"label":"3005-own-paper1094-add-modal-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3006-own-paper1094-add-modal-controls","command":["eval","(()=>{const m=document.querySelector('#paperItemAddModal');if(!m.classList.contains('show'))throw Error('Expected modal');return {controls:[...m.querySelectorAll('input,select,button')].map(e=>({tag:e.tagName,name:e.name,type:e.type,value:e.value,checked:e.checked,disabled:e.disabled,text:e.tagName==='BUTTON'?e.textContent.trim():null,options:e.tagName==='SELECT'?[...e.options].map(o=>({value:o.value,text:o.text})):null})),result:m.querySelector('#paperItemAddResult').innerText};})()"]}
+],"tailChars":120}

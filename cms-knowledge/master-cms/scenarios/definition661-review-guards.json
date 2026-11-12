@@ -1,0 +1,20 @@
+{"steps":[
+ {"label":"1911-definition661-all-delete-local","command":["select","select[data-exam-judge]","D"]},
+ {"label":"1912-definition661-all-delete-approve-click","command":["eval","document.querySelector('[data-exam-approve]').click()"]},
+ {"label":"1913-definition661-all-delete-notice","command":["eval","--file","sources/runtime/definition661-review-observation.js"]},
+ {"label":"1914-definition661-all-delete-dismiss","command":["eval","--file","sources/runtime/registration-dismiss-visible-modal.js"]},
+ {"label":"1915-definition661-failed-local","command":["select","select[data-exam-judge]","F"]},
+ {"label":"1916-definition661-failed-approve-click","command":["eval","document.querySelector('[data-exam-approve]').click()"]},
+ {"label":"1917-definition661-failed-approve-confirm","command":["eval","--file","sources/runtime/definition661-review-observation.js"]},
+ {"label":"1918-definition661-failed-approve-cancel","command":["eval","--file","sources/runtime/registration-dismiss-visible-modal.js"]},
+ {"label":"1919-definition661-judge-success-restore","command":["select","select[data-exam-judge]","S"]},
+ {"label":"1920-definition661-discard-empty-click","command":["eval","(() => {if(document.querySelector('[name=remark]').value)throw Error('Expected empty reason');document.querySelector('[data-exam-discard]').click();return {action:'Actual discard with empty reason'};})()"]},
+ {"label":"1921-definition661-discard-empty-notice","command":["eval","--file","sources/runtime/definition661-review-observation.js"]},
+ {"label":"1922-definition661-discard-empty-dismiss","command":["eval","--file","sources/runtime/registration-dismiss-visible-modal.js"]},
+ {"label":"1923-definition661-review-remark-fill","command":["fill","textarea[name=remark]","QA-DIFI-20261109-01 import and review validation; isolated development test."]},
+ {"label":"1924-definition661-discard-with-reason-click","command":["eval","document.querySelector('[data-exam-discard]').click()"]},
+ {"label":"1925-definition661-discard-with-reason-confirm","command":["eval","--file","sources/runtime/definition661-review-observation.js"]},
+ {"label":"1926-definition661-discard-with-reason-cancel","command":["eval","--file","sources/runtime/registration-dismiss-visible-modal.js"]},
+ {"label":"1927-definition661-success-approve-click","command":["eval","document.querySelector('[data-exam-approve]').click()"]},
+ {"label":"1928-definition661-success-approve-confirm","command":["eval","--file","sources/runtime/definition661-review-observation.js"]}
+],"tailChars":700}

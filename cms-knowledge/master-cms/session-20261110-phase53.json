@@ -1,0 +1,16 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_three_single_controls_and_type_mapping_confirmed","evidenceRange":[2706,2759],"lastEvidence":"2759-definition697-approved-bottom-visual",
+ "summary":"실패한 MULTI3의 ESSAY/FIVE_CHOICE JSON을 각각 바이트 그대로 단독 ZIP으로 등록했다. 696/697 모두 한 카드의 초안으로 정상 처리됐고, 각 S 최종 승인 후 문서 Y·Master R로 반영됐다. 실제 저장 형태는 ESSAY=ESBA00, FIVE_CHOICE=OBSACN이다. 두 문항 모두 OMR과 난이도·단원 등의 메타정보가 공란이다. 세 개별 JSON은 단독 정상이고 다중 구성은 실패했으나 정확한 파서 제약은 미확정이다. 사용자에게 해석 HML/정상 Definition 세트 ZIP 표본은 현재 없다는 답변을 받았다. Master 업무69회, Service 배포없음.",
+ "observations":[
+  {"evidence":[2706,2707,2713,2714,2716,2719],"result":"서술형 단독 ZIP951B/SHA9337c39d6b88c84efb57b6c9b19cc5ce3787ad9347fcfa420744ce34aabdad5e를 정상 UI에서1회 등록했다. 문서696/P→R, 카드2089376/2089083/초기S, 풀이 참조 정답과 서술형 본문이 표시됐다."},
+  {"evidence":[2720,2721,2727,2728,2730,2733],"result":"객관식 단독 ZIP975B/SHA219abd302ca0bd4c72adb7ca734bdc73831a15a2973fed604108e83ce32314ad를1회 등록했다. 문서697/P→R, 카드2089377/2089084/초기S, 5개 선지와 정답④가 표시됐다. 목록은22건이다."},
+  {"evidence":[2734,2735,2736,2737,2738,2739,2740,2741,2742,2743],"result":"697의 실제 승인 확인창과 정확한 단일S카드를 검증한 뒤 최종1회 승인했다. 최신 문서는Y, Master2089377/2089084는R·객관식>단답형>N지선다다. 수정 소스의 qtCurrent=OBSACN, savedOmrData=null이다."},
+  {"evidence":[2744,2745,2746,2747,2748,2749,2750,2751,2752,2753,2754],"result":"696도 같은 정상S승인을1회 실행했다. 최신 문서는Y, Master2089376/2089083은R·서술형>기본형>기본서술형이다. 수정 소스 qtCurrent=ESBA00, savedOmrData=null이다. 비활성 초기 폼 qtCategory/qtAnswer/qtType의 기본값을 실제 저장타입과 혼동하지 않는다."},
+  {"evidence":[2755,2756,2757,2758,2759],"result":"두 승인 문서의 상단·하단 PNG4개를 직접 확인했다.696의 전체높이1280/최대스크롤265,697의 전체높이1312/최대297이다.각 카드의 미리보기·정답·풀이·상세/수정버튼과 하단목록까지 확인했다."}
+ ],
+ "artifacts":["definition-essay1-control-intent-20261110.json","definition-five1-control-intent-20261110.json","definition-type-controls-s-approval-intent-20261110.json","user-sample-availability-20261110.json","sources/definition696-essay-draft-20261110.html","sources/definition696-s-approved-final-20261110.html","sources/definition697-five-draft-20261110.html","sources/definition697-s-approved-final-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":69,"newMasterChangesInThisPhase":4,"newDefinitionDocuments":[696,697],"documentFinalStates":{"696":"Y","697":"Y"},"newMasterItems":{"2089376":{"detailId":2089083,"type":"ESBA00","viewFlag":"R"},"2089377":{"detailId":2089084,"type":"OBSACN","viewFlag":"R"}},"serviceDeployment":false},
+ "remaining":["이미지 본문/이미지 선지/SHORT_ANSWER의 ASSET3 자료를 각각 단건 구조로 분리해 정상 UI에서 자산 업로드·변환·표시를 검증한다.","다중 JSON ZIP/세트 입력의 정확한 제약과 혼합 S/F/D 검수는 미확정으로 남긴다. 사용자에게 현재 정상 세트 원본이 없음을 확인했으므로 응답대기 상태가 아니다.","해석 HML의 실제 파일 표본도 현재 없으므로 검증된 화면·소스와 파일 실행 미검증 범위를 구분한다.","기존 남은 HML 복사본 파일편집 격리, 세트AI생성, 평가지 세트 편집 및 상태 정책의 조사를 이어간다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=697&curriculum=22&pageNum=1&pageSize=100","tab":"t21 own approved Definition697 at bottom","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["세 개별 입력이 단독 정상이라는 비교 결과이며 모든 다중 JSON ZIP을 지원하지 않는다는 일반화는 하지 않는다.","S 승인 문항의 메타 공란/OMRnull을 확인했으며 추천 백엔드의 성공·실패·스킵 원인은 로그나 서버 소스가 없어 확정하지 않았다.","원장에 잠정적으로 입력한 객관식 코드는 실제 qtCurrent를 읽고 즉시 OBSACN으로 정정했다. 실제 근거는2743이며 초안 코드는 사용하지 않는다.","전체 사이트100%완료를 주장하지 않는다."]
+}

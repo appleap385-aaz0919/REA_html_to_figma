@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"1621-lab-math-ink-dialog-reopen","command":["eval","(() => {document.querySelector('#answerField').parentElement.querySelector('.vt-math-open').click();return {action:'Open standalone dialog for handwriting test'};})()"]},
+ {"label":"1622-lab-math-ink-tab-open","command":["eval","(() => {document.querySelector('.math-dialog__tab[data-tab=ink]').click();return {action:'Open handwriting tab'};})()"]},
+ {"label":"1623-lab-math-ink-empty-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1624-lab-math-ink-canvas-geometry","command":["eval","(() => {const e=document.querySelector('.math-dialog__ink-host canvas'),r=e?.getBoundingClientRect();if(!e||!r.width||!r.height)throw Error('Visible canvas geometry missing');return {url:location.href,visibility:document.visibilityState,canvas:{x:r.x,y:r.y,width:r.width,height:r.height},strokeCount:window.MathFieldDialog.get().ink.strokes.length};})()"]}
+],"tailChars":1300}

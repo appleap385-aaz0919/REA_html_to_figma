@@ -1,0 +1,12 @@
+{"steps":[
+ {"label":"2002-hml-qa-registration-open","command":["open","https://dev-exambank.dongahub.com/item/hml/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2003-hml-current-registration-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2004-hml-current-upload-controls","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"2005-hml-qa-file-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-HML-20261109-01-SET.hml"]},
+ {"label":"2006-hml-qa-source-select","command":["select","select[name=productId]","13"]},
+ {"label":"2007-hml-qa-unit-fill","command":["fill","#unitCodeInput","22MMAT0KOK10"]},
+ {"label":"2008-hml-qa-start-fill","command":["fill","input[name=startPageNum]","2"]},
+ {"label":"2009-hml-qa-end-fill","command":["fill","input[name=endPageNum]","22"]},
+ {"label":"2010-hml-qa-purpose-select","command":["select","select[name=serviceUsage]","T"]},
+ {"label":"2011-hml-qa-before-submit","command":["eval","--file","sources/runtime/registration-upload-observation.js"]}
+],"tailChars":550}

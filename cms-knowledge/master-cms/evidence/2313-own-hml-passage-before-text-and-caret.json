@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2313-own-hml-passage-before-text-and-caret",
+  "startedUtc": "2026-11-10T00:24:15.059897+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/own-hml-passage-text-read.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C2D425453C876C056127BB64B954B318",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089242&itemDetailId=2088906"
+    },
+    "error": null,
+    "localSeconds": 0.087
+  },
+  "targetIdBefore": "C2D425453C876C056127BB64B954B318",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089242&itemDetailId=2088906",
+      "result": {
+        "caretClick": {
+          "x": 309,
+          "y": 326
+        },
+        "modified": false,
+        "pageCount": 1,
+        "status": "2089241_J.hml 을(를) 열었습니다.",
+        "text": {
+          "method": "GetTextFile TEXT callback",
+          "responseKeys": [],
+          "value": "\r\n다음 행렬의 꼴을 말하시오.\r\n"
+        }
+      }
+    },
+    "error": null,
+    "localSeconds": 0.124
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089242&itemDetailId=2088906",
+      "refs": {
+        "e30454": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e30455": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e30456": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e30457": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e30458": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e30459": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e30460": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [ref=e30456]\n    - button \"지문해석 수정\" [disabled, ref=e30457]\n    - button \"문제 수정\" [ref=e30458]\n    - button \"해답 수정\" [ref=e30459]\n  - button \"저장\" [ref=e30454]\n  - StaticText \"2089241_J.hml 을(를) 열었습니다.\"\n  - Iframe [ref=e30455]\n    - Iframe [ref=e30460]"
+    },
+    "error": null,
+    "localSeconds": 0.089
+  }
+}

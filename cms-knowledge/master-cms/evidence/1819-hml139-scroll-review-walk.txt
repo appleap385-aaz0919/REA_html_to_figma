@@ -1,0 +1,110 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e19651]
+      - link "문제은행 마스터 CMS" [ref=e19652]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e19659]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e19660]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e19661]
+          - link "HML 문항 등록" [ref=e19662]
+          - link "디피니션 문항 등록" [ref=e19663]
+          - link "쌍둥이 그룹 관리" [ref=e19664]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e19665]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e19666]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e19667]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e19655]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "HML 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "HML 상세" [level=2, ref=e19653]
+      - StaticText "실패"
+      - generic
+        - StaticText "HML 파일 자체에 오류가 있어 파싱을 시작하지 못했습니다."
+        - StaticText "원본을 내려받아 수정한 뒤 다시 등록해 주세요."
+      - generic
+        - heading "기본 정보" [level=3, ref=e19656]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "139"
+          - term "원본 파일"
+          - definition
+            - StaticText "[MOCK-F] 템플릿_시험지2.hml"
+            - button " 다운로드" [ref=e19668]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-H-MA-D1-2-1-DCL-MS-2024]"
+            - StaticText "22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22EMAT0NGS3102060000]"
+            - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 평면도형 > 정사각형은 무엇일까요 > >"
+          - term "페이지"
+          - definition
+            - StaticText "2 ~ 22"
+          - term "용도"
+          - definition
+            - StaticText "교사용"
+          - term "등록"
+          - definition
+            - StaticText "sangwon.jo · 2026-09-17"
+          - term "수정"
+          - definition
+            - StaticText "-"
+        - LabelText
+          - StaticText "평가지 등록여부"
+        - generic
+          - LabelText
+            - radio "등록" [checked=false, disabled, ref=e19669]
+            - StaticText "등록"
+          - LabelText
+            - radio "미등록" [checked=false, disabled, ref=e19670]
+            - StaticText "미등록"
+        - LabelText
+          - StaticText "비고"
+        - textbox [disabled, ref=e19658]
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e19657]
+        - StaticText ""
+        - paragraph
+          - StaticText "등록된 문항이 없습니다"
+        - paragraph
+          - StaticText "HML 파일 자체에 오류가 있어 파싱이 시작되지 못했습니다."
+      - link "목록" [ref=e19654]

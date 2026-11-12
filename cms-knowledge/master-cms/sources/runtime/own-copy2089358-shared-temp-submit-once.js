@@ -1,0 +1,6 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#tempSaveModal.show')||window.__qaCopiedSharedTempSubmitAttempted)throw Error('Only own copied shared-passage Temp Save confirmation allowed');
+ const baseline=window.__qaCopySharedHtmlBaseline,passage=window.itemEditors?.passage?.getDocument(),question=window.itemEditors?.question?.getDocument(),marker='[QA-COPY-SHARED-DRAFT-20261110]';
+ if(!baseline||!passage?.content?.promptText?.includes(marker)||passage.content.promptText.split(marker).length!==2||JSON.stringify(question)!==JSON.stringify(baseline.question)||JSON.stringify(window.omrSerializers.SBSANM.serialize(document.querySelector('#omrSlot [data-omr-code]')))!==JSON.stringify(baseline.serializedOmr)||[...document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Only copied shared HTML marker; no question/OMR/HML changes');
+ window.__qaCopiedSharedTempSubmitAttempted=true;document.querySelector('#tempSaveModal [data-action-ok]').click();return {clickedOnce:true,itemId:2089358,copyPassageId:2089357,operation:'CMS Temp Save of copied shared HTML passage marker',embeddedDocumentPassageKey:passage.passageKey,serviceDeployment:false};
+})()

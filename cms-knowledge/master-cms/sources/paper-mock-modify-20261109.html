@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>평가지 수정 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item  active">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">평가지 관리</li>
+    
+    <li class="breadcrumb-item">수정</li>
+</ol>
+        <h2 class="page-title">평가지 수정</h2>
+    </div>
+
+    
+    <form method="post" action="/paper/update.donga" hx-swap="none" hx-validate="true" class="needs-validation" novalidate="" id="paperModifyForm" hx-post="/paper/update.donga">
+        
+        <input type="hidden" name="paperId" value="341">
+
+        <div class="card mt-3 mb-3">
+            <div class="card-header bg-secondary-lt">
+                <h3 class="card-title">기본 정보</h3>
+            </div>
+            <div class="card-body">
+                
+                <div class="row g-3 gx-5">
+                    <div class="col-md-6">
+                        <dl class="row mb-0 dl-detail">
+                            <dt class="col-2 form-label fw-semibold mb-0">평가지 ID</dt>
+                            
+                            <dd class="col-10">341 (374)</dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">평가지명<span class="text-danger ms-1">*</span></dt>
+                            <dd class="col-10 flex-column align-items-stretch justify-content-center">
+                                <input type="text" class="form-control" name="paperName" maxlength="255" required="" value="[MOCK-HML-M] 템플릿_시험지2 (복제10)">
+                                <div class="invalid-feedback">입력해주세요.</div>
+                            </dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">상태</dt>
+                            <dd class="col-10">
+                                
+                                <div class="form-selectgroup w-100">
+                                    <label class="form-selectgroup-item flex-fill mb-0">
+                                        <input type="radio" name="viewFlag" class="form-selectgroup-input" value="R" checked="checked">
+                                        <span class="form-selectgroup-label">초안</span>
+                                    </label><label class="form-selectgroup-item flex-fill mb-0">
+                                        <input type="radio" name="viewFlag" class="form-selectgroup-input" value="Y">
+                                        <span class="form-selectgroup-label">사용</span>
+                                    </label><label class="form-selectgroup-item flex-fill mb-0">
+                                        <input type="radio" name="viewFlag" class="form-selectgroup-input" value="N">
+                                        <span class="form-selectgroup-label">미사용</span>
+                                    </label><label class="form-selectgroup-item flex-fill mb-0">
+                                        <input type="radio" name="viewFlag" class="form-selectgroup-input" value="D">
+                                        <span class="form-selectgroup-label">폐기</span>
+                                    </label>
+                                </div>
+                            </dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">생성 방식</dt>
+                            <dd class="col-10">HML 생성</dd>
+
+                            
+                            <dt class="col-2 form-label fw-semibold mb-0">단원 코드</dt>
+                            <dd id="paperSummaryUnits" class="col-10 flex-column align-items-start justify-content-center">
+    <div class="mb-2">
+        <div>[22EMAT0NGS3101070000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 1학기 &gt; 덧셈과 뺄셈 &gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3101080000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 1학기 &gt; 덧셈과 뺄셈 &gt; 뺄셈의 어림셈을 어떻게 할까요 &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3106060000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 1학기 &gt; 분수와 소수 &gt; 소수를 알아볼까요 (1) &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3106070000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 1학기 &gt; 분수와 소수 &gt; 소수를 알아볼까요 (2) &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3202040000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 2학기 &gt; 나눗셈 &gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3202050000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 2학기 &gt; 나눗셈 &gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3205040000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 2학기 &gt; 들이와 무게 &gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &gt;  &gt; </div>
+    </div>
+    <div class="mb-2">
+        <div>[22EMAT0NGS3205050000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 2학기 &gt; 들이와 무게 &gt; 무게를 어떻게 비교할까요 &gt;  &gt; </div>
+    </div>
+    <div>
+        <div>[22EMAT0NGS3205060000]</div>
+        <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 2학기 &gt; 들이와 무게 &gt; 무게의 단위는 무엇일까요 &gt;  &gt; </div>
+    </div>
+    
+</dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">등록</dt>
+                            <dd class="col-10">sangwon.jo · 2026-10-19</dd>
+                        </dl>
+                    </div>
+
+                    <div class="col-md-6">
+                        <dl class="row mb-0 dl-detail">
+                            <dt class="col-2 form-label fw-semibold mb-0">시험지</dt>
+                            <dd class="col-10">
+                                <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/hml/detail.donga?examDocumentId=431">431 | [MOCK-HML-M] 템플릿_시험지2.hml</a>
+                                
+                            </dd>
+
+                            
+                            <dt class="col-2 form-label fw-semibold mb-0">출처</dt>
+                            <dd class="col-10 flex-column align-items-start justify-content-center">
+                                <div>
+                                    <div>[22-H-MA-D1-2-1-DCL-MS-2024]</div>
+                                    <div class="text-secondary">22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024</div>
+                                </div>
+                                
+                            </dd>
+
+                            
+                            <dt class="col-2 form-label fw-semibold mb-0">페이지<span class="text-danger ms-1">*</span></dt>
+                            <dd class="col-10 gap-2">
+                                <input type="number" class="form-control w-25" name="startPageNum" min="1" required="" placeholder="예: 24" value="2">
+                                <span>~</span>
+                                <input type="number" class="form-control w-25" name="endPageNum" min="1" required="" placeholder="예: 25" value="22">
+                            </dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">용도<span class="text-danger ms-1">*</span></dt>
+                            
+                            <dd class="col-10">
+                                <label class="form-check form-check-inline mb-0">
+                                    <input type="radio" class="form-check-input" name="serviceUsage" required="" value="C">
+                                    <span class="form-check-label">공통</span>
+                                </label><label class="form-check form-check-inline mb-0">
+                                    <input type="radio" class="form-check-input" name="serviceUsage" required="" value="T" checked="checked">
+                                    <span class="form-check-label">교사용</span>
+                                </label>
+                            </dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">문제 구성</dt>
+                            <dd id="paperSummaryTypes" class="col-10 flex-column align-items-start justify-content-center">
+    <div>주관식 &gt; 단답형 &gt; 일반형 (4)</div>
+    
+</dd>
+
+                            <dt class="col-2 form-label fw-semibold mb-0">문항 수</dt>
+                            <dd id="paperSummaryCount" class="col-10">4문항</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card mb-3">
+            <div class="card-header bg-secondary-lt">
+                <h3 class="card-title">포함 문항 (<span id="paperItemCount">4</span>)</h3>
+                <div class="card-actions">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperItemAddModal">
+                        <i class="ti ti-plus me-1"></i>문항 추가
+                    </button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table card-table table-vcenter" style="table-layout: fixed;" id="paperItemTable">
+                    <thead>
+                    <tr>
+                        <th style="width: 3%;"></th>
+                        <th class="text-center" style="width: 5%;">순서</th>
+                        <th class="text-center" style="width: 10%;">문항 ID</th>
+                        <th class="text-center">문제</th>
+                        <th class="text-center" style="width: 15%;">형태</th>
+                        <th class="text-center" style="width: 5%;">난이도</th>
+                        <th class="text-center" style="width: 18%;">단원 코드</th>
+                        <th class="text-center" style="width: 8%;">문항 상태</th>
+                        <th class="text-center" style="width: 4%;">제외</th>
+                    </tr>
+                    </thead>
+                    
+    <tbody data-sort-group="">
+    <tr data-item-id="2087755">
+        
+        <td rowspan="1" class="text-center text-secondary cursor-move" data-sort-handle="">
+            <i class="ti ti-grip-vertical"></i>
+        </td>
+        
+        <td class="text-center">
+            <span data-seq="">1</span>
+            <input type="hidden" name="itemIds" value="2087755">
+        </td>
+        <td class="text-center">
+            <div>
+                <span>2087755</span>
+                
+            </div>
+            
+        </td>
+        <td class="text-truncate" title="$\dfrac{5}{24} \times n$, $\dfrac{7}{30} \times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]+">
+            <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087755">$\dfrac{5}{24} \times n$, $\dfrac{7}{30} \times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]+</a>
+        </td>
+        <td class="text-center">주관식 &gt; 단답형 &gt; 일반형</td>
+        <td class="text-center">상</td>
+        <td class="text-center">
+            
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22EMAT0NGS3101070000 등 2개</div>
+
+        </td>
+        <td class="text-center">승인(사용)</td>
+        
+        <td rowspan="1" class="text-center">
+            <button type="button" class="btn btn-icon btn-ghost-danger" title="제외" aria-label="제외" data-remove-group="">
+                <i class="ti ti-x"></i>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+    <tbody data-sort-group="" data-passage-id="2087757">
+    <tr data-item-id="2087758">
+        
+        <td rowspan="3" class="text-center text-secondary cursor-move" data-sort-handle="">
+            <i class="ti ti-grip-vertical"></i>
+        </td>
+        
+        <td class="text-center">
+            <span data-seq="">2</span>
+            <input type="hidden" name="itemIds" value="2087758">
+        </td>
+        <td class="text-center">
+            <div>
+                <span>2087758</span>
+                
+            </div>
+            <div class="small text-secondary">지문 ID 2087757</div>
+        </td>
+        <td class="text-truncate" title="$10$, $15$, $25$">
+            <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087758">$10$, $15$, $25$</a>
+        </td>
+        <td class="text-center">주관식 &gt; 단답형 &gt; 일반형</td>
+        <td class="text-center">하</td>
+        <td class="text-center">
+            
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22EMAT0NGS3106060000 등 2개</div>
+
+        </td>
+        <td class="text-center">승인(사용)</td>
+        
+        <td rowspan="3" class="text-center">
+            <button type="button" class="btn btn-icon btn-ghost-danger" title="제외" aria-label="제외" data-remove-group="">
+                <i class="ti ti-x"></i>
+            </button>
+        </td>
+    </tr>
+    <tr data-item-id="2087759">
+        
+        
+        
+        <td class="text-center">
+            <span data-seq="">3</span>
+            <input type="hidden" name="itemIds" value="2087759">
+        </td>
+        <td class="text-center">
+            <div>
+                <span>2087759</span>
+                
+            </div>
+            <div class="small text-secondary">지문 ID 2087757</div>
+        </td>
+        <td class="text-truncate" title="$2^{2 \times 3}$, $2 \times 3 \times 5^2$">
+            <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087759">$2^{2 \times 3}$, $2 \times 3 \times 5^2$</a>
+        </td>
+        <td class="text-center">주관식 &gt; 단답형 &gt; 일반형</td>
+        <td class="text-center">하</td>
+        <td class="text-center">
+            
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22EMAT0NGS3202040000 등 2개</div>
+
+        </td>
+        <td class="text-center">승인(사용)</td>
+        
+        
+    </tr>
+    <tr data-item-id="2087760">
+        
+        
+        
+        <td class="text-center">
+            <span data-seq="">4</span>
+            <input type="hidden" name="itemIds" value="2087760">
+        </td>
+        <td class="text-center">
+            <div>
+                <span>2087760</span>
+                
+            </div>
+            <div class="small text-secondary">지문 ID 2087757</div>
+        </td>
+        <td class="text-truncate" title="$2 \times 5^{2 \times 7}$, $2^{2 \times 5} \times 7^3$">
+            <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2087760">$2 \times 5^{2 \times 7}$, $2^{2 \times 5} \times 7^3$</a>
+        </td>
+        <td class="text-center">주관식 &gt; 단답형 &gt; 일반형</td>
+        <td class="text-center">최하</td>
+        <td class="text-center">
+            
+    
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;">22EMAT0NGS3205040000 등 3개</div>
+
+        </td>
+        <td class="text-center">승인(사용)</td>
+        
+        
+    </tr>
+    </tbody>
+
+                    
+                </table>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-2 mb-3">
+            <a class="btn" data-loading="" data-confirm-cancel="" href="/paper/detail.donga?paperId=341&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30">취소</a>
+            <button type="button" class="btn btn-primary" data-paper-save="">저장</button>
+        </div>
+    </form>
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="cancelConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">평가지 수정 취소</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">저장하지 않고 이동하시겠습니까?</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok="">저장 하지 않고 이동</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="removeGroupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">문항 제외</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">평가지에서 제외하시겠습니까?<div class="fw-normal text-secondary mt-1" data-remove-target=""></div></div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok="">제외</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="paperDiscardModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">평가지 저장</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">저장하시겠습니까?<br><span class="fw-normal small">폐기한 평가지는 다시 수정할 수 없습니다.</span></div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok="">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div>
+    <div class="modal modal-blur fade" id="paperItemAddModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="ti ti-plus me-1"></i>문항 추가</h5>
+                    <button type="button" class="btn btn-link p-0 ms-2 text-decoration-none" aria-label="안내" data-item-add-guide="">
+                        <i class="ti ti-info-circle"></i>
+                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                
+                <div class="d-none" data-item-add-guide-content="">
+                    <div class="d-flex align-items-start gap-3">
+                        <div>
+                            <div>문항 상태가 사용 · 미사용인 문항만 추가할 수 있습니다.</div>
+                            <div>세트 문항은 세트 단위로 추가됩니다.</div>
+                            <div>이 평가지와 같은 출처의 문항만 표시합니다.</div>
+                            <hr class="my-2">
+                            <div class="fw-bold">아래 출처로 고정되어 검색됩니다.</div>
+                            <div>
+                                <span>[22-H-MA-D1-2-1-DCL-MS-2024]</span>
+                                <span class="text-secondary">22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024</span>
+                            </div>
+                            
+                        </div>
+                        <button type="button" class="btn-close" aria-label="닫기"></button>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    
+                    <div class="card mb-3" id="paperItemAddFilter" data-filter="">
+                        <div class="card-body">
+                            <input type="hidden" name="paperId" value="341">
+                            
+                            <div data-included-items=""></div>
+                            <div class="d-flex flex-nowrap gap-2 mb-2">
+                                <div style="width: 11%;">
+                                    <select class="form-select cursor-pointer" name="keywordType">
+                                        <option value="itemId">문항 ID</option>
+                                        <option value="passageContent">지문</option>
+                                        <option value="title">문제</option>
+                                        <option value="adminMemberUserId">등록자 ID</option>
+                                        <option value="fileOrgName">원본 파일명</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="text" class="form-control" name="keyword" placeholder="문항 ID / 지문 / 문제 / 등록자 / 원본 파일명">
+                                </div>
+                                <select class="form-select cursor-pointer" id="paperItemCurriculumSelect" name="curriculum" data-code-source="curriculum" data-default-value="22" style="width: 11%;"><option value="">교육과정 전체</option><option value="22">22</option><option value="15">15</option></select>
+                                <select class="form-select cursor-pointer" name="classType" data-code-parent="classtype" data-code-source="classtype" style="width: 11%;">
+                                    <option value="">학교급 전체</option>
+                                    <option value="E">초등</option>
+                                    <option value="M">중학</option>
+                                    <option value="H">고등</option>
+                                </select>
+                                <select class="form-select cursor-pointer" id="paperItemSubjectCategorySelect" name="subjectCategory" data-code-source="subjectcategory" style="width: 11%;"><option value="">과목군 전체</option><option value="MA">수학군</option></select>
+                                <select class="form-select cursor-pointer" name="subject" data-code-multi-child="curriculum,classtype,subjectcategory" disabled="" style="width: 11%;">
+                                    <option value="">과목 전체</option>
+                                    <option value="T0" data-code-curriculum="22" data-code-classtype="E" data-code-subjectcategory="MA" hidden="" disabled="">수학</option>
+                                    <option value="T0" data-code-curriculum="22" data-code-classtype="M" data-code-subjectcategory="MA" hidden="" disabled="">수학</option>
+                                    <option value="C1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">공통수학1</option>
+                                    <option value="C2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">공통수학2</option>
+                                    <option value="B1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">기본수학1</option>
+                                    <option value="B2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">기본수학2</option>
+                                    <option value="T1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">수학1</option>
+                                    <option value="T2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">수학2</option>
+                                    <option value="A0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">대수</option>
+                                    <option value="D1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">미적분1</option>
+                                    <option value="D2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">미적분2</option>
+                                    <option value="S0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">확률과통계</option>
+                                    <option value="G0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">기하</option>
+                                    <option value="P0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">직무수학</option>
+                                    <option value="I0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">인공지능수학</option>
+                                    <option value="U0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA" hidden="" disabled="">수학과 문화</option>
+                                    <option value="T0" data-code-curriculum="15" data-code-classtype="M" data-code-subjectcategory="MA" hidden="" disabled="">수학</option>
+                                </select>
+                                <select class="form-select cursor-pointer" name="grade" data-code-child="classtype" disabled="" style="width: 11%;">
+                                    <option value="">학년 전체</option>
+                                    <option value="1" data-code-parent-value="M" hidden="" disabled="">중학1</option>
+                                    <option value="1" data-code-parent-value="H" hidden="" disabled="">고등1</option>
+                                    <option value="1" data-code-parent-value="E" hidden="" disabled="">초등1</option>
+                                    <option value="2" data-code-parent-value="M" hidden="" disabled="">중학2</option>
+                                    <option value="2" data-code-parent-value="E" hidden="" disabled="">초등2</option>
+                                    <option value="2" data-code-parent-value="H" hidden="" disabled="">고등2</option>
+                                    <option value="3" data-code-parent-value="H" hidden="" disabled="">고등3</option>
+                                    <option value="3" data-code-parent-value="M" hidden="" disabled="">중학3</option>
+                                    <option value="3" data-code-parent-value="E" hidden="" disabled="">초등3</option>
+                                    <option value="4" data-code-parent-value="E" hidden="" disabled="">초등4</option>
+                                    <option value="4" data-code-parent-value="H" hidden="" disabled="">고등 공통</option>
+                                    <option value="5" data-code-parent-value="E" hidden="" disabled="">초등5</option>
+                                    <option value="6" data-code-parent-value="E" hidden="" disabled="">초등6</option>
+                                </select>
+                                <select class="form-select cursor-pointer" name="term" style="width: 11%;">
+                                    <option value="">학기 전체</option>
+                                    <option value="0">공통학기</option>
+                                    <option value="1">1학기</option>
+                                    <option value="2">2학기</option>
+                                </select>
+                            </div>
+                            <div class="d-flex flex-nowrap align-items-center gap-2 mb-2">
+                                <select class="form-select cursor-pointer" name="difficulty" style="width: 13%;">
+                                    <option value="">난이도 전체</option>
+                                    <option value="5">최상</option>
+                                    <option value="4">상</option>
+                                    <option value="3">중</option>
+                                    <option value="2">하</option>
+                                    <option value="1">최하</option>
+                                </select>
+                                <select class="form-select cursor-pointer" name="questionTypeCategory" data-code-parent="questionTypeCategory" style="width: 13%;">
+                                    <option value="">형태1 전체</option>
+                                    <option value="OB">객관식</option>
+                                    <option value="SB">주관식</option>
+                                    <option value="ES">서술형</option>
+                                </select>
+                                <select class="form-select cursor-pointer" name="questionAnswerType" data-code-child="questionTypeCategory" data-code-parent="questionAnswerType" style="width: 13%;" disabled="">
+                                    <option value="">형태2 전체</option>
+                                    <option value="OBSA" data-code-parent-value="OB" hidden="" disabled="">단답형</option>
+                                    <option value="OBMA" data-code-parent-value="OB" hidden="" disabled="">다답형</option>
+                                    <option value="SBSA" data-code-parent-value="SB" hidden="" disabled="">단답형</option>
+                                    <option value="SBMA" data-code-parent-value="SB" hidden="" disabled="">다답형</option>
+                                    <option value="ESBA" data-code-parent-value="ES" hidden="" disabled="">기본형</option>
+                                    <option value="ESSA" data-code-parent-value="ES" hidden="" disabled="">단답형</option>
+                                    <option value="ESMA" data-code-parent-value="ES" hidden="" disabled="">다답형</option>
+                                </select>
+                                <select class="form-select cursor-pointer" name="questionType" data-code-child="questionAnswerType" style="width: 13%;" disabled="">
+                                    <option value="">형태3 전체</option>
+                                    <option value="OBSACN" data-code-parent-value="OBSA" hidden="" disabled="">N지 선다</option>
+                                    <option value="OBSAOX" data-code-parent-value="OBSA" hidden="" disabled="">O/X 형</option>
+                                    <option value="OBMACN" data-code-parent-value="OBMA" hidden="" disabled="">N지 선다</option>
+                                    <option value="OBMAOX" data-code-parent-value="OBMA" hidden="" disabled="">O/X 형</option>
+                                    <option value="SBSANM" data-code-parent-value="SBSA" hidden="" disabled="">일반형</option>
+                                    <option value="SBSADR" data-code-parent-value="SBSA" hidden="" disabled="">그리기형</option>
+                                    <option value="SBSAAS" data-code-parent-value="SBSA" hidden="" disabled="">영역 선택형</option>
+                                    <option value="SBMANM" data-code-parent-value="SBMA" hidden="" disabled="">일반형</option>
+                                    <option value="SBMAAS" data-code-parent-value="SBMA" hidden="" disabled="">영역선택형</option>
+                                    <option value="SBMALD" data-code-parent-value="SBMA" hidden="" disabled="">선그리기형</option>
+                                    <option value="SBMADD" data-code-parent-value="SBMA" hidden="" disabled="">드래그앤 드롭형</option>
+                                    <option value="ESBA00" data-code-parent-value="ESBA" hidden="" disabled="">기본 서술형</option>
+                                    <option value="ESSA00" data-code-parent-value="ESSA" hidden="" disabled="">단답 서술형</option>
+                                    <option value="ESMA00" data-code-parent-value="ESMA" hidden="" disabled="">다답 서술형</option>
+                                </select>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="small">상태</span>
+                                <label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-all="paperAddStatus">
+                                    <span class="form-check-label">전체</span>
+                                </label>
+                                <label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-group="paperAddStatus" name="statuses" value="R">
+                                    <span class="form-check-label">초안</span>
+                                </label><label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-group="paperAddStatus" name="statuses" value="F">
+                                    <span class="form-check-label">실패(재등록)</span>
+                                </label><label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-group="paperAddStatus" name="statuses" value="Y" checked="checked">
+                                    <span class="form-check-label">승인(사용)</span>
+                                </label><label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-group="paperAddStatus" name="statuses" value="N" checked="checked">
+                                    <span class="form-check-label">승인(미사용)</span>
+                                </label><label class="form-check form-check-inline mb-0">
+                                    <input class="form-check-input" type="checkbox" data-check-group="paperAddStatus" name="statuses" value="D">
+                                    <span class="form-check-label">폐기</span>
+                                </label>
+
+                                <div class="ms-auto">
+                                    <button type="button" class="btn" data-paper-item-reset=""><i class="ti ti-refresh me-1"></i>초기화</button>
+                                    <button type="button" class="btn btn-primary" hx-include="#paperItemAddFilter" hx-target="#paperItemAddResult" hx-swap="innerHTML" hx-get="/paper/item-search.donga"><i class="ti ti-search me-1"></i>조회</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="paperItemAddResult" hx-include="#paperItemAddFilter" hx-target="#paperItemAddResult" hx-swap="innerHTML" hx-trigger="paperItemAddLoad" hx-get="/paper/item-search.donga"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" disabled="" data-paper-item-add="">추가</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subjectRows = [{"classType":"E","curriculum":"22","sequence":1,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"초등 수학"},{"classType":"M","curriculum":"22","sequence":2,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"},{"classType":"H","curriculum":"22","sequence":3,"subject":"C1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학1","viewSubjectName":"고등 공통수학1"},{"classType":"H","curriculum":"22","sequence":4,"subject":"C2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학2","viewSubjectName":"고등 공통수학2"},{"classType":"H","curriculum":"22","sequence":5,"subject":"B1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학1","viewSubjectName":"고등 기본수학1"},{"classType":"H","curriculum":"22","sequence":6,"subject":"B2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학2","viewSubjectName":"고등 기본수학2"},{"classType":"H","curriculum":"22","sequence":7,"subject":"T1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학1","viewSubjectName":"고등 수학1"},{"classType":"H","curriculum":"22","sequence":8,"subject":"T2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학2","viewSubjectName":"고등 수학2"},{"classType":"H","curriculum":"22","sequence":9,"subject":"A0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"대수","viewSubjectName":"고등 대수"},{"classType":"H","curriculum":"22","sequence":10,"subject":"D1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분1","viewSubjectName":"고등 미적분1"},{"classType":"H","curriculum":"22","sequence":11,"subject":"D2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분2","viewSubjectName":"고등 미적분2"},{"classType":"H","curriculum":"22","sequence":12,"subject":"S0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"확률과통계","viewSubjectName":"고등 확률과통계"},{"classType":"H","curriculum":"22","sequence":13,"subject":"G0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기하","viewSubjectName":"고등 기하"},{"classType":"H","curriculum":"22","sequence":14,"subject":"P0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"직무수학","viewSubjectName":"고등 직무수학"},{"classType":"H","curriculum":"22","sequence":15,"subject":"I0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"인공지능수학","viewSubjectName":"고등 인공지능수학"},{"classType":"H","curriculum":"22","sequence":16,"subject":"U0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학과 문화","viewSubjectName":"고등 수학과 문화"},{"classType":"M","curriculum":"15","sequence":17,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"}];
+            populateSelectOptions(document.getElementById('paperItemCurriculumSelect'),
+                distinctBy(subjectRows, r => r.curriculum).map(r => ({value: r.curriculum, text: r.curriculum})),
+                '교육과정 전체');
+            populateSelectOptions(document.getElementById('paperItemSubjectCategorySelect'),
+                distinctBy(subjectRows, r => r.subjectCategory).map(r => ({value: r.subjectCategory, text: r.subjectCategoryName})),
+                '과목군 전체');
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('paperItemAddModal');
+            const icon = modal.querySelector('[data-item-add-guide]');
+            const popover = new bootstrap.Popover(icon, {
+                trigger: 'manual',
+                placement: 'bottom',
+                container: modal,
+                customClass: 'mw-100 popover-info',
+                html: true,
+                allowList: { ...bootstrap.Popover.Default.allowList, button: ['type'] },
+                content: modal.querySelector('[data-item-add-guide-content]').innerHTML
+            });
+            let open = false;
+            icon.addEventListener('shown.bs.popover', () => open = true);
+            icon.addEventListener('hidden.bs.popover', () => open = false);
+
+            icon.addEventListener('click', () => open ? popover.hide() : popover.show());
+            // × 또는 팝오버 · ⓘ 바깥을 누르면 닫음
+            modal.addEventListener('click', e => {
+                if (!open || e.target.closest('[data-item-add-guide]')) return;
+                if (!e.target.closest('.popover') || e.target.closest('.popover .btn-close')) popover.hide();
+            });
+            modal.addEventListener('shown.bs.modal', () => popover.show());
+            modal.addEventListener('hide.bs.modal', () => popover.hide());
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addUrl = "\/paper\/item-add.donga";
+            const modal = document.getElementById('paperItemAddModal');
+            const filter = document.getElementById('paperItemAddFilter');
+            const included = filter.querySelector('[data-included-items]');
+            const result = document.getElementById('paperItemAddResult');
+            const addButton = modal.querySelector('[data-paper-item-add]');
+            const itemTable = document.getElementById('paperItemTable');
+
+            const syncAddButton = () => {
+                addButton.disabled = !result.querySelector('[data-candidate-check]:checked');
+            };
+
+            // 초기화: 입력만 기본값으로(상태 체크박스는 defaultChecked = 사용 · 미사용). 조회는 사용자가 직접
+            const reset = () => {
+                filter.querySelectorAll('input[type=text]').forEach(input => input.value = '');
+                filter.querySelectorAll('input[type=checkbox]').forEach(check => check.checked = check.defaultChecked);
+                filter.querySelectorAll('select').forEach(select => {
+                    resetSelect(select);
+                    select.dispatchEvent(new Event('change', { bubbles: true }));
+                });
+            };
+            filter.querySelector('[data-paper-item-reset]').addEventListener('click', reset);
+
+            const includedItemIds = () => [...itemTable.querySelectorAll('tr[data-item-id]')].map(row => row.dataset.itemId);
+
+            modal.addEventListener('show.bs.modal', () => {
+                included.replaceChildren(...includedItemIds().map(itemId => Object.assign(document.createElement('input'),
+                        { type: 'hidden', name: 'includedItemIds', value: itemId })));
+            });
+            modal.addEventListener('shown.bs.modal', () => htmx.trigger(result, 'paperItemAddLoad'));
+            modal.addEventListener('hidden.bs.modal', () => {
+                reset();
+                result.innerHTML = '';
+                syncAddButton();
+            });
+
+            // 결과 표가 바뀌면(조회 · 페이지 이동) 체크가 풀리므로 [추가]도 다시 맞춤
+            result.addEventListener('htmx:afterSwap', syncAddButton);
+
+            result.addEventListener('change', e => {
+                const checks = [...result.querySelectorAll('[data-candidate-check]')];
+                if (e.target.matches('[data-candidate-check-all]')) {
+                    checks.forEach(check => check.checked = e.target.checked);
+                } else if (e.target.matches('[data-candidate-check]') && e.target.dataset.passageId) {
+                    checks.filter(check => check.dataset.passageId === e.target.dataset.passageId)
+                            .forEach(check => check.checked = e.target.checked);
+                }
+                syncAddButton();
+            });
+
+            // 고른 순서 = 결과 표 위에서부터(세트 자리는 서버가 첫 멤버로)
+            addButton.addEventListener('click', () => {
+                const params = new URLSearchParams();
+                params.append('paperId', filter.querySelector('[name="paperId"]').value);
+                result.querySelectorAll('[data-candidate-check]:checked')
+                        .forEach(check => params.append('selectedItemIds', check.value));
+                includedItemIds().forEach(itemId => params.append('includedItemIds', itemId));
+                htmx.ajax('GET', addUrl + '?' + params, { target: itemTable.tHead, swap: 'afterend' });
+            });
+
+            document.addEventListener('paperItemAdded', () => bootstrap.Modal.getOrCreateInstance(modal).hide());
+        });
+    </script>
+</div>
+
+    
+    <script>
+    document.addEventListener('mouseover', function (e) {
+        const trigger = e.target.closest('[data-bs-toggle="tooltip"]');
+        if (trigger && window.bootstrap) bootstrap.Tooltip.getOrCreateInstance(trigger).show();
+    });
+</script>
+
+    <style>
+        /* Tabler 1.7 은 card-table 의 tbody 마다 마지막 줄 아래 선을 지움. 묶음마다 tbody 라 묶음 사이 선을 다시 그음(맨 끝 묶음은 카드 끝이라 그대로) */
+        #paperItemTable > tbody:not(:last-child) > tr:last-child > td { border-bottom: var(--tblr-border-width) solid var(--tblr-table-border-color); }
+        /* 맨 끝 세트의 합친 칸(손잡이 · 제외)은 첫 줄 소속이라 남는 선을 지움 */
+        #paperItemTable > tbody:last-child td[rowspan] { border-bottom: 0; }
+    </style>
+
+    <script src="/webjars/sortablejs/1.15.7/Sortable.min-65f3976a877f92ef165e730cde9d3682.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const summaryUrl = "\/paper\/item-summary.donga";
+            const table = document.getElementById('paperItemTable');
+            const count = document.getElementById('paperItemCount');
+
+            // 화면에 남은 문항으로 단원 · 문제 구성 · 문항 수 다시 계산. 응답은 세 칸 oob 라 swap 없음
+            const recalcSummary = () => {
+                const params = new URLSearchParams();
+                table.querySelectorAll('tr[data-item-id]').forEach(row => params.append('itemIds', row.dataset.itemId));
+                htmx.ajax('GET', summaryUrl + '?' + params, { swap: 'none' });
+            };
+
+            const refresh = () => {
+                const seqCells = table.querySelectorAll('[data-seq]');
+                seqCells.forEach((cell, index) => {
+                    cell.textContent = index + 1;
+                });
+                count.textContent = seqCells.length;
+
+                const removeButtons = table.querySelectorAll('[data-remove-group]');
+                removeButtons.forEach(button => {
+                    button.disabled = removeButtons.length <= 1;
+                });
+            };
+
+            const removeModalEl = document.getElementById('removeGroupModal');
+            const removeTarget = removeModalEl.querySelector('[data-remove-target]');
+            let pendingGroup = null;
+
+            table.addEventListener('click', e => {
+                const button = e.target.closest('[data-remove-group]');
+                if (!button) return;
+
+                pendingGroup = button.closest('tbody');
+                const rows = pendingGroup.querySelectorAll('tr');
+                removeTarget.textContent = pendingGroup.dataset.passageId
+                        ? '지문 ID ' + pendingGroup.dataset.passageId + ' · ' + rows.length + '문항'
+                        : '문항 ID ' + rows[0].dataset.itemId;
+                bootstrap.Modal.getOrCreateInstance(removeModalEl).show();
+            });
+
+            removeModalEl.querySelector('[data-action-ok]').addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(removeModalEl).hide();
+                pendingGroup?.remove();
+                pendingGroup = null;
+                refresh();
+                recalcSummary();
+            });
+
+            // 문항 추가 모달이 묶음을 표 맨 위에 붙인 뒤(서버 HX-Trigger-After-Swap)
+            document.addEventListener('paperItemAdded', () => {
+                table.querySelector('[data-empty-items]')?.remove();
+                refresh();
+                recalcSummary();
+            });
+
+            // 저장 — 폐기면 확인 모달 뒤 제출, 아니면 바로 제출(검사는 needs-validation · 서버). 폐기는 평가지명만 필수라 페이지 required 를 풂
+            const form = document.getElementById('paperModifyForm');
+            const pageInputs = form.querySelectorAll('[name="startPageNum"], [name="endPageNum"]');
+            const discardModalEl = document.getElementById('paperDiscardModal');
+            const isDiscard = () => form.querySelector('input[name="viewFlag"]:checked')?.value === 'D';
+            const syncPageRequired = () => pageInputs.forEach(input => input.required = !isDiscard());
+
+            form.addEventListener('change', e => {
+                if (e.target.name === 'viewFlag') syncPageRequired();
+            });
+            form.querySelector('[data-paper-save]').addEventListener('click', () => {
+                // 빈 칸이 있으면 확인 모달 전에 화면 검사 토스트부터
+                if (isDiscard() && form.checkValidity()) {
+                    bootstrap.Modal.getOrCreateInstance(discardModalEl).show();
+                    return;
+                }
+                form.requestSubmit();
+            });
+            discardModalEl.querySelector('[data-action-ok]').addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(discardModalEl).hide();
+                form.requestSubmit();
+            });
+
+            new Sortable(table, {
+                draggable: 'tbody[data-sort-group]',
+                handle: '[data-sort-handle]',
+                animation: 150,
+                ghostClass: 'opacity-50',
+                onEnd: refresh
+            });
+
+            refresh();
+            syncPageRequired();
+        });
+    </script>
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+
+
+</body></html>

@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1160-paper-detail-bottom","command":["scroll","down","700","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1161-paper-detail-bottom-measure","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1162-paper-deploy-disabled-hover","command":["hover","{ref}"],"refPattern":"- generic \\[ref=(e\\d+)\\] focusable \\[tabindex\\]"},
+  {"label":"1163-paper-deploy-disabled-tooltip","command":["snapshot"],"screenshot":true},
+  {"label":"1164-paper-modify-open","command":["click","{ref}"],"refPattern":"- link \"수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1165-paper-modify-state","command":["snapshot"],"screenshot":true},
+  {"label":"1166-paper-modify-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1167-paper-modify-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":14000
+}

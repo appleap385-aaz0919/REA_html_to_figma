@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>편집기 격리 테스트 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  active">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                
+
+    <div class="page-header d-print-none">
+        <a class="btn btn-sm btn-ghost-secondary align-self-start mb-2" href="/lab/index.donga" data-loading=""><i class="ti ti-arrow-left me-1"></i>랩</a>
+        <h2 class="page-title">편집기 격리 테스트 (기존 ↔ iframe)</h2>
+        <div class="text-secondary mt-1">같은 문서를 지금 방식(페이지에 직접)과 iframe 안에 띄워 Tabler CSS 영향 · 편집기 API 동작을 비교. 탭마다 편집 상태가 따로 유지되고, [불러오기]만 두 탭을 처음 문서로 되돌린다.</div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title mb-0"><i class="ti ti-braces me-1"></i>문서 JSON</h3>
+        </div>
+        <div class="card-body">
+            <textarea class="form-control font-monospace" id="frameDocInput" rows="6" placeholder="문항 · 지문 문서 컬럼 값을 그대로 붙여넣기"></textarea>
+        </div>
+        <div class="card-footer d-flex gap-2">
+            <button type="button" class="btn btn-sm btn-primary" id="frameDocLoad"><i class="ti ti-player-play me-1"></i>불러오기</button>
+            <button type="button" class="btn btn-sm" id="frameDocCompare"><i class="ti ti-equal me-1"></i>getDocument 비교</button>
+        </div>
+    </div>
+
+    
+    <div class="card-tabs d-flex align-items-end gap-3">
+        <ul class="nav nav-tabs flex-nowrap" data-bs-toggle="tabs" role="tablist">
+            <li class="nav-item" role="presentation"><a href="#frameTabDirect" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">기존</a></li>
+            <li class="nav-item" role="presentation"><a href="#frameTabFrame" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">iframe</a></li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="tab-content">
+
+                <div class="tab-pane fade show active" id="frameTabDirect" role="tabpanel" data-side="direct">
+                    <div class="card mb-3">
+                        <div class="card-header bg-secondary-lt d-flex align-items-center gap-2">
+                            <h3 class="card-title mb-0"><i class="ti ti-pencil me-1"></i><span data-title-editor="">문항 편집</span></h3>
+                            <div class="ms-auto d-flex gap-1">
+                                <button type="button" class="btn btn-sm" data-call="save">save()</button>
+                                <button type="button" class="btn btn-sm" data-call="getDocument">getDocument()</button>
+                                <button type="button" class="btn btn-sm" data-call="mcOn">객관식 켜기</button>
+                                <button type="button" class="btn btn-sm" data-call="mcOff">객관식 끄기</button>
+                                <button type="button" class="btn btn-sm" data-call="destroy">destroy()</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="frameDirectEditor" style="min-height: 480px;"></div>
+                        </div>
+                        <div class="card-footer">
+                            <pre class="mb-0 small" data-output="">-</pre>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header bg-secondary-lt d-flex align-items-center gap-2">
+                            <h3 class="card-title mb-0"><i class="ti ti-help me-1"></i><span data-title-viewer="">문항</span></h3>
+                            <button type="button" class="btn btn-sm ms-auto" data-call="viewer"><i class="ti ti-refresh me-1"></i>미리보기 다시 그리기</button>
+                        </div>
+                        <div class="card-body">
+                            <div id="frameDirectViewer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="frameTabFrame" role="tabpanel" data-side="frame">
+                    <div class="card mb-3">
+                        <div class="card-header bg-secondary-lt d-flex align-items-center gap-2">
+                            <h3 class="card-title mb-0"><i class="ti ti-pencil me-1"></i><span data-title-editor="">문항 편집</span></h3>
+                            <span class="text-secondary small" id="frameLoadTime"></span>
+                            <select class="form-select form-select-sm w-auto" id="frameHeightMode">
+                                <option value="auto">높이 자동(내용에 맞춤)</option>
+                                <option value="fixed">높이 고정 640px(안에서 스크롤)</option>
+                            </select>
+                            <div class="ms-auto d-flex gap-1">
+                                <button type="button" class="btn btn-sm" data-call="save">save()</button>
+                                <button type="button" class="btn btn-sm" data-call="getDocument">getDocument()</button>
+                                <button type="button" class="btn btn-sm" data-call="mcOn">객관식 켜기</button>
+                                <button type="button" class="btn btn-sm" data-call="mcOff">객관식 끄기</button>
+                                <button type="button" class="btn btn-sm" data-call="destroy">destroy()</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="frameEditorWrap"></div>
+                        </div>
+                        <div class="card-footer">
+                            <pre class="mb-0 small" data-output="">-</pre>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header bg-secondary-lt d-flex align-items-center gap-2">
+                            <h3 class="card-title mb-0"><i class="ti ti-help me-1"></i><span data-title-viewer="">문항</span></h3>
+                            <button type="button" class="btn btn-sm ms-auto" data-call="viewer"><i class="ti ti-refresh me-1"></i>미리보기 다시 그리기</button>
+                        </div>
+                        <div class="card-body">
+                            <div id="frameViewerWrap"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+    
+    <script src="/js/vendor/donga-question-viewer/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js"></script>
+    <script>
+        (function () {
+            if (!window.DongaQuestionViewer) return;
+            var cdnBaseUrl = "https:\/\/dev-items.douclass.com\/itembank";
+
+            // data-qv-layout="card" 인 요소만 카드 레이아웃, 없으면 뷰어 기본
+            window.renderQuestionView = function (target, doc, layout) {
+                DongaQuestionViewer.render(target, doc, { imageBaseUrl: cdnBaseUrl, showAnswer: true, showExplanation: true, showModelAnswer: true, showGradingCriteria: true, layout: layout || undefined });
+            };
+            // renderPassage는 { passageContent } 플랫 객체를 받음. 본문은 지문 문서의 content.passageHtml
+            window.renderPassageView = function (target, doc) {
+                DongaQuestionViewer.renderPassage(target, { passageContent: (doc && doc.content && doc.content.passageHtml) || '' }, { imageBaseUrl: cdnBaseUrl });
+            };
+
+            document.querySelectorAll('.qv-item').forEach(function (item) {
+                var dataEl = item.querySelector('script[type="application/json"]');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderQuestionView(target, JSON.parse(dataEl.textContent), item.getAttribute('data-qv-layout'));
+                } catch (e) {
+                    console.error('문항 렌더 실패', e);
+                }
+            });
+            document.querySelectorAll('.qv-passage').forEach(function (item) {
+                var dataEl = item.querySelector('script');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderPassageView(target, JSON.parse(dataEl.textContent));
+                } catch (e) {
+                    console.error('지문 렌더 실패', e);
+                }
+            });
+        })();
+    </script>
+
+    
+    <script src="/js/vendor/donga-question-editor/donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js"></script>
+    <script>
+        (function () {
+            if (!window.DongaQuestionEditor) return;
+            var cdnBaseUrl = "https:\/\/dev-items.douclass.com\/itembank";
+            var fontsUrl = "\/js\/vendor\/mathlive\/fonts";
+
+            // 저장은 화면 버튼이 하므로 툴바 [저장]·튜닝 경고를 뺌(저장을 막는 오류는 그대로). 출력 모드는 제공처 지정 html-only. 폰트는 번들 옆 기본 위치 대신 vendor mathlive 폴더
+            window.createQuestionEditor = function (host, doc) {
+                return DongaQuestionEditor.create(host, doc, {
+                    outputProfile: 'html-only',
+                    imageBaseUrl: cdnBaseUrl,
+                    showSaveButton: false,
+                    showWarnings: false,
+                    math: { fontsUrl: fontsUrl }
+                });
+            };
+
+            // 화면 표시용 — 데이터 이상(JSON 파싱 · 번들 문서 검사 실패)이면 칸에 안내를 그리고 null. 저장 쪽 임시 편집기는 오류가 올라와야 저장을 막으므로 createQuestionEditor 를 그대로 씀
+            window.mountQuestionEditor = function (host, text, label) {
+                try {
+                    return window.createQuestionEditor(host, JSON.parse(text));
+                } catch (e) {
+                    console.error(label + ' 편집기 생성 실패', e);
+                    // 칸은 min-height 뿐이라 .empty 의 height 100% 가 안 먹음 — h-auto 로 풀고 flex 로 늘려 가운데
+                    host.classList.add('d-flex');
+                    host.innerHTML = '<div class="empty flex-fill h-auto">'
+                        + '<div class="empty-icon h-auto"><i class="ti ti-alert-triangle fs-1 text-secondary"></i></div>'
+                        + '<p class="empty-title">' + label + ' 데이터에 이상이 있어 편집기를 열 수 없습니다.</p>'
+                        + '</div>';
+                    return null;
+                }
+            };
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const editorSrc = "\/js\/vendor\/donga-question-editor\/donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js";
+            const viewerSrc = "\/js\/vendor\/donga-question-viewer\/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js";
+            const cdnBaseUrl = "https:\/\/dev-items.douclass.com\/itembank";
+            const fontsUrl = "\/js\/vendor\/mathlive\/fonts";
+            const input = document.getElementById('frameDocInput');
+            const heightMode = document.getElementById('frameHeightMode');
+            // pending = 아직 마운트 안 한 문서(탭 첫 표시 때 마운트), 마운트 뒤엔 null 이라 탭을 오가도 다시 안 그림
+            const sides = { direct: { editor: null, pending: null }, frame: { editor: null, pending: null } };
+            let editorFrame = null;
+            let editorObserver = null;
+            let viewerFrame = null;
+            let viewerReady = false;
+            let viewerPendingJson = null;
+
+            // iframe 문서 — Tabler · custom.css 없이 번들 하나만
+            function frameHtml(src) {
+                return '<!doctype html><html lang="ko"><head><meta charset="utf-8">'
+                    + '<style>html,body{margin:0;height:auto;background:#fff}body{display:flow-root}</style>'
+                    + '</head><body><div id="host"></div><script src="' + src + '"><' + '/script></body></html>';
+            }
+            function createFrame(src, onReady) {
+                const frame = document.createElement('iframe');
+                frame.style.cssText = 'display:block;width:100%;border:0;height:480px;';
+                frame.addEventListener('load', onReady, { once: true });
+                frame.srcdoc = frameHtml(src);
+                return frame;
+            }
+            // iframe 높이를 안 body 크기에 맞춤
+            function fitHeight(frame) {
+                const win = frame.contentWindow;
+                const fit = function () { frame.style.height = Math.ceil(win.document.body.scrollHeight) + 'px'; };
+                const observer = new win.ResizeObserver(fit);
+                observer.observe(win.document.body);
+                fit();
+                return observer;
+            }
+
+            function paneOf(side) {
+                return document.querySelector('[data-side="' + side + '"]');
+            }
+            function output(side, label, value) {
+                const text = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+                paneOf(side).querySelector('[data-output]').textContent = label + '\n' + text;
+            }
+            // 문서 전문은 길어 길이만
+            function docLength(doc) {
+                return doc ? JSON.stringify(doc).length : 0;
+            }
+            function summarizeSave(result) {
+                return {
+                    ok: result.ok,
+                    issues: (result.issues || []).map(function (issue) { return issue.code || issue.message || issue; }),
+                    documentLength: docLength(result.document)
+                };
+            }
+            function isPassage(doc) {
+                return !!(doc && doc.content && typeof doc.content.passageHtml === 'string');
+            }
+
+            function destroyEditor(side) {
+                if (sides[side].editor) sides[side].editor.destroy();
+                sides[side].editor = null;
+            }
+
+            // 기존 = 공통 fragment 그대로
+            function mountDirect(text) {
+                const host = document.getElementById('frameDirectEditor');
+                host.replaceChildren();
+                sides.direct.editor = window.createQuestionEditor(host, JSON.parse(text));
+                output('direct', '마운트', '완료');
+                renderViewer('direct');
+            }
+            function renderDirectViewer(doc) {
+                const target = document.getElementById('frameDirectViewer');
+                target.replaceChildren();
+                if (isPassage(doc)) window.renderPassageView(target, doc);
+                else window.renderQuestionView(target, doc, 'card');
+            }
+
+            // 높이 자동 = 안 body 추적, 고정 = 640px 에서 iframe 안 스크롤
+            function applyHeightMode() {
+                if (editorObserver) editorObserver.disconnect();
+                editorObserver = null;
+                if (!editorFrame || !sides.frame.editor) return;
+                if (heightMode.value === 'fixed') editorFrame.style.height = '640px';
+                else editorObserver = fitHeight(editorFrame);
+            }
+
+            // 옵션은 common/question-editor.html · question-viewer.html 과 같게. 문서는 iframe 쪽 JSON 으로 파싱(realm 맞춤)
+            function mountFrame(text) {
+                const started = performance.now();
+                editorFrame = createFrame(editorSrc, function () {
+                    const win = editorFrame.contentWindow;
+                    if (!win.DongaQuestionEditor) {
+                        output('frame', '마운트', '편집기 번들을 불러오지 못했습니다');
+                        return;
+                    }
+                    sides.frame.editor = win.DongaQuestionEditor.create(win.document.getElementById('host'), win.JSON.parse(text), {
+                        outputProfile: 'html-only',
+                        imageBaseUrl: cdnBaseUrl,
+                        showSaveButton: false,
+                        showWarnings: false,
+                        math: { fontsUrl: fontsUrl }
+                    });
+                    document.getElementById('frameLoadTime').textContent = '준비 ' + Math.round(performance.now() - started) + 'ms';
+                    applyHeightMode();
+                    output('frame', '마운트', '완료');
+                    renderViewer('frame');
+                });
+                document.getElementById('frameEditorWrap').replaceChildren(editorFrame);
+
+                viewerReady = false;
+                viewerFrame = createFrame(viewerSrc, function () {
+                    viewerReady = true;
+                    fitHeight(viewerFrame);
+                    if (viewerPendingJson !== null) drawFrameViewer();
+                });
+                document.getElementById('frameViewerWrap').replaceChildren(viewerFrame);
+            }
+            function drawFrameViewer() {
+                const win = viewerFrame.contentWindow;
+                const target = win.document.getElementById('host');
+                const doc = win.JSON.parse(viewerPendingJson);
+                viewerPendingJson = null;
+                target.replaceChildren();
+                if (!win.DongaQuestionViewer) {
+                    target.textContent = '뷰어 번들을 불러오지 못했습니다';
+                    return;
+                }
+                if (isPassage(doc)) {
+                    win.DongaQuestionViewer.renderPassage(target, { passageContent: doc.content.passageHtml || '' }, { imageBaseUrl: cdnBaseUrl });
+                } else {
+                    win.DongaQuestionViewer.render(target, doc, { imageBaseUrl: cdnBaseUrl, showAnswer: true, showExplanation: true, showModelAnswer: true, showGradingCriteria: true, layout: 'card' });
+                }
+            }
+
+            // 뷰어는 그 탭 편집기의 getDocument() 로 그림(편집기는 건드리지 않음)
+            function renderViewer(side) {
+                const editor = sides[side].editor;
+                if (!editor) {
+                    output(side, '미리보기', '편집기가 없습니다 — [불러오기] 먼저');
+                    return;
+                }
+                const doc = editor.getDocument();
+                if (!doc) {
+                    output(side, '미리보기', '문서를 만들지 못했습니다');
+                    return;
+                }
+                if (side === 'direct') {
+                    renderDirectViewer(doc);
+                    return;
+                }
+                viewerPendingJson = JSON.stringify(doc);
+                if (viewerReady) drawFrameViewer();
+            }
+
+            function mountPending(side) {
+                const text = sides[side].pending;
+                if (text === null) return;
+                sides[side].pending = null;
+                try {
+                    if (side === 'direct') mountDirect(text);
+                    else mountFrame(text);
+                } catch (e) {
+                    output(side, '마운트 예외', String(e));
+                    console.error(e);
+                }
+            }
+
+            // 두 탭을 처음 문서로 되돌림. 보이는 탭은 바로, 숨은 탭은 처음 보일 때 마운트(숨은 채 마운트하면 레이아웃이 어긋남)
+            document.getElementById('frameDocLoad').addEventListener('click', function () {
+                const text = input.value.trim();
+                let doc = null;
+                try {
+                    doc = JSON.parse(text);
+                } catch (e) {
+                    showToast('JSON 형식이 아닙니다', 'danger');
+                    return;
+                }
+                // 카드 제목을 문서 종류(문항 · 지문)에 맞춤
+                const passage = isPassage(doc);
+                document.querySelectorAll('[data-title-editor]').forEach(function (el) { el.textContent = passage ? '지문 편집' : '문항 편집'; });
+                document.querySelectorAll('[data-title-viewer]').forEach(function (el) { el.textContent = passage ? '지문' : '문항'; });
+                Object.keys(sides).forEach(function (side) {
+                    destroyEditor(side);
+                    sides[side].pending = text;
+                });
+                Object.keys(sides).forEach(function (side) {
+                    if (paneOf(side).classList.contains('active')) mountPending(side);
+                });
+            });
+
+            document.addEventListener('shown.bs.tab', function (e) {
+                const pane = document.querySelector(e.target.getAttribute('href'));
+                if (pane && pane.dataset.side) mountPending(pane.dataset.side);
+            });
+
+            document.getElementById('frameDocCompare').addEventListener('click', function () {
+                if (!sides.direct.editor || !sides.frame.editor) {
+                    showToast('두 탭을 한 번씩 열어 편집기를 띄우세요', 'warning');
+                    return;
+                }
+                const same = JSON.stringify(sides.direct.editor.getDocument()) === JSON.stringify(sides.frame.editor.getDocument());
+                showToast(same ? '두 문서가 같습니다' : '두 문서가 다릅니다', same ? 'success' : 'danger');
+            });
+
+            heightMode.addEventListener('change', applyHeightMode);
+
+            document.addEventListener('click', function (e) {
+                const button = e.target.closest('[data-call]');
+                if (!button) return;
+                const side = button.closest('[data-side]').dataset.side;
+                const call = button.dataset.call;
+                if (call === 'viewer') {
+                    renderViewer(side);
+                    return;
+                }
+                const editor = sides[side].editor;
+                if (!editor) {
+                    output(side, call, '편집기가 없습니다 — [불러오기] 먼저');
+                    return;
+                }
+                try {
+                    if (call === 'save') output(side, 'save()', summarizeSave(editor.save()));
+                    else if (call === 'getDocument') output(side, 'getDocument()', { documentLength: docLength(editor.getDocument()) });
+                    else if (call === 'mcOn') output(side, 'setMultipleChoice(true)', editor.setMultipleChoice(true));
+                    else if (call === 'mcOff') output(side, 'setMultipleChoice(false)', editor.setMultipleChoice(false));
+                    else if (call === 'destroy') {
+                        destroyEditor(side);
+                        output(side, 'destroy()', '완료');
+                    }
+                } catch (err) {
+                    output(side, call + ' 예외', String(err));
+                    console.error(err);
+                }
+            });
+        })();
+    </script>
+
+
+
+</body></html>

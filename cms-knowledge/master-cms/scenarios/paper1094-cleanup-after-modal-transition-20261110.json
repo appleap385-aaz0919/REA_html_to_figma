@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"3051-own-paper1094-cleanup-ready-after-transition","command":["eval","(()=>{const f=document.querySelector('#paperModifyForm');return {paperId:f?.querySelector('[name=paperId]')?.value,itemIds:[...f.querySelectorAll('[name=itemIds]')].map(e=>e.value),visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id),valid:f.checkValidity(),duplicateSubmitGuard:!!window.__qaPaper1094RestoreSaved};})()"]},
+ {"label":"3052-own-paper1094-save-baseline-restore-once","command":["eval","--file","sources/runtime/paper1094-restore-baseline-save-once.js"]},
+ {"label":"3053-own-paper1094-restored-current-detail","command":["eval","--file","sources/runtime/paper-detail-observation.js"]},
+ {"label":"3054-own-paper1094-restored-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3055-own-paper1094-restore-item-controls","command":["eval","--file","sources/runtime/hml666-own-items-baseline-read.js"]}
+],"tailChars":120}

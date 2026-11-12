@@ -1,0 +1,1528 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "source_storyboard_states",
+  "title": "문항 출처 관리 메뉴의 화면·동작별 상태",
+  "preparedDate": "2026-11-11",
+  "pathConvention": "evidence와 screenshot은 작업 폴더 D:/jaehyuk.myung/claude_demo/Demo_36_REA_test 기준의 상대 경로입니다. screenshot=null은 해당 상태의 실제 PNG를 연결하지 못한 경우입니다.",
+  "scope": {
+    "application": "문제은행 마스터 CMS",
+    "menu": "문항 출처 관리",
+    "basis": "기존 로컬 보고서·보존 HTML·실행 JSON·PNG 경로만 읽었습니다. 브라우저·CMS·네트워크를 실행하거나 다른 파일을 변경하지 않았습니다.",
+    "latestMenuEvidence": 3389,
+    "latestPhase": "cms-knowledge/master-cms/session-20261111-phase74.json",
+    "historicalAndFollowup": "phase20의 등록·수정·중복 반려를 후속 필수값·길이·취소 검증, 실제 픽셀 보완, source199 Y/N·관계 생애주기와 phase74의 숫자 0 클릭·초기화/조회 복구로 보완했습니다.",
+    "verificationRule": "실제 실행·표시·소스 선언·미검증을 구분합니다. 이전 보고서의 미실행 문구를 후속 성공 뒤에도 그대로 남기지 않습니다. 캡처 실패와 실제 PNG 보완도 구분합니다.",
+    "crossMenuBoundary": "문항 상세의 출처 관리·추가 모달과 문서 등록의 출처 선택은 관련 화면으로 연결 설명하며 출처 메뉴에서 직접 열리는 화면으로 바꾸지 않습니다.",
+    "unresolved": [
+      "출처별 매핑 대상 문항 목록의 별도 진입 화면",
+      "모든 검색·분류·기간·상태 조합과 서버 입력 경계",
+      "수정 시 코드 충돌·매핑 출처의 분류 변경·동시성·권한",
+      "정상 UI 가드 우회의 서버 정책과 실제 Service 노출/캐시/배포"
+    ],
+    "wholeSiteCompletionPercent": null
+  },
+  "statusAxes": {
+    "sourceUse": [
+      {
+        "code": "Y",
+        "label": "사용"
+      },
+      {
+        "code": "N",
+        "label": "미사용"
+      }
+    ],
+    "serviceUsage": [
+      {
+        "code": "C",
+        "label": "공통"
+      },
+      {
+        "code": "T",
+        "label": "교사용"
+      }
+    ],
+    "automaticCodeComponents": [
+      "교육과정",
+      "학교급",
+      "과목군",
+      "과목",
+      "학년",
+      "학기",
+      "교재명",
+      "교재 세부명",
+      "판형"
+    ],
+    "warning": "사용 여부·용도·매핑 문항 수는 서로 다른 값입니다. N이어도 기존 매핑을 유지한 실제 사례가 있으며 최종 N/0은 별도 관계 해제로 만들어졌습니다."
+  },
+  "screens": [
+    {
+      "id": "MST_SRC_01_LIST",
+      "title": "문항 출처 관리 목록·검색·페이지",
+      "states": [
+        {
+          "id": "SRC_LIST_ENTRY",
+          "title": "출처 목록과 13개 열",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "문항 출처 관리 메뉴를 엽니다.",
+          "visibleChanges": [
+            "검색 필터·결과 수·등록 버튼과 출처 목록을 표시합니다.",
+            "열은 출처 ID, 출처코드, 출처명, 과목, 교육과정, 판형, 용도, 학교급, 학년, 학기, 상태, 매핑문항, 등록자·등록일입니다."
+          ],
+          "policy": [
+            "코드와 출처명은 같은 출처 상세로 연결됩니다.",
+            "phase74의 교육과정 22 조회는 총 60건 중 10행을 표시했습니다."
+          ],
+          "exceptions": [
+            "59건은 QA 등록 전 과거 값입니다. 60건도 관측 시점 결과이며 고정 데이터 수가 아닙니다.",
+            "진입 URL에 따라 교육과정 전체로 열리기도 하므로 모든 진입의 초기값을 22로 고정하지 않습니다.",
+            "연결 PNG는 이전 100개 보기의 목록이며 최신 10개 보기와 같은 조건의 캡처는 아닙니다. 목록 구조 참고와 최신 데이터 결과를 구분합니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1273-source-main-loaded.json",
+            "cms-knowledge/master-cms/evidence/2138-source-all60-current-readback.json",
+            "cms-knowledge/master-cms/evidence/3383-source-empty-page0-controls.json",
+            "cms-knowledge/master-cms/evidence/3389-source-empty-page0-reset-and-query-recovery.json",
+            "cms-knowledge/master-cms/session-20261109-phase20.json",
+            "cms-knowledge/master-cms/session-20261111-phase74.json",
+            "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.png"
+        },
+        {
+          "id": "SRC_LIST_FILTERS",
+          "title": "검색·분류·기간·사용 여부 필터",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록에서 검색 조건을 설정합니다.",
+          "visibleChanges": [
+            "출처코드·출처명 검색, 교육과정·학교급·과목군·과목·학년·학기·판형·용도·등록기간 필터가 있습니다.",
+            "사용 Y·미사용 N과 전체 선택, 초기화·조회, 10·30·50·100개씩 보기가 있습니다."
+          ],
+          "policy": [
+            "출처의 Y/N은 사용 여부이며 문항 승인 상태와 다른 값입니다.",
+            "일부 연동 선택은 선행 분류 미선택 시 비활성입니다."
+          ],
+          "exceptions": [
+            "출처명·날짜 직접 지정·빠른 기간·모든 분류/용도 조합·상태 모두 해제·정렬은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1273-source-main-loaded.json",
+            "cms-knowledge/master-cms/evidence/1364-source-list-all100-source.json",
+            "cms-knowledge/master-cms/evidence/3383-source-empty-page0-controls.json",
+            "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.png"
+        },
+        {
+          "id": "SRC_LIST_EXACT_CODE",
+          "title": "출처코드 완전값 검색",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "QA 출처 199의 코드 전체를 입력하고 조회합니다.",
+          "visibleChanges": [
+            "해당 코드의 출처 199 한 건이 조회됩니다.",
+            "상세 링크가 검색 종류·검색어·교육과정·페이지·표시 개수 문맥을 포함합니다."
+          ],
+          "policy": [
+            "검색 조건 입력만으로 결과가 바뀐다고 하지 않고 조회 후 결과를 기록합니다."
+          ],
+          "exceptions": [
+            "부분 검색·대소문자·공백·특수문자의 전체 검색 규칙은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1366-source-list-code-filter-input.json",
+            "cms-knowledge/master-cms/evidence/1367-source-list-code-query.json",
+            "cms-knowledge/master-cms/evidence/1368-source-list-code-result.json",
+            "cms-knowledge/master-cms/source-test-intent.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_UNUSED_ONLY",
+          "title": "미사용 출처만 조회",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "사용을 해제하고 미사용만 선택해 조회합니다.",
+          "visibleChanges": [
+            "당시 미사용 6건 199·166·50·46·40·10을 표시했고 모두 매핑 0건이었습니다."
+          ],
+          "policy": [
+            "이 결과는 당시 데이터 집합입니다.",
+            "후속 실제 N/매핑 1건 사례가 있으므로 미사용이면 반드시 매핑 0이라는 규칙을 만들지 않습니다."
+          ],
+          "exceptions": [
+            "모든 상태 조합·다른 교육과정·권한별 결과는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1382-source-list-unused-only-select.json",
+            "cms-knowledge/master-cms/evidence/1383-source-list-unused-query.json",
+            "cms-knowledge/master-cms/evidence/1384-source-list-unused-results.json",
+            "cms-knowledge/master-cms/evidence/2384-own-source199-unused-with-mapping-server-read.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_EMPTY",
+          "title": "0건 검색 결과",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "교육과정 15 또는 존재하지 않는 코드를 조회합니다.",
+          "visibleChanges": [
+            "검색결과 : 0건, 검색 결과가 없습니다., 총 0건 중 0∼0 표시가 나옵니다.",
+            "phase74에서는 HTTP 200·pageNum=1이며 화면 높이 1015픽셀 안에 결과가 들어왔습니다."
+          ],
+          "policy": [
+            "검색 결과 없음은 요청 실패와 구분합니다."
+          ],
+          "exceptions": [
+            "모든 무결과 조건·다른 역할의 화면은 검증하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1370-source-list-empty-query.json",
+            "cms-knowledge/master-cms/evidence/1371-source-list-empty-result.json",
+            "cms-knowledge/master-cms/evidence/1388-source-curriculum15-result.json",
+            "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.json",
+            "cms-knowledge/master-cms/session-20261111-phase74.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.png"
+        },
+        {
+          "id": "SRC_LIST_EMPTY_NUMERIC_ZERO",
+          "title": "빈 결과의 활성 숫자 0",
+          "verification": "실제 표시 확인, 의도된 정책 미확정",
+          "trigger": "0건 결과의 페이지 영역을 확인합니다.",
+          "visibleChanges": [
+            "맨 앞·이전·다음·맨 뒤는 disabled CSS와 pointer-events:none으로 표시됩니다.",
+            "숫자 0은 비활성 처리 없이 클릭 가능한 링크로 남습니다."
+          ],
+          "policy": [
+            "표시상의 0 링크와 네 방향 링크의 비활성을 구분합니다."
+          ],
+          "exceptions": [
+            "의도된 페이지 정책인지 여부와 구현 원인은 미확정입니다. 숫자 0을 정상 1페이지로 임의 교정해 그리지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1371-source-list-empty-result.json",
+            "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.png"
+        },
+        {
+          "id": "SRC_LIST_ZERO_CLICK",
+          "title": "숫자 0 클릭 후 pageNum=0",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "빈 결과에서 활성 숫자 0을 정상 클릭합니다.",
+          "visibleChanges": [
+            "실제 GET은 HTTP 200을 반환했고 URL이 pageNum=0으로 바뀌었습니다.",
+            "검색 결과 없음·0∼0 표시와 숫자 0은 유지됐으며 경고는 없었습니다."
+          ],
+          "policy": [
+            "phase20의 링크 표시 관측을 phase74의 실제 클릭·서버 응답까지 보완했습니다."
+          ],
+          "exceptions": [
+            "모든 비정상 페이지 값의 수용 규칙·서버 페이지 보정·제품 의도는 미확정입니다.",
+            "연결한 PNG는 클릭 전의 같은 빈 결과 외형이며 클릭 후 URL의 시각 캡처는 별도 없습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.json",
+            "cms-knowledge/master-cms/evidence/3386-source-empty-page0-click-enabled-numeric-link.json",
+            "cms-knowledge/master-cms/session-20261111-phase74.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3385-source-empty-page0-normal-query.png"
+        },
+        {
+          "id": "SRC_LIST_RESET_ONLY",
+          "title": "초기화는 필터만 바꿈",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "빈 결과·pageNum=0 상태에서 초기화를 누릅니다.",
+          "visibleChanges": [
+            "필터의 교육과정이 22, 검색어가 빈값으로 바뀝니다.",
+            "기존 0건 결과와 URL의 curriculum=15·pageNum=0은 즉시 바뀌지 않습니다."
+          ],
+          "policy": [
+            "초기화와 조회를 분리합니다.",
+            "관측한 10개 보기 또는 앞선 100개 보기는 초기화 후에도 유지됐습니다."
+          ],
+          "exceptions": [
+            "필터 값이 바뀐 사실만으로 목록이 이미 재조회됐다고 그리지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1372-source-filter-reset-click.json",
+            "cms-knowledge/master-cms/evidence/1373-source-filter-reset-state.json",
+            "cms-knowledge/master-cms/evidence/3387-source-empty-page0-normal-reset.json",
+            "cms-knowledge/master-cms/evidence/3388-source-empty-page0-post-reset-list.json",
+            "cms-knowledge/master-cms/session-20261111-phase74.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_QUERY_RECOVERY",
+          "title": "초기화 후 조회로 정상 목록 복귀",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "초기화 뒤 별도로 조회를 누릅니다.",
+          "visibleChanges": [
+            "교육과정 22·pageNum=1로 이동하고 HTTP 200, 총 60건·첫 10행이 표시됩니다.",
+            "출처 199는 미사용·매핑 0건으로 보입니다."
+          ],
+          "policy": [
+            "최신 목록의 N/0은 source199 생애주기의 최종 상태와 일치합니다."
+          ],
+          "exceptions": [
+            "초기화 버튼만 눌렀을 때의 화면과 합쳐 한 단계로 기록하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1374-source-filter-reset-query.json",
+            "cms-knowledge/master-cms/evidence/1375-source-filter-reset-results.json",
+            "cms-knowledge/master-cms/evidence/3389-source-empty-page0-reset-and-query-recovery.json",
+            "cms-knowledge/master-cms/session-20261111-phase74.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_PAGE_SIZE",
+          "title": "표시 개수와 첫 페이지",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "페이지 크기를 100에서 10개씩 보기로 바꿉니다.",
+          "visibleChanges": [
+            "목록이 1페이지로 이동하고 10행 단위로 표시됩니다.",
+            "100개 보기에서는 당시 60개 행 전체를 한 목록으로 표시했습니다."
+          ],
+          "policy": [
+            "표시 개수는 출처 행 수이며 매핑 문항 수와 별개입니다."
+          ],
+          "exceptions": [
+            "모든 페이지 크기 전환·조건 변경·마지막 페이지 경계는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1365-source-list-all60-observation.json",
+            "cms-knowledge/master-cms/evidence/1376-source-list-page-size10.json",
+            "cms-knowledge/master-cms/evidence/1377-source-list-page1-block.json",
+            "cms-knowledge/master-cms/evidence/2138-source-all60-current-readback.json",
+            "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_PAGE_BLOCK",
+          "title": "다음·이전의 블록 이동",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "60건·10개 보기의 다음 또는 이전 화살표를 누릅니다.",
+          "visibleChanges": [
+            "관측한 다음은 1→6페이지, 이전은 6→1페이지로 이동했습니다.",
+            "6페이지에서는 숫자 2~6과 현재 6 활성 표시를 확인했습니다."
+          ],
+          "policy": [
+            "다음/이전을 항상 한 페이지 이동으로 설명하지 않습니다."
+          ],
+          "exceptions": [
+            "다른 총 페이지 수·다른 메뉴의 화살표 정책으로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1378-source-list-next-block-click.json",
+            "cms-knowledge/master-cms/evidence/1379-source-list-page6-block.json",
+            "cms-knowledge/master-cms/evidence/1380-source-list-previous-block-click.json",
+            "cms-knowledge/master-cms/evidence/1381-source-list-page1-return.json",
+            "cms-knowledge/master-cms/session-20261109-phase20.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_LIST_FULL_SCROLL",
+          "title": "60행 전체 세로 목록",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "100개 보기에서 목록을 아래로 스크롤합니다.",
+          "visibleChanges": [
+            "60행의 13열과 하단까지 이어지는 목록을 확인했습니다.",
+            "후속 PNG는 top 0·800·1600·2400·3200·3338, viewport 1015, 전체 높이 4353을 덮습니다."
+          ],
+          "policy": [
+            "초기의 백그라운드 캡처 실패와 후속 실제 PNG 보완을 구분합니다."
+          ],
+          "exceptions": [
+            "해당 시점·폭의 목록 검토이며 다른 필터·권한·반응형까지 완료한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1394-source-all-curricula-allrows.json",
+            "cms-knowledge/master-cms/evidence/1401-source-scroll-bottom-state.json",
+            "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.json",
+            "cms-knowledge/master-cms/evidence/2138-source-all60-current-readback.json",
+            "cms-knowledge/master-cms/evidence/2139-source-all60-pixels-0800.json",
+            "cms-knowledge/master-cms/evidence/2140-source-all60-pixels-1600.json",
+            "cms-knowledge/master-cms/evidence/2141-source-all60-pixels-2400.json",
+            "cms-knowledge/master-cms/evidence/2142-source-all60-pixels-3200.json",
+            "cms-knowledge/master-cms/evidence/2143-source-all60-pixels-bottom.json",
+            "cms-knowledge/master-cms/evidence/2139-source-all60-pixels-0800.png",
+            "cms-knowledge/master-cms/evidence/2140-source-all60-pixels-1600.png",
+            "cms-knowledge/master-cms/evidence/2141-source-all60-pixels-2400.png",
+            "cms-knowledge/master-cms/evidence/2142-source-all60-pixels-3200.png",
+            "cms-knowledge/master-cms/evidence/2143-source-all60-pixels-bottom.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2137-source-all60-visible-top-pixels.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_02_FORM",
+      "title": "출처 등록 폼·연동 선택·입력 검증·취소",
+      "states": [
+        {
+          "id": "SRC_FORM_INITIAL",
+          "title": "출처 등록 초기 폼",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록의 등록을 선택합니다.",
+          "visibleChanges": [
+            "교육과정·학교급·과목군·과목·학년·학기·교재명·교재 세부명·판형·용도에 필수 표시가 있습니다.",
+            "출처코드·출처명은 비활성이며 서비스 노출명·사용 여부·비고와 취소·저장이 있습니다."
+          ],
+          "policy": [
+            "등록 시 사용 여부는 Y입니다.",
+            "URL의 curriculum=22만으로 초기 교육과정 선택이 채워지지 않았습니다.",
+            "폼은 후속 PNG 한 장에서 전체 세로 1015픽셀로 확인됐습니다."
+          ],
+          "exceptions": [
+            "모든 계정의 초기값·권한 차이는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1281-source-form-observed-url-open.json",
+            "cms-knowledge/master-cms/evidence/1297-source-current-form-controls.json",
+            "cms-knowledge/master-cms/evidence/1696-source-validation-empty-result.json",
+            "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.json",
+            "cms-knowledge/master-cms/sources/source-registration-form-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.png"
+        },
+        {
+          "id": "SRC_FORM_REQUIRED_FIELDS",
+          "title": "필수 분류 10개와 선택 필드",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "초기 폼의 필드 제약을 확인합니다.",
+          "visibleChanges": [
+            "교육과정·학교급·과목군·과목·학년·학기·교재명·교재 세부명·판형·용도는 필수입니다.",
+            "서비스 노출명은 최대 50자, 비고는 최대 100자이며 선택 입력입니다."
+          ],
+          "policy": [
+            "비활성인 연동 필드가 있어도 최종 폼의 필수 분류 구조와 구분합니다."
+          ],
+          "exceptions": [
+            "서버 직접 요청의 필수값·카탈로그 밖 코드 검증은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1297-source-current-form-controls.json",
+            "cms-knowledge/master-cms/evidence/1696-source-validation-empty-result.json",
+            "cms-knowledge/master-cms/sources/source-registration-form-20261109.html",
+            "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.png"
+        },
+        {
+          "id": "SRC_FORM_CLASS_CASCADE",
+          "title": "학교급 변경과 하위 초기화",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "학교급을 선택하거나 바꿉니다.",
+          "visibleChanges": [
+            "학교급에 맞는 학년이 연결되고 학년→학기 선택을 다시 구성합니다.",
+            "교육과정·학교급에 맞는 과목군/과목과 학교급·과목군에 맞는 교재명/세부명이 연결됩니다."
+          ],
+          "policy": [
+            "상위 선택을 바꾸면 종속 선택을 초기화하는 실제 대표 조합을 확인했습니다."
+          ],
+          "exceptions": [
+            "모든 교육과정·학교급·과목·교재 조합을 실행한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1285-source-form-curriculum-22.json",
+            "cms-knowledge/master-cms/evidence/1286-source-form-school-middle.json",
+            "cms-knowledge/master-cms/evidence/1287-source-form-middle-settled.json",
+            "cms-knowledge/master-cms/evidence/1289-source-subject-category-math.json",
+            "cms-knowledge/master-cms/evidence/1290-source-subject-math.json",
+            "cms-knowledge/master-cms/evidence/1291-source-grade-middle-one.json",
+            "cms-knowledge/master-cms/evidence/1292-source-term-first.json",
+            "cms-knowledge/master-cms/source-form-catalogs-20261109.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_TEXTBOOK_CASCADE",
+          "title": "교재명·세부명 선택",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "중학·수학군에서 교재명을 선택합니다.",
+          "visibleChanges": [
+            "해당 조합에서는 교재 6종을 표시했습니다.",
+            "수매씽 유형을 고르면 세부명으로 유형북 TP·워크북 WB가 나타났습니다."
+          ],
+          "policy": [
+            "보존 카탈로그는 과목 17행·교재 분류 54행·학년 13행이며 연동 조건에 따라 일부만 표시됩니다."
+          ],
+          "exceptions": [
+            "카탈로그 전체를 항상 한 선택 목록에 노출하거나 모든 조합을 허용한다고 그리지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1293-source-category-options.json",
+            "cms-knowledge/master-cms/evidence/1294-source-pick-textbook.json",
+            "cms-knowledge/master-cms/evidence/1295-source-textbook-sub-options.json",
+            "cms-knowledge/master-cms/evidence/1298-source-test-subtype.json",
+            "cms-knowledge/master-cms/source-form-catalogs-20261109.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_YEAR_USAGE_VALUES",
+          "title": "판형·용도·사용 여부 값",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "판형·용도·사용 여부를 선택합니다.",
+          "visibleChanges": [
+            "판형 선택지는 2000~2050의 값으로 표시됩니다.",
+            "용도는 C 공통·T 교사용, 사용 여부는 Y 사용·N 미사용입니다."
+          ],
+          "policy": [
+            "UI의 판형은 보존 폼에서 publishYear 값이며 임의로 종이 크기 선택지로 바꾸지 않습니다.",
+            "용도와 사용 여부는 서로 다른 필드입니다."
+          ],
+          "exceptions": [
+            "연도 경계값의 서버 수용·잘못된 enum 값과 모든 조합의 저장은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1297-source-current-form-controls.json",
+            "cms-knowledge/master-cms/evidence/1299-source-test-year.json",
+            "cms-knowledge/master-cms/evidence/1300-source-test-purpose.json",
+            "cms-knowledge/master-cms/evidence/1301-source-test-unused.json",
+            "cms-knowledge/master-cms/evidence/1315-source-test-year-change.json",
+            "cms-knowledge/master-cms/evidence/1316-source-test-purpose-change.json",
+            "cms-knowledge/master-cms/sources/source-registration-form-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_AUTOMATIC_EMPTY",
+          "title": "저장 전 자동 생성 코드·명",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "등록 필수 분류를 채우고 저장 전을 확인합니다.",
+          "visibleChanges": [
+            "출처코드·출처명 입력은 비활성이며 저장 전에는 비어 있습니다."
+          ],
+          "policy": [
+            "실제 코드·명은 저장 후 생성된 결과로 확인합니다.",
+            "분류를 고를 때마다 코드가 실시간 미리보기 된다고 추가하지 않습니다."
+          ],
+          "exceptions": [
+            "자동 생성 문자열의 서버 전체 규칙과 충돌 해소 방식은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1297-source-current-form-controls.json",
+            "cms-knowledge/master-cms/evidence/1304-source-test-pre-submit-state.json",
+            "cms-knowledge/master-cms/source-test-intent.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_REQUIRED_BLOCK",
+          "title": "빈 폼 저장 차단",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "필수 분류를 비워 두고 저장을 누릅니다.",
+          "visibleChanges": [
+            "미입력 정보가 있습니다. 토스트가 표시됩니다.",
+            "해당 선택 필드의 validity=false와 목록에서 항목을 선택하세요. 제약을 확인했습니다."
+          ],
+          "policy": [
+            "초기 보고서의 미실행 항목은 후속 실제 차단으로 보완됐습니다."
+          ],
+          "exceptions": [
+            "모든 누락 조합·검사 우선순위·서버 반려를 확인한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1694-source-validation-empty-form-open.json",
+            "cms-knowledge/master-cms/evidence/1695-source-validation-empty-submit.json",
+            "cms-knowledge/master-cms/evidence/1696-source-validation-empty-result.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_LENGTH_LIMITS",
+          "title": "서비스 노출명·비고 길이 제한",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "노출명 52자와 비고 104자를 입력합니다.",
+          "visibleChanges": [
+            "실제 노출명은 50자, 비고는 100자로 제한됐습니다."
+          ],
+          "policy": [
+            "브라우저 maxlength의 실제 입력 제한을 확인했습니다."
+          ],
+          "exceptions": [
+            "서버 직접 초과 길이 반려·UTF-16/문자 바이트 경계·모든 다국어 조합은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1697-source-validation-display-overlength.json",
+            "cms-knowledge/master-cms/evidence/1698-source-validation-remark-overlength.json",
+            "cms-knowledge/master-cms/evidence/1699-source-validation-length-result.json",
+            "cms-knowledge/master-cms/evidence/1706-source-cancel-kept-input-state.json",
+            "cms-knowledge/master-cms/sources/source-registration-invalid-length-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_CANCEL_CONFIRM",
+          "title": "등록 취소 확인창",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "등록 폼의 취소 링크를 누릅니다.",
+          "visibleChanges": [
+            "출처 등록 취소 / 저장하지 않고 이동하시겠습니까?와 취소·저장 하지 않고 이동이 표시됩니다."
+          ],
+          "policy": [
+            "확인창은 로컬 등록 폼 이탈이며 출처 삭제가 아닙니다."
+          ],
+          "exceptions": [
+            "뒤로가기·다른 메뉴·새로고침·탭 닫기 전체에 같은 보호가 있다고 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1701-source-validation-cancel.json",
+            "cms-knowledge/master-cms/evidence/1704-source-cancel-fresh-state.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_CANCEL_STAY",
+          "title": "취소창에서 폼에 남기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "확인창의 취소를 선택합니다.",
+          "visibleChanges": [
+            "모달이 닫히고 입력한 노출명 50자·비고 100자가 남습니다."
+          ],
+          "policy": [
+            "입력 보존은 CMS 임시 저장 완료와 다릅니다."
+          ],
+          "exceptions": [
+            "모든 분류·수정 폼의 재열기 보존까지 검증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1705-source-cancel-confirm-dismiss.json",
+            "cms-knowledge/master-cms/evidence/1706-source-cancel-kept-input-state.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_FORM_CANCEL_LEAVE",
+          "title": "저장하지 않고 목록 이동",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "확인창에서 저장 하지 않고 이동을 선택합니다.",
+          "visibleChanges": [
+            "등록 폼을 떠나 출처 목록으로 돌아갑니다."
+          ],
+          "policy": [
+            "등록 취소를 기존 출처 삭제·사용 여부 변경으로 기록하지 않습니다."
+          ],
+          "exceptions": [
+            "출처 수정 취소의 별도 실제 입력 보존과 서버 오류 복구는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1710-source-cancel-return-readback.json",
+            "cms-knowledge/master-cms/evidence/1711-source-cancel-return-list-state.json",
+            "cms-knowledge/master-cms/evidence/1712-source-validation-final-inventory.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_03_CREATE",
+      "title": "출처 저장·코드 생성·중복 반려",
+      "states": [
+        {
+          "id": "SRC_CREATE_SUBMIT",
+          "title": "격리한 미사용 출처 등록",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "필수 분류·용도를 채우고 미사용으로 저장합니다.",
+          "visibleChanges": [
+            "QA 출처 199가 생성됐고 성공 안내와 상세·독립 목록 조회를 확인했습니다.",
+            "처음 생성한 코드는 22-M-MA-T0-1-1-SMT-TP-2049이며 미사용·매핑 0건입니다."
+          ],
+          "policy": [
+            "실제 새 출처 저장과 단순 입력·검사 시도를 구분합니다."
+          ],
+          "exceptions": [
+            "항상 같은 ID·성공 안내의 유지 시간·모든 분류 조합을 보장하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1304-source-test-pre-submit-state.json",
+            "cms-knowledge/master-cms/evidence/1305-source-create-test-submit.json",
+            "cms-knowledge/master-cms/evidence/1306-source-create-test-readback.json",
+            "cms-knowledge/master-cms/evidence/1307-source-create-test-result-source.json",
+            "cms-knowledge/master-cms/evidence/1309-source-create-test-inventory.json",
+            "cms-knowledge/master-cms/source-test-intent.json",
+            "cms-knowledge/master-cms/sources/source-test199-detail-created-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_CREATE_CODE_NAME",
+          "title": "저장 후 코드·이름 자동 생성",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "등록 성공 상세의 코드와 이름을 확인합니다.",
+          "visibleChanges": [
+            "교육과정·학교급·과목군·과목·학년·학기·교재명·세부명·판형으로 코드와 이름이 생성돼 보입니다.",
+            "QA 예시 코드의 9개 구성값은 22-M-MA-T0-1-1-SMT-TP-2049입니다."
+          ],
+          "policy": [
+            "서비스 노출명·용도·사용 여부와 자동 생성 출처명은 구분합니다."
+          ],
+          "exceptions": [
+            "서버 생성 구현 전체·카탈로그 변경 시 이름 재생성 규칙은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1304-source-test-pre-submit-state.json",
+            "cms-knowledge/master-cms/evidence/1306-source-create-test-readback.json",
+            "cms-knowledge/master-cms/evidence/1307-source-create-test-result-source.json",
+            "cms-knowledge/master-cms/source-form-catalogs-20261109.json",
+            "cms-knowledge/master-cms/source-test-intent.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_CREATE_DUPLICATE",
+          "title": "동일 코드 조합의 등록 반려",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "기존 QA 출처와 같은 9개 코드 구성값, 다른 용도·노출명·비고로 저장을 시도합니다.",
+          "visibleChanges": [
+            "이미 등록된 출처입니다 안내가 표시됩니다.",
+            "등록 폼과 입력값을 유지하고 총 60건·기존 출처 199 값이 유지됐습니다."
+          ],
+          "policy": [
+            "이 대조에서 용도·노출명을 다르게 해도 같은 코드 조합의 신규 등록은 거부됐습니다.",
+            "거부된 요청은 신규 출처 생성 성공이 아닙니다."
+          ],
+          "exceptions": [
+            "모든 중복 조합·수정 중 충돌·동시 등록·권한별 정책은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1347-source-duplicate-form-values.json",
+            "cms-knowledge/master-cms/evidence/1348-source-duplicate-submit.json",
+            "cms-knowledge/master-cms/evidence/1349-source-duplicate-readback.json",
+            "cms-knowledge/master-cms/evidence/1350-source-duplicate-response-source.json",
+            "cms-knowledge/master-cms/evidence/1351-source-duplicate-inventory.json",
+            "cms-knowledge/master-cms/sources/source-duplicate-rejected-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_CREATE_DUPLICATE_BUTTON_BOUNDARY",
+          "title": "별도 중복검사 버튼의 확인 범위",
+          "verification": "실제 폼·반려 확인, 내부 검사 구현 미확정",
+          "trigger": "등록 폼의 저장 전 조작을 설계합니다.",
+          "visibleChanges": [
+            "보존 폼에는 별도의 중복검사 버튼이 없고 취소·저장이 있습니다.",
+            "중복은 실제 저장 시도 뒤 반려 안내로 확인했습니다."
+          ],
+          "policy": [
+            "확인하지 않은 실시간 중복 조회·코드 예약·중복검사 버튼을 추가하지 않습니다."
+          ],
+          "exceptions": [
+            "입력 중 서버 검사나 서버 내부 유일키 구현은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1297-source-current-form-controls.json",
+            "cms-knowledge/master-cms/evidence/1348-source-duplicate-submit.json",
+            "cms-knowledge/master-cms/evidence/1350-source-duplicate-response-source.json",
+            "cms-knowledge/master-cms/sources/source-registration-form-20261109.html",
+            "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2131-source-registration-visible-pixels.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_04_DETAIL",
+      "title": "출처 상세와 매핑 문항 수",
+      "states": [
+        {
+          "id": "SRC_DETAIL_READONLY",
+          "title": "출처 상세 읽기 전용",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록의 코드 또는 출처명을 선택합니다.",
+          "visibleChanges": [
+            "출처 ID·기본 분류·자동 코드/명·서비스 노출명·용도·사용 여부·비고를 보여 줍니다.",
+            "등록·수정 시스템 정보와 매핑 문항 수, 목록·수정 버튼이 있습니다."
+          ],
+          "policy": [
+            "조회 상태의 필드는 비활성입니다.",
+            "후속 실제 PNG에서 출처 199 상세의 전체 세로 1015픽셀을 확인했습니다."
+          ],
+          "exceptions": [
+            "연결한 PNG는 당시 QA 상세이며 이후 비고·매핑 수 변화까지 같은 화면이라고 간주하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1306-source-create-test-readback.json",
+            "cms-knowledge/master-cms/evidence/1321-source-test-update-readback.json",
+            "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.json",
+            "cms-knowledge/master-cms/sources/source-test199-detail-updated-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.png"
+        },
+        {
+          "id": "SRC_DETAIL_MAPPING_ZERO",
+          "title": "매핑 0건 상세·목록",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "매핑이 없는 QA 출처를 조회합니다.",
+          "visibleChanges": [
+            "등록 직후와 관계 해제 후 출처 199의 매핑 수는 0입니다.",
+            "phase74의 최종 목록에서도 미사용·0건이 표시됩니다."
+          ],
+          "policy": [
+            "매핑 수 0과 출처 객체의 부재를 구분합니다. 출처 199는 계속 존재합니다."
+          ],
+          "exceptions": [
+            "미사용이면 항상 0건이라는 규칙은 아닙니다. N/1 사례가 별도로 확인됐습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1307-source-create-test-result-source.json",
+            "cms-knowledge/master-cms/evidence/2403-own-unused-source199-map-remove-server-read.json",
+            "cms-knowledge/master-cms/evidence/2409-own-source199-unmapped-unused-candidate.json",
+            "cms-knowledge/master-cms/evidence/3389-source-empty-page0-reset-and-query-recovery.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.png"
+        },
+        {
+          "id": "SRC_DETAIL_MAPPING_POSITIVE",
+          "title": "사용·미사용과 양수 매핑 수",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "연결이 있는 출처 134 또는 QA 출처 199를 조회합니다.",
+          "visibleChanges": [
+            "기존 사용 출처 134는 매핑 102건이었습니다.",
+            "QA 199는 사용 Y로 한 문항을 연결한 뒤 미사용 N으로 저장해도 매핑 1건을 유지했습니다."
+          ],
+          "policy": [
+            "사용 여부와 매핑 수는 독립 정보입니다."
+          ],
+          "exceptions": [
+            "134의 102건은 관측 당시 값이며 현재 전체 결과로 고정하지 않습니다. 모든 연결 문항을 개별 검증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1325-source-mapped134-open.json",
+            "cms-knowledge/master-cms/evidence/1326-source-mapped134-source.json",
+            "cms-knowledge/master-cms/evidence/1332-source-mapped134-edit-actual-state.json",
+            "cms-knowledge/master-cms/evidence/2370-own-source199-mapping-independent-server-read.json",
+            "cms-knowledge/master-cms/evidence/2384-own-source199-unused-with-mapping-server-read.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_DETAIL_MAPPING_LIST_BOUNDARY",
+          "title": "출처별 매핑 문항 목록의 미확인 경로",
+          "verification": "보존 상세 구조 확인, 별도 매핑 문항 목록 미검증",
+          "trigger": "출처 상세에서 매핑된 대상 문항 목록을 보려는 경우입니다.",
+          "visibleChanges": [
+            "보존한 상세·수정 화면의 매핑 문항 수는 비활성 숫자 입력입니다.",
+            "이 위치에서 별도 문항 목록을 여는 링크·버튼이나 실제 목록 진입은 확인하지 못했습니다."
+          ],
+          "policy": [
+            "실제 확인한 것은 매핑 수와 다른 문항 상세의 출처 관리 모달입니다.",
+            "독립된 출처별 문항 목록을 확정 화면으로 만들지 않습니다."
+          ],
+          "exceptions": [
+            "전체 제품에 해당 기능이 없다는 결론은 아닙니다. 별도 목록 URL·필터·페이지·문항 이동은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1326-source-mapped134-source.json",
+            "cms-knowledge/master-cms/evidence/1331-source-mapped134-edit-actual-source.json",
+            "cms-knowledge/master-cms/evidence/2346-own-item2089216-source-current-modal-state.json",
+            "cms-knowledge/master-cms/evidence/2370-own-source199-mapping-independent-server-read.json",
+            "cms-knowledge/master-cms/sources/source-test199-detail-updated-20261109.html",
+            "cms-knowledge/master-cms/sources/source-mapped134-modify-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_DETAIL_RETURN_CONTEXT",
+          "title": "목록·수정 진입과 검색 문맥",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "상세의 목록 또는 수정을 선택합니다.",
+          "visibleChanges": [
+            "목록·수정 링크가 있으며 완전 코드 검색 후의 상세 링크에는 검색 조건·페이지 문맥이 남습니다."
+          ],
+          "policy": [
+            "출처 조회와 출처 수정 저장을 별도 단계로 표현합니다."
+          ],
+          "exceptions": [
+            "모든 상세 복귀 조건·새 탭·권한·삭제 출처 접근은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1310-source-test-edit-link.json",
+            "cms-knowledge/master-cms/evidence/1311-source-test-edit-open.json",
+            "cms-knowledge/master-cms/evidence/1368-source-list-code-result.json",
+            "cms-knowledge/master-cms/sources/source-test199-detail-updated-20261109.html",
+            "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_05_EDIT",
+      "title": "출처 수정·값 변경·저장",
+      "states": [
+        {
+          "id": "SRC_EDIT_INITIAL",
+          "title": "출처 수정 폼",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "상세의 수정을 엽니다.",
+          "visibleChanges": [
+            "기존 분류·용도·서비스 노출명·사용 여부·비고를 편집할 수 있습니다.",
+            "자동 코드·명과 시스템 정보·매핑 수는 직접 편집하지 않는 표시입니다."
+          ],
+          "policy": [
+            "원본 출처 134도 102건이 매핑된 상태에서 분류 선택과 편집 필드가 활성인 것을 확인했습니다."
+          ],
+          "exceptions": [
+            "필드 활성만으로 매핑 출처의 분류 변경을 서버가 허용하거나 관계를 안전하게 갱신한다고 확정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1314-source-test-edit-controls.json",
+            "cms-knowledge/master-cms/evidence/1331-source-mapped134-edit-actual-source.json",
+            "cms-knowledge/master-cms/evidence/1332-source-mapped134-edit-actual-state.json",
+            "cms-knowledge/master-cms/evidence/2135-source134-mapped-modify-visible-pixels.json",
+            "cms-knowledge/master-cms/sources/source-mapped134-modify-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2135-source134-mapped-modify-visible-pixels.png"
+        },
+        {
+          "id": "SRC_EDIT_UNMAPPED_SAVE",
+          "title": "미매핑 QA 출처 수정 저장",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199의 판형 2049→2048, 용도 공통→교사용과 노출명·비고를 바꾸고 저장합니다.",
+          "visibleChanges": [
+            "ID 199·미사용·매핑 0건·총 60건은 유지됐습니다.",
+            "코드와 이름이 2048 기준으로 다시 생성되고 수정자·수정 시각이 채워졌습니다."
+          ],
+          "policy": [
+            "기존 ID를 유지한 수정이며 새 출처를 만든 결과가 아닙니다."
+          ],
+          "exceptions": [
+            "매핑된 출처의 분류/코드 변경 저장 영향·수정 중 중복 충돌은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1315-source-test-year-change.json",
+            "cms-knowledge/master-cms/evidence/1316-source-test-purpose-change.json",
+            "cms-knowledge/master-cms/evidence/1317-source-test-display-change.json",
+            "cms-knowledge/master-cms/evidence/1318-source-test-remark-change.json",
+            "cms-knowledge/master-cms/evidence/1319-source-test-update-values.json",
+            "cms-knowledge/master-cms/evidence/1320-source-test-update-submit.json",
+            "cms-knowledge/master-cms/evidence/1321-source-test-update-readback.json",
+            "cms-knowledge/master-cms/evidence/1322-source-test-updated-source.json",
+            "cms-knowledge/master-cms/evidence/1323-source-test-updated-inventory.json",
+            "cms-knowledge/master-cms/source-test-intent.json",
+            "cms-knowledge/master-cms/sources/source-test199-detail-updated-20261109.html",
+            "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2133-source199-detail-visible-pixels.png"
+        },
+        {
+          "id": "SRC_EDIT_DISPLAY_NAME_USAGE",
+          "title": "노출명·자동 이름·용도 구분",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "노출명과 용도를 바꿔 저장한 결과를 읽습니다.",
+          "visibleChanges": [
+            "서비스 노출명은 QA-SOURCE-20261109-EDITED로 저장됐고 용도는 교사용 T였습니다.",
+            "자동 출처명은 분류·판형을 반영한 이름이며 노출명과 별도입니다."
+          ],
+          "policy": [
+            "용도 C/T와 사용 여부 Y/N을 하나의 유형 값으로 합치지 않습니다."
+          ],
+          "exceptions": [
+            "실제 Service CMS의 이름·검색·노출 변경을 검증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1316-source-test-purpose-change.json",
+            "cms-knowledge/master-cms/evidence/1317-source-test-display-change.json",
+            "cms-knowledge/master-cms/evidence/1319-source-test-update-values.json",
+            "cms-knowledge/master-cms/evidence/1321-source-test-update-readback.json",
+            "cms-knowledge/master-cms/source-test-intent.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_EDIT_CANCEL_DECLARED",
+          "title": "수정 취소 확인창의 선언",
+          "verification": "소스 선언 확인",
+          "trigger": "수정 폼의 취소로 이탈하려는 경우입니다.",
+          "visibleChanges": [
+            "보존 소스에는 출처 수정 취소 / 저장하지 않고 이동하시겠습니까?와 취소·저장 하지 않고 이동이 있습니다."
+          ],
+          "policy": [
+            "등록 취소의 실제 입력 보존 결과와 수정 취소 선언을 구분합니다."
+          ],
+          "exceptions": [
+            "수정 폼의 모든 변경·재열기·이탈 경로 보존은 별도 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1331-source-mapped134-edit-actual-source.json",
+            "cms-knowledge/master-cms/sources/source-mapped134-modify-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_EDIT_COLLISION_UNVERIFIED",
+          "title": "수정 충돌·매핑 분류 변경의 경계",
+          "verification": "미검증",
+          "trigger": "기존 코드와 충돌하는 수정 또는 매핑된 출처의 분류를 바꾸는 경우입니다.",
+          "visibleChanges": [
+            "현재 확인한 실제 분류 수정은 미사용·미매핑 QA 199입니다.",
+            "매핑 출처 134의 활성 폼을 읽었지만 해당 분류 변경은 저장하지 않았습니다."
+          ],
+          "policy": [
+            "신규 등록 중복 반려를 수정 충돌의 서버 결과로 전이하지 않습니다."
+          ],
+          "exceptions": [
+            "동시 수정·코드 충돌·모든 분류 변경·권한·서버 오류 복구는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1320-source-test-update-submit.json",
+            "cms-knowledge/master-cms/evidence/1331-source-mapped134-edit-actual-source.json",
+            "cms-knowledge/master-cms/evidence/1332-source-mapped134-edit-actual-state.json",
+            "cms-knowledge/master-cms/evidence/1348-source-duplicate-submit.json",
+            "cms-knowledge/master-cms/session-20261109-phase20.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_06_USE",
+      "title": "사용 Y·미사용 N과 영향 범위 확인",
+      "states": [
+        {
+          "id": "SRC_USE_ACTIVATE",
+          "title": "미사용 출처를 사용으로 저장",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "매핑 0인 QA 출처 199의 사용 여부를 Y로 바꾸고 저장합니다.",
+          "visibleChanges": [
+            "독립 조회에서 사용 Y를 확인했습니다.",
+            "코드·기존 분류·교사용 T를 유지했고 수동 연결 검색에서 페이지·문항번호 입력과 추가가 활성화됐습니다."
+          ],
+          "policy": [
+            "로컬 Y 선택과 서버 저장·후속 후보 갱신을 구분합니다."
+          ],
+          "exceptions": [
+            "다른 출처·권한·분류 조합이나 서비스 노출까지 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2351-own-source199-activate-modify-open.json",
+            "cms-knowledge/master-cms/evidence/2355-own-source199-activate-save-once.json",
+            "cms-knowledge/master-cms/evidence/2357-own-source199-active-server-readback.json",
+            "cms-knowledge/master-cms/evidence/2362-own-active-source199-exact-candidate.json",
+            "cms-knowledge/master-cms/source199-lifecycle-intent-20261110.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_USE_IMPACT_MODAL",
+          "title": "Y→N 영향 범위 확인",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "문항이 연결된 사용 출처를 N으로 선택합니다.",
+          "visibleChanges": [
+            "영향 범위 확인 모달에 출처코드·명, 매핑 문항 수와 사용 여부를 N으로 변경할지 질문을 표시합니다.",
+            "기존 매핑 문항 정보는 그대로 유지(서비스 노출 유지), 신규 문항 등록 시 출처 선택 목록에 노출되지 않음을 안내합니다.",
+            "취소·미사용(N)으로 변경을 선택합니다."
+          ],
+          "policy": [
+            "134/102건과 QA 199/1건의 실제 표시를 확인했습니다."
+          ],
+          "exceptions": [
+            "매핑 0건에서의 동일 경고 여부·모든 역할은 미검증이며 서비스 노출 유지는 안내입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1353-source-mapped134-choose-unused.json",
+            "cms-knowledge/master-cms/evidence/1354-source-mapped134-impact-modal-source.json",
+            "cms-knowledge/master-cms/evidence/1359-source-impact-fresh-after-transition.json",
+            "cms-knowledge/master-cms/evidence/2377-own-source199-use-n-local-select.json",
+            "cms-knowledge/master-cms/evidence/2378-own-source199-deactivation-local-state.json",
+            "cms-knowledge/master-cms/sources/source-mapped-impact-modal-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_USE_IMPACT_CANCEL",
+          "title": "영향 확인 취소와 Y 복원",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "영향 범위 모달에서 취소합니다.",
+          "visibleChanges": [
+            "닫힘 이벤트가 완료된 뒤 사용 여부 Y로 복원됐습니다.",
+            "원본 134를 저장하지 않고 다시 조회해 Y·102건·기존 수정 정보를 확인했습니다."
+          ],
+          "policy": [
+            "닫힘 애니메이션 중간 상태와 완료 후 복원을 구분합니다."
+          ],
+          "exceptions": [
+            "초기 1355~1358의 전환 중 관측·Modal missing을 CMS 취소 실패로 기록하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1355-source-impact-cancel.json",
+            "cms-knowledge/master-cms/evidence/1358-source-impact-accept-locally.json",
+            "cms-knowledge/master-cms/evidence/1359-source-impact-fresh-after-transition.json",
+            "cms-knowledge/master-cms/evidence/1360-source-impact-cancel-transition-observed.json",
+            "cms-knowledge/master-cms/evidence/1361-source-impact-cancel-readback.json",
+            "cms-knowledge/master-cms/evidence/1362-source134-unsaved-readback.json",
+            "cms-knowledge/master-cms/session-20261109-phase20.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_USE_IMPACT_ACCEPT_LOCAL",
+          "title": "미사용 변경 확인은 로컬 단계",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "영향 모달의 미사용(N)으로 변경을 선택합니다.",
+          "visibleChanges": [
+            "확인창이 닫히고 폼 선택값 N을 유지합니다.",
+            "이 시점에는 최종 저장하지 않았고 서버의 등록 후보에는 아직 199가 있었습니다."
+          ],
+          "policy": [
+            "영향 확인 버튼과 수정 폼의 최종 저장을 별도 단계로 그립니다."
+          ],
+          "exceptions": [
+            "확인 버튼만으로 서버가 N으로 바뀌거나 기존 관계가 해제됐다고 하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2378-own-source199-deactivation-local-state.json",
+            "cms-knowledge/master-cms/evidence/2379-own-source199-registration-pickers-before-n.json",
+            "cms-knowledge/master-cms/evidence/2380-own-source199-impact-confirm-local.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_USE_DEACTIVATE_SAVE",
+          "title": "미사용 N 최종 저장과 기존 연결 유지",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "영향 확인 뒤 수정 폼의 저장을 누릅니다.",
+          "visibleChanges": [
+            "서버의 출처 199가 N으로 바뀌었지만 문항의 기존 출처 13+199 연결은 유지됐습니다.",
+            "신규 HML·디피니션 등록 폼의 출처 선택에서는 199가 제외됐습니다."
+          ],
+          "policy": [
+            "미사용 저장은 기존 관계의 자동 해제가 아닙니다.",
+            "비고도 생애주기 QA 문구로 바뀌었으므로 사용 여부 외 모든 필드가 불변이라고 하지 않습니다."
+          ],
+          "exceptions": [
+            "실제 서비스 노출·캐시·재배포는 미검증입니다. 수동 검색에서의 비활성 행과 신규 폼 제외는 별도 결과입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2382-own-source199-deactivate-save-once.json",
+            "cms-knowledge/master-cms/evidence/2384-own-source199-unused-with-mapping-server-read.json",
+            "cms-knowledge/master-cms/evidence/2385-own-source199-unused-item-summary-read.json",
+            "cms-knowledge/master-cms/evidence/2386-own-source199-registration-pickers-after-n.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_USE_FINAL_N_ZERO",
+          "title": "사용 생애주기의 최종 N·0건",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199의 연결을 별도로 해제한 뒤 최종 목록을 조회합니다.",
+          "visibleChanges": [
+            "출처 199는 N·매핑 0건으로 계속 존재합니다.",
+            "phase74의 3389에서도 같은 코드 2048·교사용·미사용·0건이 확인됐습니다."
+          ],
+          "policy": [
+            "N/1은 phase40의 중간 상태이며 최종 N/0과 시간순으로 구분합니다.",
+            "own-source199-final-unused-detail 파일에 남은 1건을 최신 0건 근거로 사용하지 않습니다."
+          ],
+          "exceptions": [
+            "최신 목록 확인을 모든 Service·DB·연결 이력 감사로 확장하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2403-own-unused-source199-map-remove-server-read.json",
+            "cms-knowledge/master-cms/evidence/2409-own-source199-unmapped-unused-candidate.json",
+            "cms-knowledge/master-cms/evidence/2411-own-source199-mapping-final-item-read.json",
+            "cms-knowledge/master-cms/evidence/3389-source-empty-page0-reset-and-query-recovery.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md",
+            "cms-knowledge/master-cms/session-20261111-phase74.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_07_RELATION",
+      "title": "관련 문항의 출처 관리 모달과 연결 작업",
+      "states": [
+        {
+          "id": "SRC_RELATION_ENTRY",
+          "title": "문항 상세에서 출처 관리 열기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "관련 문항의 출처 연결을 관리하려고 해당 문항 상세의 출처 관리를 엽니다.",
+          "visibleChanges": [
+            "출처 관리 모달에 문항 ID, 현재 출처 탭의 개수, 출처 추가 탭과 닫기가 있습니다.",
+            "현재 출처 표는 출처코드·명, 용도, 사용 여부, 페이지, 문항번호, 액션을 표시합니다."
+          ],
+          "policy": [
+            "출처 메뉴의 속성 수정 화면이 아니라 문항 상세의 연결 관리 화면임을 표시합니다.",
+            "출처 199 생애주기와 연결되는 관련 화면으로 배치합니다."
+          ],
+          "exceptions": [
+            "출처 상세의 매핑 수를 누르면 이 모달이 직접 열린다는 경로는 확인하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/148-set-source-membership.json",
+            "cms-knowledge/master-cms/evidence/2346-own-item2089216-source-current-modal-state.json",
+            "cms-knowledge/master-cms/sources/own-source199-initial-unused-candidate-20261110.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/148-set-source-membership.png"
+        },
+        {
+          "id": "SRC_RELATION_UNUSED_CANDIDATE",
+          "title": "미사용·미연결 출처 검색 결과",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "출처 추가에서 미사용 199를 검색합니다.",
+          "visibleChanges": [
+            "199 행에 미사용 출처와 비활성 추가 버튼이 보입니다.",
+            "관측한 N·미연결 결과에는 페이지·문항번호 입력란이 없었습니다."
+          ],
+          "policy": [
+            "수동 검색은 행을 남겨 비활성화하고 신규 등록 폼은 N 출처를 제외하는 차이가 있습니다."
+          ],
+          "exceptions": [
+            "N을 강제로 직접 추가하는 서버 요청·모든 검색 조건은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2348-own-unused-source199-exact-candidate-search.json",
+            "cms-knowledge/master-cms/evidence/2408-own-source199-unmapped-unused-add-tab.json",
+            "cms-knowledge/master-cms/evidence/2409-own-source199-unmapped-unused-candidate.json",
+            "cms-knowledge/master-cms/sources/own-source199-initial-unused-candidate-20261110.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_ACTIVE_CANDIDATE",
+          "title": "사용·미연결 출처의 추가 활성",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199를 Y로 저장한 뒤 출처 추가에서 다시 검색합니다.",
+          "visibleChanges": [
+            "페이지·문항번호 입력과 활성 추가 버튼이 나타납니다."
+          ],
+          "policy": [
+            "출처 사용 여부 저장 후 후보를 새로 조회해 달라진 결과를 확인했습니다."
+          ],
+          "exceptions": [
+            "다른 상태·권한·이미 연결된 Y의 전체 행렬은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2357-own-source199-active-server-readback.json",
+            "cms-knowledge/master-cms/evidence/2362-own-active-source199-exact-candidate.json",
+            "cms-knowledge/master-cms/evidence/2363-own-active-source199-candidate-source.json",
+            "cms-knowledge/master-cms/sources/own-source199-active-candidate-20261110.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_PAGE_REQUIRED",
+          "title": "페이지 공란으로 추가 차단",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "활성 후보의 페이지를 비워 두고 추가합니다.",
+          "visibleChanges": [
+            "페이지를 입력해주세요. 경고가 표시되고 기존 출처 13만 유지됩니다."
+          ],
+          "policy": [
+            "정상 UI의 요청 전 차단과 후속 관계 불변을 확인했습니다.",
+            "관측 필드는 required=false였으며 별도 클라이언트 공란 검사를 사용합니다."
+          ],
+          "exceptions": [
+            "페이지 0·음수·큰 값·문항번호 형식과 서버 직접 공란 요청의 거부는 미검증입니다.",
+            "body 관찰기 request=null을 브라우저 전체 패킷 0 계측으로 표현하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2364-own-source199-empty-page-add-probe.json",
+            "cms-knowledge/master-cms/evidence/2365-own-source199-empty-page-probe-server-readback.json",
+            "cms-knowledge/master-cms/evidence/2366-own-source199-empty-page-probe-ui.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_ADD_SAVED",
+          "title": "페이지·번호로 실제 관계 추가",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "페이지 1·문항번호 1을 넣고 199 추가를 한 번 누릅니다.",
+          "visibleChanges": [
+            "독립 조회에서 원래 출처 13과 새 199 두 관계를 확인했습니다.",
+            "199의 매핑 수는 1이 되고 기존 13의 페이지 2·문항번호 공란은 유지됩니다."
+          ],
+          "policy": [
+            "문항 전체 반영 없이 관계가 즉시 저장됐습니다.",
+            "이 표본은 문항 상세 버전 2088849·상태 Y·저장 OMR/정답을 유지했습니다."
+          ],
+          "exceptions": [
+            "모든 관계 작업의 버전 정책·중복 제출·동시성으로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2367-own-source199-mapping-page-local-fill.json",
+            "cms-knowledge/master-cms/evidence/2368-own-source199-mapping-number-local-fill.json",
+            "cms-knowledge/master-cms/evidence/2369-own-source199-valid-mapping-add-once.json",
+            "cms-knowledge/master-cms/evidence/2370-own-source199-mapping-independent-server-read.json",
+            "cms-knowledge/master-cms/evidence/2371-own-source199-mapping-item-summary-read.json",
+            "cms-knowledge/master-cms/evidence/2372-own-source199-mapping-modal-source.json",
+            "cms-knowledge/master-cms/sources/own-source199-mapped-modal-20261110.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_ALREADY_MAPPED",
+          "title": "이미 매핑된 미사용 후보",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199를 N으로 저장하되 기존 연결을 유지한 상태에서 추가 검색을 합니다.",
+          "visibleChanges": [
+            "이미 매핑된 출처 문구와 비활성 추가 버튼을 표시합니다."
+          ],
+          "policy": [
+            "N·연결 있음 조합에서는 미사용보다 이미 매핑 문구가 우선했습니다.",
+            "현재 출처 탭의 기존 199 관계는 수정·해제 버튼이 활성인 상태였습니다."
+          ],
+          "exceptions": [
+            "모든 템플릿 조건·권한·용도 조합의 우선순위를 입증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2390-own-source199-retained-unused-current-ui.json",
+            "cms-knowledge/master-cms/evidence/2392-own-source199-final-unused-candidate-search.json",
+            "cms-knowledge/master-cms/sources/own-source199-final-mapped-unused-modal-20261110.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_UPDATE_SAVED",
+          "title": "미사용 출처의 기존 관계 수정",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "N 상태의 현재 199 관계를 페이지 1/번호 1에서 2/2로 바꾸고 수정합니다.",
+          "visibleChanges": [
+            "독립 조회에서 199의 2/2가 저장됐고 원래 13은 유지됐습니다.",
+            "출처 N·문항 상세 버전·상태 Y·OMR/정답도 유지됐습니다."
+          ],
+          "policy": [
+            "버튼 표시만 확인한 phase40 범위를 phase41의 실제 수정 성공으로 보완했습니다."
+          ],
+          "exceptions": [
+            "관찰 이벤트 배열이 비었다는 이유로 실패로 기록하지 않습니다. 서버 저장값은 독립 GET으로 판정했습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2397-own-unused-source199-current-modal-open.json",
+            "cms-knowledge/master-cms/evidence/2398-own-unused-source199-before-map-update.json",
+            "cms-knowledge/master-cms/evidence/2399-own-unused-source199-map-update-once.json",
+            "cms-knowledge/master-cms/evidence/2400-own-unused-source199-map-update-server-read.json",
+            "cms-knowledge/master-cms/evidence/2401-own-unused-source199-map-update-item-read.json",
+            "cms-knowledge/master-cms/source199-existing-mapping-edit-intent-20261110.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_REMOVE_SAVED",
+          "title": "199 관계만 해제",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "두 출처가 있는 상태에서 199의 해제를 한 번 누릅니다.",
+          "visibleChanges": [
+            "문항에는 원래 출처 13 한 개만 남고 199의 매핑 수는 0이 됐습니다.",
+            "199를 다시 검색하면 미사용 출처·추가 비활성으로 돌아갑니다."
+          ],
+          "policy": [
+            "관계 해제는 출처 객체나 문항 삭제가 아닙니다.",
+            "문항 전체 반영 없이 연결 변경을 저장했습니다."
+          ],
+          "exceptions": [
+            "평가지의 마지막 대조는 phase40 시점이며 phase41 이후 평가지 재조회까지 했다고 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2402-own-unused-source199-map-remove-once.json",
+            "cms-knowledge/master-cms/evidence/2403-own-unused-source199-map-remove-server-read.json",
+            "cms-knowledge/master-cms/evidence/2404-own-unused-source199-map-remove-item-read.json",
+            "cms-knowledge/master-cms/evidence/2408-own-source199-unmapped-unused-add-tab.json",
+            "cms-knowledge/master-cms/evidence/2409-own-source199-unmapped-unused-candidate.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_LAST_ONE_BLOCK",
+          "title": "최소 한 개 출처 해제 차단",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "원래 출처 13만 남은 상태에서 해제를 시도합니다.",
+          "visibleChanges": [
+            "출처는 최소 1개 이상이어야 합니다.가 표시됩니다.",
+            "beforeRequest.defaultPrevented=true와 한 행 보존을 확인했고 독립 조회에서도 13만 남습니다."
+          ],
+          "policy": [
+            "정상 UI의 최소 1개 클라이언트 보호를 실제 실행했습니다.",
+            "활성 해제 버튼이 요청 성공을 뜻하지 않습니다."
+          ],
+          "exceptions": [
+            "가드를 우회한 직접 POST의 서버 거부·다른 역할·동시 해제 정책은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2405-own-item2089216-last-source-minimum-probe.json",
+            "cms-knowledge/master-cms/evidence/2406-own-item2089216-minimum-probe-server-read.json",
+            "cms-knowledge/master-cms/evidence/2407-own-item2089216-minimum-probe-ui.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_RELATION_CLOSE_AND_PRESERVE",
+          "title": "모달 종료와 문항 보존",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "관계 작업을 마친 뒤 모달을 닫고 문항을 재조회합니다.",
+          "visibleChanges": [
+            "최종 문항 2089216은 상세 2088849/Y·출처 13 한 개와 기존 OMR/정답을 유지합니다."
+          ],
+          "policy": [
+            "출처 수는 1→2→1로 바뀌었으므로 문항의 모든 표시값이 불변이었다고 하지 않습니다.",
+            "보존한 범위는 식별·버전·상태·OMR과 명시한 대조 메타입니다."
+          ],
+          "exceptions": [
+            "원격 자산 전체 바이트·모든 관계·DB 열·Service 불변의 증거는 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2373-own-source199-mapped-modal-close.json",
+            "cms-knowledge/master-cms/evidence/2395-own-source199-final-persistent-item-read.json",
+            "cms-knowledge/master-cms/evidence/2404-own-unused-source199-map-remove-item-read.json",
+            "cms-knowledge/master-cms/evidence/2410-own-source199-mapping-scenario-modal-close.json",
+            "cms-knowledge/master-cms/evidence/2411-own-source199-mapping-final-item-read.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_SRC_08_INTEGRATION",
+      "title": "출처 메뉴와 등록 폼·서비스의 연결 설명",
+      "states": [
+        {
+          "id": "SRC_INTEGRATION_Y_SELECTABLE",
+          "title": "사용 출처의 신규 등록 후보",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199가 서버 Y인 시점에 신규 HML·디피니션 등록 폼을 엽니다.",
+          "visibleChanges": [
+            "두 폼의 출처 선택 option에 199가 있고 활성입니다."
+          ],
+          "policy": [
+            "해당 시점의 신규 등록 후보 노출을 확인한 결과입니다."
+          ],
+          "exceptions": [
+            "파일 업로드·문서 생성·모든 등록 경로와 권한을 실행했다는 뜻은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2379-own-source199-registration-pickers-before-n.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_INTEGRATION_N_EXCLUDED",
+          "title": "미사용 출처는 신규 등록 선택에서 제외",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "199의 N 저장 후 동일 두 등록 폼을 다시 조회합니다.",
+          "visibleChanges": [
+            "199 option이 없어졌고 관측 option 수는 56→55로 줄었습니다."
+          ],
+          "policy": [
+            "수동 추가 검색의 비활성 행과 신규 등록 폼의 행 제외를 각각 표현합니다."
+          ],
+          "exceptions": [
+            "phase41 N/0 시점에 두 등록 폼을 다시 조회한 것으로 확대하지 않습니다. 직접 비교는 2379/2386입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2379-own-source199-registration-pickers-before-n.json",
+            "cms-knowledge/master-cms/evidence/2386-own-source199-registration-pickers-after-n.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "SRC_INTEGRATION_PICKER_APPLY",
+          "title": "등록 폼의 출처 조회·적용",
+          "verification": "실제 관련 모달 확인",
+          "trigger": "HML 또는 디피니션 등록 폼에서 출처 조회를 엽니다.",
+          "visibleChanges": [
+            "등록 폼의 출처 조회는 검색 결과·라디오 선택·부모 선택값 적용을 제공합니다.",
+            "디피니션의 실제 선택 적용 후 용도는 자동 선택되지 않았습니다."
+          ],
+          "policy": [
+            "출처 메뉴의 등록·수정과 다른 폼의 출처 선택 모달을 별도 화면으로 연결합니다.",
+            "출처의 용도와 등록 폼의 용도를 자동 동기화한다고 하지 않습니다."
+          ],
+          "exceptions": [
+            "모달에서 출처 속성을 수정·새 출처 생성하는 기능은 확인하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/182-hml-source-picker.json",
+            "cms-knowledge/master-cms/evidence/184-hml-source-selected.json",
+            "cms-knowledge/master-cms/evidence/185-hml-source-applied.json",
+            "cms-knowledge/master-cms/evidence/257-definition-source-lookup.json",
+            "cms-knowledge/master-cms/evidence/259-definition-source-radio.json",
+            "cms-knowledge/master-cms/evidence/260-definition-source-apply.json",
+            "design-specs/definition-storyboard-states.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/257-definition-source-lookup.png"
+        },
+        {
+          "id": "SRC_INTEGRATION_SERVICE_LIMIT",
+          "title": "기존 서비스 노출 유지 안내의 한계",
+          "verification": "안내 문구와 Master 결과 확인, Service 결과 미검증",
+          "trigger": "Y→N 영향 모달의 안내를 설명합니다.",
+          "visibleChanges": [
+            "기존 매핑 문항 정보는 그대로 유지(서비스 노출 유지)라고 안내합니다.",
+            "Master 기존 관계 유지와 신규 등록 후보 제외는 별도 실제 결과가 있습니다."
+          ],
+          "policy": [
+            "서비스 노출 유지는 UI가 설명한 정책이며 실제 Service CMS 조회 결과가 아닙니다."
+          ],
+          "exceptions": [
+            "서비스 검색·캐시·재배포·다른 권한·API/DB 내부 처리·평가지 후속 전파는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2378-own-source199-deactivation-local-state.json",
+            "cms-knowledge/master-cms/evidence/2384-own-source199-unused-with-mapping-server-read.json",
+            "cms-knowledge/master-cms/evidence/2386-own-source199-registration-pickers-after-n.json",
+            "cms-knowledge/master-cms/source199-mapping-lifecycle-policy-20261110.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    }
+  ],
+  "validationScope": {
+    "screenCount": 8,
+    "stateCount": 57,
+    "requiredStateFields": [
+      "title",
+      "trigger",
+      "visibleChanges",
+      "policy",
+      "exceptions",
+      "evidence",
+      "screenshot"
+    ],
+    "singleWriteTarget": "design-specs/source-storyboard-states.json",
+    "otherFilesChanged": false,
+    "browserOrCmsUsed": false,
+    "referenceCheck": {
+      "allLocalTargetsExist": true,
+      "uniqueLocalPaths": 184,
+      "evidenceJsonFilesParsed": 160,
+      "pngHeadersVerified": 12,
+      "screenshotLinkedStateCount": 16,
+      "uniqueIds": true,
+      "utf8Verified": true,
+      "definitionSchemaArtifactUnchanged": true,
+      "otherFileWrites": 0
+    },
+    "primaryEvidenceChecks": {
+      "count": 10,
+      "allPass": true,
+      "checks": {
+        "emptyQueryHttp200": true,
+        "zeroNumericEnabled": true,
+        "zeroClickHttp200AndUrl0": true,
+        "resetOnlyFields": true,
+        "queryRecoveryPage1": true,
+        "source199UnusedZero": true,
+        "tenRequiredFields": true,
+        "length50and100Declared": true,
+        "length50and100ActuallyRetained": true,
+        "lastOneClientGuard": true
+      }
+    }
+  }
+}

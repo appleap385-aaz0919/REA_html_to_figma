@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3342-lab-real-2089242-restore-for-visual-documentation",
+  "startedUtc": "2026-11-10T09:46:55.471593+00:00",
+  "command": [
+    "eval",
+    "(()=>{if(location.pathname!=='/lab/view/omr-render.donga')throw Error('Lab only');const f={\"answer\":{\"nodes\":[{\"allowed_answer\":[{\"case_sensitive\":false,\"space_sensitive\":false,\"value\":\"2\\\\times1\\\\text{\\ud589\\ub82c}\",\"value_type\":\"math\"}],\"rule_type\":\"VALUE\"}],\"rule_type\":\"ORDERED\"},\"httpStatus\":200,\"identity\":\"2089242 (2089052)\",\"itemId\":2089242,\"omr\":[{\"type\":\"TEXT\"}],\"questionHeader\":\"\\ubb38\\ud56dID\\n                                2089242\\n                                \\n                                \\uc2b9\\uc778(\\uc0ac\\uc6a9)\\n                                \\ucd5c\\ud558\\n                                \\uc8fc\\uad00\\uc2dd > \\ub2e8\\ub2f5\\ud615 > \\uc77c\\ubc18\\ud615\",\"questionType\":\"SBSANM\",\"viewFlag\":\"Y\"};if(document.querySelector('#omrTypeSel').value!==f.questionType||!document.querySelector('#omrSlot [data-omr-code='+f.questionType+']'))throw Error('Matching form required');for(const [id,v] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(v);e.dispatchEvent(new Event('input',{bubbles:true}));}document.querySelector('#omrRestoreBtn').click();document.querySelector('.page-wrapper').scrollTop=0;return {visualDocumentationOnly:true,sourceItemId:f.itemId,type:f.questionType};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga"
+    },
+    "error": null,
+    "localSeconds": 0.084
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "result": {
+        "sourceItemId": 2089242,
+        "type": "SBSANM",
+        "visualDocumentationOnly": true
+      }
+    },
+    "error": null,
+    "localSeconds": 0.159
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "refs": {
+        "e42796": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e42797": {
+          "name": "OMR 복원 테스트 (JSON → 화면)",
+          "role": "heading"
+        },
+        "e42798": {
+          "name": " 넓게 보기",
+          "role": "button"
+        },
+        "e42799": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e42800": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e42801": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e42802": {
+          "name": "문항유형",
+          "role": "heading"
+        },
+        "e42803": {
+          "name": "OMR / 정답 JSON",
+          "role": "heading"
+        },
+        "e42804": {
+          "name": " 폼 비우기",
+          "role": "button"
+        },
+        "e42805": {
+          "name": " 복원",
+          "role": "button"
+        },
+        "e42806": {
+          "name": "실제 화면",
+          "role": "heading"
+        },
+        "e42807": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e42808": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e42809": {
+          "name": "OMR JSON (필드 배열 [...])",
+          "role": "textbox"
+        },
+        "e42810": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e42811": {
+          "name": "정답 JSON (rule_type 트리)",
+          "role": "textbox"
+        },
+        "e42812": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e42813": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e42814": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e42815": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e42816": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e42817": {
+          "name": "선택",
+          "role": "option"
+        },
+        "e42818": {
+          "name": "OBSACN · 단답형 › N지 선다",
+          "role": "option"
+        },
+        "e42819": {
+          "name": "OBSAOX · 단답형 › O/X 형",
+          "role": "option"
+        },
+        "e42820": {
+          "name": "OBMACN · 다답형 › N지 선다",
+          "role": "option"
+        },
+        "e42821": {
+          "name": "OBMAOX · 다답형 › O/X 형",
+          "role": "option"
+        },
+        "e42822": {
+          "name": "SBSANM · 단답형 › 일반형",
+          "role": "option"
+        },
+        "e42823": {
+          "name": "SBSADR · 단답형 › 그리기형",
+          "role": "option"
+        },
+        "e42824": {
+          "name": "SBSAAS · 단답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e42825": {
+          "name": "SBMANM · 다답형 › 일반형",
+          "role": "option"
+        },
+        "e42826": {
+          "name": "SBMAAS · 다답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e42827": {
+          "name": "SBMALD · 다답형 › 선그리기형",
+          "role": "option"
+        },
+        "e42828": {
+          "name": "SBMADD · 다답형 › 드래그앤드롭형",
+          "role": "option"
+        },
+        "e42829": {
+          "name": "ESBA00 · 기본형 › 기본 서술형",
+          "role": "option"
+        },
+        "e42830": {
+          "name": "ESSA00 · 단답형 › 단답 서술형",
+          "role": "option"
+        },
+        "e42831": {
+          "name": "ESMA00 · 다답형 › 다답 서술형",
+          "role": "option"
+        },
+        "e42924": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e42925": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e42926": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e42927": {
+          "name": " 유사 정답 추가",
+          "role": "button"
+        },
+        "e42928": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e42929": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e42930": {
+          "name": "",
+          "role": "button"
+        },
+        "e42931": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e42932": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e42933": {
+          "name": "",
+          "role": "button"
+        },
+        "e42934": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e42935": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e42936": {
+          "name": "",
+          "role": "button"
+        },
+        "e42937": {
+          "name": "대소구분",
+          "role": "checkbox"
+        },
+        "e42938": {
+          "name": "공백구분",
+          "role": "checkbox"
+        },
+        "e42939": {
+          "name": "입력 박스형",
+          "role": "option"
+        },
+        "e42940": {
+          "name": "범례 선택형",
+          "role": "option"
+        },
+        "e42941": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e42942": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e42943": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e42944": {
+          "name": "Menu Menu",
+          "role": "button"
+        },
+        "e42945": {
+          "name": "Menu Menu",
+          "role": "button"
+        },
+        "e42946": {
+          "name": "Menu Menu",
+          "role": "button"
+        }
+      },
+      "removedRefs": [
+        "@e42901",
+        "@e42902",
+        "@e42903",
+        "@e42904",
+        "@e42905",
+        "@e42906",
+        "@e42907",
+        "@e42908",
+        "@e42909",
+        "@e42910",
+        "@e42911",
+        "@e42912",
+        "@e42913",
+        "@e42914",
+        "@e42915",
+        "@e42916",
+        "@e42917",
+        "@e42918",
+        "@e42919",
+        "@e42920",
+        "@e42921",
+        "@e42922",
+        "@e42923"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e42799]\n      - link \"문제은행 마스터 CMS\" [ref=e42800]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e42812]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e42813]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e42814]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e42815]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e42816]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e42801]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - link \" 랩\" [ref=e42796]\n      - StaticText \"\"\n      - StaticText \"랩\"\n    - heading \"OMR 복원 테스트 (JSON → 화면)\" [level=2, ref=e42797]\n    - StaticText \"유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용.\"\n    - button \" 넓게 보기\" [ref=e42798]\n      - StaticText \"\"\n      - StaticText \"넓게 보기\"\n    - generic\n      - generic\n        - heading \"문항유형\" [level=3, ref=e42802]\n          - StaticText \"\"\n          - StaticText \"문항유형\"\n        - StaticText \"유형 코드\"\n        - combobox [expanded=false, ref=e42807]: SBSANM · 단답형 › 일반형\n          - MenuListPopup\n            - option \"선택\" [ref=e42817]\n            - group \"객관식\"\n              - option \"OBSACN · 단답형 › N지 선다\" [ref=e42818]\n              - option \"OBSAOX · 단답형 › O/X 형\" [ref=e42819]\n              - option \"OBMACN · 다답형 › N지 선다\" [ref=e42820]\n              - option \"OBMAOX · 다답형 › O/X 형\" [ref=e42821]\n            - group \"주관식\"\n              - option \"SBSANM · 단답형 › 일반형\" [selected, ref=e42822]\n              - option \"SBSADR · 단답형 › 그리기형\" [ref=e42823]\n              - option \"SBSAAS · 단답형 › 영역 선택형\" [ref=e42824]\n              - option \"SBMANM · 다답형 › 일반형\" [ref=e42825]\n              - option \"SBMAAS · 다답형 › 영역 선택형\" [ref=e42826]\n              - option \"SBMALD · 다답형 › 선그리기형\" [ref=e42827]\n              - option \"SBMADD · 다답형 › 드래그앤드롭형\" [ref=e42828]\n            - group \"서술형\"\n              - option \"ESBA00 · 기본형 › 기본 서술형\" [ref=e42829]\n              - option \"ESSA00 · 단답형 › 단답 서술형\" [ref=e42830]\n              - option \"ESMA00 · 다답형 › 다답 서술형\" [ref=e42831]\n      - generic\n        - heading \"OMR / 정답 JSON\" [level=3, ref=e42803]\n          - StaticText \"\"\n          - StaticText \"OMR / 정답 JSON\"\n        - button \" 폼 비우기\" [ref=e42804]\n          - StaticText \"\"\n          - StaticText \"폼 비우기\"\n        - button \" 복원\" [ref=e42805]\n          - StaticText \"\"\n          - StaticText \"복원\"\n        - generic\n          - LabelText\n            - StaticText \"OMR JSON (필드 배열 \"\n            - code\n              - StaticText \"[...]\"\n            - StaticText \")\"\n          - button \" Pretty\" [ref=e42808]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"OMR JSON (필드 배열 [...])\" [ref=e42809]: [{\"type\":\"TEXT\"}]\n            - StaticText \"[{\\\"type\\\":\\\"TEXT\\\"}]\"\n          - LabelText\n            - StaticText \"정답 JSON (rule_type 트리)\"\n          - button \" Pretty\" [ref=e42810]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"정답 JSON (rule_type 트리)\" [ref=e42811]: {\"nodes\":[{\"allowed_answer\":[{\"case_sensitive\":false,\"space_sensitive\":false,\"value\":\"2\\\\times1\\\\text{행렬}\",\"value_type\":\"math\"}],\"rule_type\":\"VALUE\"}],\"rule_type\":\"ORDERED\"}\n            - StaticText \"{\\\"nodes\\\":[{\\\"allowed_answer\\\":[{\\\"case_sensitive\\\":false,\\\"space_sensitive\\\":false,\\\"value\\\":\\\"2\\\\\\\\times1\\\\\\\\text{행렬}\\\",\\\"value_type\\\":\\\"math\\\"}],\\\"rule_type\\\":\\\"VALUE\\\"}],\\\"rule_type\\\":\\\"ORDERED\\\"}\"\n          - StaticText \"복원 완료.\"\n      - generic\n        - heading \"실제 화면\" [level=3, ref=e42806]\n          - StaticText \"\"\n          - StaticText \"실제 화면\"\n        - generic\n          - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e42924]\n            - StaticText \"\"\n            - StaticText \"OMR 편집 (정답 설정)\"\n          - button \" OMR 미리보기\" [ref=e42925]\n            - StaticText \"\"\n            - StaticText \"OMR 미리보기\"\n          - generic\n            - generic\n              - StaticText \"정답 *\"\n            - combobox [expanded=false, ref=e42926]: 입력 박스형\n              - MenuListPopup\n                - option \"입력 박스형\" [selected, ref=e42939]\n                - option \"범례 선택형\" [ref=e42940]\n            - StaticText \"설정\"\n            - generic\n              - math \"math input field\" [ref=e42928] editable [tabindex, contenteditable]\n                - textbox [ref=e42941]\n                - generic\n                  - generic\n                    - StaticText \"앞 수식어\"\n                  - button \"Menu Menu\" [ref=e42944]\n                    - image \"Menu\"\n                    - StaticText \"Menu\"\n                - status\n              - button \"Σ\" [ref=e42929]\n            - button \"\" [expanded=false, ref=e42930]\n              - StaticText \"\"\n            - generic\n              - math \"math input field\" [ref=e42931] editable [tabindex, contenteditable]\n                - textbox [ref=e42942]\n                - generic\n                  - generic\n                    - StaticText \"뒤 수식어\"\n                  - button \"Menu Menu\" [ref=e42945]\n                    - image \"Menu\"\n                    - StaticText \"Menu\"\n                - status\n              - button \"Σ\" [ref=e42932]\n            - button \"\" [expanded=false, ref=e42933]\n              - StaticText \"\"\n            - StaticText \"정답\"\n            - generic\n              - math \"math input field\" [ref=e42934] editable [tabindex, contenteditable]\n                - textbox [ref=e42943]\n                - generic\n                  - button \"Menu Menu\" [ref=e42946]\n                    - image \"Menu\"\n                    - StaticText \"Menu\"\n                - status\n              - button \"Σ\" [ref=e42935]\n            - button \"\" [expanded=false, ref=e42936]\n              - StaticText \"\"\n            - LabelText\n              - checkbox \"대소구분\" [checked=false, ref=e42937]\n              - StaticText \"대소구분\"\n            - LabelText\n              - checkbox \"공백구분\" [checked=false, ref=e42938]\n              - StaticText \"공백구분\"\n            - button \" 유사 정답 추가\" [ref=e42927]\n              - StaticText \"\"\n              - StaticText \"유사 정답 추가\""
+    },
+    "error": null,
+    "localSeconds": 0.127
+  }
+}

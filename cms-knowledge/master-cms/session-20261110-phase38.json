@@ -1,0 +1,14 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"evidence_recorded_with_remaining_branches","evidenceRange":[2276,2298],"lastEvidence":"2298-own-used-paper1093-undeployed-lookup-read",
+ "summary":"자체 평가지1093의사용전환을실제검증했다. 실패F2089215와승인Y2089216이함께있으면서버가F의ID를안내하며저장을차단하고R/detail1101을유지한다. F를평가지에서제외하고Y만남겨사용Y로저장하자detail1124/1문항이됐다. 배포진입은활성이나두서비스모두미배포문항1건때문에선택불가다. 진단링크는해당Master문항1건을조회한다. 확정업무변경42회이며서비스배포는수행하지않았다.",
+ "observations":[
+  {"evidence":[2276,2277,2278,2279,2280,2281,2282,2283,2284,2285,2286,2287],"result":"자체HML664에서생성된1093/detail1101은R/교사용/2~22쪽/F2089215+Y2089216의2문항이다. 실제Y선택후저장을눌렀으나승인불가·실패2089215안내가나왔고독립상세/수정GET은R/detail1101을유지했다. 프런트엔드는D이외일반저장을직접제출하므로서버반려와UI필수검사를구별한다. 이시도는확정업무변경을더하지않았다."},
+  {"evidence":[2288,2289,2290,2291,2292,2293,2294,2295],"result":"실제문항제외확인창에서자체F2089215를로컬제외했다. 마지막1개그룹의제외버튼은비활성으로바뀐다. 승인Y2089216만포함한상태에서사용Y를한번저장했고독립GET은detail1124/Y/1문항이다. 원래이름/페이지/교사용/HML원본출처는유지한다. 제외된Master문항자체를삭제한것은아니다. 업무변경42번째다."},
+  {"evidence":[2296,2297,2298],"result":"사용Y에서배포진입버튼은활성이다. 실제배포창은두서비스모두미배포문항1건/선택비활성이고최종배포버튼도비활성이다. 안내에는포함문항전체배포와Master폐기문항제외가있지만폐기전파를실제실행한근거는아니다. 취소로닫았다. 상세표의진단링크두개는같은Master검색경로이며읽기GET으로keywordType=itemId/keyword2089216/정확히1행을확인했다."}
+ ],
+ "artifacts":["paper1093-use-state-intent-20261110.json","sources/own-paper1093-before-use-20261110.html","sources/own-paper1093-modify-20261110.html","sources/own-paper1093-use-rejected-20261110.html","sources/own-paper1093-used1124-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":42,"newMasterChangesInThisPhase":1,"paperId":1093,"beforeDetailId":1101,"afterDetailId":1124,"beforeState":"R","afterState":"Y","beforeItemIds":[2089215,2089216],"afterItemIds":[2089216],"serviceDeployment":false,"originalRestorationPending":false},
+ "remaining":["HML별도창열기시점답변을기다리며허용전에는창을열지않는다. 공유HML지문저장과자식전파검증은미실행이다.","자체출처199에문항을연결한뒤Y/N실제저장으로기존매핑유지·신규선택제외정책을확인한다.","평가지의다른부적격상태R/N/D와저장후Master상태변경의배포영향은추가표본이필요하다. 서비스실제배포는제출하지않는다.","세트생성·실제번역탭·Definition복합자료·권한별분기등나머지커버리지도이어간다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/paper/detail.donga?curriculum=22&pageNum=1&pageSize=100&paperId=1093","tab":"t21 own used paper1093/detail1124; no modal","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["사용전환시F를차단한표본과Y만있을때의성공을확인했으며모든상태조합의서버규칙은미검증이다.","개별문항승인·평가지사용·서비스배포준비·실제배포는각각다르다.","문항제외는평가지구성변경이며Master문항삭제가아니다.","서비스배포와로그아웃은제출하지않았다.전체완료율은미정이다."]
+}

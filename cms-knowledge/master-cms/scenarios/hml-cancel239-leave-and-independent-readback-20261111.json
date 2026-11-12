@@ -1,0 +1,65 @@
+{
+  "steps": [
+    {
+      "label": "3451-hml-vendor-pending-cancel-leave-without-saving",
+      "command": [
+        "eval",
+        "(()=>{const m=document.querySelector('#saveConfirmModal.show'),o=document.querySelector('[data-editor-url]'),b=m?.querySelector('[data-action-ok]');if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/item/all/modify.donga'||o?.dataset.itemId!=='2089239'||o.dataset.itemDetailId!=='2089104'||!b||b.matches(':disabled')||[...document.querySelectorAll('[data-webhwp-result]')].filter(e=>e.value).map(e=>e.dataset.webhwpResult).join(',')!=='explain.hml,explain.image')throw Error('Expected exact owned pending edit cancel');b.click();return {clicked:true,formSaveClicked:false};})()"
+      ]
+    },
+    {
+      "label": "3452-hml-vendor-pending-cancel-current-family-readback",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/disposable-single-twin-original-controls-read.js"
+      ]
+    },
+    {
+      "label": "3453-hml-vendor-pending-cancel-current-family-drafts",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-family-draft-checks.js"
+      ]
+    },
+    {
+      "label": "3454-hml-vendor-pending-cancel-fresh-edit-reopen",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089239"
+      ]
+    },
+    {
+      "label": "3455-hml-vendor-pending-cancel-fresh-edit-init-clean-check",
+      "command": [
+        "eval",
+        "(()=>{const o=document.querySelector('[data-editor-url]');if(location.pathname!=='/item/all/modify.donga'||o?.dataset.itemId!=='2089239'||o.dataset.itemDetailId!=='2089104'||[...document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Expected clean same-version reopen');document.querySelector('a[href=\"#tabItem\"]').click();return {clean:true,detailId:o.dataset.itemDetailId};})()"
+      ]
+    },
+    {
+      "label": "3456-hml-vendor-pending-cancel-fresh-model-omr-and-slots",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-parent-baseline.js"
+      ]
+    },
+    {
+      "label": "3457-hml-vendor-pending-cancel-final-family-memberships",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/disposable-single-family-memberships-history-read.js"
+      ]
+    },
+    {
+      "label": "3458-hml-vendor-pending-cancel-final-clean-detail",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"
+      ]
+    }
+  ],
+  "tailChars": 100
+}

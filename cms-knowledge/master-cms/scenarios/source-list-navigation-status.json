@@ -1,0 +1,15 @@
+{"steps":[
+ {"label":"1372-source-filter-reset-click","command":["eval","(() => {const b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='초기화');if(!b)throw Error('Reset missing');b.click();return {action:'Observed reset control'};})()"]},
+ {"label":"1373-source-filter-reset-state","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1374-source-filter-reset-query","command":["eval","(() => {document.querySelector('button[hx-get=\"/product/list.donga\"]').click();return {action:'Query reset filters'};})()"]},
+ {"label":"1375-source-filter-reset-results","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1376-source-list-page-size10","command":["select","select[name=pageSize]","10"]},
+ {"label":"1377-source-list-page1-block","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1378-source-list-next-block-click","command":["eval","(() => {const a=document.querySelector('.pagination a[aria-label=\"다음\"]');if(!a||a.closest('li').classList.contains('disabled'))throw Error('Next unavailable');const request=a.getAttribute('hx-get');a.click();return {action:'Next pagination control',request};})()"]},
+ {"label":"1379-source-list-page6-block","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1380-source-list-previous-block-click","command":["eval","(() => {const a=document.querySelector('.pagination a[aria-label=\"이전\"]');if(!a||a.closest('li').classList.contains('disabled'))throw Error('Previous unavailable');const request=a.getAttribute('hx-get');a.click();return {action:'Previous pagination control',request};})()"]},
+ {"label":"1381-source-list-page1-return","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1382-source-list-unused-only-select","command":["eval","(() => {const y=document.querySelector('input[name=useFlags][value=Y]'),n=document.querySelector('input[name=useFlags][value=N]');if(!y||!n||!y.checked||!n.checked)throw Error('Expected both flags selected');y.click();return {action:'Deselect Use; keep Unused'};})()"]},
+ {"label":"1383-source-list-unused-query","command":["eval","(() => {document.querySelector('button[hx-get=\"/product/list.donga\"]').click();return {action:'Query unused sources'};})()"]},
+ {"label":"1384-source-list-unused-results","command":["eval","--file","sources/runtime/source-list-observation.js"]}
+],"tailChars":1200}

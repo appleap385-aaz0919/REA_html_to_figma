@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"1635-lab-math-ocr-response-metadata","command":["eval","(() => ({url:location.href,requests:performance.getEntriesByType('resource').filter(e=>new URL(e.name).origin===location.origin&&new URL(e.name).pathname==='/api/math-ocr').map(e=>({url:e.name,initiatorType:e.initiatorType,durationMs:e.duration,responseStatus:e.responseStatus,transferSize:e.transferSize,encodedBodySize:e.encodedBodySize}))}))()"]},
+ {"label":"1636-lab-math-ink-failure-screen","command":["snapshot"],"screenshot":true},
+ {"label":"1637-lab-math-ink-undo","command":["eval","(() => {const d=window.MathFieldDialog.get();d.backdrop.querySelector('[data-ink=undo]').click();return {action:'Undo drawn stroke',strokeCount:d.ink.strokes.length};})()"]},
+ {"label":"1638-lab-math-ink-undo-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1639-lab-math-return-keyboard","command":["eval","(() => {document.querySelector('.math-dialog__tab[data-tab=keyboard]').click();return {action:'Return keyboard tab, keep field value'};})()"]},
+ {"label":"1640-lab-math-keyboard-after-ink-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1641-lab-math-ink-test-cancel","command":["eval","(() => {document.querySelector('.math-dialog__cancel').click();return {action:'Cancel handwriting test, retain standalone1+2'};})()"]},
+ {"label":"1642-lab-math-placeholder-input","command":["fill","#answerPlaceholder","\\text{QA answer}"]},
+ {"label":"1643-lab-math-placeholder-property-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]}
+],"tailChars":700}

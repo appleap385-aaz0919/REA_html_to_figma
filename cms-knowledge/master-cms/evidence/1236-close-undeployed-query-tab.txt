@@ -1,0 +1,162 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e6921]
+      - link "문제은행 마스터 CMS" [ref=e6922]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e6930]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e6931]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e6932]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e6933]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e6934]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e6923]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "평가지 상세" [level=2, ref=e6924]
+      - generic
+        - heading "기본 정보" [level=3, ref=e6927]
+        - DescriptionList
+          - term "평가지 ID"
+          - definition
+            - StaticText "332 (379)"
+          - term "평가지명"
+          - definition
+            - StaticText "[MOCK-HML-M] 템플릿_시험지2 (복제1)+"
+          - term "상태"
+          - definition
+            - StaticText "사용"
+          - term "생성 방식"
+          - definition
+            - StaticText "HML 생성"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22MMAT0KOK1002050000]"
+            - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 정수와 유리수 > 정수와 유리수의 곱셈 > >"
+            - StaticText "[22MMAT0KOK1003040000]"
+            - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 문자의 사용과 식 > 일차식의 덧셈과 뺄셈 > >"
+          - term "등록"
+          - definition
+            - StaticText "sangwon.jo · 2026-10-19"
+        - DescriptionList
+          - term "시험지"
+          - definition
+            - link "431 | [MOCK-HML-M] 템플릿_시험지2.hml" [ref=e6962]
+          - term "출처"
+          - definition
+            - StaticText "[22-M-MA-T0-1-0-DCL-MA-2025]"
+            - StaticText "22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025"
+            - StaticText "[22-H-MA-C1-1-0-DCL-KI-2025]"
+            - StaticText "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025"
+          - term "페이지"
+          - definition
+            - StaticText "2 ~ 21"
+          - term "용도"
+          - definition
+            - StaticText "교사용"
+          - term "문제 구성"
+          - definition
+            - StaticText "주관식 > 단답형 > 일반형 (1)"
+            - StaticText "서술형 > 단답형 > 단답 서술형 (1)"
+          - term "문항 수"
+          - definition
+            - StaticText "2문항"
+      - generic
+        - heading "배포" [level=3, ref=e6928]
+        - button " 배포하기" [ref=e6935]
+          - StaticText ""
+          - StaticText "배포하기"
+        - table
+          - rowgroup
+            - row
+              - columnheader "서비스" [ref=e6963]
+              - columnheader "배포 버전" [ref=e6964]
+              - columnheader "승인 여부" [ref=e6965]
+              - columnheader "서비스 상태" [ref=e6966]
+              - columnheader "최근 배포" [ref=e6967]
+              - columnheader "배포" [ref=e6968]
+          - row
+            - cell "AI출제마법사 CMS" [ref=e6936]
+            - cell "-" [ref=e6937]
+            - cell "-" [ref=e6938]
+            - cell "-" [ref=e6939]
+            - cell "-" [ref=e6940]
+            - cell "불가 미배포 문항 2건 조회" [ref=e6941]
+              - StaticText "불가"
+              - link "미배포 문항 2건 조회" [ref=e6969]
+          - row
+            - cell "개발 서비스" [ref=e6942]
+            - cell "-" [ref=e6943]
+            - cell "-" [ref=e6944]
+            - cell "-" [ref=e6945]
+            - cell "-" [ref=e6946]
+            - cell "불가 미배포 문항 2건 조회" [ref=e6947]
+              - StaticText "불가"
+              - link "미배포 문항 2건 조회" [ref=e6970]
+      - generic
+        - heading "포함 문항 (2)" [level=3, ref=e6929]
+        - table
+          - rowgroup
+            - row
+              - columnheader "순서" [ref=e6971]
+              - columnheader "문항 ID" [ref=e6972]
+              - columnheader "문제" [ref=e6973]
+              - columnheader "형태" [ref=e6974]
+              - columnheader "난이도" [ref=e6975]
+              - columnheader "단원 코드" [ref=e6976]
+              - columnheader "문항 상태" [ref=e6977]
+          - row
+            - cell "1" [ref=e6948]
+            - cell "2087725" [ref=e6949]
+              - StaticText "2087725"
+            - cell "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오." [ref=e6950]
+              - link "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오." [ref=e6978]
+            - cell "주관식 > 단답형 > 일반형" [ref=e6951]
+            - cell "하" [ref=e6952]
+            - cell "22MMAT0KOK1003040000" [ref=e6953]
+              - StaticText "22MMAT0KOK1003040000"
+            - cell "승인(사용)" [ref=e6954]
+          - row
+            - cell "2" [ref=e6955]
+            - cell "2087727" [ref=e6956]
+              - StaticText "2087727"
+            - cell "$xy<0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오." [ref=e6957]
+              - link "$xy<0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오." [ref=e6979]
+            - cell "서술형 > 단답형 > 단답 서술형" [ref=e6958]
+            - cell "하" [ref=e6959]
+            - cell "22MMAT0KOK1002050000" [ref=e6960]
+              - StaticText "22MMAT0KOK1002050000"
+            - cell "승인(사용)" [ref=e6961]
+      - link "목록" [ref=e6925]
+      - link "수정" [ref=e6926]

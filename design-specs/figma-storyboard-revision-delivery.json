@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-12",
+  "status": "revised_verified_ready_for_user_review",
+  "figmaFile": "xCjdhdFkSbToMiRVlXVN2V",
+  "masterIndexUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-20632",
+  "sourceModalUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16776",
+  "draftModalUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16922",
+  "omrUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-17928",
+  "mathPopupUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-18346",
+  "audit": {
+    "version": "0.4",
+    "baseScreens": 30,
+    "popupComponents": 52,
+    "popupUiVariants": 71,
+    "sourceReconstructedUiVariants": 2,
+    "sourceStatesMapped": 373,
+    "explicitScreenTransitions": 44,
+    "outsideFrameText": 0,
+    "descriptionTextOverlaps": 0,
+    "pageCaptionOverlaps": 0,
+    "originalVectorAspectErrors": 0,
+    "duplicateNotesRemoved": 40,
+    "anchorAlignmentCorrections": 27,
+    "numberedDescriptionRows": 187,
+    "sourceModal": "8:16776",
+    "draftModal": "8:16922",
+    "mathPopup": "8:18346",
+    "precisePopupComponents": 52,
+    "precisePopupControls": 302,
+    "mergedFooterGuessingRemoved": true,
+    "finalReviewDate": "2026-11-12",
+    "finalVerification": {
+      "method": "Live Figma public plugin API readback plus screenshot review",
+      "baseScreens": 30,
+      "precisePopupComponents": 52,
+      "numberedDescriptionRows": 187,
+      "outsideFrameText": 0,
+      "descriptionTextOverlaps": 0,
+      "overlapExamples": [],
+      "preciseControlBoxesOutsideCrop": 0,
+      "mathTabsScreenshot": "review-v4-math-precise-final.png",
+      "sourceModalScreenshot": "review-v4-source-precise.png",
+      "previousChecksPreserved": [
+        "pageCaptionOverlaps",
+        "originalVectorAspectErrors"
+      ],
+      "freshCheckScope": "Text bounds and same-frame description overlap throughout the 30 current screen sections; all 52 precise modal tags; math tab visual review"
+    }
+  },
+  "userCommentsAddressed": [
+    {
+      "id": 1,
+      "topic": "세로로 늘어난 이미지",
+      "change": "승인된 목록 SVG의 원래 좌표·비율을 복구하고 SCALE 제약을 제거했습니다. 캡처는 원본 비율로 표시합니다."
+    },
+    {
+      "id": 2,
+      "topic": "텍스트 겹침",
+      "change": "Description 표와 페이지 전환 캡션을 다시 배치하고 긴 모달 설명은 옆 열로 이어 배치합니다."
+    },
+    {
+      "id": 3,
+      "topic": "조건부 버튼 누락",
+      "change": "임시저장 수정하기·검수완료 수정하기를 실제 모달로 표시하고 상태 수정 후 취소·저장 노출을 부분 화면으로 추가했습니다."
+    },
+    {
+      "id": 4,
+      "topic": "평가지 10/14·11/15 중복",
+      "change": "취소·저장의 번호와 Description을 실제 버튼 하나당 한 번으로 합쳤습니다."
+    },
+    {
+      "id": 5,
+      "topic": "평가지 8/12 등 전체 중복",
+      "change": "전체 메뉴의 중복 노트40개를 합치고 공통 처리 정책1개를 번호 없는 안내로 옮겼습니다."
+    },
+    {
+      "id": 6,
+      "topic": "실제와 다른 모달",
+      "change": "공통 입력폼 그림을 모두 제거했습니다. 실제 캡처와 보존 DOM·스타일을 사용하고 변형마다 실제 컨트롤302개의 좌표를 연결했습니다."
+    },
+    {
+      "id": 7,
+      "topic": "겹치는 연결선",
+      "change": "팝업 진입·탭 변경·화면 이동·닫기와 처리 결과에 서로 다른 경로를 사용합니다."
+    }
+  ],
+  "additionalReview": [
+    "모달의 탭별 UI와 조건별 확인창을 각각 구분했습니다.",
+    "기본 화면 30개를 유지하고 이전 상태373개의 정책·예외를 통합했습니다.",
+    "기본 화면 번호 위치27곳과 OMR 편집 요소 대응을 수정했습니다.",
+    "행렬은 수식입력기 안의 실제 행렬 버튼에서 연결했습니다.",
+    "알파벳·그리스 문자 하위 탭과 대소문자 UI는 원본 소스로 재현했습니다."
+  ],
+  "provenance": {
+    "primaryScreens": "실제 전체 페이지 캡처, 보존 DOM의 읽기 전용 렌더, 승인된 목록 벡터를 사용합니다.",
+    "popupUi": "실제 캡처와 보존 DOM·스타일을 사용합니다. 원본 소스 기반 재현2개는 실제 CMS 실행 캡처와 구분해 표기했습니다.",
+    "controls": "variant별 실제 이미지와 DOM bbox를 사용하며 통합 buttons 배열을 푸터로 가정하지 않습니다."
+  },
+  "knownUnverifiedScope": [
+    "실제 해석 HML 파일의 편집·저장",
+    "정상 디피니션 세트 ZIP의 등록·검수",
+    "다른 계정 역할의 권한 차이와 일부 오류 상황",
+    "서비스 CMS에서의 배포 수신과 채점"
+  ],
+  "artifacts": {
+    "consolidatedPlan": "revision-aligned-plan.json",
+    "popupPlan": "revision-modal-plan.json",
+    "preciseControls": "revision-precise-overlay-plan.json",
+    "registrationControls": "revision-registration-precise-controls.json",
+    "itemControls": "revision-item-precise-controls.json",
+    "paperSourceControls": "revision-paper-source-precise-controls.json",
+    "sourceVisual": "review-v4-source-precise.png",
+    "mathVisual": "review-v4-math-precise-final.png"
+  },
+  "cmsServerWritesDuringStoryboardRevision": 0,
+  "priorCmsInvestigationPersistentMutations": 95,
+  "finalReviewStillPending": false
+}

@@ -1,0 +1,160 @@
+{
+  "status": "unverified-ui",
+  "title": "수식입력기 · 알파벳·그리스 문자 하위 탭",
+  "imagePath": null,
+  "bbox": null,
+  "controls": [],
+  "finding": "알파벳 키패드의 원본 레이아웃 데이터와 DOM 생성 구조는 정적 소스에서 확인했다. 그러나 보존된 HTML에는 숫자·연산·기호 패널만 있고, 알파벳 패널의 렌더된 DOM이나 확인된 실제 PNG를 확보하지 못했다.",
+  "whyNoReadOnlyRender": "탭 전환은 숨겨 둔 두 패널의 CSS 표시를 바꾸는 방식이 아니다. render()가 keypad root를 비운 뒤 선택한 탭의 블록·행·키를 새로 생성한다. 보존 DOM의 클래스만 변경하는 기존 읽기 전용 방식으로 알파벳 패널을 복원할 수 없으므로 PNG와 bbox를 만들지 않았다. 원본 JavaScript는 실행하지 않았다.",
+  "checkedPreservedHtml": [
+    {
+      "path": "cms-knowledge/master-cms/sources/lab-math-demo-20261109.html",
+      "activeTab": "숫자·연산·기호",
+      "alphabetPanelPreserved": false
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/lab-math-hybrid-edited-20261109.html",
+      "activeTab": "숫자·연산·기호",
+      "alphabetPanelPreserved": false
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/lab-math-ink-failure-20261109.html",
+      "activeTab": "숫자·연산·기호",
+      "alphabetPanelPreserved": false
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/lab-math-keyboard-dialog-20261109.html",
+      "activeTab": "숫자·연산·기호",
+      "alphabetPanelPreserved": false
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypad-3c0a07197f9adcfae5df42f17b0f6702.js",
+      "line": 50,
+      "fact": "render()는 root.innerHTML을 비우고 선택한 탭의 버튼·body를 새로 만든다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypad-3c0a07197f9adcfae5df42f17b0f6702.js",
+      "line": 65,
+      "fact": "탭 클릭은 tabIndex를 변경한 뒤 render()를 호출한다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypad-3c0a07197f9adcfae5df42f17b0f6702.js",
+      "line": 84,
+      "fact": "원본 블록·행·키 DOM과 rowHeight·gap·flex를 생성한다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypad-3c0a07197f9adcfae5df42f17b0f6702.js",
+      "line": 125,
+      "fact": "일반 문자 표시도 KaTeX 마크업으로 생성한다. 임의 폰트의 문자 버튼으로 대체하지 않았다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypadLayouts-112c1863ddb28152ad9dd40343882fe5.js",
+      "line": 156,
+      "fact": "ALPHABET의 실제 네 행과 기능 키를 선언한다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/assets/mathKeypadLayouts-112c1863ddb28152ad9dd40343882fe5.js",
+      "line": 185,
+      "fact": "알파벳·그리스 문자 탭은 단일 블록, 행 높이 56px, 키 사이 gap 6px이다."
+    }
+  ],
+  "sourceConfirmedLayout": {
+    "tabLabel": "알파벳·그리스 문자",
+    "tabGapPx": 0,
+    "rowHeightPx": 56,
+    "keyGapPx": 6,
+    "rows": [
+      [
+        "q",
+        "w",
+        "e",
+        "r",
+        "t",
+        "y",
+        "u",
+        "i",
+        "o",
+        "p",
+        {
+          "action": "backspace",
+          "span": 3,
+          "align": "end"
+        }
+      ],
+      [
+        "a",
+        "s",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        {
+          "action": "enter",
+          "span": 4,
+          "align": "end"
+        }
+      ],
+      [
+        {
+          "action": "shift",
+          "span": 3,
+          "align": "start"
+        },
+        "z",
+        "x",
+        "c",
+        "v",
+        "b",
+        "n",
+        "m",
+        {
+          "action": "shift",
+          "span": 3,
+          "align": "end"
+        }
+      ],
+      [
+        "α",
+        "β",
+        "γ",
+        "θ",
+        "σ",
+        "μ",
+        "λ",
+        "Δ",
+        "Σ",
+        "Ω",
+        {
+          "label": "스페이스",
+          "action": "space",
+          "span": 3
+        }
+      ]
+    ]
+  },
+  "verifiedImageCandidates": [
+    {
+      "path": "cms-knowledge/master-cms/evidence/169-set-preview-keyboard.png",
+      "result": "직접 확인한 이미지는 문항 상세 하단이며 키패드가 표시되지 않는다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/evidence/503-area-first-math-keyboard.png",
+      "result": "직접 확인한 이미지는 OMR 입력 필드이며 알파벳 키패드가 표시되지 않는다."
+    },
+    {
+      "path": "cms-knowledge/master-cms/evidence/3402-lab-math-backdrop-point-observe.png",
+      "result": "기존 직접 확인 이미지의 활성 하위 탭은 숫자·연산·기호이다."
+    }
+  ],
+  "execution": "로컬 정적 파일과 기존 PNG만 확인했다. 브라우저·Figma·CMS를 제어하지 않았고 네트워크 요청이나 원본 스크립트를 실행하지 않았다.",
+  "supersededBy": [
+    "design-specs/revision-item-modal-render/lab-alpha.json",
+    "design-specs/revision-item-modal-render/lab-alpha-upper.json"
+  ],
+  "subsequentAuthorization": "원본 공개 API를 로컬 데모에서 실행하는 소스 기반 재현이 추가 승인되어 별도 source-reconstructed 산출물을 생성했다."
+}

@@ -1,0 +1,12 @@
+{"steps":[
+ {"label":"1498-lab-restore-reopen","command":["open","https://dev-exambank.dongahub.com/lab/view/omr-render.donga"]},
+ {"label":"1499-lab-restore-no-type-click","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore without selected type'};})()"]},
+ {"label":"1500-lab-restore-no-type-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1501-lab-restore-select-single-choice","command":["select","#omrTypeSel","OBSACN"]},
+ {"label":"1502-lab-restore-choice-default","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1503-lab-restore-invalid-omr-input","command":["fill","#omrJsonIn","{broken"]},
+ {"label":"1504-lab-restore-invalid-omr-click","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore malformed OMR JSON'};})()"]},
+ {"label":"1505-lab-restore-invalid-omr-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1506-lab-restore-clear-to-default","command":["eval","(() => {document.querySelector('#omrClearFormBtn').click();return {action:'Reset current type to default form and JSON'};})()"]},
+ {"label":"1507-lab-restore-clear-readback","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]}
+],"tailChars":1500}

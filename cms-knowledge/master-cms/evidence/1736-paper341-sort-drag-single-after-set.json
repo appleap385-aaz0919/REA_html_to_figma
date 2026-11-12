@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1736-paper341-sort-drag-single-after-set",
+  "startedUtc": "2026-11-09T06:53:20.343253+00:00",
+  "command": [
+    "drag",
+    "#paperItemTable tbody[data-sort-group]:first-of-type [data-sort-handle]",
+    "#paperItemTable tbody[data-sort-group]:last-of-type tr:last-child td:last-child"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=341&curriculum=22&pageNum=1&pageSize=30"
+    },
+    "error": null,
+    "localSeconds": 0.073
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Failed to read: 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다. (os error 10060) (the command reached the daemon but no response came back; it may or may not have run, so it was not retried)",
+    "code": "outcome_unknown",
+    "localSeconds": 30.096
+  }
+}

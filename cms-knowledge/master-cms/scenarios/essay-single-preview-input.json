@@ -1,0 +1,8 @@
+{
+  "steps": [
+    {"label":"816-single-essay-preview-before-input","command":["snapshot"]},
+    {"label":"817-single-essay-preview-normal-input","command":["click","{ref}"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- button \"일반 입력으로 전환\" \\[ref=(e\\d+)\\]"},
+    {"label":"818-single-essay-preview-input-ready","command":["snapshot"],"screenshot":true}
+  ],
+  "tailChars":4200
+}

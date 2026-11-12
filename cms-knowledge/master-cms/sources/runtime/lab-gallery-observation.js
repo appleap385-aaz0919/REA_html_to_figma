@@ -1,0 +1,12 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/lab/view/omr.donga')throw Error('Gallery scope mismatch');
+ const values=(selector)=>[...document.querySelectorAll(selector)].map(e=>({value:window.ValueTypeInput?.getValue(e),allowed:e.dataset.vtAllowed,placeholder:e.dataset.vtPlaceholder,types:[...e.querySelectorAll('.vt-type-opt')].map(b=>({type:b.dataset.type,disabled:b.disabled})),inputs:[...e.querySelectorAll('input,math-field')].map(f=>({tag:f.tagName,type:f.type,value:f.value,disabled:f.matches(':disabled')||f.hasAttribute('disabled')}))}));
+ const roots=[...document.querySelectorAll('.omr-live [data-omr-code]')];
+ return {url:location.href,visibility:document.visibilityState,mode:document.querySelector('input[name=omrViewMode]:checked')?.value,wrapClass:document.querySelector('#omrNarrowCol')?.className,
+  collapses:[...document.querySelectorAll('.accordion-collapse')].map(e=>({id:e.id,shown:e.classList.contains('show'),transition:e.classList.contains('collapsing')})),
+  leaves:roots.map(e=>{const code=e.dataset.omrCode,lock=e.closest('.accordion-body')?.querySelector('.omr-lock');let liveData=null,lockData=null;try{liveData=window.omrSerializers?.[code]?.serialize(e);const lr=lock?.querySelector('[data-omr-code]');if(lr)lockData=window.omrSerializers?.[code]?.serialize(lr);}catch(_){}return {code,liveData,lockData,lockShown:lock&&!lock.classList.contains('d-none'),liveDisabled:e.querySelectorAll(':disabled').length,lockDisabled:lock?.querySelectorAll(':disabled').length,lockFieldsetDisabled:lock?.querySelector('fieldset')?.disabled,liveNames:[...e.querySelectorAll('[name]')].map(x=>x.name),lockNames:[...(lock?.querySelectorAll('[name]')||[])].map(x=>x.name)};}),
+  valueInput:values('#vtInputCard .vt-cell'),valueInputDump:document.querySelector('#vtDumpOut')?.innerText,
+  dropdownSources:[...document.querySelectorAll('#vtdSrcList .vtd-src-row')].map(e=>({id:e.dataset.optid,label:e.querySelector('.vtd-src-label')?.innerText,value:window.ValueTypeInput?.getValue(e.querySelector('.vt-cell')),deleteDisabled:e.querySelector('.vtd-src-del')?.disabled})),
+  dropdowns:[...document.querySelectorAll('#vtdCard .vtd-cell')].map(e=>({value:window.ValueTypeDropdown?.getValue(e),text:e.innerText,html:e.innerHTML})),dropdownDump:document.querySelector('#vtdDumpOut')?.innerText,
+  scroll:[...document.querySelectorAll('.page-wrapper')].map(e=>({scrollTop:e.scrollTop,clientHeight:e.clientHeight,scrollHeight:e.scrollHeight}))};
+})()

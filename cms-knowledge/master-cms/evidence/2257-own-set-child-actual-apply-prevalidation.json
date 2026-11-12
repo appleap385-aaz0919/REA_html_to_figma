@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2257-own-set-child-actual-apply-prevalidation",
+  "startedUtc": "2026-11-09T23:55:52.268166+00:00",
+  "command": [
+    "eval",
+    "(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242'||document.querySelector('.modal.show'))throw Error('Own clean modify only');const buttons=[...document.querySelectorAll('button')].filter(e=>e.innerText.trim()==='전체 반영'&&e.getClientRects().length);if(buttons.length!==2||buttons.some(e=>e.getAttribute('onclick')!=='itemApplyAll();'||e.matches(':disabled')))throw Error('Expected identical header/footer apply actions');buttons[0].click();return {clickedEntryOnly:true,finalConfirmClicked:false,visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),activeTabs:[...document.querySelectorAll('.nav-tabs [role=tab].active')].map(e=>e.innerText)};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.097
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10",
+      "result": {
+        "activeTabs": [
+          "OMR 수정"
+        ],
+        "alerts": [
+          "\n                                한글 편집기에서 저장한 내용은 아직 문항에 반영되지 않습니다. [임시 저장] 또는 [전체 반영]을 눌러야 반영됩니다.\n                            ",
+          "",
+          "정답을 입력해주세요."
+        ],
+        "clickedEntryOnly": true,
+        "finalConfirmClicked": false,
+        "visibleModals": []
+      }
+    },
+    "error": null,
+    "localSeconds": 0.612
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10",
+      "refs": {
+        "e29916": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e29917": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e29918": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e29919": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e29920": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e29921": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e29922": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e29923": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e29924": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e29925": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e29926": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e29927": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e29928": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e29929": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e29930": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e29931": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e29932": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e29933": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e29934": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e29935": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e29936": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e29937": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e29938": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e29939": {
+          "name": "",
+          "role": "button"
+        },
+        "e29992": {
+          "name": "",
+          "role": "alert"
+        },
+        "e29993": {
+          "name": "문항 형태 *",
+          "role": "heading"
+        },
+        "e29994": {
+          "name": "이미지 업로드",
+          "role": "heading"
+        },
+        "e29995": {
+          "name": "지문 2089241",
+          "role": "heading"
+        },
+        "e29996": {
+          "name": "문항 2089242",
+          "role": "heading"
+        },
+        "e29997": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e29998": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e29999": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e30000": {
+          "name": " 업로드",
+          "role": "button"
+        },
+        "e30001": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e30002": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e30003": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e30004": {
+          "name": " 유사 정답 추가",
+          "role": "button"
+        },
+        "e30005": {
+          "name": "객관식",
+          "role": "option"
+        },
+        "e30006": {
+          "name": "주관식",
+          "role": "option"
+        },
+        "e30007": {
+          "name": "서술형",
+          "role": "option"
+        },
+        "e30008": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e30009": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e30010": {
+          "name": "일반형",
+          "role": "option"
+        },
+        "e30011": {
+          "name": "그리기형",
+          "role": "option"
+        },
+        "e30012": {
+          "name": "영역 선택형",
+          "role": "option"
+        },
+        "e30013": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e30014": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e30015": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e30016": {
+          "name": "",
+          "role": "button"
+        },
+        "e30017": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e30018": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e30019": {
+          "name": "",
+          "role": "button"
+        },
+        "e30020": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e30021": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e30022": {
+          "name": "",
+          "role": "button"
+        },
+        "e30023": {
+          "name": "대소구분",
+          "role": "checkbox"
+        },
+        "e30024": {
+          "name": "공백구분",
+          "role": "checkbox"
+        },
+        "e30025": {
+          "name": "입력 박스형",
+          "role": "option"
+        },
+        "e30026": {
+          "name": "범례 선택형",
+          "role": "option"
+        },
+        "e30027": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e30028": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e30029": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e30030": {
+          "name": "Menu Menu",
+          "role": "button"
+        },
+        "e30031": {
+          "name": "Menu Menu",
+          "role": "button"
+        },
+        "e30032": {
+          "name": "Menu Menu",
+          "role": "button"
+        }
+      },
+      "removedRefs": [
+        "@e29983",
+        "@e29984",
+        "@e29985",
+        "@e29986",
+        "@e29987",
+        "@e29988",
+        "@e29989",
+        "@e29990",
+        "@e29991"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e29916]\n      - link \"문제은행 마스터 CMS\" [ref=e29917]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e29930]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e29931]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e29932]\n          - link \"HML 문항 등록\" [ref=e29933]\n          - link \"디피니션 문항 등록\" [ref=e29934]\n          - link \"쌍둥이 그룹 관리\" [ref=e29935]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e29936]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e29937]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e29938]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e29918]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e29919]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089242 (2088873)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"2089241\"\n      - StaticText \"원본 파일\"\n      - StaticText \"QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml\"\n      - button \"\" [ref=e29939]\n        - StaticText \"\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"HML 변환\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e29926]\n        - tab \"한글(HML) 수정\" [ref=e29927]\n        - tab \"HTML 수정\" [ref=e29928]\n        - tab \"OMR 수정\" [selected, ref=e29929]\n      - link \"취소\" [ref=e29920]\n      - button \"임시 저장\" [ref=e29921]\n      - button \"전체 반영\" [ref=e29922]\n      - generic\n        - generic\n          - heading \"문항 형태 *\" [level=3, ref=e29993]\n            - StaticText \"\"\n            - StaticText \"문항 형태 *\"\n          - combobox [expanded=false, ref=e29997]: 주관식\n            - MenuListPopup\n              - option \"객관식\" [ref=e30005]\n              - option \"주관식\" [selected, ref=e30006]\n              - option \"서술형\" [ref=e30007]\n          - combobox [expanded=false, ref=e29998]: 단답형\n            - MenuListPopup\n              - option \"단답형\" [selected, ref=e30008]\n              - option \"다답형\" [ref=e30009]\n          - combobox [expanded=false, ref=e29999]: 일반형\n            - MenuListPopup\n              - option \"일반형\" [selected, ref=e30010]\n              - option \"그리기형\" [ref=e30011]\n              - option \"영역 선택형\" [ref=e30012]\n        - generic\n          - heading \"이미지 업로드\" [level=3, ref=e29994]\n            - StaticText \"\"\n            - StaticText \"이미지 업로드\"\n          - button \" 업로드\" [ref=e30000]\n            - StaticText \"\"\n            - StaticText \"업로드\"\n        - tabpanel\n          - generic\n            - heading \"지문 2089241\" [level=3, ref=e29995]\n              - StaticText \"\"\n              - StaticText \"지문 2089241\"\n            - paragraph\n              - StaticText \"다음 행렬의 꼴을 말하시오.\"\n          - generic\n            - heading \"문항 2089242\" [level=3, ref=e29996]\n              - StaticText \"\"\n              - StaticText \"문항 2089242\"\n            - article\n              - paragraph\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLTable\n                        - MathMLTableRow\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLNumber\n                                - StaticText \"2\"\n                        - MathMLTableRow\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLNumber\n                                - StaticText \"3\"\n                      - MathMLOperator\n                        - StaticText \")\"\n              - generic\n                - heading \"정답\" [level=3, ref=e30013]\n                - paragraph\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"2\"\n                        - MathMLOperator\n                          - StaticText \"×\"\n                        - MathMLNumber\n                          - StaticText \"1\"\n                  - StaticText \"행렬\"\n          - generic\n            - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e30001]\n              - StaticText \"\"\n              - StaticText \"OMR 편집 (정답 설정)\"\n            - button \" OMR 미리보기\" [ref=e30002]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - generic\n              - generic\n                - StaticText \"정답 *\"\n              - combobox [expanded=false, ref=e30003]: 입력 박스형\n                - MenuListPopup\n                  - option \"입력 박스형\" [selected, ref=e30025]\n                  - option \"범례 선택형\" [ref=e30026]\n              - StaticText \"설정\"\n              - generic\n                - math \"math input field\" [ref=e30014] editable [tabindex, contenteditable]\n                  - textbox [ref=e30027]\n                  - generic\n                    - generic\n                      - StaticText \"앞 수식어\"\n                    - button \"Menu Menu\" [ref=e30030]\n                      - image \"Menu\"\n                      - StaticText \"Menu\"\n                  - status\n                - button \"Σ\" [ref=e30015]\n              - button \"\" [expanded=false, ref=e30016]\n                - StaticText \"\"\n              - generic\n                - math \"math input field\" [ref=e30017] editable [tabindex, contenteditable]\n                  - textbox [ref=e30028]\n                  - generic\n                    - generic\n                      - StaticText \"뒤 수식어\"\n                    - button \"Menu Menu\" [ref=e30031]\n                      - image \"Menu\"\n                      - StaticText \"Menu\"\n                  - status\n                - button \"Σ\" [ref=e30018]\n              - button \"\" [expanded=false, ref=e30019]\n                - StaticText \"\"\n              - StaticText \"정답\"\n              - generic\n                - math \"math input field\" [ref=e30020] editable [tabindex, contenteditable]\n                  - textbox [ref=e30029]\n                  - generic\n                    - generic\n                      - StaticText \"정답 입력\"\n                    - button \"Menu Menu\" [ref=e30032]\n                      - image \"Menu\"\n                      - StaticText \"Menu\"\n                  - status\n                - button \"Σ\" [ref=e30021]\n              - button \"\" [expanded=false, ref=e30022]\n                - StaticText \"\"\n              - LabelText\n                - checkbox \"대소구분\" [checked=false, ref=e30023]\n                - StaticText \"대소구분\"\n              - LabelText\n                - checkbox \"공백구분\" [checked=false, ref=e30024]\n                - StaticText \"공백구분\"\n              - button \" 유사 정답 추가\" [ref=e30004]\n                - StaticText \"\"\n                - StaticText \"유사 정답 추가\"\n      - link \"취소\" [ref=e29923]\n      - button \"임시 저장\" [ref=e29924]\n      - button \"전체 반영\" [ref=e29925]\n  - alert [ref=e29992] clickable [cursor:pointer]\n    - StaticText \"\"\n    - StaticText \"정답을 입력해주세요.\""
+    },
+    "error": null,
+    "localSeconds": 0.327
+  }
+}

@@ -1,0 +1,1 @@
+(()=>({width:innerWidth,height:innerHeight,dpr:devicePixelRatio,canvases:[...document.querySelectorAll('canvas')].map(e=>({rect:e.getBoundingClientRect().toJSON()})),layers:[...document.querySelectorAll('[role=gridcell]')].filter(e=>['Frame','Section 1'].includes(e.textContent.trim())).map(e=>({text:e.textContent,rect:e.getBoundingClientRect().toJSON()}))}))()

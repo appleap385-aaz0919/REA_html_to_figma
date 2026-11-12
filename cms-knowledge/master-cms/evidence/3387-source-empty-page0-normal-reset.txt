@@ -1,0 +1,239 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e43608]
+      - link "문제은행 마스터 CMS" [ref=e43609]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e43614]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e43615]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e43616]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e43617]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e43618]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e43610]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 출처 관리"
+      - heading "문항 출처 관리" [level=2, ref=e43611]
+      - generic
+        - combobox [expanded=false, ref=e43619]: 출처코드
+          - MenuListPopup
+            - option "출처코드" [selected, ref=e43654]
+            - option "출처명" [ref=e43655]
+        - textbox "출처코드 / 출처명" [ref=e43620]
+        - combobox [expanded=false, ref=e43621]: 22
+          - MenuListPopup
+            - option "교육과정 전체" [ref=e43656]
+            - option "22" [selected, ref=e43657]
+            - option "15" [ref=e43658]
+        - combobox [expanded=false, ref=e43622]: 학교급 전체
+          - MenuListPopup
+            - option "학교급 전체" [selected, ref=e43659]
+            - option "초등" [ref=e43660]
+            - option "중학" [ref=e43661]
+            - option "고등" [ref=e43662]
+        - combobox [expanded=false, ref=e43623]: 과목군 전체
+          - MenuListPopup
+            - option "과목군 전체" [selected, ref=e43663]
+            - option "수학군" [ref=e43664]
+        - combobox [expanded=false, disabled, ref=e43624]: 과목 전체
+          - MenuListPopup
+            - option "과목 전체" [disabled, ref=e43665]
+            - option "수학" [disabled, ref=e43666]
+            - option "수학" [disabled, ref=e43667]
+            - option "공통수학1" [disabled, ref=e43668]
+            - option "공통수학2" [disabled, ref=e43669]
+            - option "기본수학1" [disabled, ref=e43670]
+            - option "기본수학2" [disabled, ref=e43671]
+            - option "수학1" [disabled, ref=e43672]
+            - option "수학2" [disabled, ref=e43673]
+            - option "대수" [disabled, ref=e43674]
+            - option "미적분1" [disabled, ref=e43675]
+            - option "미적분2" [disabled, ref=e43676]
+            - option "확률과통계" [disabled, ref=e43677]
+            - option "기하" [disabled, ref=e43678]
+            - option "직무수학" [disabled, ref=e43679]
+            - option "인공지능수학" [disabled, ref=e43680]
+            - option "수학과 문화" [disabled, ref=e43681]
+            - option "수학" [disabled, ref=e43682]
+        - combobox [expanded=false, disabled, ref=e43625]: 학년 전체
+          - MenuListPopup
+            - option "학년 전체" [disabled, ref=e43683]
+            - option "중학1" [disabled, ref=e43684]
+            - option "고등1" [disabled, ref=e43685]
+            - option "초등1" [disabled, ref=e43686]
+            - option "중학2" [disabled, ref=e43687]
+            - option "초등2" [disabled, ref=e43688]
+            - option "고등2" [disabled, ref=e43689]
+            - option "고등3" [disabled, ref=e43690]
+            - option "중학3" [disabled, ref=e43691]
+            - option "초등3" [disabled, ref=e43692]
+            - option "고등 공통" [disabled, ref=e43693]
+            - option "초등4" [disabled, ref=e43694]
+            - option "초등5" [disabled, ref=e43695]
+            - option "초등6" [disabled, ref=e43696]
+        - combobox [expanded=false, ref=e43626]: 학기 전체
+          - MenuListPopup
+            - option "학기 전체" [selected, ref=e43697]
+            - option "공통학기" [ref=e43698]
+            - option "1학기" [ref=e43699]
+            - option "2학기" [ref=e43700]
+        - combobox [expanded=false, ref=e43627]: 판형
+          - MenuListPopup
+            - option "판형" [selected, ref=e43701]
+            - option "2000" [ref=e43702]
+            - option "2001" [ref=e43703]
+            - option "2002" [ref=e43704]
+            - option "2003" [ref=e43705]
+            - option "2004" [ref=e43706]
+            - option "2005" [ref=e43707]
+            - option "2006" [ref=e43708]
+            - option "2007" [ref=e43709]
+            - option "2008" [ref=e43710]
+            - option "2009" [ref=e43711]
+            - option "2010" [ref=e43712]
+            - option "2011" [ref=e43713]
+            - option "2012" [ref=e43714]
+            - option "2013" [ref=e43715]
+            - option "2014" [ref=e43716]
+            - option "2015" [ref=e43717]
+            - option "2016" [ref=e43718]
+            - option "2017" [ref=e43719]
+            - option "2018" [ref=e43720]
+            - option "2019" [ref=e43721]
+            - option "2020" [ref=e43722]
+            - option "2021" [ref=e43723]
+            - option "2022" [ref=e43724]
+            - option "2023" [ref=e43725]
+            - option "2024" [ref=e43726]
+            - option "2025" [ref=e43727]
+            - option "2026" [ref=e43728]
+            - option "2027" [ref=e43729]
+            - option "2028" [ref=e43730]
+            - option "2029" [ref=e43731]
+            - option "2030" [ref=e43732]
+            - option "2031" [ref=e43733]
+            - option "2032" [ref=e43734]
+            - option "2033" [ref=e43735]
+            - option "2034" [ref=e43736]
+            - option "2035" [ref=e43737]
+            - option "2036" [ref=e43738]
+            - option "2037" [ref=e43739]
+            - option "2038" [ref=e43740]
+            - option "2039" [ref=e43741]
+            - option "2040" [ref=e43742]
+            - option "2041" [ref=e43743]
+            - option "2042" [ref=e43744]
+            - option "2043" [ref=e43745]
+            - option "2044" [ref=e43746]
+            - option "2045" [ref=e43747]
+            - option "2046" [ref=e43748]
+            - option "2047" [ref=e43749]
+            - option "2048" [ref=e43750]
+            - option "2049" [ref=e43751]
+            - option "2050" [ref=e43752]
+        - combobox [expanded=false, ref=e43628]: 용도 전체
+          - MenuListPopup
+            - option "용도 전체" [selected, ref=e43753]
+            - option "공통" [ref=e43754]
+            - option "교사용" [ref=e43755]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e43632]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e43633]
+          - button "30일" [ref=e43634]
+          - button "90일" [ref=e43635]
+          - button "전체" [ref=e43636]
+        - StaticText "상태"
+        - checkbox "전체" [checked=true, ref=e43629]
+        - LabelText [ref=e43630] clickable [cursor:pointer]
+          - checkbox "사용" [checked=true, ref=e43637]
+          - StaticText "사용"
+        - LabelText [ref=e43631] clickable [cursor:pointer]
+          - checkbox "미사용" [checked=true, ref=e43638]
+          - StaticText "미사용"
+        - generic
+          - button " 초기화" [ref=e43639]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e43640]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e43944]: 10개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [selected, ref=e43946]
+            - option "30개씩 보기" [ref=e43947]
+            - option "50개씩 보기" [ref=e43948]
+            - option "100개씩 보기" [ref=e43949]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "0"
+        - StaticText "건"
+        - link " 등록" [ref=e43945]
+          - StaticText ""
+          - StaticText "등록"
+        - table
+          - rowgroup
+            - row
+              - columnheader "출처 ID" [ref=e43956]
+              - columnheader "출처코드" [ref=e43957]
+              - columnheader "출처명" [ref=e43958]
+              - columnheader "과목" [ref=e43959]
+              - columnheader "교육과정" [ref=e43960]
+              - columnheader "판형" [ref=e43961]
+              - columnheader "용도" [ref=e43962]
+              - columnheader "학교급" [ref=e43963]
+              - columnheader "학년" [ref=e43964]
+              - columnheader "학기" [ref=e43965]
+              - columnheader "상태" [ref=e43966]
+              - columnheader "매핑문항" [ref=e43967]
+              - columnheader "등록자 · 등록일" [ref=e43968]
+          - row
+            - cell "검색 결과가 없습니다." [ref=e43955]
+        - generic
+          - StaticText "총 0건 중 0∼0 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e43950]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e43951]
+              - StaticText ""
+          - listitem [level=1]
+            - link "0" [ref=e43952]
+          - listitem [level=1]
+            - link "다음" [ref=e43953]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e43954]
+              - StaticText ""

@@ -1,0 +1,16 @@
+{"steps":[
+ {"label":"1508-lab-restore-two-options-json","command":["fill","#omrJsonIn","[{\"options\":[{\"value\":\"Alpha\",\"value_type\":\"text\"},{\"value\":\"Beta\",\"value_type\":\"text\"}]}]"]},
+ {"label":"1509-lab-restore-beta-answer-json","command":["fill","#ansJsonIn","{\"rule_type\":\"VALUE\",\"allowed_answer\":[{\"value\":\"Beta\",\"value_type\":\"text\"}]}"]},
+ {"label":"1510-lab-restore-two-options-apply","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore Alpha/Beta with Beta correct'};})()"]},
+ {"label":"1511-lab-restore-two-options-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1512-lab-restore-live-edit-first-option","command":["fill","#omrSlot .omr-obsacn-row:first-child input[type=text]","Gamma"]},
+ {"label":"1513-lab-restore-live-edit-json-sync","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1514-lab-restore-live-select-first-answer","command":["eval","(() => {const r=document.querySelector('#omrSlot .omr-obsacn-row:first-child input[type=radio]');if(!r)throw Error('Live answer radio missing');r.click();return {action:'Select Gamma as answer in live form'};})()"]},
+ {"label":"1515-lab-restore-answer-json-sync","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1516-lab-restore-omr-pretty","command":["eval","(() => {document.querySelector('#omrPrettyBtn').click();return {action:'Pretty OMR JSON'};})()"]},
+ {"label":"1517-lab-restore-answer-pretty","command":["eval","(() => {document.querySelector('#ansPrettyBtn').click();return {action:'Pretty answer JSON'};})()"]},
+ {"label":"1518-lab-restore-pretty-readback","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]},
+ {"label":"1519-lab-restore-invalid-answer-json","command":["fill","#ansJsonIn","{bad"]},
+ {"label":"1520-lab-restore-invalid-answer-apply","command":["eval","(() => {document.querySelector('#omrRestoreBtn').click();return {action:'Restore malformed answer JSON'};})()"]},
+ {"label":"1521-lab-restore-invalid-answer-result","command":["eval","--file","sources/runtime/lab-omr-restore-observation.js"]}
+],"tailChars":800}

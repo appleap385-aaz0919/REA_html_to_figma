@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1283-source-registration-real-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1284-source-registration-real-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1285-source-form-curriculum-22","command":["select","{ref}","22"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 교육과정 선택"},
+  {"label":"1286-source-form-school-middle","command":["select","{ref}","중학"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 학교급 선택"},
+  {"label":"1287-source-form-middle-settled","command":["snapshot"]}
+ ],"tailChars":10000
+}

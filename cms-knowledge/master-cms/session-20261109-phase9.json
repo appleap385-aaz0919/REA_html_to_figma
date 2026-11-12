@@ -1,0 +1,29 @@
+{
+  "schemaVersion":1,
+  "date":"2026-11-09",
+  "status":"in_progress",
+  "scope":"dev-exambank.dongahub.com",
+  "evidenceRange":[612,666],
+  "testItemId":2088985,
+  "savedDetailId":2088687,
+  "sourceRefresh":{
+    "html":"sources/item-edit-20261109.html",
+    "schema":"sources/item-edit-20261109.schema.json",
+    "comparison":"sources/item-edit-20261109-comparison.json",
+    "captureEvidence":[616,617,618,619,620,621],
+    "characters":437373,
+    "result":"All14 leaf serializer script blocks are identical to the earlier source. All19 declared linked-script URLs are unchanged.",
+    "limit":"This comparison does not establish that all templates, server code or remote resource bytes are unchanged. AX source snapshots truncate at1200 nodes; copied HTML is separately validated and sanitized."
+  },
+  "observations":[
+    {"code":"SBMAAS","evidence":[623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644],"result":"Multiple-answer area-selection starts with one SET and two choices. Added second SET. Both SETs have math choices1/2. First symbol가 correct1 comma=true; second symbol나 correct2 comma=false. Separate radio group per SET. No order-fixed checkbox in this form. Lower scroll644 confirms both complete SETs and bottom controls."},
+    {"code":"SBMAAS","evidence":[645,646,647,648,649,650,651,652,653,654,655,656,657,658],"result":"Preview shows two dropdowns with symbols and first comma. Student1/2 correct650; reversed2/1 also correct655; duplicate1/1 incorrect658. This corroborates unordered multiple answers while retaining required answer multiplicity."},
+    {"code":"SBMAAS","evidence":[659,660,661,662,663,664,665,666],"result":"Full apply661 creates detail2088687. Master type subjective/multiple/area-selection. Reentry and lower scroll666 restore symbols가/나, four math choices, correct1/2, first comma checked and second unchecked."}
+  ],
+  "qualityNotes":[
+    {"evidence":[612,613,614,615],"rule":"Source-opening keyboard attempts had no verified source navigation. Not a CMS failure. Context menu616/617 opened source; clipboard copy618/619 was validated before preserving."},
+    {"evidence":623,"rule":"Dropdown label is 영역선택형 without internal space. Guard rejected mismatched text before action;624 then selected actual observed index87."}
+  ],
+  "limitations":["SET/choice lower-bound validation and empty/duplicate choices are still untested on this leaf.","Text/image choices and affixes remain untested on this leaf.","A single-SET serialization path is statically analyzed but not saved during this2-SET runtime case."],
+  "nextActions":["Continue SBMALD and SBMADD runtime forms and student interactions.","Continue three essay forms, actual OBSACN form save and boundaries.","Continue HML four editor slots and remaining Master menus."]
+}

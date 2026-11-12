@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"3129-own-twin-merge-add246-to239-once","command":["eval","--file","sources/runtime/twin-merge-own239-add-control246-once.js"]},
+ {"label":"3130-own-twin-merge-two-independent-groups-readback","command":["eval","--file","sources/runtime/two-single-groups-memberships-history-read.js"]},
+ {"label":"3131-own-twin-merge-second-group-current-ui","command":["eval","(()=>({url:location.href,twinCount:document.querySelector('#twinCountText')?.textContent.trim(),currentText:document.querySelector('#twinCurrent')?.innerText,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id)}))()"]},
+ {"label":"3132-own-twin-merge-second-group-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":120}

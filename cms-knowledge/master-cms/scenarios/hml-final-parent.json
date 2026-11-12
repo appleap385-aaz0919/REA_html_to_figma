@@ -1,0 +1,10 @@
+{
+ "steps":[
+  {"label":"1104-hml-verified-parent-return","command":["tab","0EFB900C688AC111C33EDFA475104F9D"]},
+  {"label":"1105-hml-verified-popup-close","command":["tab","close","91982538E0B4DACA85D08CABD50CBB61"]},
+  {"label":"1106-hml-parent-fresh-final","command":["snapshot"]},
+  {"label":"1107-hml-html-channel-focus","command":["focus","{ref}"],"refPattern":"- tab \"HTML 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1108-hml-html-channel-enter","command":["press","Enter"]},
+  {"label":"1109-hml-html-channel-state","command":["snapshot"],"screenshot":true}
+ ],"tailChars":1500
+}

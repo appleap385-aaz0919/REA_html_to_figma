@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>랩 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style><script src="/js/vendor/donga-question-viewer/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js"></script><script src="/js/vendor/donga-question-editor/donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js"></script></head>
+<body class="modal-open" style="overflow: hidden; padding-right: 0px;">
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  active">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                
+
+    <div class="page-header d-print-none mb-3">
+        <h2 class="page-title">랩</h2>
+        <div class="text-secondary mt-1">메뉴에 없는 개발·운영 보조 도구 모음</div>
+    </div>
+
+    <!-- ADMIN 전용 카드 -->
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">관리자</h3>
+        </div>
+        <div class="list-group list-group-flush">
+            <div class="list-group-item d-flex align-items-center gap-3">
+                <i class="ti ti-server fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">배포 정보</div>
+                    <div class="text-secondary small">서버 시작 2026-11-09 10:05 · 빌드 2026-11-09 09:15</div>
+                </div>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action d-flex align-items-center gap-3 text-start" data-bs-toggle="modal" data-bs-target="#cacheReloadModal">
+                <i class="ti ti-refresh fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">캐시 reload</div>
+                    <div class="text-secondary small">모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)</div>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action d-flex align-items-center gap-3 text-start" data-bs-toggle="modal" data-bs-target="#bundleVersionModal">
+                <i class="ti ti-package fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">외부 번들 버전</div>
+                    <div class="text-secondary small">문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)</div>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action d-flex align-items-center gap-3 text-start" data-bs-toggle="modal" data-bs-target="#sessionExpireModal">
+                <i class="ti ti-logout fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">역할별 로그아웃</div>
+                    <div class="text-secondary small">권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)</div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">테스트 · 확인</h3>
+        </div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action d-flex align-items-center gap-3" href="/lab/view/math-demo.donga" data-loading="">
+                <i class="ti ti-math-function fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">수식 입력기 데모</div>
+                    <div class="text-secondary small">KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)</div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center gap-3" href="/lab/view/omr.donga" data-loading="">
+                <i class="ti ti-forms fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">OMR 전체 유형</div>
+                    <div class="text-secondary small">문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)</div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center gap-3" href="/lab/view/omr-render.donga" data-loading="">
+                <i class="ti ti-download fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">OMR 복원 테스트</div>
+                    <div class="text-secondary small">OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)</div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center gap-3" href="/lab/view/question-frame.donga" data-loading="">
+                <i class="ti ti-frame fs-2 text-secondary"></i>
+                <div>
+                    <div class="fw-semibold">편집기 격리 테스트</div>
+                    <div class="text-secondary small">문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="modal modal-blur fade show" id="cacheReloadModal" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">캐시 reload</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold">다시 읽을 캐시를 고르세요.</div>
+                    <div class="text-secondary small mb-3">모든 서버에 적용됩니다.</div>
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" data-check-all="cacheTarget" data-label="전체" value="/cache/all-reload.donga">
+                        <span class="form-check-label">전체</span>
+                    </label>
+                    <div>
+                        <label class="form-check form-check-inline mb-0">
+                            <input type="checkbox" class="form-check-input" data-check-group="cacheTarget" data-label="공통코드" value="/cache/code-reload.donga">
+                            <span class="form-check-label">공통코드</span>
+                        </label>
+                        <label class="form-check form-check-inline mb-0">
+                            <input type="checkbox" class="form-check-input" data-check-group="cacheTarget" data-label="단원" value="/cache/unit-reload.donga">
+                            <span class="form-check-label">단원</span>
+                        </label>
+                        <label class="form-check form-check-inline mb-0">
+                            <input type="checkbox" class="form-check-input" data-check-group="cacheTarget" data-label="사이트" value="/cache/site-reload.donga">
+                            <span class="form-check-label">사이트</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok="">reload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('cacheReloadModal');
+            const okButton = modal.querySelector('[data-action-ok]');
+            const all = modal.querySelector('[data-check-all="cacheTarget"]');
+            const items = [...modal.querySelectorAll('[data-check-group="cacheTarget"]')];
+
+            // 전체가 체크면 all-reload 한 번, 아니면 고른 대상마다 한 번
+            function selectedTargets() {
+                return all.checked ? [all] : items.filter(function (cb) { return cb.checked; });
+            }
+
+            modal.addEventListener('show.bs.modal', function () {
+                [all].concat(items).forEach(function (cb) { cb.checked = false; });
+                okButton.disabled = true;
+            });
+
+            // common.js 의 전체·개별 동기화(document change)가 끝난 뒤에 읽는다
+            modal.addEventListener('change', function () {
+                setTimeout(function () { okButton.disabled = selectedTargets().length === 0; });
+            });
+
+            okButton.addEventListener('click', function () {
+                const targets = selectedTargets();
+                const label = targets.map(function (cb) { return cb.dataset.label; }).join(' · ');
+                bootstrap.Modal.getInstance(modal).hide();
+                Promise.all(targets.map(function (cb) {
+                    return fetch(cb.value).then(function (res) { return res.ok; }).catch(function () { return false; });
+                })).then(function (results) {
+                    const ok = results.every(Boolean);
+                    showToast(label + ' 캐시 reload ' + (ok ? '완료' : '실패'), ok ? 'success' : 'danger');
+                });
+            });
+        })();
+    </script>
+
+    <div class="modal modal-blur fade" id="sessionExpireModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">역할별 로그아웃</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold">로그아웃할 사이트 · 역할을 고르세요.</div>
+                    <div class="text-secondary small mb-3">고른 사이트 세션만 끊기고, 본인 세션은 제외됩니다.</div>
+                    
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input" data-check-all="roleTarget">
+                            <span class="form-check-label">전체</span>
+                        </label>
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input" data-check-group="roleTarget" value="MASTER:ADMIN">
+                            <span class="form-check-label">[MASTER] 관리자 (ADMIN)</span>
+                        </label><label class="form-check">
+                            <input type="checkbox" class="form-check-input" data-check-group="roleTarget" value="MASTER:USER">
+                            <span class="form-check-label">[MASTER] 사용자 (USER)</span>
+                        </label><label class="form-check">
+                            <input type="checkbox" class="form-check-input" data-check-group="roleTarget" value="DOUCLASS:ADMIN">
+                            <span class="form-check-label">[DOUCLASS] 관리자 (ADMIN)</span>
+                        </label><label class="form-check">
+                            <input type="checkbox" class="form-check-input" data-check-group="roleTarget" value="DOUCLASS:USER">
+                            <span class="form-check-label">[DOUCLASS] 사용자 (USER)</span>
+                        </label>
+                    
+                    
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-danger" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('sessionExpireModal');
+            const okButton = modal.querySelector('[data-action-ok]');
+            const all = modal.querySelector('[data-check-all="roleTarget"]');
+            const items = [...modal.querySelectorAll('[data-check-group="roleTarget"]')];
+
+            // 값은 "사이트:역할"
+            function selectedTargets() {
+                return items.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.value; });
+            }
+
+            modal.addEventListener('show.bs.modal', function () {
+                (all ? [all] : []).concat(items).forEach(function (cb) { cb.checked = false; });
+                okButton.disabled = true;
+            });
+
+            // common.js 의 전체·개별 동기화(document change)가 끝난 뒤에 읽는다
+            modal.addEventListener('change', function () {
+                setTimeout(function () { okButton.disabled = selectedTargets().length === 0; });
+            });
+
+            okButton.addEventListener('click', function () {
+                const targets = selectedTargets();
+                const body = new URLSearchParams();
+                targets.forEach(function (target) { body.append('targets', target); });
+                const token = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/);
+                bootstrap.Modal.getInstance(modal).hide();
+                fetch('/lab/session/expire.donga', {
+                    method: 'POST',
+                    headers: Object.assign({ 'Content-Type': 'application/x-www-form-urlencoded' },
+                            token ? { 'X-XSRF-TOKEN': decodeURIComponent(token[1]) } : {}),
+                    body: body
+                })
+                    .then(function (res) {
+                        if (!res.ok || res.redirected) throw new Error('session-expire ' + res.status);
+                        return res.text();
+                    })
+                    .then(function (count) {
+                        showToast(targets.length + '건 로그아웃: 세션 ' + count + '개', 'success');
+                    })
+                    .catch(function () {
+                        showToast(targets.length + '건 로그아웃 실패', 'danger');
+                    });
+            });
+        })();
+    </script>
+
+    <div class="modal modal-blur fade" id="bundleVersionModal" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">외부 번들 버전</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <table class="table table-vcenter mb-0">
+                        <thead>
+                            <tr>
+                                <th>번들</th>
+                                <th class="text-center">버전</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-bundle-global="DongaQuestionViewer" data-bundle-src="/js/vendor/donga-question-viewer/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js">
+                                <td>donga-question-viewer</td>
+                                <td class="text-center" data-bundle-version="">1.13.6</td>
+                            </tr>
+                            <tr data-bundle-global="DongaQuestionEditor" data-bundle-src="/js/vendor/donga-question-editor/donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js">
+                                <td>donga-question-editor</td>
+                                <td class="text-center" data-bundle-version="">0.3.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('bundleVersionModal');
+            let loaded = false;
+
+            // 처음 열 때만 번들을 불러와 전역 객체의 version 을 읽음(lab 진입 때는 안 불러옴)
+            modal.addEventListener('show.bs.modal', function () {
+                if (loaded) return;
+                loaded = true;
+                modal.querySelectorAll('[data-bundle-global]').forEach(function (row) {
+                    const cell = row.querySelector('[data-bundle-version]');
+                    const script = document.createElement('script');
+                    script.src = row.dataset.bundleSrc;
+                    script.onload = function () {
+                        const bundle = window[row.dataset.bundleGlobal];
+                        cell.textContent = (bundle && bundle.version) || '-';
+                    };
+                    script.onerror = function () { cell.textContent = '불러오기 실패'; };
+                    document.head.appendChild(script);
+                });
+            });
+        })();
+    </script>
+    
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+
+
+<div class="modal-backdrop fade show"></div></body></html>

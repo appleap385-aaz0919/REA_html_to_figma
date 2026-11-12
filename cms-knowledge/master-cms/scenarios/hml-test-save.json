@@ -1,0 +1,13 @@
+{
+ "steps":[
+  {"label":"1071-hml-save-pointer","command":["mouse","move","400","347"]},
+  {"label":"1072-hml-save-focus-down","command":["mouse","down"]},
+  {"label":"1073-hml-save-focus-up","command":["mouse","up"]},
+  {"label":"1074-hml-save-start","command":["press","Control+Home"]},
+  {"label":"1075-hml-save-marker","command":["keyboard","type","[QA-HML-20261109] "]},
+  {"label":"1076-hml-before-save-pixels","command":["snapshot"],"screenshot":true},
+  {"label":"1077-hml-editor-save","command":["click","{ref}"],"refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+  {"label":"1078-hml-save-response","command":["snapshot"],"screenshot":true},
+  {"label":"1079-hml-parent-pending-results","command":["eval","--file","sources/runtime/hml-parent-slots.js"]}
+ ],"tailChars":5000
+}

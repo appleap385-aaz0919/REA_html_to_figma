@@ -1,0 +1,49 @@
+{
+  "steps": [
+    {
+      "label": "2597-own-set-copy2089358-twin-add-resource-status-read",
+      "command": [
+        "eval",
+        "(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089358')throw Error('Own twin add resource observation required');return {receipt:window.__qaSetOriginalReaddResponse,resources:performance.getEntriesByType('resource').filter(e=>e.name.includes('/item/all/twin-add.donga?')&&(e.name.includes('targetItemId=2089359')||e.name.includes('targetItemId=2089242'))).map(e=>({url:e.name,initiatorType:e.initiatorType,responseStatus:typeof e.responseStatus==='number'?e.responseStatus:null,startTime:e.startTime,duration:e.duration})),count:document.getElementById('twinCountBadge')?.innerText};})()"
+      ]
+    },
+    {
+      "label": "2598-own-set-copy2089358-restored-current-tab-open",
+      "command": [
+        "eval",
+        "(async()=>{if(new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show')||document.getElementById('twinCountBadge').innerText.trim()!=='2')throw Error('Own restored two-set modal required');const button=[...document.querySelectorAll('#itemTwinModal [data-bs-target]')].find(e=>e.dataset.bsTarget==='#twinCurrentPane');if(!button.classList.contains('active')){const shown=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Current tab not shown')),5000);button.addEventListener('shown.bs.tab',()=>{clearTimeout(timer);resolve();},{once:true});});button.click();await shown;}return {currentTab:true,count:document.getElementById('twinCountBadge').innerText,tables:document.querySelectorAll('#twinCurrent table').length};})()"
+      ]
+    },
+    {
+      "label": "2599-own-set-copy2089358-restored-two-set-pixels",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "2600-own-set-copy2089358-restored-group-modal-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    },
+    {
+      "label": "2601-own-set-copy2089358-restored-group-modal-close",
+      "command": [
+        "eval",
+        "(async()=>{if(new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show'))throw Error('Own restored modal required');const modal=document.getElementById('itemTwinModal'),button=modal.querySelector('.modal-footer [data-bs-dismiss=modal]');const hidden=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Modal hidden timeout')),5000);modal.addEventListener('hidden.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});});button.click();await hidden;return {closed:true};})()"
+      ]
+    },
+    {
+      "label": "2602-own-set-copy2089358-membership-final-visual-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/cms-page-visual-state.js"
+      ]
+    }
+  ],
+  "tailChars": 220
+}

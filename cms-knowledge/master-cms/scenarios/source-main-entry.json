@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1271-source-entry-seed","command":["snapshot"]},
+  {"label":"1272-source-main-open","command":["click","{ref}"],"refPattern":"- link \"[^\"]* 문항 출처 관리\" \\[ref=(e\\d+)\\]"},
+  {"label":"1273-source-main-loaded","command":["snapshot"]},
+  {"label":"1274-source-main-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1275-source-main-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":12000
+}

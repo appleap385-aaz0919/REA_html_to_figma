@@ -1,0 +1,15 @@
+{
+ "steps":[
+  {"label":"1202-paper-add-candidate-seed","command":["snapshot"]},
+  {"label":"1203-paper-candidate-selected","command":["click","{ref}"],"refPattern":"- checkbox \"선택\" \\[checked=false, ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1204-paper-candidate-added","command":["click","{ref}"],"refPattern":"- button \"추가\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1205-paper-candidate-added-state","command":["snapshot"],"screenshot":true},
+  {"label":"1206-paper-two-groups-observed","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+  {"label":"1207-paper-duplicate-dialog-open","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 문항 추가\" \\[ref=(e\\d+)\\]"},
+  {"label":"1208-paper-duplicate-dialog-initial","command":["snapshot"]},
+  {"label":"1209-paper-duplicate-dialog-state","command":["snapshot"],"screenshot":true},
+  {"label":"1210-paper-duplicate-dialog-cancel","command":["click","{ref}"],"refPattern":"- button \"취소\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1211-paper-unsaved-edit-cancel","command":["click","{ref}"],"refPattern":"- link \"취소\" \\[ref=(e\\d+)\\]"},
+  {"label":"1212-paper-original-detail-restored","command":["snapshot"],"screenshot":true}
+ ],"tailChars":1800
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2939-copy-hml-before-marker-type-preflight",
+  "startedUtc": "2026-11-10T05:38:26.733954+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/copy-hml-before-marker-type-preflight.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "1345045935A453460BBF0355AA16063B",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078"
+    },
+    "error": null,
+    "localSeconds": 0.083
+  },
+  "targetIdBefore": "1345045935A453460BBF0355AA16063B",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078",
+      "result": {
+        "activeSlot": "passage",
+        "modified": false,
+        "pageCount": 1,
+        "parentItemDetailId": 2089078,
+        "popupItemId": 2089358,
+        "readyForOneMarkerType": true,
+        "viewport": {
+          "height": 875,
+          "width": 1290
+        }
+      }
+    },
+    "error": null,
+    "localSeconds": 0.112
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089358&itemDetailId=2089078",
+      "refs": {
+        "e38907": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e38908": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e38909": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e38910": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e38911": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e38912": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e38913": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [ref=e38909]\n    - button \"지문해석 수정\" [disabled, ref=e38910]\n    - button \"문제 수정\" [ref=e38911]\n    - button \"해답 수정\" [ref=e38912]\n  - button \"저장\" [ref=e38907]\n  - StaticText \"2089241_P.hml 을(를) 열었습니다.\"\n  - Iframe [ref=e38908]\n    - Iframe [ref=e38913]"
+    },
+    "error": null,
+    "localSeconds": 0.105
+  }
+}

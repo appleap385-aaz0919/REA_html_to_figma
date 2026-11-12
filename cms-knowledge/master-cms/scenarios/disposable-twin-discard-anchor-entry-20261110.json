@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"3063-own-single216-disposable-twin-anchor-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216"]},
+ {"label":"3064-own-single216-before-disposable-copy-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3065-own-single216-before-disposable-copy-baseline","command":["eval","--file","sources/runtime/own-item2089216-persistent-summary.js"]},
+ {"label":"3066-own-single216-generation-controls","command":["eval","(()=>{return {url:location.href,buttons:[...document.querySelectorAll('[data-twin-generate]')].map(e=>({disabled:e.disabled,data:{...e.dataset},html:e.outerHTML})),modals:[...document.querySelectorAll('.modal')].filter(e=>/twin/i.test(e.id)).map(e=>({id:e.id,text:e.innerText,controls:[...e.querySelectorAll('input,button')].map(x=>({tag:x.tagName,type:x.type,name:x.name,value:x.value,checked:x.checked,disabled:x.disabled,text:x.textContent.trim()}))}))};})()"]}
+],"tailChars":120}

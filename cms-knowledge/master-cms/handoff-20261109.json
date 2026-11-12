@@ -1,0 +1,101 @@
+{
+  "title":"마스터 CMS 조사: 월요일 재개 기록",
+  "pausedOn":"2026-11-06",
+  "intendedResumeDate":"2026-11-09",
+  "status":"paused_at_user_request",
+  "resumeTrigger":"사용자가 다시 시작하라고 명시하면 재개합니다. 자동 실행이나 예약 작업은 설정하지 않았습니다.",
+  "objective":"마스터 CMS의 모든 페이지, 정보, 기능, 상태, 정책, 예외와 관계를 기획자 관점에서 조사해 향후 QA·모니터링·스토리보드에 활용합니다. 단건과 세트 문항을 여러 표본으로 확인하고 실제 스크롤로 각 영역의 끝까지 확인합니다. 마스터 조사가 끝난 뒤 사용자가 서비스 CMS를 제공합니다.",
+  "userInstructions":[
+    "개발 서버의 데이터 수정과 실제 저장을 허용했습니다. 검증용 복제 문항2088985를 계속 사용합니다.",
+    "14개 OMR 유형의 실제 입력·미리보기·채점·저장·재조회와 HML 별도 편집기의4개 문서 슬롯을 우선 확인합니다.",
+    "문항 상세 오른쪽 HML 카드에는 원래 HML 미리보기 이미지가 나와야 합니다. 일부 빈 카드는 현재 오류이며 의도된 정책이 아닙니다.",
+    "확인한 화면, 실제 동작, 영속 저장, 소스 분석과 미확인 항목을 구분합니다. 전체100% 학습 완료를 주장하지 않습니다.",
+    "중단 지시가 오면 브라우저 조작과 후속 자동 조작을 즉시 중단합니다.",
+    "시간 측정 요청에는 고정 대기가 없고 동작 후 상태 수집이 약10~11초 걸린다고 설명했습니다. 사용자가 알겠으니 기존 방식대로 진행하라고 했으므로 추가 성능 조사는 하지 않습니다."
+  ],
+  "currentBrowserCheckpoint":{
+    "site":"https://dev-exambank.dongahub.com",
+    "url":"https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+    "windowId":6755210,
+    "sessionNamespace":"master-cms-learning-20261105",
+    "activeTab":"OMR 수정",
+    "modal":"OMR 미리보기",
+    "lastEvidence":"575-multiple-inner-third-answer",
+    "nextUnusedEvidencePrefix":576,
+    "freshObservationRequired":true,
+    "oldElementIndexesMustNotBeReused":true,
+    "currentSavedItemId":2088985,
+    "currentSavedDetailId":2088568,
+    "currentSavedType":"SBSAAS: 주관식 > 단답형 > 영역 선택형",
+    "currentSavedAnswers":"수식 선택지1/2, 정답1",
+    "unsavedAdminForm":{
+      "code":"SBMANM",
+      "name":"주관식 > 다답형 > 일반형",
+      "outerOrderFixed":true,
+      "sets":[
+        {"answers":["1","2"],"valueKind":"math","innerOrderFixedIntended":false},
+        {"answers":["3","4"],"valueKind":"math","innerOrderFixedIntended":true}
+      ],
+      "note":"첫 묶음의 내부 순서 옵션을568에서 Toggle 요청했습니다. 이 변경의 실제 채점 효과는 아직 확인하지 못했습니다. 새 결과가 예상과 다르면 옵션 상태부터 확인합니다."
+    },
+    "studentPreviewState":{
+      "field1":{"mode":"normal","value":"2"},
+      "field2":{"mode":"normal","value":"1"},
+      "field3":{"mode":"normal","value":"3","verifiedEvidence":575},
+      "field4":{"mode":"math","value":"","nextStep":"일반 입력으로 전환 후4를 입력합니다."},
+      "gradedUnderCurrentIntendedFlags":false
+    },
+    "pauseBoundary":"574 조작 뒤 중단 지시가 도착했습니다. 이미 시작된575 입력은 완료되어 값3의 readback을 확인했습니다.576은 실행되지 않았으며 파일도 없습니다. 이후 GUI 호출은 하지 않았습니다."
+  },
+  "resumeProcedure":[
+    "이 파일과 resume-state.json, session-20261106-phase7.json, omr-runtime-coverage.json, mutation-ledger.json을 먼저 읽습니다.",
+    "동일 Orca 실행 파일의 skills get computer-use --json으로 버전별 지침을 확인합니다. CUA/sky를 재시도하지 않습니다.",
+    "새 캡처576으로 창·URL·개발 호스트·현재 문항·모달·입력값을 확인합니다. 새 요소 번호만 사용합니다.",
+    "창 ID를 찾지 못하면 list-windows로 현재 창을 확인합니다. 일시적 도구 미노출을 크롬이 닫혔다고 단정하지 않습니다.",
+    "현재 미리보기가 유지되면 네 번째 답란을 일반 입력으로 전환하고4를 입력한 후 채점합니다. 의도한 설정에서는2,1,3,4가 정답이어야 합니다. 결과가 다르면 첫 내부 순서 옵션 실제 상태부터 재확인합니다.",
+    "둘째 묶음 내부 순서는 고정된 상태에서4,3으로 바꾸면 어떻게 되는지 비교해 두 내부 옵션의 독립성을 확인합니다.",
+    "상위 OMR SET 순서 옵션도 별도로 바꿔 묶음 순서를 바꾼 학생 답과 섞인 답을 비교합니다. 각 조건의 입력과 결과를 별도 기록합니다.",
+    "SBMANM 정상값을 전체 반영하고 최종 확인 뒤 상세 재조회와 수정 재진입으로2x2 입력값·옵션·유형 복원을 확인합니다. 이 유형은 아직 서버에 저장하지 않았습니다.",
+    "남은 주관식 다답형 영역 선택·선그리기·드래그앤드롭, 기본/단답/다답 서술형을 실제 검증합니다. 객관식 단답 N지의 실제 수정 저장과 개수 경계도 남아 있습니다.",
+    "HML 편집기의 지문·지문해석 슬롯이 있는 적절한 세트/해석 표본을 찾아 실제 로딩·편집·저장과 영향 범위를 검증합니다. 이후 나머지 마스터 메뉴 조사를 계속합니다."
+  ],
+  "ifVolatileBrowserStateWasLost":{
+    "principle":"브라우저 편집 상태가 주말 동안 유지된다고 보장하지 않습니다. 서버 저장 상태는 detail2088568의SBSAAS이며, SBMANM2x2는 미저장 상태입니다.",
+    "rebuild":[
+      "개발 CMS의 검증 문항2088985 상세를 열고 수정 > OMR로 진입합니다.",
+      "주관식 > 다답형 > 일반형으로 바꾸고 OMR SET2개, 각 정답 SET2개를 만듭니다.",
+      "각 정답의Σ 수식입력기에서 숫자 키패드와 적용을 사용해 첫 묶음1/2, 둘째 묶음3/4를 입력합니다.",
+      "상위 순서 고정=true, 첫 묶음 내부=false, 둘째 묶음 내부=true를 실제 화면에서 확인합니다.",
+      "미리보기를 열고 각 답란을 일반 입력으로 바꿔2/1/3/4를 입력한 뒤 비교를 계속합니다. 재구성을 이미 저장한 것으로 기록하지 않습니다."
+    ],
+    "inputCaution":"MathLive 내부 편집란에 UIA set-value를 쓰면 접근성 값만 바뀌고 실제 수식 모델이 갱신되지 않을 수 있습니다. 직접 붙여넣기도 성공 근거가 없었습니다. 숫자 키패드→적용 경로는 렌더·미리보기 채점·저장 복원까지 검증했습니다. 일반 텍스트를 쓰려면 먼저 입력 형태 메뉴에서 일반 텍스트를 명시적으로 선택합니다.",
+    "login":"세션이 만료되면 사용자에게 개발 CMS 재로그인을 요청합니다. 비밀번호나 쿠키를 추출하지 않습니다."
+  },
+  "verifiedResultsToKeep":[
+    "SBMANM 두 단계 순서가 모두 고정이면 학생2,1,3,4는 오답563,1,2,3,4는 정답566입니다.",
+    "현재 SBMANM 미리보기에는 한 문항 아래 세로 답란4개가 나옵니다. 미리보기를 닫았다 다시 열면 학생 입력은 초기화됩니다.",
+    "9개의 서버 업무 요청이 확인됐습니다. COPY1, 임시 저장1, 전체 반영7입니다. 이는 DB 변경 행 수가 아닙니다.",
+    "OBSAOX·OBMACN·OBMAOX·SBSANM(박스/범례)·SBSADR·SBSAAS는 제한된 정상 경로의 실제 저장·복원 근거가 있습니다. OBSACN은 기존 입력과 미리보기만 확인했고, 수정 폼 전체 반영은 남아 있습니다.",
+    "전체 사이트 페이지·기능의 분모와 완료율은 확정하지 않았습니다. coverage-inventory는354까지만 집계했으며 이후 실제 결과는phase4~7와 OMR runtime 파일을 참조합니다."
+  ],
+  "remainingMasterFamilies":["쌍둥이 그룹 관리 본 페이지","평가지 관리","문항 출처 관리","랩","전체 목록·등록 상태별 분기와 경계","HML·HTML 편집기의 남은 실제 동작과 저장","배포의 실제 실행·이력·서비스 반영 정책"],
+  "files":{
+    "mainResume":"resume-state.json",
+    "latestSession":"session-20261106-phase7.json",
+    "runtimeMatrix":"omr-runtime-coverage.json",
+    "mutationLedger":"mutation-ledger.json",
+    "staticRecipes":"research/omr-runtime-input-recipes.json",
+    "coverageInventory":"coverage-inventory.json",
+    "captureHelper":"capture.py",
+    "evidenceDirectory":"evidence/"
+  },
+  "tooling":{
+    "workspace":"D:\\jaehyuk.myung\\claude_demo\\Demo_36_REA_test",
+    "orca":"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\orca\\resources\\bin\\orca.exe",
+    "captureExample":"python cms-knowledge/master-cms/capture.py 576-monday-resume get-app-state -- --restore-window",
+    "guideCommand":"orca.exe skills get computer-use --json",
+    "captureRules":"실제 PNG와 AX를 함께 확인합니다. 페이지 전환 직후 반환 상태가 이전 화면이면 settled state를 다시 읽습니다. 드롭다운·스크롤·모달·리렌더 뒤 번호를 재사용하지 않습니다. 다른 창이 가리면 관련 없는 내용을 읽거나 클릭하지 않고 CMS를 앞으로 가져오도록 요청합니다.",
+    "koreanFiles":"한국어가 있는 소스는 apply_patch 또는 명시적UTF-8로 기록합니다. 기본 PowerShell 파이프를 통해 한국어 Python 소스를 보내지 않습니다.",
+    "historicalOneShot":"checkpoint-phase5.py는 과거1회 실행용 기록입니다. 현재 재개 시 실행하지 않습니다. 오래된 상태로 되돌아갈 수 있습니다."
+  }
+}

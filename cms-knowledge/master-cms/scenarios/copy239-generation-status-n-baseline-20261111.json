@@ -1,0 +1,44 @@
+{
+  "steps": [
+    {
+      "label": "3365-copy239-generation-status-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"
+      ]
+    },
+    {
+      "label": "3366-copy239-generation-status-n-controls",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-single-status-controls-observation.js"
+      ]
+    },
+    {
+      "label": "3367-copy239-generation-status-family-baseline",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/disposable-single-twin-original-controls-read.js"
+      ]
+    },
+    {
+      "label": "3368-copy239-generation-status-membership-baseline",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/disposable-single-family-memberships-history-read.js"
+      ]
+    },
+    {
+      "label": "3369-copy239-generation-status-n-page-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 100
+}

@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "paused_at_user_request",
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [
+    526,
+    575
+  ],
+  "testItemId": 2088985,
+  "currentSavedDetailId": 2088568,
+  "unsavedForm": {
+    "code": "SBMANM",
+    "omrSets": [
+      {
+        "answers": [
+          "1",
+          "2"
+        ],
+        "orderFixedIntended": false,
+        "orderFixedObserved": null
+      },
+      {
+        "orderFixed": true,
+        "answers": [
+          "3",
+          "4"
+        ]
+      }
+    ],
+    "omrSetsOrderFixed": true,
+    "valueKind": "math",
+    "saved": false
+  },
+  "observations": [
+    {
+      "code": "SBSAAS",
+      "evidence": [
+        526
+      ],
+      "result": "Fresh unobscured full screenshot confirms saved math1/2 and selected first radio, replacing partial visual limitation524."
+    },
+    {
+      "code": "SBMANM",
+      "evidence": [
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546
+      ],
+      "result": "Two-level OMR SET and answer SET structure. Initial lower-bound delete buttons visually disabled. Top SET order and each OMR SET internal order default checked. Added second answer SET and second OMR SET, producing2x2 math answers1/2 and3/4 through numeric keypad Apply. Explicit scroll537/546 observes all added lower regions and page bottom."
+    },
+    {
+      "code": "SBMANM",
+      "evidence": [
+        547,
+        552,
+        553,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566
+      ],
+      "result": "Student preview renders four vertical answer fields under one question. Normal/math input is independent per field. With both hierarchy order flags fixed,2,1,3,4 is incorrect and1,2,3,4 is correct. This form remains unsaved."
+    },
+    {
+      "code": "SBMANM",
+      "evidence": [
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575
+      ],
+      "result": "Closed ordered preview567. Requested first inner-order Toggle568 and reopened569. Current student inputs2/1/3 with fourth blank math. No grade under new intended flags yet. Input575 completed after stop signal; readback3 verified.576 not issued."
+    }
+  ],
+  "timingCheck": {
+    "userRequest": "Check whether data entry, buttons and non-list navigation have deliberate waits; user then accepted explanation and asked to continue unchanged.",
+    "method": "Added CLI elapsed and local evidence-save timing to capture.py. No sleep/fixed post-action delay in this local helper. Existing orchestration waits only for command completion and reads fresh state.",
+    "evidence": [
+      550,
+      551,
+      552,
+      553
+    ],
+    "cliSeconds": {
+      "stateWithScreenshot": 11.376,
+      "stateWithoutScreenshot": 10.078,
+      "buttonWithPostState": 10.737,
+      "inputWithPostState": 11.267
+    },
+    "localEvidenceSaveSecondsMax": 0.027,
+    "limit": "These are command-plus-observation times, not isolated CMS action/network latency. Snapshot collection, orchestration and model review contribute to cadence; no component-level native profiling performed. Navigation timing was not established.",
+    "staticCode": "omrPreview READY_TIMEOUT15000 is an error deadline cleared by ready, not a15-second fixed wait on successful preview."
+  },
+  "evidenceQuality": [
+    {
+      "unusedLabels": [
+        548
+      ],
+      "rule": "Preview already loaded547."
+    },
+    {
+      "evidence": 549,
+      "rule": "Toggle action unasserted and550 still shows math mode. Do not count as successful mode switch. Actual click552 confirmed normal input."
+    },
+    {
+      "evidence": 554,
+      "rule": "Chrome target showed a non-CMS active tab. Exclude from CMS behavior/timing proof; guard stopped before any URL write/navigation."
+    },
+    {
+      "evidence": 555,
+      "rule": "Stale element63 rejected. No home-tab switch or page navigation proven. User canceled further timing diagnostics and asked to continue original task."
+    }
+  ],
+  "nextActions": [
+    "이 파일과 resume-state.json, session-20261106-phase7.json, omr-runtime-coverage.json, mutation-ledger.json을 먼저 읽습니다.",
+    "동일 Orca 실행 파일의 skills get computer-use --json으로 버전별 지침을 확인합니다. CUA/sky를 재시도하지 않습니다.",
+    "새 캡처576으로 창·URL·개발 호스트·현재 문항·모달·입력값을 확인합니다. 새 요소 번호만 사용합니다.",
+    "창 ID를 찾지 못하면 list-windows로 현재 창을 확인합니다. 일시적 도구 미노출을 크롬이 닫혔다고 단정하지 않습니다.",
+    "현재 미리보기가 유지되면 네 번째 답란을 일반 입력으로 전환하고4를 입력한 후 채점합니다. 의도한 설정에서는2,1,3,4가 정답이어야 합니다. 결과가 다르면 첫 내부 순서 옵션 실제 상태부터 재확인합니다.",
+    "둘째 묶음 내부 순서는 고정된 상태에서4,3으로 바꾸면 어떻게 되는지 비교해 두 내부 옵션의 독립성을 확인합니다.",
+    "상위 OMR SET 순서 옵션도 별도로 바꿔 묶음 순서를 바꾼 학생 답과 섞인 답을 비교합니다. 각 조건의 입력과 결과를 별도 기록합니다.",
+    "SBMANM 정상값을 전체 반영하고 최종 확인 뒤 상세 재조회와 수정 재진입으로2x2 입력값·옵션·유형 복원을 확인합니다. 이 유형은 아직 서버에 저장하지 않았습니다.",
+    "남은 주관식 다답형 영역 선택·선그리기·드래그앤드롭, 기본/단답/다답 서술형을 실제 검증합니다. 객관식 단답 N지의 실제 수정 저장과 개수 경계도 남아 있습니다.",
+    "HML 편집기의 지문·지문해석 슬롯이 있는 적절한 세트/해석 표본을 찾아 실제 로딩·편집·저장과 영향 범위를 검증합니다. 이후 나머지 마스터 메뉴 조사를 계속합니다."
+  ],
+  "pauseReason": "User requested pause and Monday handoff.",
+  "handoffFile": "handoff-20261109.json",
+  "studentPreviewState": {
+    "field1": {
+      "mode": "normal",
+      "value": "2"
+    },
+    "field2": {
+      "mode": "normal",
+      "value": "1"
+    },
+    "field3": {
+      "mode": "normal",
+      "value": "3",
+      "verifiedEvidence": 575
+    },
+    "field4": {
+      "mode": "math",
+      "value": "",
+      "nextStep": "일반 입력으로 전환 후4를 입력합니다."
+    },
+    "gradedUnderCurrentIntendedFlags": false
+  }
+}

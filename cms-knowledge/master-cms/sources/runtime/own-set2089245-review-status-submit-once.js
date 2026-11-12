@@ -1,0 +1,5 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089245'||!document.querySelector('#statusSetModal.show')||window.__qaSetStatusApproveAttempted)throw Error('Only own reviewed set group confirmation allowed');
+ const form=document.getElementById('statusForm');if(form.getAttribute('hx-post')!=='/item/all/status-save.donga'||form.querySelector('[name="itemId"]').value!=='2089245'||form.querySelector('[name="viewFlag"]:checked')?.value!=='Y'||form.querySelector('[name="onlineFlag"]').value!=='N'||form.querySelector('[name="serviceUsage"]').value!=='C')throw Error('Only normal own group Y with original flags');
+ const button=document.querySelector('#statusSetModal [data-action-ok]');if(button.matches(':disabled'))throw Error('Actual confirm unavailable');window.__qaSetStatusApproveAttempted=true;button.click();return {clickedOnce:true,itemId:2089245,operation:'Approve whole own reviewed set',viewFlag:'Y',onlineFlag:'N',serviceUsage:'C',serviceDeployment:false};
+})()

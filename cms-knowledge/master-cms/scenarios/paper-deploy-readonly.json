@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1224-paper-used-bottom","command":["scroll","down","300","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1225-paper-used-deploy-open","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 배포하기\" \\[ref=(e\\d+)\\]"},
+  {"label":"1226-paper-used-deploy-dialog","command":["snapshot"],"screenshot":true},
+  {"label":"1227-paper-used-deploy-dialog-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1228-paper-used-deploy-dialog-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":6500
+}

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3430-hml-vendor-pending-cancel-popup-before-slot-switch",
+  "startedUtc": "2026-11-11T00:20:55.619154+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/hml-cancel239-popup-ui-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "41C44C15F49D50E517BCD893FEA8D240",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089104"
+    },
+    "error": null,
+    "localSeconds": 0.083
+  },
+  "targetIdBefore": "41C44C15F49D50E517BCD893FEA8D240",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089104",
+      "result": {
+        "buttons": [
+          {
+            "data": {
+              "slot": "passage",
+              "webhwpEmpty": "true",
+              "webhwpOpen": ""
+            },
+            "disabled": true,
+            "text": "지문 수정"
+          },
+          {
+            "data": {
+              "slot": "translation",
+              "webhwpEmpty": "true",
+              "webhwpOpen": ""
+            },
+            "disabled": true,
+            "text": "지문해석 수정"
+          },
+          {
+            "data": {
+              "slot": "question",
+              "webhwpNew": "",
+              "webhwpOpen": ""
+            },
+            "disabled": false,
+            "text": "문제 수정"
+          },
+          {
+            "data": {
+              "slot": "explain",
+              "webhwpNew": "",
+              "webhwpOpen": ""
+            },
+            "disabled": false,
+            "text": "해답 수정"
+          },
+          {
+            "data": {
+              "webhwpAction": "save"
+            },
+            "disabled": false,
+            "text": "저장"
+          },
+          {
+            "data": {
+              "bsDismiss": "modal"
+            },
+            "disabled": false,
+            "text": "닫기"
+          },
+          {
+            "data": {
+              "alertOk": "",
+              "bsDismiss": "modal"
+            },
+            "disabled": false,
+            "text": "확인"
+          }
+        ],
+        "controlReady": true,
+        "modals": [],
+        "modified": false,
+        "pageCount": 1,
+        "parent": {
+          "owner": {
+            "editorUrl": "/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089104",
+            "itemDetailId": "2089104",
+            "itemId": "2089239"
+          },
+          "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089239"
+        },
+        "slots": [
+          {
+            "active": false,
+            "data": {
+              "slot": "passage",
+              "webhwpEmpty": "true",
+              "webhwpOpen": ""
+            },
+            "disabled": true,
+            "slot": "passage",
+            "text": "지문 수정"
+          },
+          {
+            "active": false,
+            "data": {
+              "slot": "translation",
+              "webhwpEmpty": "true",
+              "webhwpOpen": ""
+            },
+            "disabled": true,
+            "slot": "translation",
+            "text": "지문해석 수정"
+          },
+          {
+            "active": true,
+            "data": {
+              "slot": "question",
+              "webhwpNew": "",
+              "webhwpOpen": ""
+            },
+            "disabled": false,
+            "slot": "question",
+            "text": "문제 수정"
+          },
+          {
+            "active": false,
+            "data": {
+              "slot": "explain",
+              "webhwpNew": "",
+              "webhwpOpen": ""
+            },
+            "disabled": false,
+            "slot": "explain",
+            "text": "해답 수정"
+          }
+        ],
+        "status": "2089216_Q.hml 을(를) 열었습니다.",
+        "title": "한글(HML) 수정",
+        "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089104"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.097
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089104",
+      "refs": {
+        "e44833": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e44834": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e44835": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e44836": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e44837": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e44838": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e44839": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [disabled, ref=e44835]\n    - button \"지문해석 수정\" [disabled, ref=e44836]\n    - button \"문제 수정\" [ref=e44837]\n    - button \"해답 수정\" [ref=e44838]\n  - button \"저장\" [ref=e44833]\n  - StaticText \"2089216_Q.hml 을(를) 열었습니다.\"\n  - Iframe [ref=e44834]\n    - Iframe [ref=e44839]"
+    },
+    "error": null,
+    "localSeconds": 0.086
+  }
+}

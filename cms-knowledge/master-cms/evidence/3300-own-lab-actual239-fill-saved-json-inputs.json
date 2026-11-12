@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3300-own-lab-actual239-fill-saved-json-inputs",
+  "startedUtc": "2026-11-10T09:34:03.243539+00:00",
+  "command": [
+    "eval",
+    "(()=>{if(location.pathname!=='/lab/view/omr-render.donga'||document.querySelector('#omrTypeSel').value!=='OBSACN')throw Error('Actual OBSACN Lab type');const f=window.__qaLabSavedOmrFixtures?.find(e=>e.itemId===2089239);if(!f||f.questionType!=='OBSACN'||f.omr[0]?.options?.length!==5)throw Error('Expected actual saved five-choice fixture');for(const [id,value] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(value);e.dispatchEvent(new Event('input',{bubbles:true}));}return {sourceItemId:f.itemId,type:f.questionType,omrCharacters:document.querySelector('#omrJsonIn').value.length,answerCharacters:document.querySelector('#ansJsonIn').value.length};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga"
+    },
+    "error": null,
+    "localSeconds": 0.066
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "result": {
+        "answerCharacters": 121,
+        "omrCharacters": 185,
+        "sourceItemId": 2089239,
+        "type": "OBSACN"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.072
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "refs": {
+        "e42648": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e42649": {
+          "name": "OMR 복원 테스트 (JSON → 화면)",
+          "role": "heading"
+        },
+        "e42650": {
+          "name": " 넓게 보기",
+          "role": "button"
+        },
+        "e42651": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e42652": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e42653": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e42654": {
+          "name": "문항유형",
+          "role": "heading"
+        },
+        "e42655": {
+          "name": "OMR / 정답 JSON",
+          "role": "heading"
+        },
+        "e42656": {
+          "name": " 폼 비우기",
+          "role": "button"
+        },
+        "e42657": {
+          "name": " 복원",
+          "role": "button"
+        },
+        "e42658": {
+          "name": "실제 화면",
+          "role": "heading"
+        },
+        "e42659": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e42660": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e42661": {
+          "name": "OMR JSON (필드 배열 [...])",
+          "role": "textbox"
+        },
+        "e42662": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e42663": {
+          "name": "정답 JSON (rule_type 트리)",
+          "role": "textbox"
+        },
+        "e42664": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e42665": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e42666": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e42667": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e42668": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e42669": {
+          "name": "선택",
+          "role": "option"
+        },
+        "e42670": {
+          "name": "OBSACN · 단답형 › N지 선다",
+          "role": "option"
+        },
+        "e42671": {
+          "name": "OBSAOX · 단답형 › O/X 형",
+          "role": "option"
+        },
+        "e42672": {
+          "name": "OBMACN · 다답형 › N지 선다",
+          "role": "option"
+        },
+        "e42673": {
+          "name": "OBMAOX · 다답형 › O/X 형",
+          "role": "option"
+        },
+        "e42674": {
+          "name": "SBSANM · 단답형 › 일반형",
+          "role": "option"
+        },
+        "e42675": {
+          "name": "SBSADR · 단답형 › 그리기형",
+          "role": "option"
+        },
+        "e42676": {
+          "name": "SBSAAS · 단답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e42677": {
+          "name": "SBMANM · 다답형 › 일반형",
+          "role": "option"
+        },
+        "e42678": {
+          "name": "SBMAAS · 다답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e42679": {
+          "name": "SBMALD · 다답형 › 선그리기형",
+          "role": "option"
+        },
+        "e42680": {
+          "name": "SBMADD · 다답형 › 드래그앤드롭형",
+          "role": "option"
+        },
+        "e42681": {
+          "name": "ESBA00 · 기본형 › 기본 서술형",
+          "role": "option"
+        },
+        "e42682": {
+          "name": "ESSA00 · 단답형 › 단답 서술형",
+          "role": "option"
+        },
+        "e42683": {
+          "name": "ESMA00 · 다답형 › 다답 서술형",
+          "role": "option"
+        },
+        "e42684": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e42685": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e42686": {
+          "name": " 정답 추가",
+          "role": "button"
+        },
+        "e42687": {
+          "name": "",
+          "role": "radio"
+        },
+        "e42688": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e42689": {
+          "name": "",
+          "role": "button"
+        },
+        "e42690": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e42691": {
+          "name": "",
+          "role": "radio"
+        },
+        "e42692": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e42693": {
+          "name": "",
+          "role": "button"
+        },
+        "e42694": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e42695": {
+          "name": "",
+          "role": "radio"
+        },
+        "e42696": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e42697": {
+          "name": "",
+          "role": "button"
+        },
+        "e42698": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e42699": {
+          "name": "",
+          "role": "radio"
+        },
+        "e42700": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e42701": {
+          "name": "",
+          "role": "button"
+        },
+        "e42702": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e42703": {
+          "name": "",
+          "role": "radio"
+        },
+        "e42704": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e42705": {
+          "name": "",
+          "role": "button"
+        },
+        "e42706": {
+          "name": "삭제",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e42651]\n      - link \"문제은행 마스터 CMS\" [ref=e42652]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e42664]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e42665]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e42666]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e42667]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e42668]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e42653]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - link \" 랩\" [ref=e42648]\n      - StaticText \"\"\n      - StaticText \"랩\"\n    - heading \"OMR 복원 테스트 (JSON → 화면)\" [level=2, ref=e42649]\n    - StaticText \"유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용.\"\n    - button \" 넓게 보기\" [ref=e42650]\n      - StaticText \"\"\n      - StaticText \"넓게 보기\"\n    - generic\n      - generic\n        - heading \"문항유형\" [level=3, ref=e42654]\n          - StaticText \"\"\n          - StaticText \"문항유형\"\n        - StaticText \"유형 코드\"\n        - combobox [expanded=false, ref=e42659]: OBSACN · 단답형 › N지 선다\n          - MenuListPopup\n            - option \"선택\" [ref=e42669]\n            - group \"객관식\"\n              - option \"OBSACN · 단답형 › N지 선다\" [selected, ref=e42670]\n              - option \"OBSAOX · 단답형 › O/X 형\" [ref=e42671]\n              - option \"OBMACN · 다답형 › N지 선다\" [ref=e42672]\n              - option \"OBMAOX · 다답형 › O/X 형\" [ref=e42673]\n            - group \"주관식\"\n              - option \"SBSANM · 단답형 › 일반형\" [ref=e42674]\n              - option \"SBSADR · 단답형 › 그리기형\" [ref=e42675]\n              - option \"SBSAAS · 단답형 › 영역 선택형\" [ref=e42676]\n              - option \"SBMANM · 다답형 › 일반형\" [ref=e42677]\n              - option \"SBMAAS · 다답형 › 영역 선택형\" [ref=e42678]\n              - option \"SBMALD · 다답형 › 선그리기형\" [ref=e42679]\n              - option \"SBMADD · 다답형 › 드래그앤드롭형\" [ref=e42680]\n            - group \"서술형\"\n              - option \"ESBA00 · 기본형 › 기본 서술형\" [ref=e42681]\n              - option \"ESSA00 · 단답형 › 단답 서술형\" [ref=e42682]\n              - option \"ESMA00 · 다답형 › 다답 서술형\" [ref=e42683]\n      - generic\n        - heading \"OMR / 정답 JSON\" [level=3, ref=e42655]\n          - StaticText \"\"\n          - StaticText \"OMR / 정답 JSON\"\n        - button \" 폼 비우기\" [ref=e42656]\n          - StaticText \"\"\n          - StaticText \"폼 비우기\"\n        - button \" 복원\" [ref=e42657]\n          - StaticText \"\"\n          - StaticText \"복원\"\n        - generic\n          - LabelText\n            - StaticText \"OMR JSON (필드 배열 \"\n            - code\n              - StaticText \"[...]\"\n            - StaticText \")\"\n          - button \" Pretty\" [ref=e42660]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"OMR JSON (필드 배열 [...])\" [ref=e42661]: [{\"options\":[{\"value\":\"①\",\"value_type\":\"text\"},{\"value\":\"②\",\"value_type\":\"text\"},{\"value\":\"③\",\"value_type\":\"text\"},{\"value\":\"④\",\"value_type\":\"text\"},{\"value\":\"⑤\",\"value_type\":\"text\"}]}]\n            - StaticText \"[{\\\"options\\\":[{\\\"value\\\":\\\"①\\\",\\\"value_type\\\":\\\"text\\\"},{\\\"value\\\":\\\"②\\\",\\\"value_type\\\":\\\"text\\\"},{\\\"value\\\":\\\"③\\\",\\\"value_type\\\":\\\"text\\\"},{\\\"value\\\":\\\"④\\\",\\\"value_type\\\":\\\"text\\\"},{\\\"value\\\":\\\"⑤\\\",\\\"value_type\\\":\\\"text\\\"}]}]\"\n          - LabelText\n            - StaticText \"정답 JSON (rule_type 트리)\"\n          - button \" Pretty\" [ref=e42662]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"정답 JSON (rule_type 트리)\" [ref=e42663]: {\"rule_type\":\"VALUE\",\"allowed_answer\":[{\"value\":\"④\",\"value_type\":\"text\",\"case_sensitive\":false,\"space_sensitive\":false}]}\n            - StaticText \"{\\\"rule_type\\\":\\\"VALUE\\\",\\\"allowed_answer\\\":[{\\\"value\\\":\\\"④\\\",\\\"value_type\\\":\\\"text\\\",\\\"case_sensitive\\\":false,\\\"space_sensitive\\\":false}]}\"\n      - generic\n        - heading \"실제 화면\" [level=3, ref=e42658]\n          - StaticText \"\"\n          - StaticText \"실제 화면\"\n        - generic\n          - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e42684]\n            - StaticText \"\"\n            - StaticText \"OMR 편집 (정답 설정)\"\n          - button \" OMR 미리보기\" [ref=e42685]\n            - StaticText \"\"\n            - StaticText \"OMR 미리보기\"\n          - generic\n            - radio [checked=false, ref=e42687]\n            - generic\n              - textbox \"선택지\" [ref=e42688]: ①\n                - StaticText \"①\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e42689]\n              - StaticText \"\"\n            - button \"삭제\" [ref=e42690]\n            - radio [checked=false, ref=e42691]\n            - generic\n              - textbox \"선택지\" [ref=e42692]: ②\n                - StaticText \"②\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e42693]\n              - StaticText \"\"\n            - button \"삭제\" [ref=e42694]\n            - radio [checked=false, ref=e42695]\n            - generic\n              - textbox \"선택지\" [ref=e42696]: ③\n                - StaticText \"③\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e42697]\n              - StaticText \"\"\n            - button \"삭제\" [ref=e42698]\n            - radio [checked=false, ref=e42699]\n            - generic\n              - textbox \"선택지\" [ref=e42700]: ④\n                - StaticText \"④\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e42701]\n              - StaticText \"\"\n            - button \"삭제\" [ref=e42702]\n            - radio [checked=false, ref=e42703]\n            - generic\n              - textbox \"선택지\" [ref=e42704]: ⑤\n                - StaticText \"⑤\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e42705]\n              - StaticText \"\"\n            - button \"삭제\" [ref=e42706]\n            - button \" 정답 추가\" [ref=e42686]\n              - StaticText \"\"\n              - StaticText \"정답 추가\""
+    },
+    "error": null,
+    "localSeconds": 0.099
+  }
+}

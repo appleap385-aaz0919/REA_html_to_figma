@@ -1,0 +1,65 @@
+{
+  "steps": [
+    {
+      "label": "3316-own-lab-original242-fill-actual-math-json",
+      "command": [
+        "eval",
+        "(()=>{const f=window.__qaLabSavedOmrFixtures.find(e=>e.itemId===2089242);if(document.querySelector('#omrTypeSel').value!=='SBSANM'||f.questionType!=='SBSANM'||f.answer.nodes[0].allowed_answer[0].value_type!=='math')throw Error('Original math fixture required');for(const [id,value] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(value);e.dispatchEvent(new Event('input',{bubbles:true}));}window.__qaLabActiveSourceItemId=f.itemId;return {sourceItemId:f.itemId,answer:f.answer};})()"
+      ]
+    },
+    {
+      "label": "3317-own-lab-original242-math-restore-normal",
+      "command": [
+        "eval",
+        "(()=>{document.querySelector('#omrRestoreBtn').click();return {normalRestoreClicked:true,sourceItemId:window.__qaLabActiveSourceItemId};})()"
+      ]
+    },
+    {
+      "label": "3318-own-lab-original242-restored-form-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-omr-restore-observation.js"
+      ]
+    },
+    {
+      "label": "3319-own-lab-original242-math-roundtrip-check",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-real-saved-omr-current-roundtrip-read.js"
+      ]
+    },
+    {
+      "label": "3320-own-lab-ai9382-fill-actual-times-text-json",
+      "command": [
+        "eval",
+        "(()=>{const f=window.__qaLabSavedOmrFixtures.find(e=>e.itemId===2089382);if(document.querySelector('#omrTypeSel').value!=='SBSANM'||f.questionType!=='SBSANM'||f.answer.nodes[0].allowed_answer[0].value_type!=='text'||!f.answer.nodes[0].allowed_answer[0].value.includes('TIMES'))throw Error('Actual AI text fixture required');for(const [id,value] of [['omrJsonIn',f.omr],['ansJsonIn',f.answer]]){const e=document.getElementById(id);e.value=JSON.stringify(value);e.dispatchEvent(new Event('input',{bubbles:true}));}window.__qaLabActiveSourceItemId=f.itemId;return {sourceItemId:f.itemId,answer:f.answer};})()"
+      ]
+    },
+    {
+      "label": "3321-own-lab-ai9382-times-text-restore-normal",
+      "command": [
+        "eval",
+        "(()=>{document.querySelector('#omrRestoreBtn').click();return {normalRestoreClicked:true,sourceItemId:window.__qaLabActiveSourceItemId};})()"
+      ]
+    },
+    {
+      "label": "3322-own-lab-ai9382-restored-form-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-omr-restore-observation.js"
+      ]
+    },
+    {
+      "label": "3323-own-lab-ai9382-text-roundtrip-check",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-real-saved-omr-current-roundtrip-read.js"
+      ]
+    }
+  ],
+  "tailChars": 120
+}

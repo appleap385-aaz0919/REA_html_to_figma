@@ -1,0 +1,59 @@
+{
+  "steps": [
+    {
+      "label": "2939-copy-hml-before-marker-type-preflight",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/copy-hml-before-marker-type-preflight.js"
+      ]
+    },
+    {
+      "label": "2940-copy-hml-passage-caret-move",
+      "command": [
+        "mouse",
+        "move",
+        "309",
+        "326"
+      ]
+    },
+    {
+      "label": "2941-copy-hml-passage-caret-down",
+      "command": [
+        "mouse",
+        "down"
+      ]
+    },
+    {
+      "label": "2942-copy-hml-passage-caret-up",
+      "command": [
+        "mouse",
+        "up"
+      ]
+    },
+    {
+      "label": "2943-copy-hml-passage-document-start",
+      "command": [
+        "press",
+        "Control+Home"
+      ]
+    },
+    {
+      "label": "2944-copy-hml-passage-marker-type-once",
+      "command": [
+        "keyboard",
+        "type",
+        "[QA-COPY-SHARED-HML-20261110] "
+      ]
+    },
+    {
+      "label": "2945-copy-hml-passage-edited-text-read",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/copy-hml-passage-text-read.js"
+      ]
+    }
+  ],
+  "tailChars": 100
+}

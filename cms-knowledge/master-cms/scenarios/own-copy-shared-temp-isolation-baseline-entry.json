@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2603-own-original-copy-set-before-shared-temp-draft-checks","command":["eval","--file","sources/runtime/own-original-copy-set-draft-checks-read.js"]},
+ {"label":"2604-own-original-copy-set-before-shared-temp-explicit-draft-read","command":["eval","--file","sources/runtime/own-original-copy-set-explicit-draft-refs-read.js"]},
+ {"label":"2605-own-set-copy2089358-shared-temp-edit-entry","command":["eval","(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089358'||document.querySelector('.modal.show'))throw Error('Own copy detail without unsaved state required');const link=document.querySelector('a[data-modify-url]');if(!link?.dataset.modifyUrl.includes('itemId=2089358'))throw Error('Own actual modify link required');link.click();return {clicked:true,itemId:2089358};})()"]},
+ {"label":"2606-own-set-copy2089358-shared-temp-edit-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":220}

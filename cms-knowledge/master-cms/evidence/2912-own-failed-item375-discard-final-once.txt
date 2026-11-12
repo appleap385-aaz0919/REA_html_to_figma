@@ -1,0 +1,180 @@
+- complementary
+  - generic
+    - button "메뉴" [expanded=false, ref=e38768]
+    - link "문제은행 마스터 CMS" [ref=e38769]
+  - list
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "홈" [ref=e38784]
+    - listitem [level=1]
+      - ListMarker "• "
+      - button "문항 관리" [expanded=true, ref=e38785]
+      - generic
+        - link "전체 문항" [ref=e38791]
+        - link "HML 문항 등록" [ref=e38792]
+        - link "디피니션 문항 등록" [ref=e38793]
+        - link "쌍둥이 그룹 관리" [ref=e38794]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "평가지 관리" [ref=e38786]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "문항 출처 관리" [ref=e38787]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "랩" [ref=e38788]
+- banner
+  - StaticText "마스터"
+  - button "다크모드 전환" [ref=e38755]
+  - generic
+    - StaticText "접속자 "
+    - strong
+      - StaticText "jaehyuk.myung"
+  - form
+    - button "로그아웃" [ref=e38770]
+- generic
+  - list "breadcrumbs"
+    - listitem [level=1]
+      - ListMarker "1. "
+      - StaticText "시스템 관리"
+    - listitem [level=1]
+      - ListMarker "2. "
+      - StaticText "문항 관리"
+    - listitem [level=1]
+      - ListMarker "3. "
+      - StaticText "전체 문항"
+    - listitem [level=1]
+      - ListMarker "4. "
+      - StaticText "문항 상세"
+  - heading "문항 상세" [level=2, ref=e38756]
+  - generic
+    - StaticText "문항 ID 2089375"
+  - link "목록" [ref=e38757]
+  - generic
+    - link "이전 문항" [ref=e38771]
+    - StaticText " 10 / 35561건 "
+    - link "다음 문항" [ref=e38772]
+  - heading "MASTER" [level=3, ref=e38758]
+  - heading "HTML" [level=3, ref=e38759]
+  - heading "문항ID 2089375 폐기 - 주관식 > 다답형 > 일반형" [level=4, ref=e38760]
+    - StaticText "문항ID 2089375 폐기 - 주관식 > 다답형 > 일반형"
+  - button "OMR 미리보기" [ref=e38761]
+  - generic "승인(사용) 문항만 배포할 수 있습니다." [ref=e38773] focusable [tabindex]
+    - button "배포하기" [disabled, ref=e38779]
+  - heading "HML" [level=3, ref=e38762]
+  - heading "문항ID 2089375" [level=4, ref=e38763]
+    - StaticText "문항ID 2089375"
+  - StaticText "문제"
+  - link "문제" [ref=e38764]
+    - image "문제"
+  - separator
+  - StaticText "해답"
+  - link "해답" [ref=e38765]
+    - image "해답"
+  - generic
+    - button "쌍둥이 문항 생성" [disabled, ref=e38774]
+    - button "쌍둥이 생성 이력" [ref=e38775]
+  - StaticText "문항 수정"
+  - heading "상태 정보" [level=3, ref=e38766]
+  - generic
+    - button "수정" [disabled, ref=e38776]
+    - button "취소" [ref=e38777]
+    - button "저장" [ref=e38778]
+  - form
+    - group
+      - generic
+        - LabelText
+          - StaticText "On-line 전용"
+        - combobox [expanded=false, disabled, ref=e38789]: 온오프 전체
+          - MenuListPopup
+            - option "온오프 전체" [disabled, ref=e38800]
+            - option "온라인 전용" [disabled, ref=e38801]
+      - generic
+        - LabelText
+          - StaticText "용도"
+        - combobox [expanded=false, disabled, ref=e38790]: 공통
+          - MenuListPopup
+            - option "공통" [disabled, ref=e38802]
+            - option "교사용" [disabled, ref=e38803]
+      - LabelText
+        - StaticText "상태값"
+      - generic
+        - LabelText
+          - radio "초안" [checked=false, disabled, ref=e38795]
+          - StaticText "초안"
+        - LabelText
+          - radio "실패(재등록)" [checked=false, disabled, ref=e38796]
+          - StaticText "실패(재등록)"
+        - LabelText
+          - radio "승인(사용)" [checked=false, disabled, ref=e38797]
+          - StaticText "승인(사용)"
+        - LabelText
+          - radio "승인(미사용)" [checked=false, disabled, ref=e38798]
+          - StaticText "승인(미사용)"
+        - LabelText
+          - radio "폐기" [checked=true, disabled, ref=e38799]
+          - StaticText "폐기"
+  - heading "기본 정보" [level=3, ref=e38767]
+  - DescriptionList
+    - term "문항 ID"
+    - definition
+      - StaticText "2089375 (2089082)"
+    - term "생성 방식"
+    - definition
+      - StaticText "디피니션"
+    - term "원본 파일"
+    - definition
+      - StaticText "QA-DIFI-20261110-06-ORDERED1.zip"
+      - button "다운로드" [ref=e38780]
+    - term "썸네일"
+    - definition
+      - StaticText "-"
+    - term "난이도"
+    - definition
+      - StaticText "-"
+    - term "문항 형태"
+    - definition
+      - StaticText "주관식 > 다답형 > 일반형"
+    - term "배포"
+    - definition
+      - StaticText "-"
+  - DescriptionList
+    - term "세트 문항"
+    - definition
+      - StaticText "-"
+    - term "쌍둥이 문항"
+    - definition
+      - StaticText "0개"
+      - button "목록 조회" [ref=e38781]
+    - term "평가지 등록"
+    - definition
+      - StaticText "0개"
+      - button "목록 조회" [ref=e38782]
+    - term "출처"
+    - definition
+      - StaticText "1개"
+      - button "목록 조회" [ref=e38783]
+    - term "등록"
+    - definition
+      - StaticText "jaehyuk.myung · 2026-11-10"
+  - separator
+  - DescriptionList
+    - term "단원코드"
+    - definition
+      - StaticText "-"
+    - term "성취기준"
+    - definition
+      - StaticText "-"
+    - term "내용영역"
+    - definition
+      - StaticText "-"
+  - DescriptionList
+    - term "행동영역"
+    - definition
+      - StaticText "-"
+    - term "교과역량"
+    - definition
+      - StaticText "-"
+    - term "유형정보"
+    - definition
+      - StaticText "-"

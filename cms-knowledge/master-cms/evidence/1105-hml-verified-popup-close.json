@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1105-hml-verified-popup-close",
+  "startedUtc": "2026-11-09T04:09:06.286735+00:00",
+  "command": [
+    "tab",
+    "close",
+    "91982538E0B4DACA85D08CABD50CBB61"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "0EFB900C688AC111C33EDFA475104F9D",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.066
+  },
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "closed": true,
+      "label": null,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "tabId": "t30",
+      "targetId": "91982538E0B4DACA85D08CABD50CBB61"
+    },
+    "error": null,
+    "localSeconds": 0.389
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10",
+      "refs": {
+        "e4415": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e4416": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e4417": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e4418": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e4419": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e4420": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e4421": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e4422": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e4423": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e4424": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e4425": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e4426": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e4427": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e4428": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e4429": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e4430": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e4431": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e4432": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e4433": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e4434": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e4435": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e4436": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e4437": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e4472": {
+          "name": "한글(HML) 수정",
+          "role": "heading"
+        },
+        "e4473": {
+          "name": "한글 편집기 열기",
+          "role": "button"
+        },
+        "e4474": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e4475": {
+          "name": "해답",
+          "role": "heading"
+        },
+        "e4476": {
+          "name": "문제",
+          "role": "link"
+        },
+        "e4477": {
+          "name": "해답",
+          "role": "link"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e4415]\n      - link \"문제은행 마스터 CMS\" [ref=e4416]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e4429]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e4430]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e4431]\n          - link \"HML 문항 등록\" [ref=e4432]\n          - link \"디피니션 문항 등록\" [ref=e4433]\n          - link \"쌍둥이 그룹 관리\" [ref=e4434]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e4435]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e4436]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e4437]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e4417]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e4418]\n      - StaticText \"문항 ID\"\n      - StaticText \"2088985 (2088701)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"-\"\n      - StaticText \"원본 파일\"\n      - StaticText \"-\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"복제\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e4425]\n        - tab \"한글(HML) 수정\" [selected, ref=e4426]\n        - tab \"HTML 수정\" [ref=e4427]\n        - tab \"OMR 수정\" [ref=e4428]\n      - link \"취소\" [ref=e4419]\n      - button \"임시 저장\" [ref=e4420]\n      - button \"전체 반영\" [ref=e4421]\n      - generic\n        - tabpanel\n          - generic\n            - heading \"한글(HML) 수정\" [level=3, ref=e4472]\n            - button \"한글 편집기 열기\" [ref=e4473]\n            - generic\n              - alert\n                - StaticText \"\"\n                - StaticText \"한글 편집기에서 저장한 내용은 아직 문항에 반영되지 않습니다. [임시 저장] 또는 [전체 반영]을 눌러야 반영됩니다.\"\n              - generic\n                - heading \"문제\" [level=4, ref=e4474]\n                - link \"문제\" [ref=e4476]\n                  - image \"문제\"\n              - generic\n                - heading \"해답\" [level=4, ref=e4475]\n                - link \"해답\" [ref=e4477]\n                  - image \"해답\"\n      - link \"취소\" [ref=e4422]\n      - button \"임시 저장\" [ref=e4423]\n      - button \"전체 반영\" [ref=e4424]"
+    },
+    "error": null,
+    "localSeconds": 0.167
+  },
+  "configuredTargetId": "91982538E0B4DACA85D08CABD50CBB61",
+  "targetMetadataCorrection": "From captured post-URL and observed tab inventory; phase16 checkpoint."
+}

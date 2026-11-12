@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "in_progress",
+  "evidenceRange": [
+    247,
+    291
+  ],
+  "persistentBusinessMutations": 0,
+  "definitionList": {
+    "route": "/item/difi/list.donga?curriculum=22",
+    "evidence": [
+      248,
+      249,
+      266
+    ],
+    "observedCount": 15,
+    "countIsDynamic": true,
+    "filters": [
+      "Keyword type/keyword",
+      "Curriculum",
+      "School",
+      "Subject group",
+      "Subject",
+      "Grade",
+      "Term",
+      "Date range and presets",
+      "Registration pending",
+      "Registering",
+      "Draft",
+      "Recommending metadata",
+      "Approved",
+      "Discarded",
+      "Failed"
+    ],
+    "columns": [
+      "Document ID",
+      "Filename",
+      "Source",
+      "Subject",
+      "Grade/term",
+      "Paper registration",
+      "Status",
+      "Registrant/date"
+    ],
+    "differenceFromHmlList": "No split-question success/failure/deleted count column observed.",
+    "examples": [
+      {
+        "id": 530,
+        "status": "Approved"
+      },
+      {
+        "id": 299,
+        "status": "Failed"
+      },
+      {
+        "id": 180,
+        "status": "Discarded"
+      },
+      {
+        "id": 173,
+        "status": "Approved"
+      }
+    ],
+    "pageTwo": {
+      "evidence": [
+        287,
+        288
+      ],
+      "rows": [
+        172,
+        171,
+        170,
+        169,
+        3
+      ],
+      "behavior": "Pagination2 shows records11-15 of15."
+    }
+  },
+  "definitionForm": {
+    "route": "/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=10",
+    "evidence": [
+      251,
+      252,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266
+    ],
+    "visibleFileRule": "ZIP only, maximum 50MB, one file equals one question. This is screen wording; actual generated count/set support is not established.",
+    "fields": [
+      "ZIP file",
+      "Required source",
+      "Required unit autocomplete/lookup",
+      "Required start/end page",
+      "Required purpose",
+      "Readonly registrant"
+    ],
+    "sourceLookup": "59 rows; used source selected and applied to parent field, purpose remains unselected.",
+    "unitLookup": "732 rows; code/hierarchy table, filters, pagination and Close. No selection control.",
+    "noFileValidation": {
+      "evidence": 263,
+      "observation": "Register start without any file shows HML file selection warning on ZIP screen.",
+      "classification": "Confirmed wording issue",
+      "codeBoundary": "No accepted file prevents submit and stops propagation before upload. No file selected or uploaded."
+    },
+    "cancel": "Cancel opens ZIP registration cancel confirmation; discard removes only our unsaved source selection and returns to list.",
+    "sourceReport": "research/definition-registration-behavior.md"
+  },
+  "definitionApprovedDetail": {
+    "documentId": 530,
+    "evidence": [
+      268,
+      269
+    ],
+    "filename": "750774.zip",
+    "sourceCode": "22-E-MA-T0-3-2-DCL-FB-2025",
+    "unitCode": "22EMAT0NGS31",
+    "pageRange": [
+      1,
+      1
+    ],
+    "purpose": "Common",
+    "documentStatus": "Approved",
+    "paperRegistrationInput": "Absent on this detail screen; list has a value.",
+    "remark": "Readonly",
+    "childItems": [
+      {
+        "id": 2087992,
+        "detailId": 2087125,
+        "status": "Approved, used",
+        "loadFlag": "Registration success",
+        "answer": "4"
+      }
+    ],
+    "controls": [
+      "Original download",
+      "Child detail",
+      "Child edit",
+      "List"
+    ],
+    "scope": "One observed document; not a universal rule for ZIP split counts or status synchronization."
+  },
+  "definitionFailedDetail": {
+    "documentId": 299,
+    "evidence": [
+      277,
+      278
+    ],
+    "topNotice": "ZIP file error prevented parsing from starting; download/correct/re-register.",
+    "childItems": "None",
+    "emptyNotice": "Refers to HML file error, inconsistent with ZIP title/top notice.",
+    "classification": "Confirmed wording issue",
+    "remark": "Readonly",
+    "paperRegistrationInput": "Absent",
+    "controls": [
+      "Original download",
+      "List"
+    ],
+    "unverified": "Underlying parser cause, detailed server code and re-registration outcome."
+  },
+  "stillOutstanding": [
+    "Definition second-page and draft/discarded detail variants",
+    "Definition uploads and server results",
+    "Twin group management page",
+    "Paper management family",
+    "Source management family",
+    "Lab family",
+    "All list/filter/pagination variants",
+    "Remaining editor/OMR runtime variants"
+  ],
+  "definitionPendingDetail": {
+    "documentId": 169,
+    "evidence": [
+      290,
+      291
+    ],
+    "display": "Registration pending. Parsing has not started; only entered metadata and original file can be viewed. No separated questions.",
+    "controls": [
+      "Original download",
+      "List"
+    ],
+    "remark": "Readonly",
+    "scope": "Fixture display only, actual queue progress not verified."
+  }
+}

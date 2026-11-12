@@ -1,0 +1,15 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"single_master_discard_and_definition_link_policy_confirmed","evidenceRange":[2903,2922],"lastEvidence":"2922-own-definition695-discarded-card-bottom-visual",
+ "summary":"자체F문항2089375를정상상태UI로폐기D처리했다. 확인창은폐기시쌍둥이제외를안내하지만이표본은그룹0이라실제제외는미검증이다. 저장후문항상세는읽히고상태수정버튼은잠겼으며직접수정GET도상세로redirect된다. 버전2089082·모델·기본정보는같고연결Definition695는Y를유지한다. 카드에는폐기와기존등록실패가함께표시되고상세링크는활성/수정버튼은disabled다. Master업무78회,Service배포없음.",
+ "observations":[
+  {"evidence":[2903,2904,2905,2906,2907],"result":"폐기전F/2089082/OMRnull/메타공란/출처1/쌍둥이0/평가지0과Definition695/Y·등록실패카드를읽었다. F폼은R/F/D를활성전이로렌더하고Y/N은개별disabled다."},
+  {"evidence":[2908,2909,2910,2911,2912],"result":"정상수정잠금해제→활성D선택→저장→statusDiscardModal을검증한뒤최종1회저장했다. D는승인Y/N검사대상이아니며현재메타/OMR공란표본에서확인창과최종저장까지허용됐다. 확인문구는폐기시쌍둥이문항에서제외된다는안내다."},
+  {"evidence":[2913,2914,2915,2916,2917],"result":"MasterD/동일detail2089082·동일questionModels·동일기본정보를확인했다. 상세GET은200이고수정GET은상세페이지로redirect됐다. 실제상태수정버튼disabled/fieldset잠금과비활성문항수정을2917PNG에서직접보았다."},
+  {"evidence":[2918,2919,2920,2921,2922],"result":"Definition695를새로열어문서승인Y·카드폐기D·기존등록실패표시를확인했다. 모델과비고는폐기전과같다. 문항상세는활성이고문항수정은disabled다. 전체높이1400/viewport1015에서0→385로스크롤하며PNG2개를직접보았다."}
+ ],
+ "artifacts":["own-definition-failed-item375-discard-intent-20261110.json","own-item375-discard-comparison-20261110.json","sources/own-item2089375-discarded-d-20261110.html","sources/definition695-approved-with-discarded-card-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":78,"newMasterChangesInThisPhase":1,"discardedItemId":2089375,"beforeViewFlag":"F","finalViewFlag":"D","sameDetailId":2089082,"linkedDefinitionDocumentId":695,"linkedDefinitionState":"Y","linkedRegistrationResult":"F retained","serviceDeployment":false},
+ "remaining":["COPY세트의공유HML파일을실제로편집하고편집기저장/CMSTempSave/FullApply단계에서원본과복사본의파일참조·바이트·공유범위를대조한다.","실제쌍둥이가있는단건/세트의폐기후관계제외범위는추가자체표본으로검증할수있다.이번0그룹표본의안내문만으로실제제외를확정하지않는다.","평가지의세트문항추가/삭제와남은메타·상태정책조사를이어간다.","ServiceCMS미제공/실제채점미검증/정상Definition세트ZIP및해석HML표본없음의한계를유지한다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100","tab":"t21 approved Definition695 with discarded item375 card, at bottom","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"popover":null,"unsavedState":null,"pendingServerOperation":null,"pendingVerification":null},
+ "evidenceLimits":["현재계정과자체F단건에서의정상UI·조회동작을확인했으며모든역할/서비스배포조건을일반화하지않는다.","폐기복구를위한금지전이나직접수정저장을강제하지않았다.직접수정조회도서버에서상세로돌아간다.","쌍둥이관계제외는안내문관측이며이번표본에서관계가있었다가없어진실험은아니다.","전체100%완료를주장하지않는다."]
+}

@@ -1,0 +1,58 @@
+{
+  "steps": [
+    {
+      "label": "3329-own-lab-ai9382-local-space-sensitive-toggle",
+      "command": [
+        "eval",
+        "(()=>{const r=document.querySelector('#omrSlot [data-omr-code=SBSANM]'),s=window.omrSerializers.SBSANM.serialize(r);if(window.__qaLabActiveSourceItemId!==2089382||!s.answer.nodes[0].allowed_answer[0].case_sensitive)throw Error('Edited actual AI Lab state');const xs=[...r.querySelectorAll('input[type=checkbox]')].filter(e=>e.closest('label')?.textContent.trim()==='공백구분');if(xs.length!==1||xs[0].checked||xs[0].matches(':disabled'))throw Error('Normal space-sensitive checkbox required');xs[0].click();const after=window.omrSerializers.SBSANM.serialize(r);return {sourceItemId:2089382,serialization:after,automaticAnswerJson:JSON.parse(document.querySelector('#ansJsonIn').value),cmsSave:false};})()"
+      ]
+    },
+    {
+      "label": "3330-own-lab-actual-saved-source-omr-after-local-edits",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-read-real-saved-omr-fixtures.js"
+      ]
+    },
+    {
+      "label": "3331-own-lab-real-json-reset-type-unselected",
+      "command": [
+        "select",
+        "#omrTypeSel",
+        ""
+      ]
+    },
+    {
+      "label": "3332-own-lab-real-json-reset-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-omr-restore-observation.js"
+      ]
+    },
+    {
+      "label": "3333-own-lab-real-json-final-reload",
+      "command": [
+        "reload"
+      ]
+    },
+    {
+      "label": "3334-own-lab-real-json-final-clean-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-omr-restore-observation.js"
+      ]
+    },
+    {
+      "label": "3335-own-lab-real-json-final-clean-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 120
+}

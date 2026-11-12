@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "scopeHost": "dev-exambank.dongahub.com",
+  "operation": "Approve two own successfully parsed single-type controls using S; inspect actual Master type/OMR/metadata",
+  "cases": [
+    {
+      "examDocumentId": 697,
+      "itemId": 2089377,
+      "detailId": 2089084,
+      "inputType": "FIVE_CHOICE",
+      "status": "documentY_masterR_verified",
+      "remark": "QA-DIFI-20261110-08-FIVE1 S review and Master mapping verification; development research.",
+      "preflightEvidence": 2736,
+      "plannedSubmitEvidence": 2737,
+      "submitEvidence": 2737,
+      "readbackEvidence": [
+        2739,
+        2742,
+        2743
+      ],
+      "finalDocumentState": "Y",
+      "finalMasterViewFlag": "R",
+      "masterType": "OBSACN",
+      "omrData": null,
+      "confirmedMasterOperationsAfter": 68
+    },
+    {
+      "examDocumentId": 696,
+      "itemId": 2089376,
+      "detailId": 2089083,
+      "inputType": "ESSAY",
+      "status": "documentY_masterR_verified",
+      "remark": "QA-DIFI-20261110-07-ESSAY1 S review and Master mapping verification; development research.",
+      "preflightEvidence": 2747,
+      "plannedSubmitEvidence": 2748,
+      "confirmedMasterOperationsBefore": 68,
+      "submitEvidence": 2748,
+      "readbackEvidence": [
+        2750,
+        2753,
+        2754
+      ],
+      "finalDocumentState": "Y",
+      "finalMasterViewFlag": "R",
+      "masterType": "ESBA00",
+      "omrData": null,
+      "confirmedMasterOperationsAfter": 69
+    }
+  ],
+  "confirmedMasterOperationsBefore": 67,
+  "serviceDeployment": false,
+  "submitRule": "Verify own single S card and shown confirmation before each final click, once per document. Reconcile exact document after response; no replay on timeout."
+}

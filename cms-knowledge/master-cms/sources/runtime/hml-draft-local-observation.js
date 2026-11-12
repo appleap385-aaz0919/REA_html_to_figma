@@ -1,0 +1,4 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||location.pathname!=='/item/hml/detail.donga')throw Error('HML detail scope mismatch');
+ return {url:location.href,judges:[...document.querySelectorAll('select[data-exam-judge]')].map(e=>({blockNo:e.dataset.blockNo,itemIds:e.dataset.itemIds,value:e.value,options:[...e.options].map(o=>({value:o.value,disabled:o.disabled}))})),paperReg:[...document.querySelectorAll('input[name=paperRegYn]')].map(e=>({value:e.value,checked:e.checked,disabled:e.disabled})),remark:document.querySelector('textarea[name=remark]')?.value,modals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),forms:[...document.querySelectorAll('form')].filter(f=>/^exam/.test(f.id)).map(f=>({id:f.id,action:f.getAttribute('action')})),scroll:[...document.querySelectorAll('.page-wrapper')].map(e=>({scrollTop:e.scrollTop,clientHeight:e.clientHeight,scrollHeight:e.scrollHeight}))};
+})()

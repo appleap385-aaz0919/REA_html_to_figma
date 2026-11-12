@@ -1,0 +1,84 @@
+--- webhwp-ea2cf4d106cdce39bfb984c607cb87cc.js
++++ webhwp-e082bada3ae14916759b8d44db43d953.js
+@@ -77,12 +77,10 @@
+         }
+     }
+ 
+-    // 기안기가 URL 을 직접 받아 스스로 가져온다. 포맷을 HWPML2X 로 명시해야 HML 로 해석한다.
+     // 주소는 부모가 cdnBaseUrl 과 합쳐 넘겨준 값을 그대로 쓴다(JS 재조립 금지).
+     // 클릭할 때마다 부모에게 다시 묻는다 — 저장 직후 재편집이면 방금 결과를 열어야 한다.
+     function openFile(host, btn) {
+-        var ctrl = ctrlOf(host);
+-        if (!ctrl) return;
++        if (!ctrlOf(host)) return;
+ 
+         var source = slotFromOpener(btn.dataset.slot);
+         var url = source && source.url;
+@@ -94,9 +92,6 @@
+             toast('열 파일을 찾지 못했습니다.', 'warning');
+             return;
+         }
+-        
+-        // 기안기 내 파일은 localhost로 접근
+-        url = url.replaceAll("https://dev-webhwp.dongahub.com/", "http://localhost:8080/");
+ 
+         host.current = btn;
+         // 되저장할 원본 경로. 주소가 아니라 저장값이라 부모의 path 를 그대로 쓴다
+@@ -105,6 +100,18 @@
+         host.slot = btn.dataset.slot || '';
+         markCurrent(host);
+ 
++        openUrl(host, url, function (name, res) { failOpen(host, name, res); });
++    }
++
++    // 기안기가 URL 을 직접 받아 스스로 가져온다. 포맷을 HWPML2X 로 명시해야 HML 로 해석한다.
++    // 열 슬롯(host.current/filename/slot)은 호출하는 쪽이 정해둔다.
++    function openUrl(host, url, onFail) {
++        var ctrl = ctrlOf(host);
++        if (!ctrl) return;
++
++        // 기안기 내 파일은 localhost로 접근
++        url = url.replaceAll("https://dev-webhwp.dongahub.com/", "http://localhost:8080/");
++
+         var name = url.split('?')[0].split('/').pop();
+ 
+         setBusy(host, true);
+@@ -116,13 +123,12 @@
+                 setBusy(host, false);
+                 setStatus(host, name + ' 을(를) 열었습니다.');
+             } else {
+-                failOpen(host, name, res);
+-                return;
++                onFail(name, res);
+             }
+         });
+ 
+         // Open 은 내부 예외를 삼키고 false 를 돌려준다(webhwpctrl.js HwpCtrl.prototype.Open)
+-        if (opened === false) failOpen(host, name, opened);
++        if (opened === false) onFail(name, opened);
+     }
+ 
+     // 창이 처음 뜨면 문제 파일부터 연다(가장 자주 고치는 파일). 파일이 없으면 열지 않는다 —
+@@ -276,13 +282,17 @@
+         
+         ctrl.CreatePageImageEx(imageName, 0, 143, 24, "png", "", function(res) {
+             if (res && res.result === true) {
+-                // clear() 가 slot 을 비우므로 부모 통지가 먼저다
++                // 다시 열기가 실패하면 clear() 가 slot 을 비우므로 부모 통지가 먼저다
+                 notifyParent(host, hmlUrl, res.downloadUrl);
+ 
+-                setBusy(host, false);
+-                setStatus(host, '파일이 임시 저장되었습니다.');
+-
+-                clear(host);
++                // 위에서 이미지용으로 바꾼 용지·다단을 되돌리려, 바꾸기 전에 저장한 HML 을 같은 슬롯으로 다시 연다
++                openUrl(host, hmlUrl, function (name, openRes) {
++                    // 바뀐 레이아웃으로 재저장되지 않게 빈 문서로 돌린다
++                    clear(host);
++                    setBusy(host, false);
++                    setStatus(host, '저장은 되었지만 파일을 다시 열지 못했습니다.', 'warning');
++                    console.error('[webhwp] 저장 후 다시 열기 실패', name, openRes);
++                });
+ 
+                 var savedModal = document.getElementById('webhwpSavedModal');
+                 if (savedModal) bootstrap.Modal.getOrCreateInstance(savedModal).show();

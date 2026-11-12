@@ -1,0 +1,8 @@
+{
+ "steps":[
+  {"label":"1311-source-test-edit-open","command":["open","https://dev-exambank.dongahub.com/product/modify.donga?id=199&curriculum=22&pageNum=1&pageSize=10"]},
+  {"label":"1312-source-test-edit-state","command":["snapshot"]},
+  {"label":"1313-source-test-edit-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1314-source-test-edit-controls","command":["eval","--file","sources/runtime/source-form-observation.js"]}
+ ],"tailChars":8500
+}

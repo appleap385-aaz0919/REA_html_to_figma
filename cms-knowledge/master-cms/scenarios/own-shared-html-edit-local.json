@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2261-own-shared-passage-html-focus","command":["focus","#passageEditor .ProseMirror[contenteditable=true]"]},
+ {"label":"2262-own-shared-passage-html-end","command":["press","Control+End"]},
+ {"label":"2263-own-shared-passage-html-marker-input","command":["keyboard","type"," [QA-SHARED-HTML-20261110]"]},
+ {"label":"2264-own-shared-passage-html-local-document","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own item only');const doc=window.itemEditors?.passage?.getDocument();if(!doc?.content?.promptText?.includes('[QA-SHARED-HTML-20261110]'))throw Error('Marker did not reach editor model');return {doc,question:window.itemEditors?.question?.getDocument(),pending:[...document.querySelectorAll('[data-webhwp-result]')].map(e=>({slot:e.dataset.webhwpResult,value:e.value}))};})()"]},
+ {"label":"2265-own-set-child-required-omr-answer-local","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own child only');const root=document.querySelector('#omrSlot [data-omr-code=SBSANM]');if(!root)throw Error('Expected actual SBSANM form');const fields=[...root.querySelectorAll('math-field')].filter(e=>e.dataset.placeholder==='정답 입력');if(fields.length!==1||fields[0].value)throw Error('Expected one empty answer field');fields[0].value='2\\times1\\text{행렬}';fields[0].dispatchEvent(new Event('input',{bubbles:true}));fields[0].dispatchEvent(new Event('change',{bubbles:true}));return {value:fields[0].value,serialized:window.omrSerializers.SBSANM.serialize(root)};})()"]},
+ {"label":"2266-own-shared-html-before-apply","command":["eval","--file","sources/runtime/own-set2089242-form-omr-observation.js"]}
+],"tailChars":180}

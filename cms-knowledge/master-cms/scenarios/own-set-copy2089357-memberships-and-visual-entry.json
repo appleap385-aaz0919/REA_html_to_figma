@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2552-own-set-twin-original-copy-eight-memberships-read","command":["eval","--file","sources/runtime/own-set-twin-eight-memberships-read.js"]},
+ {"label":"2553-own-set-copy2089358-current-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089358"]},
+ {"label":"2554-own-set-copy2089358-current-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2555-own-set-copy2089358-current-visual-state","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]},
+ {"label":"2556-own-set-copy2089358-current-image-load-state","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089358')throw Error('Own set copy required');return {url:location.href,images:[...document.querySelectorAll('.page-wrapper img')].map(e=>({alt:e.alt,src:e.getAttribute('src'),complete:e.complete,naturalWidth:e.naturalWidth,naturalHeight:e.naturalHeight})),passageHeads:[...document.querySelectorAll('.qv-passage')].map(e=>e.innerText.slice(0,400)),twinGenerateDisabled:document.querySelector('[data-twin-generate]')?.matches(':disabled')};})()"]}
+],"tailChars":220}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion":1,
+  "date":"2026-11-09",
+  "status":"in_progress",
+  "evidenceRange":[841,941],
+  "testItemId":2088985,
+  "savedDetailId":2088699,
+  "observations":[
+    {"code":"ESMA00","evidence":[841,842,843,844,845,849,850,854,855,856,860,862,866,868,869,871,873,875,876],"result":"Default one OMR SET/one answer SET, both order flags initially unchecked. Constructed2OMR SETs x2answer SETs, math1/2 and3/4; first inner unordered, second inner ordered. Titles QA-multi-answer and QA-multi-process. Swapped answer block before process. Overlapping top/middle/bottom captures include all controls; internal-container bottom verified1196+1015=2211."},
+    {"code":"ESMA00","evidence":[879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923],"result":"Preview has four flattened TEXT fields plus COMMENT. Five grading cases verify independent inner order and outer group order while retaining group integrity. Manual process is blank in these cases. Answer view separately marks manual fifth field. Runtime client serialization904 confirms nested answer rule tree, not a flat permutation."},
+    {"code":"ESMA00","evidence":[924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941],"result":"Full apply927 creates Master detail2088699. Reentry restores all four math answers,2x2structure, outer=false,inner=[false,true], answer-first/process-second order and titles. Runtime serializer934 matches904. Pixels936/938/940 inspected across full container scroll; bottom verified941."}
+  ],
+  "gradingMatrix":[
+    {"outerOrderFixed":true,"innerOrderFixed":[false,true],"student":[[2,1],[3,4]],"observed":"correct","evidence":890},
+    {"outerOrderFixed":true,"innerOrderFixed":[false,true],"student":[[2,1],[4,3]],"observed":"incorrect","evidence":895},
+    {"outerOrderFixed":true,"innerOrderFixed":[false,true],"student":[[3,4],[2,1]],"observed":"incorrect","evidence":901},
+    {"outerOrderFixed":false,"innerOrderFixed":[false,true],"student":[[3,4],[2,1]],"observed":"correct","evidence":916},
+    {"outerOrderFixed":false,"innerOrderFixed":[false,true],"student":[[3,2],[4,1]],"observed":"incorrect","evidence":921}
+  ],
+  "serializedShape":{"omrTypes":["TEXT","TEXT","TEXT","TEXT","COMMENT"],"answer":"ORDERED(UNORDERED(UNORDERED(VALUE1,VALUE2),ORDERED(VALUE3,VALUE4)),MANUAL)"},
+  "authorityRule":"904/934 invoke the same client serializer used by Preview to read the visible form. These are client runtime payloads, not direct DB records or backend implementation proof.",
+  "remaining":["ESMA00 all other order combinations, legend/affix/similar/case-space branches, comma and min/max/delete boundaries.","OBSACN actual edited-form save/restoration; all14 types still have untested branches.","HML four editor slots and remaining Master modules."]
+}

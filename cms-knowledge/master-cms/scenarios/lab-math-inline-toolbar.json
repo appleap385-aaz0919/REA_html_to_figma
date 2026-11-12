@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"1644-lab-math-top-scroll","command":["eval","(() => {document.querySelector('.page-wrapper').scrollTop=0;return {action:'Return math demo to top',visibility:document.visibilityState};})()"]},
+ {"label":"1645-lab-math-inline-editor-activate","command":["eval","(() => {const e=window.tinymce.get('mre1');if(!e)throw Error('Inline editor missing');e.focus();return {action:'Focus actual TinyMCE editor API',activeElement:document.activeElement.id};})()"]},
+ {"label":"1646-lab-math-inline-toolbar-observation","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1647-lab-math-inline-toolbar-screen","command":["snapshot"],"screenshot":true}
+],"tailChars":1500}

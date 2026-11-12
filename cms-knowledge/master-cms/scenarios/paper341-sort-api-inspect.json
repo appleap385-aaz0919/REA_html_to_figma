@@ -1,0 +1,3 @@
+{"steps":[
+ {"label":"1741-paper341-sort-api-contract","command":["eval","(() => {const t=document.querySelector('#paperItemTable');if(!t||location.pathname!=='/paper/modify.donga'||new URL(location.href).searchParams.get('paperId')!=='341')throw Error('Paper341 edit expected');const s=window.Sortable?.get?.(t);return {url:location.href,visibility:document.visibilityState,sortableFound:!!s,sortType:typeof s?.sort,optionType:typeof s?.option,ids:s?.toArray?.(),onEndType:typeof s?.option?.('onEnd'),groups:[...t.querySelectorAll(':scope>tbody')].map(e=>({attributes:[...e.attributes].map(a=>({name:a.name,value:a.value})),itemIds:[...e.querySelectorAll('tr[data-item-id]')].map(x=>x.dataset.itemId)}))};})()"]}
+],"tailChars":500}

@@ -1,0 +1,180 @@
+- complementary
+  - generic
+    - button "메뉴" [expanded=false, ref=e40159]
+    - link "문제은행 마스터 CMS" [ref=e40160]
+  - list
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "홈" [ref=e40175]
+    - listitem [level=1]
+      - ListMarker "• "
+      - button "문항 관리" [expanded=true, ref=e40176]
+      - generic
+        - link "전체 문항" [ref=e40182]
+        - link "HML 문항 등록" [ref=e40183]
+        - link "디피니션 문항 등록" [ref=e40184]
+        - link "쌍둥이 그룹 관리" [ref=e40185]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "평가지 관리" [ref=e40177]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "문항 출처 관리" [ref=e40178]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "랩" [ref=e40179]
+- banner
+  - StaticText "마스터"
+  - button "다크모드 전환" [ref=e40146]
+  - generic
+    - StaticText "접속자 "
+    - strong
+      - StaticText "jaehyuk.myung"
+  - form
+    - button "로그아웃" [ref=e40161]
+- generic
+  - list "breadcrumbs"
+    - listitem [level=1]
+      - ListMarker "1. "
+      - StaticText "시스템 관리"
+    - listitem [level=1]
+      - ListMarker "2. "
+      - StaticText "문항 관리"
+    - listitem [level=1]
+      - ListMarker "3. "
+      - StaticText "전체 문항"
+    - listitem [level=1]
+      - ListMarker "4. "
+      - StaticText "문항 상세"
+  - heading "문항 상세" [level=2, ref=e40147]
+  - generic
+    - StaticText "문항 ID 2089216"
+  - link "목록" [ref=e40148]
+  - generic
+    - link "이전 문항" [ref=e40162]
+    - StaticText " 24 / 35562건 "
+    - link "다음 문항" [ref=e40163]
+  - heading "MASTER" [level=3, ref=e40149]
+  - heading "HTML" [level=3, ref=e40150]
+  - heading "문항ID 2089216 승인(사용) 하 객관식 > 단답형 > N지 선다" [level=4, ref=e40151]
+    - StaticText "문항ID 2089216 승인(사용) 하 객관식 > 단답형 > N지 선다"
+  - button "OMR 미리보기" [ref=e40152]
+  - button "배포하기" [ref=e40164]
+  - heading "HML" [level=3, ref=e40153]
+  - heading "문항ID 2089216" [level=4, ref=e40154]
+    - StaticText "문항ID 2089216"
+  - StaticText "문제"
+  - link "문제" [ref=e40155]
+    - image "문제"
+  - separator
+  - StaticText "해답"
+  - link "해답" [ref=e40156]
+    - image "해답"
+  - generic
+    - button "쌍둥이 문항 생성" [ref=e40165]
+    - button "쌍둥이 생성 이력" [ref=e40166]
+  - link "문항 수정" [ref=e40167]
+  - heading "상태 정보" [level=3, ref=e40157]
+  - generic
+    - button "수정" [ref=e40168]
+    - button "취소" [ref=e40169]
+    - button "저장" [ref=e40170]
+  - form
+    - group
+      - generic
+        - LabelText
+          - StaticText "On-line 전용"
+        - combobox [expanded=false, disabled, ref=e40180]: 온오프 전체
+          - MenuListPopup
+            - option "온오프 전체" [disabled, ref=e40191]
+            - option "온라인 전용" [disabled, ref=e40192]
+      - generic
+        - LabelText
+          - StaticText "용도"
+        - combobox [expanded=false, disabled, ref=e40181]: 교사용
+          - MenuListPopup
+            - option "공통" [disabled, ref=e40193]
+            - option "교사용" [disabled, ref=e40194]
+      - LabelText
+        - StaticText "상태값"
+      - generic
+        - LabelText
+          - radio "초안" [checked=false, disabled, ref=e40186]
+          - StaticText "초안"
+        - LabelText
+          - radio "실패(재등록)" [checked=false, disabled, ref=e40187]
+          - StaticText "실패(재등록)"
+        - LabelText
+          - radio "승인(사용)" [checked=true, disabled, ref=e40188]
+          - StaticText "승인(사용)"
+        - LabelText
+          - radio "승인(미사용)" [checked=false, disabled, ref=e40189]
+          - StaticText "승인(미사용)"
+        - LabelText
+          - radio "폐기" [checked=false, disabled, ref=e40190]
+          - StaticText "폐기"
+  - heading "기본 정보" [level=3, ref=e40158]
+  - DescriptionList
+    - term "문항 ID"
+    - definition
+      - StaticText "2089216 (2088849)"
+    - term "생성 방식"
+    - definition
+      - StaticText "HML 변환"
+    - term "원본 파일"
+    - definition
+      - StaticText "QA-HML-20261109-01-SET.hml"
+      - button "다운로드" [ref=e40171]
+    - term "썸네일"
+    - definition
+      - StaticText "-"
+    - term "난이도"
+    - definition
+      - StaticText "하"
+    - term "문항 형태"
+    - definition
+      - StaticText "객관식 > 단답형 > N지 선다"
+    - term "배포"
+    - definition
+      - StaticText "-"
+  - DescriptionList
+    - term "세트 문항"
+    - definition
+      - StaticText "-"
+    - term "쌍둥이 문항"
+    - definition
+      - StaticText "4개"
+      - button "목록 조회" [ref=e40172]
+    - term "평가지 등록"
+    - definition
+      - StaticText "1개"
+      - button "목록 조회" [ref=e40173]
+    - term "출처"
+    - definition
+      - StaticText "1개"
+      - button "목록 조회" [ref=e40174]
+    - term "등록"
+    - definition
+      - StaticText "jaehyuk.myung · 2026-11-09"
+  - separator
+  - DescriptionList
+    - term "단원코드"
+    - definition
+      - StaticText "[22MMAT0KOK1004040000]"
+      - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 반비례와 그 그래프 > >"
+    - term "성취기준"
+    - definition
+      - StaticText "[9수02-07] 정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다."
+    - term "내용영역"
+    - definition
+      - StaticText "[22MMAT01020000] 변화와 관계 > >"
+  - DescriptionList
+    - term "행동영역"
+    - definition
+      - StaticText "계산"
+    - term "교과역량"
+    - definition
+      - StaticText "문제해결"
+    - term "유형정보"
+    - definition
+      - StaticText "[MA146100] 반비례 관계 y=a/x의 그래프 활용"

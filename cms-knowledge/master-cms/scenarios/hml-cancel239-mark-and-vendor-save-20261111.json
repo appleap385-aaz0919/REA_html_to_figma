@@ -1,0 +1,84 @@
+{
+  "steps": [
+    {
+      "label": "3433-hml-vendor-pending-cancel-marker-preflight",
+      "command": [
+        "eval",
+        "(()=>{const q=new URLSearchParams(location.search),c=document.querySelector('#webhwpFrame')?.contentWindow.HwpCtrl,p=window.opener,b=p?.__qaCancel239ParentBaseline;const caret=window.__qaCancel239BeforeCaret;if(location.pathname!=='/item/webhwp/editor.donga'||q.get('itemId')!=='2089239'||q.get('itemDetailId')!=='2089104'||!document.querySelector('[data-slot=explain].active')||!c||c.IsModified||!window.__qaCancel239BeforeText?.startsWith('[QA-EXPLANATION-HML-20261110]')||caret?.x!==309||caret?.y!==326||b?.ownerDetailId!=='2089104'||[...p.document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Exact unmodified own explanation required');return {ready:true,caret};})()"
+      ]
+    },
+    {
+      "label": "3434-hml-vendor-pending-cancel-ime-mouse-move",
+      "command": [
+        "mouse",
+        "move",
+        "309",
+        "326"
+      ]
+    },
+    {
+      "label": "3435-hml-vendor-pending-cancel-ime-mouse-down",
+      "command": [
+        "mouse",
+        "down"
+      ]
+    },
+    {
+      "label": "3436-hml-vendor-pending-cancel-ime-mouse-up",
+      "command": [
+        "mouse",
+        "up"
+      ]
+    },
+    {
+      "label": "3437-hml-vendor-pending-cancel-document-start",
+      "command": [
+        "press",
+        "Control+Home"
+      ]
+    },
+    {
+      "label": "3438-hml-vendor-pending-cancel-marker-type",
+      "command": [
+        "keyboard",
+        "type",
+        "[QA-HML-CANCEL-20261111] "
+      ]
+    },
+    {
+      "label": "3439-hml-vendor-pending-cancel-marker-readback",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-popup-text-and-caret-read.js"
+      ]
+    },
+    {
+      "label": "3440-hml-vendor-pending-cancel-draft-check-before-save",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-family-draft-checks.js"
+      ]
+    },
+    {
+      "label": "3441-hml-vendor-pending-cancel-editor-save-once",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-editor-save-once.js"
+      ]
+    },
+    {
+      "label": "3442-hml-vendor-pending-cancel-editor-save-outcome",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-editor-save-outcome.js"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 130,
+  "stopOnScreenshotFailure": false
+}

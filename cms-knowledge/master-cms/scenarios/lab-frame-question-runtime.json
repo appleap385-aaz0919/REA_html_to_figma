@@ -1,0 +1,124 @@
+{
+  "steps": [
+    {
+      "label": "1432-lab-frame-compare-before-load",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare before loading editors'};})()"
+      ]
+    },
+    {
+      "label": "1433-lab-frame-invalid-json-input",
+      "command": [
+        "fill",
+        "#frameDocInput",
+        "{broken"
+      ]
+    },
+    {
+      "label": "1434-lab-frame-invalid-json-load",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocLoad').click();return {action:'Load invalid JSON'};})()"
+      ]
+    },
+    {
+      "label": "1435-lab-frame-question-json-input",
+      "command": [
+        "fill",
+        "#frameDocInput",
+        "{\"assets\": [{\"alt\": \"\", \"path\": \"/item/203/2038004/1/asset/binitem-35.png\", \"role\": \"question\", \"type\": \"image\", \"width\": null, \"height\": null, \"assetId\": \"img-1\", \"external\": false, \"mimeType\": \"image/png\"}], \"content\": {\"choices\": [], \"answerText\": \"③\", \"promptText\": \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\", \"correctHtml\": \"<p><span class=\\\"font-s20\\\">③</span></p>\", \"questionHtml\": \"<d-question><p><span class=\\\"font-s20\\\">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 <u>아닌</u> 것은?</span></p><p class=\\\"align-c\\\"><span class=\\\"font-s20\\\"><img src=\\\"/item/203/2038004/1/asset/binitem-35.png\\\" alt=\\\"image\\\" data-hml-binitem=\\\"35\\\" width=\\\"125\\\" height=\\\"84\\\" data-asset-id=\\\"img-1\\\"></span></p></d-question>\", \"explanationHtml\": \"<p><span class=\\\"font-s20\\\">$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면</span></p><p><span class=\\\"font-s20\\\">$-2=6a$<span class=\\\"hml-align-space\\\" style=\\\"display:inline-block;width:1.5em;white-space:pre\\\">   </span>$\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$</span></p><p><span class=\\\"font-s20\\\">$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$</span></p><p><span class=\\\"font-s20\\\">③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면</span></p><p><span class=\\\"hml-align-space\\\" style=\\\"display:inline-block;width:1.5em;white-space:pre\\\">   </span><span class=\\\"font-s20\\\">$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$</span></p>\", \"explanationText\": \"$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면\\n$-2=6a$ $\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$\\n$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$\\n③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면\\n$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$\", \"modelAnswerHtml\": \"\", \"explanationLines\": [\"$y=ax~(a\\\\not=0)$로 놓고 $x=6,~y=-2$를 대입하면\", \"$-2=6a$ $\\\\therefore \\\\hspace{0.25em} a=- \\\\dfrac{1}{3}$\", \"$\\\\therefore \\\\hspace{0.25em} y=- \\\\dfrac{1}{3} x$\", \"③ $y=- \\\\dfrac{1}{3} x$에 $x=1,~y=-3$을 대입하면\", \"$-3\\\\not=- \\\\dfrac{1}{3} \\\\times 1$\"], \"gradingCriteriaHtml\": \"\"}, \"grading\": {\"mode\": \"choice\", \"value\": \"③\", \"choices\": [3]}, \"outType\": \"split\", \"passageKey\": \"\", \"contentVersion\": \"v3\"}"
+      ]
+    },
+    {
+      "label": "1436-lab-frame-question-load",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocLoad').click();return {action:'Load retained question document into local test only'};})()"
+      ]
+    },
+    {
+      "label": "1437-lab-frame-direct-loaded",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1438-lab-frame-direct-get-document",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=direct] [data-call=getDocument]').click();return {action:'Direct getDocument UI'};})()"
+      ]
+    },
+    {
+      "label": "1439-lab-frame-direct-save",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=direct] [data-call=save]').click();return {action:'Direct save API test UI, no CMS save endpoint'};})()"
+      ]
+    },
+    {
+      "label": "1440-lab-frame-iframe-tab-open",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('a[href=\"#frameTabFrame\"]').click();return {action:'Show iframe tab'};})()"
+      ]
+    },
+    {
+      "label": "1441-lab-frame-iframe-loaded",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1442-lab-frame-compare-loaded",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare both loaded documents'};})()"
+      ]
+    },
+    {
+      "label": "1443-lab-frame-height-fixed",
+      "command": [
+        "select",
+        "#frameHeightMode",
+        "fixed"
+      ]
+    },
+    {
+      "label": "1444-lab-frame-fixed-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1445-lab-frame-iframe-get-document",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=frame] [data-call=getDocument]').click();return {action:'Iframe getDocument UI'};})()"
+      ]
+    },
+    {
+      "label": "1446-lab-frame-iframe-save",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=frame] [data-call=save]').click();return {action:'Iframe save API test UI, no CMS save endpoint'};})()"
+      ]
+    },
+    {
+      "label": "1447-lab-frame-save-readback",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 900
+}

@@ -1,0 +1,21 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_remaining_branches","evidenceRange":[2183,2200],"lastEvidence":"2200-own-qa-membership-final-source",
+ "summary":"자체 QA 문항2089216/2089239의 쌍둥이 연결을 실제 해제하고 정확한 ID 검색 후 수동 추가했다. 2개 그룹에서 한 문항을 해제하자 원문은 그룹없음/0개가 됐고 생성 이력은 남았다. 수동 추가 후 양쪽 상세는 다시2개이고 원문Y/복제본R/기존 OMR을 유지하며 이력은 여전히 COPY1건이다. 확정 Master 업무변경은37회다.",
+ "observations":[
+  {"evidence":[2183,2184,2185,2186,2187],"result":"자체 복제본2089239의 관측된 해제 버튼을 한 번 눌렀다. 응답 이벤트를 기다린 helper는15초 후 실패했지만, 다시 누르지 않고 독립 GET/실제 화면으로 원문 그룹없음과0개를 확인했다. 생성 이력의 새 문항2089239는 유지됐다. 서버 응답 대기를 위한 자동화 관측 실패를 CMS 해제 실패로 분류하지 않는다. 물리 DB 그룹 삭제나 해제 직후 복제본의 별도 GET 상태는 이 근거에서 단정하지 않는다."},
+  {"evidence":[2188,2190,2191],"result":"해제 후 숨겨진 추가 결과가 이미 채워져 있어 최초 helper가 실제 탭 클릭 전에 중단됐다. 기존 결과를 관찰한 다음 추가 탭을 열었다. 기본 필터는22교육과정,단일/세트 모두,R/F/Y/N 선택,D 미선택이며10행씩 표시된다. 후보는 추가가능/본인문항/다른쌍둥이문항그룹을 구분한다. 본인문항의 추가는 비활성이고 다른그룹 후보의 버튼은 활성으로 보이나 이번에는 그 후보를 누르지 않았다."},
+  {"evidence":[2192,2193,2194,2195,2196,2197,2198],"result":"관측된 문항ID 검색값으로2089239를 조회해 한 행과 추가 가능 버튼을 확인했다. 해당 버튼을 한 번 눌러 수동 추가했다. 서버 재조회는 원문Y와 복제본R의2개 그룹이며, 두 상세의 OMR/정답은 같고 문항 상세ID도 이전과 같다. 후보는 등록된 문항/추가비활성으로 바뀌었다. 생성 이력은 기존 COPY1건 그대로라 수동 추가와 생성 이력을 구분한다."},
+  {"evidence":[2199,2200],"result":"모달을 실제 닫고 최종 소스를 저장했다. 미저장 폼이나 열린 모달 없이 원문2089216 상세에 남아 있다. 이후 기능·소스 조사는 agent-browser의 동일한 조사 탭에서 계속하며 사용자가 다른 탭·마우스·키보드를 사용하는 것을 막지 않는다."}
+ ],
+ "artifacts":["twin-qa-membership-intent.json","sources/runtime/qa2089216-remove-own-clone-once.js","sources/runtime/qa2089216-add-own-clone-once.js","sources/runtime/qa-twin-pair-detail-readback.js"],
+ "pixelEvidence":{"viewed":[2187,2190,2193,2197],"transientOverlayAtCapture":[2190],"note":"2190은 로딩 오버레이가 있는 순간이다. 전체 추가 탭의 정착된 세로 픽셀 검토로 계산하지 않는다.2193/2197은 정확한ID 한 행 상태가 모두 보인다."},
+ "persistentChanges":{"confirmedMasterOperations":37,"newMasterChangesInThisPhase":2,"operations":["Remove own clone from twin group","Manually re-add own clone"],"anchorItemId":2089216,"cloneItemId":2089239,"memberItemIdsAfter":[2089216,2089239],"viewFlagsAfter":{"2089216":"Y","2089239":"R"},"generationHistoryCountAfter":1,"serviceDeployment":false,"originalRestorationPending":false,"physicalGroupIdentityRestorationClaimed":false},
+ "remaining":[
+  "자체 승인 문항에서 실제 AI 쌍둥이 생성 요청과 작업 대기·처리·성공 또는 실패 표시를 확인한다. 중복 요청은 하지 않는다.",
+  "수동 추가의 다른 그룹 합치기와 단일/세트 조합, Master 폐기의 그룹 제외 정책, 세트 생성은 아직 남아 있다.",
+  "활성 세트의 공유 지문 HML 편집, 실제 번역 파일, Definition 복합 자료와 권한별 분기도 남아 있다. 서비스 배포는 제출하지 않는다.",
+  "기능·소스 조사는 백그라운드로 이어간다. 사용자가 다른 작업을 할 수 있으며 실제 화면 캡처가 꼭 필요할 때만 선택 탭 전환 필요성을 알린다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216","tab":"t21 pinned research; own approved anchor, no modal","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["2185/2188은 실패한 자동화 관측 근거로 보존하며 동일 작업을 재생하지 않았다.","2189는 실행하지 않았으므로 근거 파일이 없다. 번호 범위와 실제 근거 수는 다르다.","전체 CMS의100% 완료나 서버 전체 정책을 주장하지 않는다."]
+}

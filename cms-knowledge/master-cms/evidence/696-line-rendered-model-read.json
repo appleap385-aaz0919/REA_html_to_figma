@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "696-line-rendered-model-read",
+  "startedUtc": "2026-11-09T01:59:44.628903+00:00",
+  "command": [
+    "eval",
+    "Array.from(document.querySelectorAll(math-field)).map(e=>({value:e.value,visible:e.getBoundingClientRect().width>0}))"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "0EFB900C688AC111C33EDFA475104F9D",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.098
+  },
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: ReferenceError: math is not defined\n    at <anonymous>:1:38",
+    "localSeconds": 0.107
+  }
+}

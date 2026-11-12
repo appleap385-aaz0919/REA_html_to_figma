@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2021-hml664-local-mixed-judges","command":["eval","--file","sources/runtime/hml664-local-mixed-review.js"]},
+ {"label":"2022-hml664-mixed-judge-readback","command":["eval","--file","sources/runtime/hml-draft-local-observation.js"]},
+ {"label":"2023-hml664-paper-registration-yes","command":["check","input[name=paperRegYn][value=Y]"]},
+ {"label":"2024-hml664-qa-review-remark","command":["fill","textarea[name=remark]","QA-HML-20261109-01: isolated mixed review; S=block2, F=block1, D=blocks3-18; create paper."]},
+ {"label":"2025-hml664-mixed-review-ready","command":["eval","--file","sources/runtime/hml-draft-local-observation.js"]}
+],"tailChars":450}

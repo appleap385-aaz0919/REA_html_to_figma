@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {
+      "label": "3459-paper1094-reversed-pages-detail-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/paper/detail.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100"
+      ]
+    },
+    {
+      "label": "3460-paper1094-reversed-pages-detail-baseline",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "3461-paper1094-reversed-pages-normal-modify",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/paper/detail.donga'||new URL(location.href).searchParams.get('paperId')!=='1094')throw Error('Own paper only');const a=[...document.querySelectorAll('a[href]')].filter(e=>{const u=new URL(e.href);return u.pathname==='/paper/modify.donga'&&u.searchParams.get('paperId')==='1094';});if(a.length!==1||a[0].matches('.disabled'))throw Error('Own paper Modify unavailable');a[0].click();return {clicked:true};})()"
+      ]
+    },
+    {
+      "label": "3462-paper1094-reversed-pages-form-baseline",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "3463-paper1094-reversed-pages-fill-start2",
+      "command": [
+        "fill",
+        "#paperModifyForm input[name=startPageNum]",
+        "2"
+      ]
+    },
+    {
+      "label": "3464-paper1094-reversed-pages-local-form-validation",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 90,
+  "stopOnScreenshotFailure": false
+}

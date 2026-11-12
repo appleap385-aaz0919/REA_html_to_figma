@@ -1,0 +1,155 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e30226]
+      - link "문제은행 마스터 CMS" [ref=e30227]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e30234]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e30235]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e30236]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e30237]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e30238]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e30229]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "수정"
+      - heading "평가지 수정" [level=2, ref=e30228]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e30232]
+          - DescriptionList
+            - term "평가지 ID"
+            - definition
+              - StaticText "1093 (1101)"
+            - term "평가지명 *"
+              - StaticText "평가지명"
+              - StaticText "*"
+            - definition
+              - textbox [required, ref=e30258]: QA-HML-20261109-01-SET
+                - StaticText "QA-HML-20261109-01-SET"
+            - term "상태"
+            - definition
+              - LabelText
+                - radio "초안" [checked=false, ref=e30275]
+                - StaticText "초안"
+              - LabelText
+                - radio "사용" [checked=true, ref=e30276]
+                - StaticText "사용"
+              - LabelText
+                - radio "미사용" [checked=false, ref=e30277]
+                - StaticText "미사용"
+              - LabelText
+                - radio "폐기" [checked=false, ref=e30278]
+                - StaticText "폐기"
+            - term "생성 방식"
+            - definition
+              - StaticText "HML 생성"
+            - term "단원 코드"
+            - definition
+              - StaticText "[22MMAT0KOK1004040000]"
+              - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 반비례와 그 그래프 > >"
+            - term "등록"
+            - definition
+              - StaticText "jaehyuk.myung · 2026-11-09"
+          - DescriptionList
+            - term "시험지"
+            - definition
+              - link "664 | QA-HML-20261109-01-SET.hml" [ref=e30259]
+            - term "출처"
+            - definition
+              - StaticText "[22-M-MA-T0-1-1-SMT-TP-2022]"
+              - StaticText "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022"
+            - term "페이지 *"
+              - StaticText "페이지"
+              - StaticText "*"
+            - definition
+              - spinbutton "예: 24" [required, ref=e30260]: 2
+                - StaticText "2"
+              - StaticText "~"
+              - spinbutton "예: 25" [required, ref=e30261]: 22
+                - StaticText "22"
+            - term "용도 *"
+              - StaticText "용도"
+              - StaticText "*"
+            - definition
+              - LabelText
+                - radio "공통" [checked=false, ref=e30279]
+                - StaticText "공통"
+              - LabelText
+                - radio "교사용" [checked=true, ref=e30280]
+                - StaticText "교사용"
+            - term "문제 구성"
+            - definition
+              - StaticText "객관식 > 단답형 > N지 선다 (1)"
+            - term "문항 수"
+            - definition
+              - StaticText "1문항"
+        - generic
+          - heading "포함 문항 (1)" [level=3, ref=e30233]
+            - StaticText "포함 문항 ("
+            - StaticText "1"
+            - StaticText ")"
+          - button " 문항 추가" [ref=e30239]
+            - StaticText ""
+            - StaticText "문항 추가"
+          - table
+            - rowgroup
+              - row
+                - columnheader [ref=e30262]
+                - columnheader "순서" [ref=e30263]
+                - columnheader "문항 ID" [ref=e30264]
+                - columnheader "문제" [ref=e30265]
+                - columnheader "형태" [ref=e30266]
+                - columnheader "난이도" [ref=e30267]
+                - columnheader "단원 코드" [ref=e30268]
+                - columnheader "문항 상태" [ref=e30269]
+                - columnheader "제외" [ref=e30270]
+            - row
+              - cell "" [ref=e30249]
+                - StaticText ""
+              - cell "1" [ref=e30250]
+              - cell "2089216" [ref=e30251]
+                - StaticText "2089216"
+              - cell "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$" [ref=e30252]
+                - link "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$" [ref=e30273]
+              - cell "객관식 > 단답형 > N지 선다" [ref=e30253]
+              - cell "하" [ref=e30254]
+              - cell "22MMAT0KOK1004040000" [ref=e30255]
+                - StaticText "22MMAT0KOK1004040000"
+              - cell "승인(사용)" [ref=e30256]
+              - cell "제외" [ref=e30257]
+                - button "제외" [disabled, ref=e30274]
+                  - StaticText ""
+        - link "취소" [ref=e30230]
+        - button "저장" [ref=e30231]

@@ -1,0 +1,1 @@
+import{d as e}from"./Dhki-BdO.js";var t=e(`userInfo`,{state:()=>({data:{},guest:!1}),persist:!0,actions:{save(e,t){this.data=e,this.guest=t||!1},getUser(){return this.data},isGuest(){return this.guest}}});export{t};

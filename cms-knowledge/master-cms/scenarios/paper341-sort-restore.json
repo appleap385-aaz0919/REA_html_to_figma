@@ -1,0 +1,66 @@
+{
+  "steps": [
+    {
+      "label": "1748-paper341-sort-reentry-modify",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=341&curriculum=22&pageNum=1&pageSize=30"
+      ]
+    },
+    {
+      "label": "1749-paper341-sort-persisted-form",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1750-paper341-sort-restore-public-api",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-sort-api-restore.js"
+      ]
+    },
+    {
+      "label": "1751-paper341-sort-restored-form",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1752-paper341-sort-restore-save-submit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-restore-original.js"
+      ]
+    },
+    {
+      "label": "1753-paper341-sort-restore-readback",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "1754-paper341-sort-restored-detail-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "1755-paper341-sort-restored-detail-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 500
+}

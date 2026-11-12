@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1066-hml-unsaved-to-answer-seed","command":["snapshot"]},
+  {"label":"1067-hml-unsaved-to-answer","command":["click","{ref}"],"refPattern":"- button \"해답 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1068-hml-unsaved-answer-loaded","command":["snapshot"],"screenshot":true},
+  {"label":"1069-hml-unsaved-return-question","command":["click","{ref}"],"refPattern":"- button \"문제 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1070-hml-unsaved-return-loaded","command":["snapshot"],"screenshot":true}
+ ],"tailChars":1500
+}

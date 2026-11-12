@@ -1,0 +1,12 @@
+{"steps":[
+ {"label":"2094-hml665-single2089238-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089238"]},
+ {"label":"2095-hml665-single2089238-top-pixels","command":["eval","--file","sources/runtime/hml664-master-item-observation.js"],"screenshot":true},
+ {"label":"2096-hml665-single2089238-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2097-hml665-single2089238-scroll","command":["eval","--file","sources/runtime/page-scroll-walk.js"]},
+ {"label":"2098-hml665-single2089238-bottom-pixels","command":["snapshot"],"screenshot":true},
+ {"label":"2099-hml665-single2089238-middle-pixels","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089238')throw Error('Own QA single only');const e=document.querySelector('.page-wrapper');e.scrollTo({top:800,behavior:'instant'});return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2100-hml665-paper1094-open","command":["open","https://dev-exambank.dongahub.com/paper/detail.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2101-hml665-paper1094-state-pixels","command":["eval","--file","sources/runtime/paper-detail-observation.js"],"screenshot":true},
+ {"label":"2102-hml665-paper1094-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2103-hml665-paper1094-scroll","command":["eval","--file","sources/runtime/page-scroll-walk.js"]}
+],"tailChars":500}

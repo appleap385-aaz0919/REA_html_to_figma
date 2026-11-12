@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3236-own-copy239-explanation-vendor-url-scope-read",
+  "startedUtc": "2026-11-10T08:37:32.741690+00:00",
+  "command": [
+    "eval",
+    "(()=>{const p=window.opener;if(new URLSearchParams(location.search).get('itemId')!=='2089239'||p.document.querySelector('[data-editor-url]')?.dataset.itemDetailId!=='2089019')throw Error('Owned239 popup/parent');return {pending:[...p.document.querySelectorAll('[data-webhwp-result]')].filter(e=>e.value).map(e=>{const u=new URL(e.value);return {slot:e.dataset.webhwpResult,origin:u.origin,path:u.pathname,hasQuery:!!u.search,valueWithoutQuery:u.origin+u.pathname};}),editorModified:document.querySelector('#webhwpFrame').contentWindow.HwpCtrl.IsModified};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019"
+    },
+    "error": null,
+    "localSeconds": 0.13
+  },
+  "targetIdBefore": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "result": {
+        "editorModified": false,
+        "pending": [
+          {
+            "hasQuery": false,
+            "origin": "https://dev-webhwp.dongahub.com",
+            "path": "/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/bf71fc64-6af8-466d-9556-7384d64832dc.hwpml2x",
+            "slot": "explain.hml",
+            "valueWithoutQuery": "https://dev-webhwp.dongahub.com/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/bf71fc64-6af8-466d-9556-7384d64832dc.hwpml2x"
+          },
+          {
+            "hasQuery": false,
+            "origin": "https://dev-webhwp.dongahub.com",
+            "path": "/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/964eff42-2264-4633-bdbe-b75d2aea8d7d.png",
+            "slot": "explain.image",
+            "valueWithoutQuery": "https://dev-webhwp.dongahub.com/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/964eff42-2264-4633-bdbe-b75d2aea8d7d.png"
+          }
+        ]
+      }
+    },
+    "error": null,
+    "localSeconds": 0.132
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "refs": {
+        "e42160": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e42161": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e42162": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e42163": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e42164": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e42165": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e42166": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e42167": {
+          "name": "한글 편집",
+          "role": "heading"
+        },
+        "e42168": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e42169": {
+          "name": "확인",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [disabled, ref=e42162]\n    - button \"지문해석 수정\" [disabled, ref=e42163]\n    - button \"문제 수정\" [ref=e42164]\n    - button \"해답 수정\" [ref=e42165]\n  - button \"저장\" [ref=e42160]\n  - StaticText \"bf71fc64-6af8-466d-9556-7384d64832dc.hwpml2x 을(를) 열었습니다.\"\n  - Iframe [ref=e42161]\n    - Iframe [ref=e42166]\n  - dialog\n    - generic\n      - heading \"한글 편집\" [level=5, ref=e42167]\n      - button \"닫기\" [ref=e42168]\n      - generic\n        - StaticText \"CMS 에서 ‘임시 저장’ 또는\"\n        - LineBreak \"\\n\"\n        - StaticText \"‘전체 반영’ 버튼을 눌러주세요\"\n      - button \"확인\" [ref=e42169]"
+    },
+    "error": null,
+    "localSeconds": 0.13
+  }
+}

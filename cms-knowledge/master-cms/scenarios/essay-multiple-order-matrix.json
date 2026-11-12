@@ -1,0 +1,260 @@
+{
+  "steps": [
+    {
+      "label": "891-multi-essay-before-order-matrix",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "892-multi-essay-second-pair-four",
+      "command": [
+        "fill",
+        "{ref}",
+        "4"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 2
+    },
+    {
+      "label": "893-multi-essay-second-pair-three",
+      "command": [
+        "fill",
+        "{ref}",
+        "3"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 3
+    },
+    {
+      "label": "894-multi-essay-second-inner-reversed-grade",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"채점하기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "895-multi-essay-second-inner-reversed-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "896-multi-essay-outer-fixed-value-1",
+      "command": [
+        "fill",
+        "{ref}",
+        "3"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 0
+    },
+    {
+      "label": "897-multi-essay-outer-fixed-value-2",
+      "command": [
+        "fill",
+        "{ref}",
+        "4"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 1
+    },
+    {
+      "label": "898-multi-essay-outer-fixed-value-3",
+      "command": [
+        "fill",
+        "{ref}",
+        "2"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 2
+    },
+    {
+      "label": "899-multi-essay-outer-fixed-value-4",
+      "command": [
+        "fill",
+        "{ref}",
+        "1"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 3
+    },
+    {
+      "label": "900-multi-essay-outer-fixed-reversed-grade",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"채점하기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "901-multi-essay-outer-fixed-reversed-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "902-multi-essay-close-for-outer-unfix",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- dialog",
+      "refPattern": "- button \"닫기\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "903-multi-essay-outer-unfixed",
+      "command": [
+        "uncheck",
+        "{ref}"
+      ],
+      "refPattern": "- checkbox \"OMR SET끼리 순서 고정\\(유순\\)\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "904-multi-essay-unordered-serialization",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/read-visible-omr-serialization.js"
+      ]
+    },
+    {
+      "label": "905-multi-essay-unordered-preview-open",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "906-multi-essay-unordered-preview-ready",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "907-multi-essay-unordered-normal-1",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4
+    },
+    {
+      "label": "908-multi-essay-unordered-normal-2",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 3
+    },
+    {
+      "label": "909-multi-essay-unordered-normal-3",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "910-multi-essay-unordered-normal-4",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1
+    },
+    {
+      "label": "911-multi-essay-outer-unfixed-value-1",
+      "command": [
+        "fill",
+        "{ref}",
+        "3"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 0
+    },
+    {
+      "label": "912-multi-essay-outer-unfixed-value-2",
+      "command": [
+        "fill",
+        "{ref}",
+        "4"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 1
+    },
+    {
+      "label": "913-multi-essay-outer-unfixed-value-3",
+      "command": [
+        "fill",
+        "{ref}",
+        "2"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 2
+    },
+    {
+      "label": "914-multi-essay-outer-unfixed-value-4",
+      "command": [
+        "fill",
+        "{ref}",
+        "1"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 3
+    },
+    {
+      "label": "915-multi-essay-outer-unfixed-reversed-grade",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"채점하기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "916-multi-essay-outer-unfixed-reversed-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 4200
+}

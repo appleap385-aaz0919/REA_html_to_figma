@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"3116-own-twin-unlink239-fresh-after-unknown","command":["snapshot"]},
+ {"label":"3117-own-twin-unlink239-independent-current-read","command":["eval","--file","sources/runtime/disposable-single-family-memberships-history-read.js"]},
+ {"label":"3118-own-twin-unlink239-current-modal-state","command":["eval","(()=>({url:location.href,twinCount:document.querySelector('#twinCountText')?.textContent.trim(),currentText:document.querySelector('#twinCurrent')?.innerText,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,transitioning:bootstrap.Modal.getInstance(e)?._isTransitioning})),ownRemoveAttempted:window.__qaOwnCloneRemoveAttempted,htmxRequestElements:[...document.querySelectorAll('.htmx-request')].map(e=>({tag:e.tagName,id:e.id}))}))()"]}
+],"tailChars":120}

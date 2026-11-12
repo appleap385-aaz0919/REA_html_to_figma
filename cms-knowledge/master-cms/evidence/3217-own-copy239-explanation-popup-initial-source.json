@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3217-own-copy239-explanation-popup-initial-source",
+  "startedUtc": "2026-11-10T08:27:20.980191+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/sanitized-page-source.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019"
+    },
+    "error": null,
+    "localSeconds": 0.08
+  },
+  "targetIdBefore": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "result": {
+        "html": "<!DOCTYPE html>\n<html lang=\"ko\"><head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>한글(HML) 수정</title>\n    \n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css\">\n    <link rel=\"stylesheet\" href=\"/css/custom-6bd7c675a862b26c4d382c2b24ee8806.css\">\n    <link rel=\"stylesheet\" href=\"/css/webhwp-4d0a11b9fee867f1d62f2c4db5c6edad.css\">\n<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>\n<body class=\"webhwp-window\">\n\n\n<div class=\"webhwp-host\">\n    \n    <div class=\"webhwp-toolbar\">\n        <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-sm\" data-webhwp-open=\"\" data-slot=\"passage\" data-webhwp-empty=\"true\" disabled=\"\">지문 수정</button>\n            <button type=\"button\" class=\"btn btn-sm\" data-webhwp-open=\"\" data-slot=\"translation\" data-webhwp-empty=\"true\" disabled=\"\">지문해석 수정</button>\n            <button type=\"button\" class=\"btn btn-sm active\" data-webhwp-open=\"\" data-webhwp-new=\"\" data-slot=\"question\">문제 수정</button>\n            <button type=\"button\" class=\"btn btn-sm\" data-webhwp-open=\"\" data-webhwp-new=\"\" data-slot=\"explain\">해답 수정</button>\n        </div>\n        <!--\n        <button type=\"button\" class=\"btn btn-sm\" data-webhwp-action=\"local\">내 PC 파일 열기</button>\n        <button type=\"button\" class=\"btn btn-sm\" data-webhwp-action=\"download\">다운로드</button>\n        -->\n        <button type=\"button\" class=\"btn btn-sm btn-primary\" data-webhwp-action=\"save\">저장</button>\n    </div>\n    <div class=\"text-secondary small mb-2\" data-webhwp-status=\"\">2089216_Q.hml 을(를) 열었습니다.</div>\n    <input type=\"file\" accept=\".hml,.hwp,.hwpx\" class=\"d-none\" data-webhwp-file=\"\">\n    <iframe id=\"webhwpFrame\" name=\"webhwpFrame\" class=\"webhwp-frame\" src=\"/webhwpctrl/resources/hwpctrlframe.html?frameId=webhwpFrame\"></iframe>\n</div>\n\n\n<div>\n    <div class=\"modal modal-blur fade\" id=\"webhwpSavedModal\" tabindex=\"-1\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-sm modal-dialog-centered\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <h5 class=\"modal-title\">한글 편집</h5>\n                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"닫기\"></button>\n                </div>\n                <div class=\"modal-body text-center\">\n                    <div class=\"fw-bold\">CMS 에서 ‘임시 저장’ 또는<br>‘전체 반영’ 버튼을 눌러주세요</div>\n                </div>\n                <div class=\"modal-footer py-2\">\n                    <button type=\"button\" class=\"btn btn-sm btn-primary\" data-bs-dismiss=\"modal\" data-alert-ok=\"\">확인</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<script src=\"/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js\"></script>\n\n<script src=\"/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js\"></script>\n<script src=\"/js/common-8dc66a9d95b497a50939a25f89dee707.js\"></script>\n<script src=\"/js/webhwp/webhwp-e082bada3ae14916759b8d44db43d953.js\"></script>\n\n\n\n</body></html>",
+        "redaction": "Password and CSRF/token-named input/meta nodes and nonce/token attributes removed; cookies/storage never read.",
+        "title": "한글(HML) 수정",
+        "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.127
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "refs": {
+        "e42160": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e42161": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e42162": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e42163": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e42164": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e42165": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e42166": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [disabled, ref=e42162]\n    - button \"지문해석 수정\" [disabled, ref=e42163]\n    - button \"문제 수정\" [ref=e42164]\n    - button \"해답 수정\" [ref=e42165]\n  - button \"저장\" [ref=e42160]\n  - StaticText \"2089216_Q.hml 을(를) 열었습니다.\"\n  - Iframe [ref=e42161]\n    - Iframe [ref=e42166]"
+    },
+    "error": null,
+    "localSeconds": 0.099
+  }
+}

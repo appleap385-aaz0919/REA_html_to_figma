@@ -1,0 +1,10 @@
+{
+ "steps":[
+  {"label":"1118-twin-list-middle","command":["scroll","down","700","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1119-twin-list-bottom","command":["scroll","down","700","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1120-twin-list-bottom-measure","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1121-twin-single-group-focus","command":["focus","{ref}"],"refPattern":"- link \"다음 중 그림과 같은 정비례 관계[^\"]+\" \\[ref=(e\\d+)\\]"},
+  {"label":"1122-twin-single-group-enter","command":["press","Enter"]},
+  {"label":"1123-twin-single-group-loaded","command":["snapshot"],"screenshot":true}
+ ],"tailChars":10000
+}

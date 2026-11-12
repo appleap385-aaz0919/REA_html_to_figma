@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"2379-own-source199-registration-pickers-before-n","command":["eval","--file","sources/runtime/own-source199-registration-picker-read.js"]},
+ {"label":"2380-own-source199-impact-confirm-local","command":["eval","(async()=>{if(new URLSearchParams(location.search).get('id')!=='199')throw Error('Own source only');const modal=document.querySelector('#mappingImpactModal.show');if(!modal||document.querySelectorAll('.modal.show').length!==1||!modal.innerText.includes('22-M-MA-T0-1-1-SMT-TP-2048'))throw Error('Own one-mapping impact dialog required');const hidden=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Impact hidden timeout')),5000);modal.addEventListener('hidden.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});});modal.querySelector('[data-action-ok]').click();await hidden;return {confirmedLocally:true,useFlag:document.querySelector('[name=useFlag]').value,formSaveSubmitted:false};})()"]},
+ {"label":"2381-own-source199-before-n-final-save","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+ {"label":"2382-own-source199-deactivate-save-once","command":["eval","--file","sources/runtime/own-source199-deactivate-save-once.js"]},
+ {"label":"2383-own-source199-unused-post-ui","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]},
+ {"label":"2384-own-source199-unused-with-mapping-server-read","command":["eval","--file","sources/runtime/own-source199-and-item2089216-baseline-read.js"]},
+ {"label":"2385-own-source199-unused-item-summary-read","command":["eval","--file","sources/runtime/own-item2089216-persistent-summary.js"]},
+ {"label":"2386-own-source199-registration-pickers-after-n","command":["eval","--file","sources/runtime/own-source199-registration-picker-read.js"]},
+ {"label":"2387-own-source199-final-unused-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":150}

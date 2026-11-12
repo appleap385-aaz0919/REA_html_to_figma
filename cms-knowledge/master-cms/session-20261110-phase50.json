@@ -1,0 +1,15 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_real_input_archives_reviewed_fixtures_prepared","evidenceRange":[2644,2649],"lastEvidence":"2649-definition299-original-download-read",
+ "summary":"현재디피니션18건과실제원본430/529/530및실패샘플299를분석했다. 실제정상입력은ESSAY/FIVE_CHOICE/SHORT_ANSWER_ORDERED의단건JSON이며원본키16개를공유한다. 샘플299는JSON없는바깥ZIP에13개개별ZIP을담고있고그내부에는SHORT_ANSWER와이미지리소스입력도있다. 기존171/172는ZIP이름에HML주소인목데이터,Master2088663은원본없는seed세트여서ZIP세트스키마근거로쓰지않았다. 다중유형3JSON과자산3JSON/6PNG의자체QA준비물을로컬검증했으며아직등록하지않았다.Master업무는62회그대로다.",
+ "observations":[
+  {"evidence":[2644,2645],"result":"기존Definition세트2088663은Y·5자식·원본파일없음이고모델에seed fixture표식이있다. 원본ZIP세트형식을증명하지않는다. 기존문서171/172는목이름과HML연결주소를사용하므로정상ZIP형식근거에서제외했다."},
+  {"evidence":[2646,2647,2648],"result":"현재교육과정22목록은18건이며기존QA661/662/663외에실제430/529/530원본과여러목문서가있다. 430/529의실제UI프록시다운로드는각922/941바이트ZIP·HTTP200이며원본SHA를보존했다. 각ESSAY/FIVE_CHOICE이고530의기존SHORT_ANSWER_ORDERED와공통16필드를사용한다."},
+  {"evidence":[2649],"result":"실패문서299의원본ZIP184926바이트를실제다운로드했다. 바깥멤버13개는모두개별ZIP이고루트JSON은없다. 안쪽13개를바이트그대로보존하고구조를읽었다. SHORT_ANSWER·FIVE_CHOICE·SHORT_ANSWER_ORDERED·ESSAY가있으며일부는본문이미지1개/선지이미지5개와questionResources메타·상대경로를사용한다. 이구조가299실패의원인인지는확정하지않았다."}
+ ],
+ "artifacts":["fixtures/definition430-original-20261110.zip","fixtures/definition529-original-20261110.zip","fixtures/definition530-original-20261109.zip","fixtures/definition299-original-20261110.zip","definition299-nested-inventory-20261110.json","definition-input-schema-review-20261110.md","definition-multi3-fixture-manifest-20261110.json","fixtures/QA-DIFI-20261110-04-MULTI3.zip","definition-resources-input-schema-20261110.md","definition-asset3-fixture-manifest-20261110.json","fixtures/QA-DIFI-20261110-05-ASSET3.zip","definition-multi-review-preflight-20261110.md"],
+ "persistentChanges":{"confirmedMasterOperations":62,"newMasterChangesInThisPhase":0,"cmsRegisteredNewFixtures":false,"existingDefinitionDocumentsUnchanged":true,"serviceDeployment":false},
+ "preparedFixtures":{"multi3":{"bytes":2860,"sha256":"e53927cb286a91f50353b2f55b2dc8ff7d9c38a7d66fa8e606aa97a240f58171","jsonMembers":3,"types":["ESSAY","FIVE_CHOICE","SHORT_ANSWER_ORDERED"],"uploaded":false},"asset3":{"bytes":167305,"sha256":"fa80e0951f058d0dbbfa6037475c7c6ae5170d17dc718380f63be820b541a81d","jsonMembers":3,"pngMembers":6,"types":["FIVE_CHOICE","FIVE_CHOICE","SHORT_ANSWER"],"uploaded":false}},
+ "remaining":["MULTI3를정상등록폼의Source13/단원22MMAT0KOK1001020000/페이지1~3/공통C로등록하고생성수·유형·메타·S/F/D혼합검수의실제결과를확인한다.","ASSET3의이미지참조와서버변환/표시를정상UI에서검증한다. 아직생성3개는실행전기대치다.","실제해석HML문항ID와정상Definition세트원본문서ID를사용자에게비동기로문의했다.현재조사는그응답과독립적으로계속한다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089358&pageNum=1&pageSize=10","tab":"t21 copied set current detail at bottom; definition archives were read in background","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["파일구조와기존문서상태를관측했으며파서서버소스·예외로그·DB는확인하지않았다.","원본파일명의masterId일치패턴을관측했고자체QA도맞췄지만필수조건과불일치변형은미검증이다.","리소스메타/경로/PNG바이트를로컬검증했으며아직CMS자산업로드·변환·렌더성공으로분류하지않는다.","실제정상ZIP세트표본은미확보다.Master에세트가있다는사실과ZIP등록지원은구분한다.","전체사이트100%완료를주장하지않는다."]
+}

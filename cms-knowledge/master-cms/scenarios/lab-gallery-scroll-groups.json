@@ -1,0 +1,18 @@
+{"steps":[
+ {"label":"1572-lab-gallery-narrow-mode","command":["eval","(() => {document.querySelector('#omrViewNarrow').click();return {action:'Return narrow mode'};})()"]},
+ {"label":"1573-lab-gallery-expand-for-scroll","command":["eval","(() => {document.querySelector('[data-omr-toggle=open][data-omr-target=all]').click();return {action:'Expand all leaves for full scroll walk'};})()"]},
+ {"label":"1574-lab-gallery-expanded-before-scroll","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1575-lab-gallery-complete-scroll-walk","command":["eval","--file","sources/runtime/lab-gallery-scroll-walk.js"]},
+ {"label":"1576-lab-gallery-edited-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1577-lab-gallery-collapse-for-groups","command":["eval","(() => {document.querySelector('[data-omr-toggle=close][data-omr-target=all]').click();return {action:'Collapse all before group tests'};})()"]},
+ {"label":"1578-lab-gallery-objective-open","command":["eval","(() => {document.querySelector('[data-omr-toggle=open][data-omr-target=\"#omrGalleryOB\"]').click();return {action:'Open objective group only'};})()"]},
+ {"label":"1579-lab-gallery-objective-only-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1580-lab-gallery-objective-close","command":["eval","(() => {document.querySelector('[data-omr-toggle=close][data-omr-target=\"#omrGalleryOB\"]').click();return {action:'Close objective group'};})()"]},
+ {"label":"1581-lab-gallery-subjective-open","command":["eval","(() => {document.querySelector('[data-omr-toggle=open][data-omr-target=\"#omrGallerySB\"]').click();return {action:'Open subjective group only'};})()"]},
+ {"label":"1582-lab-gallery-subjective-only-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1583-lab-gallery-subjective-close","command":["eval","(() => {document.querySelector('[data-omr-toggle=close][data-omr-target=\"#omrGallerySB\"]').click();return {action:'Close subjective group'};})()"]},
+ {"label":"1584-lab-gallery-essay-open","command":["eval","(() => {document.querySelector('[data-omr-toggle=open][data-omr-target=\"#omrGalleryES\"]').click();return {action:'Open essay group only'};})()"]},
+ {"label":"1585-lab-gallery-essay-only-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1586-lab-gallery-essay-close","command":["eval","(() => {document.querySelector('[data-omr-toggle=close][data-omr-target=\"#omrGalleryES\"]').click();return {action:'Close essay group'};})()"]},
+ {"label":"1587-lab-gallery-final-collapsed-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]}
+],"tailChars":600}

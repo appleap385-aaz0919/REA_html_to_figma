@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1835-definition169-scroll",
+  "startedUtc": "2026-11-09T07:31:44.477349+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/page-scroll-walk.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=169&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.126
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=169&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "atBottom": true,
+        "note": "Actual overlapping internal scroll positions. DOM coverage is distinct from pixel inspection.",
+        "positions": [
+          {
+            "clientHeight": 1071,
+            "scrollHeight": 1071,
+            "scrollTop": 0,
+            "visibleHeadings": [
+              "디피니션 상세",
+              "기본 정보",
+              "분리 문항 리스트"
+            ]
+          }
+        ],
+        "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=169&curriculum=22&pageNum=1&pageSize=100",
+        "visibility": "hidden"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.139
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=169&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e20157": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e20158": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e20159": {
+          "name": "디피니션 상세",
+          "role": "heading"
+        },
+        "e20160": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e20161": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e20162": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e20163": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e20164": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e20165": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e20166": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e20167": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e20168": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e20169": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e20170": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e20171": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e20172": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e20173": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e20174": {
+          "name": " 다운로드",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e20157]\n      - link \"문제은행 마스터 CMS\" [ref=e20158]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e20165]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e20166]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e20167]\n          - link \"HML 문항 등록\" [ref=e20168]\n          - link \"디피니션 문항 등록\" [ref=e20169]\n          - link \"쌍둥이 그룹 관리\" [ref=e20170]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e20171]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e20172]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e20173]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e20161]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"디피니션 상세\" [level=2, ref=e20159]\n      - StaticText \"등록대기\"\n      - generic\n        - StaticText \"파싱을 기다리는 중입니다.\"\n        - StaticText \"등록은 끝났고 아직 파싱이 시작되지 않았습니다. 입력한 정보와 원본 파일만 확인할 수 있습니다.\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e20162]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"169\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"[MOCK-DIFI-W] 템플릿_시험지2.zip\"\n            - button \" 다운로드\" [ref=e20174]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-H-MA-D1-2-1-DCL-MS-2024]\"\n            - StaticText \"22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22EMAT0NGS3102060000]\"\n            - StaticText \"22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 평면도형 > 정사각형은 무엇일까요 > >\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"2 ~ 22\"\n          - term \"용도\"\n          - definition\n            - StaticText \"교사용\"\n          - term \"등록\"\n          - definition\n            - StaticText \"sangwon.jo · 2026-09-23\"\n          - term \"수정\"\n          - definition\n            - StaticText \"-\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [disabled, ref=e20164]\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e20163]\n        - StaticText \"\"\n        - paragraph\n          - StaticText \"아직 문항이 분리되지 않았습니다\"\n        - paragraph\n          - StaticText \"완료되면 이 자리에 분리된 문항이 표시됩니다.\"\n      - link \"목록\" [ref=e20160]"
+    },
+    "error": null,
+    "localSeconds": 0.132
+  }
+}

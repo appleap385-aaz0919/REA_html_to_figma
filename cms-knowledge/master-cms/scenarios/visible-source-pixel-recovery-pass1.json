@@ -1,0 +1,14 @@
+{"steps":[
+ {"label":"2127-master-approved2089216-top-pixels","command":["snapshot"],"screenshot":true},
+ {"label":"2128-master-approved2089216-middle-pixels","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own approved QA only');const e=document.querySelector('.page-wrapper');e.scrollTo({top:800,behavior:'instant'});return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2129-master-approved2089216-bottom-pixels","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTo({top:e.scrollHeight,behavior:'instant'});return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2130-source-registration-visible-open","command":["open","https://dev-exambank.dongahub.com/product/form.donga?curriculum=22&pageNum=1&pageSize=10"]},
+ {"label":"2131-source-registration-visible-pixels","command":["eval","--file","sources/runtime/cms-page-visual-state.js"],"screenshot":true},
+ {"label":"2132-source199-detail-visible-open","command":["open","https://dev-exambank.dongahub.com/product/detail.donga?curriculum=22&pageNum=1&pageSize=10&id=199"]},
+ {"label":"2133-source199-detail-visible-pixels","command":["eval","--file","sources/runtime/cms-page-visual-state.js"],"screenshot":true},
+ {"label":"2134-source134-mapped-modify-visible-open","command":["open","https://dev-exambank.dongahub.com/product/modify.donga?id=134&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2135-source134-mapped-modify-visible-pixels","command":["eval","--file","sources/runtime/cms-page-visual-state.js"],"screenshot":true},
+ {"label":"2136-source-all60-visible-open","command":["open","https://dev-exambank.dongahub.com/product/list.donga?pageSize=100&pageNum=1"]},
+ {"label":"2137-source-all60-visible-top-pixels","command":["eval","--file","sources/runtime/cms-page-visual-state.js"],"screenshot":true},
+ {"label":"2138-source-all60-current-readback","command":["eval","--file","sources/runtime/source-list-observation.js"]}
+],"tailChars":350}

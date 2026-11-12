@@ -1,0 +1,250 @@
+/* Tabler 미지원 커스텀 스타일 */
+
+/* 수식 속 한글을 일반 입력칸과 같은 고딕으로 — KaTeX_Main 에 한글이 없어 바탕체로 대체, KaTeX · MathLive(shadow DOM 포함) 공통 이름에 한글 범위만 추가 */
+@font-face {
+    font-family: "KaTeX_Main";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Malgun Gothic"), local("맑은 고딕"), local("Apple SD Gothic Neo"), local("AppleSDGothicNeo-Regular"), local("Noto Sans KR"), local("Noto Sans KR Regular");
+    unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
+@font-face {
+    font-family: "KaTeX_Main";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Malgun Gothic Bold"), local("맑은 고딕 Bold"), local("Apple SD Gothic Neo Bold"), local("AppleSDGothicNeo-Bold"), local("Noto Sans KR Bold");
+    unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
+/* 카드 제목 600 —1.7 기본 글꼴(맑은 고딕)은 500 이 보통처럼 보여 제목이 본문과 구분되지 않음 */
+.card-title {
+    font-weight: var(--tblr-font-weight-semibold);
+}
+
+/* 사이트 색 테마 영역의 진한 primary(버튼 hover) 재계산 — Tabler 가 :root 에서 파랑으로 굳히고 tabler-themes 는 primary · rgb 만 바꿈, 식은 Tabler 그대로 */
+[data-bs-theme-primary] {
+    --tblr-primary-darken: oklch(from var(--tblr-primary) calc(l - 0.06) c h);
+}
+
+/* 사이트 색 사이드바(bg-primary): 선택된 잎 · 하위를 흰 알약 · primary 글자로 반전(1.7 기본 옅은 띠는 파란 바탕에 묻힘), 펼친 상위는 1.7 처럼 바탕 없음, 오른쪽 경계선(다크 테마 테두리색)은 투명 */
+.navbar-vertical.bg-primary {
+    --tblr-navbar-border-color: transparent;
+}
+.navbar-vertical.bg-primary .navbar-nav .nav-item.active > .nav-link:not(.dropdown-toggle),
+.navbar-vertical.bg-primary .navbar-collapse .dropdown-menu .dropdown-item.active {
+    --tblr-nav-link-hover-icon-color: var(--tblr-primary);
+    background-color: var(--tblr-white);
+    color: var(--tblr-primary);
+}
+
+/* 사이드바 브랜드 자간 · 햄버거와의 간격(Tabler 0.5rem) 살짝 좁힘 — 긴 사이트 이름도 오른쪽 여백 확보 */
+.navbar-vertical .navbar-brand {
+    gap: 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+/* 사이드바 메뉴 아이콘을 상자 가운데로 — Tabler 아이콘 상자는 SVG 기준이라 웹폰트 글자(<i class="ti">)가 상자 왼쪽에 붙음 */
+.navbar-vertical .nav-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 지금 화면이 든 그룹(상위 + 하위)을 옅은 흰 바탕으로 묶음 — 1.4 의 왼쪽 막대 대신 */
+.navbar-vertical.bg-primary .navbar-nav .nav-item.dropdown.active {
+    background-color: color-mix(in srgb, var(--tblr-white) 12%, transparent);
+    border-radius: var(--tblr-border-radius);
+}
+
+/* 사이드바 드롭다운 화살표: 열리면 위, 닫히면 아래 — Tabler 는 열림과 무관하게 늘 아래 */
+.navbar-vertical .navbar-nav .dropdown-toggle::after {
+    transition: transform .2s ease;
+}
+.navbar-vertical .navbar-nav .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(135deg);
+}
+
+@media (min-width: 992px) {
+
+    /* 햄버거 버튼: Tabler 가 992px 이상에서 숨기는 것(.navbar-expand-lg .navbar-toggler{display:none})을 되살림 — 큰 화면은 접기(data-bs-sidebar=folded, common.js), 같은 특이도 필요 */
+    .navbar-expand-lg .navbar-toggler {
+        display: flex;
+    }
+
+    /* 접힌 사이드바: 브랜드 글자 숨김 — 레일 폭 4rem 에 첫 글자만 잘려 보임 */
+    [data-bs-sidebar="folded"] .navbar-vertical .navbar-brand a {
+        display: none;
+    }
+
+    /* 접힌 사이드바 플라이아웃을 사이드바와 같은 사이트 색으로 — Tabler 기본은 다크 테마를 따른 검은 상자 */
+    [data-bs-sidebar="folded"] .navbar-vertical.bg-primary .dropdown-menu {
+        --tblr-dropdown-bg: var(--tblr-primary);
+        --tblr-dropdown-border-color: transparent;
+        --tblr-dropdown-link-color: var(--tblr-white);
+        --tblr-dropdown-link-hover-color: var(--tblr-white);
+        --tblr-dropdown-link-hover-bg: color-mix(in srgb, var(--tblr-white) 12%, transparent);    }
+    [data-bs-sidebar="folded"] .navbar-vertical.bg-primary.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item.active {
+        background-color: var(--tblr-white);
+        color: var(--tblr-primary);
+    }
+}
+
+/* body 전체 스크롤 대신 page-wrapper만 스크롤, 스크롤바 자리는 늘 비워 둠 → 내용 길이에 따라 스크롤바가 생겼다 사라지며 본문 폭이 흔들리는 현상 제거 */
+body {
+    overflow: hidden;
+}
+.page {
+    height: 100vh;
+}
+.page-wrapper {
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+/* 상단바 바로 아래 여백 제거(Tabler 기본 margin-top: var(--tblr-page-padding-y) 무효화) */
+.page-body {
+    margin-top: 0;
+}
+
+/* 목록 필터 select 말줄임(...)처리 */
+.filter-select {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 단원 툴팁: 경로를 줄바꿈 없이 한 줄로 (기본 max-width/줄바꿈 해제), 여러 단원이면 왼쪽 정렬 */
+.tooltip-unit .tooltip-inner {
+    max-width: none;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* 짧은 안내 툴팁: 글자 길이에 맞춘 한 줄(기본 max-width 200px 해제), data-bs-custom-class="tooltip-fit" */
+.tooltip-fit .tooltip-inner {
+    max-width: none;
+    white-space: nowrap;
+}
+
+/* 안내 팝오버: 정보색(alert-info 계열) 바탕 · 테두리(꼬리는 두 변수를 따라감), 글자는 본문 크기. 바탕에 info-lt 를 쓰면 화면에서 비쳐 흰 바탕과 직접 섞음 */
+.popover-info {
+    --tblr-popover-bg: color-mix(in srgb, var(--tblr-info) 10%, var(--tblr-bg-surface));
+    --tblr-popover-border-color: var(--tblr-info);
+    --tblr-popover-font-size: 0.875rem;
+    --tblr-popover-body-padding-x: 0.75rem;
+    --tblr-popover-body-padding-y: 0.75rem;
+}
+
+/* 문항 상세 기본 정보: 다운로드 버튼 있는 행만 커져 리듬이 어긋남 → 행 높이를 버튼 기준으로 통일 */
+.dl-detail > dt,
+.dl-detail > dd {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* 파일 드롭존: Dropzone 6 기본 CSS 는 이미지 썸네일 전용(120px 라운드 박스)이라 안 쓰고 JS 만 씀 — 파일 목록은 Tabler 마크업이라 컨테이너 3가지만 정의 */
+.dropzone {
+    border: 2px dashed var(--tblr-primary);
+    border-radius: var(--tblr-border-radius);
+    padding: 3rem 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+.dropzone.dz-drag-hover {
+    background: var(--tblr-primary-lt);
+}
+/* 허용 개수가 차면 드롭 영역을 감춘다(Dropzone 이 dz-max-files-reached 를 부여). 파일을 제거하면 되돌아온다 */
+.dropzone.dz-max-files-reached {
+    display: none;
+}
+
+/* 로딩 오버레이: 기본 숨김, .is-active 일 때만 딤+스피너 노출 */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000; /* 모달(1050) 위 */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .35);
+}
+.loading-overlay.is-active {
+    display: flex;
+}
+.loading-overlay .spinner-border {
+    width: 4rem;
+    height: 4rem;
+    border-width: .35rem;
+}
+
+/* Tabler 에 form-selectgroup 의 disabled 규칙이 없음(checked·focus·hover 만) — radio 는 opacity:0 이라 라벨이 시각 표현 전부여서 비활성이 활성과 똑같이 보임, 값은 form-check-input:disabled 와 맞춤 */
+.form-selectgroup-input:disabled + .form-selectgroup-label {
+    cursor: default;
+    opacity: .5;
+}
+
+/* 위 규칙은 fieldset 잠금 때 선택된 값까지 흐리게 함 — :disabled 는 fieldset 로 꺼진 것도, [disabled] 는 자기 속성만 잡는 차이로 가름(전이 불가는 흐린 채, 잠금 중 선택값만 되살림) */
+fieldset[disabled] .form-selectgroup-input:checked:not([disabled]) + .form-selectgroup-label {
+    opacity: 1;
+}
+
+/* 잠긴 fieldset 안 값 셀을 입력칸 비활성과 같은 회색으로 — 수식 칸은 MathLive 에 비활성 모양이 없고, 값 드롭다운은 컴포넌트가 배경을 흰색으로 고정하고 Tabler 가 버튼으로 흐리게 함 */
+fieldset[disabled] .math-answer-field,
+fieldset[disabled] .vtd-toggle {
+    color: var(--tblr-control-disabled-color) !important;
+    background-color: var(--tblr-control-disabled-bg) !important;
+    opacity: 1;
+}
+
+/* 값 드롭다운은 버튼이라 잠기면 Tabler 가 버튼 비활성 테두리로 바꿈 — 평소 테두리 유지 */
+fieldset[disabled] .vtd-toggle {
+    border-color: var(--tblr-border-color) !important;
+}
+
+/* Σ 는 span 이라 fieldset 잠금이 안 걸려 직접 흐림(클릭은 common.js 에서 거름) */
+fieldset[disabled] .vt-math-open {
+    cursor: default;
+    color: var(--tblr-control-disabled-color);
+}
+
+/* 비활성 option 도 활성과 비슷해 보임(기본 회색이 form-select 의 color 상속에 덮임) — Tabler 에 규칙이 없어 직접 둠. [주의] option 은 네이티브 렌더라 color 말고는 거의 안 먹음 */
+option:disabled {
+    color: var(--tblr-gray-400);
+}
+
+/* textarea 크기 조절 손잡이 제거 — Bootstrap·Tabler 에 resize 유틸이 없고, disabled 여도 손잡이가 살아 잠긴 칸이 늘어나 보임(넘치는 내용은 세로 스크롤) */
+.resize-none {
+    resize: none;
+}
+
+/* 2줄 말줄임 — Bootstrap·Tabler 는 1줄(text-truncate)만 있음 */
+.text-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 빈 list-group 빈 박스 표시 — 항목에만 테두리가 있어 비면 사라짐, 박스형 칸(form-control)의 빈 모양과 맞춤. :empty 는 Thymeleaf 공백 텍스트에 막혀 :has 로 판정 */
+[data-empty-box]:not(:has(*)) {
+    min-height: 2.375rem;
+    border: var(--tblr-border-width) solid var(--tblr-border-color);
+    border-radius: var(--tblr-border-radius);
+}
+
+/* 다크모드 전환 순간만 전체 transition 정지 — 버튼 등 hover용 transition 이 테마 색 변경에도 걸려 서서히 보간되며 번쩍여 보이는 것 방지, 토글 JS 가 찰나만 부여 */
+.theme-transition-off, .theme-transition-off * {
+    transition: none !important;
+}
+
+/* 알림 토스트 폭: Tabler 기본 350px 고정 → 글자만큼, 최대 560px(OMR 검사 위치 · 사유가 한 줄에 들어가게). 여럿 쌓여도 긴 것에 맞춰 늘지 않게 fit-content + 가운데, 넘치면 줄바꿈 */
+#appToastContainer .toast {
+    --tblr-toast-max-width: 560px;
+    width: fit-content;
+    max-width: min(var(--tblr-toast-max-width), 100%);
+    margin-inline: auto;
+}

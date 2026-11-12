@@ -1,0 +1,247 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13540]
+      - link "문제은행 마스터 CMS" [ref=e13541]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13551]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13552]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13553]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13554]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13555]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13544]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e13542]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "편집기 격리 테스트 (기존 ↔ iframe)" [level=2, ref=e13543]
+    - StaticText "같은 문서를 지금 방식(페이지에 직접)과 iframe 안에 띄워 Tabler CSS 영향 · 편집기 API 동작을 비교. 탭마다 편집 상태가 따로 유지되고, [불러오기]만 두 탭을 처음 문서로 되돌린다."
+    - generic
+      - heading "문서 JSON" [level=3, ref=e13545]
+        - StaticText ""
+        - StaticText "문서 JSON"
+      - textbox "문항 · 지문 문서 컬럼 값을 그대로 붙여넣기" [ref=e13550]: {"contentVersion": "v3", "outType": "split", "content": {"passageHtml": "<p>$N=360=2^a\\times3^b\\times5^c$이고, $a,b,c$는 자연수입니다. 다음 물음에 답하시오.</p>"}, "assets": [], "passageKey": ""}
+        - StaticText "{\"contentVersion\": \"v3\", \"outType\": \"split\", \"content\": {\"passageHtml\": \"<p>$N=360=2^a\\\\times3^b\\\\times5^c$이고, $a,b,c$는 자연수입니다. 다음 물음에 답하시오.</p>\"}, \"assets\": [], \"passageKey\": \"\"}"
+      - button " 불러오기" [ref=e13546]
+        - StaticText ""
+        - StaticText "불러오기"
+      - button " getDocument 비교" [ref=e13547]
+        - StaticText ""
+        - StaticText "getDocument 비교"
+    - tablist
+      - tab "기존" [ref=e13548]
+      - tab "iframe" [selected, ref=e13549]
+    - tabpanel
+      - generic
+        - heading "지문 편집" [level=3, ref=e13609]
+          - StaticText ""
+          - StaticText "지문 편집"
+        - StaticText "준비 379ms"
+        - combobox [expanded=false, ref=e13610]: 높이 고정 640px(안에서 스크롤)
+          - MenuListPopup
+            - option "높이 자동(내용에 맞춤)" [ref=e13618]
+            - option "높이 고정 640px(안에서 스크롤)" [selected, ref=e13619]
+        - button "save()" [ref=e13611]
+        - button "getDocument()" [ref=e13612]
+        - button "객관식 켜기" [ref=e13613]
+        - button "객관식 끄기" [ref=e13614]
+        - button "destroy()" [ref=e13615]
+        - Iframe [ref=e13840]
+          - generic
+            - generic
+              - StaticText "지문 편집"
+              - button "↶ 실행취소" [ref=e13843]
+              - button "↷ 다시실행" [ref=e13844]
+              - combobox "문단 정렬" [expanded=false, ref=e13845]: 정렬: 기본
+                - MenuListPopup
+                  - option "정렬: 기본" [selected, ref=e13859]
+                  - option "왼쪽" [ref=e13860]
+                  - option "가운데" [ref=e13861]
+                  - option "오른쪽" [ref=e13862]
+              - button "문단" [ref=e13846]
+              - button "B" [ref=e13847]
+              - button "I" [ref=e13848]
+              - button "U" [ref=e13849]
+              - button "A" [ref=e13850]
+              - button "+ 수식" [ref=e13851]
+              - button "🖼 이미지" [ref=e13852]
+              - button "⊞ 표" [ref=e13853]
+              - button "글상자" [ref=e13854]
+              - button "d-box" [ref=e13855]
+              - button "d-input" [ref=e13856]
+              - button "특수문자" [ref=e13857]
+              - button "글자 겹치기" [ref=e13858]
+            - StaticText "본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다"
+            - heading "지문" [level=3, ref=e13842]
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑁"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLNumber
+                      - StaticText "360"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLIdentifier
+                        - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "3"
+                      - MathMLIdentifier
+                        - StaticText "𝑏"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "5"
+                      - MathMLIdentifier
+                        - StaticText "𝑐"
+              - StaticText "이고, "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑏"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑐"
+              - StaticText "는 자연수입니다. 다음 물음에 답하시오."
+            - paragraph
+              - StaticText "미리보기 (실서비스 뷰어 렌더)"
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑁"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLNumber
+                      - StaticText "360"
+                    - MathMLOperator
+                      - StaticText "="
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLIdentifier
+                        - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "3"
+                      - MathMLIdentifier
+                        - StaticText "𝑏"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "5"
+                      - MathMLIdentifier
+                        - StaticText "𝑐"
+              - StaticText "이고, "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑏"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑐"
+              - StaticText "는 자연수입니다. 다음 물음에 답하시오."
+        - StaticText "마운트\n완료"
+      - generic
+        - heading "지문" [level=3, ref=e13616]
+          - StaticText ""
+          - StaticText "지문"
+        - button " 미리보기 다시 그리기" [ref=e13617]
+          - StaticText ""
+          - StaticText "미리보기 다시 그리기"
+        - Iframe [ref=e13841]
+          - paragraph
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑁"
+                  - MathMLOperator
+                    - StaticText "="
+                  - MathMLNumber
+                    - StaticText "360"
+                  - MathMLOperator
+                    - StaticText "="
+                  - MathMLSup
+                    - MathMLNumber
+                      - StaticText "2"
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                  - MathMLOperator
+                    - StaticText "×"
+                  - MathMLSup
+                    - MathMLNumber
+                      - StaticText "3"
+                    - MathMLIdentifier
+                      - StaticText "𝑏"
+                  - MathMLOperator
+                    - StaticText "×"
+                  - MathMLSup
+                    - MathMLNumber
+                      - StaticText "5"
+                    - MathMLIdentifier
+                      - StaticText "𝑐"
+            - StaticText "이고, "
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑎"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑏"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑐"
+            - StaticText "는 자연수입니다. 다음 물음에 답하시오."

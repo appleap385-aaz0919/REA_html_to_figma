@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2088-hml665-approved-open","command":["open","https://dev-exambank.dongahub.com/item/hml/detail.donga?examDocumentId=665&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2089-hml665-approved-top-pixels","command":["eval","--file","sources/runtime/hml665-approved-observation.js"],"screenshot":true},
+ {"label":"2090-hml665-approved-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2091-hml665-approved-scroll","command":["eval","--file","sources/runtime/page-scroll-walk.js"]},
+ {"label":"2092-hml665-approved-bottom-pixels","command":["snapshot"],"screenshot":true},
+ {"label":"2093-hml665-approved-middle-pixels","command":["eval","(() => {const e=document.querySelector('.page-wrapper');if(new URLSearchParams(location.search).get('examDocumentId')!=='665')throw Error('QA scope');e.scrollTo({top:800,behavior:'instant'});return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true}
+],"tailChars":350}

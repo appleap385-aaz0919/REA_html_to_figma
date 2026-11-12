@@ -1,0 +1,256 @@
+{
+  "provenance": "preserved-dom-readonly",
+  "title": "문항 상세 · 상태 정보 편집 중",
+  "sourceHtml": "cms-knowledge/master-cms/sources/set-item-detail.html",
+  "sourceSelector": "#statusForm 상위 .card",
+  "sourceEvidence": [
+    {
+      "path": "cms-knowledge/master-cms/sources/set-item-detail.html",
+      "line": 463,
+      "purpose": "상태 정보 카드와 수정/취소/저장 버튼"
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/set-item-detail.html",
+      "line": 480,
+      "purpose": "statusFields와 개별 viewFlag R/F disabled"
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/set-item-detail.html",
+      "line": 1839,
+      "purpose": "setLocked: fieldset 잠금과 버튼 d-none 전환"
+    },
+    {
+      "path": "cms-knowledge/master-cms/sources/set-item-detail.html",
+      "line": 1846,
+      "purpose": "수정 클릭 시 setLocked(false)"
+    }
+  ],
+  "imagePath": "design-specs/revision-item-modal-render/status-editing.png",
+  "imageSize": {
+    "width": 1512,
+    "height": 183
+  },
+  "crop": {
+    "x": 0,
+    "y": 0,
+    "width": 1512,
+    "height": 183
+  },
+  "controlsCoordinateSystem": "전체 PNG 좌상단 기준 픽셀; visibleBounds는 라디오의 실제 표시 영역",
+  "controls": [
+    {
+      "label": "취소",
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": "button",
+      "disabled": false,
+      "bbox": {
+        "x": 1367,
+        "y": 21,
+        "width": 50,
+        "height": 32
+      }
+    },
+    {
+      "label": "저장",
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": "button",
+      "disabled": false,
+      "bbox": {
+        "x": 1425,
+        "y": 21,
+        "width": 66,
+        "height": 32
+      }
+    },
+    {
+      "label": "On-line 전용",
+      "tag": "select",
+      "id": null,
+      "name": "onlineFlag",
+      "type": null,
+      "disabled": false,
+      "bbox": {
+        "x": 21,
+        "y": 122,
+        "width": 238.33,
+        "height": 40
+      },
+      "value": "N",
+      "options": [
+        {
+          "label": "온오프 전체",
+          "value": "N"
+        },
+        {
+          "label": "온라인 전용",
+          "value": "Y"
+        }
+      ]
+    },
+    {
+      "label": "용도",
+      "tag": "select",
+      "id": null,
+      "name": "serviceUsage",
+      "type": null,
+      "disabled": false,
+      "bbox": {
+        "x": 267.33,
+        "y": 122,
+        "width": 238.33,
+        "height": 40
+      },
+      "value": "C",
+      "options": [
+        {
+          "label": "공통",
+          "value": "C"
+        },
+        {
+          "label": "교사용",
+          "value": "T"
+        }
+      ]
+    },
+    {
+      "label": "초안",
+      "tag": "input",
+      "id": null,
+      "name": "viewFlag",
+      "type": "radio",
+      "disabled": true,
+      "bbox": {
+        "x": 513.66,
+        "y": 122,
+        "width": 13,
+        "height": 13
+      },
+      "value": "R",
+      "checked": false,
+      "visibleBounds": {
+        "x": 513.66,
+        "y": 122,
+        "width": 161.55,
+        "height": 40
+      }
+    },
+    {
+      "label": "실패(재등록)",
+      "tag": "input",
+      "id": null,
+      "name": "viewFlag",
+      "type": "radio",
+      "disabled": true,
+      "bbox": {
+        "x": 683.2,
+        "y": 122,
+        "width": 13,
+        "height": 13
+      },
+      "value": "F",
+      "checked": false,
+      "visibleBounds": {
+        "x": 683.2,
+        "y": 122,
+        "width": 212.08,
+        "height": 40
+      }
+    },
+    {
+      "label": "승인(사용)",
+      "tag": "input",
+      "id": null,
+      "name": "viewFlag",
+      "type": "radio",
+      "disabled": false,
+      "bbox": {
+        "x": 903.28,
+        "y": 122,
+        "width": 13,
+        "height": 13
+      },
+      "value": "Y",
+      "checked": true,
+      "visibleBounds": {
+        "x": 903.28,
+        "y": 122,
+        "width": 198.08,
+        "height": 40
+      }
+    },
+    {
+      "label": "승인(미사용)",
+      "tag": "input",
+      "id": null,
+      "name": "viewFlag",
+      "type": "radio",
+      "disabled": false,
+      "bbox": {
+        "x": 1109.36,
+        "y": 122,
+        "width": 13,
+        "height": 13
+      },
+      "value": "N",
+      "checked": false,
+      "visibleBounds": {
+        "x": 1109.36,
+        "y": 122,
+        "width": 212.08,
+        "height": 40
+      }
+    },
+    {
+      "label": "폐기",
+      "tag": "input",
+      "id": null,
+      "name": "viewFlag",
+      "type": "radio",
+      "disabled": false,
+      "bbox": {
+        "x": 1329.44,
+        "y": 122,
+        "width": 13,
+        "height": 13
+      },
+      "value": "D",
+      "checked": false,
+      "visibleBounds": {
+        "x": 1329.44,
+        "y": 122,
+        "width": 161.55,
+        "height": 40
+      }
+    }
+  ],
+  "cssPaths": [
+    "design-specs/revision-item-modal-render/css/6f20adfa-tabler.min-8497cabbf265b335c86458729f06f306.css",
+    "design-specs/revision-item-modal-render/css/8f71cfdf-tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css",
+    "design-specs/revision-item-modal-render/css/be63e6ff-tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css",
+    "design-specs/revision-item-modal-render/css/c005bb55-custom-4f213f104c14367e2495ee02d06e6fb6.css"
+  ],
+  "renderedState": {
+    "statusFieldsDisabled": false,
+    "editVisible": false,
+    "cancelVisible": true,
+    "saveVisible": true,
+    "individualDisabledViewFlags": [
+      "R",
+      "F"
+    ],
+    "selectedViewFlag": "Y"
+  },
+  "transformations": [
+    "원본 controller의 setLocked(false)와 동일하게 fieldset disabled를 해제한다.",
+    "수정 버튼에 d-none을 추가하고 취소/저장 버튼의 d-none을 제거한다.",
+    "개별 viewFlag R/F의 disabled 속성은 유지한다.",
+    "원본 script·이벤트·hx 요청 속성을 제거하고 네트워크 요청을 모두 차단한다."
+  ],
+  "execution": "기존 로컬 CSS만 사용한 별도 headless Edge 렌더이다. 원본 JavaScript·CMS API·저장·취소 동작을 실행하지 않았다.",
+  "verification": "PNG를 직접 열어 상태 정보 제목, 취소/저장, 선택 필드 전체, 비활성 초안/실패(재등록), 선택된 승인(사용)이 모두 온전하게 표시됨을 확인했다.",
+  "preservedDomHtml": "<!DOCTYPE html>\n<html><head><meta charset=\"utf-8\"/><link href=\"file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/6f20adfa-tabler.min-8497cabbf265b335c86458729f06f306.css\" rel=\"stylesheet\"/><link href=\"file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/8f71cfdf-tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css\" rel=\"stylesheet\"/><link href=\"file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/be63e6ff-tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css\" rel=\"stylesheet\"/><link href=\"file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/c005bb55-custom-4f213f104c14367e2495ee02d06e6fb6.css\" rel=\"stylesheet\"/><style>html,body{margin:0!important;background:#fff!important;width:1512px!important}body{pointer-events:none!important}.card{margin:0!important}</style></head><body><div class=\"card mt-3\">\n<div class=\"card-header bg-secondary-lt d-flex align-items-center justify-content-between\">\n<h3 class=\"card-title mb-0\"><i class=\"ti ti-adjustments me-1\"></i>상태 정보</h3>\n<div class=\"btn-list\">\n<button class=\"btn btn-primary btn-sm d-none\" data-status-edit=\"\" type=\"button\">\n<i class=\"ti ti-edit me-1\"></i>수정\n                </button>\n<button class=\"btn btn-sm\" data-status-cancel=\"\" type=\"button\">취소</button>\n<button class=\"btn btn-primary btn-sm\" data-status-save=\"\" type=\"button\">\n<i class=\"ti ti-device-floppy me-1\"></i>저장\n                </button>\n</div>\n</div>\n<form class=\"card-body\" id=\"statusForm\">\n<input name=\"itemId\" type=\"hidden\" value=\"2088663\"/>\n<fieldset id=\"statusFields\">\n<div class=\"row g-2\">\n<div class=\"col-md-2\">\n<label class=\"form-label\">On-line 전용</label>\n<select class=\"form-select\" name=\"onlineFlag\">\n<option selected=\"selected\" value=\"N\">온오프 전체</option>\n<option value=\"Y\">온라인 전용</option>\n</select>\n</div>\n<div class=\"col-md-2\">\n<label class=\"form-label\">용도</label>\n<select class=\"form-select\" name=\"serviceUsage\">\n<option value=\"C\">공통</option>\n<option value=\"T\">교사용</option>\n</select>\n</div>\n<div class=\"col-md-8\">\n<label class=\"form-label\">상태값</label>\n<div class=\"form-selectgroup w-100\">\n<label class=\"form-selectgroup-item flex-fill mb-0\">\n<input class=\"form-selectgroup-input\" disabled=\"disabled\" name=\"viewFlag\" type=\"radio\" value=\"R\"/>\n<span class=\"form-selectgroup-label\">초안</span>\n</label><label class=\"form-selectgroup-item flex-fill mb-0\">\n<input class=\"form-selectgroup-input\" disabled=\"disabled\" name=\"viewFlag\" type=\"radio\" value=\"F\"/>\n<span class=\"form-selectgroup-label\">실패(재등록)</span>\n</label><label class=\"form-selectgroup-item flex-fill mb-0\">\n<input checked=\"checked\" class=\"form-selectgroup-input\" name=\"viewFlag\" type=\"radio\" value=\"Y\"/>\n<span class=\"form-selectgroup-label\">승인(사용)</span>\n</label><label class=\"form-selectgroup-item flex-fill mb-0\">\n<input class=\"form-selectgroup-input\" name=\"viewFlag\" type=\"radio\" value=\"N\"/>\n<span class=\"form-selectgroup-label\">승인(미사용)</span>\n</label><label class=\"form-selectgroup-item flex-fill mb-0\">\n<input class=\"form-selectgroup-input\" name=\"viewFlag\" type=\"radio\" value=\"D\"/>\n<span class=\"form-selectgroup-label\">폐기</span>\n</label>\n</div>\n</div>\n</div>\n</fieldset>\n</form>\n</div></body></html>"
+}

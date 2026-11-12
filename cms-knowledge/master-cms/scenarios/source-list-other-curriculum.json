@@ -1,0 +1,13 @@
+{"steps":[
+ {"label":"1385-source-reset-for15","command":["eval","(() => {const b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='초기화');b.click();return {action:'Reset filters'};})()"]},
+ {"label":"1386-source-select-curriculum15","command":["select","#curriculumSelect","15"]},
+ {"label":"1387-source-query-curriculum15","command":["eval","(() => {document.querySelector('button[hx-get=\"/product/list.donga\"]').click();return {action:'Query curriculum15'};})()"]},
+ {"label":"1388-source-curriculum15-result","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1389-source-curriculum15-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1390-source-select-all-curricula","command":["select","#curriculumSelect",""]},
+ {"label":"1391-source-query-all-curricula","command":["eval","(() => {document.querySelector('button[hx-get=\"/product/list.donga\"]').click();return {action:'Query all curricula'};})()"]},
+ {"label":"1392-source-all-curricula-result","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1393-source-select-size100-all","command":["select","select[name=pageSize]","100"]},
+ {"label":"1394-source-all-curricula-allrows","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1395-source-all-curricula-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":600}

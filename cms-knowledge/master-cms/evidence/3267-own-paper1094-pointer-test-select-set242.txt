@@ -1,0 +1,330 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e42274]
+      - link "문제은행 마스터 CMS" [ref=e42275]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e42282]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e42283]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e42284]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e42285]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e42286]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e42277]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "수정"
+      - heading "평가지 수정" [level=2, ref=e42276]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e42280]
+          - DescriptionList
+            - term "평가지 ID"
+            - definition
+              - StaticText "1094 (1177)"
+            - term "평가지명 *"
+              - StaticText "평가지명"
+              - StaticText "*"
+            - definition
+              - textbox [required, ref=e42297]: QA-HML-20261109-02-SET4-SINGLE1
+                - StaticText "QA-HML-20261109-02-SET4-SINGLE1"
+            - term "상태"
+            - definition
+              - LabelText
+                - radio "초안" [checked=true, ref=e42312]
+                - StaticText "초안"
+              - LabelText
+                - radio "사용" [checked=false, ref=e42313]
+                - StaticText "사용"
+              - LabelText
+                - radio "미사용" [checked=false, ref=e42314]
+                - StaticText "미사용"
+              - LabelText
+                - radio "폐기" [checked=false, ref=e42315]
+                - StaticText "폐기"
+            - term "생성 방식"
+            - definition
+              - StaticText "HML 생성"
+            - term "단원 코드"
+            - definition
+              - StaticText "[22HMAC1GHG1006010000]"
+              - StaticText "22 > 고등 > 수학군 > 공통수학1 > 고호경 > 고등1 > 공통학기 > 행렬 > 행렬의 뜻 > >"
+            - term "등록"
+            - definition
+              - StaticText "jaehyuk.myung · 2026-11-09"
+          - DescriptionList
+            - term "시험지"
+            - definition
+              - link "665 | QA-HML-20261109-02-SET4-SINGLE1.hml" [ref=e42298]
+            - term "출처"
+            - definition
+              - StaticText "[22-H-MA-C1-1-0-DCL-KI-2025]"
+              - StaticText "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025"
+            - term "페이지 *"
+              - StaticText "페이지"
+              - StaticText "*"
+            - definition
+              - spinbutton "예: 24" [required, ref=e42299]: 1
+                - StaticText "1"
+              - StaticText "~"
+              - spinbutton "예: 25" [required, ref=e42300]: 1
+                - StaticText "1"
+            - term "용도 *"
+              - StaticText "용도"
+              - StaticText "*"
+            - definition
+              - LabelText
+                - radio "공통" [checked=true, ref=e42316]
+                - StaticText "공통"
+              - LabelText
+                - radio "교사용" [checked=false, ref=e42317]
+                - StaticText "교사용"
+            - term "문제 구성"
+            - definition
+              - StaticText "주관식 > 단답형 > 일반형 (1)"
+            - term "문항 수"
+            - definition
+              - StaticText "1문항"
+        - generic
+          - heading "포함 문항 (1)" [level=3, ref=e42281]
+            - StaticText "포함 문항 ("
+            - StaticText "1"
+            - StaticText ")"
+          - button " 문항 추가" [ref=e42287]
+            - StaticText ""
+            - StaticText "문항 추가"
+          - table
+            - rowgroup
+              - row
+                - columnheader [ref=e42301]
+                - columnheader "순서" [ref=e42302]
+                - columnheader "문항 ID" [ref=e42303]
+                - columnheader "문제" [ref=e42304]
+                - columnheader "형태" [ref=e42305]
+                - columnheader "난이도" [ref=e42306]
+                - columnheader "단원 코드" [ref=e42307]
+                - columnheader "문항 상태" [ref=e42308]
+                - columnheader "제외" [ref=e42309]
+            - row
+              - cell "" [ref=e42288]
+                - StaticText ""
+              - cell "1" [ref=e42289]
+              - cell "2089238" [ref=e42290]
+                - StaticText "2089238"
+              - cell "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e42291]
+                - link "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e42310]
+              - cell "주관식 > 단답형 > 일반형" [ref=e42292]
+              - cell "하" [ref=e42293]
+              - cell "22HMAC1GHG1006010000" [ref=e42294]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "초안" [ref=e42295]
+              - cell "제외" [ref=e42296]
+                - button "제외" [disabled, ref=e42311]
+                  - StaticText ""
+        - link "취소" [ref=e42278]
+        - button "저장" [ref=e42279]
+      - dialog
+        - document
+          - generic
+            - heading "문항 추가" [level=5, ref=e42319]
+              - StaticText ""
+              - StaticText "문항 추가"
+            - button "안내" [ref=e42320]
+              - StaticText ""
+            - button "Close" [ref=e42321]
+            - generic
+              - generic
+                - combobox [expanded=false, ref=e42324]: 문항 ID
+                  - MenuListPopup
+                    - option "문항 ID" [selected, ref=e42351]
+                    - option "지문" [ref=e42352]
+                    - option "문제" [ref=e42353]
+                    - option "등록자 ID" [ref=e42354]
+                    - option "원본 파일명" [ref=e42355]
+                - textbox "문항 ID / 지문 / 문제 / 등록자 / 원본 파일명" [ref=e42325]: 2089242
+                  - StaticText "2089242"
+                - combobox [expanded=false, ref=e42326]: 22
+                  - MenuListPopup
+                    - option "교육과정 전체" [ref=e42356]
+                    - option "22" [selected, ref=e42357]
+                    - option "15" [ref=e42358]
+                - combobox [expanded=false, ref=e42327]: 학교급 전체
+                  - MenuListPopup
+                    - option "학교급 전체" [selected, ref=e42359]
+                    - option "초등" [ref=e42360]
+                    - option "중학" [ref=e42361]
+                    - option "고등" [ref=e42362]
+                - combobox [expanded=false, ref=e42328]: 과목군 전체
+                  - MenuListPopup
+                    - option "과목군 전체" [selected, ref=e42363]
+                    - option "수학군" [ref=e42364]
+                - combobox [expanded=false, disabled, ref=e42329]: 과목 전체
+                  - MenuListPopup
+                    - option "과목 전체" [disabled, ref=e42365]
+                    - option "수학" [disabled, ref=e42366]
+                    - option "수학" [disabled, ref=e42367]
+                    - option "공통수학1" [disabled, ref=e42368]
+                    - option "공통수학2" [disabled, ref=e42369]
+                    - option "기본수학1" [disabled, ref=e42370]
+                    - option "기본수학2" [disabled, ref=e42371]
+                    - option "수학1" [disabled, ref=e42372]
+                    - option "수학2" [disabled, ref=e42373]
+                    - option "대수" [disabled, ref=e42374]
+                    - option "미적분1" [disabled, ref=e42375]
+                    - option "미적분2" [disabled, ref=e42376]
+                    - option "확률과통계" [disabled, ref=e42377]
+                    - option "기하" [disabled, ref=e42378]
+                    - option "직무수학" [disabled, ref=e42379]
+                    - option "인공지능수학" [disabled, ref=e42380]
+                    - option "수학과 문화" [disabled, ref=e42381]
+                    - option "수학" [disabled, ref=e42382]
+                - combobox [expanded=false, disabled, ref=e42330]: 학년 전체
+                  - MenuListPopup
+                    - option "학년 전체" [disabled, ref=e42383]
+                    - option "중학1" [disabled, ref=e42384]
+                    - option "고등1" [disabled, ref=e42385]
+                    - option "초등1" [disabled, ref=e42386]
+                    - option "중학2" [disabled, ref=e42387]
+                    - option "초등2" [disabled, ref=e42388]
+                    - option "고등2" [disabled, ref=e42389]
+                    - option "고등3" [disabled, ref=e42390]
+                    - option "중학3" [disabled, ref=e42391]
+                    - option "초등3" [disabled, ref=e42392]
+                    - option "고등 공통" [disabled, ref=e42393]
+                    - option "초등4" [disabled, ref=e42394]
+                    - option "초등5" [disabled, ref=e42395]
+                    - option "초등6" [disabled, ref=e42396]
+                - combobox [expanded=false, ref=e42331]: 학기 전체
+                  - MenuListPopup
+                    - option "학기 전체" [selected, ref=e42397]
+                    - option "공통학기" [ref=e42398]
+                    - option "1학기" [ref=e42399]
+                    - option "2학기" [ref=e42400]
+                - combobox [expanded=false, ref=e42332]: 난이도 전체
+                  - MenuListPopup
+                    - option "난이도 전체" [selected, ref=e42401]
+                    - option "최상" [ref=e42402]
+                    - option "상" [ref=e42403]
+                    - option "중" [ref=e42404]
+                    - option "하" [ref=e42405]
+                    - option "최하" [ref=e42406]
+                - combobox [expanded=false, ref=e42333]: 형태1 전체
+                  - MenuListPopup
+                    - option "형태1 전체" [selected, ref=e42407]
+                    - option "객관식" [ref=e42408]
+                    - option "주관식" [ref=e42409]
+                    - option "서술형" [ref=e42410]
+                - combobox [expanded=false, disabled, ref=e42334]: 형태2 전체
+                  - MenuListPopup
+                    - option "형태2 전체" [disabled, ref=e42411]
+                    - option "단답형" [disabled, ref=e42412]
+                    - option "다답형" [disabled, ref=e42413]
+                    - option "단답형" [disabled, ref=e42414]
+                    - option "다답형" [disabled, ref=e42415]
+                    - option "기본형" [disabled, ref=e42416]
+                    - option "단답형" [disabled, ref=e42417]
+                    - option "다답형" [disabled, ref=e42418]
+                - combobox [expanded=false, disabled, ref=e42335]: 형태3 전체
+                  - MenuListPopup
+                    - option "형태3 전체" [disabled, ref=e42419]
+                    - option "N지 선다" [disabled, ref=e42420]
+                    - option "O/X 형" [disabled, ref=e42421]
+                    - option "N지 선다" [disabled, ref=e42422]
+                    - option "O/X 형" [disabled, ref=e42423]
+                    - option "일반형" [disabled, ref=e42424]
+                    - option "그리기형" [disabled, ref=e42425]
+                    - option "영역 선택형" [disabled, ref=e42426]
+                    - option "일반형" [disabled, ref=e42427]
+                    - option "영역선택형" [disabled, ref=e42428]
+                    - option "선그리기형" [disabled, ref=e42429]
+                    - option "드래그앤 드롭형" [disabled, ref=e42430]
+                    - option "기본 서술형" [disabled, ref=e42431]
+                    - option "단답 서술형" [disabled, ref=e42432]
+                    - option "다답 서술형" [disabled, ref=e42433]
+                - StaticText "상태"
+                - LabelText
+                  - checkbox "전체" [checked=false, ref=e42336]
+                  - StaticText "전체"
+                - LabelText
+                  - checkbox "초안" [checked=false, ref=e42337]
+                  - StaticText "초안"
+                - LabelText
+                  - checkbox "실패(재등록)" [checked=false, ref=e42338]
+                  - StaticText "실패(재등록)"
+                - LabelText
+                  - checkbox "승인(사용)" [checked=true, ref=e42339]
+                  - StaticText "승인(사용)"
+                - LabelText
+                  - checkbox "승인(미사용)" [checked=true, ref=e42340]
+                  - StaticText "승인(미사용)"
+                - LabelText
+                  - checkbox "폐기" [checked=false, ref=e42341]
+                  - StaticText "폐기"
+                - generic
+                  - button " 초기화" [ref=e42342]
+                    - StaticText ""
+                    - StaticText "초기화"
+                  - button " 조회" [ref=e42343]
+                    - StaticText ""
+                    - StaticText "조회"
+              - generic
+                - StaticText "검색 결과 1건"
+              - table
+                - rowgroup
+                  - row
+                    - columnheader "전체 선택" [ref=e42549]
+                      - checkbox "전체 선택" [checked=false, ref=e42558]
+                    - columnheader "문항 ID" [ref=e42550]
+                    - columnheader "문제" [ref=e42551]
+                    - columnheader "형태 / 난이도" [ref=e42552]
+                    - columnheader "단원 코드" [ref=e42553]
+                    - columnheader "문항 상태" [ref=e42554]
+                    - columnheader "선택 불가 사유" [ref=e42555]
+                - row
+                  - cell "선택" [ref=e42542]
+                    - checkbox "선택" [checked=true, ref=e42556]
+                  - cell "2089242 지문 ID 2089241 4문항" [ref=e42543]
+                    - StaticText "2089242"
+                    - StaticText "지문 ID 2089241"
+                    - StaticText "4문항"
+                  - cell "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$" [ref=e42544]
+                    - link "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$" [ref=e42557]
+                  - cell "주관식 > 단답형 > 일반형 최하" [ref=e42545]
+                    - StaticText "주관식 > 단답형 > 일반형"
+                    - StaticText "최하"
+                  - cell "1개" [ref=e42546]
+                    - StaticText "1개"
+                  - cell "승인(사용)" [ref=e42547]
+                  - cell "-" [ref=e42548]
+            - button "취소" [ref=e42322]
+            - button "추가" [ref=e42323]

@@ -1,0 +1,115 @@
+{
+  "steps": [
+    {
+      "label": "880-multi-essay-before-input",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "881-multi-essay-normal-mode-1",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4
+    },
+    {
+      "label": "882-multi-essay-normal-mode-2",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 3
+    },
+    {
+      "label": "883-multi-essay-normal-mode-3",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "884-multi-essay-normal-mode-4",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"일반 입력으로 전환\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1
+    },
+    {
+      "label": "885-multi-essay-student-firstcase-1",
+      "command": [
+        "fill",
+        "{ref}",
+        "2"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 0
+    },
+    {
+      "label": "886-multi-essay-student-firstcase-2",
+      "command": [
+        "fill",
+        "{ref}",
+        "1"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 1
+    },
+    {
+      "label": "887-multi-essay-student-firstcase-3",
+      "command": [
+        "fill",
+        "{ref}",
+        "3"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 2
+    },
+    {
+      "label": "888-multi-essay-student-firstcase-4",
+      "command": [
+        "fill",
+        "{ref}",
+        "4"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- textbox \"답을 작성해 주세요\\.\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 4,
+      "matchIndex": 3
+    },
+    {
+      "label": "889-multi-essay-firstcase-grade",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "scopeAfter": "- Iframe \"OMR 미리보기\"",
+      "refPattern": "- button \"채점하기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "890-multi-essay-firstcase-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 4000
+}

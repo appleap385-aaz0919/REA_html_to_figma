@@ -1,0 +1,4 @@
+(async()=>{
+ if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');
+ const [h,t]=await Promise.all(['/item/all/twin-histories.donga?itemId=2089242','/item/all/twins.donga?itemId=2089242'].map(async path=>{const r=await fetch(path,{credentials:'same-origin'});if(!r.ok||r.redirected)throw Error('Owned set readback unavailable');if(path.includes('histories'))return {path,httpStatus:r.status,histories:await r.json()};const d=new DOMParser().parseFromString(await r.text(),'text/html');d.querySelectorAll('script,style,template').forEach(e=>e.remove());return {path,httpStatus:r.status,text:d.body.textContent.trim(),tables:[...d.querySelectorAll('table')].map(e=>({rows:[...e.querySelectorAll('tbody tr')].map(v=>({cells:[...v.querySelectorAll('td')].map(c=>c.textContent.trim()),links:[...v.querySelectorAll('a[href]')].map(a=>({text:a.textContent.trim(),href:a.getAttribute('href')}))}))}))};}));return {history:h,membership:t};
+})()

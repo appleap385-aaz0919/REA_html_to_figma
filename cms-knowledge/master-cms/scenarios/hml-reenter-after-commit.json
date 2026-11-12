@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1090-hml-committed-detail-seed","command":["snapshot"]},
+  {"label":"1091-hml-committed-reenter","command":["click","{ref}"],"refPattern":"- link \"[^\"]*문항 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1092-hml-committed-modify-loaded","command":["snapshot"]},
+  {"label":"1093-hml-committed-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1094-hml-committed-tab-enter","command":["press","Enter"]},
+  {"label":"1095-hml-committed-slot-readback","command":["eval","--file","sources/runtime/hml-parent-slots.js"],"screenshot":true},
+  {"label":"1096-hml-close-stale-popup","command":["tab","close","82FDB43F2AB519910BB4558E40557D29"]},
+  {"label":"1097-hml-open-committed-editor","command":["click","{ref}"],"refPattern":"- button \"한글 편집기 열기\" \\[ref=(e\\d+)\\]"}
+ ],"tailChars":1800
+}

@@ -1,0 +1,20 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"active_hml_popup_timing_reply_pending","evidenceRange":[2236,2275],"lastEvidence":"2275-own-shared-html-selected-and-sibling-omr-server-read",
+ "summary":"사용자 재개 요청에 따라 기존 agent-browser 연결을 복구 절차 없이 재사용했다. 자체 문서666의 자식4개·단건1개의 기준값과22개HML/PNG파일을 보존했다. 전체반영은 기본 SBSANM빈정답을 차단함을 실제 확인했고, HTML공유지문 식별문구와 첫자식의정답을한번저장했다. 네자식모두새상세버전과공유HTML문구를갖고HML/PNG22개는해시까지같다. 비교단건과다른자식OMR은그대로다. 확정Master업무변경41회이며 HML별도창은열지않고시점답변을기다린다.",
+ "observations":[
+  {"evidence":[2236,2237,2238,2239,2240,2241,2242,2243,2247,2248,2249,2250,2251,2252,2253],"result":"기존로그인연결/조사탭을유지하며666Y를새로열었다. 자식2089242~45와단건2089246은모두R이다. 세트의모든자식은공유지문2089241의같은J경로를참조하며단건에는J가없다. 수정진입은data-modify-item-id가있는openModify=Y링크를통해임시저장여부를검사하는경로다.22개관측자산URL을HTTP200으로읽고크기/해시를보존했다.편집기글루는e082버전을다시확인했다."},
+  {"evidence":[2254,2257,2258],"result":"자체2089242의현재SBSANM폼은기본TEXT상자/빈정답이며저장OMR이없다. 전체반영진입버튼은헤더·하단두개다. 실제누르면정답입력안내와OMR탭이동이발생하고저장확인창은열리지않았다. 이음성경로는저장을제출하지않았다."},
+  {"evidence":[2259,2260,2261,2262,2263,2264,2265,2266,2267,2268,2269],"result":"실제HTML수정탭의공유지문ProseMirror에서식별문구를입력했고편집기문서객체에서반영을확인했다. 기본정답누락을보완하려고첫자식의실제정답2×1행렬을SBSANM필드에입력했다. 로컬초기이스케이프문제를코드포인트검사로찾아저장전에올바른TeX로수정했다. 정상정답후에는전체반영확인창이열렸다. HMLpending8개는모두빈값이었다."},
+  {"evidence":[2270,2271,2272,2273,2274,2275],"result":"최종저장버튼을한번눌러서서버재조회로반영을확인했다. 자식상세2088873~76은각각2088906~09로함께바뀌고네수정폼의공유HTML지문에식별문구가있다. 질문편집기모델은각각그대로이며모두R이다. 첫자식에만OMR/정답이저장되고다른세자식과비교단건은null이다. 단건2089246/detail2088877과파일경로는그대로다.22개기존HML/PNG를다시읽어모든해시가같음을확인했다."}
+ ],
+ "artifacts":["shared-passage-edit-intent-20261110.json","hml666-pre-shared-edit-baseline-20261110.json","shared-html-save-comparison-20261110.json","sources/own-set2089242-modify-save-inline-20261110.js","sources/assets/webhwp-e082-current-20261110.js","twin-generation-membership-review-20261109.md"],
+ "persistentChanges":{"confirmedMasterOperations":41,"newMasterChangesInThisPhase":1,"operation":"Own shared HTML passage + first-child OMR Full Apply","setChildItemIds":[2089242,2089243,2089244,2089245],"beforeDetailIds":[2088873,2088874,2088875,2088876],"afterDetailIds":[2088906,2088907,2088908,2088909],"sharedPassageId":2089241,"currentSharedPassageDatabaseDetailId":null,"retainedHmlPassagePathDetailId":1933,"controlSingleItemId":2089246,"controlSingleDetailId":2088877,"serviceDeployment":false,"hmlEditorOpened":false,"originalRestorationPending":false},
+ "remaining":[
+  "HML편집기별도창은사이트가window.open후focus하도록구현돼있어창열기시점답변을기다린다. 허용전에는해당창을열지않는다.",
+  "허용되면자체2089242의현재상세2088906을기준으로수정화면을다시열고실제공유J편집/저장/CMS반영후모든자식및단건·22개자산을비교한다. HTML식별문구와HML식별문구를구별한다.",
+  "현재공유HTML저장은네자식상세를함께갱신했다. 승인상태세트/다른세트/버전모든경우의정책으로일반화하지않고추가표본을검토한다.",
+  "다른그룹합치기·세트생성·실제번역탭·Definition복합자료·평가지사용전환/설정·출처상태저장영향·권한별분기를계속조사한다. 서비스배포는제출하지않는다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242&pageNum=1&pageSize=10","tab":"t21 pinned research; own set after HTML shared save","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["2244/2255의관측selector가드는조작전에중단됐고제품오류가아니다.2245/2246/2256은실행하지않았다.","임시로잘못이스케이프된로컬정답은2267에서검사·수정한후저장했다.서버에는올바른값이반영됐다.","이번단계에는새전체화면PNG가없다. DOM/실제입력/서버재조회/자산해시검증을픽셀검토와구별한다.","기존HML경로의1933을현재공유지문DB상세ID로단정하지않는다.","전체CMS100%완료를주장하지않는다."]
+}

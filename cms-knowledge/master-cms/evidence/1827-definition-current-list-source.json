@@ -1,0 +1,900 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1827-definition-current-list-source",
+  "startedUtc": "2026-11-09T07:28:44.163172+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/sanitized-page-source.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22"
+    },
+    "error": null,
+    "localSeconds": 0.089
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22",
+      "result": {
+        "html": "<!DOCTYPE html>\n<html lang=\"ko\" data-bs-navbar-position=\"combined\"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:\"\"}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:\"\"}\n</style>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <title>디피니션 문항 등록 | 문제은행 마스터 CMS</title>\n    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->\n    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>\n    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->\n    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css\">\n    <link rel=\"stylesheet\" href=\"/css/custom-4f213f104c14367e2495ee02d06e6fb6.css\">\n    \n    \n<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>\n<body>\n\n<div class=\"page\">\n    <!-- 사이드바 -->\n    \n    <aside class=\"navbar navbar-vertical navbar-expand-lg bg-primary\" data-bs-theme-primary=\"blue\" data-bs-theme=\"dark\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-brand navbar-brand-autodark justify-content-start ps-3\">\n                <button class=\"navbar-toggler\" type=\"button\" id=\"sidebarToggle\" aria-expanded=\"false\" aria-controls=\"sidebar-menu\" aria-label=\"메뉴\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                \n                <a href=\"/main.donga\" class=\"text-decoration-none text-white\" title=\"MASTER\">문제은행 마스터 CMS</a>\n            </div>\n\n            <div class=\"collapse navbar-collapse\" id=\"sidebar-menu\">\n                <ul class=\"navbar-nav pt-lg-3\">\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/main.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-home\"></i></span>\n                            <span class=\"nav-link-title\">홈</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item  dropdown active\">\n\n                        \n                        \n\n                        \n                        \n                            <a class=\"nav-link dropdown-toggle show\" href=\"#menu-ITEM\" data-bs-toggle=\"dropdown\" data-bs-auto-close=\"false\" role=\"button\" aria-expanded=\"true\">\n                                <span class=\"nav-link-icon\"><i class=\"ti ti-files\"></i></span>\n                                <span class=\"nav-link-title\">문항 관리</span>\n                            </a>\n                            <div class=\"dropdown-menu show\">\n                                <a class=\"dropdown-item\" data-loading=\"\" href=\"/item/all/list.donga?unitCurriculum=22\">전체 문항</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/hml/list.donga?curriculum=22\">HML 문항 등록</a><a class=\"dropdown-item active\" data-loading=\"\" href=\"/item/difi/list.donga?curriculum=22\">디피니션 문항 등록</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/twin/list.donga\">쌍둥이 그룹 관리</a>\n                            </div>\n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/paper/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-clipboard-list\"></i></span>\n                            <span class=\"nav-link-title\">평가지 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/product/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-database\"></i></span>\n                            <span class=\"nav-link-title\">문항 출처 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/lab/index.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-flask\"></i></span>\n                            <span class=\"nav-link-title\">랩</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                </ul>\n            </div>\n        </div>\n    </aside>\n\n    <!-- 상단바 -->\n    \n    <header class=\"navbar navbar-expand-lg d-print-none border-bottom border-primary border-4\" data-bs-theme-primary=\"blue\">\n        <div class=\"container-fluid\">\n            <span class=\"status fs-3 fw-semibold status-blue\">\n                \n                <span>마스터</span>\n            </span>\n            <div class=\"navbar-nav flex-row order-lg-last ms-auto\">\n                <div class=\"d-flex align-items-center gap-3\">\n                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->\n                    <button type=\"button\" class=\"btn btn-icon d-none\" id=\"themeToggle\" aria-label=\"다크모드 전환\">\n                        <i class=\"ti ti-moon\"></i>\n                    </button>\n                    \n                    <span class=\"text-muted\" title=\"권한 : ADMIN\">접속자 <strong>jaehyuk.myung</strong></span>\n                    \n                    <form action=\"/logout.donga\" method=\"post\" class=\"m-0\" id=\"logoutForm\" data-loading=\"\">\n                        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#logoutConfirmModal\">\n                            <i class=\"ti ti-logout me-1\"></i>로그아웃\n                        </button>\n                    </form>\n                </div>\n                \n            </div>\n        </div>\n    </header>\n\n    <!-- 본문 -->\n    <div class=\"page-wrapper\">\n        <div class=\"page-body\">\n            <div class=\"container-fluid\">\n                <section>\n\n    <div class=\"page-header d-print-none\">\n        <ol class=\"breadcrumb breadcrumb-arrows fs-5 mb-1\" aria-label=\"breadcrumbs\">\n    <li class=\"breadcrumb-item\">시스템 관리</li>\n    \n        <li class=\"breadcrumb-item\">문항 관리</li>\n        <li class=\"breadcrumb-item\">디피니션 문항 등록</li>\n    \n    \n</ol>\n        <h2 class=\"page-title\">디피니션 문항 등록</h2>\n    </div>\n\n    <div class=\"card mb-3 mt-3\" data-filter=\"\">\n        <div class=\"card-body\">\n\n            <!-- 1행: 검색 컬럼 + 검색어 + 분류 필터 -->\n            <div class=\"d-flex flex-nowrap gap-2 mb-2\">\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" name=\"keywordType\">\n                        <option value=\"examDocumentId\">시험지 ID</option>\n                        <option value=\"fileOrgName\">파일명</option>\n                        <option value=\"productCode\">출처코드</option>\n                        <option value=\"adminMemberUserId\">등록자 ID</option>\n                    </select>\n                </div>\n                <div class=\"flex-fill\" style=\"min-width: 160px;\">\n                    <input type=\"text\" class=\"form-control\" name=\"keyword\" value=\"\" placeholder=\"시험지 ID / 파일명 / 출처코드 / 등록자 ID\">\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"curriculumSelect\" name=\"curriculum\" data-code-source=\"curriculum\" data-default-value=\"22\"><option value=\"\">교육과정 전체</option><option value=\"22\">22</option><option value=\"15\">15</option></select>\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"classTypeSelect\" name=\"classType\" data-code-parent=\"classtype\" data-code-source=\"classtype\">\n                        <option value=\"\">학교급 전체</option>\n                        <option value=\"E\">초등</option>\n                        <option value=\"M\">중학</option>\n                        <option value=\"H\">고등</option>\n                    </select>\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"subjectCategorySelect\" name=\"subjectCategory\" data-code-source=\"subjectcategory\"><option value=\"\">과목군 전체</option><option value=\"MA\">수학군</option></select>\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"subjectSelect\" name=\"subject\" data-code-multi-child=\"curriculum,classtype,subjectcategory\" disabled=\"\">\n                        <option value=\"\">과목 전체</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"22\" data-code-classtype=\"E\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"22\" data-code-classtype=\"M\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                        \n                        <option value=\"C1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">공통수학1</option>\n                        \n                        <option value=\"C2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">공통수학2</option>\n                        \n                        <option value=\"B1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기본수학1</option>\n                        \n                        <option value=\"B2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기본수학2</option>\n                        \n                        <option value=\"T1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학1</option>\n                        \n                        <option value=\"T2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학2</option>\n                        \n                        <option value=\"A0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">대수</option>\n                        \n                        <option value=\"D1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">미적분1</option>\n                        \n                        <option value=\"D2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">미적분2</option>\n                        \n                        <option value=\"S0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">확률과통계</option>\n                        \n                        <option value=\"G0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기하</option>\n                        \n                        <option value=\"P0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">직무수학</option>\n                        \n                        <option value=\"I0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">인공지능수학</option>\n                        \n                        <option value=\"U0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학과 문화</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"15\" data-code-classtype=\"M\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                    </select>\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"gradeSelect\" name=\"grade\" data-code-child=\"classtype\" disabled=\"\">\n                        <option value=\"\">학년 전체</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학1</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등1</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등1</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학2</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등2</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등2</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등3</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학3</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등3</option>\n                        \n                        <option value=\"4\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등 공통</option>\n                        \n                        <option value=\"4\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등4</option>\n                        \n                        <option value=\"5\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등5</option>\n                        \n                        <option value=\"6\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등6</option>\n                    </select>\n                </div>\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" name=\"term\">\n                        <option value=\"\">학기 전체</option>\n                        <option value=\"0\">공통학기</option>\n                        <option value=\"1\">1학기</option>\n                        <option value=\"2\">2학기</option>\n                    </select>\n                </div>\n            </div>\n\n            <!-- 2행: 등록일 -->\n            \n                <div class=\"row g-2 align-items-center mb-2\" data-date-range=\"\">\n    <input type=\"hidden\" data-date-days-input=\"\" name=\"registDays\" value=\"\">\n    <input type=\"hidden\" data-date-start=\"\" name=\"registStart\" value=\"\">\n    <input type=\"hidden\" data-date-end=\"\" name=\"registEnd\" value=\"\">\n    <div class=\"col-auto fw-semibold\">등록일</div>\n    <div class=\"col-auto\">\n        <div class=\"input-icon\" style=\"width: 230px;\">\n            <input type=\"text\" class=\"form-control cursor-pointer text-center\" data-date-display=\"\" placeholder=\"시작일 ~ 종료일\" readonly=\"\">\n            <span class=\"input-icon-addon\"><i class=\"ti ti-calendar\"></i></span>\n        </div>\n    </div>\n    <div class=\"col-auto btn-group\">\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"7\">7일</button>\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"30\">30일</button>\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"90\">90일</button>\n        <button type=\"button\" class=\"btn fw-normal active\" data-date-days=\"0\">전체</button>\n    </div>\n</div>\n            \n\n            <!-- 3행: 상태 + 액션 -->\n            <div class=\"d-flex flex-wrap align-items-center gap-5 mt-3\">\n                <div class=\"d-flex align-items-center gap-3\">\n                    <span class=\"fw-semibold\">상태</span>\n                    <div class=\"d-flex gap-3\">\n                        <label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-all=\"status\" checked=\"checked\">\n                            <span>전체</span>\n                        </label>\n                        <label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"W\" checked=\"checked\">\n                            <span>등록대기</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"P\" checked=\"checked\">\n                            <span>등록중</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"R\" checked=\"checked\">\n                            <span>초안</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"M\" checked=\"checked\">\n                            <span>메타추천중</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"Y\" checked=\"checked\">\n                            <span>승인</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"D\" checked=\"checked\">\n                            <span>폐기</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"F\" checked=\"checked\">\n                            <span>실패</span>\n                        </label>\n                    </div>\n                </div>\n\n                <div class=\"ms-auto\">\n                    <button type=\"button\" class=\"btn\" data-reset=\"\"><i class=\"ti ti-refresh me-1\"></i>초기화</button>\n                    <button type=\"button\" class=\"btn btn-primary\" hx-include=\"[data-filter], [name='pageSize']\" hx-vals=\"{&quot;pageNum&quot;: 1}\" hx-target=\"#examTableArea\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga\">\n                        <i class=\"ti ti-search me-1\"></i>조회\n                    </button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n    <div id=\"examTableArea\">\n\n        <div class=\"d-flex align-items-center justify-content-between mb-2\">\n            <div class=\"d-flex align-items-center gap-2\">\n    <select class=\"form-select form-select-sm w-auto cursor-pointer\" name=\"pageSize\" hx-trigger=\"change\" hx-include=\"[data-filter], [data-unit-filter]\" hx-vals=\"{&quot;pageNum&quot;: 1}\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga\" hx-target=\"#examTableArea\">\n        <option value=\"10\" selected=\"selected\">10개씩 보기</option>\n        <option value=\"30\">30개씩 보기</option>\n        <option value=\"50\">50개씩 보기</option>\n        <option value=\"100\">100개씩 보기</option>\n    </select>\n    <span class=\"text-muted\">검색결과 : <strong>15</strong>건</span>\n</div>\n            <div class=\"btn-list\">\n                \n                <a href=\"/item/difi/form.donga?curriculum=22&amp;pageNum=1&amp;pageSize=10\" class=\"btn btn-primary\" data-loading=\"\">\n                    <i class=\"ti ti-plus me-1\"></i><span>ZIP 등록</span>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"card\">\n            <div class=\"table-responsive\">\n                <table class=\"table card-table table-vcenter\" style=\"table-layout: fixed;\">\n                    <thead>\n                    <tr>\n                        <th class=\"text-center\" style=\"width: 8%;\">시험지 ID</th>\n                        <th class=\"text-center\">파일명</th>\n                        <th class=\"text-center\" style=\"width: 10%;\">출처</th>\n                        <th class=\"text-center\" style=\"width: 9%;\">과목</th>\n                        <th class=\"text-center\" style=\"width: 9%;\">학년 · 학기</th>\n                        \n                        \n                        <th class=\"text-center\" style=\"width: 10%;\">평가지 등록여부</th>\n                        <th class=\"text-center\" style=\"width: 10%;\">상태</th>\n                        <th class=\"text-center\" style=\"width: 11%;\">등록자 · 등록일</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    <tr>\n                        <td class=\"text-center\">530</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=530&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">750774.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-E-MA-T0-3-2-DCL-FB-2025</td>\n                        <td class=\"text-center\">수학</td>\n                        <td class=\"text-center\">초등3 · 2학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">승인</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>hari.im</div>\n                            <div>2026-10-15</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">529</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=529&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">750772.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-E-MA-T0-5-1-DCL-FB-2026</td>\n                        <td class=\"text-center\">수학</td>\n                        <td class=\"text-center\">초등5 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">승인</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>hari.im</div>\n                            <div>2026-10-15</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">430</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=430&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">108093600.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-E-MA-T0-4-1-DCL-FB-2005</td>\n                        <td class=\"text-center\">수학</td>\n                        <td class=\"text-center\">초등4 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">승인</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>jaehyuk.myung</div>\n                            <div>2026-10-12</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">299</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=299&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">디피니션 문항 샘플.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-B1-1-2-DCL-MA-2025</td>\n                        <td class=\"text-center\">기본수학1</td>\n                        <td class=\"text-center\">고등1 · 2학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">실패</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>minhye.park</div>\n                            <div>2026-10-02</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">180</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=180&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">DIFI_107131800.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-S0-3-2-DCL-TW-2024</td>\n                        <td class=\"text-center\">확률과통계</td>\n                        <td class=\"text-center\">고등3 · 2학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">폐기</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">179</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=179&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">[MOCK-DIFI-D] 템플릿_시험지2.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-D1-2-1-DCL-MS-2024</td>\n                        <td class=\"text-center\">미적분1</td>\n                        <td class=\"text-center\">고등2 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">폐기</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">178</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=178&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">[MOCK-DIFI-D] 템플릿_시험지2.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-D1-2-1-DCL-MS-2024</td>\n                        <td class=\"text-center\">미적분1</td>\n                        <td class=\"text-center\">고등2 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">폐기</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">175</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=175&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">[MOCK-DIFI-F] 템플릿_시험지2.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-D1-2-1-DCL-MS-2024</td>\n                        <td class=\"text-center\">미적분1</td>\n                        <td class=\"text-center\">고등2 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">실패</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">174</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=174&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">[MOCK-DIFI-X] 템플릿_시험지2.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-D1-2-1-DCL-MS-2024</td>\n                        <td class=\"text-center\">미적분1</td>\n                        <td class=\"text-center\">고등2 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">폐기</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">173</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/difi/detail.donga?examDocumentId=173&amp;curriculum=22&amp;pageNum=1&amp;pageSize=10\">[MOCK-DIFI-A] 템플릿_시험지2.zip</a>\n                        </td>\n                        <td class=\"text-center\">22-H-MA-D1-2-1-DCL-MS-2024</td>\n                        <td class=\"text-center\">미적분1</td>\n                        <td class=\"text-center\">고등2 · 1학기</td>\n                        \n                        \n                        \n                        <td class=\"text-center\">미등록</td>\n                        <td class=\"text-center\">승인</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-09-23</div>\n                        </td>\n                    </tr>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n\n        <div class=\"d-flex align-items-center mt-3\">\n    <div class=\"flex-fill\">\n        <span class=\"text-muted\">\n            총 <span>15</span>건 중\n            <span>1</span>∼<span>10</span> 표시\n        </span>\n    </div>\n    <ul class=\"pagination pagination-outline mb-0\">\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 앞\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=1&amp;pageSize=10\" hx-target=\"#examTableArea\"><i class=\"ti ti-chevrons-left\"></i></a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-label=\"이전\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=1&amp;pageSize=10\" hx-target=\"#examTableArea\"><i class=\"ti ti-chevron-left\"></i></a>\n        </li>\n        <li class=\"page-item active\">\n            <a class=\"page-link\" href=\"#\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=1&amp;pageSize=10\" hx-target=\"#examTableArea\">1</a>\n        </li>\n        <li class=\"page-item\">\n            <a class=\"page-link\" href=\"#\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=2&amp;pageSize=10\" hx-target=\"#examTableArea\">2</a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"다음\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=2&amp;pageSize=10\" hx-target=\"#examTableArea\"><i class=\"ti ti-chevron-right\"></i></a>\n        </li>\n        <li class=\"page-item\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 뒤\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/difi/list.donga?pageNum=2&amp;pageSize=10\" hx-target=\"#examTableArea\"><i class=\"ti ti-chevrons-right\"></i></a>\n        </li>\n    </ul>\n    <div class=\"flex-fill\"></div>\n</div>\n\n    </div>\n\n    \n    <script>\n        document.addEventListener('DOMContentLoaded', () => {\n            const subjectRows = [{\"classType\":\"E\",\"curriculum\":\"22\",\"sequence\":1,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"초등 수학\"},{\"classType\":\"M\",\"curriculum\":\"22\",\"sequence\":2,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"중학 수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":3,\"subject\":\"C1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"공통수학1\",\"viewSubjectName\":\"고등 공통수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":4,\"subject\":\"C2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"공통수학2\",\"viewSubjectName\":\"고등 공통수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":5,\"subject\":\"B1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기본수학1\",\"viewSubjectName\":\"고등 기본수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":6,\"subject\":\"B2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기본수학2\",\"viewSubjectName\":\"고등 기본수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":7,\"subject\":\"T1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학1\",\"viewSubjectName\":\"고등 수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":8,\"subject\":\"T2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학2\",\"viewSubjectName\":\"고등 수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":9,\"subject\":\"A0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"대수\",\"viewSubjectName\":\"고등 대수\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":10,\"subject\":\"D1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"미적분1\",\"viewSubjectName\":\"고등 미적분1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":11,\"subject\":\"D2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"미적분2\",\"viewSubjectName\":\"고등 미적분2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":12,\"subject\":\"S0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"확률과통계\",\"viewSubjectName\":\"고등 확률과통계\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":13,\"subject\":\"G0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기하\",\"viewSubjectName\":\"고등 기하\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":14,\"subject\":\"P0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"직무수학\",\"viewSubjectName\":\"고등 직무수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":15,\"subject\":\"I0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"인공지능수학\",\"viewSubjectName\":\"고등 인공지능수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":16,\"subject\":\"U0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학과 문화\",\"viewSubjectName\":\"고등 수학과 문화\"},{\"classType\":\"M\",\"curriculum\":\"15\",\"sequence\":17,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"중학 수학\"}];\n\n            const curriculumSelect = document.getElementById('curriculumSelect');\n            const subjectCategorySelect = document.getElementById('subjectCategorySelect');\n\n            populateSelectOptions(curriculumSelect,\n                distinctBy(subjectRows, r => r.curriculum).map(r => ({value: r.curriculum, text: r.curriculum})),\n                '교육과정 전체');\n            curriculumSelect.value = \"22\";\n\n            populateSelectOptions(subjectCategorySelect,\n                distinctBy(subjectRows, r => r.subjectCategory).map(r => ({value: r.subjectCategory, text: r.subjectCategoryName})),\n                '과목군 전체');\n            subjectCategorySelect.value = \"\";\n        });\n    </script>\n\n</section>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n    \n    <div>\n    <div class=\"modal modal-blur fade\" id=\"logoutConfirmModal\" tabindex=\"-1\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-dialog-centered modal-sm\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header bg-warning-lt\">\n                    <h5 class=\"modal-title\">\n                        <i class=\"ti me-2 ti-alert-triangle text-warning\"></i><span>로그아웃</span>\n                    </h5>\n                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"닫기\"></button>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"fw-bold mb-3\"><div class=\"text-center\">로그아웃하시겠습니까?</div></div>\n                    <div id=\"logoutConfirmBody\" class=\"text-secondary text-center\">로그인 화면으로 나갑니다.</div>\n                </div>\n                <div class=\"modal-footer py-2\">\n                    <button type=\"button\" class=\"btn btn-sm\" data-bs-dismiss=\"modal\">취소</button>\n                    <button type=\"button\" class=\"btn btn-sm btn-warning\" data-action-ok=\"\">로그아웃</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n<!-- 토스트 팝업 -->\n\n\n\n<div id=\"loadingOverlay\" class=\"loading-overlay\">\n    <div class=\"spinner-border text-primary\" role=\"status\"></div>\n</div>\n\n<script src=\"/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js\"></script>\n<script src=\"/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js\"></script>\n<script src=\"/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js\"></script>\n<script src=\"/js/common-8dc66a9d95b497a50939a25f89dee707.js\"></script>\n\n\n\n<div class=\"litepicker\" data-plugins=\"\" style=\"display: none;\"><div class=\"container__main\"><div class=\"container__months\"><div class=\"month-item\"><div class=\"month-item-header\"><button type=\"button\" class=\"button-previous-month\"><svg width=\"11\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.919 0l2.748 2.667L5.333 8l5.334 5.333L7.919 16 0 8z\" fill-rule=\"nonzero\"></path></svg></button><div><strong class=\"month-item-name\">11월</strong><span class=\"month-item-year\">2026</span></div><button type=\"button\" class=\"button-next-month\"><svg width=\"11\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.748 16L0 13.333 5.333 8 0 2.667 2.748 0l7.919 8z\" fill-rule=\"nonzero\"></path></svg></button></div><div class=\"month-item-weekdays-row\"><div title=\"월요일\">월</div><div title=\"화요일\">화</div><div title=\"수요일\">수</div><div title=\"목요일\">목</div><div title=\"금요일\">금</div><div title=\"토요일\">토</div><div title=\"일요일\">일</div></div><div class=\"container__days\"><div></div><div></div><div></div><div></div><div></div><div></div><div class=\"day-item\" data-time=\"1793458800000\" tabindex=\"0\">1</div><div class=\"day-item\" data-time=\"1793545200000\" tabindex=\"0\">2</div><div class=\"day-item\" data-time=\"1793631600000\" tabindex=\"0\">3</div><div class=\"day-item\" data-time=\"1793718000000\" tabindex=\"0\">4</div><div class=\"day-item\" data-time=\"1793804400000\" tabindex=\"0\">5</div><div class=\"day-item\" data-time=\"1793890800000\" tabindex=\"0\">6</div><div class=\"day-item\" data-time=\"1793977200000\" tabindex=\"0\">7</div><div class=\"day-item\" data-time=\"1794063600000\" tabindex=\"0\">8</div><div class=\"day-item is-today\" data-time=\"1794150000000\" tabindex=\"0\">9</div><div class=\"day-item\" data-time=\"1794236400000\" tabindex=\"0\">10</div><div class=\"day-item\" data-time=\"1794322800000\" tabindex=\"0\">11</div><div class=\"day-item\" data-time=\"1794409200000\" tabindex=\"0\">12</div><div class=\"day-item\" data-time=\"1794495600000\" tabindex=\"0\">13</div><div class=\"day-item\" data-time=\"1794582000000\" tabindex=\"0\">14</div><div class=\"day-item\" data-time=\"1794668400000\" tabindex=\"0\">15</div><div class=\"day-item\" data-time=\"1794754800000\" tabindex=\"0\">16</div><div class=\"day-item\" data-time=\"1794841200000\" tabindex=\"0\">17</div><div class=\"day-item\" data-time=\"1794927600000\" tabindex=\"0\">18</div><div class=\"day-item\" data-time=\"1795014000000\" tabindex=\"0\">19</div><div class=\"day-item\" data-time=\"1795100400000\" tabindex=\"0\">20</div><div class=\"day-item\" data-time=\"1795186800000\" tabindex=\"0\">21</div><div class=\"day-item\" data-time=\"1795273200000\" tabindex=\"0\">22</div><div class=\"day-item\" data-time=\"1795359600000\" tabindex=\"0\">23</div><div class=\"day-item\" data-time=\"1795446000000\" tabindex=\"0\">24</div><div class=\"day-item\" data-time=\"1795532400000\" tabindex=\"0\">25</div><div class=\"day-item\" data-time=\"1795618800000\" tabindex=\"0\">26</div><div class=\"day-item\" data-time=\"1795705200000\" tabindex=\"0\">27</div><div class=\"day-item\" data-time=\"1795791600000\" tabindex=\"0\">28</div><div class=\"day-item\" data-time=\"1795878000000\" tabindex=\"0\">29</div><div class=\"day-item\" data-time=\"1795964400000\" tabindex=\"0\">30</div></div></div></div></div><div class=\"container__tooltip\"></div></div></body></html>",
+        "redaction": "Password and CSRF/token-named input/meta nodes and nonce/token attributes removed; cookies/storage never read.",
+        "title": "디피니션 문항 등록 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.103
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22",
+      "refs": {
+        "e19800": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e19801": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e19802": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e19803": {
+          "name": "디피니션 문항 등록",
+          "role": "heading"
+        },
+        "e19804": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19805": {
+          "name": " ZIP 등록",
+          "role": "link"
+        },
+        "e19806": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e19807": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e19808": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e19809": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e19810": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e19811": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e19812": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e19813": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e19814": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e19815": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19816": {
+          "name": "시험지 ID / 파일명 / 출처코드 / 등록자 ID",
+          "role": "textbox"
+        },
+        "e19817": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19818": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19819": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19820": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19821": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19822": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e19823": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19824": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19825": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19826": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19827": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19828": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19829": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19830": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e19831": {
+          "name": "시작일 ~ 종료일",
+          "role": "textbox"
+        },
+        "e19832": {
+          "name": "7일",
+          "role": "button"
+        },
+        "e19833": {
+          "name": "30일",
+          "role": "button"
+        },
+        "e19834": {
+          "name": "90일",
+          "role": "button"
+        },
+        "e19835": {
+          "name": "전체",
+          "role": "button"
+        },
+        "e19836": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e19837": {
+          "name": "등록대기",
+          "role": "checkbox"
+        },
+        "e19838": {
+          "name": "등록중",
+          "role": "checkbox"
+        },
+        "e19839": {
+          "name": "초안",
+          "role": "checkbox"
+        },
+        "e19840": {
+          "name": "메타추천중",
+          "role": "checkbox"
+        },
+        "e19841": {
+          "name": "승인",
+          "role": "checkbox"
+        },
+        "e19842": {
+          "name": "폐기",
+          "role": "checkbox"
+        },
+        "e19843": {
+          "name": "실패",
+          "role": "checkbox"
+        },
+        "e19844": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e19845": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e19846": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e19847": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e19848": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e19849": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e19850": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e19851": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e19852": {
+          "name": "1",
+          "role": "link"
+        },
+        "e19853": {
+          "name": "2",
+          "role": "link"
+        },
+        "e19854": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e19855": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e19856": {
+          "name": "시험지 ID",
+          "role": "option"
+        },
+        "e19857": {
+          "name": "파일명",
+          "role": "option"
+        },
+        "e19858": {
+          "name": "출처코드",
+          "role": "option"
+        },
+        "e19859": {
+          "name": "등록자 ID",
+          "role": "option"
+        },
+        "e19860": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e19861": {
+          "name": "22",
+          "role": "option"
+        },
+        "e19862": {
+          "name": "15",
+          "role": "option"
+        },
+        "e19863": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e19864": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e19865": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e19866": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e19867": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e19868": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e19869": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e19870": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e19871": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e19872": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e19873": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e19874": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e19875": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e19876": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e19877": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e19878": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e19879": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e19880": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e19881": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e19882": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e19883": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e19884": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e19885": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e19886": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e19887": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e19888": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e19889": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e19890": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e19891": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e19892": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e19893": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e19894": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e19895": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e19896": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e19897": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e19898": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e19899": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e19900": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e19901": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e19902": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e19903": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e19904": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e19905": {
+          "name": "530",
+          "role": "cell"
+        },
+        "e19906": {
+          "name": "750774.zip",
+          "role": "cell"
+        },
+        "e19907": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e19908": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e19909": {
+          "name": "초등3 · 2학기",
+          "role": "cell"
+        },
+        "e19910": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19911": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e19912": {
+          "name": "hari.im 2026-10-15",
+          "role": "cell"
+        },
+        "e19913": {
+          "name": "529",
+          "role": "cell"
+        },
+        "e19914": {
+          "name": "750772.zip",
+          "role": "cell"
+        },
+        "e19915": {
+          "name": "22-E-MA-T0-5-1-DCL-FB-2026",
+          "role": "cell"
+        },
+        "e19916": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e19917": {
+          "name": "초등5 · 1학기",
+          "role": "cell"
+        },
+        "e19918": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19919": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e19920": {
+          "name": "hari.im 2026-10-15",
+          "role": "cell"
+        },
+        "e19921": {
+          "name": "430",
+          "role": "cell"
+        },
+        "e19922": {
+          "name": "108093600.zip",
+          "role": "cell"
+        },
+        "e19923": {
+          "name": "22-E-MA-T0-4-1-DCL-FB-2005",
+          "role": "cell"
+        },
+        "e19924": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e19925": {
+          "name": "초등4 · 1학기",
+          "role": "cell"
+        },
+        "e19926": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19927": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e19928": {
+          "name": "jaehyuk.myung 2026-10-12",
+          "role": "cell"
+        },
+        "e19929": {
+          "name": "299",
+          "role": "cell"
+        },
+        "e19930": {
+          "name": "디피니션 문항 샘플.zip",
+          "role": "cell"
+        },
+        "e19931": {
+          "name": "22-H-MA-B1-1-2-DCL-MA-2025",
+          "role": "cell"
+        },
+        "e19932": {
+          "name": "기본수학1",
+          "role": "cell"
+        },
+        "e19933": {
+          "name": "고등1 · 2학기",
+          "role": "cell"
+        },
+        "e19934": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e19935": {
+          "name": "실패",
+          "role": "cell"
+        },
+        "e19936": {
+          "name": "minhye.park 2026-10-02",
+          "role": "cell"
+        },
+        "e19937": {
+          "name": "180",
+          "role": "cell"
+        },
+        "e19938": {
+          "name": "DIFI_107131800.zip",
+          "role": "cell"
+        },
+        "e19939": {
+          "name": "22-H-MA-S0-3-2-DCL-TW-2024",
+          "role": "cell"
+        },
+        "e19940": {
+          "name": "확률과통계",
+          "role": "cell"
+        },
+        "e19941": {
+          "name": "고등3 · 2학기",
+          "role": "cell"
+        },
+        "e19942": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e19943": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e19944": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19945": {
+          "name": "179",
+          "role": "cell"
+        },
+        "e19946": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e19947": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e19948": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e19949": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e19950": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19951": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e19952": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19953": {
+          "name": "178",
+          "role": "cell"
+        },
+        "e19954": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e19955": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e19956": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e19957": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e19958": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19959": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e19960": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19961": {
+          "name": "175",
+          "role": "cell"
+        },
+        "e19962": {
+          "name": "[MOCK-DIFI-F] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e19963": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e19964": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e19965": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e19966": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e19967": {
+          "name": "실패",
+          "role": "cell"
+        },
+        "e19968": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19969": {
+          "name": "174",
+          "role": "cell"
+        },
+        "e19970": {
+          "name": "[MOCK-DIFI-X] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e19971": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e19972": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e19973": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e19974": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19975": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e19976": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19977": {
+          "name": "173",
+          "role": "cell"
+        },
+        "e19978": {
+          "name": "[MOCK-DIFI-A] 템플릿_시험지2.zip",
+          "role": "cell"
+        },
+        "e19979": {
+          "name": "22-H-MA-D1-2-1-DCL-MS-2024",
+          "role": "cell"
+        },
+        "e19980": {
+          "name": "미적분1",
+          "role": "cell"
+        },
+        "e19981": {
+          "name": "고등2 · 1학기",
+          "role": "cell"
+        },
+        "e19982": {
+          "name": "미등록",
+          "role": "cell"
+        },
+        "e19983": {
+          "name": "승인",
+          "role": "cell"
+        },
+        "e19984": {
+          "name": "sangwon.jo 2026-09-23",
+          "role": "cell"
+        },
+        "e19985": {
+          "name": "시험지 ID",
+          "role": "columnheader"
+        },
+        "e19986": {
+          "name": "파일명",
+          "role": "columnheader"
+        },
+        "e19987": {
+          "name": "출처",
+          "role": "columnheader"
+        },
+        "e19988": {
+          "name": "과목",
+          "role": "columnheader"
+        },
+        "e19989": {
+          "name": "학년 · 학기",
+          "role": "columnheader"
+        },
+        "e19990": {
+          "name": "평가지 등록여부",
+          "role": "columnheader"
+        },
+        "e19991": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e19992": {
+          "name": "등록자 · 등록일",
+          "role": "columnheader"
+        },
+        "e19993": {
+          "name": "750774.zip",
+          "role": "link"
+        },
+        "e19994": {
+          "name": "750772.zip",
+          "role": "link"
+        },
+        "e19995": {
+          "name": "108093600.zip",
+          "role": "link"
+        },
+        "e19996": {
+          "name": "디피니션 문항 샘플.zip",
+          "role": "link"
+        },
+        "e19997": {
+          "name": "DIFI_107131800.zip",
+          "role": "link"
+        },
+        "e19998": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e19999": {
+          "name": "[MOCK-DIFI-D] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e20000": {
+          "name": "[MOCK-DIFI-F] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e20001": {
+          "name": "[MOCK-DIFI-X] 템플릿_시험지2.zip",
+          "role": "link"
+        },
+        "e20002": {
+          "name": "[MOCK-DIFI-A] 템플릿_시험지2.zip",
+          "role": "link"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e19800]\n      - link \"문제은행 마스터 CMS\" [ref=e19801]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e19806]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e19807]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e19808]\n          - link \"HML 문항 등록\" [ref=e19809]\n          - link \"디피니션 문항 등록\" [ref=e19810]\n          - link \"쌍둥이 그룹 관리\" [ref=e19811]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e19812]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e19813]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e19814]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e19802]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n      - heading \"디피니션 문항 등록\" [level=2, ref=e19803]\n      - generic\n        - combobox [expanded=false, ref=e19815]: 시험지 ID\n          - MenuListPopup\n            - option \"시험지 ID\" [selected, ref=e19856]\n            - option \"파일명\" [ref=e19857]\n            - option \"출처코드\" [ref=e19858]\n            - option \"등록자 ID\" [ref=e19859]\n        - textbox \"시험지 ID / 파일명 / 출처코드 / 등록자 ID\" [ref=e19816]\n        - combobox [expanded=false, ref=e19817]: 22\n          - MenuListPopup\n            - option \"교육과정 전체\" [ref=e19860]\n            - option \"22\" [selected, ref=e19861]\n            - option \"15\" [ref=e19862]\n        - combobox [expanded=false, ref=e19818]: 학교급 전체\n          - MenuListPopup\n            - option \"학교급 전체\" [selected, ref=e19863]\n            - option \"초등\" [ref=e19864]\n            - option \"중학\" [ref=e19865]\n            - option \"고등\" [ref=e19866]\n        - combobox [expanded=false, ref=e19819]: 과목군 전체\n          - MenuListPopup\n            - option \"과목군 전체\" [selected, ref=e19867]\n            - option \"수학군\" [ref=e19868]\n        - combobox [expanded=false, disabled, ref=e19820]: 과목 전체\n          - MenuListPopup\n            - option \"과목 전체\" [disabled, ref=e19869]\n            - option \"수학\" [disabled, ref=e19870]\n            - option \"수학\" [disabled, ref=e19871]\n            - option \"공통수학1\" [disabled, ref=e19872]\n            - option \"공통수학2\" [disabled, ref=e19873]\n            - option \"기본수학1\" [disabled, ref=e19874]\n            - option \"기본수학2\" [disabled, ref=e19875]\n            - option \"수학1\" [disabled, ref=e19876]\n            - option \"수학2\" [disabled, ref=e19877]\n            - option \"대수\" [disabled, ref=e19878]\n            - option \"미적분1\" [disabled, ref=e19879]\n            - option \"미적분2\" [disabled, ref=e19880]\n            - option \"확률과통계\" [disabled, ref=e19881]\n            - option \"기하\" [disabled, ref=e19882]\n            - option \"직무수학\" [disabled, ref=e19883]\n            - option \"인공지능수학\" [disabled, ref=e19884]\n            - option \"수학과 문화\" [disabled, ref=e19885]\n            - option \"수학\" [disabled, ref=e19886]\n        - combobox [expanded=false, disabled, ref=e19821]: 학년 전체\n          - MenuListPopup\n            - option \"학년 전체\" [disabled, ref=e19887]\n            - option \"중학1\" [disabled, ref=e19888]\n            - option \"고등1\" [disabled, ref=e19889]\n            - option \"초등1\" [disabled, ref=e19890]\n            - option \"중학2\" [disabled, ref=e19891]\n            - option \"초등2\" [disabled, ref=e19892]\n            - option \"고등2\" [disabled, ref=e19893]\n            - option \"고등3\" [disabled, ref=e19894]\n            - option \"중학3\" [disabled, ref=e19895]\n            - option \"초등3\" [disabled, ref=e19896]\n            - option \"고등 공통\" [disabled, ref=e19897]\n            - option \"초등4\" [disabled, ref=e19898]\n            - option \"초등5\" [disabled, ref=e19899]\n            - option \"초등6\" [disabled, ref=e19900]\n        - combobox [expanded=false, ref=e19822]: 학기 전체\n          - MenuListPopup\n            - option \"학기 전체\" [selected, ref=e19901]\n            - option \"공통학기\" [ref=e19902]\n            - option \"1학기\" [ref=e19903]\n            - option \"2학기\" [ref=e19904]\n        - StaticText \"등록일\"\n        - generic\n          - textbox \"시작일 ~ 종료일\" [ref=e19831]\n          - StaticText \"\"\n        - generic\n          - button \"7일\" [ref=e19832]\n          - button \"30일\" [ref=e19833]\n          - button \"90일\" [ref=e19834]\n          - button \"전체\" [ref=e19835]\n        - StaticText \"상태\"\n        - LabelText [ref=e19823] clickable [cursor:pointer]\n          - checkbox \"전체\" [checked=true, ref=e19836]\n          - StaticText \"전체\"\n        - LabelText [ref=e19824] clickable [cursor:pointer]\n          - checkbox \"등록대기\" [checked=true, ref=e19837]\n          - StaticText \"등록대기\"\n        - LabelText [ref=e19825] clickable [cursor:pointer]\n          - checkbox \"등록중\" [checked=true, ref=e19838]\n          - StaticText \"등록중\"\n        - LabelText [ref=e19826] clickable [cursor:pointer]\n          - checkbox \"초안\" [checked=true, ref=e19839]\n          - StaticText \"초안\"\n        - LabelText [ref=e19827] clickable [cursor:pointer]\n          - checkbox \"메타추천중\" [checked=true, ref=e19840]\n          - StaticText \"메타추천중\"\n        - LabelText [ref=e19828] clickable [cursor:pointer]\n          - checkbox \"승인\" [checked=true, ref=e19841]\n          - StaticText \"승인\"\n        - LabelText [ref=e19829] clickable [cursor:pointer]\n          - checkbox \"폐기\" [checked=true, ref=e19842]\n          - StaticText \"폐기\"\n        - LabelText [ref=e19830] clickable [cursor:pointer]\n          - checkbox \"실패\" [checked=true, ref=e19843]\n          - StaticText \"실패\"\n        - generic\n          - button \" 초기화\" [ref=e19844]\n            - StaticText \"\"\n            - StaticText \"초기화\"\n          - button \" 조회\" [ref=e19845]\n            - StaticText \"\"\n            - StaticText \"조회\"\n      - generic\n        - combobox [expanded=false, ref=e19804]: 10개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [selected, ref=e19846]\n            - option \"30개씩 보기\" [ref=e19847]\n            - option \"50개씩 보기\" [ref=e19848]\n            - option \"100개씩 보기\" [ref=e19849]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"15\"\n        - StaticText \"건\"\n        - link \" ZIP 등록\" [ref=e19805]\n          - StaticText \"\"\n          - StaticText \"ZIP 등록\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"시험지 ID\" [ref=e19985]\n              - columnheader \"파일명\" [ref=e19986]\n              - columnheader \"출처\" [ref=e19987]\n              - columnheader \"과목\" [ref=e19988]\n              - columnheader \"학년 · 학기\" [ref=e19989]\n              - columnheader \"평가지 등록여부\" [ref=e19990]\n              - columnheader \"상태\" [ref=e19991]\n              - columnheader \"등록자 · 등록일\" [ref=e19992]\n          - row\n            - cell \"530\" [ref=e19905]\n            - cell \"750774.zip\" [ref=e19906]\n              - link \"750774.zip\" [ref=e19993]\n            - cell \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e19907]\n            - cell \"수학\" [ref=e19908]\n            - cell \"초등3 · 2학기\" [ref=e19909]\n            - cell \"미등록\" [ref=e19910]\n            - cell \"승인\" [ref=e19911]\n            - cell \"hari.im 2026-10-15\" [ref=e19912]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-15\"\n          - row\n            - cell \"529\" [ref=e19913]\n            - cell \"750772.zip\" [ref=e19914]\n              - link \"750772.zip\" [ref=e19994]\n            - cell \"22-E-MA-T0-5-1-DCL-FB-2026\" [ref=e19915]\n            - cell \"수학\" [ref=e19916]\n            - cell \"초등5 · 1학기\" [ref=e19917]\n            - cell \"미등록\" [ref=e19918]\n            - cell \"승인\" [ref=e19919]\n            - cell \"hari.im 2026-10-15\" [ref=e19920]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-15\"\n          - row\n            - cell \"430\" [ref=e19921]\n            - cell \"108093600.zip\" [ref=e19922]\n              - link \"108093600.zip\" [ref=e19995]\n            - cell \"22-E-MA-T0-4-1-DCL-FB-2005\" [ref=e19923]\n            - cell \"수학\" [ref=e19924]\n            - cell \"초등4 · 1학기\" [ref=e19925]\n            - cell \"미등록\" [ref=e19926]\n            - cell \"승인\" [ref=e19927]\n            - cell \"jaehyuk.myung 2026-10-12\" [ref=e19928]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-10-12\"\n          - row\n            - cell \"299\" [ref=e19929]\n            - cell \"디피니션 문항 샘플.zip\" [ref=e19930]\n              - link \"디피니션 문항 샘플.zip\" [ref=e19996]\n            - cell \"22-H-MA-B1-1-2-DCL-MA-2025\" [ref=e19931]\n            - cell \"기본수학1\" [ref=e19932]\n            - cell \"고등1 · 2학기\" [ref=e19933]\n            - cell \"-\" [ref=e19934]\n            - cell \"실패\" [ref=e19935]\n            - cell \"minhye.park 2026-10-02\" [ref=e19936]\n              - StaticText \"minhye.park\"\n              - StaticText \"2026-10-02\"\n          - row\n            - cell \"180\" [ref=e19937]\n            - cell \"DIFI_107131800.zip\" [ref=e19938]\n              - link \"DIFI_107131800.zip\" [ref=e19997]\n            - cell \"22-H-MA-S0-3-2-DCL-TW-2024\" [ref=e19939]\n            - cell \"확률과통계\" [ref=e19940]\n            - cell \"고등3 · 2학기\" [ref=e19941]\n            - cell \"-\" [ref=e19942]\n            - cell \"폐기\" [ref=e19943]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19944]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"179\" [ref=e19945]\n            - cell \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e19946]\n              - link \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e19998]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e19947]\n            - cell \"미적분1\" [ref=e19948]\n            - cell \"고등2 · 1학기\" [ref=e19949]\n            - cell \"미등록\" [ref=e19950]\n            - cell \"폐기\" [ref=e19951]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19952]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"178\" [ref=e19953]\n            - cell \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e19954]\n              - link \"[MOCK-DIFI-D] 템플릿_시험지2.zip\" [ref=e19999]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e19955]\n            - cell \"미적분1\" [ref=e19956]\n            - cell \"고등2 · 1학기\" [ref=e19957]\n            - cell \"미등록\" [ref=e19958]\n            - cell \"폐기\" [ref=e19959]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19960]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"175\" [ref=e19961]\n            - cell \"[MOCK-DIFI-F] 템플릿_시험지2.zip\" [ref=e19962]\n              - link \"[MOCK-DIFI-F] 템플릿_시험지2.zip\" [ref=e20000]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e19963]\n            - cell \"미적분1\" [ref=e19964]\n            - cell \"고등2 · 1학기\" [ref=e19965]\n            - cell \"-\" [ref=e19966]\n            - cell \"실패\" [ref=e19967]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19968]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"174\" [ref=e19969]\n            - cell \"[MOCK-DIFI-X] 템플릿_시험지2.zip\" [ref=e19970]\n              - link \"[MOCK-DIFI-X] 템플릿_시험지2.zip\" [ref=e20001]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e19971]\n            - cell \"미적분1\" [ref=e19972]\n            - cell \"고등2 · 1학기\" [ref=e19973]\n            - cell \"미등록\" [ref=e19974]\n            - cell \"폐기\" [ref=e19975]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19976]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n          - row\n            - cell \"173\" [ref=e19977]\n            - cell \"[MOCK-DIFI-A] 템플릿_시험지2.zip\" [ref=e19978]\n              - link \"[MOCK-DIFI-A] 템플릿_시험지2.zip\" [ref=e20002]\n            - cell \"22-H-MA-D1-2-1-DCL-MS-2024\" [ref=e19979]\n            - cell \"미적분1\" [ref=e19980]\n            - cell \"고등2 · 1학기\" [ref=e19981]\n            - cell \"미등록\" [ref=e19982]\n            - cell \"승인\" [ref=e19983]\n            - cell \"sangwon.jo 2026-09-23\" [ref=e19984]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-09-23\"\n        - generic\n          - StaticText \"총 15건 중 1∼10 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e19850]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e19851]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e19852]\n          - listitem [level=1]\n            - link \"2\" [ref=e19853]\n          - listitem [level=1]\n            - link \"다음\" [ref=e19854]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e19855]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.153
+  }
+}

@@ -1,0 +1,9 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show')||!document.getElementById('twinAddTabBtn').classList.contains('active')||document.getElementById('twinCountBadge').innerText.trim()!=='0'||window.__qaSetOriginalReaddAttempted)throw Error('Only own unlinked set one-shot original re-add allowed');
+ const filter=document.getElementById('twinSearchFilter'),result=document.getElementById('twinAddResult'),button=result.querySelector('[hx-post="/item/all/twin-add.donga?targetItemId=2089242"]');
+ if(filter.querySelector('[name="anchorItemId"]').value!=='2089358'||filter.querySelector('[name="keywordType"]').value!=='itemId'||filter.querySelector('[name="keyword"]').value!=='2089242'||result.querySelectorAll('tbody tr').length!==1||!button?.closest('tr').innerText.includes('2089241')||button.matches(':disabled'))throw Error('Exact compatible original set candidate9242/passage9241 required');
+ window.__qaSetOriginalReaddAttempted=true;window.__qaSetOriginalReaddResponse={received:false};const request={observed:false};
+ const before=e=>{if(e.detail.elt!==button)return;request.observed=true;request.path=e.detail.requestConfig?.path;request.verb=e.detail.requestConfig?.verb;request.anchorItemId=e.detail.requestConfig?.parameters?.anchorItemId;document.body.removeEventListener('htmx:beforeRequest',before);};
+ const after=e=>{if(e.detail.elt!==button)return;window.__qaSetOriginalReaddResponse={received:true,httpStatus:e.detail.xhr.status,trigger:e.detail.xhr.getResponseHeader('HX-Trigger')};document.body.removeEventListener('htmx:afterRequest',after);};
+ document.body.addEventListener('htmx:beforeRequest',before);document.body.addEventListener('htmx:afterRequest',after);button.click();return {clickedOnce:true,anchorItemId:2089358,targetItemId:2089242,originalPassageId:2089241,request,serviceDeployment:false};
+})()

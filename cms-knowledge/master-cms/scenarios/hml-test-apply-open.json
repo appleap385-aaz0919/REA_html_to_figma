@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1080-hml-saved-modal-seed","command":["snapshot"]},
+  {"label":"1081-hml-saved-modal-confirm","command":["click","{ref}"],"refPattern":"- button \"확인\" \\[ref=(e\\d+)\\]"},
+  {"label":"1082-hml-save-return-cms","command":["tab","0EFB900C688AC111C33EDFA475104F9D"]},
+  {"label":"1083-hml-parent-preview-before-apply","command":["snapshot"],"screenshot":true},
+  {"label":"1084-hml-full-apply-open","command":["click","{ref}"],"refPattern":"- button \"전체 반영\" \\[ref=(e\\d+)\\]","expectMatches":2,"matchIndex":0}
+ ],"tailChars":2800
+}

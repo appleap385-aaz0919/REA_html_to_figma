@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"2388-own-source199-final-item2089216-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216"]},
+ {"label":"2389-own-source199-final-current-product-modal-open","command":["eval","--file","sources/runtime/own-item2089216-product-modal-open.js"]},
+ {"label":"2390-own-source199-retained-unused-current-ui","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216'||!document.querySelector('#itemProductModal.show'))throw Error('Own current sources required');return {currentText:document.getElementById('productCurrent').innerText,count:document.getElementById('productCountText').innerText,rows:[...document.querySelectorAll('#productCurrent tbody tr')].map(e=>({text:e.innerText,fields:[...e.querySelectorAll('input')].map(e=>({name:e.name,value:e.value,disabled:e.matches(':disabled')})),actions:[...e.querySelectorAll('[hx-post]')].map(b=>({path:b.getAttribute('hx-post'),disabled:b.matches(':disabled')}))}))};})()"]},
+ {"label":"2391-own-source199-final-product-add-tab","command":["eval","--file","sources/runtime/own-item2089216-product-add-tab-open.js"]},
+ {"label":"2392-own-source199-final-unused-candidate-search","command":["eval","--file","sources/runtime/own-item2089216-search-source199.js"]},
+ {"label":"2393-own-source199-final-product-modal-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2394-own-source199-final-product-modal-close","command":["eval","--file","sources/runtime/own-item2089216-product-modal-dismiss.js"]},
+ {"label":"2395-own-source199-final-persistent-item-read","command":["eval","--file","sources/runtime/own-item2089216-persistent-summary.js"]},
+ {"label":"2396-own-source199-paper1093-control-read","command":["eval","--file","sources/runtime/own-paper1093-server-readback.js"]}
+],"tailChars":140}

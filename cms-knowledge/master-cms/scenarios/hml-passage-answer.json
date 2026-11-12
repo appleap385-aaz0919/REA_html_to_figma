@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1041-hml-passage-true-bottom","command":["eval","--file","sources/runtime/hml-scroll-bottom.js"],"screenshot":true},
+  {"label":"1042-hml-set-answer-open","command":["click","{ref}"],"refPattern":"- button \"해답 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1043-hml-set-answer-settled","command":["snapshot"],"screenshot":true},
+  {"label":"1044-hml-set-answer-bottom","command":["eval","--file","sources/runtime/hml-scroll-bottom.js"],"screenshot":true},
+  {"label":"1045-hml-set-slots-observed","command":["eval","--file","sources/runtime/hml-parent-slots.js"]}
+ ],"tailChars":4500
+}

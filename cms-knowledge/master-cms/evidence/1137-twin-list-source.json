@@ -1,0 +1,1408 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1137-twin-list-source",
+  "startedUtc": "2026-11-09T04:19:37.179588+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/sanitized-page-source.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/twin/list.donga?pageNum=1&pageSize=50"
+    },
+    "error": null,
+    "localSeconds": 0.078
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/twin/list.donga?pageNum=1&pageSize=50",
+      "result": {
+        "html": "<!DOCTYPE html>\n<html lang=\"ko\" data-bs-navbar-position=\"combined\"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:\"\"}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:\"\"}\n</style>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <title>쌍둥이 그룹 관리 | 문제은행 마스터 CMS</title>\n    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->\n    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>\n    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->\n    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css\">\n    <link rel=\"stylesheet\" href=\"/css/custom-4f213f104c14367e2495ee02d06e6fb6.css\">\n    \n    \n<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>\n<body>\n\n<div class=\"page\">\n    <!-- 사이드바 -->\n    \n    <aside class=\"navbar navbar-vertical navbar-expand-lg bg-primary\" data-bs-theme-primary=\"blue\" data-bs-theme=\"dark\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-brand navbar-brand-autodark justify-content-start ps-3\">\n                <button class=\"navbar-toggler\" type=\"button\" id=\"sidebarToggle\" aria-expanded=\"false\" aria-controls=\"sidebar-menu\" aria-label=\"메뉴\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                \n                <a href=\"/main.donga\" class=\"text-decoration-none text-white\" title=\"MASTER\">문제은행 마스터 CMS</a>\n            </div>\n\n            <div class=\"collapse navbar-collapse\" id=\"sidebar-menu\">\n                <ul class=\"navbar-nav pt-lg-3\">\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/main.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-home\"></i></span>\n                            <span class=\"nav-link-title\">홈</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item  dropdown active\">\n\n                        \n                        \n\n                        \n                        \n                            <a class=\"nav-link dropdown-toggle show\" href=\"#menu-ITEM\" data-bs-toggle=\"dropdown\" data-bs-auto-close=\"false\" role=\"button\" aria-expanded=\"true\">\n                                <span class=\"nav-link-icon\"><i class=\"ti ti-files\"></i></span>\n                                <span class=\"nav-link-title\">문항 관리</span>\n                            </a>\n                            <div class=\"dropdown-menu show\">\n                                <a class=\"dropdown-item\" data-loading=\"\" href=\"/item/all/list.donga?unitCurriculum=22\">전체 문항</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/hml/list.donga?curriculum=22\">HML 문항 등록</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/difi/list.donga?curriculum=22\">디피니션 문항 등록</a><a class=\"dropdown-item active\" data-loading=\"\" href=\"/item/twin/list.donga\">쌍둥이 그룹 관리</a>\n                            </div>\n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/paper/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-clipboard-list\"></i></span>\n                            <span class=\"nav-link-title\">평가지 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/product/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-database\"></i></span>\n                            <span class=\"nav-link-title\">문항 출처 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/lab/index.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-flask\"></i></span>\n                            <span class=\"nav-link-title\">랩</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                </ul>\n            </div>\n        </div>\n    </aside>\n\n    <!-- 상단바 -->\n    \n    <header class=\"navbar navbar-expand-lg d-print-none border-bottom border-primary border-4\" data-bs-theme-primary=\"blue\">\n        <div class=\"container-fluid\">\n            <span class=\"status fs-3 fw-semibold status-blue\">\n                \n                <span>마스터</span>\n            </span>\n            <div class=\"navbar-nav flex-row order-lg-last ms-auto\">\n                <div class=\"d-flex align-items-center gap-3\">\n                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->\n                    <button type=\"button\" class=\"btn btn-icon d-none\" id=\"themeToggle\" aria-label=\"다크모드 전환\">\n                        <i class=\"ti ti-moon\"></i>\n                    </button>\n                    \n                    <span class=\"text-muted\" title=\"권한 : ADMIN\">접속자 <strong>jaehyuk.myung</strong></span>\n                    \n                    <form action=\"/logout.donga\" method=\"post\" class=\"m-0\" id=\"logoutForm\" data-loading=\"\">\n                        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#logoutConfirmModal\">\n                            <i class=\"ti ti-logout me-1\"></i>로그아웃\n                        </button>\n                    </form>\n                </div>\n                \n            </div>\n        </div>\n    </header>\n\n    <!-- 본문 -->\n    <div class=\"page-wrapper\">\n        <div class=\"page-body\">\n            <div class=\"container-fluid\">\n                <section>\n\n    <div class=\"page-header d-print-none\">\n        <ol class=\"breadcrumb breadcrumb-arrows fs-5 mb-1\" aria-label=\"breadcrumbs\">\n    <li class=\"breadcrumb-item\">시스템 관리</li>\n    \n        <li class=\"breadcrumb-item\">문항 관리</li>\n        <li class=\"breadcrumb-item\">쌍둥이 그룹 관리</li>\n    \n    \n</ol>\n        <h2 class=\"page-title\">쌍둥이 그룹 관리</h2>\n    </div>\n\n    <div id=\"twinGroupTableArea\" class=\"mt-3\">\n\n        <div class=\"d-flex align-items-center justify-content-between mb-2\">\n            <div class=\"d-flex align-items-center gap-2\">\n    <select class=\"form-select form-select-sm w-auto cursor-pointer\" name=\"pageSize\" hx-trigger=\"change\" hx-include=\"[data-filter], [data-unit-filter]\" hx-vals=\"{&quot;pageNum&quot;: 1}\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga\" hx-target=\"#twinGroupTableArea\">\n        <option value=\"10\">10개씩 보기</option>\n        <option value=\"30\">30개씩 보기</option>\n        <option value=\"50\" selected=\"selected\">50개씩 보기</option>\n        <option value=\"100\">100개씩 보기</option>\n    </select>\n    <span class=\"text-muted\">검색결과 : <strong>43</strong>건</span>\n</div>\n        </div>\n\n        <div class=\"card\">\n            <div class=\"table-responsive\">\n                <table class=\"table card-table table-vcenter\" style=\"table-layout: fixed;\">\n                    <thead>\n                    <tr>\n                        <th class=\"text-center\" style=\"width: 10%;\">그룹 ID</th>\n                        <th class=\"text-center\" style=\"width: 8%;\">유형</th>\n                        <th class=\"text-center\">대표 문제</th>\n                        <th class=\"text-center\" style=\"width: 8%;\">개수</th>\n                        <th class=\"text-center\" style=\"width: 12%;\">수정자</th>\n                        <th class=\"text-center\" style=\"width: 14%;\">수정일시</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    <tr>\n                        <td class=\"text-center\">2088665</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2088665&amp;pageNum=1&amp;pageSize=50\">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?\n$(-3,~1)$\n$(-9,~3)$\n$(1,~-3)$\n$(3,~-1)$\n$(12,~-4)$</a>\n                        </td>\n                        <td class=\"text-center\">8개</td>\n                        <td class=\"text-center\">jaehyuk.myung</td>\n                        <td class=\"text-center\">2026-11-06 13:55</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2088612</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2088612&amp;pageNum=1&amp;pageSize=50\">다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은?\n$\\rm A(3,~0)$\n$\\rm B(2,~4)$\n$\\rm C(-1,~-2)$\n$\\rm D(-3,~3)$\n$\\rm E(1,~-3)$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">sungkuk.chae</td>\n                        <td class=\"text-center\">2026-11-04 09:14</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2088380</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2088380&amp;pageNum=1&amp;pageSize=50\">다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">suna.lee</td>\n                        <td class=\"text-center\">2026-10-30 16:46</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087985</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087985&amp;pageNum=1&amp;pageSize=50\">➜ $y=$$k=$</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">jaehyuk.myung</td>\n                        <td class=\"text-center\">2026-10-15 14:02</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087954</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087954&amp;pageNum=1&amp;pageSize=50\">$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hyuntaek.kim</td>\n                        <td class=\"text-center\">2026-10-14 15:38</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087730</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087730&amp;pageNum=1&amp;pageSize=50\">$2x ^{2} -7x-4=0$</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-08 14:56</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087610</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087610&amp;pageNum=1&amp;pageSize=50\">$-1,~2$</a>\n                        </td>\n                        <td class=\"text-center\">3세트</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-08 14:57</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087291</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087291&amp;pageNum=1&amp;pageSize=50\">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">heejin.jeong</td>\n                        <td class=\"text-center\">2026-10-08 10:37</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087192</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087192&amp;pageNum=1&amp;pageSize=50\">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">heejin.jeong</td>\n                        <td class=\"text-center\">2026-10-08 09:21</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087168</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087168&amp;pageNum=1&amp;pageSize=50\">이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\\alpha,~ \\beta$라 할 때, $3-\\alpha$, $3-\\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-07 17:48</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087164</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087164&amp;pageNum=1&amp;pageSize=50\">(평균)$=9$변량$6$$7$$8$$11$$13$편차</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-07 17:20</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2087144</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2087144&amp;pageNum=1&amp;pageSize=50\">$x ^{2} +2x-4$</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-07 16:36</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086796</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086796&amp;pageNum=1&amp;pageSize=50\">그림을 보고 $27100$과 $26700$의 크기를 비교하여  안에 $&amp;gt;$, $=$, $&amp;lt;$를 알맞게 써넣으세요.$27100$$26700$</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">hyuntaek.kim</td>\n                        <td class=\"text-center\">2026-10-08 17:05</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086656</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086656&amp;pageNum=1&amp;pageSize=50\">사다리꼴의 넓이를 구하시오.&nbsp;$(16+10 \\sqrt{3} ) \\rm cm ^{2}$&nbsp;$(16+8 \\sqrt{3} ) \\rm cm ^{2}$&nbsp;$(16+12 \\sqrt{3} ) \\rm cm ^{2}$$(16+12 \\sqrt{6} ) \\rm cm ^{2}$&nbsp;$(16+11\\sqrt{3} ) \\rm cm ^{2}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-07 14:36</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086431</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086431&amp;pageNum=1&amp;pageSize=50\">다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은?&nbsp;$3x+ 7 \\le x +11$$x+ 7 \\le 5x +11$$-2x+5 \\ge x+11$$-x+3 \\le x-1$$5x+4 &amp;lt; 3x+ 8$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-06 17:20</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086391</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086391&amp;pageNum=1&amp;pageSize=50\">이차부등식 $x^2 -4 \\le 2 \\left|x-2\\right|$의 해를 구하시오.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">heejin.jeong</td>\n                        <td class=\"text-center\">2026-10-06 16:35</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086288</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086288&amp;pageNum=1&amp;pageSize=50\">부등식 $-x ^{2} +2(k+1)x+3(k+1)&amp;gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">nanju.kim</td>\n                        <td class=\"text-center\">2026-10-06 15:32</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086272</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086272&amp;pageNum=1&amp;pageSize=50\">몫이 가장 큰 나눗셈을 골라 보세요.$21 \\div 3$$45 \\div 9$$35 \\div 7$$18 \\div 9$$72 \\div 8$</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">nanju.kim</td>\n                        <td class=\"text-center\">2026-10-06 15:36</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086240</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086240&amp;pageNum=1&amp;pageSize=50\">삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(단, $i=\\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">heejin.jeong</td>\n                        <td class=\"text-center\">2026-10-02 16:25</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086223</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086223&amp;pageNum=1&amp;pageSize=50\">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-01 18:36</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086206</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086206&amp;pageNum=1&amp;pageSize=50\">$\\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은?\n$2 {\\dfrac{2}{5}}$\n$3 {\\dfrac{1}{5}}$\n$3 {\\dfrac{2}{5}}$\n$3 {\\dfrac{3}{5}}$\n$4 {\\dfrac{2}{5}}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">wonrae.cho</td>\n                        <td class=\"text-center\">2026-10-01 15:43</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086190</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086190&amp;pageNum=1&amp;pageSize=50\">변량$6$$7$$8$$11$$13$편차</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">heejin.jeong</td>\n                        <td class=\"text-center\">2026-10-01 11:47</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086187</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086187&amp;pageNum=1&amp;pageSize=50\">$\\dfrac{5}{24} \\times n$, $\\dfrac{7}{30} \\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">wonrae.cho</td>\n                        <td class=\"text-center\">2026-10-01 11:26</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086092</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086092&amp;pageNum=1&amp;pageSize=50\">그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는?\n$8 \\sqrt{2}$\n$12 \\sqrt{2}$\n$16 \\sqrt{2}$\n$20 \\sqrt{2}$\n$24 \\sqrt{2}$</a>\n                        </td>\n                        <td class=\"text-center\">4개</td>\n                        <td class=\"text-center\">sungkuk.chae</td>\n                        <td class=\"text-center\">2026-10-07 16:03</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086089</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086089&amp;pageNum=1&amp;pageSize=50\">삼각형 ABC의 넓이는?\n$2$\n$3$\n$4$\n$6$\n$9$</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">sungkuk.chae</td>\n                        <td class=\"text-center\">2026-09-30 14:37</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086085</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086085&amp;pageNum=1&amp;pageSize=50\">$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c} =1$일 때, $\\dfrac{1}{a ^{2}} + \\dfrac{1}{b ^{2}} + \\dfrac{1}{c ^{2}}$의 값은?\n$1$\n$3$\n$5$\n$7$\n$9$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">sungkuk.chae</td>\n                        <td class=\"text-center\">2026-10-01 09:38</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2086024</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2086024&amp;pageNum=1&amp;pageSize=50\">집합 {X=\\{x \\mid 0 \\leq x \\leq 3\\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \\circ f \\circ f \\circ f)(1/3)}의 값을 구하시오. [서술형 답안]</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">sungkuk.chae</td>\n                        <td class=\"text-center\">2026-10-01 09:44</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2061771</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2061771&amp;pageNum=1&amp;pageSize=50\">$32,~68~$</a>\n                        </td>\n                        <td class=\"text-center\">3세트</td>\n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">2026-09-14 17:33</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2061585</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2061585&amp;pageNum=1&amp;pageSize=50\">다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">2026-09-02 16:37</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2061584</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2061584&amp;pageNum=1&amp;pageSize=50\">삼각형 ABC의 넓이는?\n$2$\n$3$\n$4$\n$6$\n$9$</a>\n                        </td>\n                        <td class=\"text-center\">3세트</td>\n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">2026-08-31 14:11</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">2061583</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=2061583&amp;pageNum=1&amp;pageSize=50\">다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?</a>\n                        </td>\n                        <td class=\"text-center\">5개</td>\n                        <td class=\"text-center\">-</td>\n                        <td class=\"text-center\">2026-09-14 17:10</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">529</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=529&amp;pageNum=1&amp;pageSize=50\">삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \\sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">jaehyuk.myung</td>\n                        <td class=\"text-center\">2026-10-30 14:03</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">499</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=499&amp;pageNum=1&amp;pageSize=50\">다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오.\n$x$에 대하여 내림차순</a>\n                        </td>\n                        <td class=\"text-center\">3세트</td>\n                        <td class=\"text-center\">sangwon.jo</td>\n                        <td class=\"text-center\">2026-10-28 11:34</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">496</td>\n                        <td class=\"text-center\">세트 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=496&amp;pageNum=1&amp;pageSize=50\">$10$, $15$, $25$</a>\n                        </td>\n                        <td class=\"text-center\">2세트</td>\n                        <td class=\"text-center\">sangwon.jo</td>\n                        <td class=\"text-center\">2026-10-28 10:30</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">463</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=463&amp;pageNum=1&amp;pageSize=50\">그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-14 15:34</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">430</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=430&amp;pageNum=1&amp;pageSize=50\">아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">jaehyuk.myung</td>\n                        <td class=\"text-center\">2026-10-12 11:33</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">397</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=397&amp;pageNum=1&amp;pageSize=50\">다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-08 15:23</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">367</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=367&amp;pageNum=1&amp;pageSize=50\">다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$</a>\n                        </td>\n                        <td class=\"text-center\">4개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-07 17:32</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">366</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=366&amp;pageNum=1&amp;pageSize=50\">주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hari.im</td>\n                        <td class=\"text-center\">2026-10-07 17:27</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">365</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=365&amp;pageNum=1&amp;pageSize=50\">관계있는 것끼리 이어 보세요.㉠ $8\\,\\mathrm{L}$⦁⦁① $4300\\,\\mathrm{mL}$㉡ $4\\,\\mathrm{L}$ $300\\,\\mathrm{mL}$⦁⦁② $8000\\,\\mathrm{mL}$</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">hyuntaek.kim</td>\n                        <td class=\"text-center\">2026-10-07 15:28</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">364</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=364&amp;pageNum=1&amp;pageSize=50\">평행사변형 $\\rm ABCD$에서 점 $\\rm A$와 직선 $\\rm BC$ 사이의 거리를 $x\\hspace{0.25em}\\mathrm{cm}$, 점 $\\rm A$와 직선 $\\rm CD$ 사이의 거리를 $y\\hspace{0.25em}\\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.</a>\n                        </td>\n                        <td class=\"text-center\">2개</td>\n                        <td class=\"text-center\">minhye.park</td>\n                        <td class=\"text-center\">2026-10-07 14:08</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">332</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=332&amp;pageNum=1&amp;pageSize=50\">$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">younme.lee</td>\n                        <td class=\"text-center\">2026-10-06 17:55</td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">331</td>\n                        <td class=\"text-center\">단일 문항</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/item/twin/detail.donga?twinGroupId=331&amp;pageNum=1&amp;pageSize=50\">등식 $\\alpha ^{2} +(k-2i) \\alpha +(-3+2i)=0$을 만족시키는 실수 $\\alpha$, $k$에 대하여 $k$의 값을 구하시오.</a>\n                        </td>\n                        <td class=\"text-center\">3개</td>\n                        <td class=\"text-center\">yoonhye.lee</td>\n                        <td class=\"text-center\">2026-10-06 16:54</td>\n                    </tr>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n\n        <div class=\"d-flex align-items-center mt-3\">\n    <div class=\"flex-fill\">\n        <span class=\"text-muted\">\n            총 <span>43</span>건 중\n            <span>1</span>∼<span>43</span> 표시\n        </span>\n    </div>\n    <ul class=\"pagination pagination-outline mb-0\">\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 앞\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga?pageNum=1&amp;pageSize=50\" hx-target=\"#twinGroupTableArea\"><i class=\"ti ti-chevrons-left\"></i></a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-label=\"이전\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga?pageNum=1&amp;pageSize=50\" hx-target=\"#twinGroupTableArea\"><i class=\"ti ti-chevron-left\"></i></a>\n        </li>\n        <li class=\"page-item active\">\n            <a class=\"page-link\" href=\"#\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga?pageNum=1&amp;pageSize=50\" hx-target=\"#twinGroupTableArea\">1</a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"다음\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga?pageNum=1&amp;pageSize=50\" hx-target=\"#twinGroupTableArea\"><i class=\"ti ti-chevron-right\"></i></a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 뒤\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/item/twin/list.donga?pageNum=1&amp;pageSize=50\" hx-target=\"#twinGroupTableArea\"><i class=\"ti ti-chevrons-right\"></i></a>\n        </li>\n    </ul>\n    <div class=\"flex-fill\"></div>\n</div>\n\n    </div>\n\n</section>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n    \n    <div>\n    <div class=\"modal modal-blur fade\" id=\"logoutConfirmModal\" tabindex=\"-1\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-dialog-centered modal-sm\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header bg-warning-lt\">\n                    <h5 class=\"modal-title\">\n                        <i class=\"ti me-2 ti-alert-triangle text-warning\"></i><span>로그아웃</span>\n                    </h5>\n                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"닫기\"></button>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"fw-bold mb-3\"><div class=\"text-center\">로그아웃하시겠습니까?</div></div>\n                    <div id=\"logoutConfirmBody\" class=\"text-secondary text-center\">로그인 화면으로 나갑니다.</div>\n                </div>\n                <div class=\"modal-footer py-2\">\n                    <button type=\"button\" class=\"btn btn-sm\" data-bs-dismiss=\"modal\">취소</button>\n                    <button type=\"button\" class=\"btn btn-sm btn-warning\" data-action-ok=\"\">로그아웃</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n<!-- 토스트 팝업 -->\n\n\n\n<div id=\"loadingOverlay\" class=\"loading-overlay\">\n    <div class=\"spinner-border text-primary\" role=\"status\"></div>\n</div>\n\n<script src=\"/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js\"></script>\n<script src=\"/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js\"></script>\n<script src=\"/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js\"></script>\n<script src=\"/js/common-8dc66a9d95b497a50939a25f89dee707.js\"></script>\n\n\n\n</body></html>",
+        "redaction": "Password and CSRF/token-named input/meta nodes and nonce/token attributes removed; cookies/storage never read.",
+        "title": "쌍둥이 그룹 관리 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/item/twin/list.donga?pageNum=1&pageSize=50"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.116
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/twin/list.donga?pageNum=1&pageSize=50",
+      "refs": {
+        "e5458": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e5459": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e5460": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e5461": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "heading"
+        },
+        "e5462": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5463": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e5464": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e5465": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e5466": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e5467": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e5468": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e5469": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e5470": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e5471": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e5472": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e5473": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e5474": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e5475": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e5476": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e5477": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e5478": {
+          "name": "1",
+          "role": "link"
+        },
+        "e5479": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e5480": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e5481": {
+          "name": "2088665",
+          "role": "cell"
+        },
+        "e5482": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5483": {
+          "name": "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은? $(-3,~1)$ $(-9,~3)$ $(1,~-3)$ $(3,~-1)$ $(12,~-4)$",
+          "role": "cell"
+        },
+        "e5484": {
+          "name": "8개",
+          "role": "cell"
+        },
+        "e5485": {
+          "name": "jaehyuk.myung",
+          "role": "cell"
+        },
+        "e5486": {
+          "name": "2026-11-06 13:55",
+          "role": "cell"
+        },
+        "e5487": {
+          "name": "2088612",
+          "role": "cell"
+        },
+        "e5488": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5489": {
+          "name": "다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은? $\\rm A(3,~0)$ $\\rm B(2,~4)$ $\\rm C(-1,~-2)$ $\\rm D(-3,~3)$ $\\rm E(1,~-3)$",
+          "role": "cell"
+        },
+        "e5490": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5491": {
+          "name": "sungkuk.chae",
+          "role": "cell"
+        },
+        "e5492": {
+          "name": "2026-11-04 09:14",
+          "role": "cell"
+        },
+        "e5493": {
+          "name": "2088380",
+          "role": "cell"
+        },
+        "e5494": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5495": {
+          "name": "다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.",
+          "role": "cell"
+        },
+        "e5496": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5497": {
+          "name": "suna.lee",
+          "role": "cell"
+        },
+        "e5498": {
+          "name": "2026-10-30 16:46",
+          "role": "cell"
+        },
+        "e5499": {
+          "name": "2087985",
+          "role": "cell"
+        },
+        "e5500": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5501": {
+          "name": "➜ $y=$$k=$",
+          "role": "cell"
+        },
+        "e5502": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5503": {
+          "name": "jaehyuk.myung",
+          "role": "cell"
+        },
+        "e5504": {
+          "name": "2026-10-15 14:02",
+          "role": "cell"
+        },
+        "e5505": {
+          "name": "2087954",
+          "role": "cell"
+        },
+        "e5506": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5507": {
+          "name": "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오.",
+          "role": "cell"
+        },
+        "e5508": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5509": {
+          "name": "hyuntaek.kim",
+          "role": "cell"
+        },
+        "e5510": {
+          "name": "2026-10-14 15:38",
+          "role": "cell"
+        },
+        "e5511": {
+          "name": "2087730",
+          "role": "cell"
+        },
+        "e5512": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5513": {
+          "name": "$2x ^{2} -7x-4=0$",
+          "role": "cell"
+        },
+        "e5514": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5515": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5516": {
+          "name": "2026-10-08 14:56",
+          "role": "cell"
+        },
+        "e5517": {
+          "name": "2087610",
+          "role": "cell"
+        },
+        "e5518": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5519": {
+          "name": "$-1,~2$",
+          "role": "cell"
+        },
+        "e5520": {
+          "name": "3세트",
+          "role": "cell"
+        },
+        "e5521": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5522": {
+          "name": "2026-10-08 14:57",
+          "role": "cell"
+        },
+        "e5523": {
+          "name": "2087291",
+          "role": "cell"
+        },
+        "e5524": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5525": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "cell"
+        },
+        "e5526": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5527": {
+          "name": "heejin.jeong",
+          "role": "cell"
+        },
+        "e5528": {
+          "name": "2026-10-08 10:37",
+          "role": "cell"
+        },
+        "e5529": {
+          "name": "2087192",
+          "role": "cell"
+        },
+        "e5530": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5531": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "cell"
+        },
+        "e5532": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5533": {
+          "name": "heejin.jeong",
+          "role": "cell"
+        },
+        "e5534": {
+          "name": "2026-10-08 09:21",
+          "role": "cell"
+        },
+        "e5535": {
+          "name": "2087168",
+          "role": "cell"
+        },
+        "e5536": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5537": {
+          "name": "이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\\alpha,~ \\beta$라 할 때, $3-\\alpha$, $3-\\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$",
+          "role": "cell"
+        },
+        "e5538": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5539": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5540": {
+          "name": "2026-10-07 17:48",
+          "role": "cell"
+        },
+        "e5541": {
+          "name": "2087164",
+          "role": "cell"
+        },
+        "e5542": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5543": {
+          "name": "(평균)$=9$변량$6$$7$$8$$11$$13$편차",
+          "role": "cell"
+        },
+        "e5544": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5545": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5546": {
+          "name": "2026-10-07 17:20",
+          "role": "cell"
+        },
+        "e5547": {
+          "name": "2087144",
+          "role": "cell"
+        },
+        "e5548": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5549": {
+          "name": "$x ^{2} +2x-4$",
+          "role": "cell"
+        },
+        "e5550": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5551": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5552": {
+          "name": "2026-10-07 16:36",
+          "role": "cell"
+        },
+        "e5553": {
+          "name": "2086796",
+          "role": "cell"
+        },
+        "e5554": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5555": {
+          "name": "그림을 보고 $27100$과 $26700$의 크기를 비교하여 안에 $&gt;$, $=$, $&lt;$를 알맞게 써넣으세요.$27100$$26700$",
+          "role": "cell"
+        },
+        "e5556": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5557": {
+          "name": "hyuntaek.kim",
+          "role": "cell"
+        },
+        "e5558": {
+          "name": "2026-10-08 17:05",
+          "role": "cell"
+        },
+        "e5559": {
+          "name": "2086656",
+          "role": "cell"
+        },
+        "e5560": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5561": {
+          "name": "사다리꼴의 넓이를 구하시오. $(16+10 \\sqrt{3} ) \\rm cm ^{2}$ $(16+8 \\sqrt{3} ) \\rm cm ^{2}$ $(16+12 \\sqrt{3} ) \\rm cm ^{2}$$(16+12 \\sqrt{6} ) \\rm cm ^{2}$ $(16+11\\sqrt{3} ) \\rm cm ^{2}$",
+          "role": "cell"
+        },
+        "e5562": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5563": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5564": {
+          "name": "2026-10-07 14:36",
+          "role": "cell"
+        },
+        "e5565": {
+          "name": "2086431",
+          "role": "cell"
+        },
+        "e5566": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5567": {
+          "name": "다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은? $3x+ 7 \\le x +11$$x+ 7 \\le 5x +11$$-2x+5 \\ge x+11$$-x+3 \\le x-1$$5x+4 &lt; 3x+ 8$",
+          "role": "cell"
+        },
+        "e5568": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5569": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5570": {
+          "name": "2026-10-06 17:20",
+          "role": "cell"
+        },
+        "e5571": {
+          "name": "2086391",
+          "role": "cell"
+        },
+        "e5572": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5573": {
+          "name": "이차부등식 $x^2 -4 \\le 2 \\left|x-2\\right|$의 해를 구하시오.",
+          "role": "cell"
+        },
+        "e5574": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5575": {
+          "name": "heejin.jeong",
+          "role": "cell"
+        },
+        "e5576": {
+          "name": "2026-10-06 16:35",
+          "role": "cell"
+        },
+        "e5577": {
+          "name": "2086288",
+          "role": "cell"
+        },
+        "e5578": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5579": {
+          "name": "부등식 $-x ^{2} +2(k+1)x+3(k+1)&gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$",
+          "role": "cell"
+        },
+        "e5580": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5581": {
+          "name": "nanju.kim",
+          "role": "cell"
+        },
+        "e5582": {
+          "name": "2026-10-06 15:32",
+          "role": "cell"
+        },
+        "e5583": {
+          "name": "2086272",
+          "role": "cell"
+        },
+        "e5584": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5585": {
+          "name": "몫이 가장 큰 나눗셈을 골라 보세요.$21 \\div 3$$45 \\div 9$$35 \\div 7$$18 \\div 9$$72 \\div 8$",
+          "role": "cell"
+        },
+        "e5586": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5587": {
+          "name": "nanju.kim",
+          "role": "cell"
+        },
+        "e5588": {
+          "name": "2026-10-06 15:36",
+          "role": "cell"
+        },
+        "e5589": {
+          "name": "2086240",
+          "role": "cell"
+        },
+        "e5590": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5591": {
+          "name": "삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?                                                                     (단, $i=\\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$",
+          "role": "cell"
+        },
+        "e5592": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5593": {
+          "name": "heejin.jeong",
+          "role": "cell"
+        },
+        "e5594": {
+          "name": "2026-10-02 16:25",
+          "role": "cell"
+        },
+        "e5595": {
+          "name": "2086223",
+          "role": "cell"
+        },
+        "e5596": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5597": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "cell"
+        },
+        "e5598": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5599": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5600": {
+          "name": "2026-10-01 18:36",
+          "role": "cell"
+        },
+        "e5601": {
+          "name": "2086206",
+          "role": "cell"
+        },
+        "e5602": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5603": {
+          "name": "$\\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은? $2 {\\dfrac{2}{5}}$ $3 {\\dfrac{1}{5}}$ $3 {\\dfrac{2}{5}}$ $3 {\\dfrac{3}{5}}$ $4 {\\dfrac{2}{5}}$",
+          "role": "cell"
+        },
+        "e5604": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5605": {
+          "name": "wonrae.cho",
+          "role": "cell"
+        },
+        "e5606": {
+          "name": "2026-10-01 15:43",
+          "role": "cell"
+        },
+        "e5607": {
+          "name": "2086190",
+          "role": "cell"
+        },
+        "e5608": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5609": {
+          "name": "변량$6$$7$$8$$11$$13$편차",
+          "role": "cell"
+        },
+        "e5610": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5611": {
+          "name": "heejin.jeong",
+          "role": "cell"
+        },
+        "e5612": {
+          "name": "2026-10-01 11:47",
+          "role": "cell"
+        },
+        "e5613": {
+          "name": "2086187",
+          "role": "cell"
+        },
+        "e5614": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5615": {
+          "name": "$\\dfrac{5}{24} \\times n$, $\\dfrac{7}{30} \\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]",
+          "role": "cell"
+        },
+        "e5616": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5617": {
+          "name": "wonrae.cho",
+          "role": "cell"
+        },
+        "e5618": {
+          "name": "2026-10-01 11:26",
+          "role": "cell"
+        },
+        "e5619": {
+          "name": "2086092",
+          "role": "cell"
+        },
+        "e5620": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5621": {
+          "name": "그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는? $8 \\sqrt{2}$ $12 \\sqrt{2}$ $16 \\sqrt{2}$ $20 \\sqrt{2}$ $24 \\sqrt{2}$",
+          "role": "cell"
+        },
+        "e5622": {
+          "name": "4개",
+          "role": "cell"
+        },
+        "e5623": {
+          "name": "sungkuk.chae",
+          "role": "cell"
+        },
+        "e5624": {
+          "name": "2026-10-07 16:03",
+          "role": "cell"
+        },
+        "e5625": {
+          "name": "2086089",
+          "role": "cell"
+        },
+        "e5626": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5627": {
+          "name": "삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$",
+          "role": "cell"
+        },
+        "e5628": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5629": {
+          "name": "sungkuk.chae",
+          "role": "cell"
+        },
+        "e5630": {
+          "name": "2026-09-30 14:37",
+          "role": "cell"
+        },
+        "e5631": {
+          "name": "2086085",
+          "role": "cell"
+        },
+        "e5632": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5633": {
+          "name": "$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c} =1$일 때, $\\dfrac{1}{a ^{2}} + \\dfrac{1}{b ^{2}} + \\dfrac{1}{c ^{2}}$의 값은? $1$ $3$ $5$ $7$ $9$",
+          "role": "cell"
+        },
+        "e5634": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5635": {
+          "name": "sungkuk.chae",
+          "role": "cell"
+        },
+        "e5636": {
+          "name": "2026-10-01 09:38",
+          "role": "cell"
+        },
+        "e5637": {
+          "name": "2086024",
+          "role": "cell"
+        },
+        "e5638": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5639": {
+          "name": "집합 {X=\\{x \\mid 0 \\leq x \\leq 3\\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \\circ f \\circ f \\circ f)(1/3)}의 값을 구하시오. [서술형 답안]",
+          "role": "cell"
+        },
+        "e5640": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5641": {
+          "name": "sungkuk.chae",
+          "role": "cell"
+        },
+        "e5642": {
+          "name": "2026-10-01 09:44",
+          "role": "cell"
+        },
+        "e5643": {
+          "name": "2061771",
+          "role": "cell"
+        },
+        "e5644": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5645": {
+          "name": "$32,~68~$",
+          "role": "cell"
+        },
+        "e5646": {
+          "name": "3세트",
+          "role": "cell"
+        },
+        "e5647": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e5648": {
+          "name": "2026-09-14 17:33",
+          "role": "cell"
+        },
+        "e5649": {
+          "name": "2061585",
+          "role": "cell"
+        },
+        "e5650": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5651": {
+          "name": "다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?",
+          "role": "cell"
+        },
+        "e5652": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5653": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e5654": {
+          "name": "2026-09-02 16:37",
+          "role": "cell"
+        },
+        "e5655": {
+          "name": "2061584",
+          "role": "cell"
+        },
+        "e5656": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5657": {
+          "name": "삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$",
+          "role": "cell"
+        },
+        "e5658": {
+          "name": "3세트",
+          "role": "cell"
+        },
+        "e5659": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e5660": {
+          "name": "2026-08-31 14:11",
+          "role": "cell"
+        },
+        "e5661": {
+          "name": "2061583",
+          "role": "cell"
+        },
+        "e5662": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5663": {
+          "name": "다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?",
+          "role": "cell"
+        },
+        "e5664": {
+          "name": "5개",
+          "role": "cell"
+        },
+        "e5665": {
+          "name": "-",
+          "role": "cell"
+        },
+        "e5666": {
+          "name": "2026-09-14 17:10",
+          "role": "cell"
+        },
+        "e5667": {
+          "name": "529",
+          "role": "cell"
+        },
+        "e5668": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5669": {
+          "name": "삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \\sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.",
+          "role": "cell"
+        },
+        "e5670": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5671": {
+          "name": "jaehyuk.myung",
+          "role": "cell"
+        },
+        "e5672": {
+          "name": "2026-10-30 14:03",
+          "role": "cell"
+        },
+        "e5673": {
+          "name": "499",
+          "role": "cell"
+        },
+        "e5674": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5675": {
+          "name": "다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오. $x$에 대하여 내림차순",
+          "role": "cell"
+        },
+        "e5676": {
+          "name": "3세트",
+          "role": "cell"
+        },
+        "e5677": {
+          "name": "sangwon.jo",
+          "role": "cell"
+        },
+        "e5678": {
+          "name": "2026-10-28 11:34",
+          "role": "cell"
+        },
+        "e5679": {
+          "name": "496",
+          "role": "cell"
+        },
+        "e5680": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e5681": {
+          "name": "$10$, $15$, $25$",
+          "role": "cell"
+        },
+        "e5682": {
+          "name": "2세트",
+          "role": "cell"
+        },
+        "e5683": {
+          "name": "sangwon.jo",
+          "role": "cell"
+        },
+        "e5684": {
+          "name": "2026-10-28 10:30",
+          "role": "cell"
+        },
+        "e5685": {
+          "name": "463",
+          "role": "cell"
+        },
+        "e5686": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5687": {
+          "name": "그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명",
+          "role": "cell"
+        },
+        "e5688": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5689": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5690": {
+          "name": "2026-10-14 15:34",
+          "role": "cell"
+        },
+        "e5691": {
+          "name": "430",
+          "role": "cell"
+        },
+        "e5692": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5693": {
+          "name": "아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)",
+          "role": "cell"
+        },
+        "e5694": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5695": {
+          "name": "jaehyuk.myung",
+          "role": "cell"
+        },
+        "e5696": {
+          "name": "2026-10-12 11:33",
+          "role": "cell"
+        },
+        "e5697": {
+          "name": "397",
+          "role": "cell"
+        },
+        "e5698": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5699": {
+          "name": "다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)",
+          "role": "cell"
+        },
+        "e5700": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5701": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5702": {
+          "name": "2026-10-08 15:23",
+          "role": "cell"
+        },
+        "e5703": {
+          "name": "367",
+          "role": "cell"
+        },
+        "e5704": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5705": {
+          "name": "다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$",
+          "role": "cell"
+        },
+        "e5706": {
+          "name": "4개",
+          "role": "cell"
+        },
+        "e5707": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5708": {
+          "name": "2026-10-07 17:32",
+          "role": "cell"
+        },
+        "e5709": {
+          "name": "366",
+          "role": "cell"
+        },
+        "e5710": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5711": {
+          "name": "주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.",
+          "role": "cell"
+        },
+        "e5712": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5713": {
+          "name": "hari.im",
+          "role": "cell"
+        },
+        "e5714": {
+          "name": "2026-10-07 17:27",
+          "role": "cell"
+        },
+        "e5715": {
+          "name": "365",
+          "role": "cell"
+        },
+        "e5716": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5717": {
+          "name": "관계있는 것끼리 이어 보세요.㉠ $8\\,\\mathrm{L}$⦁⦁① $4300\\,\\mathrm{mL}$㉡ $4\\,\\mathrm{L}$ $300\\,\\mathrm{mL}$⦁⦁② $8000\\,\\mathrm{mL}$",
+          "role": "cell"
+        },
+        "e5718": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5719": {
+          "name": "hyuntaek.kim",
+          "role": "cell"
+        },
+        "e5720": {
+          "name": "2026-10-07 15:28",
+          "role": "cell"
+        },
+        "e5721": {
+          "name": "364",
+          "role": "cell"
+        },
+        "e5722": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5723": {
+          "name": "평행사변형 $\\rm ABCD$에서 점 $\\rm A$와 직선 $\\rm BC$ 사이의 거리를 $x\\hspace{0.25em}\\mathrm{cm}$, 점 $\\rm A$와 직선 $\\rm CD$ 사이의 거리를 $y\\hspace{0.25em}\\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.",
+          "role": "cell"
+        },
+        "e5724": {
+          "name": "2개",
+          "role": "cell"
+        },
+        "e5725": {
+          "name": "minhye.park",
+          "role": "cell"
+        },
+        "e5726": {
+          "name": "2026-10-07 14:08",
+          "role": "cell"
+        },
+        "e5727": {
+          "name": "332",
+          "role": "cell"
+        },
+        "e5728": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5729": {
+          "name": "$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)",
+          "role": "cell"
+        },
+        "e5730": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5731": {
+          "name": "younme.lee",
+          "role": "cell"
+        },
+        "e5732": {
+          "name": "2026-10-06 17:55",
+          "role": "cell"
+        },
+        "e5733": {
+          "name": "331",
+          "role": "cell"
+        },
+        "e5734": {
+          "name": "단일 문항",
+          "role": "cell"
+        },
+        "e5735": {
+          "name": "등식 $\\alpha ^{2} +(k-2i) \\alpha +(-3+2i)=0$을 만족시키는 실수 $\\alpha$, $k$에 대하여 $k$의 값을 구하시오.",
+          "role": "cell"
+        },
+        "e5736": {
+          "name": "3개",
+          "role": "cell"
+        },
+        "e5737": {
+          "name": "yoonhye.lee",
+          "role": "cell"
+        },
+        "e5738": {
+          "name": "2026-10-06 16:54",
+          "role": "cell"
+        },
+        "e5739": {
+          "name": "그룹 ID",
+          "role": "columnheader"
+        },
+        "e5740": {
+          "name": "유형",
+          "role": "columnheader"
+        },
+        "e5741": {
+          "name": "대표 문제",
+          "role": "columnheader"
+        },
+        "e5742": {
+          "name": "개수",
+          "role": "columnheader"
+        },
+        "e5743": {
+          "name": "수정자",
+          "role": "columnheader"
+        },
+        "e5744": {
+          "name": "수정일시",
+          "role": "columnheader"
+        },
+        "e5745": {
+          "name": "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은? $(-3,~1)$ $(-9,~3)$ $(1,~-3)$ $(3,~-1)$ $(12,~-4)$",
+          "role": "link"
+        },
+        "e5746": {
+          "name": "다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은? $\\rm A(3,~0)$ $\\rm B(2,~4)$ $\\rm C(-1,~-2)$ $\\rm D(-3,~3)$ $\\rm E(1,~-3)$",
+          "role": "link"
+        },
+        "e5747": {
+          "name": "다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.",
+          "role": "link"
+        },
+        "e5748": {
+          "name": "➜ $y=$$k=$",
+          "role": "link"
+        },
+        "e5749": {
+          "name": "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오.",
+          "role": "link"
+        },
+        "e5750": {
+          "name": "$2x ^{2} -7x-4=0$",
+          "role": "link"
+        },
+        "e5751": {
+          "name": "$-1,~2$",
+          "role": "link"
+        },
+        "e5752": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "link"
+        },
+        "e5753": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "link"
+        },
+        "e5754": {
+          "name": "이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\\alpha,~ \\beta$라 할 때, $3-\\alpha$, $3-\\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$",
+          "role": "link"
+        },
+        "e5755": {
+          "name": "(평균)$=9$변량$6$$7$$8$$11$$13$편차",
+          "role": "link"
+        },
+        "e5756": {
+          "name": "$x ^{2} +2x-4$",
+          "role": "link"
+        },
+        "e5757": {
+          "name": "그림을 보고 $27100$과 $26700$의 크기를 비교하여 안에 $&gt;$, $=$, $&lt;$를 알맞게 써넣으세요.$27100$$26700$",
+          "role": "link"
+        },
+        "e5758": {
+          "name": "사다리꼴의 넓이를 구하시오. $(16+10 \\sqrt{3} ) \\rm cm ^{2}$ $(16+8 \\sqrt{3} ) \\rm cm ^{2}$ $(16+12 \\sqrt{3} ) \\rm cm ^{2}$$(16+12 \\sqrt{6} ) \\rm cm ^{2}$ $(16+11\\sqrt{3} ) \\rm cm ^{2}$",
+          "role": "link"
+        },
+        "e5759": {
+          "name": "다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은? $3x+ 7 \\le x +11$$x+ 7 \\le 5x +11$$-2x+5 \\ge x+11$$-x+3 \\le x-1$$5x+4 &lt; 3x+ 8$",
+          "role": "link"
+        },
+        "e5760": {
+          "name": "이차부등식 $x^2 -4 \\le 2 \\left|x-2\\right|$의 해를 구하시오.",
+          "role": "link"
+        },
+        "e5761": {
+          "name": "부등식 $-x ^{2} +2(k+1)x+3(k+1)&gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$",
+          "role": "link"
+        },
+        "e5762": {
+          "name": "몫이 가장 큰 나눗셈을 골라 보세요.$21 \\div 3$$45 \\div 9$$35 \\div 7$$18 \\div 9$$72 \\div 8$",
+          "role": "link"
+        },
+        "e5763": {
+          "name": "삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?                                                                     (단, $i=\\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$",
+          "role": "link"
+        },
+        "e5764": {
+          "name": "나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\div 4 =$ $\\boxed{\\phantom{00000}}$ $\\cdots$ $\\boxed{\\phantom{00000}}$",
+          "role": "link"
+        },
+        "e5765": {
+          "name": "$\\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은? $2 {\\dfrac{2}{5}}$ $3 {\\dfrac{1}{5}}$ $3 {\\dfrac{2}{5}}$ $3 {\\dfrac{3}{5}}$ $4 {\\dfrac{2}{5}}$",
+          "role": "link"
+        },
+        "e5766": {
+          "name": "변량$6$$7$$8$$11$$13$편차",
+          "role": "link"
+        },
+        "e5767": {
+          "name": "$\\dfrac{5}{24} \\times n$, $\\dfrac{7}{30} \\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]",
+          "role": "link"
+        },
+        "e5768": {
+          "name": "그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는? $8 \\sqrt{2}$ $12 \\sqrt{2}$ $16 \\sqrt{2}$ $20 \\sqrt{2}$ $24 \\sqrt{2}$",
+          "role": "link"
+        },
+        "e5769": {
+          "name": "삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$",
+          "role": "link"
+        },
+        "e5770": {
+          "name": "$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c} =1$일 때, $\\dfrac{1}{a ^{2}} + \\dfrac{1}{b ^{2}} + \\dfrac{1}{c ^{2}}$의 값은? $1$ $3$ $5$ $7$ $9$",
+          "role": "link"
+        },
+        "e5771": {
+          "name": "집합 {X=\\{x \\mid 0 \\leq x \\leq 3\\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \\circ f \\circ f \\circ f)(1/3)}의 값을 구하시오. [서술형 답안]",
+          "role": "link"
+        },
+        "e5772": {
+          "name": "$32,~68~$",
+          "role": "link"
+        },
+        "e5773": {
+          "name": "다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?",
+          "role": "link"
+        },
+        "e5774": {
+          "name": "삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$",
+          "role": "link"
+        },
+        "e5775": {
+          "name": "다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\mathrm{A}에서 만난다. 점 \\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?",
+          "role": "link"
+        },
+        "e5776": {
+          "name": "삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \\sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.",
+          "role": "link"
+        },
+        "e5777": {
+          "name": "다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오. $x$에 대하여 내림차순",
+          "role": "link"
+        },
+        "e5778": {
+          "name": "$10$, $15$, $25$",
+          "role": "link"
+        },
+        "e5779": {
+          "name": "그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명",
+          "role": "link"
+        },
+        "e5780": {
+          "name": "아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)",
+          "role": "link"
+        },
+        "e5781": {
+          "name": "다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)",
+          "role": "link"
+        },
+        "e5782": {
+          "name": "다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$",
+          "role": "link"
+        },
+        "e5783": {
+          "name": "주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.",
+          "role": "link"
+        },
+        "e5784": {
+          "name": "관계있는 것끼리 이어 보세요.㉠ $8\\,\\mathrm{L}$⦁⦁① $4300\\,\\mathrm{mL}$㉡ $4\\,\\mathrm{L}$ $300\\,\\mathrm{mL}$⦁⦁② $8000\\,\\mathrm{mL}$",
+          "role": "link"
+        },
+        "e5785": {
+          "name": "평행사변형 $\\rm ABCD$에서 점 $\\rm A$와 직선 $\\rm BC$ 사이의 거리를 $x\\hspace{0.25em}\\mathrm{cm}$, 점 $\\rm A$와 직선 $\\rm CD$ 사이의 거리를 $y\\hspace{0.25em}\\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.",
+          "role": "link"
+        },
+        "e5786": {
+          "name": "$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)",
+          "role": "link"
+        },
+        "e5787": {
+          "name": "등식 $\\alpha ^{2} +(k-2i) \\alpha +(-3+2i)=0$을 만족시키는 실수 $\\alpha$, $k$에 대하여 $k$의 값을 구하시오.",
+          "role": "link"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e5458]\n      - link \"문제은행 마스터 CMS\" [ref=e5459]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e5463]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e5464]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e5465]\n          - link \"HML 문항 등록\" [ref=e5466]\n          - link \"디피니션 문항 등록\" [ref=e5467]\n          - link \"쌍둥이 그룹 관리\" [ref=e5468]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e5469]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e5470]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e5471]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e5460]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"쌍둥이 그룹 관리\"\n      - heading \"쌍둥이 그룹 관리\" [level=2, ref=e5461]\n      - generic\n        - combobox [expanded=false, ref=e5462]: 50개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [ref=e5472]\n            - option \"30개씩 보기\" [ref=e5473]\n            - option \"50개씩 보기\" [selected, ref=e5474]\n            - option \"100개씩 보기\" [ref=e5475]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"43\"\n        - StaticText \"건\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"그룹 ID\" [ref=e5739]\n              - columnheader \"유형\" [ref=e5740]\n              - columnheader \"대표 문제\" [ref=e5741]\n              - columnheader \"개수\" [ref=e5742]\n              - columnheader \"수정자\" [ref=e5743]\n              - columnheader \"수정일시\" [ref=e5744]\n          - row\n            - cell \"2088665\" [ref=e5481]\n            - cell \"단일 문항\" [ref=e5482]\n            - cell \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은? $(-3,~1)$ $(-9,~3)$ $(1,~-3)$ $(3,~-1)$ $(12,~-4)$\" [ref=e5483]\n              - link \"다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은? $(-3,~1)$ $(-9,~3)$ $(1,~-3)$ $(3,~-1)$ $(12,~-4)$\" [ref=e5745]\n            - cell \"8개\" [ref=e5484]\n            - cell \"jaehyuk.myung\" [ref=e5485]\n            - cell \"2026-11-06 13:55\" [ref=e5486]\n          - row\n            - cell \"2088612\" [ref=e5487]\n            - cell \"단일 문항\" [ref=e5488]\n            - cell \"다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은? $\\\\rm A(3,~0)$ $\\\\rm B(2,~4)$ $\\\\rm C(-1,~-2)$ $\\\\rm D(-3,~3)$ $\\\\rm E(1,~-3)$\" [ref=e5489]\n              - link \"다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은? $\\\\rm A(3,~0)$ $\\\\rm B(2,~4)$ $\\\\rm C(-1,~-2)$ $\\\\rm D(-3,~3)$ $\\\\rm E(1,~-3)$\" [ref=e5746]\n            - cell \"2개\" [ref=e5490]\n            - cell \"sungkuk.chae\" [ref=e5491]\n            - cell \"2026-11-04 09:14\" [ref=e5492]\n          - row\n            - cell \"2088380\" [ref=e5493]\n            - cell \"단일 문항\" [ref=e5494]\n            - cell \"다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.\" [ref=e5495]\n              - link \"다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.\" [ref=e5747]\n            - cell \"2개\" [ref=e5496]\n            - cell \"suna.lee\" [ref=e5497]\n            - cell \"2026-10-30 16:46\" [ref=e5498]\n          - row\n            - cell \"2087985\" [ref=e5499]\n            - cell \"세트 문항\" [ref=e5500]\n            - cell \"➜ $y=$$k=$\" [ref=e5501]\n              - link \"➜ $y=$$k=$\" [ref=e5748]\n            - cell \"2세트\" [ref=e5502]\n            - cell \"jaehyuk.myung\" [ref=e5503]\n            - cell \"2026-10-15 14:02\" [ref=e5504]\n          - row\n            - cell \"2087954\" [ref=e5505]\n            - cell \"단일 문항\" [ref=e5506]\n            - cell \"$- \\\\dfrac{5}{2} a+4+ \\\\dfrac{1}{3} a- \\\\dfrac{8}{3}$을 간단히 하시오.\" [ref=e5507]\n              - link \"$- \\\\dfrac{5}{2} a+4+ \\\\dfrac{1}{3} a- \\\\dfrac{8}{3}$을 간단히 하시오.\" [ref=e5749]\n            - cell \"2개\" [ref=e5508]\n            - cell \"hyuntaek.kim\" [ref=e5509]\n            - cell \"2026-10-14 15:38\" [ref=e5510]\n          - row\n            - cell \"2087730\" [ref=e5511]\n            - cell \"세트 문항\" [ref=e5512]\n            - cell \"$2x ^{2} -7x-4=0$\" [ref=e5513]\n              - link \"$2x ^{2} -7x-4=0$\" [ref=e5750]\n            - cell \"2세트\" [ref=e5514]\n            - cell \"yoonhye.lee\" [ref=e5515]\n            - cell \"2026-10-08 14:56\" [ref=e5516]\n          - row\n            - cell \"2087610\" [ref=e5517]\n            - cell \"세트 문항\" [ref=e5518]\n            - cell \"$-1,~2$\" [ref=e5519]\n              - link \"$-1,~2$\" [ref=e5751]\n            - cell \"3세트\" [ref=e5520]\n            - cell \"yoonhye.lee\" [ref=e5521]\n            - cell \"2026-10-08 14:57\" [ref=e5522]\n          - row\n            - cell \"2087291\" [ref=e5523]\n            - cell \"단일 문항\" [ref=e5524]\n            - cell \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5525]\n              - link \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5752]\n            - cell \"2개\" [ref=e5526]\n            - cell \"heejin.jeong\" [ref=e5527]\n            - cell \"2026-10-08 10:37\" [ref=e5528]\n          - row\n            - cell \"2087192\" [ref=e5529]\n            - cell \"단일 문항\" [ref=e5530]\n            - cell \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5531]\n              - link \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5753]\n            - cell \"2개\" [ref=e5532]\n            - cell \"heejin.jeong\" [ref=e5533]\n            - cell \"2026-10-08 09:21\" [ref=e5534]\n          - row\n            - cell \"2087168\" [ref=e5535]\n            - cell \"단일 문항\" [ref=e5536]\n            - cell \"이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\\\\alpha,~ \\\\beta$라 할 때, $3-\\\\alpha$, $3-\\\\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$\" [ref=e5537]\n              - link \"이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\\\\alpha,~ \\\\beta$라 할 때, $3-\\\\alpha$, $3-\\\\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$\" [ref=e5754]\n            - cell \"2개\" [ref=e5538]\n            - cell \"yoonhye.lee\" [ref=e5539]\n            - cell \"2026-10-07 17:48\" [ref=e5540]\n          - row\n            - cell \"2087164\" [ref=e5541]\n            - cell \"세트 문항\" [ref=e5542]\n            - cell \"(평균)$=9$변량$6$$7$$8$$11$$13$편차\" [ref=e5543]\n              - link \"(평균)$=9$변량$6$$7$$8$$11$$13$편차\" [ref=e5755]\n            - cell \"2세트\" [ref=e5544]\n            - cell \"hari.im\" [ref=e5545]\n            - cell \"2026-10-07 17:20\" [ref=e5546]\n          - row\n            - cell \"2087144\" [ref=e5547]\n            - cell \"세트 문항\" [ref=e5548]\n            - cell \"$x ^{2} +2x-4$\" [ref=e5549]\n              - link \"$x ^{2} +2x-4$\" [ref=e5756]\n            - cell \"2세트\" [ref=e5550]\n            - cell \"yoonhye.lee\" [ref=e5551]\n            - cell \"2026-10-07 16:36\" [ref=e5552]\n          - row\n            - cell \"2086796\" [ref=e5553]\n            - cell \"단일 문항\" [ref=e5554]\n            - cell \"그림을 보고 $27100$과 $26700$의 크기를 비교하여 안에 $&gt;$, $=$, $&lt;$를 알맞게 써넣으세요.$27100$$26700$\" [ref=e5555]\n              - link \"그림을 보고 $27100$과 $26700$의 크기를 비교하여 안에 $&gt;$, $=$, $&lt;$를 알맞게 써넣으세요.$27100$$26700$\" [ref=e5757]\n            - cell \"3개\" [ref=e5556]\n            - cell \"hyuntaek.kim\" [ref=e5557]\n            - cell \"2026-10-08 17:05\" [ref=e5558]\n          - row\n            - cell \"2086656\" [ref=e5559]\n            - cell \"단일 문항\" [ref=e5560]\n            - cell \"사다리꼴의 넓이를 구하시오. $(16+10 \\\\sqrt{3} ) \\\\rm cm ^{2}$ $(16+8 \\\\sqrt{3} ) \\\\rm cm ^{2}$ $(16+12 \\\\sqrt{3} ) \\\\rm cm ^{2}$$(16+12 \\\\sqrt{6} ) \\\\rm cm ^{2}$ $(16+11\\\\sqrt{3} ) \\\\rm cm ^{2}$\" [ref=e5561]\n              - link \"사다리꼴의 넓이를 구하시오. $(16+10 \\\\sqrt{3} ) \\\\rm cm ^{2}$ $(16+8 \\\\sqrt{3} ) \\\\rm cm ^{2}$ $(16+12 \\\\sqrt{3} ) \\\\rm cm ^{2}$$(16+12 \\\\sqrt{6} ) \\\\rm cm ^{2}$ $(16+11\\\\sqrt{3} ) \\\\rm cm ^{2}$\" [ref=e5758]\n            - cell \"2개\" [ref=e5562]\n            - cell \"yoonhye.lee\" [ref=e5563]\n            - cell \"2026-10-07 14:36\" [ref=e5564]\n          - row\n            - cell \"2086431\" [ref=e5565]\n            - cell \"단일 문항\" [ref=e5566]\n            - cell \"다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은? $3x+ 7 \\\\le x +11$$x+ 7 \\\\le 5x +11$$-2x+5 \\\\ge x+11$$-x+3 \\\\le x-1$$5x+4 &lt; 3x+ 8$\" [ref=e5567]\n              - link \"다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은? $3x+ 7 \\\\le x +11$$x+ 7 \\\\le 5x +11$$-2x+5 \\\\ge x+11$$-x+3 \\\\le x-1$$5x+4 &lt; 3x+ 8$\" [ref=e5759]\n            - cell \"2개\" [ref=e5568]\n            - cell \"hari.im\" [ref=e5569]\n            - cell \"2026-10-06 17:20\" [ref=e5570]\n          - row\n            - cell \"2086391\" [ref=e5571]\n            - cell \"단일 문항\" [ref=e5572]\n            - cell \"이차부등식 $x^2 -4 \\\\le 2 \\\\left|x-2\\\\right|$의 해를 구하시오.\" [ref=e5573]\n              - link \"이차부등식 $x^2 -4 \\\\le 2 \\\\left|x-2\\\\right|$의 해를 구하시오.\" [ref=e5760]\n            - cell \"2개\" [ref=e5574]\n            - cell \"heejin.jeong\" [ref=e5575]\n            - cell \"2026-10-06 16:35\" [ref=e5576]\n          - row\n            - cell \"2086288\" [ref=e5577]\n            - cell \"단일 문항\" [ref=e5578]\n            - cell \"부등식 $-x ^{2} +2(k+1)x+3(k+1)&gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$\" [ref=e5579]\n              - link \"부등식 $-x ^{2} +2(k+1)x+3(k+1)&gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$\" [ref=e5761]\n            - cell \"3개\" [ref=e5580]\n            - cell \"nanju.kim\" [ref=e5581]\n            - cell \"2026-10-06 15:32\" [ref=e5582]\n          - row\n            - cell \"2086272\" [ref=e5583]\n            - cell \"단일 문항\" [ref=e5584]\n            - cell \"몫이 가장 큰 나눗셈을 골라 보세요.$21 \\\\div 3$$45 \\\\div 9$$35 \\\\div 7$$18 \\\\div 9$$72 \\\\div 8$\" [ref=e5585]\n              - link \"몫이 가장 큰 나눗셈을 골라 보세요.$21 \\\\div 3$$45 \\\\div 9$$35 \\\\div 7$$18 \\\\div 9$$72 \\\\div 8$\" [ref=e5762]\n            - cell \"3개\" [ref=e5586]\n            - cell \"nanju.kim\" [ref=e5587]\n            - cell \"2026-10-06 15:36\" [ref=e5588]\n          - row\n            - cell \"2086240\" [ref=e5589]\n            - cell \"단일 문항\" [ref=e5590]\n            - cell \"삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?                                                                     (단, $i=\\\\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$\" [ref=e5591]\n              - link \"삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?                                                                     (단, $i=\\\\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$\" [ref=e5763]\n            - cell \"2개\" [ref=e5592]\n            - cell \"heejin.jeong\" [ref=e5593]\n            - cell \"2026-10-02 16:25\" [ref=e5594]\n          - row\n            - cell \"2086223\" [ref=e5595]\n            - cell \"단일 문항\" [ref=e5596]\n            - cell \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5597]\n              - link \"나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \\\\div 4 =$ $\\\\boxed{\\\\phantom{00000}}$ $\\\\cdots$ $\\\\boxed{\\\\phantom{00000}}$\" [ref=e5764]\n            - cell \"2개\" [ref=e5598]\n            - cell \"hari.im\" [ref=e5599]\n            - cell \"2026-10-01 18:36\" [ref=e5600]\n          - row\n            - cell \"2086206\" [ref=e5601]\n            - cell \"단일 문항\" [ref=e5602]\n            - cell \"$\\\\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은? $2 {\\\\dfrac{2}{5}}$ $3 {\\\\dfrac{1}{5}}$ $3 {\\\\dfrac{2}{5}}$ $3 {\\\\dfrac{3}{5}}$ $4 {\\\\dfrac{2}{5}}$\" [ref=e5603]\n              - link \"$\\\\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은? $2 {\\\\dfrac{2}{5}}$ $3 {\\\\dfrac{1}{5}}$ $3 {\\\\dfrac{2}{5}}$ $3 {\\\\dfrac{3}{5}}$ $4 {\\\\dfrac{2}{5}}$\" [ref=e5765]\n            - cell \"2개\" [ref=e5604]\n            - cell \"wonrae.cho\" [ref=e5605]\n            - cell \"2026-10-01 15:43\" [ref=e5606]\n          - row\n            - cell \"2086190\" [ref=e5607]\n            - cell \"세트 문항\" [ref=e5608]\n            - cell \"변량$6$$7$$8$$11$$13$편차\" [ref=e5609]\n              - link \"변량$6$$7$$8$$11$$13$편차\" [ref=e5766]\n            - cell \"2세트\" [ref=e5610]\n            - cell \"heejin.jeong\" [ref=e5611]\n            - cell \"2026-10-01 11:47\" [ref=e5612]\n          - row\n            - cell \"2086187\" [ref=e5613]\n            - cell \"단일 문항\" [ref=e5614]\n            - cell \"$\\\\dfrac{5}{24} \\\\times n$, $\\\\dfrac{7}{30} \\\\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]\" [ref=e5615]\n              - link \"$\\\\dfrac{5}{24} \\\\times n$, $\\\\dfrac{7}{30} \\\\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]\" [ref=e5767]\n            - cell \"2개\" [ref=e5616]\n            - cell \"wonrae.cho\" [ref=e5617]\n            - cell \"2026-10-01 11:26\" [ref=e5618]\n          - row\n            - cell \"2086092\" [ref=e5619]\n            - cell \"단일 문항\" [ref=e5620]\n            - cell \"그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는? $8 \\\\sqrt{2}$ $12 \\\\sqrt{2}$ $16 \\\\sqrt{2}$ $20 \\\\sqrt{2}$ $24 \\\\sqrt{2}$\" [ref=e5621]\n              - link \"그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는? $8 \\\\sqrt{2}$ $12 \\\\sqrt{2}$ $16 \\\\sqrt{2}$ $20 \\\\sqrt{2}$ $24 \\\\sqrt{2}$\" [ref=e5768]\n            - cell \"4개\" [ref=e5622]\n            - cell \"sungkuk.chae\" [ref=e5623]\n            - cell \"2026-10-07 16:03\" [ref=e5624]\n          - row\n            - cell \"2086089\" [ref=e5625]\n            - cell \"세트 문항\" [ref=e5626]\n            - cell \"삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$\" [ref=e5627]\n              - link \"삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$\" [ref=e5769]\n            - cell \"2세트\" [ref=e5628]\n            - cell \"sungkuk.chae\" [ref=e5629]\n            - cell \"2026-09-30 14:37\" [ref=e5630]\n          - row\n            - cell \"2086085\" [ref=e5631]\n            - cell \"단일 문항\" [ref=e5632]\n            - cell \"$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\\\\dfrac{1}{a} + \\\\dfrac{1}{b} + \\\\dfrac{1}{c} =1$일 때, $\\\\dfrac{1}{a ^{2}} + \\\\dfrac{1}{b ^{2}} + \\\\dfrac{1}{c ^{2}}$의 값은? $1$ $3$ $5$ $7$ $9$\" [ref=e5633]\n              - link \"$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\\\\dfrac{1}{a} + \\\\dfrac{1}{b} + \\\\dfrac{1}{c} =1$일 때, $\\\\dfrac{1}{a ^{2}} + \\\\dfrac{1}{b ^{2}} + \\\\dfrac{1}{c ^{2}}$의 값은? $1$ $3$ $5$ $7$ $9$\" [ref=e5770]\n            - cell \"2개\" [ref=e5634]\n            - cell \"sungkuk.chae\" [ref=e5635]\n            - cell \"2026-10-01 09:38\" [ref=e5636]\n          - row\n            - cell \"2086024\" [ref=e5637]\n            - cell \"단일 문항\" [ref=e5638]\n            - cell \"집합 {X=\\\\{x \\\\mid 0 \\\\leq x \\\\leq 3\\\\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \\\\circ f \\\\circ f \\\\circ f)(1/3)}의 값을 구하시오. [서술형 답안]\" [ref=e5639]\n              - link \"집합 {X=\\\\{x \\\\mid 0 \\\\leq x \\\\leq 3\\\\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \\\\circ f \\\\circ f \\\\circ f)(1/3)}의 값을 구하시오. [서술형 답안]\" [ref=e5771]\n            - cell \"3개\" [ref=e5640]\n            - cell \"sungkuk.chae\" [ref=e5641]\n            - cell \"2026-10-01 09:44\" [ref=e5642]\n          - row\n            - cell \"2061771\" [ref=e5643]\n            - cell \"세트 문항\" [ref=e5644]\n            - cell \"$32,~68~$\" [ref=e5645]\n              - link \"$32,~68~$\" [ref=e5772]\n            - cell \"3세트\" [ref=e5646]\n            - cell \"-\" [ref=e5647]\n            - cell \"2026-09-14 17:33\" [ref=e5648]\n          - row\n            - cell \"2061585\" [ref=e5649]\n            - cell \"단일 문항\" [ref=e5650]\n            - cell \"다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\\\mathrm{A}에서 만난다. 점 \\\\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?\" [ref=e5651]\n              - link \"다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\\\mathrm{A}에서 만난다. 점 \\\\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?\" [ref=e5773]\n            - cell \"2개\" [ref=e5652]\n            - cell \"-\" [ref=e5653]\n            - cell \"2026-09-02 16:37\" [ref=e5654]\n          - row\n            - cell \"2061584\" [ref=e5655]\n            - cell \"세트 문항\" [ref=e5656]\n            - cell \"삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$\" [ref=e5657]\n              - link \"삼각형 ABC의 넓이는? $2$ $3$ $4$ $6$ $9$\" [ref=e5774]\n            - cell \"3세트\" [ref=e5658]\n            - cell \"-\" [ref=e5659]\n            - cell \"2026-08-31 14:11\" [ref=e5660]\n          - row\n            - cell \"2061583\" [ref=e5661]\n            - cell \"단일 문항\" [ref=e5662]\n            - cell \"다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\\\mathrm{A}에서 만난다. 점 \\\\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?\" [ref=e5663]\n              - link \"다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \\\\mathrm{A}에서 만난다. 점 \\\\mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?\" [ref=e5775]\n            - cell \"5개\" [ref=e5664]\n            - cell \"-\" [ref=e5665]\n            - cell \"2026-09-14 17:10\" [ref=e5666]\n          - row\n            - cell \"529\" [ref=e5667]\n            - cell \"단일 문항\" [ref=e5668]\n            - cell \"삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \\\\sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.\" [ref=e5669]\n              - link \"삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \\\\sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.\" [ref=e5776]\n            - cell \"2개\" [ref=e5670]\n            - cell \"jaehyuk.myung\" [ref=e5671]\n            - cell \"2026-10-30 14:03\" [ref=e5672]\n          - row\n            - cell \"499\" [ref=e5673]\n            - cell \"세트 문항\" [ref=e5674]\n            - cell \"다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오. $x$에 대하여 내림차순\" [ref=e5675]\n              - link \"다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오. $x$에 대하여 내림차순\" [ref=e5777]\n            - cell \"3세트\" [ref=e5676]\n            - cell \"sangwon.jo\" [ref=e5677]\n            - cell \"2026-10-28 11:34\" [ref=e5678]\n          - row\n            - cell \"496\" [ref=e5679]\n            - cell \"세트 문항\" [ref=e5680]\n            - cell \"$10$, $15$, $25$\" [ref=e5681]\n              - link \"$10$, $15$, $25$\" [ref=e5778]\n            - cell \"2세트\" [ref=e5682]\n            - cell \"sangwon.jo\" [ref=e5683]\n            - cell \"2026-10-28 10:30\" [ref=e5684]\n          - row\n            - cell \"463\" [ref=e5685]\n            - cell \"단일 문항\" [ref=e5686]\n            - cell \"그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명\" [ref=e5687]\n              - link \"그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명\" [ref=e5779]\n            - cell \"3개\" [ref=e5688]\n            - cell \"hari.im\" [ref=e5689]\n            - cell \"2026-10-14 15:34\" [ref=e5690]\n          - row\n            - cell \"430\" [ref=e5691]\n            - cell \"단일 문항\" [ref=e5692]\n            - cell \"아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)\" [ref=e5693]\n              - link \"아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)\" [ref=e5780]\n            - cell \"2개\" [ref=e5694]\n            - cell \"jaehyuk.myung\" [ref=e5695]\n            - cell \"2026-10-12 11:33\" [ref=e5696]\n          - row\n            - cell \"397\" [ref=e5697]\n            - cell \"단일 문항\" [ref=e5698]\n            - cell \"다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)\" [ref=e5699]\n              - link \"다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)\" [ref=e5781]\n            - cell \"2개\" [ref=e5700]\n            - cell \"hari.im\" [ref=e5701]\n            - cell \"2026-10-08 15:23\" [ref=e5702]\n          - row\n            - cell \"367\" [ref=e5703]\n            - cell \"단일 문항\" [ref=e5704]\n            - cell \"다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$\" [ref=e5705]\n              - link \"다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$\" [ref=e5782]\n            - cell \"4개\" [ref=e5706]\n            - cell \"hari.im\" [ref=e5707]\n            - cell \"2026-10-07 17:32\" [ref=e5708]\n          - row\n            - cell \"366\" [ref=e5709]\n            - cell \"단일 문항\" [ref=e5710]\n            - cell \"주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.\" [ref=e5711]\n              - link \"주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.\" [ref=e5783]\n            - cell \"2개\" [ref=e5712]\n            - cell \"hari.im\" [ref=e5713]\n            - cell \"2026-10-07 17:27\" [ref=e5714]\n          - row\n            - cell \"365\" [ref=e5715]\n            - cell \"단일 문항\" [ref=e5716]\n            - cell \"관계있는 것끼리 이어 보세요.㉠ $8\\\\,\\\\mathrm{L}$⦁⦁① $4300\\\\,\\\\mathrm{mL}$㉡ $4\\\\,\\\\mathrm{L}$ $300\\\\,\\\\mathrm{mL}$⦁⦁② $8000\\\\,\\\\mathrm{mL}$\" [ref=e5717]\n              - link \"관계있는 것끼리 이어 보세요.㉠ $8\\\\,\\\\mathrm{L}$⦁⦁① $4300\\\\,\\\\mathrm{mL}$㉡ $4\\\\,\\\\mathrm{L}$ $300\\\\,\\\\mathrm{mL}$⦁⦁② $8000\\\\,\\\\mathrm{mL}$\" [ref=e5784]\n            - cell \"2개\" [ref=e5718]\n            - cell \"hyuntaek.kim\" [ref=e5719]\n            - cell \"2026-10-07 15:28\" [ref=e5720]\n          - row\n            - cell \"364\" [ref=e5721]\n            - cell \"단일 문항\" [ref=e5722]\n            - cell \"평행사변형 $\\\\rm ABCD$에서 점 $\\\\rm A$와 직선 $\\\\rm BC$ 사이의 거리를 $x\\\\hspace{0.25em}\\\\mathrm{cm}$, 점 $\\\\rm A$와 직선 $\\\\rm CD$ 사이의 거리를 $y\\\\hspace{0.25em}\\\\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.\" [ref=e5723]\n              - link \"평행사변형 $\\\\rm ABCD$에서 점 $\\\\rm A$와 직선 $\\\\rm BC$ 사이의 거리를 $x\\\\hspace{0.25em}\\\\mathrm{cm}$, 점 $\\\\rm A$와 직선 $\\\\rm CD$ 사이의 거리를 $y\\\\hspace{0.25em}\\\\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.\" [ref=e5785]\n            - cell \"2개\" [ref=e5724]\n            - cell \"minhye.park\" [ref=e5725]\n            - cell \"2026-10-07 14:08\" [ref=e5726]\n          - row\n            - cell \"332\" [ref=e5727]\n            - cell \"단일 문항\" [ref=e5728]\n            - cell \"$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)\" [ref=e5729]\n              - link \"$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)\" [ref=e5786]\n            - cell \"3개\" [ref=e5730]\n            - cell \"younme.lee\" [ref=e5731]\n            - cell \"2026-10-06 17:55\" [ref=e5732]\n          - row\n            - cell \"331\" [ref=e5733]\n            - cell \"단일 문항\" [ref=e5734]\n            - cell \"등식 $\\\\alpha ^{2} +(k-2i) \\\\alpha +(-3+2i)=0$을 만족시키는 실수 $\\\\alpha$, $k$에 대하여 $k$의 값을 구하시오.\" [ref=e5735]\n              - link \"등식 $\\\\alpha ^{2} +(k-2i) \\\\alpha +(-3+2i)=0$을 만족시키는 실수 $\\\\alpha$, $k$에 대하여 $k$의 값을 구하시오.\" [ref=e5787]\n            - cell \"3개\" [ref=e5736]\n            - cell \"yoonhye.lee\" [ref=e5737]\n            - cell \"2026-10-06 16:54\" [ref=e5738]\n        - generic\n          - StaticText \"총 43건 중 1∼43 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e5476]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e5477]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e5478]\n          - listitem [level=1]\n            - link \"다음\" [ref=e5479]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e5480]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.16
+  }
+}

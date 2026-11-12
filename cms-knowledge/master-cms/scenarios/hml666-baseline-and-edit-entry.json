@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2243-own-active-set-all5-server-baseline","command":["eval","--file","sources/runtime/hml666-own-items-baseline-read.js"]},
+ {"label":"2244-own-active-set-first-child-modify-open","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own child required');const links=[...document.querySelectorAll('a[href]')].filter(e=>e.getAttribute('href').startsWith('/item/all/modify.donga?itemId=2089242'));if(links.length!==1)throw Error('Single observed own modify link required');const href=links[0].getAttribute('href');links[0].click();return {href};})()"]},
+ {"label":"2245-own-active-set-first-child-modify-state","command":["eval","--file","sources/runtime/hml-editable-controls.js"]},
+ {"label":"2246-own-active-set-first-child-modify-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":150}

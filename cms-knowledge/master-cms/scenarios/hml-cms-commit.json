@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1086-hml-commit-seed","command":["snapshot"]},
+  {"label":"1087-hml-cms-save-submit","command":["click","{ref}"],"refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+  {"label":"1088-hml-cms-save-readback","command":["snapshot"],"screenshot":true},
+  {"label":"1089-hml-reenter-modify","command":["click","{ref}"],"refPattern":"- link \"[^\"]*문항 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1090-hml-reentered-state","command":["snapshot"]},
+  {"label":"1091-hml-reentered-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1092-hml-reentered-tab-enter","command":["press","Enter"]},
+  {"label":"1093-hml-reentered-slots","command":["eval","--file","sources/runtime/hml-parent-slots.js"],"screenshot":true}
+ ],"tailChars":5000
+}

@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3024-own-paper1094-sort-contract",
+  "startedUtc": "2026-11-10T06:25:48.163877+00:00",
+  "command": [
+    "eval",
+    "(()=>{const t=document.querySelector('#paperItemTable'),s=window.Sortable?.get?.(t);return {sortableFound:!!s,sortType:typeof s?.sort,onEndType:typeof s?.option?.('onEnd'),ids:s?.toArray?.(),groups:[...t.querySelectorAll(':scope>tbody')].map(e=>({attributes:[...e.attributes].map(a=>({name:a.name,value:a.value})),itemIds:[...e.querySelectorAll('tr[data-item-id]')].map(r=>r.dataset.itemId)}))};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.063
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "groups": [
+          {
+            "attributes": [
+              {
+                "name": "data-sort-group",
+                "value": ""
+              },
+              {
+                "name": "data-passage-id",
+                "value": "2089241"
+              }
+            ],
+            "itemIds": [
+              "2089242",
+              "2089243",
+              "2089244",
+              "2089245"
+            ]
+          },
+          {
+            "attributes": [
+              {
+                "name": "data-sort-group",
+                "value": ""
+              }
+            ],
+            "itemIds": [
+              "2089238"
+            ]
+          }
+        ],
+        "ids": [
+          "2az0z",
+          "1cwib"
+        ],
+        "onEndType": "function",
+        "sortType": "function",
+        "sortableFound": true
+      }
+    },
+    "error": null,
+    "localSeconds": 0.071
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e39470": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e39471": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e39472": {
+          "name": "평가지 수정",
+          "role": "heading"
+        },
+        "e39473": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e39474": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e39475": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e39476": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e39477": {
+          "name": "포함 문항 (5)",
+          "role": "heading"
+        },
+        "e39478": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e39479": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e39480": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e39481": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e39482": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e39483": {
+          "name": " 문항 추가",
+          "role": "button"
+        },
+        "e39484": {
+          "name": "",
+          "role": "cell"
+        },
+        "e39485": {
+          "name": "5",
+          "role": "cell"
+        },
+        "e39486": {
+          "name": "2089238",
+          "role": "cell"
+        },
+        "e39487": {
+          "name": "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합",
+          "role": "cell"
+        },
+        "e39488": {
+          "name": "주관식 > 단답형 > 일반형",
+          "role": "cell"
+        },
+        "e39489": {
+          "name": "하",
+          "role": "cell"
+        },
+        "e39490": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e39491": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e39492": {
+          "name": "제외",
+          "role": "cell"
+        },
+        "e39493": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e39494": {
+          "name": "665 | QA-HML-20261109-02-SET4-SINGLE1.hml",
+          "role": "link"
+        },
+        "e39495": {
+          "name": "예: 24",
+          "role": "spinbutton"
+        },
+        "e39496": {
+          "name": "예: 25",
+          "role": "spinbutton"
+        },
+        "e39497": {
+          "name": "",
+          "role": "columnheader"
+        },
+        "e39498": {
+          "name": "순서",
+          "role": "columnheader"
+        },
+        "e39499": {
+          "name": "문항 ID",
+          "role": "columnheader"
+        },
+        "e39500": {
+          "name": "문제",
+          "role": "columnheader"
+        },
+        "e39501": {
+          "name": "형태",
+          "role": "columnheader"
+        },
+        "e39502": {
+          "name": "난이도",
+          "role": "columnheader"
+        },
+        "e39503": {
+          "name": "단원 코드",
+          "role": "columnheader"
+        },
+        "e39504": {
+          "name": "문항 상태",
+          "role": "columnheader"
+        },
+        "e39505": {
+          "name": "제외",
+          "role": "columnheader"
+        },
+        "e39506": {
+          "name": "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합",
+          "role": "link"
+        },
+        "e39507": {
+          "name": "제외",
+          "role": "button"
+        },
+        "e39508": {
+          "name": "초안",
+          "role": "radio"
+        },
+        "e39509": {
+          "name": "사용",
+          "role": "radio"
+        },
+        "e39510": {
+          "name": "미사용",
+          "role": "radio"
+        },
+        "e39511": {
+          "name": "폐기",
+          "role": "radio"
+        },
+        "e39512": {
+          "name": "공통",
+          "role": "radio"
+        },
+        "e39513": {
+          "name": "교사용",
+          "role": "radio"
+        },
+        "e39640": {
+          "name": "",
+          "role": "cell"
+        },
+        "e39641": {
+          "name": "1",
+          "role": "cell"
+        },
+        "e39642": {
+          "name": "2089242 추가 지문 ID 2089241",
+          "role": "cell"
+        },
+        "e39643": {
+          "name": "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$",
+          "role": "cell"
+        },
+        "e39644": {
+          "name": "주관식 > 단답형 > 일반형",
+          "role": "cell"
+        },
+        "e39645": {
+          "name": "최하",
+          "role": "cell"
+        },
+        "e39646": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e39647": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e39648": {
+          "name": "제외",
+          "role": "cell"
+        },
+        "e39649": {
+          "name": "2",
+          "role": "cell"
+        },
+        "e39650": {
+          "name": "2089243 추가 지문 ID 2089241",
+          "role": "cell"
+        },
+        "e39651": {
+          "name": "$\\left( -2~4~3\\right)$",
+          "role": "cell"
+        },
+        "e39652": {
+          "name": "주관식 > 단답형 > 일반형",
+          "role": "cell"
+        },
+        "e39653": {
+          "name": "최하",
+          "role": "cell"
+        },
+        "e39654": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e39655": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e39656": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e39657": {
+          "name": "2089244 추가 지문 ID 2089241",
+          "role": "cell"
+        },
+        "e39658": {
+          "name": "$\\left(\\begin{gathered}1&amp;~0 \\\\ 0&amp;~1\\end{gathered}\\right)$",
+          "role": "cell"
+        },
+        "e39659": {
+          "name": "주관식 > 단답형 > 일반형",
+          "role": "cell"
+        },
+        "e39660": {
+          "name": "최하",
+          "role": "cell"
+        },
+        "e39661": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e39662": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e39663": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e39664": {
+          "name": "2089245 추가 지문 ID 2089241",
+          "role": "cell"
+        },
+        "e39665": {
+          "name": "$\\left(\\begin{gathered}3&amp;~-2&amp;~0 \\\\ 1&amp;~5&amp;~-3\\end{gathered}\\right)$",
+          "role": "cell"
+        },
+        "e39666": {
+          "name": "주관식 > 단답형 > 일반형",
+          "role": "cell"
+        },
+        "e39667": {
+          "name": "최하",
+          "role": "cell"
+        },
+        "e39668": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e39669": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e39670": {
+          "name": "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$",
+          "role": "link"
+        },
+        "e39671": {
+          "name": "제외",
+          "role": "button"
+        },
+        "e39672": {
+          "name": "$\\left( -2~4~3\\right)$",
+          "role": "link"
+        },
+        "e39673": {
+          "name": "$\\left(\\begin{gathered}1&amp;~0 \\\\ 0&amp;~1\\end{gathered}\\right)$",
+          "role": "link"
+        },
+        "e39674": {
+          "name": "$\\left(\\begin{gathered}3&amp;~-2&amp;~0 \\\\ 1&amp;~5&amp;~-3\\end{gathered}\\right)$",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e39692",
+        "@e39693",
+        "@e39694",
+        "@e39695"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e39470]\n      - link \"문제은행 마스터 CMS\" [ref=e39471]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e39478]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e39479]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e39480]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e39481]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e39482]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e39473]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"수정\"\n      - heading \"평가지 수정\" [level=2, ref=e39472]\n      - form\n        - generic\n          - heading \"기본 정보\" [level=3, ref=e39476]\n          - DescriptionList\n            - term \"평가지 ID\"\n            - definition\n              - StaticText \"1094 (1102)\"\n            - term \"평가지명 *\"\n              - StaticText \"평가지명\"\n              - StaticText \"*\"\n            - definition\n              - textbox [required, ref=e39493]: QA-HML-20261109-02-SET4-SINGLE1\n                - StaticText \"QA-HML-20261109-02-SET4-SINGLE1\"\n            - term \"상태\"\n            - definition\n              - LabelText\n                - radio \"초안\" [checked=true, ref=e39508]\n                - StaticText \"초안\"\n              - LabelText\n                - radio \"사용\" [checked=false, ref=e39509]\n                - StaticText \"사용\"\n              - LabelText\n                - radio \"미사용\" [checked=false, ref=e39510]\n                - StaticText \"미사용\"\n              - LabelText\n                - radio \"폐기\" [checked=false, ref=e39511]\n                - StaticText \"폐기\"\n            - term \"생성 방식\"\n            - definition\n              - StaticText \"HML 생성\"\n            - term \"단원 코드\"\n            - definition\n              - StaticText \"[22HMAC1GHG1006010000]\"\n              - StaticText \"22 > 고등 > 수학군 > 공통수학1 > 고호경 > 고등1 > 공통학기 > 행렬 > 행렬의 뜻 > >\"\n            - term \"등록\"\n            - definition\n              - StaticText \"jaehyuk.myung · 2026-11-09\"\n          - DescriptionList\n            - term \"시험지\"\n            - definition\n              - link \"665 | QA-HML-20261109-02-SET4-SINGLE1.hml\" [ref=e39494]\n            - term \"출처\"\n            - definition\n              - StaticText \"[22-H-MA-C1-1-0-DCL-KI-2025]\"\n              - StaticText \"22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025\"\n            - term \"페이지 *\"\n              - StaticText \"페이지\"\n              - StaticText \"*\"\n            - definition\n              - spinbutton \"예: 24\" [required, ref=e39495]: 1\n                - StaticText \"1\"\n              - StaticText \"~\"\n              - spinbutton \"예: 25\" [required, ref=e39496]: 1\n                - StaticText \"1\"\n            - term \"용도 *\"\n              - StaticText \"용도\"\n              - StaticText \"*\"\n            - definition\n              - LabelText\n                - radio \"공통\" [checked=true, ref=e39512]\n                - StaticText \"공통\"\n              - LabelText\n                - radio \"교사용\" [checked=false, ref=e39513]\n                - StaticText \"교사용\"\n            - term \"문제 구성\"\n            - definition\n              - StaticText \"주관식 > 단답형 > 일반형 (5)\"\n            - term \"문항 수\"\n            - definition\n              - StaticText \"5문항\"\n        - generic\n          - heading \"포함 문항 (5)\" [level=3, ref=e39477]\n            - StaticText \"포함 문항 (\"\n            - StaticText \"5\"\n            - StaticText \")\"\n          - button \" 문항 추가\" [ref=e39483]\n            - StaticText \"\"\n            - StaticText \"문항 추가\"\n          - table\n            - rowgroup\n              - row\n                - columnheader [ref=e39497]\n                - columnheader \"순서\" [ref=e39498]\n                - columnheader \"문항 ID\" [ref=e39499]\n                - columnheader \"문제\" [ref=e39500]\n                - columnheader \"형태\" [ref=e39501]\n                - columnheader \"난이도\" [ref=e39502]\n                - columnheader \"단원 코드\" [ref=e39503]\n                - columnheader \"문항 상태\" [ref=e39504]\n                - columnheader \"제외\" [ref=e39505]\n            - row\n              - cell \"\" [ref=e39640]\n                - StaticText \"\"\n              - cell \"1\" [ref=e39641]\n              - cell \"2089242 추가 지문 ID 2089241\" [ref=e39642]\n                - generic\n                  - StaticText \"2089242\"\n                  - StaticText \"추가\"\n                - StaticText \"지문 ID 2089241\"\n              - cell \"$\\\\left(\\\\begin{gathered}2 \\\\\\\\ 3\\\\end{gathered}\\\\right)$\" [ref=e39643]\n                - link \"$\\\\left(\\\\begin{gathered}2 \\\\\\\\ 3\\\\end{gathered}\\\\right)$\" [ref=e39670]\n              - cell \"주관식 > 단답형 > 일반형\" [ref=e39644]\n              - cell \"최하\" [ref=e39645]\n              - cell \"22HMAC1GHG1006010000\" [ref=e39646]\n                - StaticText \"22HMAC1GHG1006010000\"\n              - cell \"승인(사용)\" [ref=e39647]\n              - cell \"제외\" [ref=e39648]\n                - button \"제외\" [ref=e39671]\n                  - StaticText \"\"\n            - row\n              - cell \"2\" [ref=e39649]\n              - cell \"2089243 추가 지문 ID 2089241\" [ref=e39650]\n                - generic\n                  - StaticText \"2089243\"\n                  - StaticText \"추가\"\n                - StaticText \"지문 ID 2089241\"\n              - cell \"$\\\\left( -2~4~3\\\\right)$\" [ref=e39651]\n                - link \"$\\\\left( -2~4~3\\\\right)$\" [ref=e39672]\n              - cell \"주관식 > 단답형 > 일반형\" [ref=e39652]\n              - cell \"최하\" [ref=e39653]\n              - cell \"22HMAC1GHG1006010000\" [ref=e39654]\n                - StaticText \"22HMAC1GHG1006010000\"\n              - cell \"승인(사용)\" [ref=e39655]\n            - row\n              - cell \"3\" [ref=e39656]\n              - cell \"2089244 추가 지문 ID 2089241\" [ref=e39657]\n                - generic\n                  - StaticText \"2089244\"\n                  - StaticText \"추가\"\n                - StaticText \"지문 ID 2089241\"\n              - cell \"$\\\\left(\\\\begin{gathered}1&amp;~0 \\\\\\\\ 0&amp;~1\\\\end{gathered}\\\\right)$\" [ref=e39658]\n                - link \"$\\\\left(\\\\begin{gathered}1&amp;~0 \\\\\\\\ 0&amp;~1\\\\end{gathered}\\\\right)$\" [ref=e39673]\n              - cell \"주관식 > 단답형 > 일반형\" [ref=e39659]\n              - cell \"최하\" [ref=e39660]\n              - cell \"22HMAC1GHG1006010000\" [ref=e39661]\n                - StaticText \"22HMAC1GHG1006010000\"\n              - cell \"승인(사용)\" [ref=e39662]\n            - row\n              - cell \"4\" [ref=e39663]\n              - cell \"2089245 추가 지문 ID 2089241\" [ref=e39664]\n                - generic\n                  - StaticText \"2089245\"\n                  - StaticText \"추가\"\n                - StaticText \"지문 ID 2089241\"\n              - cell \"$\\\\left(\\\\begin{gathered}3&amp;~-2&amp;~0 \\\\\\\\ 1&amp;~5&amp;~-3\\\\end{gathered}\\\\right)$\" [ref=e39665]\n                - link \"$\\\\left(\\\\begin{gathered}3&amp;~-2&amp;~0 \\\\\\\\ 1&amp;~5&amp;~-3\\\\end{gathered}\\\\right)$\" [ref=e39674]\n              - cell \"주관식 > 단답형 > 일반형\" [ref=e39666]\n              - cell \"최하\" [ref=e39667]\n              - cell \"22HMAC1GHG1006010000\" [ref=e39668]\n                - StaticText \"22HMAC1GHG1006010000\"\n              - cell \"승인(사용)\" [ref=e39669]\n            - row\n              - cell \"\" [ref=e39484]\n                - StaticText \"\"\n              - cell \"5\" [ref=e39485]\n              - cell \"2089238\" [ref=e39486]\n                - StaticText \"2089238\"\n              - cell \"행렬 $\\\\left(\\\\begin{gathered}2&amp;~4 \\\\\\\\ -3&amp;~0 \\\\\\\\ 5&amp;~1\\\\end{gathered}\\\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합\" [ref=e39487]\n                - link \"행렬 $\\\\left(\\\\begin{gathered}2&amp;~4 \\\\\\\\ -3&amp;~0 \\\\\\\\ 5&amp;~1\\\\end{gathered}\\\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합\" [ref=e39506]\n              - cell \"주관식 > 단답형 > 일반형\" [ref=e39488]\n              - cell \"하\" [ref=e39489]\n              - cell \"22HMAC1GHG1006010000\" [ref=e39490]\n                - StaticText \"22HMAC1GHG1006010000\"\n              - cell \"초안\" [ref=e39491]\n              - cell \"제외\" [ref=e39492]\n                - button \"제외\" [ref=e39507]\n                  - StaticText \"\"\n        - link \"취소\" [ref=e39474]\n        - button \"저장\" [ref=e39475]"
+    },
+    "error": null,
+    "localSeconds": 0.112
+  }
+}

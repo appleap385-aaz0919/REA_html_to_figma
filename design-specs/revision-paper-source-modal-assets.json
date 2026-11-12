@@ -1,0 +1,690 @@
+{
+  "schemaVersion": 1,
+  "inputPlan": "design-specs/revision-consolidated-plan.json",
+  "reviewScope": "Existing local evidence reviewed;7 retained live PNGs and4 preserved-DOM crops directly viewed. Original JS/events/HTMX removed; new isolated headless context only; no user Chrome/CDP or CMS business API used.",
+  "modalAssets": [
+    {
+      "screen": "REV_PAP_DETAIL",
+      "modalId": "REV_PAP_DEPLOY",
+      "triggerKey": "PAP_D07",
+      "domId": "paperDeployModal",
+      "title": "평가지 배포",
+      "screenshot": "cms-knowledge/master-cms/evidence/1226-paper-used-deploy-dialog.png",
+      "json": "cms-knowledge/master-cms/evidence/1226-paper-used-deploy-dialog.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/paper-used-deploy-dialog-20261109.html",
+      "visualVerified": true,
+      "verification": "직접 이미지를 열어 제목·본문·하단 버튼·가림 여부를 확인했습니다.",
+      "screenshotSize": {
+        "width": 1810,
+        "height": 1075
+      },
+      "crop": {
+        "path": null,
+        "source": "cms-knowledge/master-cms/evidence/1226-paper-used-deploy-dialog.png",
+        "coordinateSpace": "screenshot_pixels",
+        "x": 635,
+        "y": 298,
+        "width": 540,
+        "height": 479,
+        "method": "읽기 전용 밝은 픽셀 경계 측정 후 테두리1px를 포함했습니다. 그림자 외곽은 약2px 차이가 있을 수 있습니다.",
+        "fullDialogVisible": true
+      },
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-dialog-centered",
+        "headerClass": "modal-header bg-primary-lt",
+        "headerAppearance": "옅은 파랑·정보 아이콘·오른쪽 닫기",
+        "title": "평가지 배포",
+        "body": [
+          "선택한 서비스에 배포하시겠습니까?",
+          "포함 문항 2개가 모두 배포됩니다.",
+          "※ 마스터에서 폐기된 문항은 제외하고 배포됩니다.",
+          "배포 대상",
+          "AI출제마법사 CMS / 불가 · 미배포 문항 2건",
+          "개발 서비스 / 불가 · 미배포 문항 2건"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "배포",
+            "class": "btn btn-sm btn-primary",
+            "disabled": true
+          }
+        ],
+        "layout": "중앙 약540px 폭, 두 배포 대상 카드는 세로로 배치되며 체크와 최종배포가 비활성입니다."
+      },
+      "elementBoundsForOriginalLivePng": null,
+      "elementStructureFallback": {
+        "html": "cms-knowledge/master-cms/sources/paper-used-deploy-dialog-20261109.html",
+        "headerClass": "modal-header bg-primary-lt",
+        "bodyText": [
+          "선택한 서비스에 배포하시겠습니까?",
+          "포함 문항 2개가 모두 배포됩니다.",
+          "※ 마스터에서 폐기된 문항은 제외하고 배포됩니다.",
+          "배포 대상",
+          "AI출제마법사 CMS / 불가 · 미배포 문항 2건",
+          "개발 서비스 / 불가 · 미배포 문항 2건"
+        ],
+        "footerButtons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "배포",
+            "class": "btn btn-sm btn-primary",
+            "disabled": true
+          }
+        ],
+        "note": "No per-control DOM coordinates were retained for this original live PNG. Use exact HTML structure descriptions; do not reuse preserved-render bounds on a different live screenshot."
+      }
+    },
+    {
+      "screen": "REV_PAP_EDIT",
+      "modalId": "REV_PAP_ADD",
+      "triggerKey": "PAP_E08",
+      "domId": "paperItemAddModal",
+      "title": "문항 추가",
+      "screenshot": "cms-knowledge/master-cms/evidence/3010-own-paper1094-set242-search-result.png",
+      "json": "cms-knowledge/master-cms/evidence/3010-own-paper1094-set242-search-result.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/own-paper1094-modify-set-policy-20261110.html",
+      "visualVerified": true,
+      "verification": "직접 이미지를 열어 제목·본문·하단 버튼·가림 여부를 확인했습니다.",
+      "screenshotSize": {
+        "width": 1810,
+        "height": 1075
+      },
+      "crop": {
+        "path": null,
+        "source": "cms-knowledge/master-cms/evidence/3010-own-paper1094-set242-search-result.png",
+        "coordinateSpace": "screenshot_pixels",
+        "x": 335,
+        "y": 28,
+        "width": 1140,
+        "height": 523,
+        "method": "읽기 전용 밝은 픽셀 경계 측정 후 테두리1px를 포함했습니다. 그림자 외곽은 약2px 차이가 있을 수 있습니다.",
+        "fullDialogVisible": true
+      },
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-xl modal-dialog-scrollable",
+        "headerClass": "modal-header",
+        "headerAppearance": "흰색·플러스 아이콘·문항 추가·정보 아이콘·오른쪽 닫기",
+        "title": "문항 추가",
+        "body": [
+          "필터1행: 검색종류·검색어·교육과정·학교급·과목군·과목·학년·학기",
+          "필터2행: 난이도·형태1·형태2·형태3",
+          "필터3행: 상태 전체·초안·실패(재등록)·승인(사용)·승인(미사용)·폐기, 초기화·조회",
+          "검색 결과 1건",
+          "결과 표: 선택·문항 ID·문제·형태/난이도·단원 코드·문항 상태·선택 불가 사유"
+        ],
+        "buttons": [
+          {
+            "label": "초기화",
+            "class": "btn"
+          },
+          {
+            "label": "조회",
+            "class": "btn btn-primary"
+          },
+          {
+            "label": "취소",
+            "class": "btn"
+          },
+          {
+            "label": "추가",
+            "class": "btn btn-primary",
+            "disabled": true
+          }
+        ],
+        "layout": "약1140px 폭의 큰 모달입니다. 이1건 상태는 위쪽28px에서 시작하고 전체 필터·결과·하단 취소/추가가 보입니다. 결과 수에 따라 높이가 바뀌며 작은 중앙 확인창과 같은 크기로 재사용하면 안 됩니다.",
+        "infoPopover": "정보 아이콘의 설명은 별도 팝오버 상태입니다. 이 기준 이미지에서는 닫혀 있으며 파란 안내 상자를 항상 붙이지 않습니다.",
+        "state": "검색어2089242·결과1건·미선택"
+      },
+      "preservedDomRenderJson": "design-specs/revision-captures/preserved-dom-paper-add.json",
+      "preservedDomCrop": "design-specs/revision-captures/preserved-dom-paper-add-crop.png",
+      "preservedDomProvenance": "preserved-dom-readonly",
+      "elementBoundsForOriginalLivePng": null,
+      "elementStructureFallback": {
+        "html": "cms-knowledge/master-cms/sources/own-paper1094-modify-set-policy-20261110.html",
+        "headerClass": "modal-header",
+        "bodyText": [
+          "필터1행: 검색종류·검색어·교육과정·학교급·과목군·과목·학년·학기",
+          "필터2행: 난이도·형태1·형태2·형태3",
+          "필터3행: 상태 전체·초안·실패(재등록)·승인(사용)·승인(미사용)·폐기, 초기화·조회",
+          "검색 결과 1건",
+          "결과 표: 선택·문항 ID·문제·형태/난이도·단원 코드·문항 상태·선택 불가 사유"
+        ],
+        "footerButtons": [
+          {
+            "label": "초기화",
+            "class": "btn"
+          },
+          {
+            "label": "조회",
+            "class": "btn btn-primary"
+          },
+          {
+            "label": "취소",
+            "class": "btn"
+          },
+          {
+            "label": "추가",
+            "class": "btn btn-primary",
+            "disabled": true
+          }
+        ],
+        "note": "No per-control DOM coordinates were retained for this original live PNG. Use exact HTML structure descriptions; do not reuse preserved-render bounds on a different live screenshot."
+      }
+    },
+    {
+      "screen": "REV_PAP_EDIT",
+      "modalId": "REV_PAP_REMOVE",
+      "triggerKey": "PAP_E09",
+      "domId": "removeGroupModal",
+      "title": "문항 제외",
+      "screenshot": "cms-knowledge/master-cms/evidence/3022-own-paper1094-remove-set-dialog-read.png",
+      "json": "cms-knowledge/master-cms/evidence/3022-own-paper1094-remove-set-dialog-read.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/own-paper1094-modify-set-policy-20261110.html",
+      "visualVerified": true,
+      "verification": "직접 이미지를 열어 제목·본문·하단 버튼·가림 여부를 확인했습니다.",
+      "screenshotSize": {
+        "width": 1810,
+        "height": 1075
+      },
+      "crop": {
+        "path": null,
+        "source": "cms-knowledge/master-cms/evidence/3022-own-paper1094-remove-set-dialog-read.png",
+        "coordinateSpace": "screenshot_pixels",
+        "x": 715,
+        "y": 432,
+        "width": 380,
+        "height": 211,
+        "method": "읽기 전용 밝은 픽셀 경계 측정 후 테두리1px를 포함했습니다. 그림자 외곽은 약2px 차이가 있을 수 있습니다.",
+        "fullDialogVisible": true
+      },
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-sm modal-dialog-centered",
+        "headerClass": "modal-header",
+        "headerAppearance": "흰색·오른쪽 닫기",
+        "title": "문항 제외",
+        "body": [
+          "평가지에서 제외하시겠습니까?",
+          "지문 ID 2089241 · 4문항"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "제외",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "layout": "중앙 약380px 폭의 작은 확인창입니다. 질문과 대상은 가운데 정렬이고 버튼은 오른쪽 아래입니다."
+      },
+      "elementBoundsForOriginalLivePng": null,
+      "elementStructureFallback": {
+        "html": "cms-knowledge/master-cms/sources/own-paper1094-modify-set-policy-20261110.html",
+        "headerClass": "modal-header",
+        "bodyText": [
+          "평가지에서 제외하시겠습니까?",
+          "지문 ID 2089241 · 4문항"
+        ],
+        "footerButtons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "제외",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "note": "No per-control DOM coordinates were retained for this original live PNG. Use exact HTML structure descriptions; do not reuse preserved-render bounds on a different live screenshot."
+      }
+    },
+    {
+      "screen": "REV_PAP_EDIT",
+      "modalId": "REV_PAP_CANCEL",
+      "triggerKey": "PAP_E10",
+      "domId": "cancelConfirmModal",
+      "title": "평가지 수정 취소",
+      "screenshot": "cms-knowledge/master-cms/evidence/1212-paper-original-detail-restored.png",
+      "json": "cms-knowledge/master-cms/evidence/1212-paper-original-detail-restored.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/paper-mock-modify-20261109.html",
+      "visualVerified": true,
+      "verification": "직접 이미지를 열어 제목·본문·하단 버튼·가림 여부를 확인했습니다.",
+      "screenshotSize": {
+        "width": 1810,
+        "height": 1075
+      },
+      "crop": {
+        "path": null,
+        "source": "cms-knowledge/master-cms/evidence/1212-paper-original-detail-restored.png",
+        "coordinateSpace": "screenshot_pixels",
+        "x": 715,
+        "y": 444,
+        "width": 380,
+        "height": 187,
+        "method": "읽기 전용 밝은 픽셀 경계 측정 후 테두리1px를 포함했습니다. 그림자 외곽은 약2px 차이가 있을 수 있습니다.",
+        "fullDialogVisible": true
+      },
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-sm modal-dialog-centered",
+        "headerClass": "modal-header",
+        "headerAppearance": "흰색·오른쪽 닫기",
+        "title": "평가지 수정 취소",
+        "body": [
+          "저장하지 않고 이동하시겠습니까?"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "layout": "중앙 약380px 폭의 작은 확인창입니다. 파일명과 달리 이 이미지는 복귀 상세가 아니라 실제 열린 취소 확인창입니다."
+      },
+      "elementBoundsForOriginalLivePng": null,
+      "elementStructureFallback": {
+        "html": "cms-knowledge/master-cms/sources/paper-mock-modify-20261109.html",
+        "headerClass": "modal-header",
+        "bodyText": [
+          "저장하지 않고 이동하시겠습니까?"
+        ],
+        "footerButtons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "note": "No per-control DOM coordinates were retained for this original live PNG. Use exact HTML structure descriptions; do not reuse preserved-render bounds on a different live screenshot."
+      }
+    },
+    {
+      "screen": "REV_PAP_EDIT",
+      "modalId": "REV_PAP_DISCARD",
+      "triggerKey": "PAP_E11",
+      "domId": "paperDiscardModal",
+      "title": "평가지 저장",
+      "screenshot": "cms-knowledge/master-cms/evidence/1180-paper-discard-confirm-state.png",
+      "json": "cms-knowledge/master-cms/evidence/1180-paper-discard-confirm-state.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/paper-mock-modify-20261109.html",
+      "visualVerified": true,
+      "verification": "직접 이미지를 열어 제목·본문·하단 버튼·가림 여부를 확인했습니다.",
+      "screenshotSize": {
+        "width": 1810,
+        "height": 1075
+      },
+      "crop": {
+        "path": null,
+        "source": "cms-knowledge/master-cms/evidence/1180-paper-discard-confirm-state.png",
+        "coordinateSpace": "screenshot_pixels",
+        "x": 715,
+        "y": 434,
+        "width": 380,
+        "height": 207,
+        "method": "읽기 전용 밝은 픽셀 경계 측정 후 테두리1px를 포함했습니다. 그림자 외곽은 약2px 차이가 있을 수 있습니다.",
+        "fullDialogVisible": true
+      },
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-sm modal-dialog-centered",
+        "headerClass": "modal-header",
+        "headerAppearance": "흰색·오른쪽 닫기",
+        "title": "평가지 저장",
+        "body": [
+          "저장하시겠습니까?",
+          "폐기한 평가지는 다시 수정할 수 없습니다."
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "layout": "중앙 약380px 폭의 작은 확인창입니다. 폐기 선택 후 저장에서 열리지만 실제 제목은 평가지 저장, 최종 버튼은 파란색 저장입니다. 제목을 평가지 폐기, 버튼을 폐기로 바꾸면 실제 UI와 다릅니다."
+      },
+      "elementBoundsForOriginalLivePng": null,
+      "elementStructureFallback": {
+        "html": "cms-knowledge/master-cms/sources/paper-mock-modify-20261109.html",
+        "headerClass": "modal-header",
+        "bodyText": [
+          "저장하시겠습니까?",
+          "폐기한 평가지는 다시 수정할 수 없습니다."
+        ],
+        "footerButtons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장",
+            "class": "btn btn-sm btn-primary"
+          }
+        ],
+        "note": "No per-control DOM coordinates were retained for this original live PNG. Use exact HTML structure descriptions; do not reuse preserved-render bounds on a different live screenshot."
+      }
+    },
+    {
+      "screen": "REV_SRC_FORM",
+      "modalId": "REV_SRC_CREATE_CANCEL",
+      "triggerKey": "SRC_F12",
+      "domId": "cancelConfirmModal",
+      "title": "출처 등록 취소",
+      "screenshot": null,
+      "json": "cms-knowledge/master-cms/evidence/1704-source-cancel-fresh-state.json",
+      "htmlTemplate": "cms-knowledge/master-cms/sources/source-registration-form-20261109.html",
+      "crop": null,
+      "visualVerified": false,
+      "verification": "열린 모달의 런타임 제목/본문/버튼과 HTML은 확인했지만 실제 보존 PNG는 찾지 못했습니다.",
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-sm modal-dialog-centered",
+        "headerClass": "modal-header",
+        "bodyClass": "modal-body text-center",
+        "footerClass": "modal-footer py-2",
+        "title": "출처 등록 취소",
+        "body": [
+          "저장하지 않고 이동하시겠습니까?"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "class": "btn btn-sm btn-primary"
+          }
+        ]
+      },
+      "limit": "평가지 취소 PNG의 제목을 바꿔 실제 출처 캡처라고 주장하지 않습니다. 동일 클래스는 소스 근거이며 픽셀 일치는 미검증입니다.",
+      "preservedDomRenderJson": "design-specs/revision-captures/preserved-dom-source-create-cancel.json",
+      "preservedDomCrop": "design-specs/revision-captures/preserved-dom-source-create-cancel-crop.png",
+      "preservedDomProvenance": "preserved-dom-readonly"
+    },
+    {
+      "screen": "REV_SRC_EDIT",
+      "modalId": "REV_SRC_USE_IMPACT",
+      "triggerKey": "SRC_E05",
+      "domId": "mappingImpactModal",
+      "title": "영향 범위 확인",
+      "screenshot": null,
+      "json": "cms-knowledge/master-cms/evidence/2378-own-source199-deactivation-local-state.json",
+      "additionalJson": [
+        "cms-knowledge/master-cms/evidence/1354-source-mapped134-impact-modal-source.json",
+        "cms-knowledge/master-cms/evidence/1359-source-impact-fresh-after-transition.json"
+      ],
+      "htmlTemplate": "cms-knowledge/master-cms/sources/source-mapped-impact-modal-20261109.html",
+      "crop": null,
+      "visualVerified": false,
+      "verification": "실제 열린 모달의 런타임 문구와 HTML은 확인했지만 실제 보존 PNG는 찾지 못했습니다.",
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-dialog-centered",
+        "headerClass": "modal-header bg-warning-lt",
+        "footerClass": "modal-footer py-2",
+        "title": "영향 범위 확인",
+        "body": [
+          "사용 여부를 N(미사용)으로 변경하시겠습니까?",
+          "출처코드 / 출처명",
+          "이 출처에 매핑된 문항이 영향을 받습니다.",
+          "매핑 문항 1건",
+          "기존 매핑 문항 정보는 그대로 유지 (서비스 노출 유지)",
+          "신규 문항 등록 시 출처 선택 목록에 노출되지 않음"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "미사용(N)으로 변경",
+            "class": "btn btn-sm btn-warning"
+          }
+        ]
+      },
+      "limit": "옅은 경고색 헤더와 warning 버튼이 소스에 선언되어 있습니다. 배포 창의 파란 헤더/파란 버튼으로 통일하면 소스와 다릅니다. 매핑수/코드/명은 선택 출처에 따라 바뀝니다.",
+      "preservedDomRenderJson": "design-specs/revision-captures/preserved-dom-source-use-impact.json",
+      "preservedDomCrop": "design-specs/revision-captures/preserved-dom-source-use-impact-crop.png",
+      "preservedDomProvenance": "preserved-dom-readonly"
+    },
+    {
+      "screen": "REV_SRC_EDIT",
+      "modalId": "REV_SRC_EDIT_CANCEL",
+      "triggerKey": "SRC_E09",
+      "domId": "cancelConfirmModal",
+      "title": "출처 수정 취소",
+      "screenshot": null,
+      "json": null,
+      "htmlTemplate": "cms-knowledge/master-cms/sources/source-mapped134-modify-20261109.html",
+      "crop": null,
+      "visualVerified": false,
+      "verification": "HTML의 모달 선언만 확인했습니다. 이 출처 수정 취소의 실제 열린 PNG와 별도 런타임 화면은 미검증입니다.",
+      "actualUi": {
+        "dialogClass": "modal-dialog modal-sm modal-dialog-centered",
+        "headerClass": "modal-header",
+        "bodyClass": "modal-body text-center",
+        "footerClass": "modal-footer py-2",
+        "title": "출처 수정 취소",
+        "body": [
+          "저장하지 않고 이동하시겠습니까?"
+        ],
+        "buttons": [
+          {
+            "label": "취소",
+            "class": "btn btn-sm"
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "class": "btn btn-sm btn-primary"
+          }
+        ]
+      },
+      "limit": "출처 등록 취소의 실제 실행 결과나 평가지 취소 이미지를 출처 수정 취소의 실행/픽셀 근거로 바꾸지 않습니다.",
+      "preservedDomRenderJson": "design-specs/revision-captures/preserved-dom-source-edit-cancel.json",
+      "preservedDomCrop": "design-specs/revision-captures/preserved-dom-source-edit-cancel-crop.png",
+      "preservedDomProvenance": "preserved-dom-readonly"
+    }
+  ],
+  "referenceOnlyImages": [
+    {
+      "screenshot": "design-specs/revision-captures/modal-paper-add.png",
+      "json": "design-specs/revision-captures/modal-paper-add.json",
+      "visualVerified": true,
+      "state": "10건 결과+도움말 팝오버 열림",
+      "primaryReference": false,
+      "reason": "안내 팝오버가 상단 필터를 가리고 하단 취소/추가가 이 이미지에서 보이지 않습니다. 전체 필터와 최종 버튼이 보이는 중립 모달 기준으로 사용하지 않습니다.",
+      "recordedDialogBox": {
+        "x": 330,
+        "y": 28,
+        "width": 1140,
+        "height": 1044
+      },
+      "warning": "JSON의 첫 모달 box1800×1100은 전체 오버레이이며 두 번째1140×1044가 내용창입니다. 팝오버 포함 상태를 깨끗한 기본 상태와 동일시하지 않습니다."
+    },
+    {
+      "screenshot": "cms-knowledge/master-cms/evidence/1193-paper-add-modal-loaded.png",
+      "json": "cms-knowledge/master-cms/evidence/1193-paper-add-modal-loaded.json",
+      "visualVerified": true,
+      "state": "1건 결과+도움말 팝오버 열림",
+      "primaryReference": false,
+      "reason": "하단 버튼은 보이지만 팝오버가 상단 필터를 가립니다. 도움말 팝오버의 실제 외형 참고로만 사용합니다."
+    }
+  ],
+  "missingVisualEvidence": [
+    "REV_SRC_CREATE_CANCEL",
+    "REV_SRC_USE_IMPACT",
+    "REV_SRC_EDIT_CANCEL"
+  ],
+  "cropPolicy": "Original live PNGs remain unchanged with crop specifications only. Four authorized isolated preserved-DOM renders now have full PNG, modal crop PNG and JSON with visible-element bounds.",
+  "preserveDistinctBehaviors": [
+    "일반 저장과 D 조건의 저장 확인은 같은 저장 버튼의 조건별 동작입니다. 버튼 번호는 하나로 합치되 D 확인 모달을 삭제하지 않습니다.",
+    "상태 선택과 최종 저장은 다른 조작입니다.",
+    "목록/집계 정보와 포함 문항 표는 다른 실제 요소입니다.",
+    "문항 추가의 결과 수·후보 선택·도움말 팝오버는 실제로 다른 상태이므로 이미지 차이를 단순 중복으로 삭제하지 않습니다."
+  ],
+  "preservedDomRenders": [
+    {
+      "screen": "REV_SRC_FORM",
+      "modalId": "REV_SRC_CREATE_CANCEL",
+      "triggerKey": "SRC_F12",
+      "provenance": "preserved-dom-readonly",
+      "screenshot": "design-specs/revision-captures/preserved-dom-source-create-cancel.png",
+      "crop": {
+        "path": "design-specs/revision-captures/preserved-dom-source-create-cancel-crop.png",
+        "coordinateSpace": "rendered_viewport_pixels",
+        "box": {
+          "x": 710,
+          "y": 456.5,
+          "width": 380,
+          "height": 187
+        },
+        "rasterSize": {
+          "width": 380,
+          "height": 188
+        }
+      },
+      "json": "design-specs/revision-captures/preserved-dom-source-create-cancel.json",
+      "sourceHtml": "cms-knowledge/master-cms/sources/source-registration-form-20261109.html",
+      "visualVerified": true,
+      "visibleElementCount": 3,
+      "elementBoundsPath": "visibleElements[].boundingClientRect",
+      "elementBoundsCoordinateSpace": "original full PNG viewport CSS pixels at deviceScaleFactor1",
+      "cropRelativeBoundsPath": "visibleElements[].cropRelativeRect",
+      "footerButtonCount": 2,
+      "footerButtonsAllVisible": true,
+      "originalJavaScriptExecuted": false,
+      "userChromeOrCDPUsed": false,
+      "liveCMSRequests": false,
+      "renderedFieldState": "Preserved HTML attributes/options only; transient runtime property changes and original cascading scripts are not replayed.",
+      "cssLimit": "Core/theme bytes match preserved filename MD5. Icon/custom responses use canonical fallback and their transformed/version distinction is unverified. All bounds re-render used byte-pinned CSS/fonts identical to PNG run."
+    },
+    {
+      "screen": "REV_SRC_EDIT",
+      "modalId": "REV_SRC_EDIT_CANCEL",
+      "triggerKey": "SRC_E09",
+      "provenance": "preserved-dom-readonly",
+      "screenshot": "design-specs/revision-captures/preserved-dom-source-edit-cancel.png",
+      "crop": {
+        "path": "design-specs/revision-captures/preserved-dom-source-edit-cancel-crop.png",
+        "coordinateSpace": "rendered_viewport_pixels",
+        "box": {
+          "x": 710,
+          "y": 456.5,
+          "width": 380,
+          "height": 187
+        },
+        "rasterSize": {
+          "width": 380,
+          "height": 188
+        }
+      },
+      "json": "design-specs/revision-captures/preserved-dom-source-edit-cancel.json",
+      "sourceHtml": "cms-knowledge/master-cms/sources/source-mapped134-modify-20261109.html",
+      "visualVerified": true,
+      "visibleElementCount": 3,
+      "elementBoundsPath": "visibleElements[].boundingClientRect",
+      "elementBoundsCoordinateSpace": "original full PNG viewport CSS pixels at deviceScaleFactor1",
+      "cropRelativeBoundsPath": "visibleElements[].cropRelativeRect",
+      "footerButtonCount": 2,
+      "footerButtonsAllVisible": true,
+      "originalJavaScriptExecuted": false,
+      "userChromeOrCDPUsed": false,
+      "liveCMSRequests": false,
+      "renderedFieldState": "Preserved HTML attributes/options only; transient runtime property changes and original cascading scripts are not replayed.",
+      "cssLimit": "Core/theme bytes match preserved filename MD5. Icon/custom responses use canonical fallback and their transformed/version distinction is unverified. All bounds re-render used byte-pinned CSS/fonts identical to PNG run."
+    },
+    {
+      "screen": "REV_SRC_EDIT",
+      "modalId": "REV_SRC_USE_IMPACT",
+      "triggerKey": "SRC_E05",
+      "provenance": "preserved-dom-readonly",
+      "screenshot": "design-specs/revision-captures/preserved-dom-source-use-impact.png",
+      "crop": {
+        "path": "design-specs/revision-captures/preserved-dom-source-use-impact-crop.png",
+        "coordinateSpace": "rendered_viewport_pixels",
+        "box": {
+          "x": 630,
+          "y": 343.5,
+          "width": 540,
+          "height": 413
+        },
+        "rasterSize": {
+          "width": 540,
+          "height": 414
+        }
+      },
+      "json": "design-specs/revision-captures/preserved-dom-source-use-impact.json",
+      "sourceHtml": "cms-knowledge/master-cms/sources/source-mapped-impact-modal-20261109.html",
+      "visualVerified": true,
+      "visibleElementCount": 3,
+      "elementBoundsPath": "visibleElements[].boundingClientRect",
+      "elementBoundsCoordinateSpace": "original full PNG viewport CSS pixels at deviceScaleFactor1",
+      "cropRelativeBoundsPath": "visibleElements[].cropRelativeRect",
+      "footerButtonCount": 2,
+      "footerButtonsAllVisible": true,
+      "originalJavaScriptExecuted": false,
+      "userChromeOrCDPUsed": false,
+      "liveCMSRequests": false,
+      "renderedFieldState": "Preserved HTML attributes/options only; transient runtime property changes and original cascading scripts are not replayed.",
+      "cssLimit": "Core/theme bytes match preserved filename MD5. Icon/custom responses use canonical fallback and their transformed/version distinction is unverified. All bounds re-render used byte-pinned CSS/fonts identical to PNG run.",
+      "sampleContext": "Preserved source134 with102 mappings; live text2378 refers to source199 with1 mapping. The code/name/count are data-dependent."
+    },
+    {
+      "screen": "REV_PAP_EDIT",
+      "modalId": "REV_PAP_ADD",
+      "triggerKey": "PAP_E08",
+      "provenance": "preserved-dom-readonly",
+      "screenshot": "design-specs/revision-captures/preserved-dom-paper-add.png",
+      "crop": {
+        "path": "design-specs/revision-captures/preserved-dom-paper-add-crop.png",
+        "coordinateSpace": "rendered_viewport_pixels",
+        "box": {
+          "x": 330,
+          "y": 28,
+          "width": 1140,
+          "height": 508
+        },
+        "rasterSize": {
+          "width": 1140,
+          "height": 508
+        }
+      },
+      "json": "design-specs/revision-captures/preserved-dom-paper-add.json",
+      "sourceHtml": "cms-knowledge/master-cms/sources/paper-item-add-modal-20261109.html",
+      "visualVerified": true,
+      "visibleElementCount": 27,
+      "elementBoundsPath": "visibleElements[].boundingClientRect",
+      "elementBoundsCoordinateSpace": "original full PNG viewport CSS pixels at deviceScaleFactor1",
+      "cropRelativeBoundsPath": "visibleElements[].cropRelativeRect",
+      "footerButtonCount": 2,
+      "footerButtonsAllVisible": true,
+      "originalJavaScriptExecuted": false,
+      "userChromeOrCDPUsed": false,
+      "liveCMSRequests": false,
+      "renderedFieldState": "Preserved HTML attributes/options only; transient runtime property changes and original cascading scripts are not replayed.",
+      "cssLimit": "Core/theme bytes match preserved filename MD5. Icon/custom responses use canonical fallback and their transformed/version distinction is unverified. All bounds re-render used byte-pinned CSS/fonts identical to PNG run.",
+      "sampleContext": "Preserved paper341 single-candidate DOM. Live reference3010 is a set candidate; row height and selected defaults can differ. Both retain actual large-dialog structure and complete footer."
+    }
+  ],
+  "missingLiveVisualEvidence": [
+    "REV_SRC_CREATE_CANCEL",
+    "REV_SRC_USE_IMPACT",
+    "REV_SRC_EDIT_CANCEL"
+  ],
+  "missingVisualEvidenceMeaning": "These three entries lack retained live-CMS PNGs. Derived preserved-DOM renders are now available separately and are not reclassified as live observations."
+}

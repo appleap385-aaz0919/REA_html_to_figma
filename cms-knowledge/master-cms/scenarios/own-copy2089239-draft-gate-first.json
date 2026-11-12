@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2430-own-copy2089239-existing-draft-gate-open","command":["eval","--file","sources/runtime/own-copy2089239-draft-gate-open.js"]},
+ {"label":"2431-own-copy2089239-existing-draft-gate-pixels","command":["snapshot"],"screenshot":true},
+ {"label":"2432-own-copy2089239-choose-confirmed-version","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089239'||!document.querySelector('#draftLoadModal.show'))throw Error('Own draft choice required');const button=document.getElementById('draftEditConfirmed');if(button.matches(':disabled'))throw Error('Confirmed choice unavailable');button.click();return {clickedOnce:true,choice:'confirmed'};})()"]},
+ {"label":"2433-own-copy2089239-confirmed-version-live-state","command":["eval","--file","sources/runtime/own-copy2089239-live-edit-inspect.js"]}
+],"tailChars":250}

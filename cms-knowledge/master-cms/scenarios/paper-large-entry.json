@@ -1,0 +1,8 @@
+{
+ "steps":[
+  {"label":"1254-paper-large-observed-link-open","command":["open","https://dev-exambank.dongahub.com/paper/detail.donga?paperId=531&curriculum=22&pageNum=1&pageSize=30"]},
+  {"label":"1255-paper-large-detail-top","command":["snapshot"],"screenshot":true},
+  {"label":"1256-paper-large-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1257-paper-large-detail-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":1700
+}

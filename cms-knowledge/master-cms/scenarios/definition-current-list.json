@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"1826-definition-current-list-open","command":["open","https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22"]},
+ {"label":"1827-definition-current-list-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1828-definition-current-list-state","command":["eval","--file","sources/runtime/registration-page-observation.js"]},
+ {"label":"1829-definition-current-list-size100","command":["select","select[name=pageSize]","100"]},
+ {"label":"1830-definition-current-all-rows","command":["eval","--file","sources/runtime/registration-page-observation.js"]},
+ {"label":"1831-definition-current-all-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":700}

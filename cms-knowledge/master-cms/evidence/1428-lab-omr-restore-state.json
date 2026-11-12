@@ -1,0 +1,4115 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1428-lab-omr-restore-state",
+  "startedUtc": "2026-11-09T05:34:58.232562+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/lab-page-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga"
+    },
+    "error": null,
+    "localSeconds": 0.084
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "result": {
+        "controls": [
+          {
+            "href": "/lab/index.donga",
+            "id": "",
+            "name": "",
+            "tag": "A",
+            "text": "랩",
+            "type": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrNarrowToggle",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "넓게 보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrTypeSel",
+            "name": "",
+            "tag": "SELECT",
+            "text": "선택\nOBSACN · 단답형 › N지 선다\nOBSAOX · 단답형 › O/X 형\nOBMACN · 다답형 › N지 선다\nOBMAOX · 다답형 › O/X 형\nSBSANM · 단답형 › 일반형\nSBSADR · 단답형 › 그리기형\nSBSAAS · 단답형 › 영역 선택형\nSBMANM · 다답형 › 일반형\nSBMAAS · 다답형 › 영역 선택형\nSBMALD · 다답형 › 선그리기형\nSBMADD · 다답형 › 드래그앤드롭형\nESBA00 · 기본형 › 기본 서술형\nESSA00 · 단답형 › 단답 서술형\nESMA00 · 다답형 › 다답 서술형",
+            "type": "select-one",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrClearFormBtn",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "폼 비우기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrRestoreBtn",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "복원",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrPrettyBtn",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "Pretty",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "omrJsonIn",
+            "name": "",
+            "tag": "TEXTAREA",
+            "text": "",
+            "type": "textarea",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "ansPrettyBtn",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "Pretty",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "ansJsonIn",
+            "name": "",
+            "tag": "TEXTAREA",
+            "text": "",
+            "type": "textarea",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "①"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "②"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "③"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "④"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "⑤"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSAOX_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "O"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBSAOX_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "X"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "①"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "②"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "③"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "④"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMACN_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "⑤"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMAOX_ans_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "O"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMAOX_ans_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "X"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMAOX_ans_1",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "O"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "OBMAOX_ans_1",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": "X"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "SELECT",
+            "text": "입력 박스형\n                        범례 선택형",
+            "type": "select-one",
+            "value": "box"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "유사 정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBSANM_legend",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBSANM_legend",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "범례 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBSAAS_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBSAAS_ans",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "선택지 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "SET 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "SELECT",
+            "text": "입력 박스형\n                                    범례 선택형",
+            "type": "select-one",
+            "value": "box"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "SET 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "유사 정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBMANM_leg_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBMANM_leg_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "범례 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 SET 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR SET 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "SET 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBMAAS_ans_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "SBMAAS_ans_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "선택지 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 SET 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "연결",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "행 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "연결",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "행 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "1열 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "2열 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "행 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "(빈 값)",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "행 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "1열 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "2열 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "순서 바꾸기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "SELECT",
+            "text": "입력 박스형\n                            범례 선택형",
+            "type": "select-one",
+            "value": "box"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "유사 정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "ESSA_leg",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "ESSA_leg",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "범례 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR 미리보기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "순서 바꾸기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "SET 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "SELECT",
+            "text": "입력 박스형\n                                            범례 선택형",
+            "type": "select-one",
+            "value": "box"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "SET 삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": true,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "INPUT",
+            "text": "",
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "유사 정답 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "ESMA_leg_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "ESMA_leg_0",
+            "tag": "INPUT",
+            "text": "",
+            "type": "radio",
+            "value": "on"
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "일반 텍스트",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "수식입력기",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "이미지 URL",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "삭제",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "범례 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "정답 SET 추가",
+            "type": "button",
+            "value": ""
+          },
+          {
+            "disabled": false,
+            "href": null,
+            "id": "",
+            "name": "",
+            "tag": "BUTTON",
+            "text": "OMR SET 추가",
+            "type": "button",
+            "value": ""
+          }
+        ],
+        "iframes": [],
+        "scroll": [
+          {
+            "clientHeight": 1015,
+            "scrollHeight": 1015,
+            "scrollTop": 0
+          }
+        ],
+        "title": "OMR 복원 테스트 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+        "visibility": "hidden",
+        "visibleModals": [],
+        "visibleText": "랩\nOMR 복원 테스트 (JSON → 화면)\n유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용.\n넓게 보기\n문항유형\n유형 코드\n선택\nOBSACN · 단답형 › N지 선다\nOBSAOX · 단답형 › O/X 형\nOBMACN · 다답형 › N지 선다\nOBMAOX · 다답형 › O/X 형\nSBSANM · 단답형 › 일반형\nSBSADR · 단답형 › 그리기형\nSBSAAS · 단답형 › 영역 선택형\nSBMANM · 다답형 › 일반형\nSBMAAS · 다답형 › 영역 선택형\nSBMALD · 다답형 › 선그리기형\nSBMADD · 다답형 › 드래그앤드롭형\nESBA00 · 기본형 › 기본 서술형\nESSA00 · 단답형 › 단답 서술형\nESMA00 · 다답형 › 다답 서술형\nOMR / 정답 JSON\n폼 비우기\n복원\nOMR JSON (필드 배열 [...])\nPretty\n정답 JSON (rule_type 트리)\nPretty\n실제 화면\n문항유형을 선택하면 OMR 편집 폼이 표시됩니다."
+      }
+    },
+    "error": null,
+    "localSeconds": 0.1
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr-render.donga",
+      "refs": {
+        "e13504": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e13505": {
+          "name": "OMR 복원 테스트 (JSON → 화면)",
+          "role": "heading"
+        },
+        "e13506": {
+          "name": " 넓게 보기",
+          "role": "button"
+        },
+        "e13507": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e13508": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e13509": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e13510": {
+          "name": "문항유형",
+          "role": "heading"
+        },
+        "e13511": {
+          "name": "OMR / 정답 JSON",
+          "role": "heading"
+        },
+        "e13512": {
+          "name": " 폼 비우기",
+          "role": "button"
+        },
+        "e13513": {
+          "name": " 복원",
+          "role": "button"
+        },
+        "e13514": {
+          "name": "실제 화면",
+          "role": "heading"
+        },
+        "e13515": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e13516": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e13517": {
+          "name": "OMR JSON (필드 배열 [...])",
+          "role": "textbox"
+        },
+        "e13518": {
+          "name": " Pretty",
+          "role": "button"
+        },
+        "e13519": {
+          "name": "정답 JSON (rule_type 트리)",
+          "role": "textbox"
+        },
+        "e13520": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e13521": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e13522": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e13523": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e13524": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e13525": {
+          "name": "선택",
+          "role": "option"
+        },
+        "e13526": {
+          "name": "OBSACN · 단답형 › N지 선다",
+          "role": "option"
+        },
+        "e13527": {
+          "name": "OBSAOX · 단답형 › O/X 형",
+          "role": "option"
+        },
+        "e13528": {
+          "name": "OBMACN · 다답형 › N지 선다",
+          "role": "option"
+        },
+        "e13529": {
+          "name": "OBMAOX · 다답형 › O/X 형",
+          "role": "option"
+        },
+        "e13530": {
+          "name": "SBSANM · 단답형 › 일반형",
+          "role": "option"
+        },
+        "e13531": {
+          "name": "SBSADR · 단답형 › 그리기형",
+          "role": "option"
+        },
+        "e13532": {
+          "name": "SBSAAS · 단답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e13533": {
+          "name": "SBMANM · 다답형 › 일반형",
+          "role": "option"
+        },
+        "e13534": {
+          "name": "SBMAAS · 다답형 › 영역 선택형",
+          "role": "option"
+        },
+        "e13535": {
+          "name": "SBMALD · 다답형 › 선그리기형",
+          "role": "option"
+        },
+        "e13536": {
+          "name": "SBMADD · 다답형 › 드래그앤드롭형",
+          "role": "option"
+        },
+        "e13537": {
+          "name": "ESBA00 · 기본형 › 기본 서술형",
+          "role": "option"
+        },
+        "e13538": {
+          "name": "ESSA00 · 단답형 › 단답 서술형",
+          "role": "option"
+        },
+        "e13539": {
+          "name": "ESMA00 · 다답형 › 다답 서술형",
+          "role": "option"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e13507]\n      - link \"문제은행 마스터 CMS\" [ref=e13508]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e13520]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e13521]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e13522]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e13523]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e13524]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e13509]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - link \" 랩\" [ref=e13504]\n      - StaticText \"\"\n      - StaticText \"랩\"\n    - heading \"OMR 복원 테스트 (JSON → 화면)\" [level=2, ref=e13505]\n    - StaticText \"유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용.\"\n    - button \" 넓게 보기\" [ref=e13506]\n      - StaticText \"\"\n      - StaticText \"넓게 보기\"\n    - generic\n      - generic\n        - heading \"문항유형\" [level=3, ref=e13510]\n          - StaticText \"\"\n          - StaticText \"문항유형\"\n        - StaticText \"유형 코드\"\n        - combobox [expanded=false, ref=e13515]: 선택\n          - MenuListPopup\n            - option \"선택\" [selected, ref=e13525]\n            - group \"객관식\"\n              - option \"OBSACN · 단답형 › N지 선다\" [ref=e13526]\n              - option \"OBSAOX · 단답형 › O/X 형\" [ref=e13527]\n              - option \"OBMACN · 다답형 › N지 선다\" [ref=e13528]\n              - option \"OBMAOX · 다답형 › O/X 형\" [ref=e13529]\n            - group \"주관식\"\n              - option \"SBSANM · 단답형 › 일반형\" [ref=e13530]\n              - option \"SBSADR · 단답형 › 그리기형\" [ref=e13531]\n              - option \"SBSAAS · 단답형 › 영역 선택형\" [ref=e13532]\n              - option \"SBMANM · 다답형 › 일반형\" [ref=e13533]\n              - option \"SBMAAS · 다답형 › 영역 선택형\" [ref=e13534]\n              - option \"SBMALD · 다답형 › 선그리기형\" [ref=e13535]\n              - option \"SBMADD · 다답형 › 드래그앤드롭형\" [ref=e13536]\n            - group \"서술형\"\n              - option \"ESBA00 · 기본형 › 기본 서술형\" [ref=e13537]\n              - option \"ESSA00 · 단답형 › 단답 서술형\" [ref=e13538]\n              - option \"ESMA00 · 다답형 › 다답 서술형\" [ref=e13539]\n      - generic\n        - heading \"OMR / 정답 JSON\" [level=3, ref=e13511]\n          - StaticText \"\"\n          - StaticText \"OMR / 정답 JSON\"\n        - button \" 폼 비우기\" [ref=e13512]\n          - StaticText \"\"\n          - StaticText \"폼 비우기\"\n        - button \" 복원\" [ref=e13513]\n          - StaticText \"\"\n          - StaticText \"복원\"\n        - generic\n          - LabelText\n            - StaticText \"OMR JSON (필드 배열 \"\n            - code\n              - StaticText \"[...]\"\n            - StaticText \")\"\n          - button \" Pretty\" [ref=e13516]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"OMR JSON (필드 배열 [...])\" [ref=e13517]\n          - LabelText\n            - StaticText \"정답 JSON (rule_type 트리)\"\n          - button \" Pretty\" [ref=e13518]\n            - StaticText \"\"\n            - StaticText \"Pretty\"\n          - textbox \"정답 JSON (rule_type 트리)\" [ref=e13519]\n      - generic\n        - heading \"실제 화면\" [level=3, ref=e13514]\n          - StaticText \"\"\n          - StaticText \"실제 화면\"\n        - StaticText \"문항유형을 선택하면 OMR 편집 폼이 표시됩니다.\""
+    },
+    "error": null,
+    "localSeconds": 0.111
+  }
+}

@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"3082-own-disposable387-before-discard-current","command":["eval","--file","sources/runtime/disposable-single387-current-read.js"]},
+ {"label":"3083-own-disposable387-discard-final-once","command":["eval","--file","sources/runtime/disposable-single387-discard-final-once.js"]},
+ {"label":"3084-own-disposable387-after-discard-ui","command":["eval","(()=>({url:location.href,status:document.querySelector('#statusForm input[name=viewFlag]:checked')?.value,statusEditDisabled:document.querySelector('[data-status-edit]')?.disabled,twinCount:document.querySelector('#twinCountText')?.textContent.trim(),visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText)}))()"]},
+ {"label":"3085-own-disposable387-after-discard-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3086-own-disposable387-after-discard-current","command":["eval","--file","sources/runtime/disposable-single387-current-read.js"]},
+ {"label":"3087-own-single-family-after-discard-memberships-history","command":["eval","--file","sources/runtime/disposable-single-family-memberships-history-read.js"]},
+ {"label":"3088-own-single-family-after-discard-control-content","command":["eval","--file","sources/runtime/disposable-single-twin-original-controls-read.js"]},
+ {"label":"3089-own-disposable387-discard-edit-redirect","command":["eval","(async()=>{const r=await fetch('/item/all/modify.donga?itemId=2089387',{credentials:'same-origin'});return {httpStatus:r.status,redirected:r.redirected,resultPath:new URL(r.url).pathname,resultItemId:new URL(r.url).searchParams.get('itemId')};})()"]}
+],"tailChars":120}

@@ -1,0 +1,18 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"ai_request_accepted_completion_pending","evidenceRange":[2201,2209],"lastEvidence":"2209-own-qa-ai-first-progress-histories",
+ "summary":"자체 승인 문항2089216에서 AI 쌍둥이 생성을 한 번 요청했다. 독립 상세GET은 AI생성/요청자/요청일시와working=true를 반환하고 버튼은 생성중이다. 생성중 버튼은 비활성 속성 대신 진행 안내 팝오버로 추가요청을 막는다. 첫 재조회까지 새 AI결과나 이력은 없으며 완료·실패는 아직 판정하지 않았다. 요청 접수를 포함한 Master 업무변경은38회다.",
+ "observations":[
+  {"evidence":[2201,2202,2203,2204,2205],"result":"실제 생성창에서 AI 라디오를 선택하고 생성시작을 한 번 눌렀다. 실제 htmx post의itemId2089216/sourceTypeAI를 관측했다. 이후 독립 GET은working=true/AI생성/jaehyuk.myung/2026-11-09 19:53을 렌더했고 요청접수 토스트가 표시됐다. 이 시점의 그룹은 기존2개,이력은 기존 COPY1건이다."},
+  {"evidence":[2206,2207],"result":"생성중 버튼을 한 번 누르자 모달 대신 진행 안내 팝오버가 나왔다. 버튼 자체 disabled는false지만 workingtrue 분기에서 반환하며 동기 클릭 중 htmx요청0회였다. 생성방식·요청자·요청일시와 완료후 리스트에 추가된다는 안내가 있다."},
+  {"evidence":[2208,2209],"result":"첫 독립 진행 재조회도working=true이며 새 AI 문항·이력은 아직 없다. 처리시간의 원인이나 서버 작업 단계 W/P/F는 이 화면에서 구별되지 않는다. 재요청하지 않는다."}
+ ],
+ "artifacts":["twin-qa-ai-intent.json","sources/qa-twin-ai-processing-20261109.html","sources/runtime/qa2089216-twin-working-state.js"],
+ "persistentChanges":{"confirmedMasterOperations":38,"newMasterChangesInThisPhase":1,"operation":"AI twin request accepted; not completion","anchorItemId":2089216,"working":true,"createdAIItemIds":null,"serviceDeployment":false},
+ "remaining":[
+  "동일 AI 요청의 완료/실패 여부를 일정 간격으로 읽기 재조회한다. 후속 조회는 재요청과 구분하며 결과 ID·이력·분류/OMR·원문그룹을 대조한다.",
+  "AI 대기 중에는 자체 활성 세트를 마련해 공유 지문 HML 편집과 개별 자식 영향 등 독립 조사를 진행한다.",
+  "기능·소스 조사는 agent-browser 백그라운드로 이어가며 마우스·키보드 제어권을 점유하지 않는다. 서비스 배포는 제출하지 않는다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089216","tab":"t21 pinned research; AI working popover open","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["AI 요청 접수와 새 문항 생성 완료를 구분한다.","생성중 표시를 서버의 구체적 W/P 단계나 실패로 추정하지 않는다.","이번 단계에는 새 픽셀 캡처가 없으며 DOM·소스 근거를 저장했다.","전체 CMS 완료율은 여전히 미정이다."]
+}

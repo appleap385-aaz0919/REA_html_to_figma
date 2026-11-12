@@ -1,0 +1,83 @@
+{
+  "status": "revised_verified_ready_for_user_review",
+  "date": "2026-11-11",
+  "resumeOnlyWhenUserRequests": false,
+  "objective": "Master CMS Figma 스토리보드 전체 재검토·수정 및 최종 검증",
+  "figmaFile": "xCjdhdFkSbToMiRVlXVN2V",
+  "masterIndex": "9:20632",
+  "sourceModal": "8:16776",
+  "draftModal": "8:16922",
+  "mathPopup": "8:18346",
+  "metaFrame": "8:17074",
+  "omrFrame": "8:17928",
+  "completed": [
+    "기존 상태별 섹션76개를 기본 화면30개로 통합했습니다.",
+    "모달·펼침 패널52개와 탭·조건별 UI71개를 실제 캡처·보존 DOM·원본 소스로 표현했습니다.",
+    "일반 입력폼 템플릿으로 만든 잘못된 모달을 교체했습니다.",
+    "중복 노트40개를 합치고 공통 처리 안내1개를 번호 없는 정책으로 옮겼습니다.",
+    "기본 화면의 번호 위치27곳, OMR 요소 대응, 상태 수정 후 버튼, 행렬 진입점을 수정했습니다.",
+    "모달의 실제 변형별 요소302개에 정확한 crop 좌표를 연결했습니다. m.buttons 통합 배열을 푸터로 가정하던 로직을 제거했습니다.",
+    "기존373개 상태의 정책·예외 매핑을 유지하고 화면 전환44개를 연결했습니다.",
+    "knowledge.json의 최신 Figma 산출물 링크를 갱신했습니다."
+  ],
+  "next": [
+    "Await user review of current Figma storyboard. Preserve unverified CMS investigation scope."
+  ],
+  "connection": {
+    "brokerPtySession": 30292,
+    "brokerScript": "design-specs/revision-root-broker.py",
+    "browserConfig": "cms-knowledge/master-cms/agent-browser-session.json",
+    "rootFigmaTarget": "E02A8F76E346F3A748C4A13079BB1A17",
+    "lastScripterChildSession": null,
+    "scripterVisible": false,
+    "visibilityEvidence": "마지막 DOM에서 Scripter dialog의 hidden 속성과 Close 버튼 bbox 0×0을 확인했습니다. 닫힌 플러그인의 DOM이 남을 수 있으므로 존재 여부만으로 열림을 판단하지 않습니다.",
+    "focusEmulation": false,
+    "important": "새 WebSocket을 반복 생성하지 않습니다. 기존 broker 연결이 살아 있으면 재사용합니다. 닫힌 Scripter의 오래된 iframe 세션에서 실행하려고 하지 말고, 재개 시 실제 표시된 새 플러그인 iframe을 식별합니다.",
+    "lastAttempt": {
+      "date": "2026-11-12",
+      "result": "Connected and retained; live audit and screenshot succeeded"
+    }
+  },
+  "files": {
+    "delivery": "design-specs/figma-storyboard-revision-delivery.json",
+    "audit": "design-specs/revision-figma-audit.json",
+    "alignedPlan": "design-specs/revision-aligned-plan.json",
+    "preciseOverlayPlan": "design-specs/revision-precise-overlay-plan.json",
+    "preciseOverlayRuntime": "design-specs/revision-precise-overlays.js",
+    "primaryRuntime": "design-specs/revision-comment-primary.js",
+    "modalRuntime": "design-specs/revision-comment-modal.js",
+    "finalAlignmentRuntime": "design-specs/revision-final-alignment.js",
+    "alphaRuntime": "design-specs/revision-alpha-addon.js"
+  },
+  "limitsToPreserve": [
+    "실제 해석 HML 파일의 편집·저장 미검증",
+    "정상 디피니션 세트 ZIP의 등록·검수 미검증",
+    "다른 계정 역할의 권한 차이와 일부 오류 상황 미검증",
+    "서비스 CMS의 배포 수신·채점은 별도 확인 범위",
+    "알파벳·그리스 문자 UI2개는 원본 소스 기반 재현이며 실제 CMS 실행 캡처가 아님"
+  ],
+  "cmsServerWritesDuringStoryboardRevision": 0,
+  "priorCmsInvestigationPersistentMutations": 95,
+  "resumedAt": "2026-11-12",
+  "finalReviewStillPending": false,
+  "resumeVerification": {
+    "precisePopupComponents": 52,
+    "basePopupVariants": 69,
+    "controlBoxes": 302,
+    "outOfImageBounds": 0,
+    "reviewedSavedVisuals": [
+      "review-v4-source-precise.png",
+      "review-v4-meta-final.png",
+      "review-v4-omr-final.png"
+    ],
+    "liveFigmaCheck": "passed",
+    "preparedAuditScript": "revision-resume-audit.js",
+    "textOutside": 0,
+    "textOverlaps": 0,
+    "mathVisual": "review-v4-math-precise-final.png"
+  },
+  "lastUpdated": "2026-11-12",
+  "sessionHandoff": "docs/SESSION_HANDOFF.md",
+  "workHistory": "docs/WORK_HISTORY.md",
+  "historyIndex": "docs/investigation-history.json"
+}

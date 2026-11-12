@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"2173-own-qa-copy-history-modal","command":["eval","--file","sources/runtime/qa2089216-open-twin-history.js"],"screenshot":true},
+ {"label":"2174-own-qa-copy-history-close","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]},
+ {"label":"2175-own-qa-copy-current-twins-modal","command":["eval","--file","sources/runtime/qa2089216-open-current-twins.js"],"screenshot":true},
+ {"label":"2176-own-qa-copy-current-twins-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2177-own-qa-copy-current-twins-close","command":["eval","--file","sources/runtime/qa2089216-dismiss-dialog.js"]},
+ {"label":"2178-own-created-twin2089239-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"]},
+ {"label":"2179-own-created-twin2089239-observation","command":["eval","--file","sources/runtime/qa-twin-copy-item-observation.js"],"screenshot":true},
+ {"label":"2180-own-created-twin2089239-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":300}

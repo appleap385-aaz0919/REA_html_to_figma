@@ -1,0 +1,90 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13335]
+      - link "문제은행 마스터 CMS" [ref=e13336]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13347]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13348]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13349]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13350]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13351]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13346]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - heading "랩" [level=2, ref=e13334]
+    - StaticText "메뉴에 없는 개발·운영 보조 도구 모음"
+    - generic
+      - heading "관리자" [level=3, ref=e13337]
+      - generic
+        - StaticText ""
+        - StaticText "배포 정보"
+        - StaticText "서버 시작 2026-11-09 10:05 · 빌드 2026-11-09 09:15"
+      - button " 캐시 reload 모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)" [ref=e13338]
+        - StaticText ""
+        - StaticText "캐시 reload"
+        - StaticText "모든 서버의 공통코드 · 단원 · 사이트 캐시를 다시 읽음 (/cache/*-reload.donga)"
+      - button " 외부 번들 버전 문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)" [ref=e13339]
+        - StaticText ""
+        - StaticText "외부 번들 버전"
+        - StaticText "문항 뷰어 · 편집기 번들에 들어 있는 버전 값 (static/js/vendor)"
+      - button " 역할별 로그아웃 권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)" [ref=e13340]
+        - StaticText ""
+        - StaticText "역할별 로그아웃"
+        - StaticText "권한을 DB 로 바꾼 뒤 그 역할 · 사이트 사람들을 다시 로그인시킴, 본인 제외 (/lab/session/expire.donga)"
+    - generic
+      - heading "테스트 · 확인" [level=3, ref=e13341]
+      - link " 수식 입력기 데모 KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)" [ref=e13342]
+        - StaticText ""
+        - StaticText "수식 입력기 데모"
+        - StaticText "KaTeX + MathLive + TinyMCE 통합 검증 (/lab/view/math-demo.donga)"
+      - link " OMR 전체 유형 문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)" [ref=e13343]
+        - StaticText ""
+        - StaticText "OMR 전체 유형"
+        - StaticText "문항유형 14종 OMR 편집 미리보기 (/lab/view/omr.donga)"
+      - link " OMR 복원 테스트 OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)" [ref=e13344]
+        - StaticText ""
+        - StaticText "OMR 복원 테스트"
+        - StaticText "OMR/정답 JSON을 화면으로 복원 · hydrate 검증 (/lab/view/omr-render.donga)"
+      - link " 편집기 격리 테스트 문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)" [ref=e13345]
+        - StaticText ""
+        - StaticText "편집기 격리 테스트"
+        - StaticText "문항 편집기 · 뷰어를 기존 · iframe 탭으로 띄워 Tabler CSS 영향 · API 비교 (/lab/view/question-frame.donga)"
+    - dialog
+      - generic
+        - heading "외부 번들 버전" [level=5, ref=e13352]
+        - button "닫기" [ref=e13353]
+        - table
+          - rowgroup
+            - row
+              - columnheader "번들" [ref=e13359]
+              - columnheader "버전" [ref=e13360]
+          - row
+            - cell "donga-question-viewer" [ref=e13355]
+            - cell "1.13.6" [ref=e13356]
+          - row
+            - cell "donga-question-editor" [ref=e13357]
+            - cell "0.3.10" [ref=e13358]
+        - button "닫기" [ref=e13354]

@@ -1,0 +1,1586 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "storyboard_state_catalog",
+  "language": "ko",
+  "compiledAt": "2026-11-11",
+  "menu": {
+    "id": "item-hml",
+    "title": "문항 관리 > HML 문항 등록",
+    "environment": "개발 Master CMS",
+    "baseUrl": "https://dev-exambank.dongahub.com"
+  },
+  "evidencePathBase": "workspace_root",
+  "scope": "기존 로컬 원본·실행 기록·PNG만으로 정리한 화면 상태입니다. 화면 복제와 Figma 주석 작성의 근거로 사용합니다.",
+  "classification": {
+    "runtime": "실제 정상 UI 조작·후속 조회 결과입니다.",
+    "source": "보존한 클라이언트 코드의 선언이며 실행 증명과 다릅니다.",
+    "ui_guidance": "화면에 표시된 안내이며 서버의 모든 정책 보장은 아닙니다."
+  },
+  "limits": [
+    "문서 처리상태 W/P/R/M/Y/D/F, 문항 검수 W/S/F/D, Master 문항 상태, 평가지 상태를 서로 다른 상태축으로 다룹니다.",
+    "개별 state의 verification과 persistence를 따릅니다. 모달 열기·취소·로컬 선택을 최종 승인/폐기 실행으로 세지 않습니다.",
+    "총건수·표본 ID·파일명은 근거 당시의 사례값입니다. 최신 전체 데이터나 모든 분기의 완료를 주장하지 않습니다.",
+    "소스만 확인한 화면에는 실제 실행 화면을 나타내는 PNG를 억지로 연결하지 않습니다. screenshot은 해당 상태에 대응하는 실존 PNG만 지정합니다.",
+    "242의 미도달 스크롤·243의 잘못된 클릭은 완료 근거에서 제외합니다. 실패/가림/전환 중 캡처를 정상 화면으로 사용하지 않습니다.",
+    "HML 등록 실패와 개별 Master 문항 등록실패는 구분합니다. 상세·수정·배포 등 연결된 다른 메뉴는 각 메뉴의 스토리보드에 이어집니다.",
+    "전체 사이트 완료율은 산정하지 않습니다."
+  ],
+  "screens": [
+    {
+      "id": "HML-LIST",
+      "title": "HML 문항 등록 목록",
+      "route": "/item/hml/list.donga",
+      "states": [
+        {
+          "id": "HML-LIST-DEFAULT",
+          "title": "목록 기본 화면",
+          "trigger": "문항 관리 > HML 문항 등록에 진입합니다.",
+          "visibleChanges": [
+            "상단 검색 영역, 상태 체크박스, 조회·초기화, 보기 개수, 신규 등록 링크와 목록이 표시됩니다.",
+            "목록 열은 시험지 ID·파일명·출처·과목·학년/학기·문항(성공/실패/삭제)·평가지 등록여부·상태·등록자/등록일입니다."
+          ],
+          "policy": [
+            {
+              "text": "검색 기준은 시험지 ID/파일명/출처코드/등록자 ID이며 교육과정·학교급·과목군·과목·학년·학기·등록일·상태 필터가 있습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "등록일에는 기간 입력과 7일/30일/90일/전체가 선언되어 있습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "목록 건수는 교육과정과 관찰 시점에 따라 달라집니다. 2026-11-09의 교육과정22 116건을 현재 전체 건수로 표기하지 않습니다.",
+            "필터의 모든 조합과 날짜 경계는 실행 검증하지 않았습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-list-20261109.html",
+            "cms-knowledge/master-cms/evidence/1758-hml-current-list-state.json",
+            "cms-knowledge/master-cms/evidence/1760-hml-inventory-first100.json",
+            "cms-knowledge/master-cms/evidence/177-hml-registration-list.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/177-hml-registration-list.png"
+        },
+        {
+          "id": "HML-LIST-STATUS",
+          "title": "상태 필터로 조회",
+          "trigger": "상태를 선택하고 조회합니다.",
+          "visibleChanges": [
+            "W 등록대기/P 등록중/R 초안/M 메타추천중/Y 승인/D 폐기/F 실패를 구분합니다.",
+            "초안 필터의 실제 과거 결과는 6건이었습니다."
+          ],
+          "policy": [
+            {
+              "text": "전체 선택과 개별 상태 선택을 제공하며 조회 결과 영역을 교체합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "6건은 당시 결과이며 현재 건수가 아닙니다.",
+            "상태 필터가 존재한다는 사실과 해당 상태의 실제 데이터가 있다는 사실을 구분합니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-list-20261109.html",
+            "cms-knowledge/master-cms/evidence/223-hml-draft-filter.json",
+            "cms-knowledge/master-cms/evidence/225-hml-draft-results.json",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/225-hml-draft-results.png"
+        },
+        {
+          "id": "HML-LIST-PAGING",
+          "title": "보기 개수와 페이지 이동",
+          "trigger": "100개씩 보기로 바꾸고 다음 목록 페이지로 이동합니다.",
+          "visibleChanges": [
+            "10/30/50/100개씩 보기 선택이 있습니다.",
+            "관찰 당시 첫 페이지100행·다음 페이지16행으로 교육과정22의 116행을 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "실제 페이지 이동과 ID 중복 없는 목록 집계를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "다른 교육과정의 총계나 모든 정렬 조합은 이 결과에 포함되지 않습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-list-20261109.html",
+            "cms-knowledge/master-cms/evidence/1759-hml-list-size100.json",
+            "cms-knowledge/master-cms/evidence/1760-hml-inventory-first100.json",
+            "cms-knowledge/master-cms/evidence/1762-hml-inventory-last-page-click.json",
+            "cms-knowledge/master-cms/evidence/1763-hml-inventory-last16.json"
+          ]
+        },
+        {
+          "id": "HML-LIST-NEW",
+          "title": "신규 등록 화면 이동",
+          "trigger": "신규 등록 링크를 클릭합니다.",
+          "visibleChanges": [
+            "HML 신규 등록 폼으로 이동합니다."
+          ],
+          "policy": [
+            {
+              "text": "목록의 검색 문맥을 포함한 form.donga 주소로 이동합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "링크 이동만으로 파일이나 문서가 생성되지 않습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-list-20261109.html",
+            "cms-knowledge/master-cms/evidence/180-hml-registration-form.json",
+            "cms-knowledge/master-cms/evidence/2002-hml-qa-registration-open.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/180-hml-registration-form.png"
+        }
+      ]
+    },
+    {
+      "id": "HML-REGISTER",
+      "title": "HML 신규 등록 메타정보",
+      "route": "/item/hml/form.donga",
+      "states": [
+        {
+          "id": "HML-REGISTER-EMPTY",
+          "title": "빈 등록 폼",
+          "trigger": "신규 등록에 진입합니다.",
+          "visibleChanges": [
+            "HML 파일 업로드와 메타정보 입력 카드가 표시됩니다.",
+            "출처·단원 코드·페이지 시작/끝·용도·등록자와 하단 취소/등록 시작이 표시됩니다."
+          ],
+          "policy": [
+            {
+              "text": "출처 productId·단원 unitCode·페이지 startPageNum/endPageNum·용도 serviceUsage는 필수입니다.",
+              "basis": "source"
+            },
+            {
+              "text": "단원 maxlength20, 페이지 min1, 용도 C=공통/T=교사용이며 등록자는 disabled 표시 필드입니다.",
+              "basis": "source"
+            },
+            {
+              "text": "단원 안내는 학기12자리·대단원14자리·전체20자리입니다. 입력에는 maxlength 외 별도 pattern/minlength가 없습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "안내된 코드 길이와 서버의 실제 단원 존재 검증을 동일시하지 않습니다.",
+            "클라이언트 소스에서 페이지 시작≤끝 비교는 확인되지 않았으며 HML 등록의 역전 범위 서버 정책은 미검증입니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/180-hml-registration-form.json",
+            "cms-knowledge/master-cms/evidence/181-hml-form-scroll-end.json",
+            "cms-knowledge/master-cms/evidence/2004-hml-current-upload-controls.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/180-hml-registration-form.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/180-hml-registration-form.png",
+            "cms-knowledge/master-cms/evidence/181-hml-form-scroll-end.png"
+          ]
+        },
+        {
+          "id": "HML-REGISTER-METADATA",
+          "title": "파일·메타정보 입력 완료",
+          "trigger": "자체 QA HML과 사용 가능한 출처·실제 단원·페이지·용도를 입력합니다.",
+          "visibleChanges": [
+            "선택된 파일명과 입력값이 폼에 유지됩니다.",
+            "실제 QA664는 출처13·단원22MMAT0KOK10·페이지2~22·교사용T로 등록 전 값을 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "등록 전 로컬 입력과 등록 후 저장 결과를 구분합니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "화면은 자동 분리 후 각 문항에 일괄 적용한다고 안내합니다.",
+              "basis": "ui_guidance"
+            }
+          ],
+          "exceptions": [
+            "모든 조합이 유효하다는 뜻은 아닙니다.",
+            "이 상태까지는 등록 완료가 아닙니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2005-hml-qa-file-select.json",
+            "cms-knowledge/master-cms/evidence/2006-hml-qa-source-select.json",
+            "cms-knowledge/master-cms/evidence/2007-hml-qa-unit-fill.json",
+            "cms-knowledge/master-cms/evidence/2008-hml-qa-start-fill.json",
+            "cms-knowledge/master-cms/evidence/2009-hml-qa-end-fill.json",
+            "cms-knowledge/master-cms/evidence/2010-hml-qa-purpose-select.json",
+            "cms-knowledge/master-cms/evidence/2011-hml-qa-before-submit.json",
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html"
+          ]
+        },
+        {
+          "id": "HML-REGISTER-NOFILE",
+          "title": "파일 미선택 차단",
+          "trigger": "승인된 파일 없이 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "소스는 ‘HML 파일을 선택해 주세요.’ 토스트를 표시하고 제출을 중단합니다."
+          ],
+          "policy": [
+            {
+              "text": "Dropzone 전체 파일 수가 아니라 accepted 파일 수가 0인지 검사합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "이 HML 폼의 무파일 차단은 소스 확인 범위입니다. Definition 폼에서 같은 문구를 실제 관찰한 결과를 HML 실행 결과로 옮기지 않습니다.",
+            "반려된 파일은 선택 완료로 세지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "blocked_before_request",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/hml-registration-form.html",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        },
+        {
+          "id": "HML-REGISTER-INVALID",
+          "title": "메타정보 유효성 실패",
+          "trigger": "파일은 준비됐지만 필수값 또는 HTML 제약을 만족하지 못한 채 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "소스는 폼 검증 상태를 표시하고 ‘미입력 정보가 있습니다.’ 안내를 띄우며 요청을 막습니다."
+          ],
+          "policy": [
+            {
+              "text": "checkValidity와 공통 needs-validation 처리를 사용합니다.",
+              "basis": "source"
+            },
+            {
+              "text": "검증 실패 상태에서는 등록 버튼을 업로드 진행 상태로 잠그지 않습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "HML 폼의 모든 빈값·잘못된 값 조합을 실제 실행하지 않았습니다.",
+            "클라이언트 유효성 통과는 서버 업무 검증 통과를 보장하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "blocked_before_request",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/common-8dc66a9d95b497a50939a25f89dee707.js",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-FILE",
+      "title": "HML 파일 선택·제거",
+      "route": "/item/hml/form.donga#file",
+      "states": [
+        {
+          "id": "HML-FILE-QUEUED",
+          "title": "파일 선택 후 대기",
+          "trigger": "파일 영역 클릭 또는 드래그로 HML을 선택합니다.",
+          "visibleChanges": [
+            "파일명·크기·제거 버튼을 가진 파일 행이 표시됩니다.",
+            "정상 QA HML 선택 후 등록 전 폼 값을 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "autoProcessQueue=false이므로 파일 선택만으로 업로드하지 않습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "허용 확장자는 .hml, 최대1파일, UI 안내는 최대50MB입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "선택 완료는 HML 내용 파싱 성공이 아닙니다.",
+            "실제 파일 선택과 정상 등록은 확인했지만 드래그 방식의 파일 투입 자체는 별도 실행 근거가 없습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/2005-hml-qa-file-select.json",
+            "cms-knowledge/master-cms/evidence/2011-hml-qa-before-submit.json",
+            "cms-knowledge/master-cms/evidence/2012-hml-qa-register-submit.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json"
+          ]
+        },
+        {
+          "id": "HML-FILE-REJECT",
+          "title": "파일 형식·용량·개수 반려",
+          "trigger": "허용하지 않는 확장자, 제한 초과 파일 또는 두 번째 파일을 선택합니다.",
+          "visibleChanges": [
+            "소스는 오류 토스트를 표시하고 accepted=false인 반려 파일을 목록에서 제거합니다.",
+            "확장자/크기 오류에는 지정 문구를 사용하고 개수 초과는 Dropzone 기본 문구를 사용합니다."
+          ],
+          "policy": [
+            {
+              "text": "acceptedFiles=.hml/maxFiles1/maxFilesize50이며 용량 비교는 50×1024×1024바이트 초과입니다.",
+              "basis": "source"
+            },
+            {
+              "text": "Dropzone 확장자 비교는 소문자로 처리하는 구조입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "이 HML 폼에서 확장자·50MiB 경계·복수 파일 반려를 실제 재현한 근거는 없습니다.",
+            "내용 위장·서버 MIME/크기 제한은 미검증입니다.",
+            "Definition ZIP 폼의 실제 경계 테스트를 이 상태의 실행 근거로 재사용하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "blocked_before_upload",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/dropzone-min-636df3a8e27015e39c86a5f61372c4e5.js",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        },
+        {
+          "id": "HML-FILE-REMOVE",
+          "title": "선택 파일 제거",
+          "trigger": "파일 행의 제거 버튼을 클릭합니다.",
+          "visibleChanges": [
+            "소스는 전송 전 파일을 로컬 목록·큐에서 제거합니다."
+          ],
+          "policy": [
+            {
+              "text": "data-dz-remove에 연결된 Dropzone 제거 경로입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "실제 제거·교체는 미검증입니다.",
+            "전송 중 제거 경로에는 확인/중단이 있지만 발급 문서나 서버 객체 삭제까지 보장하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/dropzone-min-636df3a8e27015e39c86a5f61372c4e5.js",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-SOURCE",
+      "title": "출처 조회·선택",
+      "route": "#productSearchModal",
+      "states": [
+        {
+          "id": "HML-SOURCE-OPEN",
+          "title": "출처 조회 모달",
+          "trigger": "출처 옆 조회 버튼을 누릅니다.",
+          "visibleChanges": [
+            "출처코드/출처명·교육과정·학교급·과목군·과목·학년·학기·용도 필터, 초기화/조회, 결과 표·페이지 조작부, 취소/선택이 표시됩니다."
+          ],
+          "policy": [
+            {
+              "text": "조회는 /product/search-modal.donga의 결과 영역을 교체합니다.",
+              "basis": "source"
+            },
+            {
+              "text": "학교급/과목군 등에 따른 하위 선택지 연결은 모달 자체 필터 범위 안에서 처리합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "당시59건·첫10행을 확인한 것이며 전체 출처의 현재 총계나 전 페이지 검토를 의미하지 않습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/182-hml-source-picker.json",
+            "cms-knowledge/master-cms/evidence/183-hml-source-picker-end.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/183-hml-source-picker-end.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/182-hml-source-picker.png",
+            "cms-knowledge/master-cms/evidence/183-hml-source-picker-end.png"
+          ]
+        },
+        {
+          "id": "HML-SOURCE-APPLY",
+          "title": "사용 출처 적용",
+          "trigger": "선택 가능한 출처 행/라디오를 선택한 후 선택 버튼을 누릅니다.",
+          "visibleChanges": [
+            "라디오가 선택되고 모달이 닫힌 뒤 부모 출처 드롭다운에 해당 출처가 반영됩니다."
+          ],
+          "policy": [
+            {
+              "text": "실제 사용 출처134의 코드가 부모 폼에 적용됐습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "적용 코드는 productId만 바꾸며 용도 serviceUsage를 자동 선택하지 않습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "부모 폼 값 반영은 출처 관계 저장이나 HML 등록 완료가 아닙니다.",
+            "출처를 선택하지 않은 경우 선택 핸들러는 반환하는 구조입니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/184-hml-source-selected.json",
+            "cms-knowledge/master-cms/evidence/185-hml-source-applied.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/185-hml-source-applied.png"
+        },
+        {
+          "id": "HML-SOURCE-UNUSED",
+          "title": "미사용 출처 선택 제한",
+          "trigger": "출처 조회 결과에서 미사용 행을 확인합니다.",
+          "visibleChanges": [
+            "실제 조회 화면에서 미사용 출처는 회색 비활성으로, 사용 가능한 출처에는 라디오가 표시됩니다."
+          ],
+          "policy": [
+            {
+              "text": "UI에서는 사용 가능한 출처를 선택하는 흐름입니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "화면 비활성 표시와 직접 요청에 대한 서버 반려 정책을 동일시하지 않습니다.",
+            "출처 상태 변경과 신규 등록 후보의 최신 관계는 별도 출처 정책 근거를 따릅니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/182-hml-source-picker.json",
+            "cms-knowledge/master-cms/evidence/183-hml-source-picker-end.json",
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/182-hml-source-picker.png"
+        }
+      ]
+    },
+    {
+      "id": "HML-UNIT",
+      "title": "단원 조회·자동완성",
+      "route": "#unitSearchModal / #unitCodeInput",
+      "states": [
+        {
+          "id": "HML-UNIT-LOOKUP",
+          "title": "단원 조회 모달",
+          "trigger": "단원 코드 옆 조회를 누르고 코드/명으로 조회합니다.",
+          "visibleChanges": [
+            "코드/명·교육과정·학교급·과목군·과목·학년·학기 필터, 결과 표와 닫기가 표시됩니다.",
+            "실제 코드22MMAT0KOK1004030000의 조회 결과를 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "조회는 /learning/unit/search-modal.donga를 사용합니다.",
+              "basis": "source"
+            },
+            {
+              "text": "하단에는 출처 모달과 같은 선택 버튼이 없습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "이 모달의 조회 성공을 부모 단원값 적용 성공으로 쓰지 않습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/186-hml-unit-picker.json",
+            "cms-knowledge/master-cms/evidence/188-hml-unit-query-result.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/188-hml-unit-query-result.png"
+        },
+        {
+          "id": "HML-UNIT-ROW-NOAPPLY",
+          "title": "조회 행 클릭 후 부모 값 미반영",
+          "trigger": "단원 조회 결과 행을 클릭한 후 모달을 닫습니다.",
+          "visibleChanges": [
+            "관찰한 행 클릭 뒤 부모 unitCode 입력값 변경을 확인하지 못했고 닫은 후 값은 비어 있었습니다."
+          ],
+          "policy": [
+            {
+              "text": "보존한 폼 소스에는 단원 모달 행 클릭값을 부모 입력에 대입하는 핸들러가 없습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "결과 행에 선택 버튼이 있는 출처 흐름과 혼동하지 않습니다.",
+            "모든 버전의 행 클릭 사양을 일반화하지 않으며, 이번 사례는 적용 성공이 아닙니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_applied",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/189-hml-unit-row.json",
+            "cms-knowledge/master-cms/evidence/190-hml-unit-lookup-close.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/190-hml-unit-lookup-close.png"
+        },
+        {
+          "id": "HML-UNIT-AUTOCOMPLETE",
+          "title": "자동완성 후보 표시·적용",
+          "trigger": "단원 입력에 3자 이상 입력하고 후보를 선택합니다.",
+          "visibleChanges": [
+            "22M 입력의 후보와 전체 코드 입력의 한 후보를 확인했습니다.",
+            "후보 선택 후 목록이 닫히고22MMAT0KOK1004030000이 부모 입력에 유지됐습니다."
+          ],
+          "policy": [
+            {
+              "text": "실제 단원 적용은 이 자동완성 경로에서 확인했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "소스 설정은 3자/300ms debounce/cache=false/최대20후보이며 /learning/unit/codes.donga?q=...를 조회합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "화면 밖 후보까지 모두 검토했다고 세지 않습니다.",
+            "키보드 Enter/Tab/Esc의 모든 조합과 경쟁 응답·오류 복구는 미검증입니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/191-hml-unit-autocomplete.json",
+            "cms-knowledge/master-cms/evidence/192-hml-unit-full-code.json",
+            "cms-knowledge/master-cms/evidence/193-hml-unit-applied.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/193-hml-unit-applied.png"
+        },
+        {
+          "id": "HML-UNIT-NOMATCH",
+          "title": "단원 자동완성 무결과·통신 오류 경계",
+          "trigger": "일치하는 단원 코드가 없거나 후보 요청이 실패합니다.",
+          "visibleChanges": [
+            "무결과에는 ‘일치하는 단원 코드가 없습니다.’를 표시하는 소스 분기가 있습니다."
+          ],
+          "policy": [
+            {
+              "text": "자동완성 fetch에는 전용 HTTP ok 검사·catch·오류 문구가 확인되지 않습니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "무결과 문구의 실제 표시와 네트워크 실패 복구는 미검증입니다.",
+            "통신 실패를 정상 무결과 응답으로 설명하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/autoComplete.min-242d7afca41a4270c56d72daddf1a8b7.js",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-SUBMIT",
+      "title": "등록 시작·전송 결과",
+      "route": "/item/hml/form.donga",
+      "states": [
+        {
+          "id": "HML-SUBMIT-START",
+          "title": "등록 시작과 진행 표시",
+          "trigger": "유효한 파일·메타정보를 입력한 뒤 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "소스는 등록 시작 버튼을 잠그고 파일 전송 진행 영역·진행률을 갱신합니다.",
+            "실제 등록은 별도 등록 확인 모달 없이 버튼 제출로 시작했습니다."
+          ],
+          "policy": [
+            {
+              "text": "발급 POST /item/hml/upload-url.donga → 발급 URL의 binary PUT → POST /item/hml/create.donga 순서가 선언되어 있습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "실제 QA664/665/666의 정상 등록 결과를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "각 중간 HTTP 단계의 상태코드나 진행률 애니메이션의 실제 전 구간을 수집한 것은 아닙니다.",
+            "진행 중 메타 변경·파일 제거의 정합성, 중복 제출·원자성은 미검증입니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "submitted",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/2012-hml-qa-register-submit.json",
+            "cms-knowledge/master-cms/evidence/2013-hml-qa-register-post.json",
+            "cms-knowledge/master-cms/evidence/2066-hml-qa-small-set-register-submit.json",
+            "cms-knowledge/master-cms/evidence/2067-hml-qa-small-set-register-post.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json",
+            "cms-knowledge/master-cms/session-20261109-phase36.json"
+          ]
+        },
+        {
+          "id": "HML-SUBMIT-CREATED",
+          "title": "새 문서 생성과 처리 진입",
+          "trigger": "정상 등록 후 목록·새 상세를 다시 조회합니다.",
+          "visibleChanges": [
+            "새 HML 문서664의 P 등록중과 이후 R 초안을 확인했습니다.",
+            "별도 소형 세트 파일은665, 동일 구성을 새 이름으로 등록한 문서는666으로 생성됐습니다."
+          ],
+          "policy": [
+            {
+              "text": "선택/버튼 반응만이 아니라 새 문서와 분리 문항을 후속 조회해 실제 생성 결과를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "파일명만으로 중복 방지나 동일 파일 재등록의 일반 정책을 추정하지 않습니다.",
+            "각 문서 ID는 사례값이며 신규 기획의 고정값이 아닙니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "created",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2014-hml-qa-register-fresh.json",
+            "cms-knowledge/master-cms/evidence/2016-hml664-processing-state.json",
+            "cms-knowledge/master-cms/evidence/2067-hml-qa-small-set-register-post.json",
+            "cms-knowledge/master-cms/evidence/2068-hml665-small-set-initial-open.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json",
+            "cms-knowledge/master-cms/session-20261109-phase36.json"
+          ]
+        },
+        {
+          "id": "HML-SUBMIT-ERROR-RETRY",
+          "title": "업로드·발급·등록 오류와 재시도",
+          "trigger": "발급/PUT/create 단계 중 오류가 발생합니다.",
+          "visibleChanges": [
+            "소스는 승인된 파일의 전송 실패 안내와 등록 버튼 재활성화 경로를 제공합니다.",
+            "반려 파일은 제거하고 승인 파일은 남겨 다음 제출 시 QUEUED로 되돌리는 구조입니다."
+          ],
+          "policy": [
+            {
+              "text": "발급/PUT/create는 분리된 단계이며 사용자 재제출용 상태 복원이 있습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "공통 htmx 오류 처리는 대상 영역에 오류를 렌더할 수 있습니다. 모든 오류가 토스트인 것은 아닙니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "실제 HML 업로드 오류·만료·중단·재시도를 재현하지 않았습니다.",
+            "자동 네트워크 재시도·서버 롤백·잔여 업로드 객체 삭제를 보장하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "failure_not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/common-8dc66a9d95b497a50939a25f89dee707.js",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-CANCEL",
+      "title": "신규 등록 취소 확인",
+      "route": "#cancelConfirmModal",
+      "states": [
+        {
+          "id": "HML-CANCEL-OPEN",
+          "title": "취소 확인창",
+          "trigger": "등록 폼의 취소를 누릅니다.",
+          "visibleChanges": [
+            "저장하지 않고 이동할지 묻는 확인창이 열립니다.",
+            "취소/닫기와 ‘저장 하지 않고 이동’ 선택을 제공합니다."
+          ],
+          "policy": [
+            {
+              "text": "메인 취소 링크에 공통 data-confirm-cancel 동작을 적용합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "이 확인은 모든 사이드바 이동·뒤로·새로고침·탭 닫기에 공통 적용된다는 뜻이 아닙니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/evidence/198-hml-registration-cancel.json",
+            "cms-knowledge/master-cms/evidence/200-hml-discard-unsaved-form.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/198-hml-registration-cancel.png"
+        },
+        {
+          "id": "HML-CANCEL-STAY",
+          "title": "폼에 남기",
+          "trigger": "확인창을 취소하거나 닫습니다.",
+          "visibleChanges": [
+            "모달을 닫고 등록 폼에 남는 경로입니다."
+          ],
+          "policy": [
+            {
+              "text": "공통 취소 모달의 dismiss 동작입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "HML 파일을 선택한 채 취소한 경우의 모든 입력 보존은 별도 실행 검증이 필요합니다."
+          ],
+          "verification": "source_only",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/sources/assets/common-8dc66a9d95b497a50939a25f89dee707.js",
+            "cms-knowledge/master-cms/evidence/198-hml-registration-cancel.json"
+          ]
+        },
+        {
+          "id": "HML-CANCEL-LEAVE",
+          "title": "저장하지 않고 목록으로 이동",
+          "trigger": "확인창에서 저장하지 않고 이동을 선택합니다.",
+          "visibleChanges": [
+            "실제로 HML 목록으로 복귀했습니다."
+          ],
+          "policy": [
+            {
+              "text": "확인 후 원래 취소 링크로 이동합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "당시 파일 업로드/등록은 실행하지 않았습니다.",
+            "진행 중인 서버 처리 취소나 이미 생성된 문서/파일 삭제를 의미하지 않습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_submitted",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/200-hml-discard-unsaved-form.json",
+            "cms-knowledge/master-cms/evidence/201-hml-list-returned.json",
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/201-hml-list-returned.png"
+        }
+      ]
+    },
+    {
+      "id": "HML-PROCESSING",
+      "title": "등록·메타추천 처리 상태",
+      "route": "/item/hml/detail.donga",
+      "states": [
+        {
+          "id": "HML-DOC-W",
+          "title": "W 등록대기 상세",
+          "trigger": "등록대기 문서133을 엽니다.",
+          "visibleChanges": [
+            "등록은 끝났지만 아직 파싱을 시작하지 않았다는 안내와 입력정보·원본 파일·미분리 빈 영역을 표시합니다.",
+            "원본 다운로드와 목록을 제공하며 승인/폐기/재처리 버튼은 관찰되지 않았습니다."
+          ],
+          "policy": [
+            {
+              "text": "기존 W 문서의 실제 표시를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "등록 클릭부터 W를 거치는 모든 시간 순서를 실제 추적한 것은 아닙니다.",
+            "상태별 상세의 당시 DOM/스크롤 근거가 전체 픽셀 검토를 뜻하지 않습니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1765-hml-waiting133-open.json",
+            "cms-knowledge/master-cms/evidence/1766-hml-waiting133-state.json",
+            "cms-knowledge/master-cms/sources/hml-waiting133-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-DOC-P",
+          "title": "P 등록중 상세",
+          "trigger": "파싱 중 문서134 또는 신규 등록 직후 문서를 조회합니다.",
+          "visibleChanges": [
+            "HML 파싱 진행 안내와 분리 진행 영역을 표시합니다.",
+            "페이지를 닫아도 작업이 계속된다고 안내하며 다운로드/목록을 제공합니다."
+          ],
+          "policy": [
+            {
+              "text": "기존134 상세와 새 QA 문서의 P 표시를 각각 관찰했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "브라우저 종료 후 계속 처리한다는 문구는 UI 안내입니다.",
+              "basis": "ui_guidance"
+            }
+          ],
+          "exceptions": [
+            "실제 브라우저 종료 후 완료까지 추적하지 않았습니다.",
+            "2016 파일명의 processing은 실제 상태P의 증명이 아닙니다. 그 시점 문서664는R입니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1768-hml-processing134-open.json",
+            "cms-knowledge/master-cms/evidence/1769-hml-processing134-state.json",
+            "cms-knowledge/master-cms/sources/hml-processing134-20261109.html",
+            "cms-knowledge/master-cms/evidence/2014-hml-qa-register-fresh.json",
+            "cms-knowledge/master-cms/evidence/2016-hml664-processing-state.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json"
+          ]
+        },
+        {
+          "id": "HML-DOC-M",
+          "title": "M 메타추천중 상세",
+          "trigger": "초안의 최종 승인을 제출한 직후입니다.",
+          "visibleChanges": [
+            "메타추천중 안내와 완료 시 자동 승인된다는 설명을 표시합니다.",
+            "비고·평가지 선택은 읽기 전용/비활성이 되고 검수 선택·승인/폐기 실행은 제공하지 않습니다.",
+            "세트 삭제 선택의 지문·자식 본문은 처리 중에도 조회용으로 남았습니다."
+          ],
+          "policy": [
+            {
+              "text": "실제664/665/666에서 R→M을 확인했고 후속 독립 조회에서Y를 확인했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "처리 중 편집·배포 불가 및 완료 후 자동 승인 안내가 표시됩니다.",
+              "basis": "ui_guidance"
+            }
+          ],
+          "exceptions": [
+            "문서 승인/메타추천 완료가 Master 문항 승인Y나 모든 메타·OMR 생성 완료를 보장하지 않습니다.",
+            "기존 MOCK-M136은 현재F이므로 M 화면 근거로 사용하지 않습니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "processing",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2029-hml664-after-mixed-approval.json",
+            "cms-knowledge/master-cms/evidence/2030-hml664-metadata-state.json",
+            "cms-knowledge/master-cms/evidence/2082-hml665-after-set-approval-visible.json",
+            "cms-knowledge/master-cms/evidence/2084-hml665-after-set-approval-bottom.json",
+            "cms-knowledge/master-cms/evidence/2086-hml665-metadata-middle-pixels.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json",
+            "cms-knowledge/master-cms/session-20261109-phase36.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2082-hml665-after-set-approval-visible.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/2082-hml665-after-set-approval-visible.png",
+            "cms-knowledge/master-cms/evidence/2086-hml665-metadata-middle-pixels.png",
+            "cms-knowledge/master-cms/evidence/2084-hml665-after-set-approval-bottom.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-REVIEW",
+      "title": "초안 상세와 단건·세트 검수",
+      "route": "/item/hml/detail.donga?state=R",
+      "states": [
+        {
+          "id": "HML-REVIEW-SINGLE",
+          "title": "R 단건 초안 상세",
+          "trigger": "파싱 완료된 단건 문서의 상세를 엽니다.",
+          "visibleChanges": [
+            "문서 기본정보·비고·평가지 등록여부, 분리 문항 카드, 각 블록의 검수 선택, 하단 목록/폐기/승인을 표시합니다.",
+            "문서369는17개 단건 카드 전체를 겹쳐 스크롤해 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "검수값은 S 등록성공/F 등록실패/D 삭제이며 W 등록대기는 disabled입니다.",
+              "basis": "source"
+            },
+            {
+              "text": "비고 maxlength1000, 평가지 등록 Y/N을 제공합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "카드 수·검수 블록 수·문항 수는 세트가 있는 문서에서 서로 다를 수 있습니다.",
+            "AX 잘림과 잘못된 중간 클릭242/243은 하단·승인창 근거로 사용하지 않습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/sources/hml-draft-detail.html",
+            "cms-knowledge/master-cms/evidence/227-hml-draft-detail.json",
+            "cms-knowledge/master-cms/evidence/228-hml-draft-scroll-one.json",
+            "cms-knowledge/master-cms/evidence/234-hml-draft-scroll-seven.json",
+            "cms-knowledge/master-cms/evidence/244-hml-draft-end.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/227-hml-draft-detail.png"
+        },
+        {
+          "id": "HML-REVIEW-SET",
+          "title": "R 세트+단건 초안 상세",
+          "trigger": "소형 세트 문서665 또는666을 엽니다.",
+          "visibleChanges": [
+            "공유 지문과 네 자식을 묶은 세트 블록1개, 단건 블록1개가 표시됩니다.",
+            "검수 선택은2개지만 실제 문항은5개입니다."
+          ],
+          "policy": [
+            {
+              "text": "665의 첫 블록 data-item-ids에는 네 자식2089234~2089237이 들어 있고, 둘째 블록은2089238입니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "한 세트 선택이 여러 자식에 대응하는 구조입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "지문 ID는 문항 검수 payload의 자식 ID 목록과 구분합니다.",
+            "이 파일의 세트 마커·파싱 결과를 모든 HML 형식에 일반화하지 않습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "not_submitted",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml665-set-draft-20261109.html",
+            "cms-knowledge/master-cms/evidence/2068-hml665-small-set-initial-open.json",
+            "cms-knowledge/master-cms/evidence/2073-hml665-draft-bottom-pixels.json",
+            "cms-knowledge/master-cms/evidence/2074-hml665-draft-top-pixels.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2074-hml665-draft-top-pixels.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/2074-hml665-draft-top-pixels.png",
+            "cms-knowledge/master-cms/evidence/2073-hml665-draft-bottom-pixels.png"
+          ]
+        },
+        {
+          "id": "HML-REVIEW-LOCAL",
+          "title": "검수·평가지·비고 로컬 변경",
+          "trigger": "검수 S/F/D, 평가지 Y/N 또는 비고를 바꿉니다.",
+          "visibleChanges": [
+            "선택값과 비고가 로컬 폼에 반영됩니다.",
+            "선택 change는 검수 표시 클래스를 바꾸며 별도 즉시 저장을 하지 않습니다."
+          ],
+          "policy": [
+            {
+              "text": "최종 승인 전에는 itemIds/loadFlags 쌍을 생성해 서버 제출하지 않습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "실제141의 로컬 변경을 취소·초기화한 뒤 새GET에서 원래값을 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "선택한 순간을 검수 저장 완료로 표시하지 않습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "local_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/evidence/1791-hml141-choose-all-delete-local.json",
+            "cms-knowledge/master-cms/evidence/1795-hml141-restore-local-judges.json",
+            "cms-knowledge/master-cms/evidence/1804-hml141-local-no-paper-choice.json",
+            "cms-knowledge/master-cms/evidence/1808-hml141-reset-unsubmitted-local-inputs.json",
+            "cms-knowledge/master-cms/evidence/1809-hml141-final-original-values.json"
+          ]
+        },
+        {
+          "id": "HML-REVIEW-UNJUDGED",
+          "title": "W 미검수 승인 차단",
+          "trigger": "검수값W가 남은 상태에서 승인을 누릅니다.",
+          "visibleChanges": [
+            "소스는 미검수 블록 번호를 나열한 안내를 열고 닫으면 첫 미검수 위치로 스크롤·포커스를 이동합니다."
+          ],
+          "policy": [
+            {
+              "text": "승인 검사 순서는 미검수W→모두D→평가지 선택 누락→최종 확인입니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "관찰한 초안6개·74개 블록은 모두S였고 W 옵션은 disabled였습니다. 이 경고를 실제 재현하지 않았습니다.",
+            "비활성 옵션을 강제로 활성화한 결과를 정상 UI 시나리오로 쓰지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/evidence/1810-hml-six-draft-judge-inventory.json",
+            "cms-knowledge/master-cms/evidence/1811-hml141-after-readonly-draft-audit.json",
+            "cms-knowledge/master-cms/hml-six-draft-judge-inventory-20261109.json",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-REVIEW-ALL-D",
+          "title": "모든 문항 삭제 승인 차단",
+          "trigger": "모든 검수 블록을D로 선택한 뒤 승인을 누릅니다.",
+          "visibleChanges": [
+            "‘모든 문항을 삭제로 선택해 승인할 수 없습니다’ 안내를 실제 표시했습니다."
+          ],
+          "policy": [
+            {
+              "text": "전체D 검사가 평가지 미선택 검사보다 먼저 동작했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "이는 승인 경로의 차단이며 문서 전체 폐기와 다른 동작입니다.",
+            "관찰 후S로 복원했고 이 시험에서 최종 승인 요청은 제출하지 않았습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "blocked_before_request",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1791-hml141-choose-all-delete-local.json",
+            "cms-knowledge/master-cms/evidence/1792-hml141-approve-all-delete.json",
+            "cms-knowledge/master-cms/evidence/1793-hml141-all-delete-notice.json",
+            "cms-knowledge/master-cms/evidence/1794-hml141-all-delete-dismiss.json",
+            "cms-knowledge/master-cms/evidence/1795-hml141-restore-local-judges.json",
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html"
+          ]
+        },
+        {
+          "id": "HML-REVIEW-PAPER-REQUIRED",
+          "title": "평가지 등록여부 미선택 차단",
+          "trigger": "검수가 완료됐지만 평가지 Y/N을 고르지 않고 승인을 누릅니다.",
+          "visibleChanges": [
+            "‘평가지 등록여부를 선택해 주세요’ 안내가 표시됩니다.",
+            "닫으면 평가지 선택 항목으로 자동 스크롤·포커스를 보내는 경로입니다."
+          ],
+          "policy": [
+            {
+              "text": "실제369와141에서 평가지 선택 필수 안내를 확인했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "소스는 선택된 paperRegYn 라디오 존재를 검사합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "Definition 폼에는 같은 평가지 항목이 없으므로 이 정책을 공통 적용하지 않습니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "blocked_before_request",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/239-hml-draft-approve-validation.json",
+            "cms-knowledge/master-cms/evidence/240-hml-paper-required-close.json",
+            "cms-knowledge/master-cms/evidence/1788-hml141-approve-without-paper-choice.json",
+            "cms-knowledge/master-cms/evidence/1789-hml141-paper-choice-notice.json",
+            "cms-knowledge/master-cms/evidence/1790-hml141-paper-notice-dismiss.json",
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/239-hml-draft-approve-validation.png"
+        },
+        {
+          "id": "HML-REVIEW-APPROVE-CONFIRM",
+          "title": "최종 승인 확인창",
+          "trigger": "검수·평가지 선택 조건을 충족한 뒤 승인을 누릅니다.",
+          "visibleChanges": [
+            "AI 메타추천 시작과 되돌릴 수 없다는 안내, 취소/승인이 표시됩니다.",
+            "최종 확인창을 실제로 열고 취소한 경로와, 자체 QA 문서에서 최종 승인한 경로를 구분합니다."
+          ],
+          "policy": [
+            {
+              "text": "확인 전에는 서버 승인 폼을 제출하지 않습니다.",
+              "basis": "source"
+            },
+            {
+              "text": "최종 승인 때 각 블록 data-item-ids를 펼쳐 itemIds/loadFlags를 한 쌍씩 생성하고 /item/hml/approve.donga로 제출합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "승인 버튼 진입과 최종 확인의 승인을 같은 실행으로 세지 않습니다.",
+            "243은 잘못된 중간 클릭이므로 확인창 근거에서 제외합니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "confirmation_only",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/evidence/245-hml-draft-approve-modal.json",
+            "cms-knowledge/master-cms/evidence/246-hml-draft-approval-cancel.json",
+            "cms-knowledge/master-cms/evidence/1805-hml141-open-approve-confirmation.json",
+            "cms-knowledge/master-cms/evidence/1806-hml141-approve-confirmation-state.json",
+            "cms-knowledge/master-cms/evidence/1807-hml141-approve-confirmation-cancel.json",
+            "cms-knowledge/master-cms/evidence/2080-hml665-set-before-final-approval.json",
+            "cms-knowledge/master-cms/evidence/2081-hml665-final-set-approval-submit.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/245-hml-draft-approve-modal.png"
+        },
+        {
+          "id": "HML-REVIEW-MIXED-COMMIT",
+          "title": "단건 S/F/D 혼합 최종 승인",
+          "trigger": "자체664에서S1/F1/D16·평가지Y·비고를 입력하고 최종 승인을 한 번 누릅니다.",
+          "visibleChanges": [
+            "승인 안내와 M 메타추천중을 거쳐 후속 조회에서Y가 확인됐습니다.",
+            "문서의 검수 결과 S1/F1/D16이 보존됐습니다."
+          ],
+          "policy": [
+            {
+              "text": "S/F/D 혼합 최종 제출은 실제로 서버에서 수용됐습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "S문항2089216은 메타·5지 OMR/정답④가 생성됐고, F문항2089215는 메타·OMR이 비어 있었습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "모든 문항F인 HML 승인까지 검증한 것은 아닙니다.",
+            "AI 추천 완료를 모든 문항의 완전한 메타·정답·Master 승인으로 설명하지 않습니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "approved_document",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2021-hml664-local-mixed-judges.json",
+            "cms-knowledge/master-cms/evidence/2022-hml664-mixed-judge-readback.json",
+            "cms-knowledge/master-cms/evidence/2025-hml664-mixed-review-ready.json",
+            "cms-knowledge/master-cms/evidence/2028-hml664-final-mixed-approval-submit.json",
+            "cms-knowledge/master-cms/evidence/2029-hml664-after-mixed-approval.json",
+            "cms-knowledge/master-cms/evidence/2037-hml664-mixed-persisted-outcomes.json",
+            "cms-knowledge/master-cms/evidence/2052-hml664-final-verification.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json"
+          ]
+        },
+        {
+          "id": "HML-REVIEW-SET-D-COMMIT",
+          "title": "세트 D와 단건 S 최종 승인",
+          "trigger": "자체665의 세트D·단건S·평가지Y를 최종 승인합니다.",
+          "visibleChanges": [
+            "세트의 한D 선택이 자식2089234/35/36/37 각각D, 단건2089238은S로 펼쳐졌습니다.",
+            "실제 제출 뒤 R→M→Y를 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "런타임 생성폼의5쌍을 확인했으며 passageId는 별도 승인 입력으로 보내지 않았습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "자식4개 각각의 Master 상세는 목록으로 리다이렉트됐고 문서에는 지문·자식 본문이 조회용으로 남았습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "물리적 DB 삭제·공유지문 레코드 삭제는 확인하지 않았습니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "approved_document",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2075-hml665-set-delete-local-select.json",
+            "cms-knowledge/master-cms/evidence/2078-hml665-set-review-ready.json",
+            "cms-knowledge/master-cms/evidence/2080-hml665-set-before-final-approval.json",
+            "cms-knowledge/master-cms/evidence/2081-hml665-final-set-approval-submit.json",
+            "cms-knowledge/master-cms/evidence/2087-hml665-final-outcomes-read.json",
+            "cms-knowledge/master-cms/sources/hml665-set-approved-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase31.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2080-hml665-set-before-final-approval.png"
+        }
+      ]
+    },
+    {
+      "id": "HML-APPROVED",
+      "title": "승인 상세·생성 문항·평가지",
+      "route": "/item/hml/detail.donga?state=Y",
+      "states": [
+        {
+          "id": "HML-APPROVED-READ",
+          "title": "Y 승인 상세",
+          "trigger": "승인된 HML 문서를 엽니다.",
+          "visibleChanges": [
+            "입력정보·읽기 전용 비고/평가지 값·분리 문항 결과·원본 다운로드·목록이 표시됩니다.",
+            "상세628은 네 문항이 모두 초안·등록성공으로 표시되고 문항 상세/수정 링크가 있었습니다."
+          ],
+          "policy": [
+            {
+              "text": "문서 Y, 검수 S/F/D, Master 문항 R/Y/F/D는 서로 다른 상태입니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "문서 승인을 Master 문항의 승인(사용)으로 표시하지 않습니다.",
+            "처리 후 추천 메타나 OMR은 각 문항을 따로 조회해야 확인할 수 있습니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-approved-detail.html",
+            "cms-knowledge/master-cms/evidence/203-hml-approved-document.json",
+            "cms-knowledge/master-cms/evidence/204-hml-approved-detail-middle.json",
+            "cms-knowledge/master-cms/evidence/205-hml-approved-detail-bottom.json",
+            "cms-knowledge/master-cms/evidence/1784-hml-approved140-state.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/203-hml-approved-document.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/203-hml-approved-document.png",
+            "cms-knowledge/master-cms/evidence/204-hml-approved-detail-middle.png",
+            "cms-knowledge/master-cms/evidence/205-hml-approved-detail-bottom.png"
+          ]
+        },
+        {
+          "id": "HML-APPROVED-MIXED-RESULT",
+          "title": "혼합 검수 결과와 자동 평가지",
+          "trigger": "문서664의 완료 결과와 자동 생성 평가지1093을 조회합니다.",
+          "visibleChanges": [
+            "Y문서에 S/F 항목은 상세/수정 링크가 남고 D16개에는 링크가 없습니다.",
+            "자동 평가지1093에는F2089215→S2089216 두 문항이 포함됐고D는 제외됐습니다.",
+            "평가지명은 HML 확장자를 뺀 QA파일명, 생성방식 HML 생성, 당시 상태는 초안입니다."
+          ],
+          "policy": [
+            {
+              "text": "이 표본의 평가지Y는 S와F를 함께 포함하는 결과였습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "모든 실패문항 구성·모든 상태의 평가지 서버 정책으로 일반화하지 않습니다.",
+            "평가지 포함과 사용승인·서비스 배포는 별개입니다. 이후 평가지 사용정책은 평가지 메뉴 근거를 따릅니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "generated_paper",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2032-hml664-generated-paper-read.json",
+            "cms-knowledge/master-cms/evidence/2034-hml664-generated-paper1093-state.json",
+            "cms-knowledge/master-cms/evidence/2037-hml664-mixed-persisted-outcomes.json",
+            "cms-knowledge/master-cms/evidence/2048-hml664-approved-open.json",
+            "cms-knowledge/master-cms/evidence/2052-hml664-final-verification.json",
+            "cms-knowledge/master-cms/sources/hml664-approved-20261109.html",
+            "cms-knowledge/master-cms/sources/hml664-paper1093-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase30.json"
+          ]
+        },
+        {
+          "id": "HML-APPROVED-SET-D-RESULT",
+          "title": "삭제 세트 제외와 평가지 구성",
+          "trigger": "문서665 Y와 평가지1094를 조회합니다.",
+          "visibleChanges": [
+            "삭제 세트의 지문·네 자식 본문은 문서 조회에 남지만 자식 상세/수정 링크는 없습니다.",
+            "자동 평가지1094에는 남긴 단건2089238만 한 문항 포함됐습니다."
+          ],
+          "policy": [
+            {
+              "text": "실제 Y 상세와 평가지 구성·자식별 리다이렉트를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "문서의 삭제 배지·링크 없음·리다이렉트는 물리적 DB 삭제 증명이 아닙니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "generated_paper",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2087-hml665-final-outcomes-read.json",
+            "cms-knowledge/master-cms/evidence/2089-hml665-approved-top-pixels.json",
+            "cms-knowledge/master-cms/evidence/2092-hml665-approved-bottom-pixels.json",
+            "cms-knowledge/master-cms/evidence/2100-hml665-paper1094-open.json",
+            "cms-knowledge/master-cms/evidence/2101-hml665-paper1094-state-pixels.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2089-hml665-approved-top-pixels.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/2089-hml665-approved-top-pixels.png",
+            "cms-knowledge/master-cms/evidence/2092-hml665-approved-bottom-pixels.png"
+          ]
+        },
+        {
+          "id": "HML-APPROVED-PAPER-N",
+          "title": "세트·단건 유지와 평가지 미등록",
+          "trigger": "자체666을 S/S·평가지N으로 최종 승인합니다.",
+          "visibleChanges": [
+            "세트 자식4개와 단건1개가 모두S로 제출되고 후속 조회에서 문서Y·평가지N 잠긴값을 확인했습니다.",
+            "자식 상세 링크5개와 Master 초안 표시를 확인했습니다."
+          ],
+          "policy": [
+            {
+              "text": "평가지N의 실제 최종 승인 경로를 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "현재 DOM이 이전M 화면을 유지하는 시점과 독립GET의Y 완료를 구분합니다.",
+            "별도 평가지 생성 없음의 전역 DB 증명이나 Service 미노출 보장은 하지 않습니다."
+          ],
+          "verification": "runtime_saved_result",
+          "persistence": "approved_document_paper_N",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2224-hml666-own-active-set-review-inputs.json",
+            "cms-knowledge/master-cms/evidence/2228-hml666-retain-set-paper-no.json",
+            "cms-knowledge/master-cms/evidence/2230-hml666-retain-set-approval-dialog.json",
+            "cms-knowledge/master-cms/evidence/2232-hml666-retain-active-set-submit-once.json",
+            "cms-knowledge/master-cms/evidence/2233-hml666-after-approval-visible.json",
+            "cms-knowledge/master-cms/evidence/2235-hml666-metadata-independent-progress.json",
+            "cms-knowledge/master-cms/sources/hml666-approved-20261110.html",
+            "cms-knowledge/master-cms/session-20261109-phase36.json"
+          ]
+        },
+        {
+          "id": "HML-APPROVED-NAVIGATION",
+          "title": "문항 상세·수정과 원본 다운로드",
+          "trigger": "조회 가능한 문항 링크 또는 원본 다운로드를 누릅니다.",
+          "visibleChanges": [
+            "등록 문항의 Master 상세/수정 화면으로 연결됩니다.",
+            "원본은 화면의 다운로드 주소·파일명을 사용해 내려받는 흐름입니다."
+          ],
+          "policy": [
+            {
+              "text": "QA664/665의 원본을 읽기 다운로드한 후 업로드 파일과 바이트·SHA 일치를 확인했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "다운로드·문항 링크의 존재와 실제 파일 취득·화면 진입 결과를 구분합니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "다운로드 오류·로그인 리다이렉트는 공통 코드 분기이며 모든 오류를 실행하지 않았습니다.",
+            "문항 상세/수정의 전체 기능은 별도 문항 관리 스토리보드 범위입니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2038-hml664-success-item2089216-open.json",
+            "cms-knowledge/master-cms/evidence/2042-hml664-failed-item2089215-open.json",
+            "cms-knowledge/master-cms/evidence/2052-hml664-final-verification.json",
+            "cms-knowledge/master-cms/evidence/2094-hml665-single2089238-open.json",
+            "cms-knowledge/master-cms/evidence/2095-hml665-single2089238-top-pixels.json",
+            "cms-knowledge/master-cms/evidence/2098-hml665-single2089238-bottom-pixels.json",
+            "cms-knowledge/master-cms/session-20261109-phase30.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2095-hml665-single2089238-top-pixels.png",
+          "screenshots": [
+            "cms-knowledge/master-cms/evidence/2095-hml665-single2089238-top-pixels.png",
+            "cms-knowledge/master-cms/evidence/2098-hml665-single2089238-bottom-pixels.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-DISCARD",
+      "title": "문서 전체 폐기",
+      "route": "#examDiscardReasonModal / #examDiscardModal",
+      "states": [
+        {
+          "id": "HML-DISCARD-REASON",
+          "title": "빈 폐기 사유 차단",
+          "trigger": "초안에서 비고를 비운 채 폐기를 누릅니다.",
+          "visibleChanges": [
+            "‘폐기 사유를 비고에 입력해 주세요’ 안내가 실제 표시됐습니다."
+          ],
+          "policy": [
+            {
+              "text": "remark.value.trim()이 비어 있으면 최종 확인창 대신 사유 안내를 엽니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "검수D 선택과 문서 전체 폐기는 다른 경로입니다."
+          ],
+          "verification": "mixed_observed_and_source",
+          "persistence": "blocked_before_request",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/evidence/1796-hml141-discard-empty-remark.json",
+            "cms-knowledge/master-cms/evidence/1797-hml141-discard-reason-notice.json",
+            "cms-knowledge/master-cms/evidence/1798-hml141-discard-reason-dismiss.json",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-DISCARD-CONFIRM",
+          "title": "전체 폐기 확인·취소",
+          "trigger": "비고에 사유를 입력한 후 폐기를 누릅니다.",
+          "visibleChanges": [
+            "모든 문항을 삭제 처리하고 되돌릴 수 없다는 최종 확인창이 실제 열렸습니다.",
+            "이 조사에서는 최종 실행 대신 취소했고 로컬 사유를 지웠습니다."
+          ],
+          "policy": [
+            {
+              "text": "최종 확인을 수락할 때만 /item/hml/discard.donga 폼을 제출합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "최종 폐기 요청의 서버 실행 결과는 이 HML 문서에서 검증하지 않았습니다."
+          ],
+          "verification": "runtime_ui_only",
+          "persistence": "confirmation_canceled",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/evidence/1799-hml141-local-discard-reason-input.json",
+            "cms-knowledge/master-cms/evidence/1800-hml141-open-discard-confirmation.json",
+            "cms-knowledge/master-cms/evidence/1801-hml141-discard-confirmation-state.json",
+            "cms-knowledge/master-cms/evidence/1802-hml141-discard-confirmation-cancel.json",
+            "cms-knowledge/master-cms/evidence/1803-hml141-clear-local-remark.json",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-DISCARD-SUBMIT",
+          "title": "최종 폐기 제출 경계",
+          "trigger": "폐기 최종 확인창에서 실행을 수락합니다.",
+          "visibleChanges": [
+            "소스는 확인창을 닫고 폐기 폼을 제출하는 경로를 제공합니다."
+          ],
+          "policy": [
+            {
+              "text": "examDiscardForm은 remark를 포함해 POST /item/hml/discard.donga로 전송합니다.",
+              "basis": "source"
+            }
+          ],
+          "exceptions": [
+            "새 HML 문서에 대한 전체 폐기 최종 제출은 미실행입니다.",
+            "승인 문서 내 세트D의 실제 결과나 Definition 전체 폐기 결과를 이 경로의 실행 증명으로 대체하지 않습니다."
+          ],
+          "verification": "source_only",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-draft141-20261109.html",
+            "cms-knowledge/master-cms/research/hml-registration-behavior.md",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-DISCARD-READ",
+          "title": "D 폐기 문서 조회",
+          "trigger": "기존 폐기 문서138을 엽니다.",
+          "visibleChanges": [
+            "폐기 후 조회만 가능하고 복원할 수 없다는 안내가 표시됩니다.",
+            "분리 문항 내용·삭제 표시, 원본 다운로드·목록을 확인했으며 복원 UI는 관찰되지 않았습니다."
+          ],
+          "policy": [
+            {
+              "text": "기존 D 상태의 실제 표시를 확인했습니다.",
+              "basis": "runtime"
+            },
+            {
+              "text": "복원 불가 문구는 UI 안내입니다.",
+              "basis": "ui_guidance"
+            }
+          ],
+          "exceptions": [
+            "이 문서가 폐기되는 순간을 실행한 것은 아닙니다.",
+            "UI의 복원 불가 안내가 모든 서버·DB 복구 가능성의 기술적 부재를 증명하지는 않습니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1771-hml-discarded138-open.json",
+            "cms-knowledge/master-cms/evidence/1772-hml-discarded138-state.json",
+            "cms-knowledge/master-cms/sources/hml-discarded138-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HML-ERROR",
+      "title": "실패 상세와 재등록 안내",
+      "route": "/item/hml/detail.donga?state=F",
+      "states": [
+        {
+          "id": "HML-ERROR-PARSE",
+          "title": "F 파일 파싱 시작 실패",
+          "trigger": "기존 실패595 또는139의 상세를 엽니다.",
+          "visibleChanges": [
+            "HML 파일 자체 오류로 파싱을 시작하지 못했고 원본을 수정해 재등록하라는 안내가 표시됩니다.",
+            "분리 문항이 없고 원본 다운로드·목록을 제공합니다. 직접 재시도 버튼은 관찰되지 않았습니다."
+          ],
+          "policy": [
+            {
+              "text": "F 문서 중 파일 단계 실패 사례의 실제 표시입니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "화면 안내만으로 정확한 파일 결함·서버 상세 오류코드를 추정하지 않습니다.",
+            "214와215는 같은 정상 화면의 중복이며 별도 실패 상태 두 개로 세지 않습니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/sources/hml-failed-detail.html",
+            "cms-knowledge/master-cms/sources/hml-parse-failed139-20261109.html",
+            "cms-knowledge/master-cms/evidence/214-hml-failed-detail.json",
+            "cms-knowledge/master-cms/evidence/215-hml-failed-bottom.json",
+            "cms-knowledge/master-cms/evidence/1775-hml-failed139-state.json",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/214-hml-failed-detail.png"
+        },
+        {
+          "id": "HML-ERROR-METADATA",
+          "title": "F 메타추천 실패",
+          "trigger": "기존 문서136의 상세를 엽니다.",
+          "visibleChanges": [
+            "메타추천 실패 안내가 표시되고 이미 분리된 문항과 등록성공 정보는 남습니다.",
+            "조회만 가능·다시 처리 불가·원본 재등록 안내와 다운로드/목록을 제공합니다."
+          ],
+          "policy": [
+            {
+              "text": "같은F여도 파일 파싱 실패와 남아 있는 문항·표시가 다릅니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "파일명 MOCK-M은 현재 M 상태의 증명이 아닙니다.",
+            "이 실패를 실제 유발하거나 정상 UI로 재시도한 것은 아닙니다."
+          ],
+          "verification": "existing_state_observed",
+          "persistence": "not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1777-hml-metadatafailed136-open.json",
+            "cms-knowledge/master-cms/evidence/1778-hml-metadatafailed136-state.json",
+            "cms-knowledge/master-cms/sources/hml-meta-failed136-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase27.json"
+          ]
+        },
+        {
+          "id": "HML-ERROR-REREGISTER",
+          "title": "원본 수정 후 신규 재등록 안내",
+          "trigger": "실패 안내에 따라 원본을 내려받고 외부에서 수정한 뒤 HML 신규 등록으로 돌아갑니다.",
+          "visibleChanges": [
+            "실패 화면의 직접 재시도 버튼 대신 원본 다운로드·목록을 통한 신규 등록 경로를 사용하도록 안내합니다."
+          ],
+          "policy": [
+            {
+              "text": "원본을 수정해 재등록하라는 문구는 관찰한 UI 안내입니다.",
+              "basis": "ui_guidance"
+            },
+            {
+              "text": "정상 신규 파일의 실제 등록·처리 완료는 별도 QA664/665/666에서 확인했습니다.",
+              "basis": "runtime"
+            }
+          ],
+          "exceptions": [
+            "실패 원본을 실제 수정해 재등록하여 성공한 end-to-end 사례는 없습니다.",
+            "기존 실패 문서 덮어쓰기·새 문서 발급·중복 방지·연결 계승의 일반 서버 정책을 추정하지 않습니다."
+          ],
+          "verification": "guidance_only",
+          "persistence": "failed_file_repair_not_executed",
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/214-hml-failed-detail.json",
+            "cms-knowledge/master-cms/evidence/1775-hml-failed139-state.json",
+            "cms-knowledge/master-cms/evidence/1778-hml-metadatafailed136-state.json",
+            "cms-knowledge/master-cms/sources/hml-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase30.json",
+            "cms-knowledge/master-cms/session-20261109-phase31.json",
+            "cms-knowledge/master-cms/session-20261109-phase36.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

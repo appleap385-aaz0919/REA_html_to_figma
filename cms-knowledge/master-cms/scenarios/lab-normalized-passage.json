@@ -1,0 +1,89 @@
+{
+  "steps": [
+    {
+      "label": "1487-lab-passage-normalize-direct-tab",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-select-direct-tab.js"
+      ]
+    },
+    {
+      "label": "1488-lab-passage-normalized-json-input",
+      "command": [
+        "fill",
+        "#frameDocInput",
+        "{\"contentVersion\": \"v3\", \"outType\": \"split\", \"content\": {\"passageHtml\": \"<p>$N=360=2^a\\\\times3^b\\\\times5^c$이고, $a,b,c$는 자연수입니다. 다음 물음에 답하시오.</p>\"}, \"assets\": [], \"passageKey\": \"\"}"
+      ]
+    },
+    {
+      "label": "1489-lab-passage-normalized-load",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocLoad').click();return {action:'Load locally normalized passage test JSON'};})()"
+      ]
+    },
+    {
+      "label": "1490-lab-passage-normalized-direct-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1491-lab-passage-normalized-direct-save",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=direct] [data-call=save]').click();return {action:'Validate normalized direct passage locally'};})()"
+      ]
+    },
+    {
+      "label": "1492-lab-passage-normalized-frame-tab",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-select-frame-tab.js"
+      ]
+    },
+    {
+      "label": "1493-lab-passage-normalized-frame-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1494-lab-passage-normalized-compare",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare normalized passage test documents'};})()"
+      ]
+    },
+    {
+      "label": "1495-lab-passage-normalized-frame-save",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('[data-side=frame] [data-call=save]').click();return {action:'Validate normalized iframe passage locally'};})()"
+      ]
+    },
+    {
+      "label": "1496-lab-passage-normalized-final",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-editor-frame-observation.js"
+      ]
+    },
+    {
+      "label": "1497-lab-passage-normalized-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 600
+}

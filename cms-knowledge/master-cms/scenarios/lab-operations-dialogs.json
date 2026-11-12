@@ -1,0 +1,15 @@
+{"steps":[
+ {"label":"1407-lab-bundle-version-close","command":["eval","--file","sources/runtime/lab-close-visible-modal.js"]},
+ {"label":"1408-lab-cache-dialog-open","command":["eval","(() => {document.querySelector('[data-bs-target=\"#cacheReloadModal\"]').click();return {action:'Open cache selection only'};})()"]},
+ {"label":"1409-lab-cache-initial-state","command":["eval","--file","sources/runtime/lab-page-observation.js"]},
+ {"label":"1410-lab-cache-all-select","command":["eval","(() => {const m=document.querySelector('#cacheReloadModal.show');if(!m)throw Error('Cache dialog absent');const c=m.querySelector('[data-check-all]');if(!c)throw Error('All selector absent');c.click();return {action:'Select all cache options locally; no reload'};})()"]},
+ {"label":"1411-lab-cache-selected-state","command":["eval","--file","sources/runtime/lab-page-observation.js"]},
+ {"label":"1412-lab-cache-dialog-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1413-lab-cache-cancel","command":["eval","--file","sources/runtime/lab-close-visible-modal.js"]},
+ {"label":"1414-lab-session-dialog-open","command":["eval","(() => {document.querySelector('[data-bs-target=\"#sessionExpireModal\"]').click();return {action:'Open role logout selection only'};})()"]},
+ {"label":"1415-lab-session-initial-state","command":["eval","--file","sources/runtime/lab-page-observation.js"]},
+ {"label":"1416-lab-session-master-user-local-select","command":["eval","(() => {const m=document.querySelector('#sessionExpireModal.show');if(!m)throw Error('Role dialog absent');const c=[...m.querySelectorAll('input')].find(e=>e.value==='MASTER:USER');if(!c)throw Error('Observed MASTER USER option absent');c.click();return {action:'Select MASTER USER locally; no logout'};})()"]},
+ {"label":"1417-lab-session-selected-state","command":["eval","--file","sources/runtime/lab-page-observation.js"]},
+ {"label":"1418-lab-session-selected-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1419-lab-session-cancel","command":["eval","--file","sources/runtime/lab-close-visible-modal.js"]}
+],"tailChars":700}

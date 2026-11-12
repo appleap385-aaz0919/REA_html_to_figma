@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"2210-hml-active-set-registration-open","command":["open","https://dev-exambank.dongahub.com/item/hml/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2211-hml-active-set-file-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml"]},
+ {"label":"2212-hml-active-set-source-select","command":["select","select[name=productId]","133"]},
+ {"label":"2213-hml-active-set-unit-fill","command":["fill","#unitCodeInput","22HMAC1GHG1006010000"]},
+ {"label":"2214-hml-active-set-start-fill","command":["fill","input[name=startPageNum]","1"]},
+ {"label":"2215-hml-active-set-end-fill","command":["fill","input[name=endPageNum]","1"]},
+ {"label":"2216-hml-active-set-purpose-select","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"2217-hml-active-set-before-submit","command":["eval","--file","sources/runtime/registration-upload-observation.js"]}
+],"tailChars":200}

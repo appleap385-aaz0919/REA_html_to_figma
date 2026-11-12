@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"1952-qa-item2089175-omr-fresh-snapshot","command":["snapshot"]},
+ {"label":"1953-qa-item2089175-omr-fresh-state","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089175')throw Error('Expected QA item');const m=document.getElementById('omrPreviewModal');return {url:location.href,modal:m?{id:m.id,class:m.className,text:m.innerText,display:getComputedStyle(m).display,iframe:m.querySelector('iframe')?{src:m.querySelector('iframe').getAttribute('src')}:null}:null,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),buttons:[...document.querySelectorAll('.omr-preview-btn')].map(e=>({dataset:{...e.dataset},disabled:e.disabled})),styles:document.visibilityState};})()"]}
+],"tailChars":900}

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2456-own-copy2089239-concurrent-form-a-open",
+  "startedUtc": "2026-11-10T01:31:46.486897+00:00",
+  "command": [
+    "eval",
+    "(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089239'||document.querySelector('.modal.show'))throw Error('Own copy current detail required');const link=document.querySelector('a[data-modify-url]');if(!link?.dataset.modifyUrl.includes('itemId=2089239'))throw Error('Own observed modify link required');link.click();return {clickedHref:link.getAttribute('href')};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.167
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10",
+      "result": {
+        "clickedHref": "/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10&openModify=Y"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.285
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089239&pageNum=1&pageSize=10",
+      "refs": {
+        "e32202": {
+          "name": "다크모드 전환",
+          "role": "button"
+        },
+        "e32203": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e32204": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e32205": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e32206": {
+          "name": "로그아웃",
+          "role": "button"
+        },
+        "e32207": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e32208": {
+          "name": "OMR 미리보기",
+          "role": "button"
+        },
+        "e32209": {
+          "name": "입력 형태 선택",
+          "role": "button"
+        },
+        "e32210": {
+          "name": "입력 형태 선택",
+          "role": "button"
+        },
+        "e32211": {
+          "name": "입력 형태 선택",
+          "role": "button"
+        },
+        "e32212": {
+          "name": "입력 형태 선택",
+          "role": "button"
+        },
+        "e32213": {
+          "name": "입력 형태 선택",
+          "role": "button"
+        },
+        "e32214": {
+          "name": "정답 추가",
+          "role": "button"
+        },
+        "e32215": {
+          "name": "홈",
+          "role": "link"
+        },
+        "e32216": {
+          "name": "문항 관리",
+          "role": "button"
+        },
+        "e32217": {
+          "name": "평가지 관리",
+          "role": "link"
+        },
+        "e32218": {
+          "name": "문항 출처 관리",
+          "role": "link"
+        },
+        "e32219": {
+          "name": "랩",
+          "role": "link"
+        },
+        "e32220": {
+          "name": "",
+          "role": "radio"
+        },
+        "e32221": {
+          "name": "일반 텍스트",
+          "role": "button"
+        },
+        "e32222": {
+          "name": "수식입력기",
+          "role": "button"
+        },
+        "e32223": {
+          "name": "이미지 URL",
+          "role": "button"
+        },
+        "e32224": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e32225": {
+          "name": "",
+          "role": "radio"
+        },
+        "e32226": {
+          "name": "일반 텍스트",
+          "role": "button"
+        },
+        "e32227": {
+          "name": "수식입력기",
+          "role": "button"
+        },
+        "e32228": {
+          "name": "이미지 URL",
+          "role": "button"
+        },
+        "e32229": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e32230": {
+          "name": "",
+          "role": "radio"
+        },
+        "e32231": {
+          "name": "일반 텍스트",
+          "role": "button"
+        },
+        "e32232": {
+          "name": "수식입력기",
+          "role": "button"
+        },
+        "e32233": {
+          "name": "이미지 URL",
+          "role": "button"
+        },
+        "e32234": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e32235": {
+          "name": "",
+          "role": "radio"
+        },
+        "e32236": {
+          "name": "일반 텍스트",
+          "role": "button"
+        },
+        "e32237": {
+          "name": "수식입력기",
+          "role": "button"
+        },
+        "e32238": {
+          "name": "이미지 URL",
+          "role": "button"
+        },
+        "e32239": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e32240": {
+          "name": "",
+          "role": "radio"
+        },
+        "e32241": {
+          "name": "일반 텍스트",
+          "role": "button"
+        },
+        "e32242": {
+          "name": "수식입력기",
+          "role": "button"
+        },
+        "e32243": {
+          "name": "이미지 URL",
+          "role": "button"
+        },
+        "e32244": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e32245": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e32246": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e32247": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e32248": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e32151",
+        "@e32152",
+        "@e32153",
+        "@e32154",
+        "@e32155",
+        "@e32156",
+        "@e32157",
+        "@e32158",
+        "@e32159",
+        "@e32160",
+        "@e32161",
+        "@e32162",
+        "@e32163",
+        "@e32164",
+        "@e32165",
+        "@e32166",
+        "@e32167",
+        "@e32168",
+        "@e32169",
+        "@e32170",
+        "@e32173",
+        "@e32174",
+        "@e32175",
+        "@e32176",
+        "@e32177",
+        "@e32178",
+        "@e32179",
+        "@e32180",
+        "@e32181",
+        "@e32182",
+        "@e32183",
+        "@e32184",
+        "@e32185",
+        "@e32186",
+        "@e32187",
+        "@e32188",
+        "@e32189",
+        "@e32190",
+        "@e32191",
+        "@e32192",
+        "@e32193",
+        "@e32194",
+        "@e32195",
+        "@e32197",
+        "@e32198",
+        "@e32199",
+        "@e32200",
+        "@e32201"
+      ],
+      "snapshot": "- complementary\n  - generic\n    - button \"메뉴\" [expanded=false, ref=e32204]\n    - link \"문제은행 마스터 CMS\" [ref=e32205]\n  - list\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - link \"홈\" [ref=e32215]\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - button \"문항 관리\" [expanded=true, ref=e32216]\n      - generic\n        - link \"전체 문항\" [ref=e32245]\n        - link \"HML 문항 등록\" [ref=e32246]\n        - link \"디피니션 문항 등록\" [ref=e32247]\n        - link \"쌍둥이 그룹 관리\" [ref=e32248]\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - link \"평가지 관리\" [ref=e32217]\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - link \"문항 출처 관리\" [ref=e32218]\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - link \"랩\" [ref=e32219]\n- banner\n  - StaticText \"마스터\"\n  - button \"다크모드 전환\" [ref=e32202]\n  - generic\n    - StaticText \"접속자 \"\n    - strong\n      - StaticText \"jaehyuk.myung\"\n  - form\n    - button \"로그아웃\" [ref=e32206]\n- generic\n  - list \"breadcrumbs\"\n    - listitem [level=1]\n      - ListMarker \"1. \"\n      - StaticText \"시스템 관리\"\n    - listitem [level=1]\n      - ListMarker \"2. \"\n      - StaticText \"문항 관리\"\n    - listitem [level=1]\n      - ListMarker \"3. \"\n      - StaticText \"전체 문항\"\n    - listitem [level=1]\n      - ListMarker \"4. \"\n      - StaticText \"문항 수정\"\n  - heading \"문항 수정\" [level=2, ref=e32203]\n  - StaticText \"문항 ID\"\n  - StaticText \"2089239 (2089006)\"\n  - StaticText \"지문 ID\"\n  - StaticText \"-\"\n  - StaticText \"원본 파일\"\n  - StaticText \"-\"\n  - StaticText \"상태\"\n  - StaticText \"초안\"\n  - StaticText \"배포 여부\"\n  - StaticText \"미배포\"\n  - StaticText \"생성 방식\"\n  - StaticText \"복제\"\n  - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e32207]\n  - button \"OMR 미리보기\" [ref=e32208]\n  - radio [checked=false, ref=e32220]\n  - button \"입력 형태 선택\" [expanded=false, ref=e32209]\n  - generic\n    - button \"일반 텍스트\" [ref=e32221]\n    - button \"수식입력기\" [ref=e32222]\n    - button \"이미지 URL\" [ref=e32223]\n  - button \"삭제\" [disabled, ref=e32224]\n  - radio [checked=false, ref=e32225]\n  - button \"입력 형태 선택\" [expanded=false, ref=e32210]\n  - generic\n    - button \"일반 텍스트\" [ref=e32226]\n    - button \"수식입력기\" [ref=e32227]\n    - button \"이미지 URL\" [ref=e32228]\n  - button \"삭제\" [disabled, ref=e32229]\n  - radio [checked=false, ref=e32230]\n  - button \"입력 형태 선택\" [expanded=false, ref=e32211]\n  - generic\n    - button \"일반 텍스트\" [ref=e32231]\n    - button \"수식입력기\" [ref=e32232]\n    - button \"이미지 URL\" [ref=e32233]\n  - button \"삭제\" [disabled, ref=e32234]\n  - radio [checked=false, ref=e32235]\n  - button \"입력 형태 선택\" [expanded=false, ref=e32212]\n  - generic\n    - button \"일반 텍스트\" [ref=e32236]\n    - button \"수식입력기\" [ref=e32237]\n    - button \"이미지 URL\" [ref=e32238]\n  - button \"삭제\" [disabled, ref=e32239]\n  - radio [checked=false, ref=e32240]\n  - button \"입력 형태 선택\" [expanded=false, ref=e32213]\n  - generic\n    - button \"일반 텍스트\" [ref=e32241]\n    - button \"수식입력기\" [ref=e32242]\n    - button \"이미지 URL\" [ref=e32243]\n  - button \"삭제\" [disabled, ref=e32244]\n  - button \"정답 추가\" [ref=e32214]"
+    },
+    "error": null,
+    "localSeconds": 1.195
+  }
+}

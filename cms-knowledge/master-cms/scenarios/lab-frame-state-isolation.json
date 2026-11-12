@@ -1,0 +1,15 @@
+{"steps":[
+ {"label":"1448-lab-frame-local-choice-off","command":["eval","(() => {document.querySelector('[data-side=frame] [data-call=mcOff]').click();return {action:'Disable multiple choice in iframe test only'};})()"]},
+ {"label":"1449-lab-frame-diverged-compare","command":["eval","(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare after iframe-only API change'};})()"]},
+ {"label":"1450-lab-frame-switch-direct","command":["eval","(() => {document.querySelector('a[href=\"#frameTabDirect\"]').click();return {action:'Return direct tab without loading'};})()"]},
+ {"label":"1451-lab-frame-direct-retained-state","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]},
+ {"label":"1452-lab-frame-switch-back-iframe","command":["eval","(() => {document.querySelector('a[href=\"#frameTabFrame\"]').click();return {action:'Return iframe tab without loading'};})()"]},
+ {"label":"1453-lab-frame-divergence-retained","command":["eval","(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare after round-trip tab switching'};})()"]},
+ {"label":"1454-lab-frame-destroy-local","command":["eval","(() => {document.querySelector('[data-side=frame] [data-call=destroy]').click();return {action:'Destroy iframe test editor only'};})()"]},
+ {"label":"1455-lab-frame-get-after-destroy","command":["eval","(() => {document.querySelector('[data-side=frame] [data-call=getDocument]').click();return {action:'Get document after destroy'};})()"]},
+ {"label":"1456-lab-frame-reload-seed","command":["eval","(() => {document.querySelector('#frameDocLoad').click();return {action:'Reload original JSON into both test panes'};})()"]},
+ {"label":"1457-lab-frame-iframe-restored-state","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]},
+ {"label":"1458-lab-frame-direct-remount","command":["eval","(() => {document.querySelector('a[href=\"#frameTabDirect\"]').click();return {action:'Remount pending direct pane'};})()"]},
+ {"label":"1459-lab-frame-reload-compare","command":["eval","(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare after resetting both from seed'};})()"]},
+ {"label":"1460-lab-frame-restored-final","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]}
+],"tailChars":1100}

@@ -1,0 +1,74 @@
+{
+  "steps": [
+    {
+      "label": "1725-paper341-test-reentry-modify",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/paper/modify.donga?paperId=341&curriculum=22&pageNum=1&pageSize=30"
+      ]
+    },
+    {
+      "label": "1726-paper341-test-reentry-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1727-paper341-restore-original-name",
+      "command": [
+        "fill",
+        "input[name=paperName]",
+        "[MOCK-HML-M] 템플릿_시험지2 (복제10)"
+      ]
+    },
+    {
+      "label": "1728-paper341-restore-original-page",
+      "command": [
+        "fill",
+        "input[name=startPageNum]",
+        "2"
+      ]
+    },
+    {
+      "label": "1729-paper341-restore-before-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1730-paper341-restore-save-submit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-restore-original.js"
+      ]
+    },
+    {
+      "label": "1731-paper341-restore-save-readback",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "1732-paper341-restored-detail-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "1733-paper341-restored-detail-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 600
+}

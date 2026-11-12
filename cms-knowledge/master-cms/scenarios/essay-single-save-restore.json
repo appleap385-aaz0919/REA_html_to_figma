@@ -1,0 +1,17 @@
+{
+  "steps": [
+    {"label":"829-single-essay-before-save","command":["snapshot"]},
+    {"label":"830-single-essay-preview-close","command":["click","{ref}"],"scopeAfter":"- dialog","refPattern":"- button \"닫기\" \\[ref=(e\\d+)\\]","expectMatches":2,"matchIndex":1},
+    {"label":"831-single-essay-full-apply-open","command":["click","{ref}"],"refPattern":"- button \"전체 반영\" \\[ref=(e\\d+)\\]","expectMatches":2},
+    {"label":"832-single-essay-full-apply-confirm","command":["snapshot"]},
+    {"label":"833-single-essay-full-apply-save","command":["click","{ref}"],"scopeAfter":"- dialog","refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+    {"label":"834-single-essay-master-readback","command":["snapshot"]},
+    {"label":"835-single-essay-edit-open","command":["open","https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088985&pageNum=1&pageSize=10"]},
+    {"label":"836-single-essay-edit-settled","command":["snapshot"]},
+    {"label":"837-single-essay-omr-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"OMR 수정\" \\[ref=(e\\d+)\\]"},
+    {"label":"838-single-essay-omr-tab-open","command":["press","Enter"]},
+    {"label":"839-single-essay-restored-model","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+    {"label":"840-single-essay-restored-visual","command":["snapshot"],"screenshot":true}
+  ],
+  "tailChars":5000
+}

@@ -1,0 +1,424 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e2634]
+      - link "문제은행 마스터 CMS" [ref=e2635]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e2637]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e2638]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e2642]
+          - link "HML 문항 등록" [ref=e2643]
+          - link "디피니션 문항 등록" [ref=e2644]
+          - link "쌍둥이 그룹 관리" [ref=e2645]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e2639]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e2640]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e2641]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e2636]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+      - heading "전체 문항" [level=2, ref=e2633]
+      - generic
+        - combobox [expanded=false, ref=e2648]: 22
+          - MenuListPopup
+            - option "교육과정 선택" [ref=e2697]
+            - option "22" [selected, ref=e2698]
+            - option "15" [ref=e2699]
+        - combobox [expanded=false, ref=e2649]: 학교급 선택
+          - MenuListPopup
+            - option "학교급 선택" [selected, ref=e2700]
+            - option "초등" [ref=e2701]
+            - option "중학" [ref=e2702]
+            - option "고등" [ref=e2703]
+        - combobox [expanded=false, ref=e2650]: 과목군 선택
+          - MenuListPopup
+            - option "과목군 선택" [selected, ref=e2704]
+            - option "수학군" [ref=e2705]
+        - list
+          - listitem [level=1, ref=e2706] clickable [cursor:pointer]
+            - LabelText
+              - checkbox [checked=true, ref=e2875]
+            - StaticText "전체"
+      - button "" [ref=e2646]
+        - StaticText ""
+      - StaticText "선택한 단원 내에서 검색됩니다."
+      - generic
+        - combobox [expanded=false, ref=e2651]: 문항 ID
+          - MenuListPopup
+            - option "문항 ID" [selected, ref=e2707]
+            - option "지문 ID" [ref=e2708]
+            - option "지문" [ref=e2709]
+            - option "문제" [ref=e2710]
+            - option "출처코드" [ref=e2711]
+            - option "등록자 ID" [ref=e2712]
+            - option "원본 파일명" [ref=e2713]
+        - textbox "문항 ID / 지문 ID / 지문 / 문제 / 출처코드 / 등록자 ID" [ref=e2652]
+        - combobox [expanded=false, ref=e2653]: 난이도 전체
+          - MenuListPopup
+            - option "난이도 전체" [selected, ref=e2714]
+            - option "최상" [ref=e2715]
+            - option "상" [ref=e2716]
+            - option "중" [ref=e2717]
+            - option "하" [ref=e2718]
+            - option "최하" [ref=e2719]
+        - combobox [expanded=false, ref=e2654]: HML 변환
+          - MenuListPopup
+            - option "생성 방식 전체" [ref=e2720]
+            - option "HML 변환" [selected, ref=e2721]
+            - option "디피니션" [ref=e2722]
+            - option "AI생성" [ref=e2723]
+            - option "복제" [ref=e2724]
+        - combobox [expanded=false, ref=e2655]: 형태1 전체
+          - MenuListPopup
+            - option "형태1 전체" [selected, ref=e2725]
+            - option "객관식" [ref=e2726]
+            - option "주관식" [ref=e2727]
+            - option "서술형" [ref=e2728]
+        - combobox [expanded=false, disabled, ref=e2656]: 형태2 전체
+          - MenuListPopup
+            - option "형태2 전체" [disabled, ref=e2729]
+            - option "단답형" [disabled, ref=e2730]
+            - option "다답형" [disabled, ref=e2731]
+            - option "단답형" [disabled, ref=e2732]
+            - option "다답형" [disabled, ref=e2733]
+            - option "기본형" [disabled, ref=e2734]
+            - option "단답형" [disabled, ref=e2735]
+            - option "다답형" [disabled, ref=e2736]
+        - combobox [expanded=false, disabled, ref=e2657]: 형태3 전체
+          - MenuListPopup
+            - option "형태3 전체" [disabled, ref=e2737]
+            - option "N지 선다" [disabled, ref=e2738]
+            - option "O/X 형" [disabled, ref=e2739]
+            - option "N지 선다" [disabled, ref=e2740]
+            - option "O/X 형" [disabled, ref=e2741]
+            - option "일반형" [disabled, ref=e2742]
+            - option "그리기형" [disabled, ref=e2743]
+            - option "영역 선택형" [disabled, ref=e2744]
+            - option "일반형" [disabled, ref=e2745]
+            - option "영역선택형" [disabled, ref=e2746]
+            - option "선그리기형" [disabled, ref=e2747]
+            - option "드래그앤 드롭형" [disabled, ref=e2748]
+            - option "기본 서술형" [disabled, ref=e2749]
+            - option "단답 서술형" [disabled, ref=e2750]
+            - option "다답 서술형" [disabled, ref=e2751]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e2668]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e2669]
+          - button "30일" [ref=e2670]
+          - button "90일" [ref=e2671]
+          - button "전체" [ref=e2672]
+        - StaticText "배포"
+        - LabelText [ref=e2658] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e2673]
+          - StaticText "전체"
+        - LabelText [ref=e2659] clickable [cursor:pointer]
+          - checkbox "배포됨" [checked=true, ref=e2674]
+          - StaticText "배포됨"
+        - LabelText [ref=e2660] clickable [cursor:pointer]
+          - checkbox "미배포" [checked=true, ref=e2675]
+          - StaticText "미배포"
+        - combobox [expanded=false, disabled, ref=e2661]: 배포 대상 전체
+          - MenuListPopup
+            - option "배포 대상 전체" [disabled, ref=e2752]
+            - option "AI출제마법사 CMS" [disabled, ref=e2753]
+            - option "개발 서비스" [disabled, ref=e2754]
+        - StaticText "상태"
+        - LabelText [ref=e2662] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e2676]
+          - StaticText "전체"
+        - LabelText [ref=e2663] clickable [cursor:pointer]
+          - checkbox "초안" [checked=true, ref=e2677]
+          - StaticText "초안"
+        - LabelText [ref=e2664] clickable [cursor:pointer]
+          - checkbox "실패(재등록)" [checked=true, ref=e2678]
+          - StaticText "실패(재등록)"
+        - LabelText [ref=e2665] clickable [cursor:pointer]
+          - checkbox "승인(사용)" [checked=true, ref=e2679]
+          - StaticText "승인(사용)"
+        - LabelText [ref=e2666] clickable [cursor:pointer]
+          - checkbox "승인(미사용)" [checked=true, ref=e2680]
+          - StaticText "승인(미사용)"
+        - LabelText [ref=e2667] clickable [cursor:pointer]
+          - checkbox "폐기" [checked=true, ref=e2681]
+          - StaticText "폐기"
+        - generic
+          - button " 초기화" [ref=e2682]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e2683]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e2876]: 10개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [selected, ref=e2877]
+            - option "30개씩 보기" [ref=e2878]
+            - option "50개씩 보기" [ref=e2879]
+            - option "100개씩 보기" [ref=e2880]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "11760"
+        - StaticText "건"
+        - table
+          - rowgroup
+            - row
+              - columnheader "문항 ID" [ref=e2990]
+              - columnheader "문제" [ref=e2991]
+              - columnheader "출처" [ref=e2992]
+              - columnheader "단원" [ref=e2993]
+              - columnheader "형태" [ref=e2994]
+              - columnheader "난이도" [ref=e2995]
+              - columnheader "쌍둥이" [ref=e2996]
+              - columnheader "상태" [ref=e2997]
+              - columnheader "배포" [ref=e2998]
+              - columnheader "등록자 · 등록일" [ref=e2999]
+          - row
+            - cell "2088652" [ref=e2890]
+              - StaticText "2088652"
+            - cell "오른쪽 그림에서 $\\rm \\overline{PA}$, $\\rm \\overline{PB}$가 원 $\\rm O$의 접선이고 두 점 $\\rm A,$ $\\rm B$가 그 접점이다. $\\rm \\overline{AO} = 6 \\rm cm$, $\\rm \\angle P = 30^{\\circ}$일 때, 어두운 부분의 넓이를 구하여라." [ref=e2891]
+              - link "오른쪽 그림에서 $\\rm \\overline{PA}$, $\\rm \\overline{PB}$가 원 $\\rm O$의 접선이고 두 점 $\\rm A,$ $\\rm B$가 그 접점이다. $\\rm \\overline{AO} = 6 \\rm cm$, $\\rm \\angle P = 30^{\\circ}$일 때, 어두운 부분의 넓이를 구하여라." [ref=e3000]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e2892]
+              - StaticText "22-M-MA-T0-3-1-DCL-DA-2022"
+            - cell "04 원주각의 활용" [ref=e2893]
+              - StaticText "04 원주각의 활용"
+            - cell "주관식-단답형 일반형" [ref=e2894]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell "상" [ref=e2895]
+            - cell "0개" [ref=e2896]
+            - cell "초안" [ref=e2897]
+            - cell "-" [ref=e2898]
+            - cell "sungkuk.chae 2026-11-04" [ref=e2899]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-11-04"
+          - row
+            - cell "2088651" [ref=e2900]
+              - StaticText "2088651"
+            - cell "오른쪽 그림에서 점 $\\rm O$는$△ \\rm ABC$의 내접원이고, 내접원의 반지름의 길이는 $3~ \\rm cm$이다. $△ \\rm ABC$의 넓이가 $24\\hspace{0.375em}\\mathrm{cm}^{2}$일 때, $△ \\rm ABC$의 둘레의 길이를 구하여라." [ref=e2901]
+              - link "오른쪽 그림에서 점 $\\rm O$는$△ \\rm ABC$의 내접원이고, 내접원의 반지름의 길이는 $3~ \\rm cm$이다. $△ \\rm ABC$의 넓이가 $24\\hspace{0.375em}\\mathrm{cm}^{2}$일 때, $△ \\rm ABC$의 둘레의 길이를 구하여라." [ref=e3001]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e2902]
+              - StaticText "22-M-MA-T0-3-1-DCL-DA-2022"
+            - cell "04 원주각의 활용" [ref=e2903]
+              - StaticText "04 원주각의 활용"
+            - cell "주관식-단답형 일반형" [ref=e2904]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell "중" [ref=e2905]
+            - cell "0개" [ref=e2906]
+            - cell "초안" [ref=e2907]
+            - cell "-" [ref=e2908]
+            - cell "sungkuk.chae 2026-11-04" [ref=e2909]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-11-04"
+          - row
+            - cell "2088650" [ref=e2910]
+              - StaticText "2088650"
+            - cell "다음 그림에서 $\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이고 $\\angle \\rm B=80^{\\circ}$일 때, $\\angle \\rm A$의 크기는?$80^{\\circ}$$90^{\\circ}$$95^{\\circ}$$100^{\\circ}$$110^{\\circ}$" [ref=e2911]
+              - link "다음 그림에서 $\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이고 $\\angle \\rm B=80^{\\circ}$일 때, $\\angle \\rm A$의 크기는?$80^{\\circ}$$90^{\\circ}$$95^{\\circ}$$100^{\\circ}$$110^{\\circ}$" [ref=e3002]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e2912]
+              - StaticText "22-M-MA-T0-3-1-DCL-DA-2022"
+            - cell "04 원주각의 활용" [ref=e2913]
+              - StaticText "04 원주각의 활용"
+            - cell "객관식-단답형 N지 선다" [ref=e2914]
+              - StaticText "객관식-단답형"
+              - StaticText "N지 선다"
+            - cell "상" [ref=e2915]
+            - cell "0개" [ref=e2916]
+            - cell "초안" [ref=e2917]
+            - cell "-" [ref=e2918]
+            - cell "sungkuk.chae 2026-11-04" [ref=e2919]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-11-04"
+          - row
+            - cell "2088649" [ref=e2920]
+              - StaticText "2088649"
+            - cell "다음 그림에서 원 $\\rm O$의 반지름의 길이가 $6~ \\rm cm$이고  $\\overline{\\rm PO} =2~ \\rm cm$일 때, $\\overline{\\rm CD \\it }$의 길이는?$8 \\sqrt{3} \\rm cm$$8 \\sqrt{2} \\rm cm$$4 \\sqrt{3} \\rm cm$$4 \\sqrt{2} \\rm cm$$2 \\sqrt{2} \\rm cm$" [ref=e2921]
+              - link "다음 그림에서 원 $\\rm O$의 반지름의 길이가 $6~ \\rm cm$이고  $\\overline{\\rm PO} =2~ \\rm cm$일 때, $\\overline{\\rm CD \\it }$의 길이는?$8 \\sqrt{3} \\rm cm$$8 \\sqrt{2} \\rm cm$$4 \\sqrt{3} \\rm cm$$4 \\sqrt{2} \\rm cm$$2 \\sqrt{2} \\rm cm$" [ref=e3003]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e2922]
+              - StaticText "22-M-MA-T0-3-1-DCL-DA-2022"
+            - cell "04 원주각의 활용" [ref=e2923]
+              - StaticText "04 원주각의 활용"
+            - cell "객관식-단답형 N지 선다" [ref=e2924]
+              - StaticText "객관식-단답형"
+              - StaticText "N지 선다"
+            - cell "상" [ref=e2925]
+            - cell "0개" [ref=e2926]
+            - cell "초안" [ref=e2927]
+            - cell "-" [ref=e2928]
+            - cell "sungkuk.chae 2026-11-04" [ref=e2929]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-11-04"
+          - row
+            - cell "2088648" [ref=e2930]
+              - StaticText "2088648"
+            - cell "다항식$(a+b-c)^2 +(a-b+c)^2 +(-a+b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $-4(ab-2bc+ca) from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$를 인수분해하면? $3(a-b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $3(a-b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a+b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a-b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a-b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$" [ref=e2931]
+              - link "다항식$(a+b-c)^2 +(a-b+c)^2 +(-a+b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $-4(ab-2bc+ca) from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$를 인수분해하면? $3(a-b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $3(a-b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a+b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a-b-c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$ $2(a-b+c)^2 from \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv= 족보닷컴(zocbo.com) 본 학습자료는 족보닷컴에서 수집, 자료화, 입력 등의 작업을 수행하여 제공해 드리는 자료입니다. 무단으로 배포, 재판매시 법적 조치를 받을 수 있습니다. \\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv\\equiv=$" [ref=e3004]
+            - cell [ref=e2932]
+            - cell "06 다항식의 인수분해 (3), (4)" [ref=e2933]
+              - StaticText "06 다항식의 인수분해 (3), (4)"
+            - cell "객관식-단답형 N지 선다" [ref=e2934]
+              - StaticText "객관식-단답형"
+              - StaticText "N지 선다"
+            - cell "중" [ref=e2935]
+            - cell "0개" [ref=e2936]
+            - cell "승인(사용)" [ref=e2937]
+            - cell "-" [ref=e2938]
+            - cell "- 2026-11-04" [ref=e2939]
+              - StaticText "-"
+              - StaticText "2026-11-04"
+          - row
+            - cell "2088358" [ref=e2940]
+              - StaticText "2088358"
+            - cell "다음은 어느 중학교 $1$학년 학생 $50$명과 $2$학년 학생 $100$명이 만든 모형 글라이더의 비행시간에 대한 상대도수의 분포를 나타낸 그래프이다. 다음 두 학생의 대화를 읽고 ㉠~㉤에 알맞은 수를 구하시오.주원 : $1$학년 글라이더의 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉠}~}} \\%$는 $15$초 이상 비행했네.영석 : $2$학년 학생들의 글라이더 중 비행시간이 $15$초 이상인 글라이더는 $2$학년 전체의 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉡}~}} \\%$야.주원 : 그럼 비행시간이 $15$초 이상인 $1$학년, $2$학년 학생들의 글라이더 수의 합은 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉢}~}}$개야.영석 : $1$학년에서 비행시간 기록이 $5$번째로 좋은 글라이더는 $1$학년, $2$학년 전체에서 몇 번째로 기록이 좋은 것일까?주원 : 그 기록은 $1$학년, $2$학년 전체 중 기록이 좋은 쪽에서 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉣}~}}$번째에서 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉤}~}}$번째까지 해당한다고 할 수 있어." [ref=e2941]
+              - link "다음은 어느 중학교 $1$학년 학생 $50$명과 $2$학년 학생 $100$명이 만든 모형 글라이더의 비행시간에 대한 상대도수의 분포를 나타낸 그래프이다. 다음 두 학생의 대화를 읽고 ㉠~㉤에 알맞은 수를 구하시오.주원 : $1$학년 글라이더의 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉠}~}} \\%$는 $15$초 이상 비행했네.영석 : $2$학년 학생들의 글라이더 중 비행시간이 $15$초 이상인 글라이더는 $2$학년 전체의 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉡}~}} \\%$야.주원 : 그럼 비행시간이 $15$초 이상인 $1$학년, $2$학년 학생들의 글라이더 수의 합은 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉢}~}}$개야.영석 : $1$학년에서 비행시간 기록이 $5$번째로 좋은 글라이더는 $1$학년, $2$학년 전체에서 몇 번째로 기록이 좋은 것일까?주원 : 그 기록은 $1$학년, $2$학년 전체 중 기록이 좋은 쪽에서 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉣}~}}$번째에서 ${\\boxed{\\rule[-0.12em]{0pt}{0.6em}~{\\scriptstyle ㉤}~}}$번째까지 해당한다고 할 수 있어." [ref=e3005]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e2942]
+              - StaticText "22-M-MA-T0-1-2-SMT-WB-2022"
+            - cell "02 줄기와 잎 그림" [ref=e2943]
+              - StaticText "02 줄기와 잎 그림"
+            - cell "주관식-다답형 일반형" [ref=e2944]
+              - StaticText "주관식-다답형"
+              - StaticText "일반형"
+            - cell "상" [ref=e2945]
+            - cell "2개" [ref=e2946]
+            - cell "초안" [ref=e2947]
+            - cell "-" [ref=e2948]
+            - cell "hari.im 2026-10-27" [ref=e2949]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "2088357" [ref=e2950]
+              - StaticText "2088357"
+            - cell "다음은 어느 학교 학생 $a$명의 여름 방학 동안의 독서 시간을 조사하여 나타낸 상대도수의 분포표이다. $100$ 이하의 자연수 중 $a$의 값이 될 수 있는 가장 큰 수를 구하시오." [ref=e2951]
+              - link "다음은 어느 학교 학생 $a$명의 여름 방학 동안의 독서 시간을 조사하여 나타낸 상대도수의 분포표이다. $100$ 이하의 자연수 중 $a$의 값이 될 수 있는 가장 큰 수를 구하시오." [ref=e3006]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e2952]
+              - StaticText "22-M-MA-T0-1-2-SMT-WB-2022"
+            - cell "02 줄기와 잎 그림" [ref=e2953]
+              - StaticText "02 줄기와 잎 그림"
+            - cell "주관식-단답형 일반형" [ref=e2954]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell "상" [ref=e2955]
+            - cell "0개" [ref=e2956]
+            - cell "초안" [ref=e2957]
+            - cell "-" [ref=e2958]
+            - cell "hari.im 2026-10-27" [ref=e2959]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "2088356" [ref=e2960]
+              - StaticText "2088356"
+            - cell "“세계보건기구($\\rm WHO$)는 하루 나트륨 섭취 제한량을 $2000 \\rm\\,\\mathrm{mg}$으로 제시하고 있다.”는 뉴스를 들은 지효는 편의점 식품의 나트륨 함량을 조사하여 학교 신문에 다음과 같은 기사를 실었다. 지효가 작성한 기사의 내용이 적절한지 판단하고, 그 이유를 쓰시오. 나트륨 과다 섭취는 고혈압과 심혈관 질환 등의 질병을 일으킨다고 합니다.다음 그림은 편의점 식품의 나트륨 함량을 조사하여 나타낸 것입니다. 이 그림에서 나트륨 함량이 $1200\\rm\\,\\mathrm{mg}$ 이상 $1300\\rm\\,\\mathrm{mg}$ 미만인 편의점 식품 수는 나트륨 함량이 $900 \\rm\\,\\mathrm{mg}$ 이상 $1000 \\rm\\,\\mathrm{mg}$ 미만인 편의점 식품 수의 $2$배 정도로 나타났습니다." [ref=e2961]
+              - link "“세계보건기구($\\rm WHO$)는 하루 나트륨 섭취 제한량을 $2000 \\rm\\,\\mathrm{mg}$으로 제시하고 있다.”는 뉴스를 들은 지효는 편의점 식품의 나트륨 함량을 조사하여 학교 신문에 다음과 같은 기사를 실었다. 지효가 작성한 기사의 내용이 적절한지 판단하고, 그 이유를 쓰시오. 나트륨 과다 섭취는 고혈압과 심혈관 질환 등의 질병을 일으킨다고 합니다.다음 그림은 편의점 식품의 나트륨 함량을 조사하여 나타낸 것입니다. 이 그림에서 나트륨 함량이 $1200\\rm\\,\\mathrm{mg}$ 이상 $1300\\rm\\,\\mathrm{mg}$ 미만인 편의점 식품 수는 나트륨 함량이 $900 \\rm\\,\\mathrm{mg}$ 이상 $1000 \\rm\\,\\mathrm{mg}$ 미만인 편의점 식품 수의 $2$배 정도로 나타났습니다." [ref=e3007]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e2962]
+              - StaticText "22-M-MA-T0-1-2-SMT-WB-2022"
+            - cell "02 줄기와 잎 그림" [ref=e2963]
+              - StaticText "02 줄기와 잎 그림"
+            - cell "주관식-단답형 일반형" [ref=e2964]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell "중" [ref=e2965]
+            - cell "0개" [ref=e2966]
+            - cell "초안" [ref=e2967]
+            - cell "-" [ref=e2968]
+            - cell "hari.im 2026-10-27" [ref=e2969]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "2088355 지문 ID 2088353" [ref=e2970]
+              - StaticText "2088355"
+              - StaticText "지문 ID 2088353"
+            - cell "남학생과 여학생의 스마트폰 사용 시간에 대해 잘못 설명한 학생을 찾고, 그 이유를 쓰시오.진하 : 스마트폰 사용 시간이 $4$시간 미만인 학생 수의 상대도수는 남학생이 여학생보다 더 커.민주 : 그럼, 스마트폰 사용 시간이 $4$시간 미만인 학생은 남학생이 여학생보다 많겠네." [ref=e2971]
+              - link "남학생과 여학생의 스마트폰 사용 시간에 대해 잘못 설명한 학생을 찾고, 그 이유를 쓰시오.진하 : 스마트폰 사용 시간이 $4$시간 미만인 학생 수의 상대도수는 남학생이 여학생보다 더 커.민주 : 그럼, 스마트폰 사용 시간이 $4$시간 미만인 학생은 남학생이 여학생보다 많겠네." [ref=e3008]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e2972]
+              - StaticText "22-M-MA-T0-1-2-SMT-WB-2022"
+            - cell "02 줄기와 잎 그림" [ref=e2973]
+              - StaticText "02 줄기와 잎 그림"
+            - cell "주관식-단답형 일반형" [ref=e2974]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell [ref=e2975]
+            - cell "0개" [ref=e2976]
+            - cell "초안" [ref=e2977]
+            - cell "-" [ref=e2978]
+            - cell "hari.im 2026-10-27" [ref=e2979]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "2088354 지문 ID 2088353" [ref=e2980]
+              - StaticText "2088354"
+              - StaticText "지문 ID 2088353"
+            - cell "스마트폰 사용 시간이 남학생 중에서 $12$번째로 많은 학생이 있다. 이 학생의 스마트폰 사용 시간은 $1$학년 전체에서 $a$번째로 많다고 할 때, 가장 큰 $a$의 값을 구하시오." [ref=e2981]
+              - link "스마트폰 사용 시간이 남학생 중에서 $12$번째로 많은 학생이 있다. 이 학생의 스마트폰 사용 시간은 $1$학년 전체에서 $a$번째로 많다고 할 때, 가장 큰 $a$의 값을 구하시오." [ref=e3009]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e2982]
+              - StaticText "22-M-MA-T0-1-2-SMT-WB-2022"
+            - cell "02 줄기와 잎 그림" [ref=e2983]
+              - StaticText "02 줄기와 잎 그림"
+            - cell "주관식-단답형 일반형" [ref=e2984]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell [ref=e2985]
+            - cell "0개" [ref=e2986]
+            - cell "초안" [ref=e2987]
+            - cell "-" [ref=e2988]
+            - cell "hari.im 2026-10-27" [ref=e2989]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+        - generic
+          - StaticText "총 11760건 중 1∼10 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e2881]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e2882]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e2883]
+          - listitem [level=1]
+            - link "2" [ref=e2884]
+          - listitem [level=1]
+            - link "3" [ref=e2885]
+          - listitem [level=1]
+            - link "4" [ref=e2886]
+          - listitem [level=1]
+            - link "5" [ref=e2887]
+          - listitem [level=1]
+            - link "다음" [ref=e2888]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e2889]
+              - StaticText ""

@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "local_qa_fixture_manifest_not_import_schema",
+  "createdAtUtc": "2026-11-10T03:13:40.873088+00:00",
+  "scope": "local files only; no network, browser, CMS API, or upload",
+  "report": "definition-input-schema-review-20261110.md",
+  "outputZip": "fixtures/QA-DIFI-20261110-04-MULTI3.zip",
+  "outputZipBytes": 2860,
+  "outputZipSha256": "e53927cb286a91f50353b2f55b2dc8ff7d9c38a7d66fa8e606aa97a240f58171",
+  "outputMemberCount": 3,
+  "outputMembers": [
+    "2116111012.json",
+    "2116111022.json",
+    "2116111032.json"
+  ],
+  "qaPositiveInt32Range": [
+    2116111011,
+    2116111040
+  ],
+  "all12QaExternalIdsDistinct": true,
+  "masterIdJsonType": "string (preserved from all three originals)",
+  "allowedChangedLeafPaths": [
+    "$.questionId",
+    "$.masterId",
+    "$.questionContent",
+    "$.questionGrading.questionGradingId",
+    "$.questionGrading.questionCorrects[0].questionCorrectId"
+  ],
+  "expectedParsing": {
+    "singleItems": 3,
+    "onePerJson": true,
+    "sets": 0,
+    "status": "expectation_only_not_executed",
+    "multiJsonSupportVerified": false,
+    "orderingVerified": false,
+    "filenameMasterIdConstraintVerified": false
+  },
+  "markerLocation": "simple p/span immediately inside the existing d-question; existing HTML remains byte-identical after removing the insertion",
+  "preservedContent": [
+    "questionType",
+    "questionAttribute (including original status, grade, year, and timestamps)",
+    "existing questionContent HTML after removing the marker insertion",
+    "correctContent",
+    "explanationContent",
+    "scriptContent",
+    "hintContent",
+    "wrongAnswerAvoidContent",
+    "creatorId",
+    "all dates including lastModifiedDtmAtLinks sentinel",
+    "questionResources=[]",
+    "questionGrading fields except its permitted external IDs",
+    "questionCorrects fields except the permitted external correct ID"
+  ],
+  "noAddedAssetsScriptsExecutablesOrOtherMembers": true,
+  "observedLegacySchema": {
+    "topLevelFieldCount": 16,
+    "topLevelKeys": [
+      "questionId",
+      "masterId",
+      "questionType",
+      "questionAttribute",
+      "questionContent",
+      "correctContent",
+      "explanationContent",
+      "scriptContent",
+      "hintContent",
+      "wrongAnswerAvoidContent",
+      "creatorId",
+      "createdDtm",
+      "lastModifiedDtm",
+      "questionResources",
+      "questionGrading",
+      "lastModifiedDtmAtLinks"
+    ],
+    "resourceField": "questionResources",
+    "resourcesFieldExists": false,
+    "allQuestionResourcesEmpty": true,
+    "setInputFieldsObserved": false,
+    "nonEmptyResourceObjectSchemaObserved": false,
+    "schemaIsObservedSampleNotServerContract": true
+  },
+  "notUsedAsFormatEvidence": [
+    {
+      "reference": 2644,
+      "reason": "Parent supplied: Master2088663 is a seed fixture without an original file; cannot prove ZIP set format. Not reopened in this subtask."
+    },
+    {
+      "reference": 2645,
+      "reason": "Parent supplied: documents171/172 have ZIP labels but HML addresses and are mock data; excluded from normal format evidence. Not reopened in this subtask."
+    }
+  ],
+  "proposedRegistrationMetadata": {
+    "provenance": "Parent supplied; no CMS verification in this subtask",
+    "sourceReference": "Source13 / Y / 22-M-MA-T0-1-1-SMT-TP-2022",
+    "unitCode": "22MMAT0KOK1001020000",
+    "pageRange": "1~3",
+    "usage": "공통(C)",
+    "relationshipToQuestionAttribute": "unverified; no alignment, overrides, or precedence assumed"
+  },
+  "prior530QaContext": {
+    "file": "definition-qa-import-intent.json",
+    "originalDownloadEvidence": 1895,
+    "originalDocumentUnchanged": 530,
+    "previousFixture": "fixtures/QA-DIFI-20261109-01.zip",
+    "previousCreatedDocumentId": 661,
+    "use": "Historical provenance/context only; previous QA JSON was not read or reused; previous success does not establish three-member parsing."
+  },
+  "validation": {
+    "status": "passed_local_archive_checks",
+    "zipfileReopened": true,
+    "zipCrcCheck": "passed",
+    "allThreeMembersParsedAsJson": true,
+    "memberListExactlyThreeJsonFiles": true,
+    "twelveIdsDistinctPositiveInt32": true,
+    "idTypePreserved": true,
+    "markerExactlyOncePerQuestion": true,
+    "onlyFiveLeafFieldsChangedPerMember": true,
+    "allUnchangedFieldsComparedRecursively": true,
+    "originalRawJsonBytesReconstructedExactly": true,
+    "originalZipFilesUnchanged": true,
+    "cmsUploaded": false,
+    "serverParsingVerified": false,
+    "reportAndManifestUtf8Verified": true,
+    "reportHangulCodepointCount": 3259,
+    "memberNamesEqualQaMasterIds": true,
+    "jsonBytesUnchangedByExplicitMemberRename": true,
+    "filenameMismatchVariantExecuted": false,
+    "finalReopenedArchiveAndManifestAndReportChecks": "passed after explicitly approved member rename"
+  },
+  "members": [
+    {
+      "originalDefinitionDocumentId": 430,
+      "originalZip": "fixtures/definition430-original-20261110.zip",
+      "originalZipBytes": 922,
+      "originalZipSha256": "187953660b497c9a96a9540ffd3b8bf8774a166ab5e42a7e49db5b8411473353",
+      "originalMember": "108093600.json",
+      "originalJsonBytes": 1667,
+      "originalJsonSha256": "959d04bf115682a8238d75b9f8b46f47f1cbc7e79c2d6847add7bdb3c423ffc9",
+      "evidence": {
+        "file": "evidence/2648-definition430529-original-downloads-read.json",
+        "archiveBytesEqualEvidenceBase64": true,
+        "archiveSha256EqualsEvidence": true
+      },
+      "outputMember": "2116111012.json",
+      "outputJsonBytes": 1730,
+      "outputJsonSha256": "fa4297c0d54e0d7ced9e3bca5a72369a1be66ffef19140e9c808671462c02c44",
+      "questionType": "ESSAY",
+      "marker": "[QA-DIFI-20261110-04-ESSAY]",
+      "markerInsertionHtml": "<p><span>[QA-DIFI-20261110-04-ESSAY]</span></p>",
+      "originalExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 21563,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "108093600",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 21557,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 30287,
+          "jsonType": "integer"
+        }
+      ],
+      "qaExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 2116111011,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "2116111012",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 2116111013,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 2116111014,
+          "jsonType": "integer"
+        }
+      ],
+      "changedLeafPaths": [
+        "$.questionId",
+        "$.masterId",
+        "$.questionContent",
+        "$.questionGrading.questionGradingId",
+        "$.questionGrading.questionCorrects[0].questionCorrectId"
+      ],
+      "unchangedFieldsVerified": true,
+      "originalJsonBytesExactlyRestoredAfterReversingAllowedChanges": true,
+      "relatedIdReferences": {
+        "observedIdentityFieldCount": 4,
+        "additionalReferencesObserved": false,
+        "creatorIdPreserved": true,
+        "htmlKeysAndCircleIdsPreserved": true
+      },
+      "expectedParsedItemCount": 1,
+      "expectedParsedItemStatus": "expectation_only_not_uploaded_or_executed",
+      "outputFilenameStemEqualsQaMasterId": true,
+      "jsonBytesUnchangedByMemberRename": true
+    },
+    {
+      "originalDefinitionDocumentId": 529,
+      "originalZip": "fixtures/definition529-original-20261110.zip",
+      "originalZipBytes": 941,
+      "originalZipSha256": "789cb82386a718ae3ea3a6333045eac1ee67b5af3032340a77c943397c3049ec",
+      "originalMember": "750772.json",
+      "originalJsonBytes": 2064,
+      "originalJsonSha256": "eb532004007a740dbd69575d5f1b72de5afef6cfb170d699b52e6886bcbd588f",
+      "evidence": {
+        "file": "evidence/2648-definition430529-original-downloads-read.json",
+        "archiveBytesEqualEvidenceBase64": true,
+        "archiveSha256EqualsEvidence": true
+      },
+      "outputMember": "2116111022.json",
+      "outputJsonBytes": 2129,
+      "outputJsonSha256": "c0ac64210a205b523d5b94edaa8075ade3228f14bbac3fc13f03f786d76a7d73",
+      "questionType": "FIVE_CHOICE",
+      "marker": "[QA-DIFI-20261110-04-FIVE]",
+      "markerInsertionHtml": "<p><span>[QA-DIFI-20261110-04-FIVE]</span></p>",
+      "originalExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 16856,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "750772",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 16848,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 21810,
+          "jsonType": "integer"
+        }
+      ],
+      "qaExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 2116111021,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "2116111022",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 2116111023,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 2116111024,
+          "jsonType": "integer"
+        }
+      ],
+      "changedLeafPaths": [
+        "$.questionId",
+        "$.masterId",
+        "$.questionContent",
+        "$.questionGrading.questionGradingId",
+        "$.questionGrading.questionCorrects[0].questionCorrectId"
+      ],
+      "unchangedFieldsVerified": true,
+      "originalJsonBytesExactlyRestoredAfterReversingAllowedChanges": true,
+      "relatedIdReferences": {
+        "observedIdentityFieldCount": 4,
+        "additionalReferencesObserved": false,
+        "creatorIdPreserved": true,
+        "htmlKeysAndCircleIdsPreserved": true
+      },
+      "expectedParsedItemCount": 1,
+      "expectedParsedItemStatus": "expectation_only_not_uploaded_or_executed",
+      "outputFilenameStemEqualsQaMasterId": true,
+      "jsonBytesUnchangedByMemberRename": true
+    },
+    {
+      "originalDefinitionDocumentId": 530,
+      "originalZip": "fixtures/definition530-original-20261109.zip",
+      "originalZipBytes": 942,
+      "originalZipSha256": "11430149e0f5a8a297c0be75303461476099022fccc2b45ba68f8c38c5213b54",
+      "originalMember": "750774.json",
+      "originalJsonBytes": 1808,
+      "originalJsonSha256": "02f3c37d652cde7a0d67edf0751af6d264630002a1bc9fa536985bda5f8b5600",
+      "evidence": {
+        "file": "evidence/1895-definition530-proxy-file-read.json",
+        "archiveBytesEqualEvidenceBase64": true,
+        "archiveSha256EqualsEvidence": true
+      },
+      "outputMember": "2116111032.json",
+      "outputJsonBytes": 1876,
+      "outputJsonSha256": "6cdf8bbc740a71162dd38309d81b65553947b1408c198ab4891a6ffe6fe601db",
+      "questionType": "SHORT_ANSWER_ORDERED",
+      "marker": "[QA-DIFI-20261110-04-ORDERED]",
+      "markerInsertionHtml": "<p><span>[QA-DIFI-20261110-04-ORDERED]</span></p>",
+      "originalExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 16861,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "750774",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 16853,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 21818,
+          "jsonType": "integer"
+        }
+      ],
+      "qaExternalIds": [
+        {
+          "path": "$.questionId",
+          "field": "questionId",
+          "value": 2116111031,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.masterId",
+          "field": "masterId",
+          "value": "2116111032",
+          "jsonType": "string"
+        },
+        {
+          "path": "$.questionGrading.questionGradingId",
+          "field": "questionGradingId",
+          "value": 2116111033,
+          "jsonType": "integer"
+        },
+        {
+          "path": "$.questionGrading.questionCorrects[0].questionCorrectId",
+          "field": "questionCorrectId",
+          "value": 2116111034,
+          "jsonType": "integer"
+        }
+      ],
+      "changedLeafPaths": [
+        "$.questionId",
+        "$.masterId",
+        "$.questionContent",
+        "$.questionGrading.questionGradingId",
+        "$.questionGrading.questionCorrects[0].questionCorrectId"
+      ],
+      "unchangedFieldsVerified": true,
+      "originalJsonBytesExactlyRestoredAfterReversingAllowedChanges": true,
+      "relatedIdReferences": {
+        "observedIdentityFieldCount": 4,
+        "additionalReferencesObserved": false,
+        "creatorIdPreserved": true,
+        "htmlKeysAndCircleIdsPreserved": true
+      },
+      "expectedParsedItemCount": 1,
+      "expectedParsedItemStatus": "expectation_only_not_uploaded_or_executed",
+      "outputFilenameStemEqualsQaMasterId": true,
+      "jsonBytesUnchangedByMemberRename": true
+    }
+  ],
+  "priorSuccessfulQaNamingComparison": {
+    "priorZip": "fixtures/QA-DIFI-20261109-01.zip",
+    "priorZipSha256": "728377a7cb716dac95dd378d904cc8f494a788d1ce84d60db1b75958df27e3cf",
+    "priorMember": "2116110901.json",
+    "priorQuestionType": "SHORT_ANSWER_ORDERED",
+    "priorQuestionId": 2116110901,
+    "priorMasterId": "2116110901",
+    "priorFilenameStemEqualsMasterId": true,
+    "priorQuestionIdEqualsNumericMasterId": true,
+    "newFixtureUsesDifferentPattern": true,
+    "newMemberNamesPreservedFromActualOriginals": false,
+    "newQuestionAndMasterIdsDistinct": true,
+    "filenameEqualityRequiredByCms": "unverified",
+    "action": "Parent explicitly approved renaming only the three new fixture members to QA masterId.json. Original and previous successful archives preserved. Filename equality is not inferred as a server requirement.",
+    "newFilenameStemEqualsMasterId": true,
+    "newQuestionIdEqualsNumericMasterId": false,
+    "newMemberNamesDerivedFromQaMasterIds": true
+  },
+  "lastUpdatedAtUtc": "2026-11-10T03:18:56.718484+00:00",
+  "archiveMemberNaming": {
+    "policy": "Parent explicitly approved preparation change before CMS upload: use each QA masterId string plus .json",
+    "membersRenamed": [
+      {
+        "from": "108093600.json",
+        "to": "2116111012.json",
+        "jsonBytesUnchanged": true
+      },
+      {
+        "from": "750772.json",
+        "to": "2116111022.json",
+        "jsonBytesUnchanged": true
+      },
+      {
+        "from": "750774.json",
+        "to": "2116111032.json",
+        "jsonBytesUnchanged": true
+      }
+    ],
+    "jsonContentChangedByRename": false,
+    "eachFilenameStemEqualsMasterId": true,
+    "serverRequiresFilenameEquality": "unverified",
+    "filenameMismatchVariant": "not tested; excluded from this fixture",
+    "questionIdDifferentFromMasterId": "preserved; actual originals also have different questionId/masterId"
+  }
+}

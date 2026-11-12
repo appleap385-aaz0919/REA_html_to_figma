@@ -1,0 +1,15 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_five_choice_images_roundtrip_confirmed","evidenceRange":[2789,2818],"lastEvidence":"2818-definition699-approved-five-image-readback",
+ "summary":"JSON1개와 선지PNG5개인 CHOICE1을 정상 등록해 문서699/R·카드2089379/2089086을 확인했다. 리소스배열3/2/1/4/5와 달리 HTML선지순서1/2/3/4/5가 보존됐고 자산번호도 이번표본에서HTML순서를따른다. 실제 CDN PNG5개는 모두 대응 원본과 바이트전체/SHA가 일치한다. S 최종승인 후 문서Y·MasterR/OBSACN·OMRnull이며 모델/이미지행이 승인전후 정확히같다. Master업무73회,Service배포없음.",
+ "observations":[
+  {"evidence":[2789,2790,2791,2792,2793,2794,2795,2796,2797,2798,2799,2800,2801,2802],"result":"151387B/SHA4a8c9f66ceaccc74bb9dc8a2b2382e6f186319b328118e77acf977a29cbe1f93인단독ZIP을검증하고정상버튼1회로등록했다.문서699/P→R/한카드/초기S이며목록24건이다."},
+  {"evidence":[2803,2804,2805,2806],"result":"이미지5개가모두로드됐고원본img ID가유지되며각image-1..5.png로재작성됐다. 전체높이2067/viewport1015에서0/750/1052로스크롤하고PNG3개를직접보았다. 입력리소스배열ID순서는1126/1128/1130/1132/1134,HTML과서버표시순서는1130/1128/1126/1132/1134다. 각전체ID는211611접두사를갖는다."},
+  {"evidence":[2803],"result":"관측한정확한자체QA CDN URL5개를인증정보없이읽었다. 모두HTTP200이고각25362/24965/28438/45721/27028바이트가해당원본PNG와정확히일치한다. HTML순서와대응파일내용을별개로대조했다."},
+  {"evidence":[2807,2808,2809,2810,2811,2812,2813,2814,2815,2816,2817,2818],"result":"확인창전환중2809에서는modals0이었고별도2810에서shown을확인했다. 정확한S카드/문서/비고/모달guard후2811최종1회승인,최신문서Y·MasterR/OBSACN·OMRnull을확인했다. 승인전후모델과5개이미지관측행전체가정확히같으며모두로드됐다."}
+ ],
+ "artifacts":["definition-choice1-control-intent-20261110.json","definition699-s-approval-intent-20261110.json","definition699-choice-image-integrity-20261110.json","definition699-choice-after-approval-comparison-20261110.json","sources/definition699-choice-draft-20261110.html","sources/definition699-choice-s-approved-final-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":73,"newMasterChangesInThisPhase":2,"newDefinitionDocumentId":699,"finalDocumentState":"Y","masterItemId":2089379,"masterDetailId":2089086,"masterViewFlag":"R","masterType":"OBSACN","fivePngBytesEqualMatchingSources":true,"modelsAndImageRowsEqualBeforeAfterApproval":true,"serviceDeployment":false},
+ "remaining":["SHORT_ANSWER 단건의 실제 생성타입과 일반 단답형 답안·OMR 관계를 확인한다.","원본 리소스 메타와 MIME/크기 불일치 등의 실패정책, 모든 이미지형식/외부리소스는미검증이다.","다중JSON/정상세트ZIP 제약과 해석HML 파일 실행은 정상표본이 없으므로 미확정으로 유지하고 HML 복사편집 격리·세트AI·평가지·상태정책 조사를 이어간다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=699&curriculum=22&pageNum=1&pageSize=100","tab":"t21 own approved five-choice-image Definition699","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["HTML선지순서를따르는자산번호는이번5이미지표본의관측이다. 모든파서입력으로일반화하지않는다.","입력리소스메타상수/파일명/원본픽셀은변경하지않았으며해당JSON/PNG의지원만확정한다.","최종이미지바이트를다시다운로드하지않았고승인전원본일치+승인후정확히같은모델/URL/로드를대조했다.","전체100%완료를주장하지않는다."]
+}

@@ -1,0 +1,8 @@
+{
+ "steps":[
+  {"label":"1294-source-pick-textbook","command":["select","#productCategorySelect","수매씽 유형"]},
+  {"label":"1295-source-textbook-sub-options","command":["snapshot"]},
+  {"label":"1296-source-all-list-readonly","command":["eval","--file","sources/runtime/source-read-inventory.js"]},
+  {"label":"1297-source-current-form-controls","command":["eval","--file","sources/runtime/source-form-observation.js"]}
+ ],"tailChars":2500
+}

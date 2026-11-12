@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"2206-own-qa-ai-working-button-popover","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own anchor only');const e=document.querySelector('[data-twin-generate]');if(e.dataset.working!=='true')throw Error('Working branch required; do not submit');let requests=0;const observe=()=>requests++;document.body.addEventListener('htmx:beforeRequest',observe);e.click();document.body.removeEventListener('htmx:beforeRequest',observe);return {buttonText:e.innerText,buttonDisabled:e.matches(':disabled'),working:e.dataset.working,requestsObservedDuringClick:requests,modals:[...document.querySelectorAll('.modal.show')].map(e=>e.id),popovers:[...document.querySelectorAll('.popover')].map(e=>e.innerText)};})()"]},
+ {"label":"2207-own-qa-ai-processing-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":100}

@@ -1,0 +1,1 @@
+(()=>({location:location.href,monaco:typeof monaco,models:typeof monaco!=='undefined'?monaco.editor.getModels().map(m=>({uri:m.uri.toString(),length:m.getValueLength()})):[],textareas:[...document.querySelectorAll('textarea')].map(e=>({aria:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))}))()

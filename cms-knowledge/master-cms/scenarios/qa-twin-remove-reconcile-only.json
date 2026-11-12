@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"2186-own-qa-clone-remove-independent-readback","command":["eval","--file","sources/runtime/qa2089216-twin-readback.js"]},
+ {"label":"2187-own-qa-remove-current-dialog-readback","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own anchor only');return {url:location.href,modalIds:[...document.querySelectorAll('.modal.show')].map(e=>e.id),currentText:document.getElementById('twinCurrent')?.innerText,count:document.getElementById('twinCountText')?.innerText,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText)};})()"],"screenshot":true}
+],"tailChars":200}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "status": "evidence_recorded",
+  "evidenceRange": [
+    1002,
+    1110
+  ],
+  "testItemId": 2088985,
+  "savedDetailId": 2088701,
+  "observations": [
+    {
+      "evidence": [
+        1004,
+        1010,
+        1012,
+        1013
+      ],
+      "result": "Definition set2088663, passage2088658, has no HML in any slot. Passage/translation buttons disabled. Clicking Question creates a blank one-page document with 새 문서입니다. 작성 후 저장하세요. No editor or CMS save submitted for this set."
+    },
+    {
+      "evidence": [
+        1017,
+        1019,
+        1023,
+        1024,
+        1027,
+        1028,
+        1034
+      ],
+      "result": "HML conversion source filter:11760 results at this observation;100rows/page reveals set2088355, passage2088353. A list link pointer action1024 was blocked by covering td; keyboard focus+Enter1027-28 navigated successfully. Do not call the blocked pointer action a CMS defect without reproduction."
+    },
+    {
+      "evidence": [
+        1036,
+        1037,
+        1038,
+        1039,
+        1040,
+        1041,
+        1043,
+        1044,
+        1045,
+        1048,
+        1049
+      ],
+      "result": "HML set2088355/detail2087012 loads Question2088355_Q.hml, common Passage2088353_J.hml and Answer2088355_A.hml. Translation has no file and remains disabled. Parent distinguishes missing-file text from image-load error. Vendor renders actual originals despite failed parent preview images. Each sampled document status1/1page; passage/question/answer actual scroller bottom549+613=1162, with top/bottom pixels retained."
+    },
+    {
+      "evidence": [
+        1059,
+        1064,
+        1065,
+        1067,
+        1068,
+        1069,
+        1070
+      ],
+      "result": "On test copy2088985, real canvas keyboard insertion of [QA-HML-20261109] succeeded. Switching to Answer without saving and back to Question showed no warning and removed the marker. This is an observed loss of unsaved edits in this selected flow; broader dirty-state behavior remains untested."
+    },
+    {
+      "evidence": [
+        1075,
+        1076,
+        1077,
+        1078,
+        1079,
+        1081,
+        1083
+      ],
+      "result": "Reinserted marker and used editor Save. Received HML and PNG temporary URLs in parent question pending fields, confirmation asks for CMS Temporary Save or Full Apply. Parent detail ID remains2088700 before CMS commit. Editor keeps/reopens saved content; no permanent Master revision inferred from editor success alone."
+    },
+    {
+      "evidence": [
+        1084,
+        1085,
+        1087,
+        1088,
+        1089,
+        1095,
+        1101,
+        1103
+      ],
+      "result": "CMS Full Apply then confirmation Save1087 creates detail2088701.1088 still showed busy overlay; no resubmission.1089 completed detail navigation. Reentry1095 pending fields empty; question path changed from parent2038004/1 to /item/208/2088985/2088701/hml/2088985_Q.hml. Answer retains original reference. Parent PNG1101 and newly opened editor1103 visibly retain marker."
+    },
+    {
+      "evidence": [
+        1109
+      ],
+      "result": "After HML commit, HTML question editor and its viewer still show original question without the HML test marker. This sample shows no automatic HML-to-HTML replacement in this flow. Intended synchronization policy is not established."
+    },
+    {
+      "evidence": [
+        1110
+      ],
+      "result": "Refreshed declared HML glue from live editor HTML: webhwp-e082bada3ae14916759b8d44db43d953.js,HTTP200,18032bytes,SHA25648c4aff20257ca91cc7641022149ff75fa063338fd6d599091181d24c1132cf6. Older Nov6 hashed URL now404. New save success notifies parent then reopens pre-image-layout HML in same slot; reopen failure clears document with warning. Source diff retained; this explains runtime saved-content restoration, superseding historical clear-after-save description."
+    }
+  ],
+  "mutations": {
+    "confirmedMasterOperationsAdded": 1,
+    "totalConfirmedMasterOperations": 18,
+    "vendorTemporaryOperations": "One HML SaveAs plus preview image creation succeeded; recorded separately from Master operations/DBrows."
+  },
+  "remaining": [
+    "Translation slot with an actual existing file; translation/passage actual save and shared-passage propagation.",
+    "Answer edit/save, repeated-save behavior, save/reopen failures, CMS temporary-save variant and discarded pending results.",
+    "Vendor menu commands/dialogs, objects/tables/formats, multi-page documents and dirty close behavior.",
+    "Remaining OMR branches; twin groups, papers, sources, Lab and deployment/service propagation."
+  ],
+  "qualityNotes": [
+    "No production CMS tab was inspected or modified.",
+    "No save was submitted for sampled existing sets.",
+    "Historical targetId fields for tab transitions are corrected from observed post-URLs below; original configuredTargetId retained.",
+    "Latest helper observes actual selected target for each action; screenshots/AX can observe different transient render stages."
+  ]
+}

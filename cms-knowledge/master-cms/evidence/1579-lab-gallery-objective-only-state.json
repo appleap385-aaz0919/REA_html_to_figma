@@ -1,0 +1,1614 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1579-lab-gallery-objective-only-state",
+  "startedUtc": "2026-11-09T06:04:21.036872+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/lab-gallery-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/lab/view/omr.donga"
+    },
+    "error": null,
+    "localSeconds": 0.083
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr.donga",
+      "result": {
+        "collapses": [
+          {
+            "id": "omr-OBSACN",
+            "shown": true,
+            "transition": false
+          },
+          {
+            "id": "omr-OBSAOX",
+            "shown": true,
+            "transition": false
+          },
+          {
+            "id": "omr-OBMACN",
+            "shown": true,
+            "transition": false
+          },
+          {
+            "id": "omr-OBMAOX",
+            "shown": true,
+            "transition": false
+          },
+          {
+            "id": "omr-SBSANM",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBSADR",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBSAAS",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBMANM",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBMAAS",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBMALD",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-SBMADD",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-ESBA00",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-ESSA00",
+            "shown": false,
+            "transition": false
+          },
+          {
+            "id": "omr-ESMA00",
+            "shown": false,
+            "transition": false
+          }
+        ],
+        "dropdownDump": "[\n  {\n    \"dd\": 0,\n    \"value\": \"1\",\n    \"resolved\": {\n      \"value\": \"Source-B-edited\",\n      \"value_type\": \"text\"\n    }\n  },\n  {\n    \"dd\": 1,\n    \"value\": \"1\",\n    \"resolved\": {\n      \"value\": \"Source-B-edited\",\n      \"value_type\": \"text\"\n    }\n  }\n]",
+        "dropdownSources": [
+          {
+            "deleteDisabled": true,
+            "id": "1",
+            "label": "1",
+            "value": {
+              "value": "Source-B-edited",
+              "value_type": "text"
+            }
+          }
+        ],
+        "dropdowns": [
+          {
+            "html": "\n    <button type=\"button\" class=\"btn btn-outline-secondary w-100 text-start d-flex align-items-center dropdown-toggle vtd-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n        <span class=\"vtd-current flex-fill text-secondary\">Source-B-edited</span>\n    </button>\n    <div class=\"dropdown-menu w-100 vtd-menu\"><button type=\"button\" class=\"dropdown-item vtd-opt active\" data-value=\"1\">Source-B-edited</button></div>\n",
+            "text": "Source-B-edited",
+            "value": "1"
+          },
+          {
+            "html": "\n    <button type=\"button\" class=\"btn btn-outline-secondary w-100 text-start d-flex align-items-center dropdown-toggle vtd-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n        <span class=\"vtd-current flex-fill text-secondary\">Source-B-edited</span>\n    </button>\n    <div class=\"dropdown-menu w-100 vtd-menu\"><button type=\"button\" class=\"dropdown-item vtd-opt active\" data-value=\"1\">Source-B-edited</button></div>\n",
+            "text": "Source-B-edited",
+            "value": "1"
+          }
+        ],
+        "leaves": [
+          {
+            "code": "OBSACN",
+            "liveData": {
+              "answer": {
+                "allowed_answer": [
+                  {
+                    "case_sensitive": false,
+                    "space_sensitive": false,
+                    "value": "LockProbe",
+                    "value_type": "text"
+                  }
+                ],
+                "rule_type": "VALUE"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "LockProbe",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "②",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "③",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "④",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "⑤",
+                      "value_type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            "liveDisabled": 10,
+            "liveNames": [
+              "OBSACN_ans",
+              "OBSACN_ans",
+              "OBSACN_ans",
+              "OBSACN_ans",
+              "OBSACN_ans"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "OBSAOX",
+            "liveData": {
+              "answer": {
+                "allowed_answer": [],
+                "rule_type": "VALUE"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "O",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "X",
+                      "value_type": "text"
+                    }
+                  ],
+                  "type": "BUTTON"
+                }
+              ]
+            },
+            "liveDisabled": 4,
+            "liveNames": [
+              "OBSAOX_ans",
+              "OBSAOX_ans"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "OBMACN",
+            "liveData": {
+              "answer": {
+                "nodes": [],
+                "rule_type": "UNORDERED"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "①",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "②",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "③",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "④",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "⑤",
+                      "value_type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            "liveDisabled": 10,
+            "liveNames": [
+              "OBMACN_ans",
+              "OBMACN_ans",
+              "OBMACN_ans",
+              "OBMACN_ans",
+              "OBMACN_ans"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "OBMAOX",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "allowed_answer": [],
+                    "rule_type": "VALUE"
+                  },
+                  {
+                    "allowed_answer": [],
+                    "rule_type": "VALUE"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "O",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "X",
+                      "value_type": "text"
+                    }
+                  ],
+                  "type": "BUTTON"
+                },
+                {
+                  "options": [
+                    {
+                      "value": "O",
+                      "value_type": "text"
+                    },
+                    {
+                      "value": "X",
+                      "value_type": "text"
+                    }
+                  ],
+                  "type": "BUTTON"
+                }
+              ]
+            },
+            "liveDisabled": 10,
+            "liveNames": [
+              "OBMAOX_ans_0",
+              "OBMAOX_ans_0",
+              "OBMAOX_ans_1",
+              "OBMAOX_ans_1"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBSANM",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "type": "TEXT"
+                }
+              ]
+            },
+            "liveDisabled": 3,
+            "liveNames": [
+              "SBSANM_legend",
+              "SBSANM_legend"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBSADR",
+            "liveData": {
+              "answer": {
+                "rule_type": "MANUAL"
+              },
+              "omr": [
+                {
+                  "type": "COMMENT"
+                }
+              ]
+            },
+            "liveDisabled": 0,
+            "liveNames": [],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBSAAS",
+            "liveData": {
+              "answer": {
+                "allowed_answer": [],
+                "rule_type": "VALUE"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ],
+                  "type": "SELECT"
+                }
+              ]
+            },
+            "liveDisabled": 2,
+            "liveNames": [
+              "SBSAAS_ans",
+              "SBSAAS_ans"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBMANM",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "nodes": [
+                      {
+                        "allowed_answer": [
+                          {
+                            "case_sensitive": false,
+                            "space_sensitive": false,
+                            "value": "",
+                            "value_type": "math"
+                          }
+                        ],
+                        "rule_type": "VALUE"
+                      }
+                    ],
+                    "rule_type": "ORDERED"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "type": "TEXT"
+                }
+              ]
+            },
+            "liveDisabled": 5,
+            "liveNames": [
+              "SBMANM_leg_0",
+              "SBMANM_leg_0"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBMAAS",
+            "liveData": {
+              "answer": {
+                "allowed_answer": [],
+                "rule_type": "VALUE"
+              },
+              "omr": [
+                {
+                  "options": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ],
+                  "type": "SELECT"
+                }
+              ]
+            },
+            "liveDisabled": 3,
+            "liveNames": [
+              "SBMAAS_ans_0",
+              "SBMAAS_ans_0"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBMALD",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  },
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "left_fields": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ],
+                  "multi_flag": "Y",
+                  "right_fields": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ]
+                }
+              ]
+            },
+            "liveDisabled": 4,
+            "liveNames": [],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "SBMADD",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  },
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "left_fields": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ],
+                  "multi_flag": "N",
+                  "right_fields": [
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    },
+                    {
+                      "value": "",
+                      "value_type": "math"
+                    }
+                  ]
+                }
+              ]
+            },
+            "liveDisabled": 2,
+            "liveNames": [],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "ESBA00",
+            "liveData": {
+              "answer": {
+                "rule_type": "MANUAL"
+              },
+              "omr": [
+                {
+                  "type": "COMMENT"
+                }
+              ]
+            },
+            "liveDisabled": 0,
+            "liveNames": [],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "ESSA00",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "rule_type": "MANUAL"
+                  },
+                  {
+                    "allowed_answer": [
+                      {
+                        "case_sensitive": false,
+                        "space_sensitive": false,
+                        "value": "",
+                        "value_type": "math"
+                      }
+                    ],
+                    "rule_type": "VALUE"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "type": "COMMENT"
+                },
+                {
+                  "type": "TEXT"
+                }
+              ]
+            },
+            "liveDisabled": 3,
+            "liveNames": [
+              "ESSA_leg",
+              "ESSA_leg"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          },
+          {
+            "code": "ESMA00",
+            "liveData": {
+              "answer": {
+                "nodes": [
+                  {
+                    "rule_type": "MANUAL"
+                  },
+                  {
+                    "nodes": [
+                      {
+                        "nodes": [
+                          {
+                            "allowed_answer": [
+                              {
+                                "case_sensitive": false,
+                                "space_sensitive": false,
+                                "value": "",
+                                "value_type": "math"
+                              }
+                            ],
+                            "rule_type": "VALUE"
+                          }
+                        ],
+                        "rule_type": "UNORDERED"
+                      }
+                    ],
+                    "rule_type": "UNORDERED"
+                  }
+                ],
+                "rule_type": "ORDERED"
+              },
+              "omr": [
+                {
+                  "type": "COMMENT"
+                },
+                {
+                  "type": "TEXT"
+                }
+              ]
+            },
+            "liveDisabled": 5,
+            "liveNames": [
+              "ESMA_leg_0",
+              "ESMA_leg_0"
+            ],
+            "lockData": null,
+            "lockDisabled": 0,
+            "lockNames": [],
+            "lockShown": false
+          }
+        ],
+        "mode": "narrow",
+        "scroll": [
+          {
+            "clientHeight": 1071,
+            "scrollHeight": 7286,
+            "scrollTop": 6215
+          }
+        ],
+        "url": "https://dev-exambank.dongahub.com/lab/view/omr.donga",
+        "valueInput": [
+          {
+            "allowed": "text,math",
+            "inputs": [
+              {
+                "disabled": false,
+                "tag": "INPUT",
+                "type": "text",
+                "value": ""
+              }
+            ],
+            "placeholder": "정답 입력",
+            "types": [
+              {
+                "disabled": false,
+                "type": "text"
+              },
+              {
+                "disabled": false,
+                "type": "math"
+              },
+              {
+                "disabled": true,
+                "type": "image"
+              }
+            ],
+            "value": {
+              "value": "",
+              "value_type": "text"
+            }
+          },
+          {
+            "allowed": "text,math,image",
+            "inputs": [
+              {
+                "disabled": false,
+                "tag": "INPUT",
+                "type": "url",
+                "value": "https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png"
+              }
+            ],
+            "placeholder": "범례 입력",
+            "types": [
+              {
+                "disabled": false,
+                "type": "text"
+              },
+              {
+                "disabled": false,
+                "type": "math"
+              },
+              {
+                "disabled": false,
+                "type": "image"
+              }
+            ],
+            "value": {
+              "value": "https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png",
+              "value_type": "image"
+            }
+          },
+          {
+            "allowed": "text",
+            "inputs": [
+              {
+                "disabled": false,
+                "tag": "INPUT",
+                "type": "text",
+                "value": ""
+              }
+            ],
+            "placeholder": "기호",
+            "types": [
+              {
+                "disabled": false,
+                "type": "text"
+              },
+              {
+                "disabled": true,
+                "type": "math"
+              },
+              {
+                "disabled": true,
+                "type": "image"
+              }
+            ],
+            "value": {
+              "value": "",
+              "value_type": "text"
+            }
+          }
+        ],
+        "valueInputDump": "[\n  {\n    \"value\": \"\",\n    \"value_type\": \"text\"\n  },\n  {\n    \"value\": \"https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png\",\n    \"value_type\": \"image\"\n  },\n  {\n    \"value\": \"\",\n    \"value_type\": \"text\"\n  }\n]",
+        "visibility": "visible",
+        "wrapClass": "col-lg-8"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.142
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/lab/view/omr.donga",
+      "refs": {
+        "e14103": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e14104": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e14105": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e14106": {
+          "name": "OMR 전체 유형 갤러리",
+          "role": "heading"
+        },
+        "e14107": {
+          "name": " 전체 열기",
+          "role": "button"
+        },
+        "e14108": {
+          "name": " 전체 닫기",
+          "role": "button"
+        },
+        "e14109": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e14110": {
+          "name": " 좁게",
+          "role": "radio"
+        },
+        "e14111": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e14112": {
+          "name": " 넓게",
+          "role": "radio"
+        },
+        "e14113": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e14114": {
+          "name": " 비활성화",
+          "role": "radio"
+        },
+        "e14115": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e14116": {
+          "name": "객관식",
+          "role": "heading"
+        },
+        "e14117": {
+          "name": "열기",
+          "role": "button"
+        },
+        "e14118": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e14119": {
+          "name": "주관식",
+          "role": "heading"
+        },
+        "e14120": {
+          "name": "열기",
+          "role": "button"
+        },
+        "e14121": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e14122": {
+          "name": "서술형",
+          "role": "heading"
+        },
+        "e14123": {
+          "name": "열기",
+          "role": "button"
+        },
+        "e14124": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e14125": {
+          "name": "수식 입력 테스트",
+          "role": "heading"
+        },
+        "e14126": {
+          "name": "value_type 입력 형태 테스트",
+          "role": "heading"
+        },
+        "e14127": {
+          "name": "value-type-dropdown 테스트 (select 대체)",
+          "role": "heading"
+        },
+        "e14128": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e14129": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e14130": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e14131": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e14132": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e14133": {
+          "name": "OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)",
+          "role": "heading"
+        },
+        "e14134": {
+          "name": "OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)",
+          "role": "heading"
+        },
+        "e14135": {
+          "name": "OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)",
+          "role": "heading"
+        },
+        "e14136": {
+          "name": "OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)",
+          "role": "heading"
+        },
+        "e14137": {
+          "name": "SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)",
+          "role": "heading"
+        },
+        "e14138": {
+          "name": "SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)",
+          "role": "heading"
+        },
+        "e14139": {
+          "name": "SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)",
+          "role": "heading"
+        },
+        "e14140": {
+          "name": "SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)",
+          "role": "heading"
+        },
+        "e14141": {
+          "name": "SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)",
+          "role": "heading"
+        },
+        "e14142": {
+          "name": "SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)",
+          "role": "heading"
+        },
+        "e14143": {
+          "name": "SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)",
+          "role": "heading"
+        },
+        "e14144": {
+          "name": "ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)",
+          "role": "heading"
+        },
+        "e14145": {
+          "name": "ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)",
+          "role": "heading"
+        },
+        "e14146": {
+          "name": "ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)",
+          "role": "heading"
+        },
+        "e14147": {
+          "name": " 항목 추가",
+          "role": "button"
+        },
+        "e14148": {
+          "name": "OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)",
+          "role": "button"
+        },
+        "e14149": {
+          "name": "OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)",
+          "role": "button"
+        },
+        "e14150": {
+          "name": "OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)",
+          "role": "button"
+        },
+        "e14151": {
+          "name": "OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)",
+          "role": "button"
+        },
+        "e14152": {
+          "name": "SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)",
+          "role": "button"
+        },
+        "e14153": {
+          "name": "SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)",
+          "role": "button"
+        },
+        "e14154": {
+          "name": "SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)",
+          "role": "button"
+        },
+        "e14155": {
+          "name": "SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)",
+          "role": "button"
+        },
+        "e14156": {
+          "name": "SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)",
+          "role": "button"
+        },
+        "e14157": {
+          "name": "SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)",
+          "role": "button"
+        },
+        "e14158": {
+          "name": "SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)",
+          "role": "button"
+        },
+        "e14159": {
+          "name": "ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)",
+          "role": "button"
+        },
+        "e14160": {
+          "name": "ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)",
+          "role": "button"
+        },
+        "e14161": {
+          "name": "ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)",
+          "role": "button"
+        },
+        "e14162": {
+          "name": "math input field",
+          "role": "math"
+        },
+        "e14163": {
+          "name": "Σ",
+          "role": "button"
+        },
+        "e14165": {
+          "name": "",
+          "role": "button"
+        },
+        "e14167": {
+          "name": "",
+          "role": "button"
+        },
+        "e14168": {
+          "name": "기호",
+          "role": "textbox"
+        },
+        "e14169": {
+          "name": "",
+          "role": "button"
+        },
+        "e14171": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14172": {
+          "name": "Source-B-edited",
+          "role": "button"
+        },
+        "e14173": {
+          "name": "Source-B-edited",
+          "role": "button"
+        },
+        "e14174": {
+          "name": "",
+          "role": "button"
+        },
+        "e14175": {
+          "name": "",
+          "role": "button"
+        },
+        "e14176": {
+          "name": "",
+          "role": "button"
+        },
+        "e14177": {
+          "name": "",
+          "role": "button"
+        },
+        "e14178": {
+          "name": "",
+          "role": "button"
+        },
+        "e14179": {
+          "name": "",
+          "role": "button"
+        },
+        "e14180": {
+          "name": "",
+          "role": "button"
+        },
+        "e14181": {
+          "name": "",
+          "role": "button"
+        },
+        "e14182": {
+          "name": "",
+          "role": "button"
+        },
+        "e14183": {
+          "name": "",
+          "role": "button"
+        },
+        "e14184": {
+          "name": "",
+          "role": "button"
+        },
+        "e14185": {
+          "name": "",
+          "role": "button"
+        },
+        "e14186": {
+          "name": "",
+          "role": "button"
+        },
+        "e14187": {
+          "name": "",
+          "role": "button"
+        },
+        "e14188": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14191": {
+          "name": "항목 입력",
+          "role": "textbox"
+        },
+        "e14192": {
+          "name": "",
+          "role": "button"
+        },
+        "e14193": {
+          "name": "Menu Menu",
+          "role": "button"
+        },
+        "e14194": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e14195": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e14196": {
+          "name": "JSON 모니터 개발용",
+          "role": "heading"
+        },
+        "e14197": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e14198": {
+          "name": " 유효성 검사",
+          "role": "button"
+        },
+        "e14199": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e14200": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e14201": {
+          "name": "JSON 모니터 개발용",
+          "role": "heading"
+        },
+        "e14202": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e14203": {
+          "name": " 유효성 검사",
+          "role": "button"
+        },
+        "e14204": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e14205": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e14206": {
+          "name": "JSON 모니터 개발용",
+          "role": "heading"
+        },
+        "e14207": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e14208": {
+          "name": " 유효성 검사",
+          "role": "button"
+        },
+        "e14209": {
+          "name": "OMR 편집 (정답 설정)",
+          "role": "heading"
+        },
+        "e14210": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e14211": {
+          "name": "JSON 모니터 개발용",
+          "role": "heading"
+        },
+        "e14212": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e14213": {
+          "name": " 유효성 검사",
+          "role": "button"
+        },
+        "e14264": {
+          "name": " 정답 추가",
+          "role": "button"
+        },
+        "e14265": {
+          "name": "",
+          "role": "button"
+        },
+        "e14266": {
+          "name": "",
+          "role": "button"
+        },
+        "e14267": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14268": {
+          "name": "",
+          "role": "button"
+        },
+        "e14269": {
+          "name": "",
+          "role": "button"
+        },
+        "e14270": {
+          "name": " 정답 추가",
+          "role": "button"
+        },
+        "e14271": {
+          "name": "",
+          "role": "button"
+        },
+        "e14272": {
+          "name": "",
+          "role": "button"
+        },
+        "e14273": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14274": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14275": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14276": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14277": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14278": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14279": {
+          "name": " 정답 추가",
+          "role": "button"
+        },
+        "e14280": {
+          "name": "",
+          "role": "button"
+        },
+        "e14281": {
+          "name": "",
+          "role": "button"
+        },
+        "e14333": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14334": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14335": {
+          "name": "",
+          "role": "button"
+        },
+        "e14336": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14337": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14338": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14339": {
+          "name": "",
+          "role": "button"
+        },
+        "e14340": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14341": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14342": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14343": {
+          "name": "",
+          "role": "button"
+        },
+        "e14344": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14345": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14346": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14347": {
+          "name": "",
+          "role": "button"
+        },
+        "e14348": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14349": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14350": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14351": {
+          "name": "",
+          "role": "button"
+        },
+        "e14352": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14353": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14354": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14355": {
+          "name": "",
+          "role": "button"
+        },
+        "e14356": {
+          "name": "",
+          "role": "radio"
+        },
+        "e14357": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14358": {
+          "name": "",
+          "role": "button"
+        },
+        "e14359": {
+          "name": "",
+          "role": "checkbox"
+        },
+        "e14360": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14361": {
+          "name": "",
+          "role": "button"
+        },
+        "e14362": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14363": {
+          "name": "",
+          "role": "checkbox"
+        },
+        "e14364": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14365": {
+          "name": "",
+          "role": "button"
+        },
+        "e14366": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14367": {
+          "name": "",
+          "role": "checkbox"
+        },
+        "e14368": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14369": {
+          "name": "",
+          "role": "button"
+        },
+        "e14370": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14371": {
+          "name": "",
+          "role": "checkbox"
+        },
+        "e14372": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14373": {
+          "name": "",
+          "role": "button"
+        },
+        "e14374": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14375": {
+          "name": "",
+          "role": "checkbox"
+        },
+        "e14376": {
+          "name": "선택지",
+          "role": "textbox"
+        },
+        "e14377": {
+          "name": "",
+          "role": "button"
+        },
+        "e14378": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14379": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14380": {
+          "name": "",
+          "role": "button"
+        },
+        "e14381": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14382": {
+          "name": "",
+          "role": "button"
+        },
+        "e14383": {
+          "name": "쉼표 구분여부",
+          "role": "checkbox"
+        },
+        "e14384": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14385": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14386": {
+          "name": "",
+          "role": "button"
+        },
+        "e14387": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e14388": {
+          "name": "",
+          "role": "button"
+        },
+        "e14389": {
+          "name": "쉼표 구분여부",
+          "role": "checkbox"
+        },
+        "e14390": {
+          "name": "삭제",
+          "role": "button"
+        },
+        "e14890": {
+          "name": "정답 입력",
+          "role": "textbox"
+        },
+        "e14891": {
+          "name": "범례 입력",
+          "role": "textbox"
+        },
+        "e14892": {
+          "name": "",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e14103]\n      - link \"문제은행 마스터 CMS\" [ref=e14104]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e14128]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e14129]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e14130]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e14131]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e14132]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e14109]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - link \" 랩\" [ref=e14105]\n      - StaticText \"\"\n      - StaticText \"랩\"\n    - heading \"OMR 전체 유형 갤러리\" [level=2, ref=e14106]\n    - StaticText \"문항유형 14종 각 1파일(리프별 자족). 헤더 = [코드] 분류 › 답형 › 유형 (파일명)\"\n    - button \" 전체 열기\" [ref=e14107]\n      - StaticText \"\"\n      - StaticText \"전체 열기\"\n    - button \" 전체 닫기\" [ref=e14108]\n      - StaticText \"\"\n      - StaticText \"전체 닫기\"\n    - group \"보기 방식\"\n      - radio \" 좁게\" [checked=true, ref=e14110]\n      - LabelText [ref=e14111] clickable [cursor:pointer]\n        - StaticText \"\"\n        - StaticText \"좁게\"\n      - radio \" 넓게\" [checked=false, ref=e14112]\n      - LabelText [ref=e14113] clickable [cursor:pointer]\n        - StaticText \"\"\n        - StaticText \"넓게\"\n      - radio \" 비활성화\" [checked=false, ref=e14114]\n      - LabelText [ref=e14115] clickable [cursor:pointer]\n        - StaticText \"\"\n        - StaticText \"비활성화\"\n    - generic\n      - generic\n        - heading \"객관식\" [level=3, ref=e14116]\n        - button \"열기\" [ref=e14117]\n        - button \"닫기\" [ref=e14118]\n        - generic\n          - heading \"OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)\" [level=2, ref=e14133]\n            - button \"OBSACN  객관식 > 단답형 > N지 선다 (omr-OBSACN.html)\" [expanded=true, ref=e14148]\n              - StaticText \"OBSACN\"\n              - button \"\" [ref=e14174]\n                - StaticText \"\"\n              - StaticText \"객관식 > 단답형 > N지 선다\"\n              - StaticText \"(omr-OBSACN.html)\"\n          - generic\n            - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e14194]\n              - StaticText \"\"\n              - StaticText \"OMR 편집 (정답 설정)\"\n            - button \" OMR 미리보기\" [ref=e14195]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - generic\n              - radio [checked=true, ref=e14333]\n              - generic\n                - textbox \"선택지\" [ref=e14334]: LockProbe\n                  - StaticText \"LockProbe\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14335]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14336]\n              - radio [checked=false, ref=e14337]\n              - generic\n                - textbox \"선택지\" [ref=e14338]: ②\n                  - StaticText \"②\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14339]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14340]\n              - radio [checked=false, ref=e14341]\n              - generic\n                - textbox \"선택지\" [ref=e14342]: ③\n                  - StaticText \"③\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14343]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14344]\n              - radio [checked=false, ref=e14345]\n              - generic\n                - textbox \"선택지\" [ref=e14346]: ④\n                  - StaticText \"④\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14347]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14348]\n              - radio [checked=false, ref=e14349]\n              - generic\n                - textbox \"선택지\" [ref=e14350]: ⑤\n                  - StaticText \"⑤\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14351]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14352]\n              - button \" 정답 추가\" [ref=e14264]\n                - StaticText \"\"\n                - StaticText \"정답 추가\"\n          - generic\n            - heading \"JSON 모니터 개발용\" [level=3, ref=e14196]\n              - StaticText \"\"\n              - StaticText \"JSON 모니터 \"\n              - StaticText \"개발용\"\n            - button \" 초기화\" [ref=e14197]\n              - StaticText \"\"\n              - StaticText \"초기화\"\n            - button \" 유효성 검사\" [ref=e14198]\n              - StaticText \"\"\n              - StaticText \"유효성 검사\"\n            - StaticText \"OMR (화면 마킹)\"\n            - button \"\" [ref=e14265]\n              - StaticText \"\"\n            - StaticText \"[\\n  {\\n    \\\"options\\\": [\\n      {\\n        \\\"value\\\": \\\"LockProbe\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"②\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"③\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"④\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"⑤\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      }\\n    ]\\n  }\\n]\"\n            - StaticText \"정답 (채점 규칙)\"\n            - button \"\" [ref=e14266]\n              - StaticText \"\"\n            - StaticText \"{\\n  \\\"rule_type\\\": \\\"VALUE\\\",\\n  \\\"allowed_answer\\\": [\\n    {\\n      \\\"value\\\": \\\"LockProbe\\\",\\n      \\\"value_type\\\": \\\"text\\\",\\n      \\\"case_sensitive\\\": false,\\n      \\\"space_sensitive\\\": false\\n    }\\n  ]\\n}\"\n          - heading \"OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)\" [level=2, ref=e14134]\n            - button \"OBSAOX  객관식 > 단답형 > O/X 형 (omr-OBSAOX.html)\" [expanded=true, ref=e14149]\n              - StaticText \"OBSAOX\"\n              - button \"\" [ref=e14175]\n                - StaticText \"\"\n              - StaticText \"객관식 > 단답형 > O/X 형\"\n              - StaticText \"(omr-OBSAOX.html)\"\n          - generic\n            - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e14199]\n              - StaticText \"\"\n              - StaticText \"OMR 편집 (정답 설정)\"\n            - button \" OMR 미리보기\" [ref=e14200]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - textbox [ref=e14267]\n            - radio [checked=false, ref=e14353]\n            - generic\n              - textbox [ref=e14354]: O\n                - StaticText \"O\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e14355]\n              - StaticText \"\"\n            - radio [checked=false, ref=e14356]\n            - generic\n              - textbox [ref=e14357]: X\n                - StaticText \"X\"\n              - StaticText \"\"\n            - button \"\" [expanded=false, ref=e14358]\n              - StaticText \"\"\n          - StaticText \"※ O/X 값 칸: 공백 입력 불가, 최대 4자\"\n          - generic\n            - heading \"JSON 모니터 개발용\" [level=3, ref=e14201]\n              - StaticText \"\"\n              - StaticText \"JSON 모니터 \"\n              - StaticText \"개발용\"\n            - button \" 초기화\" [ref=e14202]\n              - StaticText \"\"\n              - StaticText \"초기화\"\n            - button \" 유효성 검사\" [ref=e14203]\n              - StaticText \"\"\n              - StaticText \"유효성 검사\"\n            - StaticText \"OMR (화면 마킹)\"\n            - button \"\" [ref=e14268]\n              - StaticText \"\"\n            - StaticText \"[\\n  {\\n    \\\"type\\\": \\\"BUTTON\\\",\\n    \\\"options\\\": [\\n      {\\n        \\\"value\\\": \\\"O\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"X\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      }\\n    ]\\n  }\\n]\"\n            - StaticText \"정답 (채점 규칙)\"\n            - button \"\" [ref=e14269]\n              - StaticText \"\"\n            - StaticText \"{\\n  \\\"rule_type\\\": \\\"VALUE\\\",\\n  \\\"allowed_answer\\\": []\\n}\"\n          - heading \"OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)\" [level=2, ref=e14135]\n            - button \"OBMACN  객관식 > 다답형 > N지 선다 (omr-OBMACN.html)\" [expanded=true, ref=e14150]\n              - StaticText \"OBMACN\"\n              - button \"\" [ref=e14176]\n                - StaticText \"\"\n              - StaticText \"객관식 > 다답형 > N지 선다\"\n              - StaticText \"(omr-OBMACN.html)\"\n          - generic\n            - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e14204]\n              - StaticText \"\"\n              - StaticText \"OMR 편집 (정답 설정)\"\n            - button \" OMR 미리보기\" [ref=e14205]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - generic\n              - checkbox [checked=false, ref=e14359]\n              - generic\n                - textbox \"선택지\" [ref=e14360]: ①\n                  - StaticText \"①\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14361]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14362]\n              - checkbox [checked=false, ref=e14363]\n              - generic\n                - textbox \"선택지\" [ref=e14364]: ②\n                  - StaticText \"②\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14365]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14366]\n              - checkbox [checked=false, ref=e14367]\n              - generic\n                - textbox \"선택지\" [ref=e14368]: ③\n                  - StaticText \"③\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14369]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14370]\n              - checkbox [checked=false, ref=e14371]\n              - generic\n                - textbox \"선택지\" [ref=e14372]: ④\n                  - StaticText \"④\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14373]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14374]\n              - checkbox [checked=false, ref=e14375]\n              - generic\n                - textbox \"선택지\" [ref=e14376]: ⑤\n                  - StaticText \"⑤\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14377]\n                - StaticText \"\"\n              - button \"삭제\" [ref=e14378]\n              - button \" 정답 추가\" [ref=e14270]\n                - StaticText \"\"\n                - StaticText \"정답 추가\"\n          - generic\n            - heading \"JSON 모니터 개발용\" [level=3, ref=e14206]\n              - StaticText \"\"\n              - StaticText \"JSON 모니터 \"\n              - StaticText \"개발용\"\n            - button \" 초기화\" [ref=e14207]\n              - StaticText \"\"\n              - StaticText \"초기화\"\n            - button \" 유효성 검사\" [ref=e14208]\n              - StaticText \"\"\n              - StaticText \"유효성 검사\"\n            - StaticText \"OMR (화면 마킹)\"\n            - button \"\" [ref=e14271]\n              - StaticText \"\"\n            - StaticText \"[\\n  {\\n    \\\"options\\\": [\\n      {\\n        \\\"value\\\": \\\"①\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"②\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"③\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"④\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"⑤\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      }\\n    ]\\n  }\\n]\"\n            - StaticText \"정답 (채점 규칙)\"\n            - button \"\" [ref=e14272]\n              - StaticText \"\"\n            - StaticText \"{\\n  \\\"rule_type\\\": \\\"UNORDERED\\\",\\n  \\\"nodes\\\": []\\n}\"\n          - heading \"OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)\" [level=2, ref=e14136]\n            - button \"OBMAOX  객관식 > 다답형 > O/X 형 (omr-OBMAOX.html)\" [expanded=true, ref=e14151]\n              - StaticText \"OBMAOX\"\n              - button \"\" [ref=e14177]\n                - StaticText \"\"\n              - StaticText \"객관식 > 다답형 > O/X 형\"\n              - StaticText \"(omr-OBMAOX.html)\"\n          - generic\n            - heading \"OMR 편집 (정답 설정)\" [level=3, ref=e14209]\n              - StaticText \"\"\n              - StaticText \"OMR 편집 (정답 설정)\"\n            - button \" OMR 미리보기\" [ref=e14210]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - generic\n              - textbox [ref=e14273]\n              - radio [checked=false, ref=e14274]\n              - generic\n                - textbox [ref=e14379]: O\n                  - StaticText \"O\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14380]\n                - StaticText \"\"\n              - radio [checked=false, ref=e14275]\n              - generic\n                - textbox [ref=e14381]: X\n                  - StaticText \"X\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14382]\n                - StaticText \"\"\n              - LabelText\n                - checkbox \"쉼표 구분여부\" [checked=false, ref=e14383]\n                - StaticText \"쉼표 구분여부\"\n              - button \"삭제\" [disabled, ref=e14384]\n              - textbox [ref=e14276]\n              - radio [checked=false, ref=e14277]\n              - generic\n                - textbox [ref=e14385]: O\n                  - StaticText \"O\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14386]\n                - StaticText \"\"\n              - radio [checked=false, ref=e14278]\n              - generic\n                - textbox [ref=e14387]: X\n                  - StaticText \"X\"\n                - StaticText \"\"\n              - button \"\" [expanded=false, ref=e14388]\n                - StaticText \"\"\n              - LabelText\n                - checkbox \"쉼표 구분여부\" [checked=false, ref=e14389]\n                - StaticText \"쉼표 구분여부\"\n              - button \"삭제\" [disabled, ref=e14390]\n              - button \" 정답 추가\" [ref=e14279]\n                - StaticText \"\"\n                - StaticText \"정답 추가\"\n          - StaticText \"※ O/X 값 칸: 공백 입력 불가, 최대 4자\"\n          - generic\n            - heading \"JSON 모니터 개발용\" [level=3, ref=e14211]\n              - StaticText \"\"\n              - StaticText \"JSON 모니터 \"\n              - StaticText \"개발용\"\n            - button \" 초기화\" [ref=e14212]\n              - StaticText \"\"\n              - StaticText \"초기화\"\n            - button \" 유효성 검사\" [ref=e14213]\n              - StaticText \"\"\n              - StaticText \"유효성 검사\"\n            - StaticText \"OMR (화면 마킹)\"\n            - button \"\" [ref=e14280]\n              - StaticText \"\"\n            - StaticText \"[\\n  {\\n    \\\"type\\\": \\\"BUTTON\\\",\\n    \\\"options\\\": [\\n      {\\n        \\\"value\\\": \\\"O\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"X\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      }\\n    ]\\n  },\\n  {\\n    \\\"type\\\": \\\"BUTTON\\\",\\n    \\\"options\\\": [\\n      {\\n        \\\"value\\\": \\\"O\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      },\\n      {\\n        \\\"value\\\": \\\"X\\\",\\n        \\\"value_type\\\": \\\"text\\\"\\n      }\\n    ]\\n  }\\n]\"\n            - StaticText \"정답 (채점 규칙)\"\n            - button \"\" [ref=e14281]\n              - StaticText \"\"\n            - StaticText \"{\\n  \\\"rule_type\\\": \\\"ORDERED\\\",\\n  \\\"nodes\\\": [\\n    {\\n      \\\"rule_type\\\": \\\"VALUE\\\",\\n      \\\"allowed_answer\\\": []\\n    },\\n    {\\n      \\\"rule_type\\\": \\\"VALUE\\\",\\n      \\\"allowed_answer\\\": []\\n    }\\n  ]\\n}\"\n        - separator\n        - heading \"주관식\" [level=3, ref=e14119]\n        - button \"열기\" [ref=e14120]\n        - button \"닫기\" [ref=e14121]\n        - generic\n          - heading \"SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)\" [level=2, ref=e14137]\n            - button \"SBSANM  주관식 > 단답형 > 일반형 (omr-SBSANM.html)\" [expanded=false, ref=e14152]\n              - StaticText \"SBSANM\"\n              - button \"\" [ref=e14178]\n                - StaticText \"\"\n              - StaticText \"주관식 > 단답형 > 일반형\"\n              - StaticText \"(omr-SBSANM.html)\"\n          - heading \"SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)\" [level=2, ref=e14138]\n            - button \"SBSADR  주관식 > 단답형 > 그리기형 (omr-SBSADR.html)\" [expanded=false, ref=e14153]\n              - StaticText \"SBSADR\"\n              - button \"\" [ref=e14179]\n                - StaticText \"\"\n              - StaticText \"주관식 > 단답형 > 그리기형\"\n              - StaticText \"(omr-SBSADR.html)\"\n          - heading \"SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)\" [level=2, ref=e14139]\n            - button \"SBSAAS  주관식 > 단답형 > 영역 선택형 (omr-SBSAAS.html)\" [expanded=false, ref=e14154]\n              - StaticText \"SBSAAS\"\n              - button \"\" [ref=e14180]\n                - StaticText \"\"\n              - StaticText \"주관식 > 단답형 > 영역 선택형\"\n              - StaticText \"(omr-SBSAAS.html)\"\n          - heading \"SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)\" [level=2, ref=e14140]\n            - button \"SBMANM  주관식 > 다답형 > 일반형 (omr-SBMANM.html)\" [expanded=false, ref=e14155]\n              - StaticText \"SBMANM\"\n              - button \"\" [ref=e14181]\n                - StaticText \"\"\n              - StaticText \"주관식 > 다답형 > 일반형\"\n              - StaticText \"(omr-SBMANM.html)\"\n          - heading \"SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)\" [level=2, ref=e14141]\n            - button \"SBMAAS  주관식 > 다답형 > 영역선택형 (omr-SBMAAS.html)\" [expanded=false, ref=e14156]\n              - StaticText \"SBMAAS\"\n              - button \"\" [ref=e14182]\n                - StaticText \"\"\n              - StaticText \"주관식 > 다답형 > 영역선택형\"\n              - StaticText \"(omr-SBMAAS.html)\"\n          - heading \"SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)\" [level=2, ref=e14142]\n            - button \"SBMALD  주관식 > 다답형 > 선그리기형 (omr-SBMALD.html)\" [expanded=false, ref=e14157]\n              - StaticText \"SBMALD\"\n              - button \"\" [ref=e14183]\n                - StaticText \"\"\n              - StaticText \"주관식 > 다답형 > 선그리기형\"\n              - StaticText \"(omr-SBMALD.html)\"\n          - heading \"SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)\" [level=2, ref=e14143]\n            - button \"SBMADD  주관식 > 다답형 > 드래그앤 드롭형 (omr-SBMADD.html)\" [expanded=false, ref=e14158]\n              - StaticText \"SBMADD\"\n              - button \"\" [ref=e14184]\n                - StaticText \"\"\n              - StaticText \"주관식 > 다답형 > 드래그앤 드롭형\"\n              - StaticText \"(omr-SBMADD.html)\"\n        - separator\n        - heading \"서술형\" [level=3, ref=e14122]\n        - button \"열기\" [ref=e14123]\n        - button \"닫기\" [ref=e14124]\n        - generic\n          - heading \"ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)\" [level=2, ref=e14144]\n            - button \"ESBA00  서술형 > 기본형 > 기본 서술형 (omr-ESBA00.html)\" [expanded=false, ref=e14159]\n              - StaticText \"ESBA00\"\n              - button \"\" [ref=e14185]\n                - StaticText \"\"\n              - StaticText \"서술형 > 기본형 > 기본 서술형\"\n              - StaticText \"(omr-ESBA00.html)\"\n          - heading \"ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)\" [level=2, ref=e14145]\n            - button \"ESSA00  서술형 > 단답형 > 단답 서술형 (omr-ESSA00.html)\" [expanded=false, ref=e14160]\n              - StaticText \"ESSA00\"\n              - button \"\" [ref=e14186]\n                - StaticText \"\"\n              - StaticText \"서술형 > 단답형 > 단답 서술형\"\n              - StaticText \"(omr-ESSA00.html)\"\n          - heading \"ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)\" [level=2, ref=e14146]\n            - button \"ESMA00  서술형 > 다답형 > 다답 서술형 (omr-ESMA00.html)\" [expanded=false, ref=e14161]\n              - StaticText \"ESMA00\"\n              - button \"\" [ref=e14187]\n                - StaticText \"\"\n              - StaticText \"서술형 > 다답형 > 다답 서술형\"\n              - StaticText \"(omr-ESMA00.html)\"\n      - separator\n      - generic\n        - heading \"수식 입력 테스트\" [level=3, ref=e14125]\n          - StaticText \"\"\n          - StaticText \"수식 입력 테스트\"\n        - generic\n          - math \"math input field\" [ref=e14162] editable [tabindex, contenteditable]\n            - textbox [ref=e14188]\n            - generic\n              - button \"Menu Menu\" [ref=e14193]\n                - image \"Menu\"\n                - StaticText \"Menu\"\n            - status\n          - button \"Σ\" [ref=e14163]\n        - generic\n          - StaticText \"LaTeX 값:\"\n          - code\n        - generic\n          - StaticText \"렌더:\"\n      - separator\n      - generic\n        - heading \"value_type 입력 형태 테스트\" [level=3, ref=e14126]\n          - StaticText \"\"\n          - StaticText \"value_type 입력 형태 테스트\"\n        - generic\n          - generic\n            - StaticText \"실제 전환 컴포넌트 — 앞 라벨은 외부 고정(룰), config(placeholder·allowed) 주입. 비허용 타입은 ⋮에서 회색(못 누름), 전환 시 값 버림.\"\n          - generic\n            - StaticText \"정답 (text·math)\"\n          - generic\n            - textbox \"정답 입력\" [ref=e14890]\n            - StaticText \"\"\n          - button \"\" [expanded=false, ref=e14165]\n            - StaticText \"\"\n          - generic\n            - StaticText \"범례 (전체)\"\n          - generic\n            - textbox \"범례 입력\" [ref=e14891]: https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png\n              - StaticText \"https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png\"\n            - button \"\" [ref=e14892]\n              - StaticText \"\"\n          - button \"\" [expanded=false, ref=e14167]\n            - StaticText \"\"\n          - generic\n            - StaticText \"기호 (text만)\"\n          - generic\n            - textbox \"기호\" [ref=e14168]\n            - StaticText \"\"\n          - button \"\" [expanded=false, ref=e14169]\n            - StaticText \"\"\n          - StaticText \"getValue (실시간)\"\n          - StaticText \"[\\n  {\\n    \\\"value\\\": \\\"\\\",\\n    \\\"value_type\\\": \\\"text\\\"\\n  },\\n  {\\n    \\\"value\\\": \\\"https://dev-items.douclass.com/itembank/item/203/2038004/1/asset/binitem-35.png\\\",\\n    \\\"value_type\\\": \\\"image\\\"\\n  },\\n  {\\n    \\\"value\\\": \\\"\\\",\\n    \\\"value_type\\\": \\\"text\\\"\\n  }\\n]\"\n      - separator\n      - generic\n        - heading \"value-type-dropdown 테스트 (select 대체)\" [level=3, ref=e14127]\n          - StaticText \"\"\n          - StaticText \"value-type-dropdown 테스트 (select 대체)\"\n        - generic\n          - generic\n            - StaticText \"위 = 옵션 소스(value-type-input 행, 추가/삭제). 아래 dropdown 이 이를 미러링 — text=글자 · math=수식렌더 · image=썸네일. 선택값 = 행 참조(select 와 동일 계약, 소스 값 바뀌면 자동 반영).\"\n          - StaticText \"1\"\n          - generic\n            - textbox \"항목 입력\" [ref=e14191]: Source-B-edited\n              - StaticText \"Source-B-edited\"\n            - StaticText \"\"\n          - button \"\" [expanded=false, ref=e14192]\n            - StaticText \"\"\n          - button \"삭제\" [disabled, ref=e14171]\n          - button \" 항목 추가\" [ref=e14147]\n            - StaticText \"\"\n            - StaticText \"항목 추가\"\n          - separator\n          - StaticText \"연결 A\"\n          - button \"Source-B-edited\" [expanded=false, ref=e14172]\n            - StaticText \"Source-B-edited\"\n          - StaticText \"연결 B\"\n          - button \"Source-B-edited\" [expanded=false, ref=e14173]\n            - StaticText \"Source-B-edited\"\n          - StaticText \"getValue (실시간) — 선택 value(참조) + 해석값\"\n          - StaticText \"[\\n  {\\n    \\\"dd\\\": 0,\\n    \\\"value\\\": \\\"1\\\",\\n    \\\"resolved\\\": {\\n      \\\"value\\\": \\\"Source-B-edited\\\",\\n      \\\"value_type\\\": \\\"text\\\"\\n    }\\n  },\\n  {\\n    \\\"dd\\\": 1,\\n    \\\"value\\\": \\\"1\\\",\\n    \\\"resolved\\\": {\\n      \\\"value\\\": \\\"Source-B-edited\\\",\\n      \\\"value_type\\\": \\\"text\\\"\\n    }\\n  }\\n]\""
+    },
+    "error": null,
+    "localSeconds": 0.19
+  }
+}

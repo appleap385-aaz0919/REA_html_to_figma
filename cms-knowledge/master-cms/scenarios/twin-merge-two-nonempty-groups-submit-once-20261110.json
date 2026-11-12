@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"3140-own216-merge-group-b-by-adding239-once","command":["eval","--file","sources/runtime/qa2089216-add-own-clone-once.js"]},
+ {"label":"3141-own-twin-merge-all-four-memberships-readback","command":["eval","--file","sources/runtime/two-single-groups-memberships-history-read.js"]},
+ {"label":"3142-own216-after-merge-ui-and-requests","command":["eval","(()=>({url:location.href,twinCount:document.querySelector('#twinCountText')?.textContent.trim(),currentText:document.querySelector('#twinCurrent')?.innerText,visibleModals:[...document.querySelectorAll('.modal.show')].map(e=>e.id),alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText),htmxRequestElements:[...document.querySelectorAll('.htmx-request')].map(e=>({tag:e.tagName,id:e.id}))}))()"]},
+ {"label":"3143-own216-after-two-group-merge-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":120}

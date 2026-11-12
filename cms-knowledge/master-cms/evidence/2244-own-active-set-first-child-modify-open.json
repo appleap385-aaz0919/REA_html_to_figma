@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2244-own-active-set-first-child-modify-open",
+  "startedUtc": "2026-11-09T23:46:38.076214+00:00",
+  "command": [
+    "eval",
+    "(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own child required');const links=[...document.querySelectorAll('a[href]')].filter(e=>e.getAttribute('href').startsWith('/item/all/modify.donga?itemId=2089242'));if(links.length!==1)throw Error('Single observed own modify link required');const href=links[0].getAttribute('href');links[0].click();return {href};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242"
+    },
+    "error": null,
+    "localSeconds": 0.069
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: Single observed own modify link required\n    at <anonymous>:1:275\n    at <anonymous>:1:399",
+    "localSeconds": 0.071
+  }
+}

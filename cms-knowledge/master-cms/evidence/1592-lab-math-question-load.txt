@@ -1,0 +1,280 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e14896]
+      - link "문제은행 마스터 CMS" [ref=e14897]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e14921]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e14922]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e14923]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e14924]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e14925]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e14900]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e14898]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "수식 입력기 데모" [level=1, ref=e14899]
+    - paragraph
+      - StaticText "KaTeX + MathLive + TinyMCE 통합 검증 페이지 (서버사이드 이식본)"
+    - generic
+      - heading "1. 하이브리드 에디터 (텍스트 + 수식)" [level=2, ref=e14901]
+      - paragraph
+        - StaticText "툴바의 \"초등 수식\"/\"일반 수식\" 버튼으로 레벨별 전용 키보드가 뜨고, 삽입된 수식 클릭으로 수정. 다이얼로그의 \"손글씨\" 탭에서 수식을 그려 OCR 인식 가능."
+      - generic [ref=e14902] editable [contenteditable]: 이차방정식의 근의 공식을 수식 버튼으로 삽입해 보세요.
+        - paragraph
+          - StaticText "이차방정식의 근의 공식을 수식 버튼으로 삽입해 보세요."
+      - heading "에디터 내 수식 (LaTeX 값 ↔ 실제 KaTeX 값)" [level=3, ref=e14903]
+      - paragraph
+        - StaticText "에디터에 삽입된 수식이 없습니다."
+      - paragraph
+        - StaticText "왼쪽 \"LaTeX 값\"은 저장·비교용 LaTeX 소스, 오른쪽은 그 값을 KaTeX 로 렌더한 결과입니다."
+      - group
+        - DisclosureTriangle "저장될 HTML 출력" [expanded=false]
+          - StaticText "저장될 HTML 출력"
+      - heading "읽기전용 렌더 (해설·미리보기용)" [level=3, ref=e14904]
+      - paragraph
+        - StaticText "이차방정식의 근의 공식을 수식 버튼으로 삽입해 보세요."
+    - generic
+      - heading "2. 수식 단독 답안 입력" [level=2, ref=e14905]
+      - paragraph
+        - StaticText "칸에 바로 입력하거나, Σ 버튼으로 수식입력기(고등 키패드)를 엽니다."
+      - paragraph
+        - StaticText "placeholder(LaTeX): "
+        - textbox [ref=e14917]: \text{답을 입력하세요}
+          - StaticText "\\text{답을 입력하세요}"
+      - generic
+        - math "math input field" [ref=e14918] editable [tabindex, contenteditable]
+          - textbox [ref=e14926]
+          - generic
+            - generic
+            - button "Menu Menu" [ref=e14927]
+              - image "Menu"
+              - StaticText "Menu"
+          - status
+        - button "Σ" [ref=e14919]
+      - paragraph
+        - StaticText "필드를 모두 지우면 placeholder 가 보입니다. 스페이스바 또는 키패드 알파벳 탭의 스페이스 키로 공백이 삽입됩니다."
+      - paragraph
+        - StaticText "LaTeX 출력: "
+        - code
+          - StaticText "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}"
+    - generic
+      - heading "3. 렌더 전용 (KaTeX)" [level=2, ref=e14906]
+      - paragraph
+        - StaticText "위 답안 입력값을 KaTeX 블록 수식으로 실시간 렌더:"
+      - MathMLMath
+        - MathMLRow
+          - MathMLRow
+            - MathMLIdentifier
+              - StaticText "𝑥"
+            - MathMLOperator
+              - StaticText "="
+            - MathMLFraction
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "−"
+                - MathMLIdentifier
+                  - StaticText "𝑏"
+                - MathMLOperator
+                  - StaticText "±"
+                - MathMLSquareRoot
+                  - MathMLRow
+                    - MathMLSup
+                      - MathMLIdentifier
+                        - StaticText "𝑏"
+                      - MathMLNumber
+                        - StaticText "2"
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "4"
+                    - MathMLIdentifier
+                      - StaticText "𝑎"
+                    - MathMLIdentifier
+                      - StaticText "𝑐"
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "2"
+                - MathMLIdentifier
+                  - StaticText "𝑎"
+    - generic
+      - heading "4. 실제 문제 데이터 로드 → 수식 편집 → HTML 변화 확인" [level=2, ref=e14907]
+      - paragraph
+        - StaticText "샘플 문제(samples.json)의 블록을 선택하면 원본 text 가 입력란에 채워집니다. \"변환 + 로드\"를 누르면 "
+        - code
+          - StaticText "$...$"
+        - StaticText " 수식이 편집 가능한 수식 노드로 변환되어 에디터에 로드됩니다. 수식을 클릭해 수정하면 아래 \"③ 편집 후 출력 HTML\"이 실시간으로 바뀝니다."
+      - LabelText
+        - StaticText "블록: "
+        - combobox "블록:" [expanded=false, ref=e14920]: 문제
+          - MenuListPopup
+            - option "문제" [selected, ref=e14928]
+            - option "정답" [ref=e14929]
+            - option "해설" [ref=e14930]
+      - button "변환 + 로드" [ref=e14908]
+      - textbox "원본 text" [ref=e14909]: <d-question><p><span class="font-s22"><strong>세 변의 길이가 $x-3, x, x+3$인 삼각형이 예각삼각형이 되도록 하는 자연수 $x$의 최솟값을 구하시오.</strong></span></p></d-question><p><d-input key="1" circleid="ja3qu92" selectdata="---" ismathedit="true" matheditor="MATH_TYPE"></d-input></p>
+        - StaticText "<d-question><p><span class=\"font-s22\"><strong>세 변의 길이가 $x-3, x, x+3$인 삼각형이 예각삼각형이 되도록 하는 자연수 $x$의 최솟값을 구하시오.</strong></span></p></d-question><p><d-input key=\"1\" circleid=\"ja3qu92\" selectdata=\"---\" ismathedit=\"true\" matheditor=\"MATH_TYPE\"></d-input></p>"
+      - generic [ref=e14910] editable [contenteditable]: 세 변의 길이가 
+𝑥
+−
+3
+,
+𝑥
+,
+𝑥
++
+3
+x−3,x,x+3인 삼각형이 예각삼각형이 되도록 하는 자연수 
+𝑥
+x의 최솟값을 구하시오.
+        - paragraph
+          - strong
+            - StaticText "세 변의 길이가 "
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText "−"
+                  - MathMLNumber
+                    - StaticText "3"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText "+"
+                  - MathMLNumber
+                    - StaticText "3"
+            - StaticText "인 삼각형이 예각삼각형이 되도록 하는 자연수 "
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+            - StaticText "의 최솟값을 구하시오."
+        - paragraph
+          - StaticText "정답"
+      - heading "① 원본 text ($...$ 구분자)" [level=3, ref=e14911]
+      - StaticText "<d-question><p><span class=\"font-s22\"><strong>세 변의 길이가 $x-3, x, x+3$인 삼각형이 예각삼각형이 되도록 하는 자연수 $x$의 최솟값을 구하시오.</strong></span></p></d-question><p><d-input key=\"1\" circleid=\"ja3qu92\" selectdata=\"---\" ismathedit=\"true\" matheditor=\"MATH_TYPE\"></d-input></p>"
+      - heading "② 변환된 입력 HTML (에디터 주입)" [level=3, ref=e14912]
+      - StaticText "<d-question><p><span class=\"font-s22\"><strong>세 변의 길이가 <span data-type=\"inline-math\" data-latex=\"x-3, x, x+3\"></span>인 삼각형이 예각삼각형이 되도록 하는 자연수 <span data-type=\"inline-math\" data-latex=\"x\"></span>의 최솟값을 구하시오.</strong></span></p></d-question><p><d-input key=\"1\" circleid=\"ja3qu92\" selectdata=\"---\" ismathedit=\"true\" matheditor=\"MATH_TYPE\"></d-input></p>"
+      - heading "③ 편집 후 출력 HTML (실시간)" [level=3, ref=e14913]
+      - StaticText "<d-question>\n<p><span class=\"font-s22\"><strong>세 변의 길이가 <span data-type=\"inline-math\" data-latex=\"x-3, x, x+3\"></span>인 삼각형이 예각삼각형이 되도록 하는 자연수 <span data-type=\"inline-math\" data-latex=\"x\"></span>의 최솟값을 구하시오.</strong></span></p>\n</d-question>\n<p><d-input key=\"1\" circleid=\"ja3qu92\" selectdata=\"---\" ismathedit=\"true\" matheditor=\"MATH_TYPE\"></d-input></p>"
+      - paragraph
+        - StaticText "②는 변환 유틸 출력(커스텀 태그 <d-question>/<d-input>·폰트 span·이미지 포함), ③은 TinyMCE 가 파싱·직렬화한 결과입니다. 커스텀 태그는 보존되며, 수식은 data-latex 로 보존됩니다."
+      - heading "④ 원본 형태로 저장된 text (수식 → $...$ 역변환, 커스텀 태그 보존)" [level=3, ref=e14914]
+      - StaticText "<d-question>\n<p><span class=\"font-s22\"><strong>세 변의 길이가 $x-3, x, x+3$인 삼각형이 예각삼각형이 되도록 하는 자연수 $x$의 최솟값을 구하시오.</strong></span></p>\n</d-question>\n<p><d-input key=\"1\" circleid=\"ja3qu92\" selectdata=\"---\" ismathedit=\"true\" matheditor=\"MATH_TYPE\"></d-input></p>"
+      - paragraph
+        - StaticText "①과 비교해 보세요. 미편집 시 거의 동일(수식 "
+        - code
+          - StaticText "$...$"
+        - StaticText " 복원, 커스텀 태그 보존)해야 하며, 본문이나 수식을 수정하면 그 변경이 이 저장 text 에 반영됩니다."
+      - heading "로드된 수식 노드 (LaTeX 값 ↔ KaTeX 렌더)" [level=3, ref=e14915]
+      - table
+        - rowgroup
+          - row
+            - columnheader "LaTeX 값" [ref=e14937]
+            - columnheader "실제 KaTeX 값 (렌더 결과)" [ref=e14938]
+        - row
+          - cell "x-3, x, x+3" [ref=e14931]
+            - code
+              - StaticText "x-3, x, x+3"
+          - cell [ref=e14932]
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText "−"
+                  - MathMLNumber
+                    - StaticText "3"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText ","
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+                  - MathMLOperator
+                    - StaticText "+"
+                  - MathMLNumber
+                    - StaticText "3"
+        - row
+          - cell "x" [ref=e14933]
+            - code
+              - StaticText "x"
+          - cell [ref=e14934]
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑥"
+      - heading "읽기전용 렌더" [level=3, ref=e14916]
+      - generic
+        - paragraph
+          - strong
+            - StaticText "세 변의 길이가 "
+            - generic [ref=e14935] clickable [cursor:pointer]
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLOperator
+                      - StaticText "−"
+                    - MathMLNumber
+                      - StaticText "3"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLOperator
+                      - StaticText ","
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+                    - MathMLOperator
+                      - StaticText "+"
+                    - MathMLNumber
+                      - StaticText "3"
+            - StaticText "인 삼각형이 예각삼각형이 되도록 하는 자연수 "
+            - generic [ref=e14936] clickable [cursor:pointer]
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑥"
+            - StaticText "의 최솟값을 구하시오."
+        - paragraph
+          - StaticText "정답"

@@ -1,0 +1,203 @@
+- complementary
+  - generic
+    - button "메뉴" [expanded=false, ref=e4154]
+    - link "문제은행 마스터 CMS" [ref=e4155]
+  - list
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "홈" [ref=e4172]
+    - listitem [level=1]
+      - ListMarker "• "
+      - button "문항 관리" [expanded=true, ref=e4173]
+      - generic
+        - link "전체 문항" [ref=e4179]
+        - link "HML 문항 등록" [ref=e4180]
+        - link "디피니션 문항 등록" [ref=e4181]
+        - link "쌍둥이 그룹 관리" [ref=e4182]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "평가지 관리" [ref=e4174]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "문항 출처 관리" [ref=e4175]
+    - listitem [level=1]
+      - ListMarker "• "
+      - link "랩" [ref=e4176]
+- banner
+  - StaticText "마스터"
+  - button "다크모드 전환" [ref=e4134]
+  - generic
+    - StaticText "접속자 "
+    - strong
+      - StaticText "jaehyuk.myung"
+  - form
+    - button "로그아웃" [ref=e4156]
+- generic
+  - list "breadcrumbs"
+    - listitem [level=1]
+      - ListMarker "1. "
+      - StaticText "시스템 관리"
+    - listitem [level=1]
+      - ListMarker "2. "
+      - StaticText "문항 관리"
+    - listitem [level=1]
+      - ListMarker "3. "
+      - StaticText "전체 문항"
+    - listitem [level=1]
+      - ListMarker "4. "
+      - StaticText "문항 상세"
+  - heading "문항 상세" [level=2, ref=e4135]
+  - generic
+    - StaticText "문항 ID 2088355"
+  - link "목록" [ref=e4136]
+  - generic
+    - link "이전 문항" [ref=e4157]
+    - StaticText " 9 / 11760건 "
+    - link "다음 문항" [ref=e4158]
+  - heading "MASTER" [level=3, ref=e4137]
+  - heading "HTML" [level=3, ref=e4138]
+  - heading "지문ID 2088353" [level=4, ref=e4139]
+    - StaticText "지문ID 2088353"
+  - heading "문항ID 2088354 초안 - 주관식 > 단답형 > 일반형" [level=4, ref=e4140]
+    - StaticText "문항ID "
+    - link "2088354" [ref=e4159]
+    - StaticText " 초안 - 주관식 > 단답형 > 일반형"
+  - heading "문항ID 2088355 초안 - 주관식 > 단답형 > 일반형" [level=4, ref=e4141]
+    - StaticText "문항ID 2088355 초안 - 주관식 > 단답형 > 일반형"
+  - button "OMR 미리보기" [ref=e4142]
+  - generic "승인(사용) 문항만 배포할 수 있습니다." [ref=e4160] focusable [tabindex]
+    - button "배포하기" [disabled, ref=e4167]
+  - heading "HML" [level=3, ref=e4143]
+  - heading "지문ID 2088353" [level=4, ref=e4144]
+    - StaticText "지문ID 2088353"
+  - StaticText "지문"
+  - link "지문" [ref=e4145]
+    - image "지문"
+  - heading "문항ID 2088354" [level=4, ref=e4146]
+    - StaticText "문항ID 2088354"
+  - StaticText "문제"
+  - link "문제" [ref=e4147]
+    - image "문제"
+  - separator
+  - StaticText "해답"
+  - link "해답" [ref=e4148]
+    - image "해답"
+  - heading "문항ID 2088355" [level=4, ref=e4149]
+    - StaticText "문항ID 2088355"
+  - StaticText "문제"
+  - link "문제" [ref=e4150]
+    - image "문제"
+  - separator
+  - StaticText "해답"
+  - link "해답" [ref=e4151]
+    - image "해답"
+  - generic
+    - button "쌍둥이 문항 생성" [disabled, ref=e4161]
+    - button "쌍둥이 생성 이력" [ref=e4162]
+  - link "문항 수정" [ref=e4163]
+  - heading "상태 정보" [level=3, ref=e4152]
+  - generic
+    - button "수정" [ref=e4164]
+    - button "취소" [ref=e4165]
+    - button "저장" [ref=e4166]
+  - form
+    - group
+      - generic
+        - LabelText
+          - StaticText "On-line 전용"
+        - combobox [expanded=false, disabled, ref=e4177]: 온오프 전체
+          - MenuListPopup
+            - option "온오프 전체" [disabled, ref=e4188]
+            - option "온라인 전용" [disabled, ref=e4189]
+      - generic
+        - LabelText
+          - StaticText "용도"
+        - combobox [expanded=false, disabled, ref=e4178]: 공통
+          - MenuListPopup
+            - option "공통" [disabled, ref=e4190]
+            - option "교사용" [disabled, ref=e4191]
+      - LabelText
+        - StaticText "상태값"
+      - generic
+        - LabelText
+          - radio "초안" [checked=true, disabled, ref=e4183]
+          - StaticText "초안"
+        - LabelText
+          - radio "실패(재등록)" [checked=false, disabled, ref=e4184]
+          - StaticText "실패(재등록)"
+        - LabelText
+          - radio "승인(사용)" [checked=false, disabled, ref=e4185]
+          - StaticText "승인(사용)"
+        - LabelText
+          - radio "승인(미사용)" [checked=false, disabled, ref=e4186]
+          - StaticText "승인(미사용)"
+        - LabelText
+          - radio "폐기" [checked=false, disabled, ref=e4187]
+          - StaticText "폐기"
+  - heading "기본 정보" [level=3, ref=e4153]
+  - DescriptionList
+    - term "문항 ID"
+    - definition
+      - StaticText "2088355 (2087012)"
+    - term "생성 방식"
+    - definition
+      - StaticText "HML 변환"
+    - term "원본 파일"
+    - definition
+      - StaticText "중1-2_수매씽유형_유형북_8-08단원 (1).hml"
+      - button "다운로드" [ref=e4168]
+    - term "썸네일"
+    - definition
+      - StaticText "-"
+    - term "난이도"
+    - definition
+      - StaticText "-"
+    - term "문항 형태"
+    - definition
+      - StaticText "주관식 > 단답형 > 일반형"
+    - term "배포"
+    - definition
+      - StaticText "-"
+  - DescriptionList
+    - term "세트 문항"
+    - definition
+      - StaticText "지문 ID 2088353 · 총 2개"
+      - StaticText "문항ID 2088354"
+      - StaticText "문항ID 2088355"
+    - term "쌍둥이 문항"
+    - definition
+      - StaticText "0개"
+      - button "목록 조회" [ref=e4169]
+    - term "평가지 등록"
+    - definition
+      - StaticText "1개"
+      - button "목록 조회" [ref=e4170]
+    - term "출처"
+    - definition
+      - StaticText "1개"
+      - button "목록 조회" [ref=e4171]
+    - term "등록"
+    - definition
+      - StaticText "hari.im · 2026-10-27"
+  - separator
+  - DescriptionList
+    - term "단원코드"
+    - definition
+      - StaticText "[22MMAT0KOK1208020000]"
+      - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 2학기 > 자료의 정리와 해석 > 줄기와 잎 그림 > >"
+    - term "성취기준"
+    - definition
+      - StaticText "-"
+    - term "내용영역"
+    - definition
+      - StaticText "-"
+  - DescriptionList
+    - term "행동영역"
+    - definition
+      - StaticText "-"
+    - term "교과역량"
+    - definition
+      - StaticText "-"
+    - term "유형정보"
+    - definition
+      - StaticText "-"

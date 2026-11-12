@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "single_copy_unused_approval_confirmed_set_ai_results_discovered",
+  "evidenceRange": [
+    2859,
+    2878
+  ],
+  "lastEvidence": "2878-own-set-ai-history-fresh-poll",
+  "summary": "세트AI 진행중 상태가원본4개모두에공유되고COPY4개는R을유지함을읽었다. 별도단건COPY2089239에서정상상태수정으로R→승인미사용N을저장했다. 버전2089019/모델/OMR/HML/난이도는유지됐고원본216Y·AI240R·3개그룹/생성이력도유지됐다. 최신세트AI이력에서2089382~85의네문항ID를발견했으며세트/내용/상태전체검증은다음단계다. Master업무77회,Service배포없음.",
+  "observations": [
+    {
+      "evidence": [
+        2859,
+        2860,
+        2861,
+        2862
+      ],
+      "result": "원본4개는같은AI working=true/요청자/13:46을표시하고원본버전과Y상태가유지됐다.COPY4개는R/동일버전이며생성버튼은없다.2859PNG는팝오버가화면밖이라시각확인근거가아니다.2862에서실제버튼으로스크롤한뒤팝오버PNG를직접보았다."
+    },
+    {
+      "evidence": [
+        2863,
+        2864,
+        2865,
+        2866,
+        2867
+      ],
+      "result": "진행팝오버를닫고다른그룹의자체단건COPY239를열었다.상태폼은fieldset전체잠금과개별전이금지disabled를분리한다.초기R/온라인N/교사용T/2089019와모델·OMR·HML을읽었다."
+    },
+    {
+      "evidence": [
+        2868,
+        2869,
+        2870,
+        2871,
+        2872,
+        2873,
+        2874,
+        2875,
+        2876,
+        2877
+      ],
+      "result": "정상수정잠금해제→활성N라디오선택→저장검사→상태저장확인창→최종1회저장을실행했다.실제N과동일버전2089019를재조회했다.내용/저장OMR/HML/난이도가정확히같다.이후R/F라디오는개별disabled,Y/N/D는전이선택지다.동일단건그룹의원본216Y/AI240R과3개관계·이력은유지됐다.2876상태PNG를직접보았다."
+    },
+    {
+      "evidence": [
+        2878
+      ],
+      "result": "AI세트의새이력은2089382/2089383/2089384/2089385,AI생성,jaehyuk.myung,2026-11-10 13:50이다.이력발견시각과표시생성시각은구분하며아직새세트ID/문항내용을조회하지않았다."
+    }
+  ],
+  "artifacts": [
+    "own-single-copy-unused-approval-intent-20261110.json",
+    "own-copy239-unused-n-comparison-20261110.json",
+    "own-set-ai-generation-intent-20261110.json",
+    "sources/own-copy2089239-approved-unused-n-20261110.html"
+  ],
+  "persistentChanges": {
+    "confirmedMasterOperations": 77,
+    "newMasterChangesInThisPhase": 1,
+    "changedSingleItemId": 2089239,
+    "finalViewFlag": "N",
+    "sameDetailId": 2089019,
+    "existingSetAiOperation76NowHasResultIds": [
+      2089382,
+      2089383,
+      2089384,
+      2089385
+    ],
+    "newAiResultDiscoveryNotAnAdditionalBusinessOperation": true,
+    "serviceDeployment": false
+  },
+  "remaining": [
+    "Verify the newly observed four AI item IDs, actual passage ID, states, content/OMR/HML, and unchanged original/copy controls.",
+    "단건Master폐기D의확인/편집잠금/Definition문서연결정책을자체F표본으로확인한다.",
+    "HML복사편집격리·평가지세트편집등미검증범위를이어간다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239",
+    "tab": "t21 own single COPY239 retained as unused approved N",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "unsavedState": null,
+    "pendingVerification": {
+      "operation": "AI set generation accepted in2854",
+      "resultIds": [
+        2089382,
+        2089383,
+        2089384,
+        2089385
+      ],
+      "fullResultVerificationRequired": true,
+      "retryForbiddenUntilReconciled": true
+    }
+  },
+  "evidenceLimits": [
+    "N상태후생성버튼부재만으로N의보편권한정책을추론하지않는다.이COPY표본은R일때도버튼이없었다.",
+    "상태N을의도적자체QA표본으로남겼으며정상UI에서금지된R전이를강제로복구하지않았다.",
+    "AI이력발견은네ID의생성관측이며내용/모델의검증완료는아직아니다.",
+    "전체100%완료를주장하지않는다."
+  ]
+}

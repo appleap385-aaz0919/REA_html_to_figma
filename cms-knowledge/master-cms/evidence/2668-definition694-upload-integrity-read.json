@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2668-definition694-upload-integrity-read",
+  "startedUtc": "2026-11-10T03:45:49.740468+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/definition694-upload-integrity-read.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=694&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.144
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=694&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "bytes": 2860,
+        "equalsSubmittedFixture": true,
+        "fileName": "QA-DIFI-20261110-04-MULTI3.zip",
+        "fileUrlWithoutQuery": "/exam/694/c03c8742-02f3-47fd-af8b-1863fa46d9c7.zip",
+        "method": "Read-only GET through actual observed download proxy",
+        "sha256": "e53927cb286a91f50353b2f55b2dc8ff7d9c38a7d66fa8e606aa97a240f58171",
+        "status": 200,
+        "type": "application/zip;charset=UTF-8"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.424
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=694&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e35263": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e35264": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e35265": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e35266": {
+          "name": "디피니션 상세",
+          "role": "heading"
+        },
+        "e35267": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e35268": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e35269": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e35270": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e35271": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e35272": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e35273": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e35274": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e35275": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e35276": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e35277": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e35278": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e35279": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e35280": {
+          "name": " 다운로드",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e35263]\n      - link \"문제은행 마스터 CMS\" [ref=e35264]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e35270]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e35271]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e35272]\n          - link \"HML 문항 등록\" [ref=e35273]\n          - link \"디피니션 문항 등록\" [ref=e35274]\n          - link \"쌍둥이 그룹 관리\" [ref=e35275]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e35276]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e35277]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e35278]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e35265]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"디피니션 상세\" [level=2, ref=e35266]\n      - StaticText \"실패\"\n      - generic\n        - StaticText \"ZIP 파일 자체에 오류가 있어 파싱을 시작하지 못했습니다.\"\n        - StaticText \"원본을 내려받아 수정한 뒤 다시 등록해 주세요.\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e35268]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"694\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"QA-DIFI-20261110-04-MULTI3.zip\"\n            - button \" 다운로드\" [ref=e35280]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-M-MA-T0-1-1-SMT-TP-2022]\"\n            - StaticText \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22MMAT0KOK1001020000]\"\n            - StaticText \"22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 소인수분해 > 소인수분해 > >\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"1 ~ 3\"\n          - term \"용도\"\n          - definition\n            - StaticText \"공통\"\n          - term \"등록\"\n          - definition\n            - StaticText \"jaehyuk.myung · 2026-11-10\"\n          - term \"수정\"\n          - definition\n            - StaticText \"-\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [disabled, ref=e35279]\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e35269]\n        - StaticText \"\"\n        - paragraph\n          - StaticText \"등록된 문항이 없습니다\"\n        - paragraph\n          - StaticText \"HML 파일 자체에 오류가 있어 파싱이 시작되지 못했습니다.\"\n      - link \"목록\" [ref=e35267]"
+    },
+    "error": null,
+    "localSeconds": 0.181
+  }
+}

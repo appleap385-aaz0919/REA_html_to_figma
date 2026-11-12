@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3252-own-copy239-explanation-popup-safe-close-preflight",
+  "startedUtc": "2026-11-10T08:48:44.559070+00:00",
+  "command": [
+    "eval",
+    "(()=>{const q=new URLSearchParams(location.search),c=document.querySelector('#webhwpFrame')?.contentWindow.HwpCtrl,p=window.opener;if(location.pathname!=='/item/webhwp/editor.donga'||q.get('itemId')!=='2089239'||q.get('itemDetailId')!=='2089019'||!c||c.IsModified!==false||document.querySelector('.modal.show')||new URL(p.location.href).pathname!=='/item/all/detail.donga'||new URL(p.location.href).searchParams.get('itemId')!=='2089239'||p.document.querySelector('.page-wrapper dl dt')?.nextElementSibling?.textContent.trim()!=='2089239 (2089104)'||p.document.querySelector('#statusForm input[name=viewFlag]:checked')?.value!=='N')throw Error('Own saved popup and committed N parent required');return {safeToClose:true,editorModified:c.IsModified,pageCount:c.PageCount,parentUrl:p.location.href,parentIdentity:'2089239 (2089104)'};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019"
+    },
+    "error": null,
+    "localSeconds": 0.074
+  },
+  "targetIdBefore": "63A5D31D7DAF83FED02A4ED4A50DEEC0",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "result": {
+        "editorModified": false,
+        "pageCount": 1,
+        "parentIdentity": "2089239 (2089104)",
+        "parentUrl": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239",
+        "safeToClose": true
+      }
+    },
+    "error": null,
+    "localSeconds": 0.425
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089239&itemDetailId=2089019",
+      "refs": {
+        "e42160": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e42161": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e42162": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e42163": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e42164": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e42165": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e42166": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [disabled, ref=e42162]\n    - button \"지문해석 수정\" [disabled, ref=e42163]\n    - button \"문제 수정\" [ref=e42164]\n    - button \"해답 수정\" [ref=e42165]\n  - button \"저장\" [ref=e42160]\n  - StaticText \"bf71fc64-6af8-466d-9556-7384d64832dc.hwpml2x 을(를) 열었습니다.\"\n  - Iframe [ref=e42161]\n    - Iframe [ref=e42166]"
+    },
+    "error": null,
+    "localSeconds": 0.091
+  }
+}

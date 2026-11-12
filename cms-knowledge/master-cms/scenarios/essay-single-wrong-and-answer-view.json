@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {"label":"823-single-essay-before-wrong-value","command":["snapshot"]},
+    {"label":"824-single-essay-student-two","command":["fill","{ref}","2"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- textbox \"답을 작성해 주세요[.]\" \\[ref=(e\\d+)\\]"},
+    {"label":"825-single-essay-grade-two","command":["click","{ref}"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- button \"채점하기\" \\[ref=(e\\d+)\\]"},
+    {"label":"826-single-essay-grade-two-result","command":["snapshot"],"screenshot":true},
+    {"label":"827-single-essay-show-answer","command":["click","{ref}"],"scopeAfter":"- Iframe \"OMR 미리보기\"","refPattern":"- switch \\[checked=false, ref=(e\\d+)\\]"},
+    {"label":"828-single-essay-answer-view","command":["snapshot"],"screenshot":true}
+  ],
+  "tailChars":4800
+}

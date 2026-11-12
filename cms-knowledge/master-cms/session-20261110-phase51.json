@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "definition_multi3_registered_but_parsing_failed",
+  "evidenceRange": [
+    2650,
+    2670
+  ],
+  "lastEvidence": "2670-definition694-failure-bottom-visual",
+  "summary": "다중유형3JSON QA ZIP을 정상UI로1회등록해 문서694가 생성됐다. 목록18→19, 문서F/표시문항0이다. 발급·create는HTTP200이고 원본다운로드2860B/SHA가제출파일과일치한다. 구체적파싱원인은미노출이며혼합S/F/D검수는실행할수없었다. ZIP상단오류와하단HML오표기를스크롤및실제PNG로확인했다. Master업무63회,Service배포없음.",
+  "observations": [
+    {
+      "evidence": [
+        2650,
+        2653,
+        2654,
+        2655,
+        2656,
+        2657,
+        2658,
+        2659,
+        2660
+      ],
+      "result": "실제등록폼에MULTI3 ZIP2860B를선택하고Source13/단원22MMAT0KOK1001020000/페이지1~3/C를입력했다. 브라우저파일SHA·폼유효성·빈발급ID·등록버튼활성을확인했다."
+    },
+    {
+      "evidence": [
+        2661,
+        2662,
+        2663,
+        2664
+      ],
+      "result": "등록버튼을1회눌렀다. 폼비활성중간상태후목록으로이동했고유일한QA파일명의문서694/실패가등장했다. 등록은Master의업무1회로기록하며성공문항생성과구분한다."
+    },
+    {
+      "evidence": [
+        2665,
+        2666,
+        2667,
+        2668
+      ],
+      "result": "694상세는F/등록문항없음/비고disabled이고승인·폐기조작이없다. 서버원본다운로드는HTTP200/2860B/SHA동일이다. 발급·createHTTP200과함께전송후문서생성은확정했으나서버파싱내부원인은확정하지않았다."
+    },
+    {
+      "evidence": [
+        2669,
+        2670
+      ],
+      "result": "가려진탭에서캡처성공.높이1049/viewport1014~1015의페이지상단0및하단34까지스크롤하고두PNG를직접보았다. 상단ZIP오류,하단HML오류문구의불일치가실제표시된다."
+    }
+  ],
+  "artifacts": [
+    "definition-multi3-import-intent-20261110.json",
+    "definition-multi3-network-result-20261110.json",
+    "sources/definition694-failed-20261110.html",
+    "sources/definition694-failed-20261110.schema.json",
+    "scenarios/definition-multi3-register-prepare.json",
+    "scenarios/definition-multi3-register-submit.json",
+    "scenarios/definition694-integrity-read.json"
+  ],
+  "persistentChanges": {
+    "confirmedMasterOperations": 63,
+    "newMasterChangesInThisPhase": 1,
+    "newDefinitionDocumentId": 694,
+    "newVisibleItems": 0,
+    "documentState": "F",
+    "approvalSubmitted": false,
+    "serviceDeployment": false
+  },
+  "remaining": [
+    "다중등록실패원인을미확정으로유지하고정상단건대조를통해유형매핑과후속검수가능범위를좁힌다.",
+    "이미지자산ASSET3는미등록이며이번실패원인과입력제약을확인한후정상구조로검증한다.",
+    "실제해석HML/정상Definition세트ZIP의문항·시험지ID문의는응답대기중이며독립조사는계속한다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=694&curriculum=22&pageNum=1&pageSize=100",
+    "tab": "t21 own Definition694 failed detail at bottom",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "unsavedState": null
+  },
+  "evidenceLimits": [
+    "압축해제/CRC/JSON검증통과는서버입력스키마수용의증거가아니다.",
+    "파싱시작못했다는문구는UI표시이며실제내부실패지점/예외로그/DB를확인하지않았다.",
+    "PUT요청행은이번보존로그에서찾지못했으나이는전송실패증거가아니다.서버다운로드SHA일치로저장원본을확인했다.",
+    "새694에서S/F/D선택·승인·추천은실행되지않았다.",
+    "전체100%완료를주장하지않는다."
+  ]
+}

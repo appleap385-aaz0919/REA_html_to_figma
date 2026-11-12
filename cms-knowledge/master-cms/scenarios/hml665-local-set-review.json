@@ -1,0 +1,8 @@
+{"steps":[
+ {"label":"2075-hml665-set-delete-local-select","command":["select","select[data-exam-judge][data-block-no='1']","D"]},
+ {"label":"2076-hml665-set-review-paper-yes","command":["check","input[name=paperRegYn][value=Y]"]},
+ {"label":"2077-hml665-set-review-remark","command":["fill","textarea[name=remark]","QA-HML-20261109-02: delete own four-child set; keep own single; create paper."]},
+ {"label":"2078-hml665-set-review-ready","command":["eval","--file","sources/runtime/hml-draft-local-observation.js"],"screenshot":true},
+ {"label":"2079-hml665-set-approval-open","command":["eval","(async()=>{const s=[...document.querySelectorAll('[data-exam-judge]')];if(new URLSearchParams(location.search).get('examDocumentId')!=='665'||document.querySelector('.modal.show')||s.length!==2||s[0].dataset.itemIds!=='2089234,2089235,2089236,2089237'||s[0].value!=='D'||s[1].dataset.itemIds!=='2089238'||s[1].value!=='S'||!document.querySelector('[name=paperRegYn][value=Y]:checked'))throw Error('Expected own setD/singleS/paperY');const m=document.getElementById('examApproveModal');await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Approval modal did not finish opening')),5000);m.addEventListener('shown.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});document.querySelector('[data-exam-approve]').click();});return {id:m.id,text:m.innerText};})()"]},
+ {"label":"2080-hml665-set-before-final-approval","command":["eval","--file","sources/runtime/hml-draft-local-observation.js"],"screenshot":true}
+],"tailChars":700}

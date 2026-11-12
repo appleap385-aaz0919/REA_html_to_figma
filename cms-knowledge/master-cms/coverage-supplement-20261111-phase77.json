@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "supplementary_feature_coverage_map",
+  "recordedDate": "2026-11-11",
+  "scope": {
+    "application": "문제은행 마스터 CMS",
+    "host": "dev-exambank.dongahub.com",
+    "latestCutoff": 3473,
+    "latestPhase": "session-20261111-phase77.json",
+    "serviceCmsIncluded": false
+  },
+  "inherits": {
+    "file": "coverage-supplement-20261110-phase69.json",
+    "cutoff": 3258,
+    "policy": "The earlier map retains the complete historical evidence references. Use these later deltas for superseded entries."
+  },
+  "completeness": {
+    "overallCompletionPercent": null,
+    "actualTotalSitePages": null,
+    "actualTotalSiteFunctions": null,
+    "allKnownBranchesComplete": false,
+    "previousActionableQueue": {
+      "identified": 8,
+      "verified": 8,
+      "remaining": 0
+    },
+    "resumeDayQueue": {
+      "identified": 6,
+      "verified": 6,
+      "remaining": 0
+    }
+  },
+  "confirmedMasterOperations": 95,
+  "verified": [
+    {
+      "id": "PAPER_POINTER_SORT",
+      "phase": "session-20261110-phase70.json",
+      "title": "평가지의 실제 드래그",
+      "finding": "단건을 세트 앞으로 드래그하면 순번이 바뀌고 세트 내부 순서는 유지됩니다. 저장하지 않고 이동하면 서버에 저장된 편성은 그대로입니다.",
+      "evidence": [
+        3286,
+        3287,
+        3291,
+        3292
+      ],
+      "comparison": "paper1094-native-pointer-drag-comparison-20261110.json"
+    },
+    {
+      "id": "LAB_OMR_REAL_JSON",
+      "phase": "session-20261110-phase71.json",
+      "title": "실제 저장된 OMR·정답 JSON 복원",
+      "finding": "객관식 N지 선다와 주관식 일반형의 수식·텍스트 표본 3개를 원래 구조와 값으로 복원했습니다. 주관식 일반형의 정답 위젯은 저장된 value_type에 따라 달라집니다. 랩의 정답 수정은 JSON에 즉시 반영됐습니다.",
+      "evidence": [
+        3298,
+        3303,
+        3306,
+        3319,
+        3323,
+        3329,
+        3330,
+        3350
+      ],
+      "comparison": "lab-real-saved-omr-roundtrip-comparison-20261110.json"
+    },
+    {
+      "id": "MIXED_SINGLE_SET_TWIN",
+      "phase": "session-20261111-phase72.json",
+      "title": "단건과 세트의 쌍둥이 추가",
+      "finding": "단건 2089246과 세트의 2089242를 양방향으로 조회했습니다. 후보는 검색되며 추가 버튼은 양쪽에서 비활성화됩니다. 매핑 정보는 각각 ‘세트 문항’과 ‘세트 문항 아님’입니다.",
+      "evidence": [
+        3353,
+        3354,
+        3356,
+        3357,
+        3360,
+        3361,
+        3363,
+        3364
+      ],
+      "limit": "현재 화면과 두 표본에서 정상 추가가 차단되는 것을 확인했습니다."
+    },
+    {
+      "id": "COPY_GENERATION_APPROVAL_STATE",
+      "phase": "session-20261111-phase73.json",
+      "title": "복제 문항의 승인 상태와 생성 버튼",
+      "finding": "같은 복제 문항 2089239는 승인(미사용)과 승인(사용)에서 모두 쌍둥이 생성과 이력 버튼이 표시되지 않았습니다. 상태를 원래 값으로 복구했습니다.",
+      "evidence": [
+        3370,
+        3372,
+        3373,
+        3374,
+        3377,
+        3378,
+        3379,
+        3380,
+        3381
+      ],
+      "limit": "한 복제 문항에서 승인 상태의 효과를 비교했습니다. 전체 생성 자격 규칙은 미확정입니다."
+    },
+    {
+      "id": "SOURCE_EMPTY_PAGE0",
+      "phase": "session-20261111-phase74.json",
+      "title": "출처 빈 결과의 0 페이지",
+      "finding": "교육과정 15의 검색 결과가 0건일 때 숫자 ‘0’ 링크가 활성 상태입니다. 클릭하면 pageNum=0의 HTTP 200 응답을 받으며 빈 결과가 유지됩니다. ‘초기화’가 필터를 바꾼 뒤 ‘조회’를 눌러야 새 목록을 받습니다.",
+      "evidence": [
+        3385,
+        3386,
+        3387,
+        3388,
+        3389
+      ]
+    },
+    {
+      "id": "LAB_MATH_EMPTY_DISMISS_BLOCK",
+      "phase": "session-20261111-phase75.json",
+      "title": "수식 창의 빈 값, 닫기, 블록 삽입",
+      "finding": "단독 답안은 빈 값을 적용하면 기존 답이 지워집니다. 본문 수식 추가에서는 빈 값이 삽입되지 않습니다. Esc와 배경 클릭은 입력을 반영하지 않고 닫습니다. ‘블록 수식’에서 값 9를 적용하면 편집기와 출력 HTML에 블록 수식이 하나 생깁니다.",
+      "evidence": [
+        3395,
+        3399,
+        3402,
+        3403,
+        3407,
+        3411,
+        3416,
+        3417,
+        3418,
+        3419,
+        3421
+      ],
+      "limit": "테스트 당시 배경이 열려 있을 때도 왼쪽 메뉴의 두 지점에서 메뉴 링크가 포인터에 잡혔습니다. 실제 메뉴 이동은 시험 범위 밖입니다."
+    },
+    {
+      "id": "HML_VENDOR_SAVE_THEN_CMS_CANCEL",
+      "phase": "session-20261111-phase76.json",
+      "title": "해답 HML 편집기 저장 후 CMS 취소",
+      "finding": "편집기에서 저장한 두 임시 결과는 창을 닫고 CMS 확인창에서 취소해도 남았습니다. ‘저장 하지 않고 이동’으로 상세에 돌아간 뒤 다시 편집 화면을 열면 대기 파일이 없습니다. 확정 파일 6개의 바이트와 저장된 문항 내용·관계는 이전 값과 일치합니다.",
+      "evidence": [
+        3439,
+        3441,
+        3442,
+        3445,
+        3446,
+        3447,
+        3448,
+        3449,
+        3451,
+        3452,
+        3453,
+        3455,
+        3456,
+        3457
+      ],
+      "comparison": "hml-cancel239-vendor-pending-comparison-20261111.json",
+      "limit": "편집기 서버 임시 파일의 물리 삭제 여부는 미확인입니다."
+    },
+    {
+      "id": "PAPER_REVERSED_PAGE_RANGE",
+      "phase": "session-20261111-phase77.json",
+      "title": "평가지 페이지 범위 검증 누락",
+      "finding": "초안 평가지를 수정하면서 시작 2, 끝 1을 입력해 저장하면 성공 안내가 나오고, 다시 조회해도 ‘2 ~ 1’이 표시됩니다. 테스트 평가지 1094는 ‘1 ~ 1’로 복구했습니다.",
+      "evidence": [
+        3460,
+        3464,
+        3465,
+        3466,
+        3467,
+        3471,
+        3472,
+        3473
+      ],
+      "comparison": "paper1094-reversed-page-range-comparison-20261111.json",
+      "limit": "테스트 대상은 초안 평가지 수정입니다. 승인·배포에 미치는 영향은 미검증입니다."
+    }
+  ],
+  "knownLimits": [
+    {
+      "id": "TRANSLATION_HML",
+      "status": "sample_unavailable",
+      "scope": "실제 해석 HML이 연결된 문항의 열기·편집·저장 흐름. 사용자가 현재 표본이 없다고 확인했습니다."
+    },
+    {
+      "id": "DEFINITION_SET_ZIP",
+      "status": "sample_or_parser_spec_unavailable",
+      "scope": "정상 디피니션 세트 ZIP의 파싱, 세트 묶음, 다중 카드 혼합 검수. 보존된 원본은 단건이고 기존 다중 JSON 실험은 실패했습니다."
+    },
+    {
+      "id": "SERVICE_CMS",
+      "status": "future_user_scope",
+      "scope": "서비스 CMS 수신·노출·배포 후 상태와 실제 채점. 마스터의 배포 화면 관찰 기록은 기존 맵에 있습니다."
+    },
+    {
+      "id": "ROLES_AND_BACKEND",
+      "status": "not_observable_with_current_account_and_frontend",
+      "scope": "다른 계정 역할별 권한, 서버·DB 내부 규칙과 일부 실패·경합 조건."
+    },
+    {
+      "id": "OLDER_VISUAL_GAPS",
+      "status": "partial",
+      "scope": "일부 과거 화면의 중·하단 캡처가 연결 시간 초과로 누락됐습니다. 각 화면의 시각 검증 범위는 기존 증거에 따릅니다."
+    }
+  ],
+  "finalFixtureState": {
+    "paper1094": {
+      "detailId": 1191,
+      "status": "R",
+      "pages": [
+        1,
+        1
+      ],
+      "usage": "C",
+      "memberItemIds": [
+        2089238
+      ]
+    },
+    "copy239": {
+      "detailId": 2089104,
+      "status": "N",
+      "draft": false
+    },
+    "pendingBrowserChanges": null,
+    "pendingCleanup": null,
+    "serviceDeployment": false,
+    "latestBrowserEvidence": "3473-paper1094-reversed-range-final-independent-readback"
+  }
+}

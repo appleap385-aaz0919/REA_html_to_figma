@@ -1,0 +1,17 @@
+{"steps":[
+ {"label":"1606-lab-math-keypad-one-plus-two","command":["eval","--file","sources/runtime/lab-math-press-one-plus-two.js"]},
+ {"label":"1607-lab-math-keypad-local-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1608-lab-math-keypad-cancel","command":["eval","(() => {document.querySelector('.math-dialog__cancel').click();return {action:'Cancel edited dialog'};})()"]},
+ {"label":"1609-lab-math-cancel-answer-retained","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1610-lab-math-keypad-reopen","command":["eval","(() => {document.querySelector('#answerField').parentElement.querySelector('.vt-math-open').click();return {action:'Reopen answer dialog'};})()"]},
+ {"label":"1611-lab-math-keypad-repeat-input","command":["eval","--file","sources/runtime/lab-math-press-one-plus-two.js"]},
+ {"label":"1612-lab-math-keypad-apply","command":["eval","(() => {document.querySelector('.math-dialog__confirm').click();return {action:'Apply keypad result to standalone answer'};})()"]},
+ {"label":"1613-lab-math-applied-answer-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1614-lab-math-matrix-reopen","command":["eval","(() => {document.querySelector('#answerField').parentElement.querySelector('.vt-math-open').click();return {action:'Open dialog for matrix test'};})()"]},
+ {"label":"1615-lab-math-matrix-key","command":["eval","(() => {const d=window.MathFieldDialog.get();d.mf.value='';const b=[...d.backdrop.querySelectorAll('.keypad__key')].find(e=>e.getAttribute('aria-label')==='행렬');if(!b)throw Error('Matrix key missing');const r=b.getBoundingClientRect(),i={bubbles:true,pointerId:72,pointerType:'mouse',clientX:r.x+r.width/2,clientY:r.y+r.height/2};b.dispatchEvent(new PointerEvent('pointerdown',i));window.dispatchEvent(new PointerEvent('pointerup',i));return {action:'Press actual matrix keypad handlers',rows:d.matrix.rows.value,cols:d.matrix.cols.value};})()"]},
+ {"label":"1616-lab-math-matrix-rows3","command":["select",".matrix-dialog select[data-matrix=rows]","3"]},
+ {"label":"1617-lab-math-matrix-cols2","command":["select",".matrix-dialog select[data-matrix=cols]","2"]},
+ {"label":"1618-lab-math-matrix-insert","command":["eval","(() => {document.querySelector('.matrix-dialog__btn').click();return {action:'Insert3x2matrix into dialog'};})()"]},
+ {"label":"1619-lab-math-matrix-state","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1620-lab-math-matrix-cancel","command":["eval","(() => {document.querySelector('.math-dialog__cancel').click();return {action:'Cancel matrix test without replacing standalone answer'};})()"]}
+],"tailChars":700}

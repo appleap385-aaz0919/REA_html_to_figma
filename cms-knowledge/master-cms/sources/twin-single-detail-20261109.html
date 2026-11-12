@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>쌍둥이 그룹 상세 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown active">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle show" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item active" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">문항 관리</li>
+        <li class="breadcrumb-item">쌍둥이 그룹 관리</li>
+    
+    <li class="breadcrumb-item">그룹 상세</li>
+</ol>
+        <h2 class="page-title">쌍둥이 그룹 상세</h2>
+    </div>
+
+    <div class="card mt-3 mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">그룹 정보</h3>
+        </div>
+        <div class="card-body">
+            <div class="row g-3 gx-5">
+                <div class="col-md-6">
+                    <dl class="row mb-0 dl-detail">
+                        <dt class="col-2 form-label fw-semibold mb-0">그룹 ID</dt>
+                        <dd class="col-10">2088665</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">유형</dt>
+                        <dd class="col-10">단일 문항</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">개수</dt>
+                        <dd class="col-10">8개</dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="row mb-0 dl-detail">
+                        <dt class="col-2 form-label fw-semibold mb-0">수정자</dt>
+                        <dd class="col-10">jaehyuk.myung</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">수정일시</dt>
+                        <dd class="col-10">2026-11-06 13:55</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 단일 문항 -->
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table card-table table-vcenter">
+                <thead>
+                <tr>
+                    <th style="width: 8%;">문항 ID</th>
+                    <th>문제</th>
+                    <th style="width: 20%;">단원코드</th>
+                    <th class="text-center" style="width: 18%;">형태 / 난이도</th>
+                    <th class="text-center" style="width: 10%;">상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2038004</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2038004">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?
+$(-3,~1)$
+$(-9,~3)$
+$(1,~-3)$
+$(3,~-1)$
+$(12,~-4)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">승인(사용)</td>
+                </tr>
+                <tr>
+                    <td>2088664</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088664">다음 중 그림과 같은 정비례 관계의 그래프 위의최댓값 점이 아닌 것은?$(-6,~2)$$(-9,~3)$$(6,~-2)$$(3,~-2)$$(12,~-4)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088667</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088667">아래 그림과 같은 정비례 관계의 그래프 위에 놓이지 않는 점은 ?$(-3,~2)$$(-9,~6)$$(2,~- \dfrac{4}{3})$$(3,~-2)$$(12,~-7)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088784</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088784">다음 중 그림에 나타낸 정비례 관계의 그래프 위에 놓인 점이 아닌 것은?$(-4,~2)$$(-10,~4)$$(2,~-1)$$(4,~-2)$$(12,~-6)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088785</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088785">그림의 정비례 관계 그래프에 놓이지 않는 점은?$(-2,~2)$$(-6,~6)$$(2,~-2)$$(3,~-2)$$(8,~-8)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088786</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088786">아래 그래프와 같은 정비례 관계에서 점이 아닌 것은?최댓값$(-6,~2)$최댓값Normal0false02falsefalsefalseEN-USKOX-NONE최댓값$(-9,~3)$최댓값최댓값최댓값최댓값최댓값최댓값Normal0false02falsefalsefalseEN-USKOX-NONE최댓값$(1,~-3)$최댓값Normal0false02falsefalsefalseEN-USKOX-NONE최댓값$(3,~-1)$Normal0false02falsefalsefalseEN-USKOX-NONE최댓값$(9,~-2)$최댓값최댓값최댓값최댓값최댓값
+
+해 물과 백두산이 마르고 닳도록하느님이 보우하사 우리나라 만세무궁화 삼천리 화려 강산</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088806</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088806">그림에 나타난 정비례 관계의 그래프에 속하지 않는 점은?$(-4,~2)$$(-10,~5)$$(2,~-1)$$(4,~-2)$$(10,~-3)$</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                <tr>
+                    <td>2088985</td>
+                    <td class="text-truncate" style="max-width: 0;">
+                        <a class="text-decoration-none" target="_blank" rel="noopener" href="/item/all/detail.donga?itemId=2088985">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?</a>
+                    </td>
+                    <td>
+                        <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-custom-class="tooltip-unit" data-bs-original-title="&lt;div&gt;[22MMAT0KOK1004030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 좌표평면과 그래프 &amp;gt; 정비례와 그 그래프 &amp;gt;  &amp;gt; &lt;/div&gt;">[중학1 수학군] 04-03-00-00</div>
+                    </td>
+                    <td class="text-center">
+                        <span>객관식 &gt; 단답형 &gt; N지 선다</span>
+                        <div>하</div>
+                    </td>
+                    <td class="text-center">초안</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 세트 -->
+    
+
+    <div class="mt-3">
+        <a class="btn" data-loading="" href="/item/twin/list.donga?pageNum=1&amp;pageSize=50">
+            <i class="ti ti-arrow-left me-1"></i>목록
+        </a>
+    </div>
+
+    <script>
+    document.addEventListener('mouseover', function (e) {
+        const trigger = e.target.closest('[data-bs-toggle="tooltip"]');
+        if (trigger && window.bootstrap) bootstrap.Tooltip.getOrCreateInstance(trigger).show();
+    });
+</script>
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+
+
+</body></html>

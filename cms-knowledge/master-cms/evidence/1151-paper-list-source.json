@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1151-paper-list-source",
+  "startedUtc": "2026-11-09T04:23:35.981156+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/sanitized-page-source.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/paper/list.donga?pageSize=30&curriculum=22&pageNum=1"
+    },
+    "error": null,
+    "localSeconds": 0.073
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/list.donga?pageSize=30&curriculum=22&pageNum=1",
+      "result": {
+        "html": "<!DOCTYPE html>\n<html lang=\"ko\" data-bs-navbar-position=\"combined\"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:\"\"}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:\"\"}\n</style>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <title>평가지 관리 | 문제은행 마스터 CMS</title>\n    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->\n    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>\n    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->\n    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css\">\n    <link rel=\"stylesheet\" href=\"/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css\">\n    <link rel=\"stylesheet\" href=\"/css/custom-4f213f104c14367e2495ee02d06e6fb6.css\">\n    \n    \n<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>\n<body>\n\n<div class=\"page\">\n    <!-- 사이드바 -->\n    \n    <aside class=\"navbar navbar-vertical navbar-expand-lg bg-primary\" data-bs-theme-primary=\"blue\" data-bs-theme=\"dark\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-brand navbar-brand-autodark justify-content-start ps-3\">\n                <button class=\"navbar-toggler\" type=\"button\" id=\"sidebarToggle\" aria-expanded=\"false\" aria-controls=\"sidebar-menu\" aria-label=\"메뉴\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                \n                <a href=\"/main.donga\" class=\"text-decoration-none text-white\" title=\"MASTER\">문제은행 마스터 CMS</a>\n            </div>\n\n            <div class=\"collapse navbar-collapse\" id=\"sidebar-menu\">\n                <ul class=\"navbar-nav pt-lg-3\">\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/main.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-home\"></i></span>\n                            <span class=\"nav-link-title\">홈</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item  dropdown\">\n\n                        \n                        \n\n                        \n                        \n                            <a class=\"nav-link dropdown-toggle\" href=\"#menu-ITEM\" data-bs-toggle=\"dropdown\" data-bs-auto-close=\"false\" role=\"button\" aria-expanded=\"false\">\n                                <span class=\"nav-link-icon\"><i class=\"ti ti-files\"></i></span>\n                                <span class=\"nav-link-title\">문항 관리</span>\n                            </a>\n                            <div class=\"dropdown-menu\">\n                                <a class=\"dropdown-item\" data-loading=\"\" href=\"/item/all/list.donga?unitCurriculum=22\">전체 문항</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/hml/list.donga?curriculum=22\">HML 문항 등록</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/difi/list.donga?curriculum=22\">디피니션 문항 등록</a><a class=\"dropdown-item\" data-loading=\"\" href=\"/item/twin/list.donga\">쌍둥이 그룹 관리</a>\n                            </div>\n                        \n                    </li>\n                    <li class=\"nav-item  active\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/paper/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-clipboard-list\"></i></span>\n                            <span class=\"nav-link-title\">평가지 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/product/list.donga?curriculum=22\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-database\"></i></span>\n                            <span class=\"nav-link-title\">문항 출처 관리</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                    <li class=\"nav-item\">\n\n                        \n                        <a class=\"nav-link\" data-loading=\"\" href=\"/lab/index.donga\">\n                            <span class=\"nav-link-icon\"><i class=\"ti ti-flask\"></i></span>\n                            <span class=\"nav-link-title\">랩</span>\n                        </a>\n\n                        \n                        \n                    </li>\n                </ul>\n            </div>\n        </div>\n    </aside>\n\n    <!-- 상단바 -->\n    \n    <header class=\"navbar navbar-expand-lg d-print-none border-bottom border-primary border-4\" data-bs-theme-primary=\"blue\">\n        <div class=\"container-fluid\">\n            <span class=\"status fs-3 fw-semibold status-blue\">\n                \n                <span>마스터</span>\n            </span>\n            <div class=\"navbar-nav flex-row order-lg-last ms-auto\">\n                <div class=\"d-flex align-items-center gap-3\">\n                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->\n                    <button type=\"button\" class=\"btn btn-icon d-none\" id=\"themeToggle\" aria-label=\"다크모드 전환\">\n                        <i class=\"ti ti-moon\"></i>\n                    </button>\n                    \n                    <span class=\"text-muted\" title=\"권한 : ADMIN\">접속자 <strong>jaehyuk.myung</strong></span>\n                    \n                    <form action=\"/logout.donga\" method=\"post\" class=\"m-0\" id=\"logoutForm\" data-loading=\"\">\n                        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#logoutConfirmModal\">\n                            <i class=\"ti ti-logout me-1\"></i>로그아웃\n                        </button>\n                    </form>\n                </div>\n                \n            </div>\n        </div>\n    </header>\n\n    <!-- 본문 -->\n    <div class=\"page-wrapper\">\n        <div class=\"page-body\">\n            <div class=\"container-fluid\">\n                <section>\n\n    <div class=\"page-header d-print-none\">\n        <ol class=\"breadcrumb breadcrumb-arrows fs-5 mb-1\" aria-label=\"breadcrumbs\">\n    <li class=\"breadcrumb-item\">시스템 관리</li>\n    \n        <li class=\"breadcrumb-item\">평가지 관리</li>\n    \n    \n</ol>\n        <h2 class=\"page-title\">평가지 관리</h2>\n    </div>\n\n    <div class=\"card mb-3 mt-3\" data-filter=\"\">\n        <div class=\"card-body\">\n\n            <!-- 1행: 검색 컬럼 + 검색어 + 분류 필터 + 단원 코드 -->\n            <div class=\"d-flex flex-nowrap gap-2 mb-2\">\n                <div style=\"width: 10%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" name=\"keywordType\">\n                        <option value=\"paperId\">평가지 ID</option>\n                        <option value=\"paperName\">평가지명</option>\n                        <option value=\"adminMemberUserId\">등록자 ID</option>\n                    </select>\n                </div>\n                <div class=\"flex-fill\" style=\"min-width: 160px;\">\n                    <input type=\"text\" class=\"form-control\" name=\"keyword\" value=\"\" placeholder=\"평가지 ID / 평가지명 / 등록자 ID\">\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"paperCurriculumSelect\" name=\"curriculum\" data-code-source=\"curriculum\" data-default-value=\"22\"><option value=\"\">교육과정 전체</option><option value=\"22\">22</option><option value=\"15\">15</option></select>\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"paperClassTypeSelect\" name=\"classType\" data-code-parent=\"classtype\" data-code-source=\"classtype\">\n                        <option value=\"\">학교급 전체</option>\n                        <option value=\"E\">초등</option>\n                        <option value=\"M\">중학</option>\n                        <option value=\"H\">고등</option>\n                    </select>\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"paperSubjectCategorySelect\" name=\"subjectCategory\" data-code-source=\"subjectcategory\"><option value=\"\">과목군 전체</option><option value=\"MA\">수학군</option></select>\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"paperSubjectSelect\" name=\"subject\" data-code-multi-child=\"curriculum,classtype,subjectcategory\" disabled=\"\">\n                        <option value=\"\">과목 전체</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"22\" data-code-classtype=\"E\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"22\" data-code-classtype=\"M\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                        \n                        <option value=\"C1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">공통수학1</option>\n                        \n                        <option value=\"C2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">공통수학2</option>\n                        \n                        <option value=\"B1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기본수학1</option>\n                        \n                        <option value=\"B2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기본수학2</option>\n                        \n                        <option value=\"T1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학1</option>\n                        \n                        <option value=\"T2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학2</option>\n                        \n                        <option value=\"A0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">대수</option>\n                        \n                        <option value=\"D1\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">미적분1</option>\n                        \n                        <option value=\"D2\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">미적분2</option>\n                        \n                        <option value=\"S0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">확률과통계</option>\n                        \n                        <option value=\"G0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">기하</option>\n                        \n                        <option value=\"P0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">직무수학</option>\n                        \n                        <option value=\"I0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">인공지능수학</option>\n                        \n                        <option value=\"U0\" data-code-curriculum=\"22\" data-code-classtype=\"H\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학과 문화</option>\n                        \n                        <option value=\"T0\" data-code-curriculum=\"15\" data-code-classtype=\"M\" data-code-subjectcategory=\"MA\" hidden=\"\" disabled=\"\">수학</option>\n                    </select>\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" id=\"paperGradeSelect\" name=\"grade\" data-code-child=\"classtype\" disabled=\"\">\n                        <option value=\"\">학년 전체</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학1</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등1</option>\n                        \n                        <option value=\"1\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등1</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학2</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등2</option>\n                        \n                        <option value=\"2\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등2</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등3</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"M\" hidden=\"\" disabled=\"\">중학3</option>\n                        \n                        <option value=\"3\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등3</option>\n                        \n                        <option value=\"4\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등4</option>\n                        \n                        <option value=\"4\" data-code-parent-value=\"H\" hidden=\"\" disabled=\"\">고등 공통</option>\n                        \n                        <option value=\"5\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등5</option>\n                        \n                        <option value=\"6\" data-code-parent-value=\"E\" hidden=\"\" disabled=\"\">초등6</option>\n                    </select>\n                </div>\n                <div style=\"width: 9%;\">\n                    <select class=\"form-select cursor-pointer filter-select\" name=\"term\">\n                        <option value=\"\">학기 전체</option>\n                        <option value=\"0\">공통학기</option>\n                        <option value=\"1\">1학기</option>\n                        <option value=\"2\">2학기</option>\n                    </select>\n                </div>\n                <div style=\"width: 12%;\">\n                    <input type=\"text\" class=\"form-control\" name=\"unitCode\" value=\"\" placeholder=\"단원 코드 입력\">\n                </div>\n            </div>\n\n            <!-- 2행: 등록일 -->\n            \n                <div class=\"row g-2 align-items-center mb-2\" data-date-range=\"\">\n    <input type=\"hidden\" data-date-days-input=\"\" name=\"registDays\" value=\"\">\n    <input type=\"hidden\" data-date-start=\"\" name=\"registStart\" value=\"\">\n    <input type=\"hidden\" data-date-end=\"\" name=\"registEnd\" value=\"\">\n    <div class=\"col-auto fw-semibold\">등록일</div>\n    <div class=\"col-auto\">\n        <div class=\"input-icon\" style=\"width: 230px;\">\n            <input type=\"text\" class=\"form-control cursor-pointer text-center\" data-date-display=\"\" placeholder=\"시작일 ~ 종료일\" readonly=\"\">\n            <span class=\"input-icon-addon\"><i class=\"ti ti-calendar\"></i></span>\n        </div>\n    </div>\n    <div class=\"col-auto btn-group\">\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"7\">7일</button>\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"30\">30일</button>\n        <button type=\"button\" class=\"btn fw-normal\" data-date-days=\"90\">90일</button>\n        <button type=\"button\" class=\"btn fw-normal active\" data-date-days=\"0\">전체</button>\n    </div>\n</div>\n            \n\n            <!-- 3행: 상태 + 액션 -->\n            <div class=\"d-flex flex-wrap align-items-center gap-5 mt-3\">\n                <div class=\"d-flex align-items-center gap-3\">\n                    <span class=\"fw-semibold\">상태</span>\n                    <div class=\"d-flex gap-3\">\n                        <label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-all=\"status\" checked=\"checked\">\n                            <span>전체</span>\n                        </label>\n                        <label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"R\" checked=\"checked\">\n                            <span>초안</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"Y\" checked=\"checked\">\n                            <span>사용</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"N\" checked=\"checked\">\n                            <span>미사용</span>\n                        </label><label class=\"d-inline-flex align-items-center mb-0 cursor-pointer\">\n                            <input class=\"form-check-input m-0 me-1 cursor-pointer\" type=\"checkbox\" data-check-group=\"status\" name=\"statuses\" value=\"D\" checked=\"checked\">\n                            <span>폐기</span>\n                        </label>\n                    </div>\n                </div>\n\n                <div class=\"ms-auto\">\n                    <button type=\"button\" class=\"btn\" data-reset=\"\"><i class=\"ti ti-refresh me-1\"></i>초기화</button>\n                    <button type=\"button\" class=\"btn btn-primary\" hx-include=\"[data-filter], [name='pageSize']\" hx-vals=\"{&quot;pageNum&quot;: 1}\" hx-target=\"#paperTableArea\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga\">\n                        <i class=\"ti ti-search me-1\"></i>조회\n                    </button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n    <div id=\"paperTableArea\">\n\n        <div class=\"d-flex align-items-center justify-content-between mb-2\">\n            <div class=\"d-flex align-items-center gap-2\">\n    <select class=\"form-select form-select-sm w-auto cursor-pointer\" name=\"pageSize\" hx-trigger=\"change\" hx-include=\"[data-filter], [data-unit-filter]\" hx-vals=\"{&quot;pageNum&quot;: 1}\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga\" hx-target=\"#paperTableArea\">\n        <option value=\"10\">10개씩 보기</option>\n        <option value=\"30\" selected=\"selected\">30개씩 보기</option>\n        <option value=\"50\">50개씩 보기</option>\n        <option value=\"100\">100개씩 보기</option>\n    </select>\n    <span class=\"text-muted\">검색결과 : <strong>17</strong>건</span>\n</div>\n        </div>\n\n        <div class=\"card\">\n            <div class=\"table-responsive\">\n                <table class=\"table card-table table-vcenter\" style=\"table-layout: fixed;\">\n                    <thead>\n                    <tr>\n                        <th class=\"text-center\" style=\"width: 8%;\">평가지 ID</th>\n                        <th class=\"text-center\">평가지명</th>\n                        <th class=\"text-center\" style=\"width: 18%;\">단원 코드</th>\n                        <th class=\"text-center\" style=\"width: 8%;\">문항 수</th>\n                        <th class=\"text-center\" style=\"width: 8%;\">생성 방식</th>\n                        <th class=\"text-center\" style=\"width: 8%;\">상태</th>\n                        <th class=\"text-center\" style=\"width: 10%;\">등록자 · 등록일</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    <tr>\n                        <td class=\"text-center\">531</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=531&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"중1-2_수매씽유형_유형북_8-08단원 (1)\">중1-2_수매씽유형_유형북_8-08단원 (1)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1208010000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 2학기 &amp;gt; 자료의 정리와 해석 &amp;gt; 대푯값 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1208020000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 2학기 &amp;gt; 자료의 정리와 해석 &amp;gt; 줄기와 잎 그림 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1208030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 2학기 &amp;gt; 자료의 정리와 해석 &amp;gt; 도수분포표 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1208040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 2학기 &amp;gt; 자료의 정리와 해석 &amp;gt; 히스토그램과 도수분포다각형 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22MMAT0KOK1208010000 등 4개</div>\n\n                        </td>\n                        <td class=\"text-center\">120</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>hari.im</div>\n                            <div>2026-10-27</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">530</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=530&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"행렬세트\">행렬세트</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22HMAC1GHG1006010000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 고등 &amp;gt; 수학군 &amp;gt; 공통수학1 &amp;gt; 고호경 &amp;gt; 고등1 &amp;gt; 공통학기 &amp;gt; 행렬 &amp;gt; 행렬의 뜻 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22HMAC1GHG1006010000</div>\n\n                        </td>\n                        <td class=\"text-center\">35</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>hari.im</div>\n                            <div>2026-10-27</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">341</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=341&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제10)\">[MOCK-HML-M] 템플릿_시험지2 (복제10)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">340</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=340&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제9)\">[MOCK-HML-M] 템플릿_시험지2 (복제9)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">339</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=339&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제8)\">[MOCK-HML-M] 템플릿_시험지2 (복제8)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">338</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=338&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제7)\">[MOCK-HML-M] 템플릿_시험지2 (복제7)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">337</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=337&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제6)\">[MOCK-HML-M] 템플릿_시험지2 (복제6)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">336</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=336&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제5)\">[MOCK-HML-M] 템플릿_시험지2 (복제5)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">335</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=335&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제4)\">[MOCK-HML-M] 템플릿_시험지2 (복제4)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">334</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=334&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제3)\">[MOCK-HML-M] 템플릿_시험지2 (복제3)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">333</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=333&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제2)\">[MOCK-HML-M] 템플릿_시험지2 (복제2)</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">332</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=332&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2 (복제1)+\">[MOCK-HML-M] 템플릿_시험지2 (복제1)+</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1002050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 정수와 유리수 &amp;gt; 정수와 유리수의 곱셈 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK1003040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학1 &amp;gt; 공통학기 &amp;gt; 문자의 사용과 식 &amp;gt; 일차식의 덧셈과 뺄셈 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22MMAT0KOK1002050000 등 2개</div>\n\n                        </td>\n                        <td class=\"text-center\">2</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">사용</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-19</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">266</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=266&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"초등_수학_4-2_3단원_서술형평가\">초등_수학_4-2_3단원_서술형평가</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS4203080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등4 &amp;gt; 2학기 &amp;gt; 소수의 덧셈과 뺄셈 &amp;gt; 소수 두 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS4203080000</div>\n\n                        </td>\n                        <td class=\"text-center\">3</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">폐기</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>yoonhye.lee</div>\n                            <div>2026-10-14</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">204</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=204&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+\">544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22HMAC1GHG1002010000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 고등 &amp;gt; 수학군 &amp;gt; 공통수학1 &amp;gt; 고호경 &amp;gt; 고등1 &amp;gt; 공통학기 &amp;gt; 복소수와 이차방정식 &amp;gt; 복소수의 뜻과 연산 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22HMAC1GHG1002030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 고등 &amp;gt; 수학군 &amp;gt; 공통수학1 &amp;gt; 고호경 &amp;gt; 고등1 &amp;gt; 공통학기 &amp;gt; 복소수와 이차방정식 &amp;gt; 이차방정식의 근과 계수의 관계 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22HMAC1GHG1004010000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 고등 &amp;gt; 수학군 &amp;gt; 공통수학1 &amp;gt; 고호경 &amp;gt; 고등1 &amp;gt; 공통학기 &amp;gt; 여러 가지 방정식과 부등식 &amp;gt; 삼차방정식과 사차방정식 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22HMAC1GHG1002010000 등 3개</div>\n\n                        </td>\n                        <td class=\"text-center\">5</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">사용</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>hari.im</div>\n                            <div>2026-10-12</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">203</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=203&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[e2e-20261012-cms-api-fix] completion-reprocess\">[e2e-20261012-cms-api-fix] completion-reprocess</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK3006040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학3 &amp;gt; 공통학기 &amp;gt; 원의 성질 &amp;gt; 원주각의 활용 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22MMAT0KOK3006040000</div>\n\n                        </td>\n                        <td class=\"text-center\">3</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sungkuk.chae</div>\n                            <div>2026-10-12</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">202</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=202&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"[MOCK-HML-M] 템플릿_시험지2\">[MOCK-HML-M] 템플릿_시험지2</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3101080000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 덧셈과 뺄셈 &amp;gt; 뺄셈의 어림셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (1) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3106070000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 1학기 &amp;gt; 분수와 소수 &amp;gt; 소수를 알아볼까요 (2) &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3202050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 나눗셈 &amp;gt; 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205040000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 들이의 덧셈과 뺄셈을 어떻게 할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205050000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게를 어떻게 비교할까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22EMAT0NGS3205060000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 초등 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 나귀수 &amp;gt; 초등3 &amp;gt; 2학기 &amp;gt; 들이와 무게 &amp;gt; 무게의 단위는 무엇일까요 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22EMAT0NGS3101070000 등 9개</div>\n\n                        </td>\n                        <td class=\"text-center\">4</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">초안</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>sangwon.jo</div>\n                            <div>2026-10-12</div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"text-center\">101</td>\n                        <td class=\"text-truncate\">\n                            <a class=\"text-decoration-none\" data-loading=\"\" href=\"/paper/detail.donga?paperId=101&amp;curriculum=22&amp;pageNum=1&amp;pageSize=30\" title=\"중3수학_통계2\">중3수학_통계2</a>\n                        </td>\n                        <td class=\"text-center\">\n                            \n    \n    <div data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" data-bs-html=\"true\" data-bs-custom-class=\"tooltip-unit\" title=\"&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK3007010000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학3 &amp;gt; 공통학기 &amp;gt; 자료의 분포와 관계 &amp;gt; 산포도 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK3007020000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학3 &amp;gt; 공통학기 &amp;gt; 자료의 분포와 관계 &amp;gt; 상자그림 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;mb-1&quot;&gt;&lt;div&gt;[22MMAT0KOK3007030000]&lt;/div&gt;&lt;div class=&quot;opacity-75&quot;&gt;22 &amp;gt; 중학 &amp;gt; 수학군 &amp;gt; 수학 &amp;gt; 강옥기 &amp;gt; 중학3 &amp;gt; 공통학기 &amp;gt; 자료의 분포와 관계 &amp;gt; 산점도와 상관관계 &amp;gt;  &amp;gt; &lt;/div&gt;&lt;/div&gt;\">22MMAT0KOK3007010000 등 3개</div>\n\n                        </td>\n                        <td class=\"text-center\">2</td>\n                        <td class=\"text-center\">HML 생성</td>\n                        <td class=\"text-center\">사용</td>\n                        <td class=\"text-center text-truncate\">\n                            <div>wonrae.cho</div>\n                            <div>2026-10-01</div>\n                        </td>\n                    </tr>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n\n        <div class=\"d-flex align-items-center mt-3\">\n    <div class=\"flex-fill\">\n        <span class=\"text-muted\">\n            총 <span>17</span>건 중\n            <span>1</span>∼<span>17</span> 표시\n        </span>\n    </div>\n    <ul class=\"pagination pagination-outline mb-0\">\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 앞\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga?pageNum=1&amp;pageSize=30\" hx-target=\"#paperTableArea\"><i class=\"ti ti-chevrons-left\"></i></a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-label=\"이전\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga?pageNum=1&amp;pageSize=30\" hx-target=\"#paperTableArea\"><i class=\"ti ti-chevron-left\"></i></a>\n        </li>\n        <li class=\"page-item active\">\n            <a class=\"page-link\" href=\"#\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga?pageNum=1&amp;pageSize=30\" hx-target=\"#paperTableArea\">1</a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"다음\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga?pageNum=1&amp;pageSize=30\" hx-target=\"#paperTableArea\"><i class=\"ti ti-chevron-right\"></i></a>\n        </li>\n        <li class=\"page-item disabled\">\n            <a class=\"page-link\" href=\"#\" aria-label=\"맨 뒤\" hx-include=\"[data-filter], [data-unit-filter]\" hx-swap=\"outerHTML\" hx-push-url=\"true\" hx-get=\"/paper/list.donga?pageNum=1&amp;pageSize=30\" hx-target=\"#paperTableArea\"><i class=\"ti ti-chevrons-right\"></i></a>\n        </li>\n    </ul>\n    <div class=\"flex-fill\"></div>\n</div>\n\n    </div>\n\n    \n    <script>\n    document.addEventListener('mouseover', function (e) {\n        const trigger = e.target.closest('[data-bs-toggle=\"tooltip\"]');\n        if (trigger && window.bootstrap) bootstrap.Tooltip.getOrCreateInstance(trigger).show();\n    });\n</script>\n\n    \n    <script>\n        document.addEventListener('DOMContentLoaded', () => {\n            const subjectRows = [{\"classType\":\"E\",\"curriculum\":\"22\",\"sequence\":1,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"초등 수학\"},{\"classType\":\"M\",\"curriculum\":\"22\",\"sequence\":2,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"중학 수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":3,\"subject\":\"C1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"공통수학1\",\"viewSubjectName\":\"고등 공통수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":4,\"subject\":\"C2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"공통수학2\",\"viewSubjectName\":\"고등 공통수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":5,\"subject\":\"B1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기본수학1\",\"viewSubjectName\":\"고등 기본수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":6,\"subject\":\"B2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기본수학2\",\"viewSubjectName\":\"고등 기본수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":7,\"subject\":\"T1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학1\",\"viewSubjectName\":\"고등 수학1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":8,\"subject\":\"T2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학2\",\"viewSubjectName\":\"고등 수학2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":9,\"subject\":\"A0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"대수\",\"viewSubjectName\":\"고등 대수\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":10,\"subject\":\"D1\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"미적분1\",\"viewSubjectName\":\"고등 미적분1\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":11,\"subject\":\"D2\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"미적분2\",\"viewSubjectName\":\"고등 미적분2\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":12,\"subject\":\"S0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"확률과통계\",\"viewSubjectName\":\"고등 확률과통계\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":13,\"subject\":\"G0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"기하\",\"viewSubjectName\":\"고등 기하\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":14,\"subject\":\"P0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"직무수학\",\"viewSubjectName\":\"고등 직무수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":15,\"subject\":\"I0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"인공지능수학\",\"viewSubjectName\":\"고등 인공지능수학\"},{\"classType\":\"H\",\"curriculum\":\"22\",\"sequence\":16,\"subject\":\"U0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학과 문화\",\"viewSubjectName\":\"고등 수학과 문화\"},{\"classType\":\"M\",\"curriculum\":\"15\",\"sequence\":17,\"subject\":\"T0\",\"subjectCategory\":\"MA\",\"subjectCategoryName\":\"수학군\",\"subjectName\":\"수학\",\"viewSubjectName\":\"중학 수학\"}];\n\n            const curriculumSelect = document.getElementById('paperCurriculumSelect');\n            const subjectCategorySelect = document.getElementById('paperSubjectCategorySelect');\n\n            populateSelectOptions(curriculumSelect,\n                distinctBy(subjectRows, r => r.curriculum).map(r => ({value: r.curriculum, text: r.curriculum})),\n                '교육과정 전체');\n            curriculumSelect.value = \"22\";\n\n            populateSelectOptions(subjectCategorySelect,\n                distinctBy(subjectRows, r => r.subjectCategory).map(r => ({value: r.subjectCategory, text: r.subjectCategoryName})),\n                '과목군 전체');\n            subjectCategorySelect.value = \"\";\n        });\n    </script>\n\n</section>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n    \n    <div>\n    <div class=\"modal modal-blur fade\" id=\"logoutConfirmModal\" tabindex=\"-1\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-dialog-centered modal-sm\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header bg-warning-lt\">\n                    <h5 class=\"modal-title\">\n                        <i class=\"ti me-2 ti-alert-triangle text-warning\"></i><span>로그아웃</span>\n                    </h5>\n                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"닫기\"></button>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"fw-bold mb-3\"><div class=\"text-center\">로그아웃하시겠습니까?</div></div>\n                    <div id=\"logoutConfirmBody\" class=\"text-secondary text-center\">로그인 화면으로 나갑니다.</div>\n                </div>\n                <div class=\"modal-footer py-2\">\n                    <button type=\"button\" class=\"btn btn-sm\" data-bs-dismiss=\"modal\">취소</button>\n                    <button type=\"button\" class=\"btn btn-sm btn-warning\" data-action-ok=\"\">로그아웃</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n<!-- 토스트 팝업 -->\n\n\n\n<div id=\"loadingOverlay\" class=\"loading-overlay\">\n    <div class=\"spinner-border text-primary\" role=\"status\"></div>\n</div>\n\n<script src=\"/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js\"></script>\n<script src=\"/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js\"></script>\n<script src=\"/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js\"></script>\n<script src=\"/js/common-8dc66a9d95b497a50939a25f89dee707.js\"></script>\n\n\n\n<div class=\"litepicker\" style=\"display: none;\" data-plugins=\"\"><div class=\"container__main\"><div class=\"container__months\"><div class=\"month-item\"><div class=\"month-item-header\"><button type=\"button\" class=\"button-previous-month\"><svg width=\"11\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.919 0l2.748 2.667L5.333 8l5.334 5.333L7.919 16 0 8z\" fill-rule=\"nonzero\"></path></svg></button><div><strong class=\"month-item-name\">11월</strong><span class=\"month-item-year\">2026</span></div><button type=\"button\" class=\"button-next-month\"><svg width=\"11\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.748 16L0 13.333 5.333 8 0 2.667 2.748 0l7.919 8z\" fill-rule=\"nonzero\"></path></svg></button></div><div class=\"month-item-weekdays-row\"><div title=\"월요일\">월</div><div title=\"화요일\">화</div><div title=\"수요일\">수</div><div title=\"목요일\">목</div><div title=\"금요일\">금</div><div title=\"토요일\">토</div><div title=\"일요일\">일</div></div><div class=\"container__days\"><div></div><div></div><div></div><div></div><div></div><div></div><div class=\"day-item\" data-time=\"1793458800000\" tabindex=\"0\">1</div><div class=\"day-item\" data-time=\"1793545200000\" tabindex=\"0\">2</div><div class=\"day-item\" data-time=\"1793631600000\" tabindex=\"0\">3</div><div class=\"day-item\" data-time=\"1793718000000\" tabindex=\"0\">4</div><div class=\"day-item\" data-time=\"1793804400000\" tabindex=\"0\">5</div><div class=\"day-item\" data-time=\"1793890800000\" tabindex=\"0\">6</div><div class=\"day-item\" data-time=\"1793977200000\" tabindex=\"0\">7</div><div class=\"day-item\" data-time=\"1794063600000\" tabindex=\"0\">8</div><div class=\"day-item is-today\" data-time=\"1794150000000\" tabindex=\"0\">9</div><div class=\"day-item\" data-time=\"1794236400000\" tabindex=\"0\">10</div><div class=\"day-item\" data-time=\"1794322800000\" tabindex=\"0\">11</div><div class=\"day-item\" data-time=\"1794409200000\" tabindex=\"0\">12</div><div class=\"day-item\" data-time=\"1794495600000\" tabindex=\"0\">13</div><div class=\"day-item\" data-time=\"1794582000000\" tabindex=\"0\">14</div><div class=\"day-item\" data-time=\"1794668400000\" tabindex=\"0\">15</div><div class=\"day-item\" data-time=\"1794754800000\" tabindex=\"0\">16</div><div class=\"day-item\" data-time=\"1794841200000\" tabindex=\"0\">17</div><div class=\"day-item\" data-time=\"1794927600000\" tabindex=\"0\">18</div><div class=\"day-item\" data-time=\"1795014000000\" tabindex=\"0\">19</div><div class=\"day-item\" data-time=\"1795100400000\" tabindex=\"0\">20</div><div class=\"day-item\" data-time=\"1795186800000\" tabindex=\"0\">21</div><div class=\"day-item\" data-time=\"1795273200000\" tabindex=\"0\">22</div><div class=\"day-item\" data-time=\"1795359600000\" tabindex=\"0\">23</div><div class=\"day-item\" data-time=\"1795446000000\" tabindex=\"0\">24</div><div class=\"day-item\" data-time=\"1795532400000\" tabindex=\"0\">25</div><div class=\"day-item\" data-time=\"1795618800000\" tabindex=\"0\">26</div><div class=\"day-item\" data-time=\"1795705200000\" tabindex=\"0\">27</div><div class=\"day-item\" data-time=\"1795791600000\" tabindex=\"0\">28</div><div class=\"day-item\" data-time=\"1795878000000\" tabindex=\"0\">29</div><div class=\"day-item\" data-time=\"1795964400000\" tabindex=\"0\">30</div></div></div></div></div><div class=\"container__tooltip\"></div></div></body></html>",
+        "redaction": "Password and CSRF/token-named input/meta nodes and nonce/token attributes removed; cookies/storage never read.",
+        "title": "평가지 관리 | 문제은행 마스터 CMS",
+        "url": "https://dev-exambank.dongahub.com/paper/list.donga?pageSize=30&curriculum=22&pageNum=1"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.081
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/paper/list.donga?pageSize=30&curriculum=22&pageNum=1",
+      "refs": {
+        "e5920": {
+          "name": "평가지 관리",
+          "role": "heading"
+        },
+        "e5921": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e5922": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e5923": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e5924": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5925": {
+          "name": "평가지 ID / 평가지명 / 등록자 ID",
+          "role": "textbox"
+        },
+        "e5926": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5927": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5928": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5929": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5930": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5931": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e5932": {
+          "name": "단원 코드 입력",
+          "role": "textbox"
+        },
+        "e5933": {
+          "name": "시작일 ~ 종료일",
+          "role": "textbox"
+        },
+        "e5934": {
+          "name": "7일",
+          "role": "button"
+        },
+        "e5935": {
+          "name": "30일",
+          "role": "button"
+        },
+        "e5936": {
+          "name": "90일",
+          "role": "button"
+        },
+        "e5937": {
+          "name": "전체",
+          "role": "button"
+        },
+        "e5938": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e5939": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e5940": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e5941": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e5942": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e5943": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e5944": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e5945": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e5946": {
+          "name": "초안",
+          "role": "checkbox"
+        },
+        "e5947": {
+          "name": "사용",
+          "role": "checkbox"
+        },
+        "e5948": {
+          "name": "미사용",
+          "role": "checkbox"
+        },
+        "e5949": {
+          "name": "폐기",
+          "role": "checkbox"
+        },
+        "e5951": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e5952": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e5953": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e5954": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e5955": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e5956": {
+          "name": "평가지 ID",
+          "role": "option"
+        },
+        "e5957": {
+          "name": "평가지명",
+          "role": "option"
+        },
+        "e5958": {
+          "name": "등록자 ID",
+          "role": "option"
+        },
+        "e5960": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e5961": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e5962": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e5963": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e5965": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e5966": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e5967": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e5968": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e5969": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e5970": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e5971": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e5972": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e5973": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e5974": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e5975": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e5976": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e5977": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e5978": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e5979": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e5980": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e5981": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e5982": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e5983": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e5984": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e5985": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e5986": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e5987": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e5988": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e5989": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e5990": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e5991": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e5992": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e5993": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e5994": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e5995": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e5996": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e5997": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e5998": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e5999": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e6000": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e6102": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e6103": {
+          "name": "22",
+          "role": "option"
+        },
+        "e6104": {
+          "name": "15",
+          "role": "option"
+        },
+        "e6105": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e6106": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e6107": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e6108": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e6109": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e6110": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e6111": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e6112": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e6113": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e6114": {
+          "name": "1",
+          "role": "link"
+        },
+        "e6115": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e6116": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e6117": {
+          "name": "531",
+          "role": "cell"
+        },
+        "e6118": {
+          "name": "중1-2_수매씽유형_유형북_8-08단원 (1)",
+          "role": "cell"
+        },
+        "e6119": {
+          "name": "22MMAT0KOK1208010000 등 4개",
+          "role": "cell"
+        },
+        "e6120": {
+          "name": "120",
+          "role": "cell"
+        },
+        "e6121": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6122": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6123": {
+          "name": "hari.im 2026-10-27",
+          "role": "cell"
+        },
+        "e6124": {
+          "name": "530",
+          "role": "cell"
+        },
+        "e6125": {
+          "name": "행렬세트",
+          "role": "cell"
+        },
+        "e6126": {
+          "name": "22HMAC1GHG1006010000",
+          "role": "cell"
+        },
+        "e6127": {
+          "name": "35",
+          "role": "cell"
+        },
+        "e6128": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6129": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6130": {
+          "name": "hari.im 2026-10-27",
+          "role": "cell"
+        },
+        "e6131": {
+          "name": "341",
+          "role": "cell"
+        },
+        "e6132": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제10)",
+          "role": "cell"
+        },
+        "e6133": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6134": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6135": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6136": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6137": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6138": {
+          "name": "340",
+          "role": "cell"
+        },
+        "e6139": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제9)",
+          "role": "cell"
+        },
+        "e6140": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6141": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6142": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6143": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6144": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6145": {
+          "name": "339",
+          "role": "cell"
+        },
+        "e6146": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제8)",
+          "role": "cell"
+        },
+        "e6147": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6148": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6149": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6150": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6151": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6152": {
+          "name": "338",
+          "role": "cell"
+        },
+        "e6153": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제7)",
+          "role": "cell"
+        },
+        "e6154": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6155": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6156": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6157": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6158": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6159": {
+          "name": "337",
+          "role": "cell"
+        },
+        "e6160": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제6)",
+          "role": "cell"
+        },
+        "e6161": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6162": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6163": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6164": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6165": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6166": {
+          "name": "336",
+          "role": "cell"
+        },
+        "e6167": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제5)",
+          "role": "cell"
+        },
+        "e6168": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6169": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6170": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6171": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6172": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6173": {
+          "name": "335",
+          "role": "cell"
+        },
+        "e6174": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제4)",
+          "role": "cell"
+        },
+        "e6175": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6176": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6177": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6178": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6179": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6180": {
+          "name": "334",
+          "role": "cell"
+        },
+        "e6181": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제3)",
+          "role": "cell"
+        },
+        "e6182": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6183": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6184": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6185": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6186": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6187": {
+          "name": "333",
+          "role": "cell"
+        },
+        "e6188": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제2)",
+          "role": "cell"
+        },
+        "e6189": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6190": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6191": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6192": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6193": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6194": {
+          "name": "332",
+          "role": "cell"
+        },
+        "e6195": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제1)+",
+          "role": "cell"
+        },
+        "e6196": {
+          "name": "22MMAT0KOK1002050000 등 2개",
+          "role": "cell"
+        },
+        "e6197": {
+          "name": "2",
+          "role": "cell"
+        },
+        "e6198": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6199": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e6200": {
+          "name": "sangwon.jo 2026-10-19",
+          "role": "cell"
+        },
+        "e6201": {
+          "name": "266",
+          "role": "cell"
+        },
+        "e6202": {
+          "name": "초등_수학_4-2_3단원_서술형평가",
+          "role": "cell"
+        },
+        "e6203": {
+          "name": "22EMAT0NGS4203080000",
+          "role": "cell"
+        },
+        "e6204": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e6205": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6206": {
+          "name": "폐기",
+          "role": "cell"
+        },
+        "e6207": {
+          "name": "yoonhye.lee 2026-10-14",
+          "role": "cell"
+        },
+        "e6208": {
+          "name": "204",
+          "role": "cell"
+        },
+        "e6209": {
+          "name": "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+",
+          "role": "cell"
+        },
+        "e6210": {
+          "name": "22HMAC1GHG1002010000 등 3개",
+          "role": "cell"
+        },
+        "e6211": {
+          "name": "5",
+          "role": "cell"
+        },
+        "e6212": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6213": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e6214": {
+          "name": "hari.im 2026-10-12",
+          "role": "cell"
+        },
+        "e6215": {
+          "name": "203",
+          "role": "cell"
+        },
+        "e6216": {
+          "name": "[e2e-20261012-cms-api-fix] completion-reprocess",
+          "role": "cell"
+        },
+        "e6217": {
+          "name": "22MMAT0KOK3006040000",
+          "role": "cell"
+        },
+        "e6218": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e6219": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6220": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6221": {
+          "name": "sungkuk.chae 2026-10-12",
+          "role": "cell"
+        },
+        "e6222": {
+          "name": "202",
+          "role": "cell"
+        },
+        "e6223": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2",
+          "role": "cell"
+        },
+        "e6224": {
+          "name": "22EMAT0NGS3101070000 등 9개",
+          "role": "cell"
+        },
+        "e6225": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e6226": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6227": {
+          "name": "초안",
+          "role": "cell"
+        },
+        "e6228": {
+          "name": "sangwon.jo 2026-10-12",
+          "role": "cell"
+        },
+        "e6229": {
+          "name": "101",
+          "role": "cell"
+        },
+        "e6230": {
+          "name": "중3수학_통계2",
+          "role": "cell"
+        },
+        "e6231": {
+          "name": "22MMAT0KOK3007010000 등 3개",
+          "role": "cell"
+        },
+        "e6232": {
+          "name": "2",
+          "role": "cell"
+        },
+        "e6233": {
+          "name": "HML 생성",
+          "role": "cell"
+        },
+        "e6234": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e6235": {
+          "name": "wonrae.cho 2026-10-01",
+          "role": "cell"
+        },
+        "e6236": {
+          "name": "평가지 ID",
+          "role": "columnheader"
+        },
+        "e6237": {
+          "name": "평가지명",
+          "role": "columnheader"
+        },
+        "e6238": {
+          "name": "단원 코드",
+          "role": "columnheader"
+        },
+        "e6239": {
+          "name": "문항 수",
+          "role": "columnheader"
+        },
+        "e6240": {
+          "name": "생성 방식",
+          "role": "columnheader"
+        },
+        "e6241": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e6242": {
+          "name": "등록자 · 등록일",
+          "role": "columnheader"
+        },
+        "e6243": {
+          "name": "중1-2_수매씽유형_유형북_8-08단원 (1)",
+          "role": "link"
+        },
+        "e6244": {
+          "name": "행렬세트",
+          "role": "link"
+        },
+        "e6245": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제10)",
+          "role": "link"
+        },
+        "e6246": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제9)",
+          "role": "link"
+        },
+        "e6247": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제8)",
+          "role": "link"
+        },
+        "e6248": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제7)",
+          "role": "link"
+        },
+        "e6249": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제6)",
+          "role": "link"
+        },
+        "e6250": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제5)",
+          "role": "link"
+        },
+        "e6251": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제4)",
+          "role": "link"
+        },
+        "e6252": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제3)",
+          "role": "link"
+        },
+        "e6253": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제2)",
+          "role": "link"
+        },
+        "e6254": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2 (복제1)+",
+          "role": "link"
+        },
+        "e6255": {
+          "name": "초등_수학_4-2_3단원_서술형평가",
+          "role": "link"
+        },
+        "e6256": {
+          "name": "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+",
+          "role": "link"
+        },
+        "e6257": {
+          "name": "[e2e-20261012-cms-api-fix] completion-reprocess",
+          "role": "link"
+        },
+        "e6258": {
+          "name": "[MOCK-HML-M] 템플릿_시험지2",
+          "role": "link"
+        },
+        "e6259": {
+          "name": "중3수학_통계2",
+          "role": "link"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e5921]\n      - link \"문제은행 마스터 CMS\" [ref=e5922]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e5951]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e5952]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e5953]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e5954]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e5955]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e5923]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"평가지 관리\"\n      - heading \"평가지 관리\" [level=2, ref=e5920]\n      - generic\n        - combobox [expanded=false, ref=e5924]: 평가지 ID\n          - MenuListPopup\n            - option \"평가지 ID\" [selected, ref=e5956]\n            - option \"평가지명\" [ref=e5957]\n            - option \"등록자 ID\" [ref=e5958]\n        - textbox \"평가지 ID / 평가지명 / 등록자 ID\" [ref=e5925]\n        - combobox [expanded=false, ref=e5926]: 22\n          - MenuListPopup\n            - option \"교육과정 전체\" [ref=e6102]\n            - option \"22\" [selected, ref=e6103]\n            - option \"15\" [ref=e6104]\n        - combobox [expanded=false, ref=e5927]: 학교급 전체\n          - MenuListPopup\n            - option \"학교급 전체\" [selected, ref=e5960]\n            - option \"초등\" [ref=e5961]\n            - option \"중학\" [ref=e5962]\n            - option \"고등\" [ref=e5963]\n        - combobox [expanded=false, ref=e5928]: 과목군 전체\n          - MenuListPopup\n            - option \"과목군 전체\" [selected, ref=e6105]\n            - option \"수학군\" [ref=e6106]\n        - combobox [expanded=false, disabled, ref=e5929]: 과목 전체\n          - MenuListPopup\n            - option \"과목 전체\" [disabled, ref=e5965]\n            - option \"수학\" [disabled, ref=e5966]\n            - option \"수학\" [disabled, ref=e5967]\n            - option \"공통수학1\" [disabled, ref=e5968]\n            - option \"공통수학2\" [disabled, ref=e5969]\n            - option \"기본수학1\" [disabled, ref=e5970]\n            - option \"기본수학2\" [disabled, ref=e5971]\n            - option \"수학1\" [disabled, ref=e5972]\n            - option \"수학2\" [disabled, ref=e5973]\n            - option \"대수\" [disabled, ref=e5974]\n            - option \"미적분1\" [disabled, ref=e5975]\n            - option \"미적분2\" [disabled, ref=e5976]\n            - option \"확률과통계\" [disabled, ref=e5977]\n            - option \"기하\" [disabled, ref=e5978]\n            - option \"직무수학\" [disabled, ref=e5979]\n            - option \"인공지능수학\" [disabled, ref=e5980]\n            - option \"수학과 문화\" [disabled, ref=e5981]\n            - option \"수학\" [disabled, ref=e5982]\n        - combobox [expanded=false, disabled, ref=e5930]: 학년 전체\n          - MenuListPopup\n            - option \"학년 전체\" [disabled, ref=e5983]\n            - option \"중학1\" [disabled, ref=e5984]\n            - option \"고등1\" [disabled, ref=e5985]\n            - option \"초등1\" [disabled, ref=e5986]\n            - option \"중학2\" [disabled, ref=e5987]\n            - option \"초등2\" [disabled, ref=e5988]\n            - option \"고등2\" [disabled, ref=e5989]\n            - option \"고등3\" [disabled, ref=e5990]\n            - option \"중학3\" [disabled, ref=e5991]\n            - option \"초등3\" [disabled, ref=e5992]\n            - option \"초등4\" [disabled, ref=e5993]\n            - option \"고등 공통\" [disabled, ref=e5994]\n            - option \"초등5\" [disabled, ref=e5995]\n            - option \"초등6\" [disabled, ref=e5996]\n        - combobox [expanded=false, ref=e5931]: 학기 전체\n          - MenuListPopup\n            - option \"학기 전체\" [selected, ref=e5997]\n            - option \"공통학기\" [ref=e5998]\n            - option \"1학기\" [ref=e5999]\n            - option \"2학기\" [ref=e6000]\n        - textbox \"단원 코드 입력\" [ref=e5932]\n        - StaticText \"등록일\"\n        - generic\n          - textbox \"시작일 ~ 종료일\" [ref=e5933]\n          - StaticText \"\"\n        - generic\n          - button \"7일\" [ref=e5934]\n          - button \"30일\" [ref=e5935]\n          - button \"90일\" [ref=e5936]\n          - button \"전체\" [ref=e5937]\n        - StaticText \"상태\"\n        - LabelText [ref=e5938] clickable [cursor:pointer]\n          - checkbox \"전체\" [checked=true, ref=e5945]\n          - StaticText \"전체\"\n        - LabelText [ref=e5939] clickable [cursor:pointer]\n          - checkbox \"초안\" [checked=true, ref=e5946]\n          - StaticText \"초안\"\n        - LabelText [ref=e5940] clickable [cursor:pointer]\n          - checkbox \"사용\" [checked=true, ref=e5947]\n          - StaticText \"사용\"\n        - LabelText [ref=e5941] clickable [cursor:pointer]\n          - checkbox \"미사용\" [checked=true, ref=e5948]\n          - StaticText \"미사용\"\n        - LabelText [ref=e5942] clickable [cursor:pointer]\n          - checkbox \"폐기\" [checked=true, ref=e5949]\n          - StaticText \"폐기\"\n        - generic\n          - button \" 초기화\" [ref=e5943]\n            - StaticText \"\"\n            - StaticText \"초기화\"\n          - button \" 조회\" [ref=e5944]\n            - StaticText \"\"\n            - StaticText \"조회\"\n      - generic\n        - combobox [expanded=false, ref=e6107]: 30개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [ref=e6108]\n            - option \"30개씩 보기\" [selected, ref=e6109]\n            - option \"50개씩 보기\" [ref=e6110]\n            - option \"100개씩 보기\" [ref=e6111]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"17\"\n        - StaticText \"건\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"평가지 ID\" [ref=e6236]\n              - columnheader \"평가지명\" [ref=e6237]\n              - columnheader \"단원 코드\" [ref=e6238]\n              - columnheader \"문항 수\" [ref=e6239]\n              - columnheader \"생성 방식\" [ref=e6240]\n              - columnheader \"상태\" [ref=e6241]\n              - columnheader \"등록자 · 등록일\" [ref=e6242]\n          - row\n            - cell \"531\" [ref=e6117]\n            - cell \"중1-2_수매씽유형_유형북_8-08단원 (1)\" [ref=e6118]\n              - link \"중1-2_수매씽유형_유형북_8-08단원 (1)\" [ref=e6243]\n            - cell \"22MMAT0KOK1208010000 등 4개\" [ref=e6119]\n              - StaticText \"22MMAT0KOK1208010000 등 4개\"\n            - cell \"120\" [ref=e6120]\n            - cell \"HML 생성\" [ref=e6121]\n            - cell \"초안\" [ref=e6122]\n            - cell \"hari.im 2026-10-27\" [ref=e6123]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-27\"\n          - row\n            - cell \"530\" [ref=e6124]\n            - cell \"행렬세트\" [ref=e6125]\n              - link \"행렬세트\" [ref=e6244]\n            - cell \"22HMAC1GHG1006010000\" [ref=e6126]\n              - StaticText \"22HMAC1GHG1006010000\"\n            - cell \"35\" [ref=e6127]\n            - cell \"HML 생성\" [ref=e6128]\n            - cell \"초안\" [ref=e6129]\n            - cell \"hari.im 2026-10-27\" [ref=e6130]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-27\"\n          - row\n            - cell \"341\" [ref=e6131]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제10)\" [ref=e6132]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제10)\" [ref=e6245]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6133]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6134]\n            - cell \"HML 생성\" [ref=e6135]\n            - cell \"초안\" [ref=e6136]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6137]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"340\" [ref=e6138]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제9)\" [ref=e6139]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제9)\" [ref=e6246]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6140]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6141]\n            - cell \"HML 생성\" [ref=e6142]\n            - cell \"초안\" [ref=e6143]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6144]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"339\" [ref=e6145]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제8)\" [ref=e6146]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제8)\" [ref=e6247]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6147]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6148]\n            - cell \"HML 생성\" [ref=e6149]\n            - cell \"초안\" [ref=e6150]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6151]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"338\" [ref=e6152]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제7)\" [ref=e6153]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제7)\" [ref=e6248]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6154]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6155]\n            - cell \"HML 생성\" [ref=e6156]\n            - cell \"초안\" [ref=e6157]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6158]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"337\" [ref=e6159]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제6)\" [ref=e6160]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제6)\" [ref=e6249]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6161]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6162]\n            - cell \"HML 생성\" [ref=e6163]\n            - cell \"초안\" [ref=e6164]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6165]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"336\" [ref=e6166]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제5)\" [ref=e6167]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제5)\" [ref=e6250]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6168]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6169]\n            - cell \"HML 생성\" [ref=e6170]\n            - cell \"초안\" [ref=e6171]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6172]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"335\" [ref=e6173]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제4)\" [ref=e6174]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제4)\" [ref=e6251]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6175]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6176]\n            - cell \"HML 생성\" [ref=e6177]\n            - cell \"초안\" [ref=e6178]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6179]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"334\" [ref=e6180]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제3)\" [ref=e6181]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제3)\" [ref=e6252]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6182]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6183]\n            - cell \"HML 생성\" [ref=e6184]\n            - cell \"초안\" [ref=e6185]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6186]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"333\" [ref=e6187]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제2)\" [ref=e6188]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제2)\" [ref=e6253]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6189]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6190]\n            - cell \"HML 생성\" [ref=e6191]\n            - cell \"초안\" [ref=e6192]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6193]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"332\" [ref=e6194]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2 (복제1)+\" [ref=e6195]\n              - link \"[MOCK-HML-M] 템플릿_시험지2 (복제1)+\" [ref=e6254]\n            - cell \"22MMAT0KOK1002050000 등 2개\" [ref=e6196]\n              - StaticText \"22MMAT0KOK1002050000 등 2개\"\n            - cell \"2\" [ref=e6197]\n            - cell \"HML 생성\" [ref=e6198]\n            - cell \"사용\" [ref=e6199]\n            - cell \"sangwon.jo 2026-10-19\" [ref=e6200]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-19\"\n          - row\n            - cell \"266\" [ref=e6201]\n            - cell \"초등_수학_4-2_3단원_서술형평가\" [ref=e6202]\n              - link \"초등_수학_4-2_3단원_서술형평가\" [ref=e6255]\n            - cell \"22EMAT0NGS4203080000\" [ref=e6203]\n              - StaticText \"22EMAT0NGS4203080000\"\n            - cell \"3\" [ref=e6204]\n            - cell \"HML 생성\" [ref=e6205]\n            - cell \"폐기\" [ref=e6206]\n            - cell \"yoonhye.lee 2026-10-14\" [ref=e6207]\n              - StaticText \"yoonhye.lee\"\n              - StaticText \"2026-10-14\"\n          - row\n            - cell \"204\" [ref=e6208]\n            - cell \"544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+\" [ref=e6209]\n              - link \"544f1f3e-7cfc-42a5-80ac-4b5040e95fb2+\" [ref=e6256]\n            - cell \"22HMAC1GHG1002010000 등 3개\" [ref=e6210]\n              - StaticText \"22HMAC1GHG1002010000 등 3개\"\n            - cell \"5\" [ref=e6211]\n            - cell \"HML 생성\" [ref=e6212]\n            - cell \"사용\" [ref=e6213]\n            - cell \"hari.im 2026-10-12\" [ref=e6214]\n              - StaticText \"hari.im\"\n              - StaticText \"2026-10-12\"\n          - row\n            - cell \"203\" [ref=e6215]\n            - cell \"[e2e-20261012-cms-api-fix] completion-reprocess\" [ref=e6216]\n              - link \"[e2e-20261012-cms-api-fix] completion-reprocess\" [ref=e6257]\n            - cell \"22MMAT0KOK3006040000\" [ref=e6217]\n              - StaticText \"22MMAT0KOK3006040000\"\n            - cell \"3\" [ref=e6218]\n            - cell \"HML 생성\" [ref=e6219]\n            - cell \"초안\" [ref=e6220]\n            - cell \"sungkuk.chae 2026-10-12\" [ref=e6221]\n              - StaticText \"sungkuk.chae\"\n              - StaticText \"2026-10-12\"\n          - row\n            - cell \"202\" [ref=e6222]\n            - cell \"[MOCK-HML-M] 템플릿_시험지2\" [ref=e6223]\n              - link \"[MOCK-HML-M] 템플릿_시험지2\" [ref=e6258]\n            - cell \"22EMAT0NGS3101070000 등 9개\" [ref=e6224]\n              - StaticText \"22EMAT0NGS3101070000 등 9개\"\n            - cell \"4\" [ref=e6225]\n            - cell \"HML 생성\" [ref=e6226]\n            - cell \"초안\" [ref=e6227]\n            - cell \"sangwon.jo 2026-10-12\" [ref=e6228]\n              - StaticText \"sangwon.jo\"\n              - StaticText \"2026-10-12\"\n          - row\n            - cell \"101\" [ref=e6229]\n            - cell \"중3수학_통계2\" [ref=e6230]\n              - link \"중3수학_통계2\" [ref=e6259]\n            - cell \"22MMAT0KOK3007010000 등 3개\" [ref=e6231]\n              - StaticText \"22MMAT0KOK3007010000 등 3개\"\n            - cell \"2\" [ref=e6232]\n            - cell \"HML 생성\" [ref=e6233]\n            - cell \"사용\" [ref=e6234]\n            - cell \"wonrae.cho 2026-10-01\" [ref=e6235]\n              - StaticText \"wonrae.cho\"\n              - StaticText \"2026-10-01\"\n        - generic\n          - StaticText \"총 17건 중 1∼17 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e6112]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e6113]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e6114]\n          - listitem [level=1]\n            - link \"다음\" [ref=e6115]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e6116]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.103
+  }
+}

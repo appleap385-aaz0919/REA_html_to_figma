@@ -1,0 +1,13 @@
+{
+ "steps":[
+  {"label":"1026-hml-set-link-fresh","command":["snapshot"]},
+  {"label":"1027-hml-set-link-focus","command":["focus","{ref}"],"refPattern":"- link \"남학생과 여학생[^\"]+\" \\[ref=(e\\d+)\\]"},
+  {"label":"1028-hml-set-link-enter","command":["press","Enter"]},
+  {"label":"1029-hml-set-detail-loaded","command":["snapshot"]},
+  {"label":"1030-hml-set-modify","command":["click","{ref}"],"refPattern":"- link \"[^\"]*문항 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1031-hml-set-modify-loaded","command":["snapshot"]},
+  {"label":"1032-hml-set-hml-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1033-hml-set-hml-tab-enter","command":["press","Enter"]},
+  {"label":"1034-hml-set-hml-cards","command":["snapshot"],"screenshot":true}
+ ],"tailChars":8000
+}

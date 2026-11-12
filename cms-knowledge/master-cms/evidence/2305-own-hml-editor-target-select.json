@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2305-own-hml-editor-target-select",
+  "startedUtc": "2026-11-10T00:20:47.793644+00:00",
+  "command": [
+    "tab",
+    "C2D425453C876C056127BB64B954B318"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C2D425453C876C056127BB64B954B318",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.083
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "label": null,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "tabId": "t57",
+      "targetId": "C2D425453C876C056127BB64B954B318",
+      "title": "한글(HML) 수정",
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089242&itemDetailId=2088906"
+    },
+    "error": null,
+    "localSeconds": 0.136
+  },
+  "targetIdAfter": "C2D425453C876C056127BB64B954B318",
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2089242&itemDetailId=2088906",
+      "refs": {
+        "e30454": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e30455": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e30456": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e30457": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e30458": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e30459": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e30460": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [ref=e30456]\n    - button \"지문해석 수정\" [disabled, ref=e30457]\n    - button \"문제 수정\" [ref=e30458]\n    - button \"해답 수정\" [ref=e30459]\n  - button \"저장\" [ref=e30454]\n  - StaticText \"2089242_Q.hml 을(를) 열었습니다.\"\n  - Iframe [ref=e30455]\n    - Iframe [ref=e30460]"
+    },
+    "error": null,
+    "localSeconds": 0.089
+  }
+}

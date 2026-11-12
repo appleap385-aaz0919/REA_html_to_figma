@@ -1,0 +1,155 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e42274]
+      - link "문제은행 마스터 CMS" [ref=e42275]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e42282]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e42283]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e42284]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e42285]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e42286]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e42277]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "수정"
+      - heading "평가지 수정" [level=2, ref=e42276]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e42280]
+          - DescriptionList
+            - term "평가지 ID"
+            - definition
+              - StaticText "1094 (1177)"
+            - term "평가지명 *"
+              - StaticText "평가지명"
+              - StaticText "*"
+            - definition
+              - textbox [required, ref=e42297]: QA-HML-20261109-02-SET4-SINGLE1
+                - StaticText "QA-HML-20261109-02-SET4-SINGLE1"
+            - term "상태"
+            - definition
+              - LabelText
+                - radio "초안" [checked=true, ref=e42312]
+                - StaticText "초안"
+              - LabelText
+                - radio "사용" [checked=false, ref=e42313]
+                - StaticText "사용"
+              - LabelText
+                - radio "미사용" [checked=false, ref=e42314]
+                - StaticText "미사용"
+              - LabelText
+                - radio "폐기" [checked=false, ref=e42315]
+                - StaticText "폐기"
+            - term "생성 방식"
+            - definition
+              - StaticText "HML 생성"
+            - term "단원 코드"
+            - definition
+              - StaticText "[22HMAC1GHG1006010000]"
+              - StaticText "22 > 고등 > 수학군 > 공통수학1 > 고호경 > 고등1 > 공통학기 > 행렬 > 행렬의 뜻 > >"
+            - term "등록"
+            - definition
+              - StaticText "jaehyuk.myung · 2026-11-09"
+          - DescriptionList
+            - term "시험지"
+            - definition
+              - link "665 | QA-HML-20261109-02-SET4-SINGLE1.hml" [ref=e42298]
+            - term "출처"
+            - definition
+              - StaticText "[22-H-MA-C1-1-0-DCL-KI-2025]"
+              - StaticText "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025"
+            - term "페이지 *"
+              - StaticText "페이지"
+              - StaticText "*"
+            - definition
+              - spinbutton "예: 24" [required, ref=e42299]: 1
+                - StaticText "1"
+              - StaticText "~"
+              - spinbutton "예: 25" [required, ref=e42300]: 1
+                - StaticText "1"
+            - term "용도 *"
+              - StaticText "용도"
+              - StaticText "*"
+            - definition
+              - LabelText
+                - radio "공통" [checked=true, ref=e42316]
+                - StaticText "공통"
+              - LabelText
+                - radio "교사용" [checked=false, ref=e42317]
+                - StaticText "교사용"
+            - term "문제 구성"
+            - definition
+              - StaticText "주관식 > 단답형 > 일반형 (1)"
+            - term "문항 수"
+            - definition
+              - StaticText "1문항"
+        - generic
+          - heading "포함 문항 (1)" [level=3, ref=e42281]
+            - StaticText "포함 문항 ("
+            - StaticText "1"
+            - StaticText ")"
+          - button " 문항 추가" [ref=e42287]
+            - StaticText ""
+            - StaticText "문항 추가"
+          - table
+            - rowgroup
+              - row
+                - columnheader [ref=e42301]
+                - columnheader "순서" [ref=e42302]
+                - columnheader "문항 ID" [ref=e42303]
+                - columnheader "문제" [ref=e42304]
+                - columnheader "형태" [ref=e42305]
+                - columnheader "난이도" [ref=e42306]
+                - columnheader "단원 코드" [ref=e42307]
+                - columnheader "문항 상태" [ref=e42308]
+                - columnheader "제외" [ref=e42309]
+            - row
+              - cell "" [ref=e42288]
+                - StaticText ""
+              - cell "1" [ref=e42289]
+              - cell "2089238" [ref=e42290]
+                - StaticText "2089238"
+              - cell "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e42291]
+                - link "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e42310]
+              - cell "주관식 > 단답형 > 일반형" [ref=e42292]
+              - cell "하" [ref=e42293]
+              - cell "22HMAC1GHG1006010000" [ref=e42294]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "초안" [ref=e42295]
+              - cell "제외" [ref=e42296]
+                - button "제외" [disabled, ref=e42311]
+                  - StaticText ""
+        - link "취소" [ref=e42278]
+        - button "저장" [ref=e42279]

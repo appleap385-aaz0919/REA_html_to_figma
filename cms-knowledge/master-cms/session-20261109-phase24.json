@@ -1,0 +1,22 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_capture_limitations","evidenceRange":[1672,1712],"lastEvidence":"1712-source-validation-final-inventory",
+ "summary":"출처 등록의 빈 필수값 저장 차단, 실제50/100자 입력 제한, 취소 확인창의 입력 유지/저장하지 않고 이동을 확인했다. 출처 픽셀 캡처는 다시 실패해 누락을 유지했으며, 조사 도구가 첫 캡처 실패 뒤 중단하도록 보완했다. 출처 수60건과 확정 Master 저장20회는 유지된다.",
+ "observations":[
+  {"evidence":[1672,1673,1674,1675,1676,1677,1693],"result":"출처60건 목록을 다시 열고 상단과 중간 스크롤의 PNG를 시도했으나1673~1677 모두 캡처 실패이며 PNG 파일이 없다. DOM 및 스크롤 결과만 보존됐다. 도구의 캡처 작업을 중지한 뒤1693에서 같은 목록을 새로 관찰했다.1678~1692는 실행하지 않은 계획 번호이며 화면 증거가 아니다. 출처 상세/수정/영향모달 및 대형평가지 픽셀 누락은 해소되지 않았다."},
+  {"evidence":[1694,1695,1696],"result":"빈 출처 등록 폼에서 실제 저장 버튼을 누르면 미입력 정보가 있습니다 안내와 필수값의 선택해주세요 피드백을 표시하고 폼에 머문다. 저장 전 checkValidity는false였다."},
+  {"evidence":[1697,1698,1699,1700],"result":"서비스 노출명52자·비고104자를 실제 fill로 입력한 결과 각각50자·100자까지만 들어갔다. maxlength가 단순 소스 속성으로만 존재하는 것이 아니라 이 입력 경로에서 실제 적용되는 것을 확인했다. 서버 직접 요청의 길이 검증은 조사하지 않았다."},
+  {"evidence":[1701,1702,1704],"result":"등록 폼의 취소 링크는 출처 등록 취소/저장하지 않고 이동하시겠습니까 확인창을 연다.1702는 확인창 전환 중에 목록으로 이동했다고 가정해 scope mismatch로 중지됐다.1704의 새 관찰에서 실제 확인창을 확인했다. 이를 취소 링크 무반응이나 즉시 이동으로 기록하지 않는다."},
+  {"evidence":[1705,1706,1707,1708,1709,1710,1711],"result":"확인창의 취소를 누르면 등록 폼과 입력한50/100자 값이 유지됐다. 다시 취소 링크를 누르고 저장 하지 않고 이동을 선택하면 원래 목록 조건curriculum22/page1/pageSize10으로 돌아왔다. local 입력만 버렸고 출처 등록은 하지 않았다."},
+  {"evidence":[1712],"result":"독립 목록 읽기 결과 출처는60건이다. QA 출처199의2048/미사용/매핑0 상태가 남아 있으며 이번 단계에서 확정된 Master 데이터 변경은 없다."}
+ ],
+ "toolChange":"run-cms-steps.py는 screenshotError가 생기면 기본적으로 그 지점에서 중단한다. 기존 캡처 실패 시도를 자동으로 다음 화면까지 반복하지 않는다. 이후 재시도는 새 관찰과 명시적인 필요에 따라 결정한다.",
+ "persistentChanges":{"confirmedMasterOperations":20,"newMasterChangesInThisPhase":0,"sourceCount22":60,"testSourceId":199},
+ "remaining":[
+  "평가지의 실제 저장·재진입·원상 복원과 상세ID/이력 변경 정책을 검증한다. 기존에 확인한 MOCK 복제 평가지의 격리된 시험 범위를 먼저 기록한다.",
+  "출처 날짜/분류/용도/출처명 필터 및 수정 충돌·사용 여부 저장 영향, 평가지 순서/세트 추가·배포가능대상, HML/Definition/쌍둥이의 남은 분기를 이어간다.",
+  "캡처가 다시 가능해지면 출처와 대형평가지의 픽셀 누락을 보완한다. 현재는 미확인으로 유지한다.",
+  "랩·OMR·수식에서 앞선 단계가 명시한 추가 분기와 OCR 성공 등 미검증 경로가 남아 있다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageNum=1&pageSize=10","tab":"t21 research source list, page1","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["전체 완료나100%검증을 주장하지 않는다.","사진 캡처 실패와 실제 CMS 기능 실패를 구분한다."]
+}

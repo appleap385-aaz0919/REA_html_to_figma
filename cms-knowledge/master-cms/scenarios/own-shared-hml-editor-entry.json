@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2299-own-set-shared-hml-latest-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242"]},
+ {"label":"2300-own-set-shared-hml-latest-modify-entry","command":["eval","(() => {const links=[...document.querySelectorAll('a[data-modify-item-id]')].filter(e=>e.dataset.modifyItemId==='2089242');if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242'||links.length!==1)throw Error('Own latest child modify required');links[0].click();return {href:links[0].getAttribute('href')};})()"]},
+ {"label":"2301-own-set-shared-hml-tab","command":["eval","(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own edit required');const tab=[...document.querySelectorAll('[role=tab]')].find(e=>e.getAttribute('href')==='#tabHml');if(!tab)throw Error('Known HML tab required');tab.click();const owner=document.querySelector('[data-editor-url]');if(owner.dataset.itemDetailId!=='2088906'||[...document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Own latest clean edit required');return {editorUrl:owner.dataset.editorUrl,itemId:owner.dataset.itemId,itemDetailId:owner.dataset.itemDetailId};})()"]},
+ {"label":"2302-own-set-shared-hml-parent-reference","command":["eval","--file","sources/runtime/hml-parent-slots.js"]},
+ {"label":"2303-own-set-shared-hml-open-actual-editor","command":["click","button[data-editor-url]"]}
+],"tailChars":150}

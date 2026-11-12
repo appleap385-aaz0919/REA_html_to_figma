@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"2671-definition-ordered1-registration-form-open","command":["open","https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2672-definition-ordered1-zip-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261110-06-ORDERED1.zip"]},
+ {"label":"2673-definition-ordered1-source13-select","command":["select","select[name=productId]","13"]},
+ {"label":"2674-definition-ordered1-unit20-fill","command":["fill","#unitCodeInput","22MMAT0KOK1001020000"]},
+ {"label":"2675-definition-ordered1-start-page-fill","command":["fill","input[name=startPageNum]","1"]},
+ {"label":"2676-definition-ordered1-end-page-fill","command":["fill","input[name=endPageNum]","3"]},
+ {"label":"2677-definition-ordered1-common-purpose-select","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"2678-definition-ordered1-before-submit-verified","command":["eval","--file","sources/runtime/definition-ordered1-before-submit-verify.js"]}
+],"tailChars":80}

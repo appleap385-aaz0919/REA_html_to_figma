@@ -1,0 +1,212 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e17670]
+      - link "문제은행 마스터 CMS" [ref=e17671]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e17676]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e17677]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e17678]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e17679]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e17680]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e17672]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "수정"
+      - heading "평가지 수정" [level=2, ref=e17673]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e17681]
+          - DescriptionList
+            - term "평가지 ID"
+            - definition
+              - StaticText "341 (1097)"
+            - term "평가지명 *"
+              - StaticText "평가지명"
+              - StaticText "*"
+            - definition
+              - textbox [required, ref=e17716]: [MOCK-HML-M] 템플릿_시험지2 (복제10)
+                - StaticText "[MOCK-HML-M] 템플릿_시험지2 (복제10)"
+            - term "상태"
+            - definition
+              - LabelText
+                - radio "초안" [checked=true, ref=e17735]
+                - StaticText "초안"
+              - LabelText
+                - radio "사용" [checked=false, ref=e17736]
+                - StaticText "사용"
+              - LabelText
+                - radio "미사용" [checked=false, ref=e17737]
+                - StaticText "미사용"
+              - LabelText
+                - radio "폐기" [checked=false, ref=e17738]
+                - StaticText "폐기"
+            - term "생성 방식"
+            - definition
+              - StaticText "HML 생성"
+            - term "단원 코드"
+            - definition
+              - StaticText "[22EMAT0NGS3101070000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 덧셈과 뺄셈 > 받아내림이 두 번 있는 세 자리 수의 뺄셈을 어떻게 할까요 > >"
+              - StaticText "[22EMAT0NGS3101080000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 덧셈과 뺄셈 > 뺄셈의 어림셈을 어떻게 할까요 > >"
+              - StaticText "[22EMAT0NGS3106060000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 분수와 소수 > 소수를 알아볼까요 (1) > >"
+              - StaticText "[22EMAT0NGS3106070000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 분수와 소수 > 소수를 알아볼까요 (2) > >"
+              - StaticText "[22EMAT0NGS3202040000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 2학기 > 나눗셈 > 내림이 없고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 > >"
+              - StaticText "[22EMAT0NGS3202050000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 2학기 > 나눗셈 > 내림이 있고 나머지가 있는 (두 자리 수) ÷ (한 자리 수)를 어떻게 계산할까요 > >"
+              - StaticText "[22EMAT0NGS3205040000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 2학기 > 들이와 무게 > 들이의 덧셈과 뺄셈을 어떻게 할까요 > >"
+              - StaticText "[22EMAT0NGS3205050000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 2학기 > 들이와 무게 > 무게를 어떻게 비교할까요 > >"
+              - StaticText "[22EMAT0NGS3205060000]"
+              - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 2학기 > 들이와 무게 > 무게의 단위는 무엇일까요 > >"
+            - term "등록"
+            - definition
+              - StaticText "sangwon.jo · 2026-10-19"
+          - DescriptionList
+            - term "시험지"
+            - definition
+              - link "431 | [MOCK-HML-M] 템플릿_시험지2.hml" [ref=e17717]
+            - term "출처"
+            - definition
+              - StaticText "[22-H-MA-D1-2-1-DCL-MS-2024]"
+              - StaticText "22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024"
+            - term "페이지 *"
+              - StaticText "페이지"
+              - StaticText "*"
+            - definition
+              - spinbutton "예: 24" [required, ref=e17718]: 2
+                - StaticText "2"
+              - StaticText "~"
+              - spinbutton "예: 25" [required, ref=e17719]: 22
+                - StaticText "22"
+            - term "용도 *"
+              - StaticText "용도"
+              - StaticText "*"
+            - definition
+              - LabelText
+                - radio "공통" [checked=false, ref=e17739]
+                - StaticText "공통"
+              - LabelText
+                - radio "교사용" [checked=true, ref=e17740]
+                - StaticText "교사용"
+            - term "문제 구성"
+            - definition
+              - StaticText "주관식 > 단답형 > 일반형 (4)"
+            - term "문항 수"
+            - definition
+              - StaticText "4문항"
+        - generic
+          - heading "포함 문항 (4)" [level=3, ref=e17682]
+            - StaticText "포함 문항 ("
+            - StaticText "4"
+            - StaticText ")"
+          - button " 문항 추가" [ref=e17683]
+            - StaticText ""
+            - StaticText "문항 추가"
+          - table
+            - rowgroup
+              - row
+                - columnheader [ref=e17720]
+                - columnheader "순서" [ref=e17721]
+                - columnheader "문항 ID" [ref=e17722]
+                - columnheader "문제" [ref=e17723]
+                - columnheader "형태" [ref=e17724]
+                - columnheader "난이도" [ref=e17725]
+                - columnheader "단원 코드" [ref=e17726]
+                - columnheader "문항 상태" [ref=e17727]
+                - columnheader "제외" [ref=e17728]
+            - row
+              - cell "" [ref=e17684]
+                - StaticText ""
+              - cell "1" [ref=e17685]
+              - cell "2087758 지문 ID 2087757" [ref=e17686]
+                - StaticText "2087758"
+                - StaticText "지문 ID 2087757"
+              - cell "$10$, $15$, $25$" [ref=e17687]
+                - link "$10$, $15$, $25$" [ref=e17729]
+              - cell "주관식 > 단답형 > 일반형" [ref=e17688]
+              - cell "하" [ref=e17689]
+              - cell "22EMAT0NGS3106060000 등 2개" [ref=e17690]
+                - StaticText "22EMAT0NGS3106060000 등 2개"
+              - cell "승인(사용)" [ref=e17691]
+              - cell "제외" [ref=e17692]
+                - button "제외" [ref=e17730]
+                  - StaticText ""
+            - row
+              - cell "2" [ref=e17693]
+              - cell "2087759 지문 ID 2087757" [ref=e17694]
+                - StaticText "2087759"
+                - StaticText "지문 ID 2087757"
+              - cell "$2^{2 \\times 3}$, $2 \\times 3 \\times 5^2$" [ref=e17695]
+                - link "$2^{2 \\times 3}$, $2 \\times 3 \\times 5^2$" [ref=e17731]
+              - cell "주관식 > 단답형 > 일반형" [ref=e17696]
+              - cell "하" [ref=e17697]
+              - cell "22EMAT0NGS3202040000 등 2개" [ref=e17698]
+                - StaticText "22EMAT0NGS3202040000 등 2개"
+              - cell "승인(사용)" [ref=e17699]
+            - row
+              - cell "3" [ref=e17700]
+              - cell "2087760 지문 ID 2087757" [ref=e17701]
+                - StaticText "2087760"
+                - StaticText "지문 ID 2087757"
+              - cell "$2 \\times 5^{2 \\times 7}$, $2^{2 \\times 5} \\times 7^3$" [ref=e17702]
+                - link "$2 \\times 5^{2 \\times 7}$, $2^{2 \\times 5} \\times 7^3$" [ref=e17732]
+              - cell "주관식 > 단답형 > 일반형" [ref=e17703]
+              - cell "최하" [ref=e17704]
+              - cell "22EMAT0NGS3205040000 등 3개" [ref=e17705]
+                - StaticText "22EMAT0NGS3205040000 등 3개"
+              - cell "승인(사용)" [ref=e17706]
+            - row
+              - cell "" [ref=e17707]
+                - StaticText ""
+              - cell "4" [ref=e17708]
+              - cell "2087755" [ref=e17709]
+                - StaticText "2087755"
+              - cell "$\\dfrac{5}{24} \\times n$, $\\dfrac{7}{30} \\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]+" [ref=e17710]
+                - link "$\\dfrac{5}{24} \\times n$, $\\dfrac{7}{30} \\times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]+" [ref=e17733]
+              - cell "주관식 > 단답형 > 일반형" [ref=e17711]
+              - cell "상" [ref=e17712]
+              - cell "22EMAT0NGS3101070000 등 2개" [ref=e17713]
+                - StaticText "22EMAT0NGS3101070000 등 2개"
+              - cell "승인(사용)" [ref=e17714]
+              - cell "제외" [ref=e17715]
+                - button "제외" [ref=e17734]
+                  - StaticText ""
+        - link "취소" [ref=e17674]
+        - button "저장" [ref=e17675]

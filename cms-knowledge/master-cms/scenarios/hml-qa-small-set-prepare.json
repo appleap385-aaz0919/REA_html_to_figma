@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"2058-hml-qa-small-set-registration-open","command":["open","https://dev-exambank.dongahub.com/item/hml/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2059-hml-qa-small-set-file-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-HML-20261109-02-SET4-SINGLE1.hml"]},
+ {"label":"2060-hml-qa-small-set-source-select","command":["select","select[name=productId]","133"]},
+ {"label":"2061-hml-qa-small-set-unit-fill","command":["fill","#unitCodeInput","22HMAC1GHG1006010000"]},
+ {"label":"2062-hml-qa-small-set-start-fill","command":["fill","input[name=startPageNum]","1"]},
+ {"label":"2063-hml-qa-small-set-end-fill","command":["fill","input[name=endPageNum]","1"]},
+ {"label":"2064-hml-qa-small-set-purpose-select","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"2065-hml-qa-small-set-before-submit","command":["eval","--file","sources/runtime/registration-upload-observation.js"]}
+],"tailChars":450}

@@ -1,0 +1,15 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"copied_shared_passage_temp_confirmed_publish_pending","evidenceRange":[2603,2622],"lastEvidence":"2622-own-copied-set-after-temp-current-detail-read",
+ "summary":"복제 문항2089358의 공유HTML 지문에 식별문구를 입력해 CMS 임시저장을 한 번 실행했다. 선택한 문항에만 임시상세2089077이 생겼고 복제 형제3개·원본4개·비교단건에는 임시본이 생기지 않았다. 전체 현재 상세와 수정 참조는 저장 전과 동일하다. 내부 문서키는 원본 지문 번호를 계승하므로 실제 논리지문ID와 구분한다. 최종 전체반영과 격리 검증은 다음 단계이며 확정Master업무61회다.",
+ "observations":[
+  {"evidence":[2603,2604,2605,2606],"result":"원본4자식·복제4자식·비교단건 모두 임시본이 없음을 확인했다. 실제 수정 링크로 복제 첫자식2089358을 열었다."},
+  {"evidence":[2607,2608,2609,2610,2611,2612,2613,2614],"result":"실제HTML탭과공유지문ProseMirror에포커스해끝으로이동하고식별문구를입력했다. 질문과OMR은그대로이고HMLpending은8개모두빈값이다. 편집기문서키/제목은원본passage:2089241을계승하지만상단논리지문ID는복제2089357이다. 편집화면PNG를직접봤다. 정상임시저장확인창이열렸다."},
+  {"evidence":[2615,2616,2617,2618,2619,2620,2621,2622],"result":"임시저장을한번제출했다. 선택2089358에만임시상세2089077이생기고그임시폼에만새공유HTML문구가있다. 나머지복제3개·원본4개·단건은임시본이없고명시적draftY도현행으로돌아간다. 원본/복제현재상세·수정참조전체가저장전과동일해승인/초안·상세번호·모델·HML·OMR·그룹표시가유지됐다."}
+ ],
+ "artifacts":["copied-set-shared-temp-isolation-intent-20261110.json","record-copied-set-shared-temp.py"],
+ "persistentChanges":{"confirmedMasterOperations":61,"newMasterChangesInThisPhase":1,"operation":"CMS Temp Save copied shared HTML passage","selectedItemId":2089358,"logicalCopyPassageId":2089357,"embeddedDocumentPassageKey":"passage:2089241","draftItemIds":[2089358],"draftDetailId":2089077,"publishedCopyDetailIds":[2089059,2089060,2089061,2089062],"publishedCopyViewFlags":"all R","publishedOriginalViewFlags":"all Y","allPublishedItemsUnchanged":true,"serviceDeployment":false,"originalRestorationPending":false},
+ "pixelEvidence":{"viewed":[2612],"scope":"복제공유HTML문구입력후의실제편집화면한상태다."},
+ "remaining":["실제수정재진입에서임시저장본2089077을선택해정상전체반영하고복제4자식/원본4자식/비교단건의HTML·질문·HML·OMR·상태·버전·임시본·그룹을비교한다.","복제논리지문ID와계승된내부passageKey를구별하고실제저장범위를근거로판정한다.","세트AI·기존그룹병합·디피니션복합자료·파생문항버튼노출조건·역할/서비스범위가남아있다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089358&pageNum=1&pageSize=10","tab":"t21 copied set current detail; only selected child has saved draft2089077","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["현재까지는임시저장범위만검증했다. 복제지문의최종전체반영격리는아직실행전이다.","서버에저장된임시본을브라우저의저장되지않은입력과구분한다.","내부문서키가원본ID라는이유만으로두DB지문이같거나최종저장이원본을바꾼다고추정하지않는다.","전체사이트100%완료를주장하지않는다."]
+}

@@ -1,0 +1,18 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded","evidenceRange":[1216,1270],
+ "lastEvidence":"1270-paper-large-final-bottom",
+ "summary":"Paper use/discarded/120member variants, blocked deployment targets and missing-item lookup recorded. All120member data and actual scroll bottom captured; middle pixel evidence has explicit gaps due screenshot timeouts. No paper save/deployment submitted.",
+ "observations":[
+  {"evidence":[1221,1222,1223,1224],"result":"Used paper332/detail379,2approveduse items2087725/2087727,pages2-21,Teacher. Detail can show2source codes,not only1. Deployment header enabled; both service rows say불가/미배포문항2건조회. Bottom87+1015=1102."},
+  {"evidence":[1225,1226,1227,1228,1230],"result":"Deployment dialog says all2included items will be deployed and Master-discarded items excluded. Both service checkboxes disabled with미배포문항2건; final Deploy disabled. Cancelled. Message versus prerequisite should be recorded together; automatic initial item distribution is not established by the text alone."},
+  {"evidence":[1231,1232,1234,1235,1236],"result":"Missing-item lookup opens a separate Master All Items tab withkeywordType=itemId&keyword=2087725,2087727. Exactly2matching rows shown. This is a fixed ID-list query,not a dynamic service-filter URL. Returned to researchtab andclosed onlynewquerytab."},
+  {"evidence":[1241,1242,1243,1244,1245,1246,1247],"result":"Focus+Enter did not navigate; captures1242-46 retainpaperlist despite filenames. Active pagevisibilityhidden. Read actualdiscardedhref1247,thenexplicitobservedURLnavigation1248worked. Do not count mislabeled files as discarded-detail evidence or infer CMSnavigationdefect."},
+  {"evidence":[1248,1249,1250,1251,1252,1253],"result":"Discardedpaper266/detail733,3items,pages1-2,Common. Memberstatesremainapproveduse1/draft2. HeaderDeploydisabled;Modifyisdisabledtext,notlink. Detailfitsviewport,nooverflow. Successfulreal-detailpixels1249inspected."},
+  {"evidence":[1254,1255,1256,1257,1266,1270],"result":"Largepaper531/detail564,doc597,120members,pages1-5,Common,draft,4unitmappings. Declaredtypes22singleNchoice/1multipleNchoice/96singleGeneral/1multipleGeneral. Parsedall120orderedmemberrowsinto paper531-members-20261109.json;typesmatchcounts,statuses115draft/4approveduse/1approvedunused,13shared-passagegroups. Actualscrollbottom6089+1015=7104."},
+  {"evidence":[1258,1259,1260,1261,1262,1263,1264,1265,1267,1268,1269],"result":"Scrolledoverlapping800pxstepsfromtoptoend. Successfulpixels1255/1258/1259/1260/1261/1265wereinspected. PNGcapture1262-64and1267-69failedwithdaemonresponse10060;noPNGfilesexistforthosecaptures. Explicitpositions4000/4800/5600confirmedbyDOMonrevisit. Full120rowDOM/sourcecoverageandfullscrollareestablished;pixelcoveragebetween4215and6089remainsincomplete."}
+ ],
+ "sourceFiles":["sources/paper-used-detail-20261109.html","sources/paper-used-deploy-dialog-20261109.html","sources/paper-discarded-detail-20261109.html","sources/paper-large-detail-20261109.html"],
+ "inventory":"paper531-members-20261109.json","mutationsAdded":0,
+ "remaining":["Filllargepaperpixelgap4215-6089whenbackgroundscreenshotsrespond;noCMSfailureinferredfromcapturetimeouts.","Paperactualsave/reentry,groupdrag,eligible-setcheckbox/additions,persistence andremainingvalidation/filterbranches.","Deploymenteligibletarget/history/actualpropagationandServiceCMSinvestigation.","Sources/Labfamilies;HMLtranslation/vendorcommands;remainingOMR/twinbranches."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/paper/detail.donga?paperId=531&curriculum=22&pageNum=1&pageSize=30","tab":"Largepaper531detailattruebottom6089","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null}
+}

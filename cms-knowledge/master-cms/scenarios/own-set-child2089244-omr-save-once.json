@@ -1,0 +1,73 @@
+{
+  "steps": [
+    {
+      "label": "2515-own-set-child2089244-omr-detail-open",
+      "command": [
+        "open",
+        "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089244"
+      ]
+    },
+    {
+      "label": "2516-own-set-child2089244-omr-edit-open",
+      "command": [
+        "eval",
+        "(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089244'||document.querySelector('.modal.show'))throw Error('Own sibling detail required');const link=document.querySelector('a[data-modify-url]');if(!link?.dataset.modifyUrl.includes('itemId=2089244'))throw Error('Own actual modify link required');link.click();return {clicked:true,itemId:2089244};})()"
+      ]
+    },
+    {
+      "label": "2517-own-set-child2089244-before-omr-edit-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-set-sibling-form-omr-observation.js"
+      ]
+    },
+    {
+      "label": "2518-own-set-child2089244-omr-answer-local",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-set-sibling-omr-fill-local.js"
+      ]
+    },
+    {
+      "label": "2519-own-set-child2089244-omr-confirm-open",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-set-sibling-omr-apply-confirm-open.js"
+      ]
+    },
+    {
+      "label": "2520-own-set-child2089244-omr-submit-once",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/own-set-sibling-omr-apply-submit-once.js"
+      ]
+    },
+    {
+      "label": "2521-own-set-child2089244-omr-post-ui",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "2522-own-set-child2089244-omr-all-reference-read",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml666-modify-reference-baseline-read.js"
+      ]
+    },
+    {
+      "label": "2523-own-set-child2089244-omr-all-detail-read",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml666-own-items-baseline-read.js"
+      ]
+    }
+  ],
+  "tailChars": 220
+}

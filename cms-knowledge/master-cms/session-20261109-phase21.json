@@ -1,0 +1,39 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_with_remaining_branches",
+ "evidenceRange":[1402,1497],"lastEvidence":"1497-lab-passage-normalized-source",
+ "summary":"랩 진입·운영 도구의 선택/취소·외부 번들 버전과 네 테스트 화면의 기본 구성을 조사했다. 편집기 격리 테스트에서 실제 문항 및 정상화한 로컬 지문 입력으로 양쪽 save 검증, 문서 비교, 탭별 상태 유지를 확인했다. OMR 갤러리/복원·수식 데모의 상세 조작은 다음 단계다.",
+ "observations":[
+  {"evidence":[1402,1403],"result":"랩은 메뉴에 없는 개발·운영 보조 도구 모음으로 소개된다. 관리자 영역은 배포정보, 캐시reload, 외부번들버전, 역할별로그아웃이다. 테스트·확인 영역은 수식입력기데모, OMR전체유형, OMR복원테스트, 편집기격리테스트다. 서버시작2026-11-09 10:05, 빌드2026-11-09 09:15가 표시됐다. 현재ADMIN 계정에서 관찰한 화면이며 USER 계정의 접근 정책은 미검증이다."},
+  {"evidence":[1404,1405,1406,1407],"result":"외부번들버전 모달을 열면 donga-question-viewer1.13.6, donga-question-editor0.3.10이 표시된다. 소스상 첫 열기에서만 지정vendor스크립트를 불러와 전역객체version을 읽고 로드실패/버전없음은 별도표시한다. 실제 실패 경로는 미검증이다. 조회 후 닫았다."},
+  {"evidence":[1408,1409,1410,1411,1412,1413],"result":"캐시reload 모달에는 전체/공통코드/단원/사이트 선택과 모든서버에 적용된다는 안내가 있다. 전체 선택 후 세개하위도선택되고 reload 버튼이활성화되는 동작을 확인한뒤 취소했다. 실제캐시갱신은 실행하지 않았다. 초기1409는 모달.show가붙기전의전환중간상태다."},
+  {"evidence":[1403,1412],"evidenceType":"static_source","result":"캐시 전체선택은 /cache/all-reload.donga 한 번을 호출하고, 부분선택은 고른 /cache/code-reload.donga, /cache/unit-reload.donga, /cache/site-reload.donga 별로 fetch한다. Promise.all의모든응답ok여부로 완료/실패토스트를표시한다. 이GET들은 캐시를변경하는명령이므로 읽기조회로취급하지 않았다. 서버별실제동작은 미검증이다."},
+  {"evidence":[1414,1415,1416,1417,1418,1419],"result":"역할별로그아웃 모달은 MASTER/DOUCLASS 각각ADMIN/USER 네선택과전체를제공하며, 고른사이트의세션만끊고 본인은제외한다고안내한다. 초기선택없음에서최종버튼disabled, MASTER:USER 한개선택뒤enabled를확인하고 취소했다. 다른사용자나서비스CMS의세션을실제로종료하지 않았다."},
+  {"evidence":[1403,1418],"evidenceType":"static_source","result":"역할별로그아웃은 선택targets값을반복한form-urlencoded POST /lab/session/expire.donga를보내고, 비정상응답/redirect는실패로처리하며 정상응답text를종료세션수로표시한다. 모달열기때선택값을지우고버튼을비활성화한다. 서버의본인제외와권한검사는미검증이다."},
+  {"evidence":[1420,1421,1422],"result":"수식데모는 하이브리드텍스트·수식에디터, 단독수식답안입력, KaTeX렌더, 실제samples.json블록의원문→수식노드변환→편집HTML→원문역변환 비교영역을제공한다. 문제/정답/해설 블록선택, 변환+로드, placeholder입력이있다. TinyMCE·MathLive내부툴바와손글씨OCR는 상세실행전이다. 초기실제스크롤높이2089였다."},
+  {"evidence":[1423,1424,1425],"result":"OMR갤러리는14종폼을객관식4/주관식7/서술형3으로배치하며 전체·분류별열기닫기와좁게/넓게/비활성화모드를제공한다. 추가로수식입력테스트, text/math/image허용형식별입력전환, 행참조형드롭다운의소스추가삭제·실시간값시험이있다. 열거와초기구조를기록했으나모든갤러리동작검증을완료한것은아니다."},
+  {"evidence":[1426,1427,1428],"result":"OMR복원테스트는14유형선택, OMR필드배열JSON/정답rule_type트리JSON입력, 각각Pretty, 폼비우기/복원, 좁게넓게와 실제폼영역을제공한다. 소스상입력→복원은250ms디바운스이며 폼편집→JSON직렬화도양방향으로동작한다. 오류메시지는유형미선택/미구현/OMR파싱오류/정답파싱오류/빈JSON/모양불일치/실행예외로분리돼있다. 각오류의실제재현은다음단계다."},
+  {"evidence":[1429,1430,1431,1432,1433,1434],"result":"편집기격리테스트는문서JSON입력과불러오기/getDocument비교, 기존/iframe탭, 각save/getDocument/객관식켜기끄기/destroy/미리보기재그리기를제공한다. 두탭이준비되기전비교는두탭을한번씩열라는안내, 잘못된JSON입력은JSON형식이아닙니다안내를실제로확인했다."},
+  {"evidence":[1435,1436,1437,1438,1439,1440,1441,1442,1443,1444,1445,1446,1447],"result":"캡처된문항2088985의questionEditorData(원문2028자)를로컬시험입력으로사용했다. 양쪽save결과ok:true/issues:[]/documentLength1972, 비교결과두문서가같습니다를확인했다. iframe은편집기·뷰어별두개이며편집기자동높이808px→고정640px을실제로확인했다. 문항은새로CMS저장하지않았다."},
+  {"evidence":[1448,1449,1451,1452,1453],"result":"최초객관식끄기시험은입력문서choices가이미빈배열이라ok:true/changed:false였고문서동일을유지했다. 파일명의diverged는예상시나리오이름일뿐실제차이의증거가아니다."},
+  {"evidence":[1454,1455,1456,1457,1458,1459,1460],"result":"destroy뒤getDocument는편집기가없습니다-불러오기먼저안내를표시했다. 다시불러오기후양쪽탭을열면원본문서로재마운트돼같다는결과를얻었다. destroy는랩의편집기인스턴스종료이며CMS문서삭제가아니다."},
+  {"evidence":[1461,1462,1463,1464,1465,1466,1467,1468],"result":"iframe쪽만객관식켜기를실행하면ok:true/changed:true이고두문서가다릅니다로변했다. 기존탭으로이동하고iframe으로되돌아와도차이가유지돼탭별독립상태보존을확인했다. 소스상불러오기만양쪽편집기를폐기하고같은입력문서로초기화한다."},
+  {"evidence":[1472,1473,1474,1475,1476,1477,1478,1479,1480,1481,1482,1483,1484,1485],"result":"저장해둔개발셋트지문fixture는contentVersion/content.passageHtml/test_fixture만있는입력으로outType이없다. 불러오기에서Invalid normalized document:outType이발생했다. 이후save는편집기없음안내였다. 오래남은마운트완료출력이나빈iframe을정상로드로해석하지않는다. 이특정fixture의형식오류이며모든지문로드실패로일반화하지않는다."},
+  {"evidence":[1487,1488,1489,1490,1491,1492,1493,1494,1495,1496,1497],"result":"동일지문본문을사용하되캡처한라이브러리검증계약에맞춘로컬JSON(contentVersionv3/outTypesplit/content/assets[]/passageKey)을별도로만들어시험했다. 양쪽save는ok:true/issues:[]/documentLength169, 비교는동일이었다. 이는정상구조지문입력검증이며원래CMS지문데이터를수정한것이아니다. 입력출처와정상화는lab-passage-normalized-test-input.json에명시했다."},
+  {"evidence":[1430,1441,1444,1493,1496],"result":"iframe은srcdoc로Tabler/custom.css없이개별번들만로드한다. 편집기문서는iframe자체JSON으로파싱하며html-only·이미지CDN·수식폰트경로등은기존방식과맞춘다. 자동높이는ResizeObserver,고정높이는640px이다. 백그라운드탭에서뷰어iframe높이가0으로남는관찰이있지만본문/렌더DOM은존재한다. 화면이보이는상태의레이아웃검증전에는제품결함으로단정하지않는다."},
+  {"evidence":[1486],"result":"격리테스트지문오류상태에서실제내부스크롤끝374+1015=1389까지이동했다. 문항과다른상태의스크롤및픽셀검토는추가로필요하다."}
+ ],
+ "toolLimitations":[
+  "REA capture_web_screenshot도같은연구target에대해Page.captureScreenshot15000ms응답기한초과를반환했다. 도구가안내한단순반복은하지않았다. 브라우저DOM조사는계속가능하다.",
+  "출처및랩의픽셀검토미완료를DOM관찰과구분한다. 백그라운드탭의렌더/전환중간상태를제품오류로단정하지않는다.",
+  "현재계정ADMIN외권한별접근·백엔드·DB·서비스CMS실제효과는미검증이다."
+ ],
+ "persistentChanges":{"confirmedMasterOperations":20,"newMasterChangesInThisPhase":0,"cacheReloadSubmitted":false,"roleLogoutSubmitted":false,"labSaveMeaning":"In-memory editor validation only; no CMS item save endpoint."},
+ "remaining":[
+  "OMR복원테스트에서정상JSON복원·폼편집양방향직렬화·Pretty·초기화·유형변경·잘못된입력의실제동작을확인한다.",
+  "OMR갤러리의펼치기/닫기·폭/비활성화·value_type전환·행참조드롭다운및모든입력의하위분기를추가조사한다.",
+  "수식데모의실제편집기준비상태·세블록변환/역변환·수식다이얼로그/키보드/손글씨·placeholder동작을조사한다.",
+  "편집기격리테스트의미리보기재그리기·객관식실제선지값·높이자동복원·이미지/수식/표도구와픽셀검토는추가확인한다.",
+  "출처날짜/필터/수정중복·HML다른슬롯저장/번역실파일/공유지문·평가지저장/순서/배포·HML/Definition상태별예외·쌍둥이변경의남은분기를이어간다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/lab/view/question-frame.donga","tab":"t21 research, normalized local passage in iframe tab","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":"Local lab test input only, reproducible from lab-passage-normalized-test-input.json. No pending CMS item/source/paper save."}
+}

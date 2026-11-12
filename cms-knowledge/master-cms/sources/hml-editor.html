@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>한글(HML) 수정</title>
+    
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css"/>
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css"/>
+    <link rel="stylesheet" href="/css/webhwp-4d0a11b9fee867f1d62f2c4db5c6edad.css"/>
+</head>
+<body class="webhwp-window">
+
+
+<div class="webhwp-host">
+    
+    <div class="webhwp-toolbar">
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm" data-webhwp-open
+                    data-slot="passage">지문 수정</button>
+            <button type="button" class="btn btn-sm" data-webhwp-open
+                    data-slot="translation">지문해석 수정</button>
+            <button type="button" class="btn btn-sm" data-webhwp-open data-webhwp-new
+                    data-slot="question">문제 수정</button>
+            <button type="button" class="btn btn-sm" data-webhwp-open data-webhwp-new
+                    data-slot="explain">해답 수정</button>
+        </div>
+        <!--
+        <button type="button" class="btn btn-sm" data-webhwp-action="local">내 PC 파일 열기</button>
+        <button type="button" class="btn btn-sm" data-webhwp-action="download">다운로드</button>
+        -->
+        <button type="button" class="btn btn-sm btn-primary" data-webhwp-action="save">저장</button>
+    </div>
+    <div class="text-secondary small mb-2" data-webhwp-status></div>
+    <input type="file" accept=".hml,.hwp,.hwpx" class="d-none" data-webhwp-file/>
+    <iframe id="webhwpFrame" name="webhwpFrame" class="webhwp-frame"></iframe>
+</div>
+
+
+<div>
+    <div class="modal modal-blur fade" id="webhwpSavedModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">한글 편집</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">CMS 에서 ‘임시 저장’ 또는<br>‘전체 반영’ 버튼을 눌러주세요</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" data-alert-ok>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+<script src="/js/webhwp/webhwp-ea2cf4d106cdce39bfb984c607cb87cc.js"></script>
+
+</body>
+</html>
+

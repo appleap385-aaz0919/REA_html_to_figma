@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "status": "in_progress",
+  "sourcePolicy": "아래 내용은 명시한 증거에서 직접 관찰한 범위다. 기록하지 않은 동작의 존재 또는 부재를 단정하지 않는다.",
+  "userClarifications": [
+    {
+      "date": "2026-11-06",
+      "feature": "문항 상세의 오른쪽 HML 카드",
+      "expectedBehavior": "원본 HML 파일의 미리보기 이미지를 표시한다.",
+      "knownIssue": "현재 일부 오류로 인해 미리보기 이미지가 표시되지 않는다.",
+      "source": "사용자가 조사 중 직접 설명한 정상 사양과 현재 오류 사항",
+      "observation": "세트 문항 2088663 상세의 오른쪽 HML 카드가 비어 있는 상태를 캡처했다.",
+      "evidence": [
+        "131-set-item-detail",
+        "132-set-detail-middle",
+        "133-set-detail-lower"
+      ],
+      "interpretationRule": "빈 HML 카드를 정상 사양이나 해당 문항의 HML 미지원으로 해석하지 않는다. 오류 원인과 영향 범위는 별도로 검증해야 한다."
+    }
+  ],
+  "navigation": [
+    {
+      "name": "홈",
+      "path": "/main.donga",
+      "status": "observed",
+      "evidence": [
+        "001-home"
+      ]
+    },
+    {
+      "name": "전체 문항",
+      "group": "문항 관리",
+      "path": "/item/all/list.donga?unitCurriculum=22",
+      "status": "observed",
+      "evidence": [
+        "004-item-menu-expanded",
+        "006-all-items-loaded"
+      ]
+    },
+    {
+      "name": "HML 문항 등록",
+      "group": "문항 관리",
+      "path": "/item/hml/list.donga?curriculum=22",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    },
+    {
+      "name": "디피니션 문항 등록",
+      "group": "문항 관리",
+      "path": "/item/difi/list.donga?curriculum=22",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    },
+    {
+      "name": "쌍둥이 그룹 관리",
+      "group": "문항 관리",
+      "path": "/item/twin/list.donga",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    },
+    {
+      "name": "평가지 관리",
+      "path": "/paper/list.donga?curriculum=22",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    },
+    {
+      "name": "문항 출처 관리",
+      "path": "/product/list.donga?curriculum=22",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    },
+    {
+      "name": "랩",
+      "path": "/lab/index.donga",
+      "status": "discovered",
+      "evidence": [
+        "004-item-menu-expanded"
+      ]
+    }
+  ],
+  "allItems": {
+    "evidence": [
+      "006-all-items-loaded",
+      "007-item-search-types"
+    ],
+    "observedCount": {
+      "value": 35535,
+      "curriculum": "22",
+      "date": "2026-11-05",
+      "qualification": "관찰 시점의 표시 건수이며 고정 기준값이 아니다."
+    },
+    "classificationSelectors": [
+      "교육과정(unitCurriculumSelect)",
+      "학교급(unitClassTypeSelect)",
+      "과목군(unitSubjectCategorySelect)"
+    ],
+    "unitTree": {
+      "initialNode": "전체",
+      "selectionControl": "확인란",
+      "instruction": "선택한 단원 내에서 검색됩니다.",
+      "unexplored": "학교급·과목군 선택 이후의 하위 트리와 다중 선택 규칙"
+    },
+    "searchTypeOptions": [
+      "문항 ID",
+      "지문 ID",
+      "지문",
+      "문제",
+      "출처코드",
+      "등록자 ID",
+      "원본 파일명"
+    ],
+    "additionalFilters": [
+      "난이도",
+      "생성 방식",
+      "형태1",
+      "형태2",
+      "형태3",
+      "등록일 범위",
+      "배포 여부",
+      "배포 대상",
+      "상태"
+    ],
+    "datePresets": [
+      "7일",
+      "30일",
+      "90일",
+      "전체"
+    ],
+    "distributionFilters": [
+      "전체",
+      "배포됨",
+      "미배포"
+    ],
+    "statusFilters": [
+      "전체",
+      "초안",
+      "실패(재등록)",
+      "승인(사용)",
+      "승인(미사용)",
+      "폐기"
+    ],
+    "queryActions": [
+      "초기화",
+      "조회"
+    ],
+    "columns": [
+      "문항 ID",
+      "문제",
+      "출처",
+      "단원",
+      "형태",
+      "난이도",
+      "쌍둥이",
+      "상태",
+      "배포",
+      "등록자 · 등록일"
+    ],
+    "pagination": {
+      "observedPageSize": 10,
+      "controls": [
+        "개씩 보기",
+        "맨 앞",
+        "이전",
+        "1~5",
+        "다음",
+        "맨 뒤"
+      ],
+      "rangeText": "총 35535건 중 1∼10 표시"
+    },
+    "detailNavigation": "문제 텍스트 링크에서 문항 상세로 이동하며 unitCurriculum, pageNum, pageSize를 URL에 전달한다.",
+    "passageGroupSample": {
+      "passageId": "2088658",
+      "itemIds": [
+        "2088663",
+        "2088662",
+        "2088661",
+        "2088660"
+      ],
+      "status": "목록에서 같은 지문 ID로 표시된 연결만 확인했으며 상세는 추가 조사 필요"
+    },
+    "remaining": [
+      "모든 드롭다운 선택지",
+      "검색·필터 조합 결과",
+      "분류 트리",
+      "페이지 크기·페이지 이동",
+      "전체 화면의 세로·가로 스크롤 대조"
+    ]
+  },
+  "singleItemDetail": {
+    "itemId": "2088806",
+    "evidence": [
+      "012-item-detail-loaded",
+      "018-item-detail-middle",
+      "019-item-detail-lower",
+      "020-item-detail-bottom"
+    ],
+    "visualScrollCoverage": "상단, 중간, 하단과 최하단의 목록·이전·다음 영역을 직접 스크롤하고 캡처해 확인했다.",
+    "layout": "MASTER 카드 안에서 HTML 문항과 HML 문제·해답 이미지를 두 열로 나란히 표시한다.",
+    "displayedItemType": "객관식 > 단답형 > N지 선다",
+    "displayedDifficulty": "하",
+    "displayedStatus": "초안",
+    "generation": {
+      "label": "AI생성",
+      "parentItemId": "2038004"
+    },
+    "htmlArea": [
+      "문항 ID",
+      "상태·난이도·문항 형태 배지",
+      "OMR 미리보기",
+      "문제·이미지·수식·선택지",
+      "정답",
+      "풀이",
+      "배포하기"
+    ],
+    "hmlArea": [
+      "문항 ID",
+      "문제 이미지 링크",
+      "해답 이미지 링크"
+    ],
+    "statusArea": [
+      "수정",
+      "On-line 전용",
+      "용도",
+      "상태값"
+    ],
+    "displayedOnlineValue": "온오프 전체",
+    "displayedPurpose": "공통",
+    "statusValues": [
+      "초안",
+      "실패(재등록)",
+      "승인(사용)",
+      "승인(미사용)",
+      "폐기"
+    ],
+    "basicInformation": [
+      "문항 ID와 괄호 안 식별자",
+      "생성 방식과 부모 문항 ID",
+      "원본 파일",
+      "썸네일",
+      "난이도",
+      "문항 형태",
+      "배포",
+      "세트 문항",
+      "쌍둥이 문항과 목록 조회",
+      "평가지 등록과 목록 조회",
+      "출처",
+      "등록자·등록일",
+      "단원코드와 분류 경로",
+      "성취기준",
+      "내용영역",
+      "행동영역",
+      "교과역량",
+      "유형정보"
+    ],
+    "displayedRelations": {
+      "setItems": "-",
+      "twins": 7,
+      "registeredPapers": 0
+    },
+    "classificationSample": {
+      "unitCode": "22MMAT0KOK1004030000",
+      "unitPath": "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 정비례와 그 그래프",
+      "achievementCode": "9수02-07",
+      "contentAreaCode": "22MMAT01020000",
+      "contentAreaLabel": "변화와 관계",
+      "behaviorArea": "이해",
+      "competency": "문제해결",
+      "typeCode": "MA145700",
+      "typeLabel": "정비례 관계 y=ax의 그래프 활용"
+    },
+    "distributionEligibility": {
+      "observed": "초안 문항의 배포 버튼이 비활성화되어 있다.",
+      "tooltip": "승인(사용·미사용) 문항만 배포할 수 있습니다.",
+      "evidence": "019-item-detail-lower.png",
+      "backendValidation": "unverified"
+    },
+    "navigation": "화면 위·아래에 목록과 이전·다음 문항이 있다. 첫 문항은 이전 문항이 비활성화되며 1 / 35535건을 표시한다.",
+    "editEntry": "문항 수정 링크가 동일 상세 URL에 openModify=Y를 추가한다.",
+    "remaining": [
+      "문항 수정 화면",
+      "상태 수정 모드",
+      "쌍둥이 목록",
+      "평가지 등록 목록",
+      "승인·배포 문항 비교",
+      "기타 문항 유형과 공통 지문 세트"
+    ]
+  },
+  "omrPreview": {
+    "evidence": [
+      "013-omr-preview",
+      "014-omr-answer-shown",
+      "016-omr-current",
+      "017-omr-close"
+    ],
+    "container": "문항 상세의 omrPreviewModal 팝업",
+    "embeddedUrl": "https://dev-exambank.douclass.com/omr-preview",
+    "initialControls": [
+      "정답 보기 스위치",
+      "번호",
+      "답 란",
+      "객관식 선택 버튼 1~5",
+      "채점하기",
+      "상단 닫기",
+      "하단 닫기"
+    ],
+    "answerModeObserved": "정답 보기를 켜면 정답 5번이 파란색으로 강조되며 채점 버튼 대신 정답 표시 모드가 나타난다.",
+    "closeObserved": "상단 닫기로 팝업을 닫고 상세 화면으로 돌아왔다.",
+    "remaining": [
+      "응답 입력과 채점 결과",
+      "미응답",
+      "다른 문항 형태의 OMR",
+      "세트 문항 OMR"
+    ]
+  },
+  "userCoverageRequirements": [
+    "모든 페이지에서 모든 기능과 정보를 빠짐없이 조사한다.",
+    "문항 하나로 전체를 일반화하지 않는다. 단건과 공통 지문 세트를 포함한 여러 문항을 조사한다.",
+    "각 화면을 실제로 끝까지 스크롤하고 가로로 잘린 내용도 확인한다."
+  ],
+  "phase2Observations": {
+    "path": "session-20261106-phase2.json",
+    "evidenceRange": [
+      127,
+      205
+    ],
+    "coverage": "Common-passage set detail and HML registration family; incomplete",
+    "reports": [
+      "research/item-detail-behavior.md",
+      "research/hml-registration-behavior.md"
+    ]
+  },
+  "phase3Observations": {
+    "path": "session-20261106-phase3.json",
+    "evidenceRange": [
+      247,
+      282
+    ],
+    "report": "research/definition-registration-behavior.md",
+    "coverage": "Definition samples; incomplete"
+  },
+  "currentEvidenceIndex": {
+    "asOfEvidence": 3473,
+    "readingOrder": [
+      "coverage-supplement-20261111-phase77.json",
+      "session-20261111-phase77.json",
+      "session-20261111-phase76.json",
+      "session-20261111-phase75.json",
+      "session-20261111-phase74.json",
+      "session-20261111-phase73.json",
+      "session-20261111-phase72.json",
+      "PAUSED-20261110.json",
+      "session-20261110-phase71.json",
+      "session-20261110-phase70.json",
+      "session-20261110-phase69.json",
+      "coverage-supplement-20261110-phase67.json",
+      "session-20261110-phase68.json",
+      "session-20261110-phase67.json",
+      "session-20261110-phase66.json",
+      "session-20261110-phase65.json",
+      "session-20261110-phase64.json",
+      "session-20261110-phase63.json",
+      "session-20261110-phase62.json",
+      "session-20261110-phase61.json",
+      "session-20261110-phase60.json",
+      "session-20261110-phase59.json",
+      "session-20261110-phase58.json",
+      "session-20261110-phase57.json",
+      "session-20261110-phase56.json",
+      "session-20261110-phase55.json",
+      "session-20261110-phase54.json",
+      "session-20261110-phase53.json",
+      "session-20261110-phase52.json",
+      "session-20261110-phase51.json",
+      "session-20261110-phase50.json",
+      "session-20261110-phase49.json",
+      "session-20261110-phase48.json",
+      "session-20261110-phase47.json",
+      "session-20261110-phase46.json",
+      "session-20261110-phase45.json",
+      "session-20261110-phase44.json",
+      "session-20261110-phase43.json",
+      "session-20261110-phase42.json",
+      "session-20261110-phase41.json",
+      "session-20261110-phase40.json",
+      "session-20261110-phase39.json",
+      "session-20261110-phase38.json",
+      "session-20261110-phase37.json",
+      "session-20261109-phase36.json",
+      "session-20261109-phase35.json",
+      "session-20261109-phase34.json",
+      "session-20261109-phase33.json",
+      "session-20261109-phase32.json",
+      "session-20261109-phase31.json",
+      "session-20261109-phase30.json",
+      "session-20261109-phase29.json",
+      "session-20261109-phase28.json",
+      "session-20261109-phase27.json",
+      "session-20261109-phase26.json",
+      "session-20261109-phase25.json",
+      "session-20261109-phase24.json",
+      "session-20261109-phase23.json",
+      "session-20261109-phase22.json",
+      "session-20261109-phase21.json",
+      "session-20261109-phase20.json",
+      "session-20261109-phase19.json",
+      "session-20261109-phase18.json",
+      "session-20261109-phase17.json",
+      "session-20261109-phase16.json",
+      "omr-runtime-coverage.json",
+      "mutation-ledger.json",
+      "session-20261106-phase6.json",
+      "session-20261106-phase5.json",
+      "session-20261106-phase4.json",
+      "coverage-inventory.json"
+    ],
+    "inventoryCutoff": 354,
+    "sessionObservationCutoff": 3473,
+    "note": "Old remaining/status lists are historical observations. Use per-feature recent evidence. No 100 percent completion claim.",
+    "persistentTestItem": 2088985,
+    "persistentTestDetail": 2088701,
+    "confirmedServerOperations": 95,
+    "handoff": "coverage-supplement-20261111-phase77.json",
+    "status": "active",
+    "latestSource": "sources/item-edit-20261109.html",
+    "latestSourceComparison": "sources/item-edit-20261109-comparison.json",
+    "latestSession": "session-20261111-phase77.json",
+    "controller": "agent-browser explicit CDP",
+    "previewAssetManifest": "sources/omr-preview-assets.manifest.json",
+    "reaCapture": "sources/rea-master-20261109.bundle.json",
+    "latestHmlGlue": "sources/hml-glue-20261109.manifest.json",
+    "twinInventory": "twin-groups-20261109.json",
+    "testSourceId": 199,
+    "unconsolidatedEvidenceThrough": 1747,
+    "topicReports": {
+      "copiedSharedHmlIsolation": "copied-set-shared-hml-file-isolation-20261110.md",
+      "paperManualSetMembership": "paper1094-manual-set-membership-and-order-policy-20261110.md",
+      "singleLinkedDiscard": "single-twin-linked-discard-and-history-policy-20261110.md",
+      "twoSingleGroupsMerge": "two-single-twin-groups-merge-policy-20261110.md",
+      "wholeSetDiscard": "set-whole-discard-membership-history-policy-20261110.md",
+      "setAiLineageAndContent": "set-ai-generation-lineage-and-content-20261110.md",
+      "statusUnusedAndDiscard": "master-status-unused-and-discard-policy-20261110.md",
+      "concurrentEditOverwrite": "item-concurrent-edit-overwrite-20261110.md",
+      "temporarySave": "item-temporary-save-policy-20261110.md",
+      "sourceLifecycle": "source199-mapping-lifecycle-policy-20261110.md",
+      "explanationHmlCopyIsolation": "hml-explanation-copy-isolation-direct-fullapply-20261110.md",
+      "paperNativePointerDrag": "paper1094-native-pointer-drag-policy-20261110.md"
+    },
+    "latestCoverageMap": "coverage-supplement-20261111-phase77.json",
+    "latestCoverageCutoff": 3473,
+    "latestCompletedHmlExplanationPhase": "session-20261110-phase69.json",
+    "currentOwnedSingleCopy": {
+      "itemId": 2089239,
+      "detailId": 2089104,
+      "viewFlag": "N",
+      "asOfEvidence": 3258,
+      "questionHml": "/item/208/2089216/2088849/hml/2089216_Q.hml",
+      "explanationHml": "/item/208/2089239/2089104/hml/2089239_A.hml",
+      "source": "explanation239-direct-fullapply-isolation-comparison-20261110.json"
+    },
+    "latestPageSourceSnapshots": {
+      "copy239EditBeforeExplanation": "sources/own-copy239-before-explanation-edit9019-20261110.html",
+      "copy239AfterExplanation": "sources/own-copy239-after-explanation9104-20261110.html",
+      "copy239ExplanationEditor": "sources/own-copy239-explanation-editor-initial-20261110.html"
+    },
+    "legacySourcePointerNote": "Existing latestSource/latestSourceComparison retain the earlier generic baseline bundle; per-topic recent page snapshots and reports above describe later runtime behavior.",
+    "latestCoverageDeltas": [],
+    "latestActionableQueue": {
+      "identified": 6,
+      "verified": 6,
+      "remaining": 0
+    },
+    "currentOwnPaper1094": {
+      "detailId": 1191,
+      "status": "R",
+      "pages": [
+        1,
+        1
+      ],
+      "usage": "C",
+      "memberItemIds": [
+        2089238
+      ]
+    },
+    "storyboardDelivery": "../../design-specs/figma-item-management-delivery.json",
+    "storyboardDeliveries": [
+      "../../design-specs/figma-item-management-delivery.json",
+      "../../design-specs/figma-remaining-menus-delivery.json",
+      "../../design-specs/figma-storyboard-revision-delivery.json"
+    ],
+    "latestStoryboardDelivery": "../../design-specs/figma-storyboard-revision-delivery.json",
+    "masterStoryboardIndexUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-20632",
+    "storyboardRevisionStatus": "v0.4 revised_verified_ready_for_user_review 2026-11-12"
+  }
+}

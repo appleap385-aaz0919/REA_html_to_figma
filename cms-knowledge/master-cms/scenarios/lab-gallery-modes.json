@@ -1,0 +1,15 @@
+{"steps":[
+ {"label":"1539-lab-gallery-reopen","command":["open","https://dev-exambank.dongahub.com/lab/view/omr.donga"]},
+ {"label":"1540-lab-gallery-initial-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1541-lab-gallery-open-all","command":["eval","(() => {document.querySelector('[data-omr-toggle=open][data-omr-target=all]').click();return {action:'Expand all gallery leaves'};})()"]},
+ {"label":"1542-lab-gallery-open-all-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1543-lab-gallery-lock-mode","command":["eval","(() => {document.querySelector('#omrViewLock').click();return {action:'Select disabled-copy comparison mode'};})()"]},
+ {"label":"1544-lab-gallery-lock-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1545-lab-gallery-live-first-option-input","command":["fill",".omr-live [data-omr-code=OBSACN] .omr-obsacn-row:first-child input[type=text]","LockProbe"]},
+ {"label":"1546-lab-gallery-live-first-answer-click","command":["eval","(() => {document.querySelector('.omr-live [data-omr-code=OBSACN] .omr-obsacn-row:first-child input[type=radio]').click();return {action:'Select live first answer, preserve separate locked radio group'};})()"]},
+ {"label":"1547-lab-gallery-lock-sync-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1548-lab-gallery-close-all","command":["eval","(() => {document.querySelector('[data-omr-toggle=close][data-omr-target=all]').click();return {action:'Close all gallery leaves'};})()"]},
+ {"label":"1549-lab-gallery-close-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]},
+ {"label":"1550-lab-gallery-wide-mode","command":["eval","(() => {document.querySelector('#omrViewWide').click();return {action:'Select wide mode'};})()"]},
+ {"label":"1551-lab-gallery-wide-state","command":["eval","--file","sources/runtime/lab-gallery-observation.js"]}
+],"tailChars":600}

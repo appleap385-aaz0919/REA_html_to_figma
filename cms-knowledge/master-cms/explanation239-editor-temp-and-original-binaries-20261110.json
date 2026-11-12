@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "stage": "editor_vendor_save_before_cms_commit",
+  "assets": [
+    {
+      "role": "original.question.hml",
+      "url": "https://dev-items.douclass.com/itembank/item/208/2089216/2088849/hml/2089216_Q.hml",
+      "httpStatus": 200,
+      "contentType": "application/xml",
+      "bytes": 39538,
+      "sha256": "54cd1eb4b8f85b94c83a91822b8ba73954e9d43970284321215e7021fa12845f",
+      "file": "fixtures/explanation239-copy-isolation-20261110/after-editor-save-original216-question.hml",
+      "bytesExactlyEqualBaseline": true
+    },
+    {
+      "role": "original.question.png",
+      "url": "https://dev-items.douclass.com/itembank/item/208/2089216/2088849/image/2089216_Q.png",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "bytes": 22308,
+      "sha256": "f71a1a122d8e98f0487bee207f230c0a57b876d557739e07e5bcd884d57b1f08",
+      "file": "fixtures/explanation239-copy-isolation-20261110/after-editor-save-original216-question.png",
+      "bytesExactlyEqualBaseline": true
+    },
+    {
+      "role": "original.explain.hml",
+      "url": "https://dev-items.douclass.com/itembank/item/208/2089216/2088849/hml/2089216_A.hml",
+      "httpStatus": 200,
+      "contentType": "application/xml",
+      "bytes": 29580,
+      "sha256": "daa432c79c0f339a8e8e946474967884c16d4920a9ee46f71dbd26854597e64c",
+      "file": "fixtures/explanation239-copy-isolation-20261110/after-editor-save-original216-explain.hml",
+      "bytesExactlyEqualBaseline": true
+    },
+    {
+      "role": "original.explain.png",
+      "url": "https://dev-items.douclass.com/itembank/item/208/2089216/2088849/image/2089216_A.png",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "bytes": 9095,
+      "sha256": "d97b376b663e1d3f863092577d569db1887967cb6b9b4cd320497886bf2c0e88",
+      "file": "fixtures/explanation239-copy-isolation-20261110/after-editor-save-original216-explain.png",
+      "bytesExactlyEqualBaseline": true
+    },
+    {
+      "role": "vendor.explain.hml",
+      "url": "https://dev-webhwp.dongahub.com/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/bf71fc64-6af8-466d-9556-7384d64832dc.hwpml2x",
+      "httpStatus": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 32094,
+      "sha256": "90a7c154230c6a021a3fe334c1f4954978881c57e0d652a8a61aeaef33418cd0",
+      "file": "fixtures/explanation239-copy-isolation-20261110/vendor-temp-explain.hml"
+    },
+    {
+      "role": "vendor.explain.png",
+      "url": "https://dev-webhwp.dongahub.com/webhwpctrl/get/52ef453b-53f4-43cc-b789-ebcae6de95a9/964eff42-2264-4633-bdbe-b75d2aea8d7d.png",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "bytes": 23592,
+      "sha256": "5230ed334e5340e75392e7831978bb041540b24b26a49da833a24cd846da87b9",
+      "file": "fixtures/explanation239-copy-isolation-20261110/vendor-temp-explain.png"
+    }
+  ],
+  "checks": {
+    "allFourOriginalAssetsExactlyUnchanged": true,
+    "explanationEquationScriptsExactlyEqual": true,
+    "equationScriptCountBefore": 8,
+    "equationScriptCountAfter": 8,
+    "charTextOnlyAddedOnePrefix": true,
+    "newMarkerCountInCharText": 1
+  },
+  "method": "Credential-free GET of declared development CDN/vendor files. No browser credentials or authentication response headers retained."
+}

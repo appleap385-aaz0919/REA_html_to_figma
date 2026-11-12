@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1098-hml-final-reopen-seed","command":["snapshot"]},
+  {"label":"1099-hml-final-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1100-hml-final-tab-enter","command":["press","Enter"]},
+  {"label":"1101-hml-final-cards-settled","command":["snapshot"],"screenshot":true},
+  {"label":"1102-hml-final-editor-open","command":["click","{ref}"],"refPattern":"- button \"한글 편집기 열기\" \\[ref=(e\\d+)\\]"}
+ ],"tailChars":1600
+}

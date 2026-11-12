@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2693-definition695-f-approval-modal-state",
+  "startedUtc": "2026-11-10T03:55:48.500268+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/definition695-review-observation.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.078
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "actions": [
+          {
+            "disabled": false,
+            "text": "폐기"
+          },
+          {
+            "disabled": false,
+            "text": "승인"
+          }
+        ],
+        "forms": [
+          {
+            "fields": [
+              {
+                "name": "examDocumentId",
+                "value": "695"
+              }
+            ],
+            "id": "examApproveForm",
+            "request": "/item/difi/approve.donga"
+          },
+          {
+            "fields": [
+              {
+                "name": "examDocumentId",
+                "value": "695"
+              }
+            ],
+            "id": "examDiscardForm",
+            "request": "/item/difi/discard.donga"
+          }
+        ],
+        "judges": [
+          {
+            "block": "1",
+            "itemIds": "2089375",
+            "options": [
+              {
+                "disabled": true,
+                "value": "W"
+              },
+              {
+                "disabled": false,
+                "value": "S"
+              },
+              {
+                "disabled": false,
+                "value": "F"
+              },
+              {
+                "disabled": false,
+                "value": "D"
+              }
+            ],
+            "value": "F"
+          }
+        ],
+        "modals": [],
+        "models": [
+          {
+            "assets": [],
+            "content": {
+              "answerText": "4",
+              "choices": [],
+              "correctHtml": "<p><span class=\"font-s20\">$4$</span></p>",
+              "explanationHtml": "<p><span class=\"font-s20\">(가) 가장 작은 소수는  $\\fbox{2}$이다.<br>(나) 짝수인 소수는  $2$의  $\\fbox{1}$개이다.<br>(다)  $\\fbox{1}$은 소수도 아니고 합성수도 아니다.<br>따라서 □ 안에 알맞은 자연수들의 합은  $2+1+1=4$</span></p>",
+              "explanationLines": [
+                "(가) 가장 작은 소수는 2이다.",
+                "(나) 짝수인 소수는 2의 1개이다.",
+                "(다) 1은 소수도 아니고 합성수도 아니다.",
+                "따라서 □ 안에 알맞은 자연수들의 합은 2+1+1=4"
+              ],
+              "explanationText": "(가) 가장 작은 소수는 2이다. (나) 짝수인 소수는 2의 1개이다. (다) 1은 소수도 아니고 합성수도 아니다. 따라서 □ 안에 알맞은 자연수들의 합은 2+1+1=4",
+              "gradingCriteriaHtml": "",
+              "modelAnswerHtml": "",
+              "promptText": "[QA-DIFI-20261110-04-ORDERED] 다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.",
+              "questionHtml": "<d-question><p><span>[QA-DIFI-20261110-04-ORDERED]</span></p><p><span class=\"font-s20\">다음 □ 안에 알맞은 자연수들의 합을 구하시오.</span></p></d-question><p></p><d-box><p style=\"text-align: left\">(가) 가장 작은 소수는 □이다.<br>(나) 짝수인 소수는 □개이다.<br>(다) □은 소수도 아니고 합성수도 아니다.</p></d-box><p><d-input key=\"1\" circleid=\"k1kteof\" selectdata=\"\"></d-input></p>"
+            },
+            "contentVersion": "v3",
+            "grading": {
+              "answerValues": [
+                "$4$"
+              ],
+              "mode": "exact_match",
+              "value": "4"
+            },
+            "outType": "definition",
+            "passageKey": ""
+          }
+        ],
+        "paperReg": null,
+        "prefix": "시스템 관리\n문항 관리\n디피니션 문항 등록\n상세\n디피니션 상세\n초안\n기본 정보\n시험지 ID\n695\n원본 파일\nQA-DIFI-20261110-06-ORDERED1.zip\n다운로드\n출처\n[22-M-MA-T0-1-1-SMT-TP-2022]\n22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022\n단원 코드\n[22MMAT0KOK1001020000]\n22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 소인수분해 > 소인수분해 > >\n페이지\n1 ~ 3\n용도\n공통\n등록\njaehyuk.myung · 2026-11-10\n수정\n-\n비고\n분리 문항 리스트\n#1\n문항ID 2089375 (2089082)\n등록대기\n등록성공\n등록실패\n삭제\n\n[QA-DIFI-20261110-04-ORDERED]\n\n다음 □ 안에 알맞은 자연수들의 합을 구하시오.\n\n(가) 가장 작은 소수는 □이다.\n\n(나) 짝수인 소수는 □개이다.\n\n(다) □은 소수도 아니고 합성수도 아니다.\n\n정답\n\n4\n4\n\n풀이\n\n(가) 가장 작은 소수는 \n2\n2\n\t​\n\n이다.\n\n(나) 짝수인 소수는 \n2\n2의 \n1\n1\n\t​\n\n개이다.\n\n(다) \n1\n1\n\t​\n\n은 소수도 아니고 합성수도 아니다.\n\n따라서 □ 안에 알맞은 자연수들의 합은 \n2\n+\n1\n+\n1\n=\n4\n2+1+1=4\n\n목록\n폐기\n승인",
+        "remark": "QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research.",
+        "scroll": {
+          "height": 1015,
+          "top": 385,
+          "total": 1400
+        },
+        "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.114
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e35659": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e35660": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e35661": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e35662": {
+          "name": "디피니션 상세",
+          "role": "heading"
+        },
+        "e35663": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e35664": {
+          "name": "폐기",
+          "role": "button"
+        },
+        "e35665": {
+          "name": "승인",
+          "role": "button"
+        },
+        "e35666": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e35667": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e35668": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e35669": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e35670": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e35671": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e35672": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e35673": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e35674": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e35675": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e35676": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e35677": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e35678": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e35679": {
+          "name": " 다운로드",
+          "role": "button"
+        },
+        "e35680": {
+          "name": "등록대기",
+          "role": "option"
+        },
+        "e35681": {
+          "name": "등록성공",
+          "role": "option"
+        },
+        "e35682": {
+          "name": "등록실패",
+          "role": "option"
+        },
+        "e35683": {
+          "name": "삭제",
+          "role": "option"
+        },
+        "e35684": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e35685": {
+          "name": "풀이",
+          "role": "heading"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e35659]\n      - link \"문제은행 마스터 CMS\" [ref=e35660]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e35668]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e35669]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e35670]\n          - link \"HML 문항 등록\" [ref=e35671]\n          - link \"디피니션 문항 등록\" [ref=e35672]\n          - link \"쌍둥이 그룹 관리\" [ref=e35673]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e35674]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e35675]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e35676]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e35661]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"디피니션 상세\" [level=2, ref=e35662]\n      - StaticText \"초안\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e35666]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"695\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"QA-DIFI-20261110-06-ORDERED1.zip\"\n            - button \" 다운로드\" [ref=e35679]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-M-MA-T0-1-1-SMT-TP-2022]\"\n            - StaticText \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22MMAT0KOK1001020000]\"\n            - StaticText \"22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 소인수분해 > 소인수분해 > >\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"1 ~ 3\"\n          - term \"용도\"\n          - definition\n            - StaticText \"공통\"\n          - term \"등록\"\n          - definition\n            - StaticText \"jaehyuk.myung · 2026-11-10\"\n          - term \"수정\"\n          - definition\n            - StaticText \"-\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [ref=e35677]: QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research.\n          - StaticText \"QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research.\"\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e35667]\n        - generic\n          - StaticText \"#1\"\n          - StaticText \"문항ID 2089375 (2089082)\"\n          - combobox [expanded=false, ref=e35678]: 등록실패\n            - MenuListPopup\n              - option \"등록대기\" [disabled, ref=e35680]\n              - option \"등록성공\" [ref=e35681]\n              - option \"등록실패\" [selected, ref=e35682]\n              - option \"삭제\" [ref=e35683]\n          - article\n            - paragraph\n              - StaticText \"[QA-DIFI-20261110-04-ORDERED]\"\n            - paragraph\n              - StaticText \"다음 □ 안에 알맞은 자연수들의 합을 구하시오.\"\n            - paragraph\n            - StaticText \"(가) 가장 작은 소수는 □이다.\"\n            - LineBreak \"\\n\"\n            - StaticText \"(나) 짝수인 소수는 □개이다.\"\n            - LineBreak \"\\n\"\n            - StaticText \"(다) □은 소수도 아니고 합성수도 아니다.\"\n            - paragraph\n            - generic\n              - heading \"정답\" [level=3, ref=e35684]\n              - paragraph\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"4\"\n            - generic\n              - heading \"풀이\" [level=3, ref=e35685]\n              - paragraph\n                - StaticText \"(가) 가장 작은 소수는 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLText\n                          - StaticText \"2\"\n                - StaticText \"이다.\"\n                - LineBreak \"\\n\"\n                - StaticText \"(나) 짝수인 소수는 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"2\"\n                - StaticText \"의 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLText\n                          - StaticText \"1\"\n                - StaticText \"개이다.\"\n                - LineBreak \"\\n\"\n                - StaticText \"(다) \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLText\n                          - StaticText \"1\"\n                - StaticText \"은 소수도 아니고 합성수도 아니다.\"\n                - LineBreak \"\\n\"\n                - StaticText \"따라서 □ 안에 알맞은 자연수들의 합은 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLNumber\n                        - StaticText \"1\"\n                      - MathMLOperator\n                        - StaticText \"+\"\n                      - MathMLNumber\n                        - StaticText \"1\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLNumber\n                        - StaticText \"4\"\n      - link \"목록\" [ref=e35663]\n      - button \"폐기\" [ref=e35664]\n      - button \"승인\" [ref=e35665]"
+    },
+    "error": null,
+    "localSeconds": 0.104
+  }
+}

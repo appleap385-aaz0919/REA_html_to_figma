@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"2012-hml-qa-register-submit","command":["eval","(() => {const f=document.querySelector('#examForm'),files=Dropzone.instances[0].getAcceptedFiles();if(location.pathname!=='/item/hml/form.donga'||files.length!==1||files[0].name!=='QA-HML-20261109-01-SET.hml'||files[0].size!==473273||f.elements.examDocumentId.value||f.elements.productId.value!=='13'||f.elements.unitCode.value!=='22MMAT0KOK10'||f.elements.startPageNum.value!=='2'||f.elements.endPageNum.value!=='22'||f.elements.serviceUsage.value!=='T'||!f.checkValidity()||f.querySelector('button[type=submit]').disabled)throw Error('HML QA registration precondition mismatch');f.querySelector('button[type=submit]').click();return {action:'Submit isolated QA HML copy once',file:files[0].name,bytes:files[0].size};})()"]},
+ {"label":"2013-hml-qa-register-post","command":["eval","--file","sources/runtime/registration-page-observation.js"]}
+],"tailChars":500}

@@ -1,0 +1,1371 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3389-source-empty-page0-reset-and-query-recovery",
+  "startedUtc": "2026-11-11T00:08:43.900958+00:00",
+  "command": [
+    "eval",
+    "--file",
+    "sources/runtime/source-empty-page0-reset-query.js"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "url": "https://dev-exambank.dongahub.com/product/list.donga?pageNum=0&pageSize=10&curriculum=15"
+    },
+    "error": null,
+    "localSeconds": 0.104
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageSize=10&pageNum=1",
+      "result": {
+        "httpStatus": 200,
+        "ids": [
+          "199",
+          "166",
+          "134",
+          "133",
+          "102",
+          "101",
+          "100",
+          "69",
+          "68",
+          "67"
+        ],
+        "listTail": " 문제집_대단원 평가-2025\t수학\t22\t2025\t교사용\t중학\t중학1\t공통학기\t사용\t25\t\nhyuntaek.kim\n2026-10-06\n총 60건 중 1∼10 표시\n1\n2\n3\n4\n5",
+        "responseUrl": "https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageSize=10&pageNum=1",
+        "row199": "199\t22-M-MA-T0-1-1-SMT-TP-2048\t22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\t수학\t22\t2048\t교사용\t중학\t중학1\t1학기\t미사용\t0\t\njaehyuk.myung\n2026-11-09",
+        "url": "https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageSize=10&pageNum=1"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.317
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/product/list.donga?curriculum=22&pageSize=10&pageNum=1",
+      "refs": {
+        "e43608": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e43609": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e43610": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e43611": {
+          "name": "문항 출처 관리",
+          "role": "heading"
+        },
+        "e43614": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e43615": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e43616": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e43617": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e43618": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e43619": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43620": {
+          "name": "출처코드 / 출처명",
+          "role": "textbox"
+        },
+        "e43621": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43622": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43623": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43624": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43625": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43626": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43627": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43628": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43629": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e43630": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e43631": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e43632": {
+          "name": "시작일 ~ 종료일",
+          "role": "textbox"
+        },
+        "e43633": {
+          "name": "7일",
+          "role": "button"
+        },
+        "e43634": {
+          "name": "30일",
+          "role": "button"
+        },
+        "e43635": {
+          "name": "90일",
+          "role": "button"
+        },
+        "e43636": {
+          "name": "전체",
+          "role": "button"
+        },
+        "e43637": {
+          "name": "사용",
+          "role": "checkbox"
+        },
+        "e43638": {
+          "name": "미사용",
+          "role": "checkbox"
+        },
+        "e43639": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e43640": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e43654": {
+          "name": "출처코드",
+          "role": "option"
+        },
+        "e43655": {
+          "name": "출처명",
+          "role": "option"
+        },
+        "e43656": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e43657": {
+          "name": "22",
+          "role": "option"
+        },
+        "e43658": {
+          "name": "15",
+          "role": "option"
+        },
+        "e43659": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e43660": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e43661": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e43662": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e43663": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e43664": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e43665": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e43666": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43667": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43668": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e43669": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e43670": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e43671": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e43672": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e43673": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e43674": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e43675": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e43676": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e43677": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e43678": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e43679": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e43680": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e43681": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e43682": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43683": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e43684": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e43685": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e43686": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e43687": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e43688": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e43689": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e43690": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e43691": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e43692": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e43693": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e43694": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e43695": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e43696": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e43697": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e43698": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e43699": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e43700": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e43701": {
+          "name": "판형",
+          "role": "option"
+        },
+        "e43702": {
+          "name": "2000",
+          "role": "option"
+        },
+        "e43703": {
+          "name": "2001",
+          "role": "option"
+        },
+        "e43704": {
+          "name": "2002",
+          "role": "option"
+        },
+        "e43705": {
+          "name": "2003",
+          "role": "option"
+        },
+        "e43706": {
+          "name": "2004",
+          "role": "option"
+        },
+        "e43707": {
+          "name": "2005",
+          "role": "option"
+        },
+        "e43708": {
+          "name": "2006",
+          "role": "option"
+        },
+        "e43709": {
+          "name": "2007",
+          "role": "option"
+        },
+        "e43710": {
+          "name": "2008",
+          "role": "option"
+        },
+        "e43711": {
+          "name": "2009",
+          "role": "option"
+        },
+        "e43712": {
+          "name": "2010",
+          "role": "option"
+        },
+        "e43713": {
+          "name": "2011",
+          "role": "option"
+        },
+        "e43714": {
+          "name": "2012",
+          "role": "option"
+        },
+        "e43715": {
+          "name": "2013",
+          "role": "option"
+        },
+        "e43716": {
+          "name": "2014",
+          "role": "option"
+        },
+        "e43717": {
+          "name": "2015",
+          "role": "option"
+        },
+        "e43718": {
+          "name": "2016",
+          "role": "option"
+        },
+        "e43719": {
+          "name": "2017",
+          "role": "option"
+        },
+        "e43720": {
+          "name": "2018",
+          "role": "option"
+        },
+        "e43721": {
+          "name": "2019",
+          "role": "option"
+        },
+        "e43722": {
+          "name": "2020",
+          "role": "option"
+        },
+        "e43723": {
+          "name": "2021",
+          "role": "option"
+        },
+        "e43724": {
+          "name": "2022",
+          "role": "option"
+        },
+        "e43725": {
+          "name": "2023",
+          "role": "option"
+        },
+        "e43726": {
+          "name": "2024",
+          "role": "option"
+        },
+        "e43727": {
+          "name": "2025",
+          "role": "option"
+        },
+        "e43728": {
+          "name": "2026",
+          "role": "option"
+        },
+        "e43729": {
+          "name": "2027",
+          "role": "option"
+        },
+        "e43730": {
+          "name": "2028",
+          "role": "option"
+        },
+        "e43731": {
+          "name": "2029",
+          "role": "option"
+        },
+        "e43732": {
+          "name": "2030",
+          "role": "option"
+        },
+        "e43733": {
+          "name": "2031",
+          "role": "option"
+        },
+        "e43734": {
+          "name": "2032",
+          "role": "option"
+        },
+        "e43735": {
+          "name": "2033",
+          "role": "option"
+        },
+        "e43736": {
+          "name": "2034",
+          "role": "option"
+        },
+        "e43737": {
+          "name": "2035",
+          "role": "option"
+        },
+        "e43738": {
+          "name": "2036",
+          "role": "option"
+        },
+        "e43739": {
+          "name": "2037",
+          "role": "option"
+        },
+        "e43740": {
+          "name": "2038",
+          "role": "option"
+        },
+        "e43741": {
+          "name": "2039",
+          "role": "option"
+        },
+        "e43742": {
+          "name": "2040",
+          "role": "option"
+        },
+        "e43743": {
+          "name": "2041",
+          "role": "option"
+        },
+        "e43744": {
+          "name": "2042",
+          "role": "option"
+        },
+        "e43745": {
+          "name": "2043",
+          "role": "option"
+        },
+        "e43746": {
+          "name": "2044",
+          "role": "option"
+        },
+        "e43747": {
+          "name": "2045",
+          "role": "option"
+        },
+        "e43748": {
+          "name": "2046",
+          "role": "option"
+        },
+        "e43749": {
+          "name": "2047",
+          "role": "option"
+        },
+        "e43750": {
+          "name": "2048",
+          "role": "option"
+        },
+        "e43751": {
+          "name": "2049",
+          "role": "option"
+        },
+        "e43752": {
+          "name": "2050",
+          "role": "option"
+        },
+        "e43753": {
+          "name": "용도 전체",
+          "role": "option"
+        },
+        "e43754": {
+          "name": "공통",
+          "role": "option"
+        },
+        "e43755": {
+          "name": "교사용",
+          "role": "option"
+        },
+        "e43969": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43970": {
+          "name": " 등록",
+          "role": "link"
+        },
+        "e43971": {
+          "name": "10개씩 보기",
+          "role": "option"
+        },
+        "e43972": {
+          "name": "30개씩 보기",
+          "role": "option"
+        },
+        "e43973": {
+          "name": "50개씩 보기",
+          "role": "option"
+        },
+        "e43974": {
+          "name": "100개씩 보기",
+          "role": "option"
+        },
+        "e43975": {
+          "name": "맨 앞",
+          "role": "link"
+        },
+        "e43976": {
+          "name": "이전",
+          "role": "link"
+        },
+        "e43977": {
+          "name": "1",
+          "role": "link"
+        },
+        "e43978": {
+          "name": "2",
+          "role": "link"
+        },
+        "e43979": {
+          "name": "3",
+          "role": "link"
+        },
+        "e43980": {
+          "name": "4",
+          "role": "link"
+        },
+        "e43981": {
+          "name": "5",
+          "role": "link"
+        },
+        "e43982": {
+          "name": "다음",
+          "role": "link"
+        },
+        "e43983": {
+          "name": "맨 뒤",
+          "role": "link"
+        },
+        "e43984": {
+          "name": "199",
+          "role": "cell"
+        },
+        "e43985": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2048",
+          "role": "cell"
+        },
+        "e43986": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048",
+          "role": "cell"
+        },
+        "e43987": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e43988": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e43989": {
+          "name": "2048",
+          "role": "cell"
+        },
+        "e43990": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e43991": {
+          "name": "중학",
+          "role": "cell"
+        },
+        "e43992": {
+          "name": "중학1",
+          "role": "cell"
+        },
+        "e43993": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e43994": {
+          "name": "미사용",
+          "role": "cell"
+        },
+        "e43995": {
+          "name": "0",
+          "role": "cell"
+        },
+        "e43996": {
+          "name": "jaehyuk.myung 2026-11-09",
+          "role": "cell"
+        },
+        "e43997": {
+          "name": "166",
+          "role": "cell"
+        },
+        "e43998": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2000",
+          "role": "cell"
+        },
+        "e43999": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000",
+          "role": "cell"
+        },
+        "e44000": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44001": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44002": {
+          "name": "2000",
+          "role": "cell"
+        },
+        "e44003": {
+          "name": "공통",
+          "role": "cell"
+        },
+        "e44004": {
+          "name": "중학",
+          "role": "cell"
+        },
+        "e44005": {
+          "name": "중학1",
+          "role": "cell"
+        },
+        "e44006": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e44007": {
+          "name": "미사용",
+          "role": "cell"
+        },
+        "e44008": {
+          "name": "0",
+          "role": "cell"
+        },
+        "e44009": {
+          "name": "suna.lee 2026-10-30",
+          "role": "cell"
+        },
+        "e44010": {
+          "name": "134",
+          "role": "cell"
+        },
+        "e44011": {
+          "name": "22-M-MA-T0-1-0-DCL-MA-2025",
+          "role": "cell"
+        },
+        "e44012": {
+          "name": "22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025",
+          "role": "cell"
+        },
+        "e44013": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44014": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44015": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44016": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44017": {
+          "name": "중학",
+          "role": "cell"
+        },
+        "e44018": {
+          "name": "중학1",
+          "role": "cell"
+        },
+        "e44019": {
+          "name": "공통학기",
+          "role": "cell"
+        },
+        "e44020": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44021": {
+          "name": "102",
+          "role": "cell"
+        },
+        "e44022": {
+          "name": "hyuntaek.kim 2026-10-08",
+          "role": "cell"
+        },
+        "e44023": {
+          "name": "133",
+          "role": "cell"
+        },
+        "e44024": {
+          "name": "22-H-MA-C1-1-0-DCL-KI-2025",
+          "role": "cell"
+        },
+        "e44025": {
+          "name": "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025",
+          "role": "cell"
+        },
+        "e44026": {
+          "name": "공통수학1",
+          "role": "cell"
+        },
+        "e44027": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44028": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44029": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44030": {
+          "name": "고등",
+          "role": "cell"
+        },
+        "e44031": {
+          "name": "고등1",
+          "role": "cell"
+        },
+        "e44032": {
+          "name": "공통학기",
+          "role": "cell"
+        },
+        "e44033": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44034": {
+          "name": "68",
+          "role": "cell"
+        },
+        "e44035": {
+          "name": "hyuntaek.kim 2026-10-08",
+          "role": "cell"
+        },
+        "e44036": {
+          "name": "102",
+          "role": "cell"
+        },
+        "e44037": {
+          "name": "22-E-MA-T0-5-1-DCL-FB-2026",
+          "role": "cell"
+        },
+        "e44038": {
+          "name": "22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026",
+          "role": "cell"
+        },
+        "e44039": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44040": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44041": {
+          "name": "2026",
+          "role": "cell"
+        },
+        "e44042": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44043": {
+          "name": "초등",
+          "role": "cell"
+        },
+        "e44044": {
+          "name": "초등5",
+          "role": "cell"
+        },
+        "e44045": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e44046": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44047": {
+          "name": "20",
+          "role": "cell"
+        },
+        "e44048": {
+          "name": "hyuntaek.kim 2026-10-07",
+          "role": "cell"
+        },
+        "e44049": {
+          "name": "101",
+          "role": "cell"
+        },
+        "e44050": {
+          "name": "22-E-MA-T0-4-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e44051": {
+          "name": "22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025",
+          "role": "cell"
+        },
+        "e44052": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44053": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44054": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44055": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44056": {
+          "name": "초등",
+          "role": "cell"
+        },
+        "e44057": {
+          "name": "초등4",
+          "role": "cell"
+        },
+        "e44058": {
+          "name": "2학기",
+          "role": "cell"
+        },
+        "e44059": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44060": {
+          "name": "21",
+          "role": "cell"
+        },
+        "e44061": {
+          "name": "hyuntaek.kim 2026-10-07",
+          "role": "cell"
+        },
+        "e44062": {
+          "name": "100",
+          "role": "cell"
+        },
+        "e44063": {
+          "name": "22-E-MA-T0-4-1-DCL-FB-2005",
+          "role": "cell"
+        },
+        "e44064": {
+          "name": "22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005",
+          "role": "cell"
+        },
+        "e44065": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44066": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44067": {
+          "name": "2005",
+          "role": "cell"
+        },
+        "e44068": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44069": {
+          "name": "초등",
+          "role": "cell"
+        },
+        "e44070": {
+          "name": "초등4",
+          "role": "cell"
+        },
+        "e44071": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e44072": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44073": {
+          "name": "9",
+          "role": "cell"
+        },
+        "e44074": {
+          "name": "hyuntaek.kim 2026-10-07",
+          "role": "cell"
+        },
+        "e44075": {
+          "name": "69",
+          "role": "cell"
+        },
+        "e44076": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e44077": {
+          "name": "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025",
+          "role": "cell"
+        },
+        "e44078": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44079": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44080": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44081": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44082": {
+          "name": "초등",
+          "role": "cell"
+        },
+        "e44083": {
+          "name": "초등3",
+          "role": "cell"
+        },
+        "e44084": {
+          "name": "2학기",
+          "role": "cell"
+        },
+        "e44085": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44086": {
+          "name": "39",
+          "role": "cell"
+        },
+        "e44087": {
+          "name": "hyuntaek.kim 2026-10-06",
+          "role": "cell"
+        },
+        "e44088": {
+          "name": "68",
+          "role": "cell"
+        },
+        "e44089": {
+          "name": "22-E-MA-T0-3-1-DCL-FB-2025",
+          "role": "cell"
+        },
+        "e44090": {
+          "name": "22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025",
+          "role": "cell"
+        },
+        "e44091": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44092": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44093": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44094": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44095": {
+          "name": "초등",
+          "role": "cell"
+        },
+        "e44096": {
+          "name": "초등3",
+          "role": "cell"
+        },
+        "e44097": {
+          "name": "1학기",
+          "role": "cell"
+        },
+        "e44098": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44099": {
+          "name": "12",
+          "role": "cell"
+        },
+        "e44100": {
+          "name": "hyuntaek.kim 2026-10-06",
+          "role": "cell"
+        },
+        "e44101": {
+          "name": "67",
+          "role": "cell"
+        },
+        "e44102": {
+          "name": "22-M-MA-T0-1-0-DCL-DA-2025",
+          "role": "cell"
+        },
+        "e44103": {
+          "name": "22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025",
+          "role": "cell"
+        },
+        "e44104": {
+          "name": "수학",
+          "role": "cell"
+        },
+        "e44105": {
+          "name": "22",
+          "role": "cell"
+        },
+        "e44106": {
+          "name": "2025",
+          "role": "cell"
+        },
+        "e44107": {
+          "name": "교사용",
+          "role": "cell"
+        },
+        "e44108": {
+          "name": "중학",
+          "role": "cell"
+        },
+        "e44109": {
+          "name": "중학1",
+          "role": "cell"
+        },
+        "e44110": {
+          "name": "공통학기",
+          "role": "cell"
+        },
+        "e44111": {
+          "name": "사용",
+          "role": "cell"
+        },
+        "e44112": {
+          "name": "25",
+          "role": "cell"
+        },
+        "e44113": {
+          "name": "hyuntaek.kim 2026-10-06",
+          "role": "cell"
+        },
+        "e44114": {
+          "name": "출처 ID",
+          "role": "columnheader"
+        },
+        "e44115": {
+          "name": "출처코드",
+          "role": "columnheader"
+        },
+        "e44116": {
+          "name": "출처명",
+          "role": "columnheader"
+        },
+        "e44117": {
+          "name": "과목",
+          "role": "columnheader"
+        },
+        "e44118": {
+          "name": "교육과정",
+          "role": "columnheader"
+        },
+        "e44119": {
+          "name": "판형",
+          "role": "columnheader"
+        },
+        "e44120": {
+          "name": "용도",
+          "role": "columnheader"
+        },
+        "e44121": {
+          "name": "학교급",
+          "role": "columnheader"
+        },
+        "e44122": {
+          "name": "학년",
+          "role": "columnheader"
+        },
+        "e44123": {
+          "name": "학기",
+          "role": "columnheader"
+        },
+        "e44124": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e44125": {
+          "name": "매핑문항",
+          "role": "columnheader"
+        },
+        "e44126": {
+          "name": "등록자 · 등록일",
+          "role": "columnheader"
+        },
+        "e44127": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2048",
+          "role": "link"
+        },
+        "e44128": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048",
+          "role": "link"
+        },
+        "e44129": {
+          "name": "22-M-MA-T0-1-1-SMT-TP-2000",
+          "role": "link"
+        },
+        "e44130": {
+          "name": "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000",
+          "role": "link"
+        },
+        "e44131": {
+          "name": "22-M-MA-T0-1-0-DCL-MA-2025",
+          "role": "link"
+        },
+        "e44132": {
+          "name": "22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025",
+          "role": "link"
+        },
+        "e44133": {
+          "name": "22-H-MA-C1-1-0-DCL-KI-2025",
+          "role": "link"
+        },
+        "e44134": {
+          "name": "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025",
+          "role": "link"
+        },
+        "e44135": {
+          "name": "22-E-MA-T0-5-1-DCL-FB-2026",
+          "role": "link"
+        },
+        "e44136": {
+          "name": "22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026",
+          "role": "link"
+        },
+        "e44137": {
+          "name": "22-E-MA-T0-4-2-DCL-FB-2025",
+          "role": "link"
+        },
+        "e44138": {
+          "name": "22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025",
+          "role": "link"
+        },
+        "e44139": {
+          "name": "22-E-MA-T0-4-1-DCL-FB-2005",
+          "role": "link"
+        },
+        "e44140": {
+          "name": "22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005",
+          "role": "link"
+        },
+        "e44141": {
+          "name": "22-E-MA-T0-3-2-DCL-FB-2025",
+          "role": "link"
+        },
+        "e44142": {
+          "name": "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025",
+          "role": "link"
+        },
+        "e44143": {
+          "name": "22-E-MA-T0-3-1-DCL-FB-2025",
+          "role": "link"
+        },
+        "e44144": {
+          "name": "22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025",
+          "role": "link"
+        },
+        "e44145": {
+          "name": "22-M-MA-T0-1-0-DCL-DA-2025",
+          "role": "link"
+        },
+        "e44146": {
+          "name": "22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025",
+          "role": "link"
+        }
+      },
+      "removedRefs": [
+        "@e43944",
+        "@e43945",
+        "@e43946",
+        "@e43947",
+        "@e43948",
+        "@e43949",
+        "@e43950",
+        "@e43951",
+        "@e43952",
+        "@e43953",
+        "@e43954",
+        "@e43955",
+        "@e43956",
+        "@e43957",
+        "@e43958",
+        "@e43959",
+        "@e43960",
+        "@e43961",
+        "@e43962",
+        "@e43963",
+        "@e43964",
+        "@e43965",
+        "@e43966",
+        "@e43967",
+        "@e43968"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e43608]\n      - link \"문제은행 마스터 CMS\" [ref=e43609]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e43614]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=false, ref=e43615]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e43616]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e43617]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e43618]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e43610]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 출처 관리\"\n      - heading \"문항 출처 관리\" [level=2, ref=e43611]\n      - generic\n        - combobox [expanded=false, ref=e43619]: 출처코드\n          - MenuListPopup\n            - option \"출처코드\" [selected, ref=e43654]\n            - option \"출처명\" [ref=e43655]\n        - textbox \"출처코드 / 출처명\" [ref=e43620]\n        - combobox [expanded=false, ref=e43621]: 22\n          - MenuListPopup\n            - option \"교육과정 전체\" [ref=e43656]\n            - option \"22\" [selected, ref=e43657]\n            - option \"15\" [ref=e43658]\n        - combobox [expanded=false, ref=e43622]: 학교급 전체\n          - MenuListPopup\n            - option \"학교급 전체\" [selected, ref=e43659]\n            - option \"초등\" [ref=e43660]\n            - option \"중학\" [ref=e43661]\n            - option \"고등\" [ref=e43662]\n        - combobox [expanded=false, ref=e43623]: 과목군 전체\n          - MenuListPopup\n            - option \"과목군 전체\" [selected, ref=e43663]\n            - option \"수학군\" [ref=e43664]\n        - combobox [expanded=false, disabled, ref=e43624]: 과목 전체\n          - MenuListPopup\n            - option \"과목 전체\" [disabled, ref=e43665]\n            - option \"수학\" [disabled, ref=e43666]\n            - option \"수학\" [disabled, ref=e43667]\n            - option \"공통수학1\" [disabled, ref=e43668]\n            - option \"공통수학2\" [disabled, ref=e43669]\n            - option \"기본수학1\" [disabled, ref=e43670]\n            - option \"기본수학2\" [disabled, ref=e43671]\n            - option \"수학1\" [disabled, ref=e43672]\n            - option \"수학2\" [disabled, ref=e43673]\n            - option \"대수\" [disabled, ref=e43674]\n            - option \"미적분1\" [disabled, ref=e43675]\n            - option \"미적분2\" [disabled, ref=e43676]\n            - option \"확률과통계\" [disabled, ref=e43677]\n            - option \"기하\" [disabled, ref=e43678]\n            - option \"직무수학\" [disabled, ref=e43679]\n            - option \"인공지능수학\" [disabled, ref=e43680]\n            - option \"수학과 문화\" [disabled, ref=e43681]\n            - option \"수학\" [disabled, ref=e43682]\n        - combobox [expanded=false, disabled, ref=e43625]: 학년 전체\n          - MenuListPopup\n            - option \"학년 전체\" [disabled, ref=e43683]\n            - option \"중학1\" [disabled, ref=e43684]\n            - option \"고등1\" [disabled, ref=e43685]\n            - option \"초등1\" [disabled, ref=e43686]\n            - option \"중학2\" [disabled, ref=e43687]\n            - option \"초등2\" [disabled, ref=e43688]\n            - option \"고등2\" [disabled, ref=e43689]\n            - option \"고등3\" [disabled, ref=e43690]\n            - option \"중학3\" [disabled, ref=e43691]\n            - option \"초등3\" [disabled, ref=e43692]\n            - option \"고등 공통\" [disabled, ref=e43693]\n            - option \"초등4\" [disabled, ref=e43694]\n            - option \"초등5\" [disabled, ref=e43695]\n            - option \"초등6\" [disabled, ref=e43696]\n        - combobox [expanded=false, ref=e43626]: 학기 전체\n          - MenuListPopup\n            - option \"학기 전체\" [selected, ref=e43697]\n            - option \"공통학기\" [ref=e43698]\n            - option \"1학기\" [ref=e43699]\n            - option \"2학기\" [ref=e43700]\n        - combobox [expanded=false, ref=e43627]: 판형\n          - MenuListPopup\n            - option \"판형\" [selected, ref=e43701]\n            - option \"2000\" [ref=e43702]\n            - option \"2001\" [ref=e43703]\n            - option \"2002\" [ref=e43704]\n            - option \"2003\" [ref=e43705]\n            - option \"2004\" [ref=e43706]\n            - option \"2005\" [ref=e43707]\n            - option \"2006\" [ref=e43708]\n            - option \"2007\" [ref=e43709]\n            - option \"2008\" [ref=e43710]\n            - option \"2009\" [ref=e43711]\n            - option \"2010\" [ref=e43712]\n            - option \"2011\" [ref=e43713]\n            - option \"2012\" [ref=e43714]\n            - option \"2013\" [ref=e43715]\n            - option \"2014\" [ref=e43716]\n            - option \"2015\" [ref=e43717]\n            - option \"2016\" [ref=e43718]\n            - option \"2017\" [ref=e43719]\n            - option \"2018\" [ref=e43720]\n            - option \"2019\" [ref=e43721]\n            - option \"2020\" [ref=e43722]\n            - option \"2021\" [ref=e43723]\n            - option \"2022\" [ref=e43724]\n            - option \"2023\" [ref=e43725]\n            - option \"2024\" [ref=e43726]\n            - option \"2025\" [ref=e43727]\n            - option \"2026\" [ref=e43728]\n            - option \"2027\" [ref=e43729]\n            - option \"2028\" [ref=e43730]\n            - option \"2029\" [ref=e43731]\n            - option \"2030\" [ref=e43732]\n            - option \"2031\" [ref=e43733]\n            - option \"2032\" [ref=e43734]\n            - option \"2033\" [ref=e43735]\n            - option \"2034\" [ref=e43736]\n            - option \"2035\" [ref=e43737]\n            - option \"2036\" [ref=e43738]\n            - option \"2037\" [ref=e43739]\n            - option \"2038\" [ref=e43740]\n            - option \"2039\" [ref=e43741]\n            - option \"2040\" [ref=e43742]\n            - option \"2041\" [ref=e43743]\n            - option \"2042\" [ref=e43744]\n            - option \"2043\" [ref=e43745]\n            - option \"2044\" [ref=e43746]\n            - option \"2045\" [ref=e43747]\n            - option \"2046\" [ref=e43748]\n            - option \"2047\" [ref=e43749]\n            - option \"2048\" [ref=e43750]\n            - option \"2049\" [ref=e43751]\n            - option \"2050\" [ref=e43752]\n        - combobox [expanded=false, ref=e43628]: 용도 전체\n          - MenuListPopup\n            - option \"용도 전체\" [selected, ref=e43753]\n            - option \"공통\" [ref=e43754]\n            - option \"교사용\" [ref=e43755]\n        - StaticText \"등록일\"\n        - generic\n          - textbox \"시작일 ~ 종료일\" [ref=e43632]\n          - StaticText \"\"\n        - generic\n          - button \"7일\" [ref=e43633]\n          - button \"30일\" [ref=e43634]\n          - button \"90일\" [ref=e43635]\n          - button \"전체\" [ref=e43636]\n        - StaticText \"상태\"\n        - checkbox \"전체\" [checked=true, ref=e43629]\n        - LabelText [ref=e43630] clickable [cursor:pointer]\n          - checkbox \"사용\" [checked=true, ref=e43637]\n          - StaticText \"사용\"\n        - LabelText [ref=e43631] clickable [cursor:pointer]\n          - checkbox \"미사용\" [checked=true, ref=e43638]\n          - StaticText \"미사용\"\n        - generic\n          - button \" 초기화\" [ref=e43639]\n            - StaticText \"\"\n            - StaticText \"초기화\"\n          - button \" 조회\" [ref=e43640]\n            - StaticText \"\"\n            - StaticText \"조회\"\n      - generic\n        - combobox [expanded=false, ref=e43969]: 10개씩 보기\n          - MenuListPopup\n            - option \"10개씩 보기\" [selected, ref=e43971]\n            - option \"30개씩 보기\" [ref=e43972]\n            - option \"50개씩 보기\" [ref=e43973]\n            - option \"100개씩 보기\" [ref=e43974]\n        - StaticText \"검색결과 : \"\n        - strong\n          - StaticText \"60\"\n        - StaticText \"건\"\n        - link \" 등록\" [ref=e43970]\n          - StaticText \"\"\n          - StaticText \"등록\"\n        - table\n          - rowgroup\n            - row\n              - columnheader \"출처 ID\" [ref=e44114]\n              - columnheader \"출처코드\" [ref=e44115]\n              - columnheader \"출처명\" [ref=e44116]\n              - columnheader \"과목\" [ref=e44117]\n              - columnheader \"교육과정\" [ref=e44118]\n              - columnheader \"판형\" [ref=e44119]\n              - columnheader \"용도\" [ref=e44120]\n              - columnheader \"학교급\" [ref=e44121]\n              - columnheader \"학년\" [ref=e44122]\n              - columnheader \"학기\" [ref=e44123]\n              - columnheader \"상태\" [ref=e44124]\n              - columnheader \"매핑문항\" [ref=e44125]\n              - columnheader \"등록자 · 등록일\" [ref=e44126]\n          - row\n            - cell \"199\" [ref=e43984]\n            - cell \"22-M-MA-T0-1-1-SMT-TP-2048\" [ref=e43985]\n              - link \"22-M-MA-T0-1-1-SMT-TP-2048\" [ref=e44127]\n            - cell \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\" [ref=e43986]\n              - link \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048\" [ref=e44128]\n            - cell \"수학\" [ref=e43987]\n            - cell \"22\" [ref=e43988]\n            - cell \"2048\" [ref=e43989]\n            - cell \"교사용\" [ref=e43990]\n            - cell \"중학\" [ref=e43991]\n            - cell \"중학1\" [ref=e43992]\n            - cell \"1학기\" [ref=e43993]\n            - cell \"미사용\" [ref=e43994]\n            - cell \"0\" [ref=e43995]\n            - cell \"jaehyuk.myung 2026-11-09\" [ref=e43996]\n              - StaticText \"jaehyuk.myung\"\n              - StaticText \"2026-11-09\"\n          - row\n            - cell \"166\" [ref=e43997]\n            - cell \"22-M-MA-T0-1-1-SMT-TP-2000\" [ref=e43998]\n              - link \"22-M-MA-T0-1-1-SMT-TP-2000\" [ref=e44129]\n            - cell \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000\" [ref=e43999]\n              - link \"22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000\" [ref=e44130]\n            - cell \"수학\" [ref=e44000]\n            - cell \"22\" [ref=e44001]\n            - cell \"2000\" [ref=e44002]\n            - cell \"공통\" [ref=e44003]\n            - cell \"중학\" [ref=e44004]\n            - cell \"중학1\" [ref=e44005]\n            - cell \"1학기\" [ref=e44006]\n            - cell \"미사용\" [ref=e44007]\n            - cell \"0\" [ref=e44008]\n            - cell \"suna.lee 2026-10-30\" [ref=e44009]\n              - StaticText \"suna.lee\"\n              - StaticText \"2026-10-30\"\n          - row\n            - cell \"134\" [ref=e44010]\n            - cell \"22-M-MA-T0-1-0-DCL-MA-2025\" [ref=e44011]\n              - link \"22-M-MA-T0-1-0-DCL-MA-2025\" [ref=e44131]\n            - cell \"22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025\" [ref=e44012]\n              - link \"22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025\" [ref=e44132]\n            - cell \"수학\" [ref=e44013]\n            - cell \"22\" [ref=e44014]\n            - cell \"2025\" [ref=e44015]\n            - cell \"교사용\" [ref=e44016]\n            - cell \"중학\" [ref=e44017]\n            - cell \"중학1\" [ref=e44018]\n            - cell \"공통학기\" [ref=e44019]\n            - cell \"사용\" [ref=e44020]\n            - cell \"102\" [ref=e44021]\n            - cell \"hyuntaek.kim 2026-10-08\" [ref=e44022]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-08\"\n          - row\n            - cell \"133\" [ref=e44023]\n            - cell \"22-H-MA-C1-1-0-DCL-KI-2025\" [ref=e44024]\n              - link \"22-H-MA-C1-1-0-DCL-KI-2025\" [ref=e44133]\n            - cell \"22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025\" [ref=e44025]\n              - link \"22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025\" [ref=e44134]\n            - cell \"공통수학1\" [ref=e44026]\n            - cell \"22\" [ref=e44027]\n            - cell \"2025\" [ref=e44028]\n            - cell \"교사용\" [ref=e44029]\n            - cell \"고등\" [ref=e44030]\n            - cell \"고등1\" [ref=e44031]\n            - cell \"공통학기\" [ref=e44032]\n            - cell \"사용\" [ref=e44033]\n            - cell \"68\" [ref=e44034]\n            - cell \"hyuntaek.kim 2026-10-08\" [ref=e44035]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-08\"\n          - row\n            - cell \"102\" [ref=e44036]\n            - cell \"22-E-MA-T0-5-1-DCL-FB-2026\" [ref=e44037]\n              - link \"22-E-MA-T0-5-1-DCL-FB-2026\" [ref=e44135]\n            - cell \"22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026\" [ref=e44038]\n              - link \"22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026\" [ref=e44136]\n            - cell \"수학\" [ref=e44039]\n            - cell \"22\" [ref=e44040]\n            - cell \"2026\" [ref=e44041]\n            - cell \"교사용\" [ref=e44042]\n            - cell \"초등\" [ref=e44043]\n            - cell \"초등5\" [ref=e44044]\n            - cell \"1학기\" [ref=e44045]\n            - cell \"사용\" [ref=e44046]\n            - cell \"20\" [ref=e44047]\n            - cell \"hyuntaek.kim 2026-10-07\" [ref=e44048]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-07\"\n          - row\n            - cell \"101\" [ref=e44049]\n            - cell \"22-E-MA-T0-4-2-DCL-FB-2025\" [ref=e44050]\n              - link \"22-E-MA-T0-4-2-DCL-FB-2025\" [ref=e44137]\n            - cell \"22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025\" [ref=e44051]\n              - link \"22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025\" [ref=e44138]\n            - cell \"수학\" [ref=e44052]\n            - cell \"22\" [ref=e44053]\n            - cell \"2025\" [ref=e44054]\n            - cell \"교사용\" [ref=e44055]\n            - cell \"초등\" [ref=e44056]\n            - cell \"초등4\" [ref=e44057]\n            - cell \"2학기\" [ref=e44058]\n            - cell \"사용\" [ref=e44059]\n            - cell \"21\" [ref=e44060]\n            - cell \"hyuntaek.kim 2026-10-07\" [ref=e44061]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-07\"\n          - row\n            - cell \"100\" [ref=e44062]\n            - cell \"22-E-MA-T0-4-1-DCL-FB-2005\" [ref=e44063]\n              - link \"22-E-MA-T0-4-1-DCL-FB-2005\" [ref=e44139]\n            - cell \"22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005\" [ref=e44064]\n              - link \"22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005\" [ref=e44140]\n            - cell \"수학\" [ref=e44065]\n            - cell \"22\" [ref=e44066]\n            - cell \"2005\" [ref=e44067]\n            - cell \"교사용\" [ref=e44068]\n            - cell \"초등\" [ref=e44069]\n            - cell \"초등4\" [ref=e44070]\n            - cell \"1학기\" [ref=e44071]\n            - cell \"사용\" [ref=e44072]\n            - cell \"9\" [ref=e44073]\n            - cell \"hyuntaek.kim 2026-10-07\" [ref=e44074]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-07\"\n          - row\n            - cell \"69\" [ref=e44075]\n            - cell \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e44076]\n              - link \"22-E-MA-T0-3-2-DCL-FB-2025\" [ref=e44141]\n            - cell \"22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025\" [ref=e44077]\n              - link \"22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025\" [ref=e44142]\n            - cell \"수학\" [ref=e44078]\n            - cell \"22\" [ref=e44079]\n            - cell \"2025\" [ref=e44080]\n            - cell \"교사용\" [ref=e44081]\n            - cell \"초등\" [ref=e44082]\n            - cell \"초등3\" [ref=e44083]\n            - cell \"2학기\" [ref=e44084]\n            - cell \"사용\" [ref=e44085]\n            - cell \"39\" [ref=e44086]\n            - cell \"hyuntaek.kim 2026-10-06\" [ref=e44087]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-06\"\n          - row\n            - cell \"68\" [ref=e44088]\n            - cell \"22-E-MA-T0-3-1-DCL-FB-2025\" [ref=e44089]\n              - link \"22-E-MA-T0-3-1-DCL-FB-2025\" [ref=e44143]\n            - cell \"22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025\" [ref=e44090]\n              - link \"22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025\" [ref=e44144]\n            - cell \"수학\" [ref=e44091]\n            - cell \"22\" [ref=e44092]\n            - cell \"2025\" [ref=e44093]\n            - cell \"교사용\" [ref=e44094]\n            - cell \"초등\" [ref=e44095]\n            - cell \"초등3\" [ref=e44096]\n            - cell \"1학기\" [ref=e44097]\n            - cell \"사용\" [ref=e44098]\n            - cell \"12\" [ref=e44099]\n            - cell \"hyuntaek.kim 2026-10-06\" [ref=e44100]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-06\"\n          - row\n            - cell \"67\" [ref=e44101]\n            - cell \"22-M-MA-T0-1-0-DCL-DA-2025\" [ref=e44102]\n              - link \"22-M-MA-T0-1-0-DCL-DA-2025\" [ref=e44145]\n            - cell \"22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025\" [ref=e44103]\n              - link \"22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025\" [ref=e44146]\n            - cell \"수학\" [ref=e44104]\n            - cell \"22\" [ref=e44105]\n            - cell \"2025\" [ref=e44106]\n            - cell \"교사용\" [ref=e44107]\n            - cell \"중학\" [ref=e44108]\n            - cell \"중학1\" [ref=e44109]\n            - cell \"공통학기\" [ref=e44110]\n            - cell \"사용\" [ref=e44111]\n            - cell \"25\" [ref=e44112]\n            - cell \"hyuntaek.kim 2026-10-06\" [ref=e44113]\n              - StaticText \"hyuntaek.kim\"\n              - StaticText \"2026-10-06\"\n        - generic\n          - StaticText \"총 60건 중 1∼10 표시\"\n        - list\n          - listitem [level=1]\n            - link \"맨 앞\" [ref=e43975]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"이전\" [ref=e43976]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"1\" [ref=e43977]\n          - listitem [level=1]\n            - link \"2\" [ref=e43978]\n          - listitem [level=1]\n            - link \"3\" [ref=e43979]\n          - listitem [level=1]\n            - link \"4\" [ref=e43980]\n          - listitem [level=1]\n            - link \"5\" [ref=e43981]\n          - listitem [level=1]\n            - link \"다음\" [ref=e43982]\n              - StaticText \"\"\n          - listitem [level=1]\n            - link \"맨 뒤\" [ref=e43983]\n              - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.171
+  }
+}

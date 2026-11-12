@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "status": "in_progress",
+  "evidenceRange": [
+    127,
+    241
+  ],
+  "scope": "Live Master CMS observations after the OMR preview phase. These are sample-specific observations, not complete coverage.",
+  "persistentBusinessMutations": 0,
+  "setDetail": {
+    "currentItemId": 2088663,
+    "itemDetailId": 2087893,
+    "passageId": 2088658,
+    "setItemIds": [
+      2088659,
+      2088660,
+      2088661,
+      2088662,
+      2088663
+    ],
+    "generationMethod": "Definition",
+    "status": "Approved, used",
+    "questionType": "Subjective, single/general",
+    "answers": {
+      "2088659": "3",
+      "2088660": "2",
+      "2088661": "1",
+      "2088662": "6",
+      "2088663": "24"
+    },
+    "layout": "One shared passage and all five question cards. Current question has blue border, OMR and deployment controls; other question IDs open another tab. Metadata belongs to the current question.",
+    "scrollEvidence": [
+      131,
+      132,
+      133,
+      134,
+      171,
+      173,
+      174,
+      175
+    ],
+    "hmlCardSpecification": "User confirms original HML preview images should appear. Current blank cards are a user-reported known issue, not intended behavior.",
+    "relations": {
+      "sources": 0,
+      "twins": 0,
+      "papers": 0
+    },
+    "deployment": "Existing AI question-wizard CMS target shows same version and approval pending, dated 2026-11-04 17:50.",
+    "twinModal": {
+      "evidence": [
+        139,
+        140,
+        141,
+        143,
+        144,
+        145
+      ],
+      "current": "Empty",
+      "addSearchObservedCount": 32498,
+      "candidateRulesObserved": "Single questions show non-set disabled state; current item is disabled as self; other members of the same set are addable. No add executed.",
+      "searchVerifiedItemId": 2088659
+    },
+    "paperModal": {
+      "evidence": [
+        146,
+        147
+      ],
+      "current": "Empty, no registered papers"
+    },
+    "sourceModal": {
+      "evidence": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "current": "Empty",
+      "addSearchObservedCount": 59,
+      "behavior": "Used sources expose required page and optional question-number inputs; unused sources are disabled. Exact source-code query returns one row. No add executed."
+    },
+    "deploymentModal": {
+      "evidence": [
+        154,
+        155,
+        156
+      ],
+      "behavior": "No target selected disables submit. Toggling existing target enables it and shows a redeployment warning. Cancelled without deploying."
+    },
+    "statusEdit": {
+      "evidence": [
+        157,
+        158,
+        159,
+        160
+      ],
+      "behavior": "Draft and failed are disabled for this approved sample. Initial save opens a confirmation that all set members' statuses change together. Confirmation and edit both cancelled; no final save."
+    },
+    "twinGeneration": {
+      "evidence": [
+        161,
+        162,
+        163,
+        164,
+        165
+      ],
+      "behavior": "COPY is default, AI can be selected, notice says the whole set is generated together. Cancelled. History is empty. No generation executed."
+    },
+    "omrPreviewUnresolved": {
+      "evidence": [
+        166,
+        167,
+        168,
+        169,
+        172
+      ],
+      "observation": "Preview did not open for 2088663 or 2088659 after several interaction methods. No error message captured. Cause unproven; subjective preview behavior remains unverified."
+    }
+  },
+  "hmlList": {
+    "route": "/item/hml/list.donga?curriculum=22",
+    "evidence": [
+      177,
+      178,
+      201
+    ],
+    "observedCount": 116,
+    "countIsDynamic": true,
+    "filters": [
+      "Keyword type and keyword",
+      "School",
+      "Subject",
+      "Grade",
+      "Term",
+      "Date presets 7/30/90/all",
+      "Registration pending",
+      "Registering",
+      "Draft",
+      "Recommending metadata",
+      "Approved",
+      "Discarded",
+      "Failed"
+    ],
+    "columns": [
+      "Document ID",
+      "Filename",
+      "Source",
+      "Subject",
+      "Grade/term",
+      "Question success/failure/deleted counts",
+      "Paper registration",
+      "Status",
+      "Registrant/time"
+    ],
+    "examples": [
+      {
+        "id": 628,
+        "status": "Approved",
+        "counts": [
+          4,
+          0,
+          0
+        ],
+        "paper": "Not registered"
+      },
+      {
+        "id": 597,
+        "status": "Approved",
+        "counts": [
+          120,
+          0,
+          0
+        ],
+        "paper": "Registered"
+      },
+      {
+        "id": 596,
+        "filename": "Matrix set HML",
+        "status": "Approved",
+        "counts": [
+          35,
+          0,
+          0
+        ],
+        "paper": "Registered"
+      },
+      {
+        "id": 595,
+        "status": "Failed",
+        "counts": null
+      },
+      {
+        "id": 465,
+        "status": "Discarded",
+        "counts": null
+      }
+    ]
+  },
+  "hmlForm": {
+    "route": "/item/hml/form.donga?curriculum=22&pageNum=1&pageSize=10",
+    "evidence": [
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      198,
+      199,
+      200
+    ],
+    "fields": [
+      "One HML file, maximum 50MB",
+      "Source lookup",
+      "Unit-code autocomplete and lookup",
+      "Start/end page",
+      "Purpose",
+      "Readonly registrant"
+    ],
+    "sourceBehavior": "Selected active source 22-M-MA-T0-1-0-DCL-MA-2025 via radio and Select; parent source field updated, purpose remained unselected.",
+    "unitBehavior": "Lookup showed 732 rows and one exact-code result. Clicking the result cell did not apply it. Autocomplete showed suggestions after 3 characters; exact code 22MMAT0KOK1004030000 was selected through its Select action.",
+    "cancelBehavior": "Cancel opens a confirmation. Discard navigation removed only our unsaved field selections and returned to list. No file was selected or uploaded.",
+    "sourceReport": "research/hml-registration-behavior.md",
+    "sourceBoundary": "Code findings describe client branches only. Server validation, upload, split, retry and registration outcomes were not executed."
+  },
+  "hmlApprovedDetail": {
+    "route": "/item/hml/detail.donga?examDocumentId=628&curriculum=22&pageNum=1&pageSize=10",
+    "evidence": [
+      203,
+      204,
+      205
+    ],
+    "documentId": 628,
+    "documentStatus": "Approved",
+    "sourceCode": "22-M-MA-T0-3-1-DCL-DA-2022",
+    "unitCode": "22MMAT0KOK3006040000",
+    "pageRange": [
+      1,
+      1
+    ],
+    "purpose": "Common",
+    "paperRegistration": "Not registered, readonly radio display",
+    "childItems": [
+      {
+        "id": 2088649,
+        "detailId": 2087856,
+        "status": "Draft",
+        "registration": "Success",
+        "answer": "2"
+      },
+      {
+        "id": 2088650,
+        "detailId": 2087857,
+        "status": "Draft",
+        "registration": "Success",
+        "answer": "4"
+      },
+      {
+        "id": 2088651,
+        "detailId": 2087858,
+        "status": "Draft",
+        "registration": "Success",
+        "answer": "16 cm"
+      },
+      {
+        "id": 2088652,
+        "detailId": 2087859,
+        "status": "Draft",
+        "registration": "Success",
+        "answer": "21 pi cm^2"
+      }
+    ],
+    "relationship": "Document approval and child question status are separate. All four children display Draft plus registration success in this approved document.",
+    "controls": [
+      "Original file download",
+      "Question detail per item",
+      "Question edit per item",
+      "Return to list"
+    ],
+    "mutation": "None; no download or child edit was executed in this phase."
+  },
+  "stillOutstanding": [
+    "HML failed/draft/discarded details",
+    "Definition registration family",
+    "Twin-group management page",
+    "Paper management family",
+    "Source management family",
+    "Lab family",
+    "All list/filter/pagination variants",
+    "Remaining OMR and editor runtime cases",
+    "Coverage and knowledge integration after evidence 161"
+  ],
+  "hmlFailedDetail": {
+    "documentId": 595,
+    "evidence": [
+      214,
+      215
+    ],
+    "errorDisplay": "HML file error prevents parsing from starting. Download and correct original, then register again.",
+    "childItems": "No registered questions",
+    "paperRegistration": "Both radio options disabled and neither selected; not equivalent to Not registered.",
+    "controls": [
+      "Original download",
+      "List"
+    ],
+    "sourceReport": "research/hml-registration-behavior.md",
+    "screenshotQuality": "214 and 215 are identical normal PNG files, confirmed by hash. Duplicate render appeared black in the image-display tool, not in the saved files."
+  },
+  "hmlDraftFilter": {
+    "evidence": [
+      222,
+      223,
+      224,
+      225
+    ],
+    "behavior": "All statuses unchecked, Draft checked, query returned six rows.",
+    "draftDocumentIds": [
+      369,
+      346,
+      343,
+      232,
+      141,
+      68
+    ],
+    "scope": "Count observed on this date, not a constant."
+  },
+  "hmlDraftDetail": {
+    "documentId": 369,
+    "source": "sources/hml-draft-detail.html",
+    "evidence": [
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234
+    ],
+    "scroll": "All 17 cards and footer visited in overlapping scrolls. AX is truncated at 1200 nodes; lower cards/footer rely on screenshots and preserved source.",
+    "childItemIds": [
+      2086540,
+      2086541,
+      2086542,
+      2086543,
+      2086544,
+      2086545,
+      2086546,
+      2086547,
+      2086548,
+      2086549,
+      2086550,
+      2086551,
+      2086552,
+      2086553,
+      2086554,
+      2086555,
+      2086556
+    ],
+    "cardArrangement": "First column #1-9, second column #10-17, rather than alternating row order.",
+    "localFields": [
+      "Paper registration required Y/N",
+      "Remark",
+      "Per-card loadFlag dropdown"
+    ],
+    "loadFlagOptions": {
+      "W": "Registration pending, disabled",
+      "S": "Registration success, selected",
+      "F": "Registration failure",
+      "D": "Delete"
+    },
+    "footerControls": [
+      "List",
+      "Discard",
+      "Approve"
+    ],
+    "runtimeValidation": {
+      "evidence": [
+        239,
+        240,
+        241
+      ],
+      "behavior": "Approve with no paper registration shows required-selection modal; closing it scrolls to registration radios. Locally selected Not registered; no final approval request."
+    },
+    "staticBoundary": "Only final modal action submits approval or discard. Select change only removes a CSS class. See source report; not a live server execution.",
+    "businessWrites": 0
+  },
+  "qualityNotes": [
+    {
+      "evidence": 242,
+      "note": "Large scroll request did not reach bottom; screenshot still shows middle cards. Do not infer end from requested scroll amount."
+    },
+    {
+      "evidence": 243,
+      "note": "Attempted coordinate click was on middle-page content; no approval modal proven. Label does not prove behavior."
+    }
+  ]
+}

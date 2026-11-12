@@ -1,0 +1,16 @@
+{
+ "steps":[
+  {"label":"1169-paper-form-before-values","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+  {"label":"1170-paper-name-empty","command":["fill","input[name=paperName]",""]},
+  {"label":"1171-paper-empty-name-save","command":["click","{ref}"],"refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+  {"label":"1172-paper-empty-name-result","command":["eval","--file","sources/runtime/paper-form-observation.js"],"screenshot":true},
+  {"label":"1173-paper-name-restored","command":["fill","input[name=paperName]","[MOCK-HML-M] 템플릿_시험지2 (복제10)"]},
+  {"label":"1174-paper-start-empty","command":["fill","input[name=startPageNum]",""]},
+  {"label":"1175-paper-empty-start-save","command":["click","{ref}"],"refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+  {"label":"1176-paper-empty-start-result","command":["eval","--file","sources/runtime/paper-form-observation.js"],"screenshot":true},
+  {"label":"1177-paper-discard-selected","command":["click","{ref}"],"refPattern":"- radio \"폐기\" \\[checked=false, ref=(e\\d+)\\]"},
+  {"label":"1178-paper-discard-page-required","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+  {"label":"1179-paper-discard-confirm-open","command":["click","{ref}"],"refPattern":"- button \"저장\" \\[ref=(e\\d+)\\]"},
+  {"label":"1180-paper-discard-confirm-state","command":["snapshot"],"screenshot":true}
+ ],"tailChars":1800
+}

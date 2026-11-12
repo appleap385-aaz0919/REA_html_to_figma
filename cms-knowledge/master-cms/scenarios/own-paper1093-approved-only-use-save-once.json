@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2291-own-paper1093-approved-only-use-save-once","command":["eval","(() => {if(location.pathname!=='/paper/modify.donga'||new URLSearchParams(location.search).get('paperId')!=='1093'||document.querySelector('.modal.show')||window.__qaPaper1093ApprovedOnlyUseAttempted)throw Error('Own ready paper only');const f=document.getElementById('paperModifyForm'),ids=[...f.querySelectorAll('[name=itemIds]')].map(e=>e.value);if(ids.join(',')!=='2089216'||f.elements.paperName.value!=='QA-HML-20261109-01-SET'||!f.querySelector('[name=viewFlag][value=Y]:checked')||f.elements.startPageNum.value!=='2'||f.elements.endPageNum.value!=='22'||!f.checkValidity())throw Error('Own approved-only use payload mismatch');window.__qaPaper1093ApprovedOnlyUseAttempted=true;f.querySelector('[data-paper-save]').click();return {clickedOnce:true,paperId:1093,itemIds:ids,viewFlag:'Y',serviceDeployment:false};})()"]},
+ {"label":"2292-own-paper1093-approved-only-use-ui","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]},
+ {"label":"2293-own-paper1093-approved-only-use-server-readback","command":["eval","--file","sources/runtime/own-paper1093-server-readback.js"]},
+ {"label":"2294-own-paper1093-approved-only-use-detail","command":["eval","--file","sources/runtime/paper-detail-observation.js"]},
+ {"label":"2295-own-paper1093-approved-only-use-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":130}

@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3195-own-single246-explanation-hml-controls",
+  "startedUtc": "2026-11-10T08:10:43.138732+00:00",
+  "command": [
+    "eval",
+    "(()=>{return {url:location.href,dialogs:[...document.querySelectorAll('.modal.show')].map(e=>({id:e.id,text:e.innerText})),editorActions:[...document.querySelectorAll('[data-editor-url]')].map(e=>({tag:e.tagName,disabled:e.matches(':disabled'),data:{...e.dataset},text:e.textContent.trim()})),tabs:[...document.querySelectorAll('[data-bs-toggle=tab]')].map(e=>({text:e.textContent.trim(),target:e.dataset.bsTarget,id:e.id,active:e.classList.contains('active')})),pending:[...document.querySelectorAll('[data-webhwp-result]')].map(e=>({name:e.name,value:e.value,data:{...e.dataset}}))};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089246"
+    },
+    "error": null,
+    "localSeconds": 0.076
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089246",
+      "result": {
+        "dialogs": [],
+        "editorActions": [
+          {
+            "data": {
+              "editorUrl": "/item/webhwp/editor.donga?itemId=2089246&itemDetailId=2088877",
+              "itemDetailId": "2088877",
+              "itemId": "2089246"
+            },
+            "disabled": false,
+            "tag": "BUTTON",
+            "text": "한글 편집기 열기"
+          }
+        ],
+        "pending": [
+          {
+            "data": {
+              "webhwpResult": "passage.hml"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "passage.image"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "translation.hml"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "translation.image"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "question.hml"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "question.image"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "explain.hml"
+            },
+            "name": "",
+            "value": ""
+          },
+          {
+            "data": {
+              "webhwpResult": "explain.image"
+            },
+            "name": "",
+            "value": ""
+          }
+        ],
+        "tabs": [
+          {
+            "active": true,
+            "id": "",
+            "text": "메타정보 수정"
+          },
+          {
+            "active": false,
+            "id": "",
+            "text": "한글(HML) 수정"
+          },
+          {
+            "active": false,
+            "id": "",
+            "text": "HTML 수정"
+          },
+          {
+            "active": false,
+            "id": "",
+            "text": "OMR 수정"
+          }
+        ],
+        "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089246"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.082
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089246",
+      "refs": {
+        "e41931": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e41932": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e41933": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e41934": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e41935": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e41936": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e41937": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e41938": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e41939": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e41940": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e41941": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e41942": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e41943": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e41944": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e41945": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e41946": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e41947": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e41948": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e41949": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e41950": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e41951": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e41952": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e41953": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e41954": {
+          "name": "",
+          "role": "button"
+        },
+        "e41955": {
+          "name": "MASTER",
+          "role": "heading"
+        },
+        "e41956": {
+          "name": "기본 메타 정보",
+          "role": "heading"
+        },
+        "e41957": {
+          "name": "학습 · 매핑 정보",
+          "role": "heading"
+        },
+        "e41958": {
+          "name": " 등록",
+          "role": "button"
+        },
+        "e41959": {
+          "name": " 삭제",
+          "role": "button"
+        },
+        "e41960": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e41961": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e41962": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e41963": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e41964": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e41965": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e41966": {
+          "name": "문항ID 2089246 초안 하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e41967": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e41968": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e41969": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e41970": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e41971": {
+          "name": "×",
+          "role": "link"
+        },
+        "e41972": {
+          "name": "×",
+          "role": "link"
+        },
+        "e41973": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e41974": {
+          "name": "선택",
+          "role": "option"
+        },
+        "e41975": {
+          "name": "최상",
+          "role": "option"
+        },
+        "e41976": {
+          "name": "상",
+          "role": "option"
+        },
+        "e41977": {
+          "name": "중",
+          "role": "option"
+        },
+        "e41978": {
+          "name": "하",
+          "role": "option"
+        },
+        "e41979": {
+          "name": "최하",
+          "role": "option"
+        },
+        "e41980": {
+          "name": "",
+          "role": "button"
+        },
+        "e41981": {
+          "name": "",
+          "role": "button"
+        },
+        "e41982": {
+          "name": "[MA191100] 행렬의 뜻과 성분 알아보기",
+          "role": "checkbox"
+        },
+        "e41983": {
+          "name": "[MA191200] 두 행렬이 서로 같을 조건",
+          "role": "checkbox"
+        },
+        "e41984": {
+          "name": "정답",
+          "role": "heading"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e41931]\n      - link \"문제은행 마스터 CMS\" [ref=e41932]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e41945]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e41946]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e41947]\n          - link \"HML 문항 등록\" [ref=e41948]\n          - link \"디피니션 문항 등록\" [ref=e41949]\n          - link \"쌍둥이 그룹 관리\" [ref=e41950]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e41951]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e41952]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e41953]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e41933]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e41934]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089246 (2088877)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"-\"\n      - StaticText \"원본 파일\"\n      - StaticText \"QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml\"\n      - button \"\" [ref=e41954]\n        - StaticText \"\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"HML 변환\"\n      - tablist\n        - tab \"메타정보 수정\" [selected, ref=e41941]\n        - tab \"한글(HML) 수정\" [ref=e41942]\n        - tab \"HTML 수정\" [ref=e41943]\n        - tab \"OMR 수정\" [ref=e41944]\n      - link \"취소\" [ref=e41935]\n      - button \"임시 저장\" [ref=e41936]\n      - button \"전체 반영\" [ref=e41937]\n      - generic\n        - tabpanel\n          - generic\n            - heading \"MASTER\" [level=3, ref=e41955]\n            - generic\n              - heading \"문항ID 2089246 초안 하 주관식 > 단답형 > 일반형\" [level=4, ref=e41966]\n                - StaticText \"문항ID 2089246\"\n                - StaticText \"초안\"\n                - StaticText \"하\"\n                - StaticText \"주관식 > 단답형 > 일반형\"\n              - article\n                - paragraph\n                  - StaticText \"행렬 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLTable\n                          - MathMLTableRow\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLNumber\n                                  - StaticText \"2\"\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLRow\n                                  - MathMLText\n                                  - MathMLNumber\n                                    - StaticText \"4\"\n                          - MathMLTableRow\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLRow\n                                  - MathMLOperator\n                                    - StaticText \"−\"\n                                  - MathMLNumber\n                                    - StaticText \"3\"\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLRow\n                                  - MathMLText\n                                  - MathMLNumber\n                                    - StaticText \"0\"\n                          - MathMLTableRow\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLNumber\n                                  - StaticText \"5\"\n                            - MathMLTableCell\n                              - MathMLRow\n                                - MathMLRow\n                                  - MathMLText\n                                  - MathMLNumber\n                                    - StaticText \"1\"\n                        - MathMLOperator\n                          - StaticText \")\"\n                  - StaticText \"에 대하여 다음을 구하시오.\"\n                - paragraph\n                  - StaticText \"(1) \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLNumber\n                          - StaticText \"2\"\n                        - MathMLOperator\n                          - StaticText \")\"\n                  - StaticText \" 성분\"\n                - paragraph\n                  - StaticText \"(2) 제 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"2\"\n                  - StaticText \"행의 모든 성분의 합\"\n                - paragraph\n                  - StaticText \"(3) 제 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"1\"\n                  - StaticText \"열의 모든 성분의 합\"\n                - generic\n                  - heading \"정답\" [level=3, ref=e41984]\n                  - paragraph\n                    - StaticText \"(1) \"\n                    - MathMLMath\n                      - MathMLRow\n                        - MathMLRow\n                          - MathMLNumber\n                            - StaticText \"1\"\n                  - paragraph\n                    - StaticText \"(2) \"\n                    - MathMLMath\n                      - MathMLRow\n                        - MathMLRow\n                          - MathMLOperator\n                            - StaticText \"−\"\n                          - MathMLNumber\n                            - StaticText \"3\"\n                  - paragraph\n                    - StaticText \"(3) \"\n                    - MathMLMath\n                      - MathMLRow\n                        - MathMLRow\n                          - MathMLNumber\n                            - StaticText \"4\"\n          - generic\n            - heading \"기본 메타 정보\" [level=3, ref=e41956]\n              - StaticText \"\"\n              - StaticText \"기본 메타 정보\"\n            - generic\n              - LabelText\n                - StaticText \"썸네일 (jpg/jpeg/png)\"\n              - StaticText \"-\"\n              - button \" 등록\" [ref=e41958]\n                - StaticText \"\"\n                - StaticText \"등록\"\n              - button \" 삭제\" [ref=e41959]\n                - StaticText \"\"\n                - StaticText \"삭제\"\n              - LabelText\n                - StaticText \"과목 · 학년 (단원코드 기반)\"\n              - generic\n                - textbox [disabled, ref=e41973]: 고등1 공통수학1\n                  - StaticText \"고등1 공통수학1\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"문제\"\n              - generic\n                - textbox [disabled, ref=e41967]: 행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합\n                  - StaticText \"행렬 $\\\\left(\\\\begin{gathered}2&amp;~4 \\\\\\\\ -3&amp;~0 \\\\\\\\ 5&amp;~1\\\\end{gathered}\\\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"난이도\"\n                - StaticText \"*\"\n              - combobox [expanded=false, ref=e41960]: 하\n                - MenuListPopup\n                  - option \"선택\" [ref=e41974]\n                  - option \"최상\" [ref=e41975]\n                  - option \"상\" [ref=e41976]\n                  - option \"중\" [ref=e41977]\n                  - option \"하\" [selected, ref=e41978]\n                  - option \"최하\" [ref=e41979]\n              - LabelText\n                - StaticText \"세트 문항\"\n              - generic\n                - textbox [disabled, ref=e41968]: N\n                  - StaticText \"N\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"세트 ID\"\n              - generic\n                - textbox [disabled, ref=e41969]: -\n                  - StaticText \"-\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"평가지 등록 여부\"\n              - generic\n                - textbox [disabled, ref=e41970]: N\n                  - StaticText \"N\"\n                - StaticText \"\"\n          - generic\n            - heading \"학습 · 매핑 정보\" [level=3, ref=e41957]\n              - StaticText \"\"\n              - StaticText \"학습 · 매핑 정보\"\n            - StaticText \"* 필수\"\n            - generic\n              - LabelText\n                - StaticText \"단원코드 (N개)\"\n                - StaticText \"*\"\n              - button \" 추가\" [ref=e41961]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"변경 시 좌측 과목 · 학년 · 단원 자동 갱신.\"\n              - generic\n                - StaticText \"22HMAC1GHG1006010000\"\n                - StaticText \"행렬 > 행렬의 뜻 > >\"\n                - button \"\" [ref=e41980]\n                  - StaticText \"\"\n              - LabelText\n                - StaticText \"성취기준 (N개)\"\n              - button \" 추가\" [ref=e41962]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - generic\n                - StaticText \"[10공수1-04-01] 행렬의 뜻을 알고, 실생활 상황을 행렬로 표현할 수 있다.\"\n                - button \"\" [ref=e41981]\n                  - StaticText \"\"\n              - LabelText\n                - StaticText \"내용영역 (N개)\"\n              - button \" 추가\" [ref=e41963]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - LabelText\n                - StaticText \"교과역량 (최대 3개)\"\n              - button \" 추가\" [ref=e41964]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"문제해결\"\n              - link \"×\" [ref=e41971]\n              - LabelText\n                - StaticText \"행동영역\"\n                - StaticText \"*\"\n              - button \" 추가\" [ref=e41965]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"계산\"\n              - link \"×\" [ref=e41972]\n              - LabelText\n                - StaticText \"유형정보 (단원코드 매핑)\"\n              - generic\n                - LabelText\n                  - StaticText \"[MA191100] 행렬의 뜻과 성분 알아보기\"\n                  - checkbox \"[MA191100] 행렬의 뜻과 성분 알아보기\" [checked=true, ref=e41982]\n                - LabelText\n                  - StaticText \"[MA191200] 두 행렬이 서로 같을 조건\"\n                  - checkbox \"[MA191200] 두 행렬이 서로 같을 조건\" [checked=false, ref=e41983]\n      - link \"취소\" [ref=e41938]\n      - button \"임시 저장\" [ref=e41939]\n      - button \"전체 반영\" [ref=e41940]"
+    },
+    "error": null,
+    "localSeconds": 0.2
+  }
+}

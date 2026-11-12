@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1276-source-registration-seed","command":["snapshot"]},
+  {"label":"1277-source-registration-open","command":["click","{ref}"],"refPattern":"- link \"[^\"]* 등록\" \\[ref=(e\\d+)\\]"},
+  {"label":"1278-source-registration-form","command":["snapshot"]},
+  {"label":"1279-source-registration-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1280-source-registration-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":15000
+}

@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"1739-paper341-sort-timeout-fresh-state","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+ {"label":"1740-paper341-sort-gesture-activity","command":["eval","(() => ({url:location.href,visibility:document.visibilityState,activeDragElements:[...document.querySelectorAll('.sortable-ghost,.sortable-chosen,.sortable-drag')].map(e=>({tag:e.tagName,classes:e.className})),groups:[...document.querySelectorAll('#paperItemTable>tbody')].map(e=>({passageId:e.dataset.passageId,itemIds:[...e.querySelectorAll('tr[data-item-id]')].map(x=>x.dataset.itemId)}))}))()"]}
+],"tailChars":700}

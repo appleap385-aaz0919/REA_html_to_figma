@@ -1,0 +1,14 @@
+{
+ "steps":[
+  {"label":"1237-paper-discarded-entry-seed","command":["snapshot"]},
+  {"label":"1238-paper-used-return-list","command":["click","{ref}"],"refPattern":"- link \"목록\" \\[ref=(e\\d+)\\]"},
+  {"label":"1239-paper-discarded-list-seed","command":["snapshot"]},
+  {"label":"1240-paper-discarded-focus","command":["focus","{ref}"],"refPattern":"- link \"초등_수학_4-2_3단원_서술형평가\" \\[ref=(e\\d+)\\]"},
+  {"label":"1241-paper-discarded-enter","command":["press","Enter"]},
+  {"label":"1242-paper-discarded-detail","command":["snapshot"],"screenshot":true},
+  {"label":"1243-paper-discarded-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1244-paper-discarded-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1245-paper-discarded-bottom","command":["scroll","down","700","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1246-paper-discarded-bottom-measure","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":6500
+}

@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1194-paper-candidate-filter-seed","command":["snapshot"]},
+  {"label":"1195-paper-candidate-help-close","command":["click","{ref}"],"refPattern":"- button \"닫기\" \\[ref=(e\\d+)\\]"},
+  {"label":"1196-paper-removed-set-child-search","command":["fill","{ref}","2087758"],"refPattern":"- textbox \"문항 ID / 지문 / 문제 / 등록자 / 원본 파일명\" \\[ref=(e\\d+)\\]"},
+  {"label":"1197-paper-removed-set-child-query","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 조회\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1198-paper-removed-set-child-result","command":["snapshot"],"screenshot":true},
+  {"label":"1199-paper-candidate-reset","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 초기화\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1200-paper-candidate-query-reset","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 조회\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1201-paper-candidate-reset-result","command":["snapshot"]}
+ ],"tailChars":2500
+}

@@ -1,0 +1,754 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e19275]
+      - link "문제은행 마스터 CMS" [ref=e19276]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e19282]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e19283]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e19284]
+          - link "HML 문항 등록" [ref=e19285]
+          - link "디피니션 문항 등록" [ref=e19286]
+          - link "쌍둥이 그룹 관리" [ref=e19287]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e19288]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e19289]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e19290]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e19277]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "HML 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "HML 상세" [level=2, ref=e19278]
+      - StaticText "폐기"
+      - generic
+        - StaticText "폐기된 시험지입니다."
+        - StaticText "조회만 가능하며 복원할 수 없습니다."
+      - generic
+        - heading "기본 정보" [level=3, ref=e19280]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "138"
+          - term "원본 파일"
+          - definition
+            - StaticText "[MOCK-X] 템플릿_시험지2.hml"
+            - button " 다운로드" [ref=e19292]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-H-MA-D1-2-1-DCL-MS-2024]"
+            - StaticText "22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22EMAT0NGS3102060000]"
+            - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기 > 평면도형 > 정사각형은 무엇일까요 > >"
+          - term "페이지"
+          - definition
+            - StaticText "2 ~ 22"
+          - term "용도"
+          - definition
+            - StaticText "교사용"
+          - term "등록"
+          - definition
+            - StaticText "sangwon.jo · 2026-09-17"
+          - term "수정"
+          - definition
+            - StaticText "sangwon.jo · 2026-09-17"
+        - LabelText
+          - StaticText "평가지 등록여부"
+        - generic
+          - LabelText
+            - radio "등록" [checked=false, disabled, ref=e19293]
+            - StaticText "등록"
+          - LabelText
+            - radio "미등록" [checked=true, disabled, ref=e19294]
+            - StaticText "미등록"
+        - LabelText
+          - StaticText "비고"
+        - textbox [disabled, ref=e19291]: 목데이터 비고
+          - StaticText "목데이터 비고"
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e19281]
+        - generic
+          - StaticText "#1"
+          - StaticText "삭제"
+          - article
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "5"
+                        - MathMLNumber
+                          - StaticText "24"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText ", "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLFraction
+                        - MathMLNumber
+                          - StaticText "7"
+                        - MathMLNumber
+                          - StaticText "30"
+                    - MathMLOperator
+                      - StaticText "×"
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText "의 값이 모두 자연수가 되도록 하는 자연수 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "𝑛"
+              - StaticText "의 값 중 가장 작은 수를 구하시오. ["
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLNumber
+                      - StaticText "6"
+              - StaticText "점]"
+            - generic
+              - heading "정답" [level=3, ref=e19295]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "120"
+            - generic
+              - heading "풀이" [level=3, ref=e19296]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                - StaticText "은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                - StaticText "와 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                - StaticText "의 공배수이므로 가장 작은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                - StaticText "의 값은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                - StaticText "와 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                - StaticText "의 최소공배수이다. "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLOperator
+                        - StaticText "⋯"
+                - StaticText "➊"
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "24"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                          - MathMLOperator
+                            - StaticText "×"
+                          - MathMLNumber
+                            - StaticText "3"
+                - StaticText ", "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "30"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "5"
+                - StaticText "이므로"
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑛"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                          - MathMLOperator
+                            - StaticText "×"
+                          - MathMLNumber
+                            - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "5"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "120"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLOperator
+                        - StaticText "⋯"
+                - StaticText "➋"
+            - generic
+              - heading "채점 기준" [level=3, ref=e19297]
+              - table
+                - row
+                  - cell "채점 기준" [ref=e19300]
+                  - cell "배점" [ref=e19301]
+                - row
+                  - cell "➊ 구하는 값은 와 의 최소공배수임을 설명하기" [ref=e19302]
+                    - StaticText "➊ 구하는 값은 "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "24"
+                    - StaticText "와 "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "30"
+                    - StaticText "의 최소공배수임을 설명하기"
+                  - cell "점" [ref=e19303]
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                    - StaticText "점"
+                - row
+                  - cell "➋ 답 구하기" [ref=e19304]
+                  - cell "점" [ref=e19305]
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                    - StaticText "점"
+        - generic
+          - StaticText "#2"
+          - StaticText "삭제"
+          - article
+            - paragraph
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLSup
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLNumber
+                        - StaticText "2"
+                    - MathMLOperator
+                      - StaticText "×"
+              - StaticText "□의 약수의 개수가 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLNumber
+                      - StaticText "12"
+              - StaticText "일 때, 다음 중 □ 안에 알맞은 수를 모두 고르면? (정답 "
+              - MathMLMath
+                - MathMLRow
+                  - MathMLRow
+                    - MathMLNumber
+                      - StaticText "2"
+              - StaticText "개)"
+            - listitem [level=1]
+              - generic
+                - StaticText "①"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "8"
+            - listitem [level=1]
+              - generic
+                - StaticText "②"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "12"
+            - listitem [level=1]
+              - generic
+                - StaticText "③"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "18"
+            - listitem [level=1]
+              - generic
+                - StaticText "④"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "21"
+            - listitem [level=1]
+              - generic
+                - StaticText "⑤"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "49"
+            - generic
+              - heading "정답" [level=3, ref=e19298]
+              - paragraph
+                - StaticText "③, ④"
+            - generic
+              - heading "풀이" [level=3, ref=e19299]
+              - paragraph
+                - StaticText "①"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "8"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "5"
+                - StaticText "이므로 약수의 개수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "6"
+                - StaticText "이다."
+              - paragraph
+                - StaticText "②"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "12"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "4"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "3"
+                - StaticText "이므로 약수의 개수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "10"
+                - StaticText "이다."
+              - paragraph
+                - StaticText "③"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "18"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLNumber
+                          - StaticText "2"
+                - StaticText "이므로 약수의 개수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "12"
+                - StaticText "이다."
+              - paragraph
+                - StaticText "④"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "21"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "3"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "7"
+                - StaticText "이므로 약수의 개수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "12"
+                - StaticText "이다."
+              - paragraph
+                - StaticText "⑤"
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLNumber
+                        - StaticText "49"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLNumber
+                          - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "×"
+                      - MathMLSup
+                        - MathMLNumber
+                          - StaticText "7"
+                        - MathMLNumber
+                          - StaticText "2"
+                - StaticText "이므로 약수의 개수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "9"
+                - StaticText "이다."
+              - paragraph
+                - StaticText "따라서 약수의 개수가 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "12"
+                - StaticText "인 것은 ③, ④이다."
+        - generic
+          - StaticText "#3"
+          - StaticText "세트"
+          - StaticText "삭제"
+          - generic
+            - generic
+              - StaticText "지문ID 2061376 (417)"
+              - paragraph
+                - StaticText "다음 수들의 공약수를 구하시오."
+            - generic
+              - StaticText "#3-1"
+              - article
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLNumber
+                          - StaticText "10"
+                  - StaticText ", "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLNumber
+                          - StaticText "15"
+                  - StaticText ", "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLNumber
+                          - StaticText "25"
+                - generic
+                  - heading "정답" [level=3, ref=e19306]
+                  - paragraph
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "1"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "5"
+            - generic
+              - StaticText "#3-2"
+              - article
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLSup
+                          - MathMLNumber
+                            - StaticText "2"
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "2"
+                            - MathMLOperator
+                              - StaticText "×"
+                            - MathMLNumber
+                              - StaticText "3"
+                  - StaticText ", "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLSup
+                          - MathMLNumber
+                            - StaticText "5"
+                          - MathMLNumber
+                            - StaticText "2"
+                - generic
+                  - heading "정답" [level=3, ref=e19307]
+                  - paragraph
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "1"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "2"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "3"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "6"
+            - generic
+              - StaticText "#3-3"
+              - article
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLSup
+                          - MathMLNumber
+                            - StaticText "5"
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "2"
+                            - MathMLOperator
+                              - StaticText "×"
+                            - MathMLNumber
+                              - StaticText "7"
+                  - StaticText ", "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLSup
+                          - MathMLNumber
+                            - StaticText "2"
+                          - MathMLRow
+                            - MathMLNumber
+                              - StaticText "2"
+                            - MathMLOperator
+                              - StaticText "×"
+                            - MathMLNumber
+                              - StaticText "5"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLSup
+                          - MathMLNumber
+                            - StaticText "7"
+                          - MathMLNumber
+                            - StaticText "3"
+                - generic
+                  - heading "정답" [level=3, ref=e19308]
+                  - paragraph
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "1"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "2"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "5"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "7"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "10"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "14"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "35"
+                    - StaticText ", "
+                    - MathMLMath
+                      - MathMLRow
+                        - MathMLRow
+                          - MathMLNumber
+                            - StaticText "70"
+      - link "목록" [ref=e19279]

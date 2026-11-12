@@ -1,0 +1,1 @@
+import{U as e,p as t,z as n}from"./-EIimQu0.js";import{t as r}from"#entry";var i={},a={class:`layout-default`};function o(r,i){return n(),t(`div`,a,[e(r.$slots,`default`)])}var s=r(i,[[`render`,o]]);export{s as default};

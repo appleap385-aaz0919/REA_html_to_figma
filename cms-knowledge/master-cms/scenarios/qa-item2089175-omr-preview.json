@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"1950-qa-item2089175-metadata-and-images","command":["eval","--file","sources/runtime/qa-item2089175-observation.js"]},
+ {"label":"1951-qa-item2089175-omr-preview-open","command":["eval","(async()=>{const main=document.querySelector('.page-wrapper'),buttons=[...main.querySelectorAll('button')].filter(e=>e.innerText.includes('OMR 미리보기'));if(new URLSearchParams(location.search).get('itemId')!=='2089175'||buttons.length!==1||document.querySelector('.modal.show'))throw Error('Expected QA OMR preview control');const modal=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('OMR modal did not finish showing')),3500);document.addEventListener('shown.bs.modal',e=>{clearTimeout(timer);resolve(e.target);},{once:true});buttons[0].click();});return {modalId:modal.id,text:modal.innerText};})()"]},
+ {"label":"1952-qa-item2089175-omr-preview-state","command":["eval","--file","sources/runtime/qa-item2089175-observation.js"]}
+],"tailChars":1300}

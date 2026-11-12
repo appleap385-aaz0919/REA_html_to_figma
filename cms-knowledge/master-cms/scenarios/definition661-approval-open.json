@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"1933-definition661-final-approval-open","command":["eval","(async () => {if(new URLSearchParams(location.search).get('examDocumentId')!=='661'||document.querySelector('.modal.show')||document.querySelector('[data-exam-judge]')?.value!=='S')throw Error('Expected clean QA661 success draft');const m=document.getElementById('examApproveModal');await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Approval modal did not finish opening')),3500);m.addEventListener('shown.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});document.querySelector('[data-exam-approve]').click();});return {modalId:m.id,text:m.innerText};})()"]},
+ {"label":"1934-definition661-final-approval-before","command":["eval","--file","sources/runtime/definition661-review-observation.js"]}
+],"tailChars":700}

@@ -1,0 +1,102 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13867]
+      - link "문제은행 마스터 CMS" [ref=e13868]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13880]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13881]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13882]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13883]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13884]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13869]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e13864]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "OMR 복원 테스트 (JSON → 화면)" [level=2, ref=e13865]
+    - StaticText "유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용."
+    - button " 넓게 보기" [ref=e13866]
+      - StaticText ""
+      - StaticText "넓게 보기"
+    - generic
+      - generic
+        - heading "문항유형" [level=3, ref=e13870]
+          - StaticText ""
+          - StaticText "문항유형"
+        - StaticText "유형 코드"
+        - combobox [expanded=false, ref=e13875]: 선택
+          - MenuListPopup
+            - option "선택" [selected, ref=e13885]
+            - group "객관식"
+              - option "OBSACN · 단답형 › N지 선다" [ref=e13886]
+              - option "OBSAOX · 단답형 › O/X 형" [ref=e13887]
+              - option "OBMACN · 다답형 › N지 선다" [ref=e13888]
+              - option "OBMAOX · 다답형 › O/X 형" [ref=e13889]
+            - group "주관식"
+              - option "SBSANM · 단답형 › 일반형" [ref=e13890]
+              - option "SBSADR · 단답형 › 그리기형" [ref=e13891]
+              - option "SBSAAS · 단답형 › 영역 선택형" [ref=e13892]
+              - option "SBMANM · 다답형 › 일반형" [ref=e13893]
+              - option "SBMAAS · 다답형 › 영역 선택형" [ref=e13894]
+              - option "SBMALD · 다답형 › 선그리기형" [ref=e13895]
+              - option "SBMADD · 다답형 › 드래그앤드롭형" [ref=e13896]
+            - group "서술형"
+              - option "ESBA00 · 기본형 › 기본 서술형" [ref=e13897]
+              - option "ESSA00 · 단답형 › 단답 서술형" [ref=e13898]
+              - option "ESMA00 · 다답형 › 다답 서술형" [ref=e13899]
+      - generic
+        - heading "OMR / 정답 JSON" [level=3, ref=e13871]
+          - StaticText ""
+          - StaticText "OMR / 정답 JSON"
+        - button " 폼 비우기" [ref=e13872]
+          - StaticText ""
+          - StaticText "폼 비우기"
+        - button " 복원" [ref=e13873]
+          - StaticText ""
+          - StaticText "복원"
+        - generic
+          - LabelText
+            - StaticText "OMR JSON (필드 배열 "
+            - code
+              - StaticText "[...]"
+            - StaticText ")"
+          - button " Pretty" [ref=e13876]
+            - StaticText ""
+            - StaticText "Pretty"
+          - textbox "OMR JSON (필드 배열 [...])" [ref=e13877]
+          - LabelText
+            - StaticText "정답 JSON (rule_type 트리)"
+          - button " Pretty" [ref=e13878]
+            - StaticText ""
+            - StaticText "Pretty"
+          - textbox "정답 JSON (rule_type 트리)" [ref=e13879]
+          - StaticText "문항유형을 먼저 선택하세요."
+      - generic
+        - heading "실제 화면" [level=3, ref=e13874]
+          - StaticText ""
+          - StaticText "실제 화면"
+        - StaticText "문항유형을 선택하면 OMR 편집 폼이 표시됩니다."

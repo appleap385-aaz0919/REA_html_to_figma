@@ -1,0 +1,18 @@
+{"steps":[
+ {"label":"2139-source-all60-pixels-0800","command":["eval","(() => {if(location.pathname!=='/product/list.donga')throw Error('Source list only');const e=document.querySelector('.page-wrapper');e.scrollTop=800;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2140-source-all60-pixels-1600","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=1600;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2141-source-all60-pixels-2400","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=2400;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2142-source-all60-pixels-3200","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=3200;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2143-source-all60-pixels-bottom","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=e.scrollHeight;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2144-paper531-pixel-recovery-open","command":["open","https://dev-exambank.dongahub.com/paper/detail.donga?paperId=531&curriculum=22&pageNum=1&pageSize=30"]},
+ {"label":"2145-paper531-full-top-pixels","command":["eval","--file","sources/runtime/cms-page-visual-state.js"],"screenshot":true},
+ {"label":"2146-paper531-full-pixels-0800","command":["eval","(() => {if(location.pathname!=='/paper/detail.donga'||new URLSearchParams(location.search).get('paperId')!=='531')throw Error('Known large paper only');const e=document.querySelector('.page-wrapper');e.scrollTop=800;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2147-paper531-full-pixels-1600","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=1600;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2148-paper531-full-pixels-2400","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=2400;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2149-paper531-full-pixels-3200","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=3200;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2150-paper531-full-pixels-4000","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=4000;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2151-paper531-full-pixels-4800","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=4800;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2152-paper531-full-pixels-5600","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=5600;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2153-paper531-full-pixels-bottom","command":["eval","(() => {const e=document.querySelector('.page-wrapper');e.scrollTop=e.scrollHeight;return {top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight};})()"],"screenshot":true},
+ {"label":"2154-paper531-current-detail-readback","command":["eval","--file","sources/runtime/paper-detail-observation.js"]}
+],"tailChars":400}

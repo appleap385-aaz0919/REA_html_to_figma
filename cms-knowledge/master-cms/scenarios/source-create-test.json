@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1305-source-create-test-submit","command":["eval","--file","sources/runtime/source-submit-isolated-test.js"]},
+  {"label":"1306-source-create-test-readback","command":["snapshot"]},
+  {"label":"1307-source-create-test-result-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1308-source-create-test-result-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1309-source-create-test-inventory","command":["eval","--file","sources/runtime/source-read-inventory.js"]}
+ ],"tailChars":11000
+}

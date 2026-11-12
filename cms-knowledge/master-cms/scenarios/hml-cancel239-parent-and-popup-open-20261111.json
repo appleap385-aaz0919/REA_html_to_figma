@@ -1,0 +1,49 @@
+{
+  "steps": [
+    {
+      "label": "3423-hml-vendor-pending-cancel-init-html-model",
+      "command": [
+        "eval",
+        "(()=>{const o=document.querySelector('[data-editor-url]');if(location.pathname!=='/item/all/modify.donga'||o?.dataset.itemId!=='2089239'||o?.dataset.itemDetailId!=='2089104')throw Error('Own239 detail9104 required');document.querySelector('a[href=\"#tabItem\"]').click();return {owner:o.dataset.itemDetailId};})()"
+      ]
+    },
+    {
+      "label": "3424-hml-vendor-pending-cancel-parent-baseline",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-parent-baseline.js"
+      ]
+    },
+    {
+      "label": "3425-hml-vendor-pending-cancel-family-drafts-before",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-family-draft-checks.js"
+      ]
+    },
+    {
+      "label": "3426-hml-vendor-pending-cancel-show-hml-tab",
+      "command": [
+        "eval",
+        "(()=>{const b=window.__qaCancel239ParentBaseline;if(b?.ownerDetailId!=='2089104'||!window.__qaCancel239NoDraftObserved)throw Error('Expected stored own baseline and no draft');document.querySelector('a[href=\"#tabHml\"]').click();return {visible:document.visibilityState,active:document.querySelector('#tabHml').classList.contains('active'),target:document.querySelector('[data-editor-url]').dataset.editorUrl};})()"
+      ]
+    },
+    {
+      "label": "3427-hml-vendor-pending-cancel-open-owned-popup",
+      "command": [
+        "click",
+        "[data-editor-url]"
+      ]
+    },
+    {
+      "label": "3428-hml-vendor-pending-cancel-popup-inventory",
+      "command": [
+        "tab",
+        "list"
+      ]
+    }
+  ],
+  "tailChars": 90
+}

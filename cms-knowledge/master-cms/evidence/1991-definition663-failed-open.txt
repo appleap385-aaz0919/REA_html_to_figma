@@ -1,0 +1,101 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e21999]
+      - link "문제은행 마스터 CMS" [ref=e22000]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e22007]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e22008]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e22009]
+          - link "HML 문항 등록" [ref=e22010]
+          - link "디피니션 문항 등록" [ref=e22011]
+          - link "쌍둥이 그룹 관리" [ref=e22012]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e22013]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e22014]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e22015]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e22003]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "디피니션 상세" [level=2, ref=e22001]
+      - StaticText "실패"
+      - generic
+        - StaticText "ZIP 파일 자체에 오류가 있어 파싱을 시작하지 못했습니다."
+        - StaticText "원본을 내려받아 수정한 뒤 다시 등록해 주세요."
+      - generic
+        - heading "기본 정보" [level=3, ref=e22004]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "663"
+          - term "원본 파일"
+          - definition
+            - StaticText "QA-DIFI-20261109-03-EMPTY.zip"
+            - button " 다운로드" [ref=e22016]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-E-MA-T0-3-2-DCL-FB-2025]"
+            - StaticText "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22EMAT0NGS31]"
+            - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기"
+          - term "페이지"
+          - definition
+            - StaticText "1 ~ 1"
+          - term "용도"
+          - definition
+            - StaticText "공통"
+          - term "등록"
+          - definition
+            - StaticText "jaehyuk.myung · 2026-11-09"
+          - term "수정"
+          - definition
+            - StaticText "-"
+        - LabelText
+          - StaticText "비고"
+        - textbox [disabled, ref=e22006]
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e22005]
+        - StaticText ""
+        - paragraph
+          - StaticText "등록된 문항이 없습니다"
+        - paragraph
+          - StaticText "HML 파일 자체에 오류가 있어 파싱이 시작되지 못했습니다."
+      - link "목록" [ref=e22002]

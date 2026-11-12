@@ -1,0 +1,11 @@
+{
+  "steps": [
+    {"label":"1005-set-before-modify","command":["snapshot"]},
+    {"label":"1006-set-modify-entry","command":["click","{ref}"],"refPattern":"- link \"[^\"]*문항 수정\" \\[ref=(e\\d+)\\]"},
+    {"label":"1007-set-modify-settled","command":["snapshot"]},
+    {"label":"1008-set-hml-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+    {"label":"1009-set-hml-tab-enter","command":["press","Enter"]},
+    {"label":"1010-set-hml-tab-settled","command":["snapshot"],"screenshot":true}
+  ],
+  "tailChars":11000
+}

@@ -1,0 +1,104 @@
+{
+  "steps": [
+    {
+      "label": "1559-lab-dropdown-source-a-input",
+      "command": [
+        "fill",
+        "#vtdSrcList [data-optid='0'] input[type=text]",
+        "Source-A"
+      ]
+    },
+    {
+      "label": "1560-lab-dropdown-source-b-input",
+      "command": [
+        "fill",
+        "#vtdSrcList [data-optid='1'] input[type=text]",
+        "Source-B"
+      ]
+    },
+    {
+      "label": "1561-lab-dropdown-a-reference-b",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#vtdCard .vtd-cell .vtd-opt[data-value=\"1\"]').click();return {action:'Choose source row1 in dropdownA'};})()"
+      ]
+    },
+    {
+      "label": "1562-lab-dropdown-source-b-edit",
+      "command": [
+        "fill",
+        "#vtdSrcList [data-optid='1'] input[type=text]",
+        "Source-B-edited"
+      ]
+    },
+    {
+      "label": "1563-lab-dropdown-reference-updated-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-gallery-observation.js"
+      ]
+    },
+    {
+      "label": "1564-lab-dropdown-delete-source-a",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#vtdSrcList [data-optid=\"0\"] .vtd-src-del').click();return {action:'Delete source row0 locally'};})()"
+      ]
+    },
+    {
+      "label": "1565-lab-dropdown-one-row-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-gallery-observation.js"
+      ]
+    },
+    {
+      "label": "1566-lab-dropdown-add-source-row",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#vtdRowAdd').click();return {action:'Add source row locally'};})()"
+      ]
+    },
+    {
+      "label": "1567-lab-dropdown-added-source-input",
+      "command": [
+        "fill",
+        "#vtdSrcList [data-optid='2'] input[type=text]",
+        "Source-C"
+      ]
+    },
+    {
+      "label": "1568-lab-dropdown-b-reference-c",
+      "command": [
+        "eval",
+        "(() => {const dd=document.querySelectorAll('#vtdCard .vtd-cell')[1];dd.querySelector('.vtd-opt[data-value=\"2\"]').click();return {action:'Choose source row2 in dropdownB'};})()"
+      ]
+    },
+    {
+      "label": "1569-lab-dropdown-two-reference-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-gallery-observation.js"
+      ]
+    },
+    {
+      "label": "1570-lab-dropdown-delete-selected-c",
+      "command": [
+        "eval",
+        "(() => {document.querySelector('#vtdSrcList [data-optid=\"2\"] .vtd-src-del').click();return {action:'Delete selected source row2 locally'};})()"
+      ]
+    },
+    {
+      "label": "1571-lab-dropdown-delete-selected-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-gallery-observation.js"
+      ]
+    }
+  ],
+  "tailChars": 900
+}

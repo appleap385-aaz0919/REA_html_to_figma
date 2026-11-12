@@ -1,0 +1,14 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_short_answer_mapping_confirmed","evidenceRange":[2819,2845],"lastEvidence":"2845-definition700-s-master-item-readback",
+ "summary":"SHORT_ANSWER 입력을 정상 단독 ZIP으로 등록해 문서700/R·카드2089380/2089087을 확인하고 S 최종승인을1회 실행했다. 최종문서Y·MasterR/실제qtCurrent SBSANM(주관식>단답형>일반형)·OMRnull이다. 기존 SHORT_ANSWER_ORDERED는SBMANM(주관식>다답형>일반형)으로 반영된 것과 구분된다. 정답11과 풀이가 정상 렌더되며 원본 JSON/픽셀을 변형하지 않았다. Master업무75회,Service배포없음.",
+ "observations":[
+  {"evidence":[2819,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832],"result":"SHORT1 ZIP1029B/SHA609d906c40d279409c8b004c36ea1734d5b36eff7a0418a3ad7028c89ac24f73의 실제 브라우저 파일과 같은Source13/단원20/페이지1~3/C를 확인한 뒤1회등록했다. 문서700/P→R/한카드/초기S이고 목록25건이다."},
+  {"evidence":[2833,2834],"result":"초안 전체높이1220/viewport1014~1015에서0→205로 스크롤하고PNG2개를 직접보았다. 소인수분해문제·정답11·풀이·검수·하단승인/폐기/목록까지 확인했다."},
+  {"evidence":[2835,2836,2837,2838,2839,2840,2841,2842,2843,2844,2845],"result":"정확한 자체QA 문서700/단일카드2089380/S/비고/확인창을 검증하고최종1회승인했다. 문서Y와새Master상세R·SBSANM/2089087을확인했다. 수정소스 savedOmrData와savedAnswerData는null이고난이도·단원등메타는공란이다. 원본파일/출처1/평가지0을유지한다."}
+ ],
+ "artifacts":["definition-short1-control-intent-20261110.json","definition700-s-approval-intent-20261110.json","sources/definition700-short-draft-20261110.html","sources/definition700-short-s-approved-final-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":75,"newMasterChangesInThisPhase":2,"newDefinitionDocumentId":700,"finalDocumentState":"Y","masterItemId":2089380,"masterDetailId":2089087,"masterViewFlag":"R","masterType":"SBSANM","serviceDeployment":false},
+ "remaining":["자체승인세트2089241/자식2089242~45에서 실제AI생성 흐름을 확인한다. 생성 전 원본·COPY세트의 모델/버전/상태/쌍둥이/이력을 읽어 보존 기준을 기록한다.","HML 복사편집 격리, 평가지 세트편집과상태정책의 미검증 범위를 이어서 조사한다.","Definition 다중JSON/정상세트ZIP 입력과혼합검수·리소스실패정책은미확정이며사용자에게현재정상세트원본/해석HML표본이없음을확인했다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=700&curriculum=22&pageNum=1&pageSize=100","tab":"t21 own approved SHORT_ANSWER Definition700","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["여기서문항형태는해당입력두표본의실제변환관측이며모든단답형복수정답정책으로일반화하지않는다.","정답본문과OMRnull을구분했고추천백엔드의실제실패/스킵여부는확정하지않았다.","전체100%완료를주장하지않는다."]
+}

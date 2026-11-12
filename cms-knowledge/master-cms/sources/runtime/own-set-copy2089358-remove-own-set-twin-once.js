@@ -1,0 +1,6 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show')||window.__qaOwnSetTwinRemovalAttempted)throw Error('Only own copied set one-shot unlink allowed');
+ const current=document.getElementById('twinCurrent'),button=current.querySelector('[hx-post="/item/all/twin-remove.donga?twinDataType=PASSAGE&twinDataId=2089357"]');
+ if(current.querySelectorAll('table').length!==2||document.getElementById('twinCountBadge').innerText.trim()!=='2'||!current.querySelector('[hx-post="/item/all/twin-remove.donga?twinDataType=PASSAGE&twinDataId=2089241"]')||!button||button.matches(':disabled'))throw Error('Expected two owned sets; remove only copied passage9357');
+ window.__qaOwnSetTwinRemovalAttempted=true;const request={observed:false};const listener=e=>{if(e.detail.elt!==button)return;request.observed=true;request.path=e.detail.requestConfig?.path;request.verb=e.detail.requestConfig?.verb;request.anchorItemId=e.detail.requestConfig?.parameters?.anchorItemId;document.body.removeEventListener('htmx:beforeRequest',listener);};document.body.addEventListener('htmx:beforeRequest',listener);button.click();return {clickedOnce:true,removedDataType:'PASSAGE',removedPassageId:2089357,anchorItemId:2089358,request,serviceDeployment:false};
+})()

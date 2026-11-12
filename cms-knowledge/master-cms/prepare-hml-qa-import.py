@@ -1,0 +1,11 @@
+"""Prepare a renamed isolated HML copy and explicit mixed-review plan before UI mutation."""
+import hashlib,json
+from pathlib import Path
+root=Path(__file__).resolve().parent
+original=root/'fixtures/hml101-original-20261109.hml';target=root/'fixtures/QA-HML-20261109-01-SET.hml';intent_path=root/'hml-qa-import-intent.json'
+assert original.exists() and not target.exists() and not intent_path.exists()
+body=original.read_bytes();sha=hashlib.sha256(body).hexdigest();assert len(body)==473273 and sha=='8c8904ebea48b0bcd1bdcb68040479e55ca88d24bf3d9e0cd4a36918ec1e419a'
+target.write_bytes(body)
+intent={'scope':'dev-exambank.dongahub.com only','authorization':'User explicitly permits development data changes and real manipulation.','status':'prepared_not_submitted','operation':'Register a uniquely named QA copy of HML101, then review its own newly created single/set items and optional generated paper.','originalDocumentId':101,'originalReadEvidence':[1997,1998,2000],'file':str(target.relative_to(root)),'fileBytes':len(body),'fileSha256':sha,'contentChanged':False,'isolation':'New QA filename/document and freshly created item IDs; do not change or discard original101 or its items.','expectedOriginalStructure':'2 single-question blocks and one passage set with3 child questions; current parser output must be freshly verified.','plannedMetadata':{'productId':'13','sourceCode':'22-M-MA-T0-1-1-SMT-TP-2022','unitCode':'22MMAT0KOK10','startPageNum':'2','endPageNum':'22','serviceUsage':'T'},'unitRationale':'Actual autocomplete response2001 contains this12-character middle1 common-term range; subject/grade match the natural-number-factor questions. No exact unit recommendation result is presumed.','plannedLaterReview':'After recording actual child IDs, consider own single blocks S/F and whole set D; approve with paperRegY and QA remark, then inspect partial outcomes. No final review submission in the registration stage.','beforeHmlCurriculum22Inventory':116,'confirmedMasterOperationsBefore':29,'serviceDeployment':False}
+intent_path.write_text(json.dumps(intent,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps({k:intent[k] for k in ['status','file','fileBytes','fileSha256','plannedMetadata']},ensure_ascii=False))

@@ -1,0 +1,338 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e17816]
+      - link "문제은행 마스터 CMS" [ref=e17817]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e17822]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e17823]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e17824]
+          - link "HML 문항 등록" [ref=e17825]
+          - link "디피니션 문항 등록" [ref=e17826]
+          - link "쌍둥이 그룹 관리" [ref=e17827]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e17828]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e17829]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e17830]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e17818]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "HML 문항 등록"
+      - heading "HML 문항 등록" [level=2, ref=e17819]
+      - generic
+        - combobox [expanded=false, ref=e17831]: 시험지 ID
+          - MenuListPopup
+            - option "시험지 ID" [selected, ref=e17875]
+            - option "파일명" [ref=e17876]
+            - option "출처코드" [ref=e17877]
+            - option "등록자 ID" [ref=e17878]
+        - textbox "시험지 ID / 파일명 / 출처코드 / 등록자 ID" [ref=e17832]
+        - combobox [expanded=false, ref=e17833]: 22
+          - MenuListPopup
+            - option "교육과정 전체" [ref=e17879]
+            - option "22" [selected, ref=e17880]
+            - option "15" [ref=e17881]
+        - combobox [expanded=false, ref=e17834]: 학교급 전체
+          - MenuListPopup
+            - option "학교급 전체" [selected, ref=e17882]
+            - option "초등" [ref=e17883]
+            - option "중학" [ref=e17884]
+            - option "고등" [ref=e17885]
+        - combobox [expanded=false, ref=e17835]: 과목군 전체
+          - MenuListPopup
+            - option "과목군 전체" [selected, ref=e17886]
+            - option "수학군" [ref=e17887]
+        - combobox [expanded=false, disabled, ref=e17836]: 과목 전체
+          - MenuListPopup
+            - option "과목 전체" [disabled, ref=e17888]
+            - option "수학" [disabled, ref=e17889]
+            - option "수학" [disabled, ref=e17890]
+            - option "공통수학1" [disabled, ref=e17891]
+            - option "공통수학2" [disabled, ref=e17892]
+            - option "기본수학1" [disabled, ref=e17893]
+            - option "기본수학2" [disabled, ref=e17894]
+            - option "수학1" [disabled, ref=e17895]
+            - option "수학2" [disabled, ref=e17896]
+            - option "대수" [disabled, ref=e17897]
+            - option "미적분1" [disabled, ref=e17898]
+            - option "미적분2" [disabled, ref=e17899]
+            - option "확률과통계" [disabled, ref=e17900]
+            - option "기하" [disabled, ref=e17901]
+            - option "직무수학" [disabled, ref=e17902]
+            - option "인공지능수학" [disabled, ref=e17903]
+            - option "수학과 문화" [disabled, ref=e17904]
+            - option "수학" [disabled, ref=e17905]
+        - combobox [expanded=false, disabled, ref=e17837]: 학년 전체
+          - MenuListPopup
+            - option "학년 전체" [disabled, ref=e17906]
+            - option "중학1" [disabled, ref=e17907]
+            - option "고등1" [disabled, ref=e17908]
+            - option "초등1" [disabled, ref=e17909]
+            - option "중학2" [disabled, ref=e17910]
+            - option "초등2" [disabled, ref=e17911]
+            - option "고등2" [disabled, ref=e17912]
+            - option "고등3" [disabled, ref=e17913]
+            - option "중학3" [disabled, ref=e17914]
+            - option "초등3" [disabled, ref=e17915]
+            - option "고등 공통" [disabled, ref=e17916]
+            - option "초등4" [disabled, ref=e17917]
+            - option "초등5" [disabled, ref=e17918]
+            - option "초등6" [disabled, ref=e17919]
+        - combobox [expanded=false, ref=e17838]: 학기 전체
+          - MenuListPopup
+            - option "학기 전체" [selected, ref=e17920]
+            - option "공통학기" [ref=e17921]
+            - option "1학기" [ref=e17922]
+            - option "2학기" [ref=e17923]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e17847]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e17848]
+          - button "30일" [ref=e17849]
+          - button "90일" [ref=e17850]
+          - button "전체" [ref=e17851]
+        - StaticText "상태"
+        - LabelText [ref=e17839] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e17852]
+          - StaticText "전체"
+        - LabelText [ref=e17840] clickable [cursor:pointer]
+          - checkbox "등록대기" [checked=true, ref=e17853]
+          - StaticText "등록대기"
+        - LabelText [ref=e17841] clickable [cursor:pointer]
+          - checkbox "등록중" [checked=true, ref=e17854]
+          - StaticText "등록중"
+        - LabelText [ref=e17842] clickable [cursor:pointer]
+          - checkbox "초안" [checked=true, ref=e17855]
+          - StaticText "초안"
+        - LabelText [ref=e17843] clickable [cursor:pointer]
+          - checkbox "메타추천중" [checked=true, ref=e17856]
+          - StaticText "메타추천중"
+        - LabelText [ref=e17844] clickable [cursor:pointer]
+          - checkbox "승인" [checked=true, ref=e17857]
+          - StaticText "승인"
+        - LabelText [ref=e17845] clickable [cursor:pointer]
+          - checkbox "폐기" [checked=true, ref=e17858]
+          - StaticText "폐기"
+        - LabelText [ref=e17846] clickable [cursor:pointer]
+          - checkbox "실패" [checked=true, ref=e17859]
+          - StaticText "실패"
+        - generic
+          - button " 초기화" [ref=e17860]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e17861]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e17820]: 100개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [ref=e17862]
+            - option "30개씩 보기" [ref=e17863]
+            - option "50개씩 보기" [ref=e17864]
+            - option "100개씩 보기" [selected, ref=e17865]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "116"
+        - StaticText "건"
+        - link " HML 등록" [ref=e17821]
+          - StaticText ""
+          - StaticText "HML 등록"
+        - table
+          - rowgroup
+            - row
+              - columnheader "시험지 ID" [ref=e18014]
+              - columnheader "파일명" [ref=e18015]
+              - columnheader "출처" [ref=e18016]
+              - columnheader "과목" [ref=e18017]
+              - columnheader "학년 · 학기" [ref=e18018]
+              - columnheader "문항(성공/실패/삭제)" [ref=e18019]
+              - columnheader "평가지 등록여부" [ref=e18020]
+              - columnheader "상태" [ref=e18021]
+              - columnheader "등록자 · 등록일" [ref=e18022]
+          - row
+            - cell "628" [ref=e17924]
+            - cell "[e2e-20261104] 그림 CLIProxy 전환 확인" [ref=e17925]
+              - link "[e2e-20261104] 그림 CLIProxy 전환 확인" [ref=e18023]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e17926]
+            - cell "수학" [ref=e17927]
+            - cell "중학3 · 1학기" [ref=e17928]
+            - cell "4 / 0 / 0" [ref=e17929]
+            - cell "미등록" [ref=e17930]
+            - cell "승인" [ref=e17931]
+            - cell "sungkuk.chae 2026-11-04" [ref=e17932]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-11-04"
+          - row
+            - cell "597" [ref=e17933]
+            - cell "중1-2_수매씽유형_유형북_8-08단원 (1).hml" [ref=e17934]
+              - link "중1-2_수매씽유형_유형북_8-08단원 (1).hml" [ref=e18024]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e17935]
+            - cell "수학" [ref=e17936]
+            - cell "중학1 · 2학기" [ref=e17937]
+            - cell "120 / 0 / 0" [ref=e17938]
+            - cell "등록" [ref=e17939]
+            - cell "승인" [ref=e17940]
+            - cell "hari.im 2026-10-27" [ref=e17941]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "596" [ref=e17942]
+            - cell "행렬세트.hml" [ref=e17943]
+              - link "행렬세트.hml" [ref=e18025]
+            - cell "22-H-MA-A0-1-1-SMB-MN-2025" [ref=e17944]
+            - cell "대수" [ref=e17945]
+            - cell "고등1 · 1학기" [ref=e17946]
+            - cell "35 / 0 / 0" [ref=e17947]
+            - cell "등록" [ref=e17948]
+            - cell "승인" [ref=e17949]
+            - cell "yoonhye.lee 2026-10-27" [ref=e17950]
+              - StaticText "yoonhye.lee"
+              - StaticText "2026-10-27"
+          - row
+            - cell "595" [ref=e17951]
+            - cell "중1-2_수매씽유형_유형북_8-08단원 (1).hml" [ref=e17952]
+              - link "중1-2_수매씽유형_유형북_8-08단원 (1).hml" [ref=e18026]
+            - cell "22-M-MA-T0-1-2-SMT-WB-2022" [ref=e17953]
+            - cell "수학" [ref=e17954]
+            - cell "중학1 · 2학기" [ref=e17955]
+            - cell "-" [ref=e17956]
+            - cell "-" [ref=e17957]
+            - cell "실패" [ref=e17958]
+            - cell "hari.im 2026-10-27" [ref=e17959]
+              - StaticText "hari.im"
+              - StaticText "2026-10-27"
+          - row
+            - cell "562" [ref=e17960]
+            - cell "[omr-e2e] 31abee818d9b4c8c9f85b3bc81adf1fb" [ref=e17961]
+              - link "[omr-e2e] 31abee818d9b4c8c9f85b3bc81adf1fb" [ref=e18027]
+            - cell "22-M-MA-T0-3-1-DCL-DA-2022" [ref=e17962]
+            - cell "수학" [ref=e17963]
+            - cell "중학3 · 1학기" [ref=e17964]
+            - cell "5 / 0 / 0" [ref=e17965]
+            - cell "미등록" [ref=e17966]
+            - cell "승인" [ref=e17967]
+            - cell "sungkuk.chae 2026-10-20" [ref=e17968]
+              - StaticText "sungkuk.chae"
+              - StaticText "2026-10-20"
+          - row
+            - cell "496" [ref=e17969]
+            - cell "초등_수학_4-2_3단원_서술형평가.hml" [ref=e17970]
+              - link "초등_수학_4-2_3단원_서술형평가.hml" [ref=e18028]
+            - cell "22-E-MA-T0-4-2-DCL-FB-2025" [ref=e17971]
+            - cell "수학" [ref=e17972]
+            - cell "초등4 · 2학기" [ref=e17973]
+            - cell "3 / 0 / 0" [ref=e17974]
+            - cell "등록" [ref=e17975]
+            - cell "승인" [ref=e17976]
+            - cell "yoonhye.lee 2026-10-14" [ref=e17977]
+              - StaticText "yoonhye.lee"
+              - StaticText "2026-10-14"
+          - row
+            - cell "468" [ref=e17978]
+            - cell "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2.hml" [ref=e17979]
+              - link "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2.hml" [ref=e18029]
+            - cell "22-E-MA-T0-4-2-DCL-FB-2025" [ref=e17980]
+            - cell "수학" [ref=e17981]
+            - cell "초등4 · 2학기" [ref=e17982]
+            - cell "10 / 0 / 0" [ref=e17983]
+            - cell "미등록" [ref=e17984]
+            - cell "승인" [ref=e17985]
+            - cell "jaehyuk.myung 2026-10-13" [ref=e17986]
+              - StaticText "jaehyuk.myung"
+              - StaticText "2026-10-13"
+          - row
+            - cell "467" [ref=e17987]
+            - cell "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2.hml" [ref=e17988]
+              - link "544f1f3e-7cfc-42a5-80ac-4b5040e95fb2.hml" [ref=e18030]
+            - cell "22-H-MA-B1-1-1-DCL-SV-2022" [ref=e17989]
+            - cell "기본수학1" [ref=e17990]
+            - cell "고등1 · 1학기" [ref=e17991]
+            - cell "10 / 0 / 0" [ref=e17992]
+            - cell "미등록" [ref=e17993]
+            - cell "승인" [ref=e17994]
+            - cell "jaehyuk.myung 2026-10-13" [ref=e17995]
+              - StaticText "jaehyuk.myung"
+              - StaticText "2026-10-13"
+          - row
+            - cell "466" [ref=e17996]
+            - cell "초등_수학_4-2_4단원_03차시_형성평가_기본.hml" [ref=e17997]
+              - link "초등_수학_4-2_4단원_03차시_형성평가_기본.hml" [ref=e18031]
+            - cell "22-E-MA-T0-4-2-DCL-FB-2025" [ref=e17998]
+            - cell "수학" [ref=e17999]
+            - cell "초등4 · 2학기" [ref=e18000]
+            - cell "4 / 0 / 0" [ref=e18001]
+            - cell "미등록" [ref=e18002]
+            - cell "승인" [ref=e18003]
+            - cell "yoonhye.lee 2026-10-13" [ref=e18004]
+              - StaticText "yoonhye.lee"
+              - StaticText "2026-10-13"
+          - row
+            - cell "465" [ref=e18005]
+            - cell "공통수학2_학습자료B_1-1단원.hml" [ref=e18006]
+              - link "공통수학2_학습자료B_1-1단원.hml" [ref=e18032]
+            - cell "22-H-MA-B2-1-2-DCL-DA-2023" [ref=e18007]
+            - cell "기본수학2" [ref=e18008]
+            - cell "고등1 · 2학기" [ref=e18009]
+            - cell "-" [ref=e18010]
+            - cell "미등록" [ref=e18011]
+            - cell "폐기" [ref=e18012]
+            - cell "yoonhye.lee 2026-10-13" [ref=e18013]
+              - StaticText "yoonhye.lee"
+              - StaticText "2026-10-13"
+        - generic
+          - StaticText "총 116건 중 1∼10 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e17866]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e17867]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e17868]
+          - listitem [level=1]
+            - link "2" [ref=e17869]
+          - listitem [level=1]
+            - link "3" [ref=e17870]
+          - listitem [level=1]
+            - link "4" [ref=e17871]
+          - listitem [level=1]
+            - link "5" [ref=e17872]
+          - listitem [level=1]
+            - link "다음" [ref=e17873]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e17874]
+              - StaticText ""

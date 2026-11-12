@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "status": "own_set_ai_request_accepted_generation_pending",
+  "evidenceRange": [
+    2846,
+    2858
+  ],
+  "lastEvidence": "2858-own-set-ai-history-fresh-check",
+  "summary": "자체 승인세트2089241/자식2089242~45와 COPY세트2089357/자식2089358~61의 현재 버전·모델·상태·그룹·이력을 먼저 읽었다. 정상세트생성창에서 AI를 선택하고 생성시작을1회 눌렀다. 요청토스트와 새 서버렌더 working=true/요청자/13:46을 확인해 요청접수 업무76회로 기록했다. 아직 새AI문항/이력은 없고 생성중이다. 기존2세트8문항/COPY이력1건이 유지된다. 재요청하지 않는다.",
+  "observations": [
+    {
+      "evidence": [
+        2846,
+        2847,
+        2848,
+        2849,
+        2850
+      ],
+      "result": "원본4개는Y·detail9052/9053/9054/9051, COPY4개는R·detail9078/9079/9080/9081, 단건control2089246은R/8877이다. 전체8개에서쌍둥이2세트, 원본각COPY이력1건/복사본각0건을읽었다. 모델/OMR/이미지/상태의 실행전근거를보존했다."
+    },
+    {
+      "evidence": [
+        2851,
+        2852,
+        2853,
+        2854
+      ],
+      "result": "세트전체문항을함께생성한다는실제안내를확인했다. data-is-set=true/anchor2089242/AI/생성시작활성을검증하고1회눌렀다. 실제beforeRequest는POST/item/all/twin-generate.donga와itemId2089242/sourceTypeAI다."
+    },
+    {
+      "evidence": [
+        2855,
+        2856,
+        2857,
+        2858
+      ],
+      "result": "요청접수토스트와working=true/AI생성/jaehyuk.myung/2026-11-10 13:46인새서버렌더를확인했다. 생성중버튼은disabled가아니고진행팝오버를연다. 그팝오버에는완료후목록추가/세트전체생성안내가있으며새생성폼을제출하지않았다. 최신이력은아직COPY한건이고그룹도2세트다."
+    }
+  ],
+  "artifacts": [
+    "own-set-ai-generation-intent-20261110.json",
+    "sources/own-set2089242-before-ai-20261110.html",
+    "scenarios/own-set-ai-before-generation.json",
+    "scenarios/own-set-ai-submit-reconcile.json"
+  ],
+  "persistentChanges": {
+    "confirmedMasterOperations": 76,
+    "newMasterChangesInThisPhase": 1,
+    "operationMeaning": "accepted asynchronous generation request; result not yet completed",
+    "anchorItemId": 2089242,
+    "sourceType": "AI",
+    "newAiItemIds": null,
+    "serviceDeployment": false
+  },
+  "remaining": [
+    "동일AI요청을재제출하지않고신규이력/상태의읽기전용재조회로완료또는실패결과를확인한다.",
+    "완료시실제신규세트/자식ID를기록하고원본/COPY/control의버전·모델·상태를실행전2848/2849와대조한다.",
+    "생성중안내·중복조작방지와세트전체적용범위를소스와정상UI근거로구분한다.",
+    "HML 복사편집격리·평가지세트편집·Master상태정책의미검증범위를이어간다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242&pageNum=1&pageSize=10",
+    "tab": "t21 own approved original set; AI generation working popover open",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "popover": "generation working",
+    "unsavedState": null,
+    "pendingServerOperation": {
+      "operation": "AI set generation",
+      "submitEvidence": 2854,
+      "anchorItemId": 2089242,
+      "requestDate": "2026-11-10 13:46",
+      "retryForbiddenUntilReconciled": true
+    }
+  },
+  "evidenceLimits": [
+    "Operation count76 includes an accepted asynchronous AI generation request; it does not claim successful generated results.",
+    "No new AI item or passage ID has yet been observed.",
+    "No Service deployment; no100percent completion claim."
+  ]
+}

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>HML 상세 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css"/>
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css"/>
+    
+    
+</head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue"
+           data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle"
+                        aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white"
+                   title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown active">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle show" href="#menu-ITEM" data-bs-toggle="dropdown"
+                               data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <a class="dropdown-item" data-loading
+                                   href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item active" data-loading
+                                   href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading
+                                   href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading
+                                   href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon invisible"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading><!-- CSRF-bearing tag omitted -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">문항 관리</li>
+        <li class="breadcrumb-item">HML 문항 등록</li>
+    
+    <li class="breadcrumb-item">상세</li>
+</ol>
+        <div class="d-flex align-items-center gap-2">
+            <h2 class="page-title mb-0">HML 상세</h2>
+            <span class="badge bg-secondary-lt">승인</span>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="card mt-3 mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">기본 정보</h3>
+        </div>
+        <div class="card-body">
+            <div class="row g-3 gx-5">
+
+                <div class="col-md-6">
+                    
+                    <dl class="row mb-0 dl-detail">
+                        <dt class="col-2 form-label fw-semibold mb-0">시험지 ID</dt>
+                        <dd class="col-10">628</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">원본 파일</dt>
+                        <dd class="col-10">
+                            
+                                <span>[e2e-20261104] 그림 CLIProxy 전환 확인</span>
+                                
+                                <button type="button" class="btn btn-sm ms-2"
+                                        data-download-url="/exam/628/1cf4e65f-9529-4216-937e-b30ded0971d4.hml" data-download-name="[e2e-20261104] 그림 CLIProxy 전환 확인">
+                                    <i class="ti ti-download me-1"></i>다운로드</button>
+                            
+                            
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">출처</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            
+                                <div>[22-M-MA-T0-3-1-DCL-DA-2022]</div>
+                                <div class="text-secondary">22-중학-수학군-수학-중학3-1학기-두클래스-수준별 문제집_대단원 평가-2022</div>
+                            
+                            
+                        </dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">단원 코드</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            <div>[22MMAT0KOK3006040000]</div>
+                            <div class="text-secondary">22 &gt; 중학 &gt; 수학군 &gt; 수학 &gt; 강옥기 &gt; 중학3 &gt; 공통학기 &gt; 원의 성질 &gt; 원주각의 활용 &gt;  &gt; </div>
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">페이지</dt>
+                        <dd class="col-10">1 ~ 1</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">용도</dt>
+                        <dd class="col-10">공통</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">등록</dt>
+                        <dd class="col-10">sungkuk.chae · 2026-11-04</dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">수정</dt>
+                        <dd class="col-10">sungkuk.chae · 2026-11-04</dd>
+                    </dl>
+                </div>
+
+                
+                <div class="col-md-6">
+                    
+                    <div class="d-flex align-items-center gap-3 mb-3" data-paper-reg>
+                        <label class="form-label mb-0">평가지 등록여부</label>
+                        <div>
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="paperRegYn" value="Y"
+                                       disabled="disabled">
+                                <span class="form-check-label">등록</span>
+                            </label>
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="paperRegYn" value="N"
+                                       disabled="disabled" checked="checked">
+                                <span class="form-check-label">미등록</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <label class="form-label">비고</label>
+                        <textarea class="form-control resize-none" name="remark" rows="8" maxlength="1000"
+                                  disabled="disabled"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt d-flex justify-content-between align-items-center">
+            <h3 class="card-title">분리 문항 리스트</h3>
+        </div>
+        <div class="card-body">
+
+            
+            
+
+            
+
+            
+            
+
+            
+            <div class="row g-3">
+                <div class="col-md-6">
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#1</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2088649 (2087856)</span>
+                                <a class="btn btn-sm" target="_blank" rel="noopener"
+                                   href="/item/all/detail.donga?itemId=2088649">문항 상세</a>
+                                <button type="button" class="btn btn-sm" data-modify-item-id="2088649">문항 수정</button>
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="badge bg-secondary-lt">초안</span>
+
+                            
+                            
+                            <span class="badge bg-secondary-lt">등록성공</span>
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2088649/2087856/asset/image-1.jpg", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/jpeg"}], "content": {"choices": ["$8 \\sqrt{3} \\rm cm$", "$8 \\sqrt{2} \\rm cm$", "$4 \\sqrt{3} \\rm cm$", "$4 \\sqrt{2} \\rm cm$", "$2 \\sqrt{2} \\rm cm$"], "answerText": "②", "promptText": "다음 그림에서 원 $\\rm O$의 반지름의 길이가 $6~ \\rm cm$이고  $\\overline{\\rm PO} =2~ \\rm cm$일 때, $\\overline{\\rm CD \\it }$의 길이는?$8 \\sqrt{3} \\rm cm$$8 \\sqrt{2} \\rm cm$$4 \\sqrt{3} \\rm cm$$4 \\sqrt{2} \\rm cm$$2 \\sqrt{2} \\rm cm$", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:2.857143px;line-height:1.6\"><span class=\"font-s20\">②</span></p>", "questionHtml": "<d-question><p><span class=\"font-s20\">다음 그림에서 원 $\\rm O$의 반지름의 길이가 $6~ \\rm cm$이고<span class=\"hml-align-space\" style=\"display:inline-block;width:1em;white-space:pre\">  </span>$\\overline{\\rm PO} =2~ \\rm cm$일 때, $\\overline{\\rm CD \\it }$의 길이는?</span></p><p><span class=\"font-s20\"><span style=\"display:inline-block;width:132px;height:125px;overflow:hidden;vertical-align:middle\"><img src=\"/item/208/2088649/2087856/asset/image-1.jpg\" alt=\"image\" data-hml-binitem=\"1\" width=\"132\" height=\"125\" style=\"max-width:none;max-height:none;width:132px;height:125px;margin-left:-0px;margin-top:-0px\" data-asset-id=\"img-1\"></span></span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">$8 \\sqrt{3} \\rm cm$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">$8 \\sqrt{2} \\rm cm$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">$4 \\sqrt{3} \\rm cm$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">$4 \\sqrt{2} \\rm cm$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">$2 \\sqrt{2} \\rm cm$</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">두 점 $\\rm O$와 점 $\\rm C$를 이으면 $△ \\rm CPO$에서</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\rm \\overline{CP} = \\sqrt{{ \\overline{OC} } ^{2} -{ \\overline{PO} } ^{2}} = \\sqrt{6 ^{2} -2 ^{2}} =4 \\sqrt{2} (\\mathrm{cm})$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\therefore \\overline{\\rm CD} =2 \\overline{\\rm CP} =8 \\sqrt{2} ( \\rm cm )$</span></p>", "explanationText": "두 점 $\\rm O$와 점 $\\rm C$를 이으면 $△ \\rm CPO$에서\n$\\rm \\overline{CP} = \\sqrt{{ \\overline{OC} } ^{2} -{ \\overline{PO} } ^{2}} = \\sqrt{6 ^{2} -2 ^{2}} =4 \\sqrt{2} (\\mathrm{cm})$\n$\\therefore \\overline{\\rm CD} =2 \\overline{\\rm CP} =8 \\sqrt{2} ( \\rm cm )$", "modelAnswerHtml": "", "explanationLines": ["두 점 $\\rm O$와 점 $\\rm C$를 이으면 $△ \\rm CPO$에서", "$\\rm \\overline{CP} = \\sqrt{{ \\overline{OC} } ^{2} -{ \\overline{PO} } ^{2}} = \\sqrt{6 ^{2} -2 ^{2}} =4 \\sqrt{2} (\\mathrm{cm})$", "$\\therefore \\overline{\\rm CD} =2 \\overline{\\rm CP} =8 \\sqrt{2} ( \\rm cm )$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "②", "choices": [2]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#2</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2088650 (2087857)</span>
+                                <a class="btn btn-sm" target="_blank" rel="noopener"
+                                   href="/item/all/detail.donga?itemId=2088650">문항 상세</a>
+                                <button type="button" class="btn btn-sm" data-modify-item-id="2088650">문항 수정</button>
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="badge bg-secondary-lt">초안</span>
+
+                            
+                            
+                            <span class="badge bg-secondary-lt">등록성공</span>
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2088650/2087857/asset/image-1.jpg", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/jpeg"}], "content": {"choices": ["$80^{\\circ}$", "$90^{\\circ}$", "$95^{\\circ}$", "$100^{\\circ}$", "$110^{\\circ}$"], "answerText": "④", "promptText": "다음 그림에서 $\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이고 $\\angle \\rm B=80^{\\circ}$일 때, $\\angle \\rm A$의 크기는?$80^{\\circ}$$90^{\\circ}$$95^{\\circ}$$100^{\\circ}$$110^{\\circ}$", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:2.857143px;line-height:1.6\"><span class=\"font-s20\">④</span></p>", "questionHtml": "<d-question><p><span class=\"font-s20\">다음 그림에서 $\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이고 $\\angle \\rm B=80^{\\circ}$일 때, $\\angle \\rm A$의 크기는?</span></p><p><span class=\"font-s20\"><img src=\"/item/208/2088650/2087857/asset/image-1.jpg\" alt=\"image\" data-hml-binitem=\"2\" width=\"118\" height=\"120\" data-asset-id=\"img-1\"></span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">$80^{\\circ}$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">$90^{\\circ}$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">$95^{\\circ}$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">$100^{\\circ}$</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">$110^{\\circ}$</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이므로 $\\overline{\\rm AB \\it } = \\overline{\\rm CD \\it }$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">따라서 $△ \\rm ABO \\equiv △DCO$이므로</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\angle \\rm ABO= \\angle DCO$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그런데 $\\angle \\rm OBC= \\angle OCB$이므로</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\angle \\rm B= \\angle ABO+ \\angle OBC$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"hml-align-space\" style=\"display:inline-block;width:2em;white-space:pre\">    </span><span class=\"font-s20\">$= \\angle \\rm DCO+ \\angle OCB= \\angle C$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">같은 방법으로 $\\angle \\rm A= \\angle D$이므로</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\angle \\rm A=180^{\\circ} -80^{\\circ} =100^{\\circ}$</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p>", "explanationText": "$\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이므로 $\\overline{\\rm AB \\it } = \\overline{\\rm CD \\it }$\n따라서 $△ \\rm ABO \\equiv △DCO$이므로\n$\\angle \\rm ABO= \\angle DCO$\n그런데 $\\angle \\rm OBC= \\angle OCB$이므로\n$\\angle \\rm B= \\angle ABO+ \\angle OBC$\n$= \\angle \\rm DCO+ \\angle OCB= \\angle C$\n같은 방법으로 $\\angle \\rm A= \\angle D$이므로\n$\\angle \\rm A=180^{\\circ} -80^{\\circ} =100^{\\circ}$", "modelAnswerHtml": "", "explanationLines": ["$\\overline{\\rm OM \\it } = \\overline{\\rm ON \\it }$이므로 $\\overline{\\rm AB \\it } = \\overline{\\rm CD \\it }$", "따라서 $△ \\rm ABO \\equiv △DCO$이므로", "$\\angle \\rm ABO= \\angle DCO$", "그런데 $\\angle \\rm OBC= \\angle OCB$이므로", "$\\angle \\rm B= \\angle ABO+ \\angle OBC$", "$= \\angle \\rm DCO+ \\angle OCB= \\angle C$", "같은 방법으로 $\\angle \\rm A= \\angle D$이므로", "$\\angle \\rm A=180^{\\circ} -80^{\\circ} =100^{\\circ}$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "④", "choices": [4]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6">
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#3</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2088651 (2087858)</span>
+                                <a class="btn btn-sm" target="_blank" rel="noopener"
+                                   href="/item/all/detail.donga?itemId=2088651">문항 상세</a>
+                                <button type="button" class="btn btn-sm" data-modify-item-id="2088651">문항 수정</button>
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="badge bg-secondary-lt">초안</span>
+
+                            
+                            
+                            <span class="badge bg-secondary-lt">등록성공</span>
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2088651/2087858/asset/image-1.jpg", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/jpeg"}], "content": {"choices": [], "answerText": "$16\\hspace{0.25em}\\mathrm{cm}$", "promptText": "오른쪽 그림에서 점 $\\rm O$는$△ \\rm ABC$의 내접원이고, 내접원의 반지름의 길이는 $3~ \\rm cm$이다. $△ \\rm ABC$의 넓이가 $24\\hspace{0.375em}\\mathrm{cm}^{2}$일 때, $△ \\rm ABC$의 둘레의 길이를 구하여라.", "correctHtml": "<p><span class=\"font-s20\">$16\\hspace{0.25em}\\mathrm{cm}$</span></p>", "questionHtml": "<d-question><p><span class=\"font-s20\"><img src=\"/item/208/2088651/2087858/asset/image-1.jpg\" alt=\"image\" data-hml-binitem=\"3\" width=\"132\" height=\"102\" data-asset-id=\"img-1\">오른쪽 그림에서 점 $\\rm O$는</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.6\"><span class=\"font-s20\">$△ \\rm ABC$의 내접원이고, 내접원의 반지름의 길이는 $3~ \\rm cm$이다. $△ \\rm ABC$의 넓이가 $24\\hspace{0.375em}\\mathrm{cm}^{2}$일 때, $△ \\rm ABC$의 둘레의 길이를 구하여라.</span><span class=\"hml-align-space\" style=\"display:inline-block;width:1em;white-space:pre\">  </span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\"><span data-split-fraction-gap=\"3pt\">$\\rm \\triangle ABC = \\dfrac{1}{2} ( \\overline{\\rm AB} \\times 3+ \\overline{\\rm BC} \\times 3+ \\overline{\\rm AC} \\times 3)=24$</span></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$3( \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} )=48$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\therefore \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} =16( \\rm cm)$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">따라서 $\\triangle \\rm ABC$의 둘레의 길이는 $16\\hspace{0.25em}\\mathrm{cm}$이다.</span></p>", "explanationText": "$\\rm \\triangle ABC = \\dfrac{1}{2} ( \\overline{\\rm AB} \\times 3+ \\overline{\\rm BC} \\times 3+ \\overline{\\rm AC} \\times 3)=24$\n$3( \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} )=48$\n$\\therefore \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} =16( \\rm cm)$\n따라서 $\\triangle \\rm ABC$의 둘레의 길이는 $16\\hspace{0.25em}\\mathrm{cm}$이다.", "modelAnswerHtml": "", "explanationLines": ["$\\rm \\triangle ABC = \\dfrac{1}{2} ( \\overline{\\rm AB} \\times 3+ \\overline{\\rm BC} \\times 3+ \\overline{\\rm AC} \\times 3)=24$", "$3( \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} )=48$", "$\\therefore \\overline{\\rm AB} + \\overline{\\rm BC} + \\overline{\\rm AC} =16( \\rm cm)$", "따라서 $\\triangle \\rm ABC$의 둘레의 길이는 $16\\hspace{0.25em}\\mathrm{cm}$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "$16\\hspace{0.25em}\\mathrm{cm}$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#4</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2088652 (2087859)</span>
+                                <a class="btn btn-sm" target="_blank" rel="noopener"
+                                   href="/item/all/detail.donga?itemId=2088652">문항 상세</a>
+                                <button type="button" class="btn btn-sm" data-modify-item-id="2088652">문항 수정</button>
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="badge bg-secondary-lt">초안</span>
+
+                            
+                            
+                            <span class="badge bg-secondary-lt">등록성공</span>
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2088652/2087859/asset/image-1.jpg", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/jpeg"}, {"alt": "image", "path": "/item/208/2088652/2087859/asset/image-explanation-1.jpg", "role": "explanation", "type": "image", "width": null, "height": null, "assetId": "img-2", "external": false, "mimeType": "image/jpeg"}], "content": {"choices": [], "answerText": "$21\\pi\\hspace{0.25em}\\mathrm{cm}^{2}$", "promptText": "오른쪽 그림에서 $\\rm \\overline{PA}$, $\\rm \\overline{PB}$가 원 $\\rm O$의 접선이고 두 점 $\\rm A,$ $\\rm B$가 그 접점이다. $\\rm \\overline{AO} = 6 \\rm cm$, $\\rm \\angle P = 30^{\\circ}$일 때, 어두운 부분의 넓이를 구하여라.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:2.857143px;line-height:1.6\"><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span><span class=\"font-s20\">$21\\pi\\hspace{0.25em}\\mathrm{cm}^{2}$</span></p>", "questionHtml": "<d-question><p><span class=\"font-s20\"><span style=\"display:inline-block;width:162px;height:89px;overflow:hidden;vertical-align:middle\"><img src=\"/item/208/2088652/2087859/asset/image-1.jpg\" alt=\"image\" data-hml-binitem=\"4\" width=\"162\" height=\"89\" style=\"max-width:none;max-height:none;width:162px;height:89px;margin-left:-0px;margin-top:-0px\" data-asset-id=\"img-1\"></span>오른쪽 그림에서 $\\rm \\overline{PA}$, $\\rm \\overline{PB}$가 원 $\\rm O$의 접선이고 두 점 $\\rm A,$ $\\rm B$가 그 접점이다. $\\rm \\overline{AO} = 6 \\rm cm$, $\\rm \\angle P = 30^{\\circ}$일 때, 어두운 부분의 넓이를 구하여라.</span></p></d-question>", "explanationHtml": "<p><span class=\"font-s20\"><img src=\"/item/208/2088652/2087859/asset/image-explanation-1.jpg\" alt=\"image\" data-hml-binitem=\"5\" width=\"144\" height=\"80\" data-asset-id=\"img-2\">오른쪽 그림에서 어두운 부분의 넓이는</span></p><p><span class=\"font-s20\"><span data-split-fraction-gap=\"3pt\">$\\pi \\times 6 ^{2} \\times \\dfrac{210}{360}$</span> $=21 \\pi ( \\rm cm ^{2} )$</span></p>", "explanationText": "오른쪽 그림에서 어두운 부분의 넓이는\n$\\pi \\times 6 ^{2} \\times \\dfrac{210}{360}$ $=21 \\pi ( \\rm cm ^{2} )$", "modelAnswerHtml": "", "explanationLines": ["오른쪽 그림에서 어두운 부분의 넓이는", "$\\pi \\times 6 ^{2} \\times \\dfrac{210}{360}$ $=21 \\pi ( \\rm cm ^{2} )$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "$21\\pi\\hspace{0.25em}\\mathrm{cm}^{2}$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="d-flex justify-content-center gap-2 mb-3">
+        <a class="btn" data-loading
+           href="/item/hml/list.donga?curriculum=22&amp;pageNum=1&amp;pageSize=10">목록</a>
+        
+        
+    </div>
+
+    
+
+    
+    
+        <div>
+    <div class="modal modal-blur fade" id="draftLoadModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">임시 저장 확인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold"><span data-draft-saved-at></span> 에 임시저장한 내용이 있습니다.</div>
+                    <div class="mt-1">어느 버전을 수정하시겠습니까?</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm me-auto" data-bs-dismiss="modal">취소</button>
+                    
+                    <button type="button" class="btn btn-sm btn-primary" id="draftEditDraft">임시저장 수정하기</button>
+                    <button type="button" class="btn btn-sm btn-primary" id="draftEditConfirmed">검수완료 수정하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok>로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+    
+    
+
+    
+    
+
+    
+    <script>
+        (function () {
+            const draftModalEl = document.getElementById('draftLoadModal');
+            let modifyItemId = null;
+
+            // 새 탭이 막히면 같은 탭으로 간다. noopener 를 창 옵션으로 주면 반환값이 늘 null 이라 열린 뒤 끊는다
+            function openModify(draft) {
+                const url = '/item/all/modify.donga?itemId=' + modifyItemId + (draft ? '&draft=' + draft : '');
+                const win = window.open(url, '_blank');
+                if (win) {
+                    win.opener = null;
+                    return;
+                }
+                showLoadingOverlay();
+                location.href = url;
+            }
+
+            document.addEventListener('click', function (e) {
+                const button = e.target.closest('button[data-modify-item-id]');
+                if (!button) return;
+
+                modifyItemId = button.dataset.modifyItemId;
+                showLoadingOverlay();
+
+                fetch('/item/all/draft-check.donga?itemId=' + modifyItemId)
+                    .then(function (res) {
+                        // 세션이 끊기면 302 를 따라가 로그인 HTML 을 200 으로 받는다
+                        if (!res.ok || res.redirected) throw new Error('draft-check ' + res.status);
+                        return res.json();
+                    })
+                    .then(function (draft) {
+                        hideLoadingOverlay();
+                        if (!draft.hasDraft) {
+                            openModify(null);
+                            return;
+                        }
+                        draftModalEl.querySelector('[data-draft-saved-at]').textContent = draft.savedAt;
+                        bootstrap.Modal.getOrCreateInstance(draftModalEl).show();
+                    })
+                    .catch(function () {
+                        hideLoadingOverlay();
+                        showToast('임시저장 확인에 실패했습니다.', 'danger');
+                    });
+            });
+
+            function choose(draft) {
+                bootstrap.Modal.getOrCreateInstance(draftModalEl).hide();
+                openModify(draft);
+            }
+            document.getElementById('draftEditDraft').addEventListener('click', function () { choose('Y'); });
+            document.getElementById('draftEditConfirmed').addEventListener('click', function () { choose('N'); });
+        })();
+    </script>
+
+    
+        
+    <script src="/js/vendor/donga-question-viewer/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js"></script>
+    <script>
+        (function () {
+            if (!window.DongaQuestionViewer) return;
+            var cdnBaseUrl = "https:\/\/dev-items.douclass.com\/itembank";
+
+            // data-qv-layout="card" 인 요소만 카드 레이아웃, 없으면 뷰어 기본
+            window.renderQuestionView = function (target, doc, layout) {
+                DongaQuestionViewer.render(target, doc, { imageBaseUrl: cdnBaseUrl, showAnswer: true, showExplanation: true, showModelAnswer: true, showGradingCriteria: true, layout: layout || undefined });
+            };
+            // renderPassage는 { passageContent } 플랫 객체를 받음. 본문은 지문 문서의 content.passageHtml
+            window.renderPassageView = function (target, doc) {
+                DongaQuestionViewer.renderPassage(target, { passageContent: (doc && doc.content && doc.content.passageHtml) || '' }, { imageBaseUrl: cdnBaseUrl });
+            };
+
+            document.querySelectorAll('.qv-item').forEach(function (item) {
+                var dataEl = item.querySelector('script[type="application/json"]');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderQuestionView(target, JSON.parse(dataEl.textContent), item.getAttribute('data-qv-layout'));
+                } catch (e) {
+                    console.error('문항 렌더 실패', e);
+                }
+            });
+            document.querySelectorAll('.qv-passage').forEach(function (item) {
+                var dataEl = item.querySelector('script');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderPassageView(target, JSON.parse(dataEl.textContent));
+                } catch (e) {
+                    console.error('지문 렌더 실패', e);
+                }
+            });
+        })();
+    </script>
+
+    
+
+</body>
+</html>
+

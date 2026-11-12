@@ -1,0 +1,9 @@
+{"steps":[
+ {"label":"2997-resume-paper-set-policy-fresh-state","command":["snapshot"]},
+ {"label":"2998-own-paper1094-current-open","command":["open","https://dev-exambank.dongahub.com/paper/detail.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2999-own-paper1094-current-baseline","command":["eval","--file","sources/runtime/paper-detail-observation.js"]},
+ {"label":"3000-own-paper1094-current-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"3001-own-paper1094-modify-open","command":["eval","(()=>{if(location.pathname!=='/paper/detail.donga'||new URLSearchParams(location.search).get('paperId')!=='1094')throw Error('Own paper only');const a=[...document.querySelectorAll('a[href]')].filter(e=>{const u=new URL(e.getAttribute('href'),location.origin);return u.pathname==='/paper/modify.donga'&&u.searchParams.get('paperId')==='1094';});if(a.length!==1||a[0].classList.contains('disabled'))throw Error('Expected modify action');const href=a[0].getAttribute('href');a[0].click();return {href};})()"]},
+ {"label":"3002-own-paper1094-modify-baseline","command":["eval","--file","sources/runtime/paper-form-observation.js"]},
+ {"label":"3003-own-paper1094-modify-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":100}

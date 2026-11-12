@@ -1,0 +1,884 @@
+{
+  "controls": [
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 16,
+        "y": 12
+      },
+      "href": null,
+      "id": "sidebarToggle",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "메뉴",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 192.65625,
+        "x": 52,
+        "y": 18
+      },
+      "href": "/main.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문제은행 마스터 CMS",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 72
+      },
+      "href": "/main.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "홈",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 116
+      },
+      "href": "#menu-ITEM",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문항 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 36,
+        "w": 240,
+        "x": 8,
+        "y": 160
+      },
+      "href": "/item/all/list.donga?unitCurriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "전체 문항",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 36,
+        "w": 240,
+        "x": 8,
+        "y": 196
+      },
+      "href": "/item/hml/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "HML 문항 등록",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 36,
+        "w": 240,
+        "x": 8,
+        "y": 232
+      },
+      "href": "/item/difi/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "디피니션 문항 등록",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 36,
+        "w": 240,
+        "x": 8,
+        "y": 268
+      },
+      "href": "/item/twin/list.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "쌍둥이 그룹 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 304
+      },
+      "href": "/paper/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "평가지 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 348
+      },
+      "href": "/product/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문항 출처 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 392
+      },
+      "href": "/lab/index.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "랩",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 108,
+        "x": 2061,
+        "y": 8
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "로그아웃",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 28,
+        "w": 1897,
+        "x": 272,
+        "y": 105.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "H2",
+      "text": "디피니션 문항 등록"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 293,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "keywordType",
+      "tag": "SELECT",
+      "text": "시험지 ID\n파일명\n출처코드\n등록자 ID",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 500.5,
+        "x": 486.5,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "keyword",
+      "tag": "INPUT",
+      "text": "시험지 ID / 파일명 / 출처코드 / 등록자 ID",
+      "type": "text"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 995,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "curriculumSelect",
+      "name": "curriculum",
+      "tag": "SELECT",
+      "text": "교육과정 전체\n22\n15",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 1188.5,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "classTypeSelect",
+      "name": "classType",
+      "tag": "SELECT",
+      "text": "학교급 전체\n초등\n중학\n고등",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 1382,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "subjectCategorySelect",
+      "name": "subjectCategory",
+      "tag": "SELECT",
+      "text": "과목군 전체\n수학군",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 1575.5,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "subjectSelect",
+      "name": "subject",
+      "tag": "SELECT",
+      "text": "과목 전체\n수학\n수학\n공통수학1\n공통수학2\n기본수학1\n기본수학2\n수학1\n수학2\n대수\n미적분1\n미적분2\n확률과통계\n기하\n직무수학\n인공지능수학\n수학과 문화\n수학",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 1769,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "gradeSelect",
+      "name": "grade",
+      "tag": "SELECT",
+      "text": "학년 전체\n중학1\n고등1\n초등1\n중학2\n초등2\n고등2\n고등3\n중학3\n초등3\n고등 공통\n초등4\n초등5\n초등6",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 1962.5,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "term",
+      "tag": "SELECT",
+      "text": "학기 전체\n공통학기\n1학기\n2학기",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 230,
+        "x": 343,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "INPUT",
+      "text": "시작일 ~ 종료일",
+      "type": "text"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 55.71875,
+        "x": 581,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "7일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 63.421875,
+        "x": 635.71875,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "30일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 63.421875,
+        "x": 698.140625,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "90일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 62,
+        "x": 760.5625,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "전체",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 337,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "전체"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 337,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "INPUT",
+      "text": "on",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 80,
+        "x": 405,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "등록대기"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 405,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "W",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 66,
+        "x": 501,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "등록중"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 501,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "P",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 583,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "초안"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 583,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "R",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 94,
+        "x": 651,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "메타추천중"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 651,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "M",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 761,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "승인"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 761,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "Y",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 829,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "폐기"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 829,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "D",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 897,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "실패"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 897,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "F",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 94,
+        "x": 1969.078125,
+        "y": 274.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "초기화",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 80,
+        "x": 2068,
+        "y": 274.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "조회",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 131,
+        "x": 272,
+        "y": 355.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "pageSize",
+      "tag": "SELECT",
+      "text": "10개씩 보기\n30개씩 보기\n50개씩 보기\n100개씩 보기",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 104.859375,
+        "x": 2064.140625,
+        "y": 351.140625
+      },
+      "href": "/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "ZIP 등록",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 217.796875,
+        "x": 436.59375,
+        "y": 456.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=700&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-11-SHORT1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 223.375,
+        "x": 436.59375,
+        "y": 521.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=699&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-10-CHOICE1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 210.53125,
+        "x": 436.59375,
+        "y": 586.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=698&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-09-BODY1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 200.484375,
+        "x": 436.59375,
+        "y": 651.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=697&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-08-FIVE1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 212,
+        "x": 436.59375,
+        "y": 716.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=696&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-07-ESSAY1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 236.078125,
+        "x": 436.59375,
+        "y": 781.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-06-ORDERED1.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 213.421875,
+        "x": 436.59375,
+        "y": 846.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=694&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261110-04-MULTI3.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 208.09375,
+        "x": 436.59375,
+        "y": 911.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=663&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261109-03-EMPTY.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 223.046875,
+        "x": 436.59375,
+        "y": 976.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=662&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261109-02-DISCARD.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 160.15625,
+        "x": 436.59375,
+        "y": 1041.140625
+      },
+      "href": "/item/difi/detail.donga?examDocumentId=661&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-DIFI-20261109-01.zip",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1168.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "맨 앞",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1203.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "이전",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1238.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "1",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1273.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "2",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1308.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "3",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1343.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "다음",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1378.40625,
+        "y": 1099.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "맨 뒤",
+      "type": ""
+    }
+  ],
+  "height": 1131,
+  "images": [],
+  "modals": [],
+  "text": "문제은행 마스터 CMS\n홈\n문항 관리\n전체 문항\nHML 문항 등록\n디피니션 문항 등록\n쌍둥이 그룹 관리\n평가지 관리\n문항 출처 관리\n랩\n마스터\n접속자 jaehyuk.myung\n로그아웃\n시스템 관리\n문항 관리\n디피니션 문항 등록\n디피니션 문항 등록\n시험지 ID\n파일명\n출처코드\n등록자 ID\n교육과정 전체\n22\n15\n학교급 전체\n초등\n중학\n고등\n과목군 전체\n수학군\n과목 전체\n수학\n수학\n공통수학1\n공통수학2\n기본수학1\n기본수학2\n수학1\n수학2\n대수\n미적분1\n미적분2\n확률과통계\n기하\n직무수학\n인공지능수학\n수학과 문화\n수학\n학년 전체\n중학1\n고등1\n초등1\n중학2\n초등2\n고등2\n고등3\n중학3\n초등3\n고등 공통\n초등4\n초등5\n초등6\n학기 전체\n공통학기\n1학기\n2학기\n등록일\n7일\n30일\n90일\n전체\n상태\n전체\n등록대기\n등록중\n초안\n메타추천중\n승인\n폐기\n실패\n초기화 \n조회\n10개씩 보기\n30개씩 보기\n50개씩 보기\n100개씩 보기\n검색결과 : 25건\nZIP 등록\n시험지 ID\t파일명\t출처\t과목\t학년 · 학기\t평가지 등록여부\t상태\t등록자 · 등록일\n700\tQA-DIFI-20261110-11-SHORT1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n699\tQA-DIFI-20261110-10-CHOICE1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n698\tQA-DIFI-20261110-09-BODY1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n697\tQA-DIFI-20261110-08-FIVE1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n696\tQA-DIFI-20261110-07-ESSAY1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n695\tQA-DIFI-20261110-06-ORDERED1.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-10\n\n694\tQA-DIFI-20261110-04-MULTI3.zip\t22-M-MA-T0-1-1-SMT-TP-2022\t수학\t중학1 · 1학기\t-\t실패\t\njaehyuk.myung\n2026-11-10\n\n663\tQA-DIFI-20261109-03-EMPTY.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t-\t실패\t\njaehyuk.myung\n2026-11-09\n\n662\tQA-DIFI-20261109-02-DISCARD.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t미등록\t폐기\t\njaehyuk.myung\n2026-11-09\n\n661\tQA-DIFI-20261109-01.zip\t22-E-MA-T0-3-2-DCL-FB-2025\t수학\t초등3 · 2학기\t미등록\t승인\t\njaehyuk.myung\n2026-11-09\n총 25건 중 1∼10 표시\n1\n2\n3",
+  "title": "디피니션 문항 등록 | 문제은행 마스터 CMS",
+  "url": "https://dev-exambank.dongahub.com/item/difi/list.donga?curriculum=22",
+  "width": 2200
+}

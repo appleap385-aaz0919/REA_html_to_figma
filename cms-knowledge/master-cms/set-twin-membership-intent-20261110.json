@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "status": "scenario_confirmed_membership_restored_and_modal_closed",
+  "scopeHost": "dev-exambank.dongahub.com",
+  "anchorItemId": 2089358,
+  "originalPassageId": 2089241,
+  "originalItemIds": [
+    2089242,
+    2089243,
+    2089244,
+    2089245
+  ],
+  "originalViewFlags": "all Y",
+  "copyPassageId": 2089357,
+  "copyItemIds": [
+    2089358,
+    2089359,
+    2089360,
+    2089361
+  ],
+  "copyViewFlags": "all R",
+  "baselineMemberSetCount": 2,
+  "baselineChildRowCount": 8,
+  "baselineMembershipEvidence": 2552,
+  "baselineOriginalReferenceEvidence": 2549,
+  "baselineCopyReferenceEvidence": 2551,
+  "plannedOperations": [
+    "Remove only own copied PASSAGE2089357 through its actual group row action",
+    "Re-add compatible original PASSAGE2089241 through the normal Twin Add search on own copied set"
+  ],
+  "preserveContentVersionsAndStatuses": true,
+  "preserveGenerationHistory": true,
+  "restoreLogicalMembershipAfterScenario": true,
+  "serviceDeployment": false,
+  "retryRule": "Each mutation is one-shot and independently reconciled. Do not rerun a submitted plan after observation failure. Do not touch other sets or Service CMS.",
+  "unlinkSubmitEvidence": 2569,
+  "unlinkReadbackEvidence": [
+    2571,
+    2572,
+    2573,
+    2574,
+    2575
+  ],
+  "currentMemberSetCount": 2,
+  "logicalMembershipRestorationPending": false,
+  "confirmedMasterOperations": 60,
+  "samePassageCandidateProbe": {
+    "prepared": true,
+    "anchorItemId": 2089358,
+    "targetItemId": 2089359,
+    "samePassageId": 2089357,
+    "availabilityEvidence": 2579,
+    "reason": "UI displays enabled Add for an own sibling in the same passage. Use only this normal button and reconcile before restoring the original set membership.",
+    "status": "http500_observed_relationships_unchanged",
+    "submitEvidence": 2580,
+    "receiptEvidence": 2581,
+    "membershipReadEvidence": 2583,
+    "pixelEvidence": 2582,
+    "masterOperationCountUnchanged": 59,
+    "errorVisibilityEvidence": 2585,
+    "errorContainerVisible": false,
+    "visibleAlerts": [],
+    "noObservedRelationshipChange": true
+  },
+  "readdSubmitEvidence": 2590,
+  "readdReadbackEvidence": [
+    2592,
+    2593,
+    2594,
+    2595,
+    2596
+  ],
+  "finalEvidence": 2602,
+  "restoredGroupPixelViewedEvidence": 2599,
+  "modalClosedEvidence": 2601,
+  "unsavedState": null
+}

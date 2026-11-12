@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "status": "evidence_recorded_with_remaining_branches",
+  "evidenceRange": [
+    2155,
+    2182
+  ],
+  "lastEvidence": "2182-own-created-twin2089239-bottom-pixels",
+  "summary": "승인된 자체 QA 문항2089216에서 생성 방식 선택·취소·재열기와 서비스 배포 대상 선택·초기화를 검토했다. 실제 COPY를 한 번 요청해 초안 문항2089239/detail2088871이 생성되고 원문과 2개 그룹을 이루는 것을 이력·목록·상세로 재확인했다. 복제본은 OMR/정답과 주요 분류 정보를 유지하지만 원본 파일·출처·평가지 매핑은 비어 있다. 확정 Master 업무 변경은35회다.",
+  "observations": [
+    {
+      "evidence": [
+        2155,
+        2156,
+        2157,
+        2158,
+        2159,
+        2160,
+        2161
+      ],
+      "result": "생성창은 COPY/AI 두 라디오만 있고 COPY가 기본이다. AI를 선택해 취소한 뒤 다시 열면 COPY로 초기화된다. 생성 수·모델·프롬프트를 지정하는 입력란은 이 단건 창에 없다. 이 취소 경로에서 요청은 제출하지 않았다."
+    },
+    {
+      "evidence": [
+        2162,
+        2163,
+        2164,
+        2165,
+        2166
+      ],
+      "result": "승인된 문항의 배포창에는 DOUCLASS/AI출제마법사 CMS와 DEVSERVICE/개발 서비스 두 대상이 모두 활성으로 보였다. 미선택일 때 배포 버튼은 비활성이고 개발 서비스를 선택하면 활성이다. 현재 재배포 경고는 숨겨져 있다. 취소 후 재열면 모두 미선택으로 초기화된다. 배포 제출은 하지 않았다."
+    },
+    {
+      "evidence": [
+        2167,
+        2168,
+        2169,
+        2170,
+        2171,
+        2172
+      ],
+      "result": "이력[]/그룹없음/0개를 먼저 확인하고 실제 생성 시작 버튼을 한 번 눌렀다. 실제 htmx beforeRequest의 post 경로와 itemId2089216/sourceTypeCOPY를 기록했다. 서버 이력은 정확히 한 건이며 새 문항2089239를 반환한다. 원문Y와 새 문항R이 그룹을 이루고 표시 수2에는 원문도 포함된다."
+    },
+    {
+      "evidence": [
+        2173,
+        2174,
+        2175,
+        2176,
+        2177
+      ],
+      "result": "실제 생성 이력창은 새 ID·복제·요청자·생성일시를 표시하고 새 ID는 상세 링크다. 현재 쌍둥이 탭은 원문과 복제본 각 행 및 각 해제 버튼을 표시한다. 아직 해제/수동 추가는 수행하지 않았다."
+    },
+    {
+      "evidence": [
+        2178,
+        2179,
+        2180,
+        2181,
+        2182
+      ],
+      "result": "새 상세는2089239/detail2088871, 생성방식 복제 및 부모2089216, 상태R이다. OMR OBSACN/①~⑤/정답④가 원문과 정확히 같다. 난이도·단원·성취기준·내용영역·행동영역·교과역량·유형정보도 같다. 원본 파일·출처는 -이고 평가지0이다. Q/A 미리보기는 정상이며 URL은 원문 리소스 경로다. 상세 상단·800·1199 위치를 직접 보고 총2214px 세로 범위를 확인했다."
+    }
+  ],
+  "artifacts": [
+    "twin-qa-copy-intent.json",
+    "twin-copy-comparison-20261109.json",
+    "master-status-policy-review-20261109.md",
+    "sources/master2089216-approved-20261109.html",
+    "sources/qa2089216-after-copy-group-20261109.html",
+    "sources/qa2089239-copy-created-20261109.html"
+  ],
+  "pixelEvidence": {
+    "viewed": [
+      2157,
+      2158,
+      2162,
+      2173,
+      2175,
+      2179,
+      2181,
+      2182
+    ],
+    "fullVerticalStates": [
+      "Master copied item2089239 R"
+    ],
+    "scope": "Current1810px desktop viewport; modal screenshots viewed in full. Clone wrapper1015px high, scroll0/800/1199, total2214."
+  },
+  "persistentChanges": {
+    "confirmedMasterOperations": 35,
+    "newMasterChangesInThisPhase": 1,
+    "operation": "COPY twin generation",
+    "anchorItemId": 2089216,
+    "anchorState": "Y",
+    "createdItemId": 2089239,
+    "createdDetailId": 2088871,
+    "createdState": "R",
+    "groupMemberItemIds": [
+      2089216,
+      2089239
+    ],
+    "serviceDeployment": false,
+    "aiGenerationSubmitted": false,
+    "originalRestorationPending": false
+  },
+  "remaining": [
+    "자체 QA 그룹에서 해제와 검색 후 수동 추가를 실제 조작하고, 그룹 수·문항 상태·생성 이력에 미치는 영향을 확인한다.",
+    "AI 생성의 실제 요청·대기·처리·완료/실패 경로와 세트 생성 경로는 아직 확인하지 않았다.",
+    "활성 세트/공유 지문 HML 수정, 실제 번역 파일, Definition 복합 자료와 권한별 분기가 남아 있다. 서비스 CMS 배포 제출은 수행하지 않는다."
+  ],
+  "resume": {
+    "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239",
+    "tab": "t21 pinned research; own draft clone at bottom",
+    "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+    "modal": null,
+    "unsavedState": null
+  },
+  "evidenceLimits": [
+    "생성창의 선택·취소와 실제 COPY 생성은 구분한다. AI 생성은 선택 취소만 했다.",
+    "그룹 전체 표시 수와 새로 만들어진 문항 수를 구별한다.",
+    "주요 분류/OMR 동일성과 모든 내부 DB 필드 동일성은 다르다.",
+    "전체 CMS 완료율은 아직 산정하지 않는다."
+  ]
+}

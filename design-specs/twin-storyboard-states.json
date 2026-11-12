@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "title": "쌍둥이 그룹 관리와 문항 상세 쌍둥이 팝업의 스토리보드 상태",
+  "asOf": "2026-11-11",
+  "scope": "개발 마스터 CMS의 기존 로컬 HTML·관찰 JSON·PNG·정책 검토 문서만 읽어 정리했습니다. 새 CMS 요청이나 화면 조작은 수행하지 않았습니다.",
+  "evidencePolicy": [
+    "evidence와 screenshot은 작업 폴더를 기준으로 한 실존 상대 경로입니다. screenshot은 해당 상태의 PNG가 보존된 경우에만 제공합니다.",
+    "실제 검증, 정적 선언, 미확인을 구분합니다. 이전 문서의 미검증 항목은 후속 phase47·59·65·66·67·72·73의 확인 결과로 보정했습니다.",
+    "화면의 예시 ID·건수·시각은 관측 표본이며 고정 정책 값이 아닙니다. 현재 쌍둥이 관계, 생성 이력, 논리 세트, 문항 상태는 서로 구분합니다.",
+    "삭제 확인창을 임의로 만들지 않습니다. 관측된 관계 해제는 직접 요청하는 버튼이고, 폐기는 별도의 상태 저장 확인창을 사용합니다.",
+    "오른쪽 HML 카드는 원본 HML 미리보기 이미지를 표시하는 정상 사양입니다. 일부 과거 빈 카드 관측을 미지원으로 해석하지 않습니다.",
+    "다른 역할·서버 내부 그룹ID·물리 삭제·경합·일부 실패·서비스 CMS의 배포 후 결과는 현재 근거로 확정하지 않습니다."
+  ],
+  "screens": [
+    {
+      "id": "MST_TWN_01",
+      "title": "쌍둥이 그룹 관리 목록",
+      "states": [
+        {
+          "title": "기본 그룹 목록",
+          "trigger": "문항 관리 > 쌍둥이 그룹 관리로 진입합니다.",
+          "visibleChanges": ["현재 메뉴를 선택 상태로 표시합니다.", "페이지당 표시 개수, 검색결과 건수와 그룹 ID·유형·대표 문제·개수·수정자·수정일시 열을 표시합니다.", "대표 문제에 그룹 상세 링크를 제공합니다."],
+          "policy": ["[실제 검증] 2026-11-09 표본에는 43그룹이 있었고 단일 문항 32그룹·세트 문항 11그룹이었습니다. 고정 총수가 아닙니다.", "[정적 선언·실제 화면] 이 메뉴의 보존 화면은 조회 중심입니다. 그룹 생성·수정·삭제 버튼이나 별도 검색 필터를 임의로 추가하지 않습니다.", "[정적 선언] 대표 문제 링크는 twinGroupId와 pageNum/pageSize를 그룹 상세에 전달합니다."],
+          "exceptions": ["대표 문제 선택 기준과 정렬의 서버 내부 규칙은 미확인입니다.", "빈 목록과 조회 실패의 고유 화면은 실제 표본을 확보하지 못했습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/twin-list-20261109.html", "cms-knowledge/master-cms/twin-groups-20261109.json", "cms-knowledge/master-cms/evidence/1116-twin-all-rows-settled.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1116-twin-all-rows-settled.png"
+        },
+        {
+          "title": "표시 개수 변경과 마지막 페이지",
+          "trigger": "10·30·50·100개씩 보기 또는 페이지 이동 링크를 선택합니다.",
+          "visibleChanges": ["목록과 전체 건수 중 표시 구간을 갱신합니다.", "현재 페이지를 구분하고 첫 페이지·마지막 페이지의 이동 제어를 비활성화합니다."],
+          "policy": ["[정적 선언] 표시 개수 변경은 pageNum=1로 조회하고 목록 영역을 교체하며 주소를 갱신합니다.", "[실제 검증] pageSize=10의 5페이지에서 43건 중 마지막 3건을 조회한 상태가 보존돼 있습니다.", "[정적 선언] 맨 앞·이전·숫자·다음·맨 뒤 링크가 같은 목록 영역을 갱신합니다."],
+          "exceptions": ["보존 화면의 5페이지와 43건은 해당 시점의 자료입니다.", "모든 표시 개수·페이지 왕복 조합을 실제 검증한 것으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/twin-list-20261109.html", "cms-knowledge/master-cms/evidence/1141-twin-last-page-state.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1141-twin-last-page-state.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_TWN_02",
+      "title": "쌍둥이 그룹 상세",
+      "states": [
+        {
+          "title": "단일 문항 그룹 상세",
+          "trigger": "목록에서 단일 문항 그룹의 대표 문제를 선택합니다.",
+          "visibleChanges": ["그룹 정보 카드에 그룹 ID·유형·개수·수정자·수정일시를 표시합니다.", "문항 ID·문제·단원코드·형태/난이도·상태의 단일 표를 표시합니다.", "하단에 목록 버튼을 제공합니다."],
+          "policy": ["[실제 검증] 그룹 2088665의 8개 문항과 승인/초안의 서로 다른 상태가 함께 표시됐습니다.", "[정적 선언] 문제 링크는 해당 문항 상세를 새 탭으로 엽니다. 단원코드에는 전체 경로 툴팁이 선언돼 있습니다.", "[정적 선언] 목록 버튼은 pageNum/pageSize를 포함합니다. 그룹 자체의 삭제 확인창이나 해제 버튼은 이 상세에 없습니다."],
+          "exceptions": ["새 탭의 실제 개방과 모든 툴팁 왕복은 링크·이벤트 선언과 화면 관찰 범위를 구분합니다.", "문항 상세 팝업의 해제 제어를 이 그룹 상세의 제어로 옮기지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/twin-single-detail-20261109.html", "cms-knowledge/master-cms/evidence/1123-twin-single-group-loaded.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1123-twin-single-group-loaded.png"
+        },
+        {
+          "title": "세트 문항 그룹 상세",
+          "trigger": "목록에서 세트 문항 그룹의 대표 문제를 선택합니다.",
+          "visibleChanges": ["그룹 정보의 개수를 ‘N세트’로 표시합니다.", "각 세트에 ‘쌍둥이 세트’ 카드와 세트 ID를 붙이고 그 아래 자식 문항 표를 배치합니다.", "각 자식 행에 문항 ID·문제·단원코드·형태/난이도·상태를 표시합니다."],
+          "policy": ["[실제 검증] 그룹 2087985는 2세트로 표시되고 각 세트의 자식 문항이 별도 표에 있습니다.", "[정적 선언] 자식의 문제 링크는 문항 상세를 새 탭으로 엽니다.", "[실제 검증] 그룹의 세트 개수와 자식 문항 행 수는 다른 수치입니다. 그룹2세트를 문항2개로 표현하지 않습니다."],
+          "exceptions": ["그룹 상세의 ‘세트 ID’와 논리 지문·자식 관계를 구분하며 서버의 물리 그룹 구현은 미확인입니다.", "이 화면에는 그룹 삭제·세트 삭제 확인창을 새로 설계하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/twin-set-detail-20261109.html", "cms-knowledge/master-cms/evidence/1129-twin-set-detail.json", "cms-knowledge/master-cms/evidence/1132-twin-set-bottom.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/1129-twin-set-detail.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_01",
+      "title": "문항 상세 > 현재 쌍둥이 팝업",
+      "states": [
+        {
+          "title": "현재 쌍둥이가 없는 상태",
+          "trigger": "기본 정보의 쌍둥이 문항 ‘목록 조회’를 선택합니다.",
+          "visibleChanges": ["‘쌍둥이 문항 관리’ 팝업에 문항 ID를 표시합니다. 세트인 경우 세트 ID도 표시합니다.", "‘현재 쌍둥이’와 ‘쌍둥이 추가’ 탭 및 닫기 버튼을 표시합니다.", "현재 건수는 0이고 ‘쌍둥이 문항 그룹이 없습니다.’ 안내행을 표시합니다."],
+          "policy": ["[정적 선언] 팝업 shown 이벤트로 /item/all/twins.donga?itemId=현재문항을 조회합니다.", "[실제 검증] 단건 연결 해제 후 그룹0 안내와 기본 정보의 0개 표시가 대응됐습니다.", "[실제 검증] 빈 안내행은 문항행이 아니므로 1개로 세지 않습니다."],
+          "exceptions": ["그룹0을 물리 DB 그룹 레코드의 삭제로 해석하지 않습니다.", "초기 응답을 받기 전 빈 컨테이너와 조회 완료 후 그룹0 안내를 같은 상태로 표현하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-add-exact2089239-20261109.html", "cms-knowledge/master-cms/evidence/2187-own-qa-remove-current-dialog-readback.json", "cms-knowledge/master-cms/evidence/2186-own-qa-clone-remove-independent-readback.json"]
+        },
+        {
+          "title": "단건 그룹의 현재 멤버",
+          "trigger": "현재 그룹이 있는 단건 문항에서 목록 조회를 선택합니다.",
+          "visibleChanges": ["문항 ID·문제·단원코드·형태/난이도·상태·해제 열을 표시합니다.", "각 문항 행에 해제 버튼을 표시합니다.", "현재 탭 배지와 상세의 쌍둥이 개수를 표시합니다."],
+          "policy": ["[실제 검증] 원문2089216과 COPY2089239를 함께 2개로 표시했습니다. 이후 AI 결과가 생긴 시점에는 원문을 포함한 3멤버였습니다.", "[실제 검증] 건수에는 현재 문항 자신이 포함됩니다. 새로 생성한 문항 수와 다릅니다.", "[정적 선언] 단건 해제 버튼은 twinDataType=ITEM과 대상 itemId를 사용합니다."],
+          "exceptions": ["현재 앵커에 따라 행 순서가 달라질 수 있으므로 관계 비교는 ID 집합을 기준으로 합니다.", "승인과 초안이 같은 그룹에 표시되는 사례를 모든 상태 조합의 허용으로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-membership-final-20261109.html", "cms-knowledge/master-cms/evidence/2175-own-qa-copy-current-twins-modal.json", "cms-knowledge/master-cms/evidence/2226-own-qa-ai-background-histories.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/2175-own-qa-copy-current-twins-modal.png"
+        },
+        {
+          "title": "세트 그룹의 현재 멤버",
+          "trigger": "현재 그룹이 있는 세트의 자식 문항에서 목록 조회를 선택합니다.",
+          "visibleChanges": ["세트별 자식 문항을 묶어 표시하고 세트당 해제 버튼 하나를 배치합니다.", "각 세트의 여러 자식 행을 표시하면서 현재 관계의 개수는 세트 단위로 표시합니다."],
+          "policy": ["[실제 검증] 원본 지문2089241과 COPY 지문2089357을 2개로 표시하면서 자식은 각4개씩 총8행을 표시했습니다.", "[실제 검증] AI 세트 추가 후에는 원본·COPY·AI의 3세트와 자식12행이 각 문항의 현재 관계에서 조회됐습니다.", "[정적 선언] 세트 해제는 twinDataType=PASSAGE와 지문 ID를 사용합니다. 자식 한 행만 해제하는 제어로 그리지 않습니다."],
+          "exceptions": ["표시된 ‘2개’는 이 세트 팝업에서 두 세트를 의미합니다. 단건의 문항 개수와 구분합니다.", "서로 크기가 다른 세트의 연결과 더 큰 세트 그룹의 처리 정책은 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/own-set-copy2089358-twin-current-20261110.html", "cms-knowledge/master-cms/evidence/2562-own-set-copy2089358-twin-current-modal-inspect.json", "cms-knowledge/master-cms/evidence/2882-own-set-ai-twelve-memberships-after-read.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/2563-own-set-copy2089358-twin-current-modal-top-pixels.png"
+        },
+        {
+          "title": "관계 해제 실행 경계: 별도 삭제 확인창 없음",
+          "trigger": "현재 쌍둥이의 대상 행 또는 세트 묶음에서 ‘해제’를 선택합니다.",
+          "visibleChanges": ["별도 삭제 확인창을 거치지 않는 직접 해제 요청이 선언돼 있습니다.", "성공 뒤 현재 관계와 개수의 조회 결과가 달라집니다. 문항 본문을 물리 삭제하는 화면으로 표현하지 않습니다."],
+          "policy": ["[정적 선언] /item/all/twin-remove.donga에 twinDataType=ITEM/PASSAGE와 twinDataId를 전달하고 #twinCurrent를 교체합니다. 보존 버튼에는 hx-confirm이나 삭제 확인 모달 연결이 없습니다.", "[실제 검증] 단건2멤버에서 COPY 하나를 해제하자 원문은 그룹0이 됐고 생성 이력은 유지됐습니다.", "[실제 검증] 두 세트 중 COPY 지문 하나를 해제하자 양쪽8문항 모두 현재 관계0이 됐고 각 논리 세트와 생성 이력은 남았습니다.", "[스토리보드 경계] ‘삭제 확인’이라는 임의 화면을 추가하지 않고, 직접 실행 경계와 관계 해제 결과를 주석으로 명시합니다."],
+          "exceptions": ["단건 일부 관찰기는 afterRequest를 포착하지 못해 timeout을 기록했습니다. 재전송하지 않고 독립 조회로 결과를 확인했으므로 timeout을 업무 실패로 표기하지 않습니다.", "물리 그룹ID 유지·소멸과 문항 자체 삭제 여부는 이 결과로 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-membership-final-20261109.html", "cms-knowledge/master-cms/sources/own-set-copy2089358-twin-current-20261110.html", "cms-knowledge/master-cms/evidence/2186-own-qa-clone-remove-independent-readback.json", "cms-knowledge/master-cms/evidence/2569-own-set-copy2089357-twin-unlink-once.json", "cms-knowledge/master-cms/evidence/2571-own-set-copy2089357-twin-unlink-eight-memberships-read.json"]
+        },
+        {
+          "title": "팝업 닫기와 추가 탭 상태 수명",
+          "trigger": "탭을 왕복하거나 X·닫기로 팝업을 닫은 뒤 다시 엽니다.",
+          "visibleChanges": ["탭 왕복 중에는 추가 탭의 검색 조건과 결과를 유지하는 코드입니다.", "팝업을 닫으면 추가 탭의 결과를 비우고 필터를 초기화하며 현재 쌍둥이 탭으로 복귀하는 코드입니다."],
+          "policy": ["[정적 선언] 추가 탭 첫 진입에만 기본 조회를 발생시키는 addLoaded 플래그를 사용합니다. 닫으면 플래그를 해제합니다.", "[정적 선언] 초기화 버튼 자체는 입력만 기본값으로 돌리고 조회를 자동 실행하지 않습니다.", "[정적 선언] 현재 쌍둥이는 다음 팝업 shown 이벤트에서 다시 조회합니다."],
+          "exceptions": ["모든 탭 왕복·닫기 수단·검색 페이지 조합을 실제 반복 검증한 상태로 표기하지 않습니다.", "현재 소스의 twinChanged 관련 주석만으로 별도 자동 재조회 이벤트를 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-add-candidates-20261109.html", "cms-knowledge/master-cms/twin-generation-membership-review-20261109.md"]
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_02",
+      "title": "문항 상세 > 쌍둥이 추가 검색",
+      "states": [
+        {
+          "title": "기본 검색 조건과 결과 표",
+          "trigger": "쌍둥이 문항 관리 팝업에서 ‘쌍둥이 추가’ 탭으로 처음 진입합니다.",
+          "visibleChanges": ["키워드 기준·입력란과 교육과정·학교급·과목군·과목·학년·학기·난이도·형태1/2/3을 표시합니다.", "단일/세트 체크박스, 상태 체크박스, 초기화·조회 버튼을 표시합니다.", "결과 표에 문항 ID·문제·형태/난이도·세트ID(문항수)·상태·매핑 정보·추가 제어를 표시합니다."],
+          "policy": ["[정적 선언·실제 표본] 키워드 기준은 문항 ID·지문·문제·출처코드·등록자 ID·원본 파일명입니다.", "[실제 검증] 기본 표본은 교육과정22, 단일/세트 모두, 상태R/F/Y/N 선택·D 미선택입니다.", "[정적 선언] 조회는 /item/all/twin-search.donga에 필터와 anchorItemId를 전달합니다. 첫 진입 조회와 후속 페이지 조회의 include 범위가 선언돼 있습니다.", "[정적 선언] 형태와 학년·과목은 상위 선택값에 따른 연동 필터를 사용합니다."],
+          "exceptions": ["과거 32506건·10행은 당시 후보 검색 결과이며 전체 그룹 수나 고정 문항 수가 아닙니다.", "모든 필터 조합·입력 경계·빈결과·검색 페이지 왕복은 미검증입니다.", "2190 PNG는 로딩 오버레이 시점이므로 정착된 화면의 픽셀 근거로 사용하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-add-candidates-20261109.html", "cms-knowledge/master-cms/evidence/2190-own-qa-twin-add-tab-populated.json", "cms-knowledge/master-cms/evidence/140-set-twin-add-search.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/140-set-twin-add-search.png"
+        },
+        {
+          "title": "정확 ID로 추가 가능한 후보 조회",
+          "trigger": "문항 ID를 기준으로 정확한 대상 ID를 입력하고 조회합니다.",
+          "visibleChanges": ["대상 후보 한 행에 상태·세트 정보·‘추가 가능’ 문구와 활성 추가 버튼을 표시합니다."],
+          "policy": ["[실제 검증] 해제된 단건2089239/R의 정확 ID 조회와, 다른 지문 세트의 자식2089242/Y 조회에서 추가 가능한 후보를 확인했습니다.", "[정적 선언] 추가 버튼은 /item/all/twin-add.donga?targetItemId=대상에 검색 필터와 pageNum을 포함해 POST하고 #twinCurrent를 교체합니다."],
+          "exceptions": ["정확 ID 조회 성공으로 부분 일치·공백·복수 ID·비정상 ID의 검색 규칙을 확정하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-add-exact2089239-20261109.html", "cms-knowledge/master-cms/evidence/2192-own-qa-twin-search-exact-clone.json", "cms-knowledge/master-cms/evidence/2586-own-set-copy2089358-original-set-exact-search.json"]
+        },
+        {
+          "title": "본인 문항과 이미 등록된 후보",
+          "trigger": "현재 앵커 본인 또는 같은 현재 그룹의 후보를 조회합니다.",
+          "visibleChanges": ["본인은 ‘본인 문항’, 이미 연결된 대상은 ‘등록된 문항’으로 표시하고 추가 버튼을 비활성화합니다."],
+          "policy": ["[실제 검증] 원문2089216의 본인 비활성과 재추가 완료 후2089239의 등록된 문항·비활성을 확인했습니다.", "[스토리보드 경계] 비활성 제어는 요청을 실행하지 않는 정상 UI 경계로 표시합니다."],
+          "exceptions": ["비활성 버튼을 우회한 직접 중복 요청의 서버 응답과 경합 정책은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2190-own-qa-twin-add-tab-populated.json", "cms-knowledge/master-cms/evidence/2197-own-qa-clone-add-candidate-after.json", "cms-knowledge/master-cms/evidence/2579-own-set-copy2089358-twin-add-default-candidate-actions.json"]
+        },
+        {
+          "title": "단건 앵커에서 세트 후보 추가 차단",
+          "trigger": "단건2089246에서 세트 자식2089242를 검색합니다.",
+          "visibleChanges": ["세트 지문2089241·자식4개 정보를 후보에 표시합니다.", "매핑 정보에 ‘세트 문항’을 표시하고 추가 버튼을 비활성화합니다."],
+          "policy": ["[후속 실제 검증: phase72] HTTP200 검색 결과에 후보가 나타나지만 정상 UI 추가는 차단됩니다.", "[실제 검증] 조회 전후 상세·관계·이력을 대조했고 Twin POST는 실행하지 않았습니다."],
+          "exceptions": ["이 두 표본과 현재 계정에서의 UI 차단입니다. 직접 요청 거부·다른 역할의 서버 정책은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3356-mixed-twin-single246-search-set242.json", "cms-knowledge/master-cms/session-20261111-phase72.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3357-mixed-twin-single-candidate-visual.png"
+        },
+        {
+          "title": "세트 앵커에서 단건 후보 추가 차단",
+          "trigger": "세트 자식2089242에서 단건2089246을 검색합니다.",
+          "visibleChanges": ["단건 후보의 세트 정보를 ‘-’로 표시합니다.", "매핑 정보에 ‘세트 문항 아님’을 표시하고 추가 버튼을 비활성화합니다."],
+          "policy": ["[후속 실제 검증: phase72] 역방향도 HTTP200의 정상 검색 결과에 후보가 나타나지만 추가는 차단됩니다.", "[실제 검증] 양방향에서 차단된 사실을 반영합니다. 예전 단방향 관찰만 있는 미확인 설명을 대체합니다."],
+          "exceptions": ["비활성 제어를 우회하거나 혼합 그룹 생성 요청을 실행한 것은 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3360-mixed-twin-set242-search-single246.json", "cms-knowledge/master-cms/session-20261111-phase72.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3361-mixed-twin-set-candidate-visual.png"
+        },
+        {
+          "title": "수동 추가 성공과 관계 복원",
+          "trigger": "추가 가능한 단건 또는 서로 다른 지문의 세트 후보에서 추가 버튼을 선택합니다.",
+          "visibleChanges": ["등록 안내와 현재 관계의 개수를 갱신합니다.", "이미 등록된 후보의 추가 버튼은 비활성화됩니다.", "현재 쌍둥이 탭에서 추가된 관계를 조회할 수 있습니다."],
+          "policy": ["[실제 검증] 단건2089239를 재추가하자 원문+COPY의2개 관계가 복원됐습니다.", "[후속 실제 검증: phase47] COPY세트에서 다른 원본 지문의 자식2089242 하나를 추가하자 양쪽8문항에 두 세트 관계가 복원됐습니다.", "[실제 검증] 수동 추가는 기존 생성 이력을 늘리지 않았고 내용·상태·버전·저장OMR은 비교 범위에서 보존됐습니다."],
+          "exceptions": ["논리적 관계 복원과 이전 물리 groupId 복원은 구분합니다.", "afterRequest 미포착을 실패로 단정하지 않고 후속 독립 조회와 관측 응답을 함께 사용했습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2195-own-qa-clone-add-once.json", "cms-knowledge/master-cms/evidence/2196-own-qa-clone-add-independent-readback.json", "cms-knowledge/master-cms/evidence/2197-own-qa-clone-add-candidate-after.json", "cms-knowledge/master-cms/evidence/2590-own-set-copy2089358-readd-original-set-once.json", "cms-knowledge/master-cms/evidence/2592-own-set-copy2089358-readd-eight-memberships-read.json"]
+        },
+        {
+          "title": "다른 단건 그룹 후보와 논리적 병합",
+          "trigger": "단건 그룹A의 앵커에서 다른 단건 그룹B의 후보를 검색해 추가합니다.",
+          "visibleChanges": ["후보는 ‘다른 쌍둥이 문항 그룹’으로 표시되며 이 표본의 추가 버튼은 활성입니다.", "추가 뒤 네 앵커 모두 기존 두 그룹의 네 문항을 같은 현재 관계로 표시합니다."],
+          "policy": ["[후속 실제 검증: phase66] {2089216,2089240}에서 {2089239,2089246}의2089239를 추가하자 네 문항의 합집합 관계가 조회됐습니다.", "[실제 검증] ‘다른 쌍둥이 문항 그룹’은 이 사례에서 차단 문구가 아닙니다. 이전 문서의 병합 미검증 설명을 보정합니다.", "[실제 검증] 서로 다른 질문 형태·단원·학년 표시를 가진 단건239/246도 수용됐습니다.", "[실제 검증] 이후246만 해제해 기존3문항 관계와246의0개를 복원했고 생성 이력은 늘지 않았습니다."],
+          "exceptions": ["두2멤버 단건 그룹의 한 사례입니다. 세트끼리 기존 그룹 병합·더 큰 그룹·모든 교과/형태 조합은 미검증입니다.", "어느 DB 그룹ID를 남기는지와 내부 병합 방식은 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3138-own216-group-b-candidate-policy.json", "cms-knowledge/master-cms/evidence/3141-own-twin-merge-all-four-memberships-readback.json", "cms-knowledge/master-cms/evidence/3146-own-twin-merge-baseline-membership-restored.json", "cms-knowledge/master-cms/two-single-twin-groups-merge-policy-20261110.md"]
+        },
+        {
+          "title": "같은 지문 형제의 활성 후보와 HTTP500",
+          "trigger": "연결을 해제한 COPY세트의2089358에서 같은 지문 형제2089359를 추가합니다.",
+          "visibleChanges": ["후보는 ‘추가 가능’·활성 버튼으로 표시됐습니다.", "정상 버튼 요청은 HTTP500을 반환했습니다.", "오류 문구는 비활성 현재 쌍둥이 탭의 #twinCurrent 안에 들어가 활성 추가 탭에서는 보이지 않았습니다."],
+          "policy": ["[확인된 예외: phase47] XHR과 ResourceTiming에서500을 확인했습니다. 관찰 도구 timeout과 구분합니다.", "[실제 검증] ‘요청을 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.’ 문구의 DOM 존재와 현재 탭의 가시성은 다릅니다.", "[실제 검증] 후속8문항 조회에서 현재 관계0과 기존 이력이 유지됐습니다.", "[스토리보드 경계] 관측 오류 상태와 개선 필요 주석으로 기록합니다. 근거 없이 정상 거절 토스트로 바꾸지 않습니다."],
+          "exceptions": ["같은 지문 후보를 원래 허용해야 하는지는 요구 정책 확인이 필요합니다.", "서버 로그·DB·근본 원인과 내부 쓰기 전체의 유무는 미확인입니다.", "보존 PNG가 없는 경우 새 오류 모달의 실제 픽셀 근거로 표현하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2579-own-set-copy2089358-twin-add-default-candidate-actions.json", "cms-knowledge/master-cms/evidence/2580-own-set-copy2089358-same-passage-add-probe-once.json", "cms-knowledge/master-cms/evidence/2581-own-set-copy2089358-same-passage-add-probe-receipt.json", "cms-knowledge/master-cms/evidence/2585-own-set-copy2089358-probe-error-visibility.json", "cms-knowledge/master-cms/set-twin-membership-and-same-passage-error-20261110.md"]
+        },
+        {
+          "title": "폐기 문항 검색과 추가 차단",
+          "trigger": "추가 탭에서 상태 D만 선택하고 폐기된 단건 또는 세트 자식을 검색합니다.",
+          "visibleChanges": ["후보에 폐기 상태와 ‘폐기 문항’ 사유를 표시하고 추가 버튼을 비활성화합니다.", "세트 후보는 폐기 후에도 지문ID·자식 수를 표시합니다."],
+          "policy": ["[후속 실제 검증: phase65·67] 단건2089387/D와 세트 자식2089389/D가 검색됐으며 정상 UI 재추가는 차단됐습니다.", "[실제 검증] D 기본 제외는 검색 기본값입니다. D를 선택하면 검색할 수 있으므로 목록에서 영구 소멸한 것으로 그리지 않습니다."],
+          "exceptions": ["비활성 버튼 우회·직접 요청의 서버 거부 정책은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3101-own-single216-discarded387-add-filter-result.json", "cms-knowledge/master-cms/evidence/3185-own-original242-discarded-set389-add-disabled-result.json", "cms-knowledge/master-cms/single-twin-linked-discard-and-history-policy-20261110.md", "cms-knowledge/master-cms/set-whole-discard-membership-history-policy-20261110.md"]
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_03",
+      "title": "문항 상세 > 쌍둥이 생성 자격과 생성 모달",
+      "states": [
+        {
+          "title": "생성 가능한 원본의 COPY 기본 모달",
+          "trigger": "생성 버튼이 활성인 원본 문항에서 ‘쌍둥이 문항 생성’을 선택합니다.",
+          "visibleChanges": ["복제와 AI 생성 라디오를 표시하고 복제를 기본 선택합니다.", "복제에는 ‘현재 문항을 그대로 복제합니다’, AI에는 유사 문항 생성 안내를 표시합니다.", "취소·닫기와 ‘생성 시작’ 버튼을 제공합니다."],
+          "policy": ["[실제 검증] 단건 승인 원본2089216의 모달을 확인했습니다.", "[정적 선언·실제 모달] 폼은 hidden itemId와 sourceType=COPY/AI를 사용합니다. 생성 개수·모델·프롬프트 입력란을 임의로 추가하지 않습니다.", "[실제 검증] AI를 선택한 뒤 취소하고 다시 열면 COPY가 기본 선택됩니다."],
+          "exceptions": ["모달을 열거나 라디오를 바꾸는 행동은 생성 요청이 아닙니다.", "전체 생성 자격을 승인Y 하나만으로 정의하지 않습니다. COPY 파생문항의 별도 미노출 사례가 있습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2157-approved-qa-twin-generate-dialog.json", "cms-knowledge/master-cms/evidence/2158-twin-ai-choice-local-only.json", "cms-knowledge/master-cms/evidence/2160-twin-generate-reopen-after-cancel.json", "cms-knowledge/master-cms/sources/qa-twin-ai-processing-20261109.html"],
+          "screenshot": "cms-knowledge/master-cms/evidence/2157-approved-qa-twin-generate-dialog.png"
+        },
+        {
+          "title": "세트 전원 미승인으로 생성 비활성",
+          "trigger": "자식4개가 모두 초안R인 원본 세트의 상세를 조회합니다.",
+          "visibleChanges": ["쌍둥이 생성 버튼이 비활성입니다.", "보존된 모달 템플릿에는 ‘세트에 승인(사용)이 아닌 문항이 있어 생성할 수 없습니다’라는 안내가 있습니다."],
+          "policy": ["[실제 검증] 전원R일 때 비활성이고 전원Y로 승인한 뒤 활성화된 표본을 확인했습니다.", "[표시 정책] 세트 전원 승인Y 안내를 사용합니다.", "[검증 구분] 비활성 버튼의 클릭 전 조사 중단과 숨김 템플릿 조회를 모달 열기 성공이나 서버 생성 거절로 기록하지 않습니다."],
+          "exceptions": ["혼합 상태 세트의 모든 경우·다른 역할·직접 생성 요청의 서버 반려는 미검증입니다.", "승인 전 OMR 누락 검사는 상태 승인 흐름의 검사이며 생성 모달의 새 필드가 아닙니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2500-own-set2089242-twin-action-availability.json", "cms-knowledge/master-cms/sources/own-set2089242-before-twin-20261110.html", "cms-knowledge/master-cms/set-review-twin-copy-policy-20261110.md"]
+        },
+        {
+          "title": "세트 전체 생성 안내",
+          "trigger": "원본 세트 전원Y인 상태에서 활성 생성 버튼을 선택합니다.",
+          "visibleChanges": ["‘세트 문항입니다. 세트에 속한 모든 문항의 쌍둥이가 함께 생성됩니다.’ 안내를 표시합니다.", "COPY/AI는 모두 활성이고 COPY가 기본입니다."],
+          "policy": ["[실제 검증] 원본 자식2089242에서 세트4문항의 생성 범위 안내를 확인했습니다.", "[정적 선언·실제 요청] 요청은 선택한 자식 itemId 하나와 sourceType을 사용합니다. 자식별로 생성 시작을 반복하는 화면으로 설계하지 않습니다."],
+          "exceptions": ["지문·자식의 새 식별자와 개수는 생성 결과에서 확인합니다. 확인창의 안내만으로 완료를 표시하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2541-own-set2089242-approved-twin-dialog-open.json", "cms-knowledge/master-cms/sources/own-set2089242-approved-twin-dialog-20261110.html", "cms-knowledge/master-cms/evidence/2545-own-set2089242-twin-copy-submit-once.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/2543-own-set2089242-approved-twin-dialog-pixels.png"
+        },
+        {
+          "title": "COPY 파생문항의 생성·이력 진입 버튼 미노출",
+          "trigger": "동일 COPY 문항2089239를 승인(미사용)N과 승인(사용)Y에서 각각 조회합니다.",
+          "visibleChanges": ["두 승인 상태 모두 상단 생성 버튼과 생성 이력 진입 버튼이 없습니다.", "숨김 생성 모달 템플릿은 존재하지만 사용자가 누를 정상 진입 제어는 없습니다."],
+          "policy": ["[후속 실제 검증: phase73] 같은 문항을 N→Y→N으로 실제 저장·복원해 상태 효과를 비교했습니다. 두 상태와 복원 후 모두 opener가0개입니다.", "[정책 보정] ‘N이라서 생성 버튼이 없다’고 설명하지 않습니다. 이 표본에서 N 상태만으로 미노출을 설명할 수 없음을 확인했습니다.", "[실제 검증] 생성 요청은 수행하지 않았고 내용·버전·가족 관계·이력·draft를 기준 상태로 확인했습니다."],
+          "exceptions": ["COPY라는 생성 방식만이 원인인지 등 서버의 전체 자격 규칙은 미확인입니다.", "버튼 없음과 비활성 버튼을 구분합니다. 템플릿을 강제로 여는 흐름은 스토리보드에 넣지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3370-copy239-generation-status-n-observation.json", "cms-knowledge/master-cms/evidence/3374-copy239-generation-status-y-observation.json", "cms-knowledge/master-cms/evidence/3379-copy239-generation-status-restored-n-observation.json", "cms-knowledge/master-cms/session-20261111-phase73.json"]
+        },
+        {
+          "title": "COPY 생성 시작과 완료",
+          "trigger": "COPY를 선택하고 ‘생성 시작’을 누릅니다.",
+          "visibleChanges": ["모달을 먼저 닫고 생성 요청을 제출합니다.", "twinGenerated 응답을 받으면 ‘쌍둥이 문항이 생성되었습니다.’ 안내를 다음 화면에 전달하고 상세를 다시 읽습니다.", "새 초안 문항·그룹 관계·생성 이력을 조회할 수 있습니다."],
+          "policy": ["[실제 검증] 단건 원문2089216의 한 번의 COPY는 새2089239/R을 만들고 원문 포함2멤버가 됐습니다.", "[후속 실제 검증: phase46] 세트의 한 번의 COPY는 새 지문2089357과 자식2089358~2089361/R을 만들었습니다. 대응 부모가 표시됐고 원본·COPY의2세트8행이 조회됐습니다.", "[실제 검증] 비교한 질문/지문 모델·저장OMR·정답·HML 참조는 유지됐습니다. 원본 파일·출처 연결·평가지 등록 표시까지 모두 복제됐다고 설명하지 않습니다."],
+          "exceptions": ["동일 HML/이미지 URL은 참조의 일치입니다. 물리 파일 복사 구현은 이 생성 근거만으로 확정하지 않습니다.", "로딩 오버레이의 선언을 모든 동시성·중복 요청의 서버 방어 증명으로 사용하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2170-own-qa-twin-copy-submit-once.json", "cms-knowledge/master-cms/evidence/2172-own-qa-twin-copy-independent-readback.json", "cms-knowledge/master-cms/evidence/2545-own-set2089242-twin-copy-submit-once.json", "cms-knowledge/master-cms/evidence/2550-own-set-copy2089357-all-detail-read.json", "cms-knowledge/master-cms/set-twin-copy-comparison-20261110.json"]
+        },
+        {
+          "title": "AI 선택과 요청 접수",
+          "trigger": "생성 모달에서 AI를 선택하고 ‘생성 시작’을 누릅니다.",
+          "visibleChanges": ["AI 생성 라디오를 선택 상태로 표시합니다.", "제출 후 모달을 닫고 ‘쌍둥이 문항 생성을 요청했습니다.’ 안내와 상세 재조회를 수행합니다.", "접수 직후 생성 중 버튼 상태로 바뀝니다."],
+          "policy": ["[실제 검증] 단건2089216과 세트의 자식2089242에서 각각 한 번의 sourceType=AI 요청을 확인했습니다.", "[실제 검증] AI 요청 수락과 비동기 결과 생성 완료는 다른 상태입니다. 접수 시점에 새 결과 문항을 완료 상태로 표시하지 않습니다."],
+          "exceptions": ["단순 AI 선택·취소는 서버 요청이 아닙니다.", "AI 실패·사용자 취소·재시도·여러 결과 수와 제한시간의 일반 정책은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2158-twin-ai-choice-local-only.json", "cms-knowledge/master-cms/evidence/2203-own-qa-ai-generation-submit-once.json", "cms-knowledge/master-cms/evidence/2204-own-qa-ai-generation-server-state.json", "cms-knowledge/master-cms/evidence/2854-own-set-ai-generation-submit-once.json", "cms-knowledge/master-cms/evidence/2855-own-set-ai-generation-post-observation.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/2158-twin-ai-choice-local-only.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_04",
+      "title": "문항 상세 > 생성 처리 중 팝오버와 후속 완료",
+      "states": [
+        {
+          "title": "생성 처리 중 버튼과 진행 팝오버",
+          "trigger": "data-working=true인 ‘쌍둥이 문항 생성 중’ 버튼을 선택합니다.",
+          "visibleChanges": ["생성 모달 대신 진행 팝오버를 표시합니다.", "생성 방식·요청자·요청 시각과 ‘완료되면 생성된 문항이 문항 리스트에 추가됩니다.’를 표시합니다.", "세트라면 모든 문항이 함께 생성된다는 안내를 더하는 코드입니다."],
+          "policy": ["[실제 검증] 단건의 처리 중 버튼은 disabled=false였지만 클릭 시 팝오버만 열렸고 해당 클릭의 추가 htmx 요청은0이었습니다.", "[정적 선언] working=true이면 생성 모달 열기 전에 return합니다. 같은 버튼 재선택·외부 클릭·닫기로 팝오버를 해제하는 코드입니다.", "[검증 구분] working=true를 내부 W/P 큐 단계로 세분하지 않습니다. 서버 렌더 속성만 확인됐습니다."],
+          "exceptions": ["팝오버의 모든 토글·외부 클릭·세트 분기를 실제 반복 검증한 것은 아닙니다.", "서버 전체 중복 요청 방어와 처리 실패 상태는 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2206-own-qa-ai-working-button-popover.json", "cms-knowledge/master-cms/sources/qa-twin-ai-processing-20261109.html", "cms-knowledge/master-cms/evidence/2855-own-set-ai-generation-post-observation.json"]
+        },
+        {
+          "title": "단건 AI 완료와 관계·이력 증가",
+          "trigger": "같은 AI 요청의 후속 결과를 다시 조회합니다.",
+          "visibleChanges": ["서버 렌더의 working이false로 돌아옵니다.", "새 AI2089240/R·부모2089216이 생기고 원문·COPY·AI의3멤버가 표시됩니다.", "생성 이력에 기존 COPY와 새 AI의2건이 표시됩니다."],
+          "policy": ["[후속 실제 검증: phase36] 기존 처리 중 관찰 뒤 독립 조회로 새 결과의 식별자·초안 상태·내용 변형·저장OMR/정답⑤를 확인했습니다.", "[실제 검증] 단건 새 문항은1개이고 그룹3개에는 원문이 포함됩니다.", "[표시 경계] 이 단건의 working=false는 배경 서버 조회 근거입니다. 완료 순간의 화면 자동 전환을 관찰한 것으로 표현하지 않습니다."],
+          "exceptions": ["표시 시각·조회 간격으로 실제 내부 처리 시간을 계산하지 않습니다.", "서비스 채점과 AI 품질의 전체 보증은 미검증입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2225-own-qa-ai-background-server-progress.json", "cms-knowledge/master-cms/evidence/2226-own-qa-ai-background-histories.json", "cms-knowledge/master-cms/evidence/2227-own-ai-child2089240-background-source.json"]
+        },
+        {
+          "title": "세트 AI 완료와 새 지문·자식 생성",
+          "trigger": "세트 AI 요청의 후속 이력과 새 결과 상세를 조회합니다.",
+          "visibleChanges": ["원본의 현재 화면은 working=false와 일반 생성 버튼으로 돌아옵니다.", "새 지문2089381과 자식2089382~2089385/R을 표시합니다.", "각 새 자식에 대응 원본 부모를 표시하고 원본·COPY·AI의3세트12행을 조회합니다.", "원본 자식 각각의 이력에는 같은 COPY와 AI 생성 묶음이 표시됩니다."],
+          "policy": ["[후속 실제 검증: phase59] 한 번의 세트 AI 요청으로 자식4개가 생성됐습니다. 이전 문서의 세트AI 미검증 설명을 대체합니다.", "[실제 검증] 원본 자식의 이력2건과 파생 COPY/AI 자식의 이력0건은 현재 관계3세트와 별개입니다.", "[실제 검증] 행렬 수치는 바뀌고 크기는 유지됐습니다. 기존 원본·COPY·대조 단건의 상태·모델·버전·OMR·이미지 참조는 비교 범위에서 보존됐습니다."],
+          "exceptions": ["AI가 사용한 정확한 파일·HTML/HML 우선순위·추출/캐시·실제 payload는 미확인입니다.", "새 OMR 허용 정답의 TIMES 문자열과 본문 곱셈 수식 차이는 관측됐지만 서비스 채점 오류로 단정하지 않습니다.", "보존된 상세 PNG를 처리 중 팝오버의 실제 PNG로 사용하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2878-own-set-ai-history-fresh-poll.json", "cms-knowledge/master-cms/evidence/2885-own-set-ai-original-finished-ui-observation.json", "cms-knowledge/master-cms/evidence/2882-own-set-ai-twelve-memberships-after-read.json", "cms-knowledge/master-cms/set-ai-generation-lineage-and-content-20261110.md", "cms-knowledge/master-cms/own-set-ai-control-preservation-comparison-20261110.json"]
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_05",
+      "title": "문항 상세 > 쌍둥이 생성 이력",
+      "states": [
+        {
+          "title": "생성 이력 없음",
+          "trigger": "이력 진입 버튼이 있는 문항에서 ‘쌍둥이 생성 이력’을 선택하고 빈 배열을 받습니다.",
+          "visibleChanges": ["문항 ID·방식·요청자·생성일시 열을 가진 이력 모달을 표시합니다.", "빈 배열이면 ‘아직 생성된 쌍둥이 문항이 없습니다.’ 안내를 표시하는 코드입니다."],
+          "policy": ["[정적 선언] 버튼을 누를 때마다 /item/all/twin-histories.donga?itemId=현재문항을 조회한 뒤 모달을 엽니다.", "[실제 화면 확인] 세트2088663의 이력 모달에서 빈 이력 안내와 닫기 제어를 확인한 AX·PNG가 있습니다.", "[검증 구분] 파생문항의 생성 이력 데이터가 빈 것과 이력 버튼 자체가 없는 것은 다른 상태입니다."],
+          "exceptions": ["빈 이력 모달의 모든 자격·역할 조합은 미검증입니다. 숨김 템플릿만으로 정상 진입을 보장하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-ai-processing-20261109.html", "cms-knowledge/master-cms/evidence/164-twin-generation-history.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/164-twin-generation-history.png"
+        },
+        {
+          "title": "단건 생성 이력과 새 탭 링크",
+          "trigger": "COPY/AI 생성 완료 후 원본에서 이력 버튼을 선택합니다.",
+          "visibleChanges": ["생성된 문항 ID·복제/AI생성 방식·요청자·생성일시를 표시합니다.", "각 ID에 해당 문항 상세의 새 탭 링크를 제공합니다."],
+          "policy": ["[실제 검증] 단건 COPY 완료 후2089239 이력이, AI 완료 후2089240과 기존 COPY 이력이 조회됐습니다.", "[정적 선언] 링크는 현재 상세의 목록 검색 조건을 넘기지 않는 개별 문항 상세 링크입니다.", "[실제 검증] 수동 관계 해제·재추가·병합은 이력을 만들거나 기존 이력을 지우지 않았습니다."],
+          "exceptions": ["이력을 현재 쌍둥이 멤버 목록으로 해석하지 않습니다.", "이력 전체 보존 기간과 영구 삭제 정책은 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/2173-own-qa-copy-history-modal.json", "cms-knowledge/master-cms/evidence/2226-own-qa-ai-background-histories.json", "cms-knowledge/master-cms/evidence/2196-own-qa-clone-add-independent-readback.json", "cms-knowledge/master-cms/two-single-twin-groups-merge-policy-20261110.md"]
+        },
+        {
+          "title": "세트 생성 한 건의 다중 자식 이력",
+          "trigger": "세트 COPY/AI 완료 후 원본 세트의 자식에서 이력을 조회합니다.",
+          "visibleChanges": ["한 생성 묶음의 자식 itemIds를 한 문항씩 행으로 표시합니다.", "방식·요청자·생성일시는 묶음 첫 행에서 자식 수만큼 합쳐 표시하는 코드입니다."],
+          "policy": ["[실제 검증] 세트 COPY의 자식4개 ID와 AI의 자식4개 ID가 각각 하나의 생성 묶음으로 반환됐습니다.", "[실제 검증] 원본 네 자식 각각에서 같은 묶음을 조회할 수 있어도 생성 요청을 네 번 실행한 것으로 세지 않습니다.", "[실제 검증] 새 파생 자식의 이력이0이어도 현재 쌍둥이 관계는 존재합니다."],
+          "exceptions": ["API 묶음과 화면의 행 수, 요청 횟수는 구분합니다.", "코드의 rowspan 구조와 후속 조회 근거를 모든 이력 모달의 픽셀 검증 완료로 확대하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-ai-processing-20261109.html", "cms-knowledge/master-cms/evidence/2552-own-set-twin-original-copy-eight-memberships-read.json", "cms-knowledge/master-cms/evidence/2882-own-set-ai-twelve-memberships-after-read.json", "cms-knowledge/master-cms/set-ai-generation-lineage-and-content-20261110.md"]
+        },
+        {
+          "title": "이력 조회 오류·세션 리다이렉트 경계",
+          "trigger": "이력 조회의 응답이 비정상 HTTP이거나 redirected=true이거나 JSON 처리에 실패합니다.",
+          "visibleChanges": ["‘쌍둥이 생성 이력을 불러오지 못했습니다.’ 위험 토스트를 표시하는 코드입니다.", "정상 이력 렌더 완료 후에만 모달을 여는 구조입니다."],
+          "policy": ["[정적 선언] fetch는 !res.ok 또는 res.redirected를 오류로 처리합니다. 로그인 HTML을 정상 이력으로 그리지 않습니다.", "[검증 구분] 실제 세션 만료·네트워크 실패를 유발해 검증한 결과가 아닙니다."],
+          "exceptions": ["오류 코드별 서버 문구·복구·자동 로그인 이동의 전체 정책은 미확인입니다.", "응답 HX-Trigger의 잘못된 JSON 등 모든 예외를 같은 토스트로 처리한다고 확장하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/sources/qa-twin-ai-processing-20261109.html", "cms-knowledge/master-cms/research/item-detail-behavior.md"]
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_TWN_06",
+      "title": "상태 폐기 확인과 쌍둥이·이력 영향",
+      "states": [
+        {
+          "title": "연결된 단건 문항의 폐기 확인",
+          "trigger": "대상 단건의 상태 수정을 열고 폐기D를 선택한 뒤 저장을 선택합니다.",
+          "visibleChanges": ["‘상태 정보 저장’ 확인창에 ‘폐기 시 쌍둥이 문항에서 제외됩니다.’ 안내를 표시합니다.", "취소·닫기는 최종 상태 저장을 실행하지 않고, 확인창의 저장은 폼을 제출합니다."],
+          "policy": ["[실제 검증: phase65] 새 COPY2089387/R에서 확인창을 열고 최종 저장을 한 번 실행했습니다.", "[스토리보드 경계] 이 확인창은 관계 해제의 삭제 확인창이 아니라 문항 상태 폐기의 최종 확인입니다.", "[정적 선언·실제 검증] 상태 폼은 /item/all/status-save.donga를 사용하고 성공 뒤 상세를 다시 읽습니다."],
+          "exceptions": ["확인창 열기와 최종 저장은 다른 단계입니다.", "모든 상태·계정에서 폐기 전이가 가능한 것으로 일반화하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3081-own-disposable387-discard-confirm-read.json", "cms-knowledge/master-cms/evidence/3083-own-disposable387-discard-final-once.json", "cms-knowledge/master-cms/sources/own-disposable387-before-discard-20261110.html"]
+        },
+        {
+          "title": "단건 폐기 뒤 현재 관계 제외·이력 보존",
+          "trigger": "연결된 새 단건 COPY의 폐기 최종 저장을 완료하고 결과를 다시 조회합니다.",
+          "visibleChanges": ["대상은D·현재 쌍둥이0개·상태 수정 비활성으로 표시됩니다.", "나머지 기존3멤버 관계는 유지됩니다.", "원본의 생성 이력에는 폐기된2089387 행과 일반 상세 링크가 남습니다."],
+          "policy": ["[후속 실제 검증: phase65] 폐기된 문항의 상세는 HTTP200으로 조회됐고 정상 수정 URL은 해당 상세로 리다이렉트됐습니다.", "[실제 검증] 대상의 모델·버전·저장OMR·이미지 참조와 기존3문항의 비교 데이터는 유지됐습니다.", "[실제 검증] 현재 관계 제외를 문항 내용·생성 이력·파일의 물리 삭제로 설명하지 않습니다."],
+          "exceptions": ["강제 복원·다른 역할·직접 상태 요청·물리 자산 수명은 미검증입니다.", "3091 PNG는 폐기 상세 상단만 보존합니다. 확인창이나 전체 세로의 PNG로 사용하지 않습니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3086-own-disposable387-after-discard-current.json", "cms-knowledge/master-cms/evidence/3087-own-single-family-after-discard-memberships-history.json", "cms-knowledge/master-cms/evidence/3095-own-single216-post-discard-generation-history-ui.json", "cms-knowledge/master-cms/disposable-single387-linked-discard-comparison-20261110.json"],
+          "screenshot": "cms-knowledge/master-cms/evidence/3091-own-disposable387-post-discard-visual-retry.png"
+        },
+        {
+          "title": "세트 전체 폐기 확인",
+          "trigger": "새 COPY 세트의 자식2089389에서 상태 수정 > 폐기D > 저장을 선택합니다.",
+          "visibleChanges": ["확인창에 ‘세트 문항 전체가 폐기되며, 쌍둥이 문항에서 제외됩니다.’ 안내를 표시합니다.", "취소·닫기와 최종 저장 버튼을 제공합니다."],
+          "policy": ["[후속 실제 검증: phase67] 안정된 확인창 shown=true·transitioning=false에서 안내를 확인한 뒤 최종 저장을 한 번 실행했습니다.", "[범위] 선택한 자식만이 아니라 같은 논리 지문의 세트 전체가 대상입니다. 다른 쌍둥이 세트 전체를 폐기한다는 뜻이 아닙니다.", "[검증 구분] 앞선 transitioning=true 관찰을 열기 실패로 표기하지 않습니다."],
+          "exceptions": ["자식 전원R인 새 COPY4문항의 검증입니다. 혼합 상태·이미 배포된 세트의 동일 결과는 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3169-own-disposable-set389-stable-confirm-ready.json", "cms-knowledge/master-cms/evidence/3170-own-disposable-set389-whole-discard-final-once.json", "cms-knowledge/master-cms/set-whole-discard-membership-history-policy-20261110.md"]
+        },
+        {
+          "title": "세트 전체 폐기 뒤 논리 세트·이력 유지",
+          "trigger": "새 COPY 세트의 폐기 저장 후 자식4개와 원본·기존COPY·AI 관계를 다시 조회합니다.",
+          "visibleChanges": ["새2089389~2089392는 모두D·현재 쌍둥이0개·상태 수정 비활성입니다.", "폐기된 자식 상세에는 지문2089388과 자식4개의 세트 정보가 남습니다.", "기존 원본·COPY·AI는3세트12행으로 조회됩니다.", "원본의 생성 이력에는 폐기된 새COPY의 자식4개 묶음이 남습니다."],
+          "policy": ["[후속 실제 검증: phase67] 선택 자식의 한 번의 저장으로 새 세트4문항이 모두 R→D가 됐고 각 상세 버전·모델·OMR·이미지 참조는 유지됐습니다.", "[실제 검증] 논리 세트 유지, 현재 쌍둥이 관계 제외, 생성 이력 보존을 별도로 표현합니다.", "[실제 검증] 기존 원본Y·COPY R·AI R과 비교 데이터는 보존됐고 새 세트의 정상 수정 URL은 각 상세로 돌아갔습니다."],
+          "exceptions": ["원본/다른 쌍둥이 세트까지 폐기된 것으로 그리지 않습니다.", "새 PNG가 없는 단계입니다. DOM·독립 조회 확인을 신규 픽셀 검토 완료로 표기하지 않습니다.", "전체 DB·원격 바이너리 불변과 복구 정책은 미확인입니다."],
+          "evidence": ["cms-knowledge/master-cms/evidence/3172-own-disposable-four-after-whole-discard.json", "cms-knowledge/master-cms/evidence/3176-own-twelve-set-memberships-after-disposable-discard.json", "cms-knowledge/master-cms/evidence/3177-own-original-set-discarded-copy-history-retained.json", "cms-knowledge/master-cms/disposable-set389-whole-discard-comparison-20261110.json", "cms-knowledge/master-cms/set-whole-discard-membership-history-policy-20261110.md"]
+        }
+      ]
+    }
+  ]
+}

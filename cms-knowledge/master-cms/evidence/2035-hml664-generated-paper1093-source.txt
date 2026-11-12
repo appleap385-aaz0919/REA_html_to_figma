@@ -1,0 +1,153 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e23493]
+      - link "문제은행 마스터 CMS" [ref=e23494]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e23503]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e23504]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e23505]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e23506]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e23507]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e23498]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "평가지 상세" [level=2, ref=e23495]
+      - generic
+        - heading "기본 정보" [level=3, ref=e23499]
+        - DescriptionList
+          - term "평가지 ID"
+          - definition
+            - StaticText "1093 (1101)"
+          - term "평가지명"
+          - definition
+            - StaticText "QA-HML-20261109-01-SET"
+          - term "상태"
+          - definition
+            - StaticText "초안"
+          - term "생성 방식"
+          - definition
+            - StaticText "HML 생성"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22MMAT0KOK1004040000]"
+            - StaticText "22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 반비례와 그 그래프 > >"
+          - term "등록"
+          - definition
+            - StaticText "jaehyuk.myung · 2026-11-09"
+        - DescriptionList
+          - term "시험지"
+          - definition
+            - link "664 | QA-HML-20261109-01-SET.hml" [ref=e23535]
+          - term "출처"
+          - definition
+            - StaticText "[22-M-MA-T0-1-1-SMT-TP-2022]"
+            - StaticText "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022"
+          - term "페이지"
+          - definition
+            - StaticText "2 ~ 22"
+          - term "용도"
+          - definition
+            - StaticText "교사용"
+          - term "문제 구성"
+          - definition
+            - StaticText "객관식 > 단답형 > N지 선다 (2)"
+          - term "문항 수"
+          - definition
+            - StaticText "2문항"
+      - generic
+        - heading "배포" [level=3, ref=e23500]
+        - generic [ref=e23502] focusable [tabindex]
+          - button " 배포하기" [disabled, ref=e23508]
+            - StaticText ""
+            - StaticText "배포하기"
+        - table
+          - rowgroup
+            - row
+              - columnheader "서비스" [ref=e23536]
+              - columnheader "배포 버전" [ref=e23537]
+              - columnheader "승인 여부" [ref=e23538]
+              - columnheader "서비스 상태" [ref=e23539]
+              - columnheader "최근 배포" [ref=e23540]
+              - columnheader "배포" [ref=e23541]
+          - row
+            - cell "AI출제마법사 CMS" [ref=e23509]
+            - cell "-" [ref=e23510]
+            - cell "-" [ref=e23511]
+            - cell "-" [ref=e23512]
+            - cell "-" [ref=e23513]
+            - cell "-" [ref=e23514]
+          - row
+            - cell "개발 서비스" [ref=e23515]
+            - cell "-" [ref=e23516]
+            - cell "-" [ref=e23517]
+            - cell "-" [ref=e23518]
+            - cell "-" [ref=e23519]
+            - cell "-" [ref=e23520]
+      - generic
+        - heading "포함 문항 (2)" [level=3, ref=e23501]
+        - table
+          - rowgroup
+            - row
+              - columnheader "순서" [ref=e23542]
+              - columnheader "문항 ID" [ref=e23543]
+              - columnheader "문제" [ref=e23544]
+              - columnheader "형태" [ref=e23545]
+              - columnheader "난이도" [ref=e23546]
+              - columnheader "단원 코드" [ref=e23547]
+              - columnheader "문항 상태" [ref=e23548]
+          - row
+            - cell "1" [ref=e23521]
+            - cell "2089215" [ref=e23522]
+              - StaticText "2089215"
+            - cell "자연수 전체의 집합의 두 부분집합    $A _{m} = \\left\\{x | x는 \\hspace{0.5em} m의 \\hspace{0.375em} 배수, \\hspace{0.5em} m은 \\hspace{0.5em} 자연수\\right\\}$    $B _{n} = \\left\\{x | x는 \\hspace{0.5em} n의 \\hspace{0.375em} 약수, \\hspace{0.5em} n은 \\hspace{0.5em} 자연수\\right\\}$에 대하여 $A _{3} \\cap A _{4} \\subset A _{p}$를 만족시키는 자연수 $p$의 최댓값과 $\\left(B _{12} \\cap B _{18}\\right) \\subset B _{q}$를 만족시키는 자연수 $q$의 최솟값의 합은?$18$$21$$24$$27$$30$" [ref=e23523]
+              - link "자연수 전체의 집합의 두 부분집합    $A _{m} = \\left\\{x | x는 \\hspace{0.5em} m의 \\hspace{0.375em} 배수, \\hspace{0.5em} m은 \\hspace{0.5em} 자연수\\right\\}$    $B _{n} = \\left\\{x | x는 \\hspace{0.5em} n의 \\hspace{0.375em} 약수, \\hspace{0.5em} n은 \\hspace{0.5em} 자연수\\right\\}$에 대하여 $A _{3} \\cap A _{4} \\subset A _{p}$를 만족시키는 자연수 $p$의 최댓값과 $\\left(B _{12} \\cap B _{18}\\right) \\subset B _{q}$를 만족시키는 자연수 $q$의 최솟값의 합은?$18$$21$$24$$27$$30$" [ref=e23549]
+            - cell "객관식 > 단답형 > N지 선다" [ref=e23524]
+            - cell "-" [ref=e23525]
+            - cell "-" [ref=e23526]
+            - cell "실패(재등록)" [ref=e23527]
+          - row
+            - cell "2" [ref=e23528]
+            - cell "2089216" [ref=e23529]
+              - StaticText "2089216"
+            - cell "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$" [ref=e23530]
+              - link "다음 중 그림과 같은 반비례 관계 $y=\\dfrac{a}{x}$의 그래프 위의 점이 아닌 것은? (단, $a$는 상수이다.)$(2,~6)$$(1,~12)$$(3,~4)$$(-3,~4)$$(-6,~-2)$" [ref=e23550]
+            - cell "객관식 > 단답형 > N지 선다" [ref=e23531]
+            - cell "하" [ref=e23532]
+            - cell "22MMAT0KOK1004040000" [ref=e23533]
+              - StaticText "22MMAT0KOK1004040000"
+            - cell "초안" [ref=e23534]
+      - link "목록" [ref=e23496]
+      - link "수정" [ref=e23497]

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "status": "in_progress",
+  "scope": "dev-exambank.dongahub.com",
+  "evidenceRange": [735, 777],
+  "testItemId": 2088985,
+  "savedDetailId": 2088696,
+  "observations": [
+    {"code": "SBMADD", "evidence": [735, 738, 740, 743, 746, 749, 750, 751, 753], "result": "Starts two left symbols/two right choices. One target dropdown and independent comma per left; no Add connection control. Final test values are left math1234/2, right math3/4; targets3/4; comma first=true,second=false. First legend3 automatically fills empty targets."},
+    {"code": "SBMADD", "evidence": [754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], "result": "Current student preview uses two dropdowns, not a direct drag canvas. Symbols1234 and2 and first comma appear. Student3/4 correct760; reversed4/3 incorrect765."},
+    {"code": "SBMADD", "evidence": [766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777], "result": "Full apply769 creates Master detail2088696. Reentry and keyboard OMR activation restore all four MathLive values, target3/4 and independent comma flags. Targeted .page-wrapper scroll reaches bottom (86+1015=1101)776. Screenshot777 confirms rendered values and bottom controls."}
+  ],
+  "qualityNotes": [
+    {"evidence": [736, 737, 738, 739, 740], "rule": "First focused math keyboard entry produced1, but batching AX-math focus/typing for the remaining fields did not move the effective MathLive receiver.740 reads first1234 and three empty values. Do not treat successful focus/typed responses as field-targeting proof. This is a controller-path issue, not a proven CMS defect."},
+    {"evidence": 739, "rule": "Batch commands ran, then capture helper crashed because CLI batch response is an array. Raw batch response was not retained. No retry of possibly executed input.740 reconciled actual values; helper now handles arrays. Subsequent fields were entered through verified Sigma popup Apply741-749."},
+    {"evidence": [774, 777], "rule": "Page visibility is visible774 and screenshot777 completes0.306s. Earlier background screenshot732 failed after30.086s. These measurements do not establish a universal focus requirement or CMS response time."}
+  ],
+  "remaining": [
+    "SBMADD row/choice min/max, blank/duplicates, repeated targets and unequal column counts; image/text variants.",
+    "Three essay leaves and edited OBSACN save; remaining OMR boundaries.",
+    "HML four document slots and remaining Master modules."
+  ]
+}

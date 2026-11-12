@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-06",
+  "status": "in_progress",
+  "persistentSiteMutations": 0,
+  "mappingModals": {
+    "unit": {
+      "evidence": [
+        "044",
+        "045",
+        "046",
+        "047"
+      ],
+      "query": "22MMAT0KOK1004030000",
+      "resultCount": 1,
+      "emptyApply": "Closed modal with existing unit unchanged. No validation toast observed."
+    },
+    "achievement": {
+      "evidence": [
+        "048",
+        "049",
+        "050"
+      ],
+      "observedCount": 245,
+      "coverage": "Scrolled to footer, then cancelled."
+    },
+    "domain": {
+      "evidence": [
+        "051",
+        "052"
+      ],
+      "observedCount": 35,
+      "coverage": "Whole modal fits screen; cancelled."
+    },
+    "competency": {
+      "evidence": [
+        "053",
+        "054"
+      ],
+      "observedCount": 15,
+      "coverage": "Whole modal fits screen; page 2 unvisited; cancelled."
+    },
+    "behavior": {
+      "evidence": [
+        "055",
+        "056"
+      ],
+      "observedCount": 4,
+      "codes": [
+        "MA01",
+        "MA02",
+        "MA03",
+        "MA04"
+      ],
+      "coverage": "Single radio; existing MA01; cancelled."
+    }
+  },
+  "hml": {
+    "evidence": [
+      "058",
+      "059",
+      "061",
+      "063",
+      "064",
+      "065",
+      "066",
+      "067",
+      "068",
+      "069",
+      "070",
+      "071",
+      "072",
+      "073",
+      "075"
+    ],
+    "observed": [
+      "No passage/translation on this single item: corresponding buttons disabled.",
+      "Question and answer HML document load completed.",
+      "File/Edit/View/Insert/Format/Page/Table menus expanded.",
+      "Answer document actual bottom in 075."
+    ],
+    "unverified": [
+      "Save, PNG generation and parent transfer runtime.",
+      "Individual HWP menu command behavior.",
+      "Question document actual bottom."
+    ],
+    "staticReport": "research/hml-editor-behavior.md"
+  },
+  "html": {
+    "evidence": [
+      "083",
+      "084",
+      "085",
+      "086",
+      "088",
+      "090",
+      "091",
+      "092",
+      "093",
+      "094",
+      "095",
+      "096",
+      "097",
+      "098",
+      "103",
+      "106",
+      "107",
+      "108",
+      "109"
+    ],
+    "observed": [
+      "Scrolled top/middle/bottom of full HTML page.",
+      "Paragraph settings and cancel.",
+      "Full HTTP(S) image URL browser prompt and cancel.",
+      "Default 2x2 table immediate insertion and undo.",
+      "Empty math insertion, visual/source views, cancel removes new math.",
+      "Undo after math cancel restores prior state, redo reverts.",
+      "Inline symbol palette.",
+      "Character overlap dialog and cancel.",
+      "Textbox insertion, resize handles, double-click editor with align/width/height/min-height; cancel then undo."
+    ],
+    "unverified": [
+      "Shape dropdown options not visually proven by 099/102.",
+      "d-box/d-input, table context and image-size runtime.",
+      "All boundary validation."
+    ],
+    "occludedScreenshots": [
+      "099",
+      "105"
+    ],
+    "staticReport": "research/html-editor-behavior.md"
+  },
+  "omr": {
+    "evidence": [
+      "110",
+      "111",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126"
+    ],
+    "observed": [
+      "Single-answer multiple-choice form with options 1-5 and correct answer 5.",
+      "Full page scrolled to footer in 111.",
+      "Empty response grading shows incorrect.",
+      "Answer 5 grades correct; answer 1 grades incorrect.",
+      "Changing selected answer clears prior grade feedback.",
+      "Answer mode highlights saved correct answer 5 and hides grading button.",
+      "Closed preview modal in 126."
+    ],
+    "unverified": [
+      "Other 13 type runtime forms.",
+      "Answer-mode toggle-off retention."
+    ],
+    "transientDisplayDifference": "110-114 viewer had a leading character absent in 109 AX and original HTML. Cause unproven. Reload 115-117 restored original. Not classified as a product defect or persistent change."
+  },
+  "qualityNotes": [
+    "074 did not prove menu closure.",
+    "062 stale index, 080 windowNotFound after close action, 100 focus error are tool observations, not CMS bugs.",
+    "112/113 did not prove ellipsis menu opened.",
+    "115 immediate reload was transitional; use 116/117 settled state.",
+    "No save, apply-all, deployment, persistent delete or upload was executed."
+  ],
+  "stillOutstanding": [
+    "Set detail examples",
+    "Other single examples",
+    "HML/Definition registration",
+    "Twin management",
+    "Papers",
+    "Sources",
+    "Lab",
+    "Remaining editing tools",
+    "Knowledge/inventory integration"
+  ]
+}

@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2580-own-set-copy2089358-same-passage-add-probe-once","command":["eval","--file","sources/runtime/own-set-copy2089358-same-passage-add-probe-once.js"]},
+ {"label":"2581-own-set-copy2089358-same-passage-add-probe-receipt","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089358')throw Error('Own probe receipt only');return {receipt:window.__qaSamePassageAddProbeResponse,count:document.getElementById('twinCountBadge')?.innerText,currentText:document.getElementById('twinCurrent')?.innerText,alerts:[...document.querySelectorAll('[role=alert],.toast')].map(e=>e.innerText)};})()"]},
+ {"label":"2582-own-set-copy2089358-same-passage-add-probe-pixels","command":["snapshot"],"screenshot":true},
+ {"label":"2583-own-set-copy2089358-same-passage-add-probe-membership-read","command":["eval","--file","sources/runtime/own-set-twin-eight-memberships-read.js"]},
+ {"label":"2584-own-set-copy2089358-same-passage-add-probe-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":250}

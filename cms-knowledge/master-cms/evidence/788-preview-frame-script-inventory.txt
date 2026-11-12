@@ -1,0 +1,19 @@
+- LabelText
+  - StaticText "정답 보기"
+  - switch [checked=false, ref=e1079]
+- StaticText "번호"
+- StaticText "답 란"
+- generic
+  - StaticText "01"
+  - strong
+    - StaticText "QA 풀이 과정"
+  - paragraph
+    - StaticText "답 입력 방식을 선택해 주세요."
+  - button "답안 작성" [ref=e1080]
+  - button "파일 선택" [ref=e1081]
+- status
+  - strong
+    - StaticText "판정할 수 없습니다."
+  - StaticText "자동으로 비교할 정답 값이 없는 MANUAL 규칙이므로 교사 확인이 필요합니다."
+- button "채점하기" [ref=e1082]
+- status

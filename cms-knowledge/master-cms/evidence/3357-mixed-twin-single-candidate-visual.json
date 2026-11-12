@@ -1,0 +1,823 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "3357-mixed-twin-single-candidate-visual",
+  "startedUtc": "2026-11-10T23:56:33.515331+00:00",
+  "command": [
+    "eval",
+    "(()=>{const m=document.querySelector('#itemTwinModal.show');return {visible:document.visibilityState,dialog:m?.id,scrollers:[...m.querySelectorAll('*')].filter(e=>e.clientHeight>0&&e.scrollHeight>e.clientHeight+2&&['auto','scroll'].includes(getComputedStyle(e).overflowY)).map(e=>({class:e.className,top:e.scrollTop,height:e.clientHeight,total:e.scrollHeight}))};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089246"
+    },
+    "error": null,
+    "localSeconds": 0.091
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089246",
+      "result": {
+        "dialog": "itemTwinModal",
+        "scrollers": [],
+        "visible": "visible"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.086
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089246",
+      "refs": {
+        "e43069": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e43070": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e43071": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e43072": {
+          "name": "문항 상세",
+          "role": "heading"
+        },
+        "e43073": {
+          "name": " 목록",
+          "role": "link"
+        },
+        "e43074": {
+          "name": "MASTER",
+          "role": "heading"
+        },
+        "e43075": {
+          "name": " 쌍둥이 문항 생성",
+          "role": "button"
+        },
+        "e43076": {
+          "name": " 쌍둥이 생성 이력",
+          "role": "button"
+        },
+        "e43077": {
+          "name": " 문항 수정",
+          "role": "link"
+        },
+        "e43078": {
+          "name": "상태 정보",
+          "role": "heading"
+        },
+        "e43079": {
+          "name": " 수정",
+          "role": "button"
+        },
+        "e43080": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e43081": {
+          "name": " 목록",
+          "role": "link"
+        },
+        "e43082": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e43083": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e43084": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e43085": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e43086": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e43087": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e43088": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e43089": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e43090": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e43091": {
+          "name": " 이전 문항",
+          "role": "link"
+        },
+        "e43092": {
+          "name": "다음 문항 ",
+          "role": "link"
+        },
+        "e43093": {
+          "name": " 이전 문항",
+          "role": "link"
+        },
+        "e43094": {
+          "name": "다음 문항 ",
+          "role": "link"
+        },
+        "e43095": {
+          "name": "HTML",
+          "role": "heading"
+        },
+        "e43096": {
+          "name": "HML",
+          "role": "heading"
+        },
+        "e43097": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43098": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43099": {
+          "name": " 다운로드",
+          "role": "button"
+        },
+        "e43100": {
+          "name": " 목록 조회",
+          "role": "button"
+        },
+        "e43101": {
+          "name": " 목록 조회",
+          "role": "button"
+        },
+        "e43102": {
+          "name": " 목록 조회",
+          "role": "button"
+        },
+        "e43103": {
+          "name": "문항ID 2089246 초안 하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e43104": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e43105": {
+          "name": "문항ID 2089246",
+          "role": "heading"
+        },
+        "e43106": {
+          "name": "온오프 전체",
+          "role": "option"
+        },
+        "e43107": {
+          "name": "온라인 전용",
+          "role": "option"
+        },
+        "e43108": {
+          "name": "공통",
+          "role": "option"
+        },
+        "e43109": {
+          "name": "교사용",
+          "role": "option"
+        },
+        "e43110": {
+          "name": "초안",
+          "role": "radio"
+        },
+        "e43111": {
+          "name": "실패(재등록)",
+          "role": "radio"
+        },
+        "e43112": {
+          "name": "승인(사용)",
+          "role": "radio"
+        },
+        "e43113": {
+          "name": "승인(미사용)",
+          "role": "radio"
+        },
+        "e43114": {
+          "name": "폐기",
+          "role": "radio"
+        },
+        "e43115": {
+          "name": "",
+          "role": "generic"
+        },
+        "e43116": {
+          "name": "문제",
+          "role": "link"
+        },
+        "e43117": {
+          "name": "해답",
+          "role": "link"
+        },
+        "e43118": {
+          "name": " 배포하기",
+          "role": "button"
+        },
+        "e43119": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e43120": {
+          "name": "쌍둥이 문항 관리",
+          "role": "heading"
+        },
+        "e43121": {
+          "name": "Close",
+          "role": "button"
+        },
+        "e43122": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e43123": {
+          "name": "현재 쌍둥이 0",
+          "role": "tab"
+        },
+        "e43124": {
+          "name": " 쌍둥이 추가",
+          "role": "tab"
+        },
+        "e43125": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43126": {
+          "name": "문항 ID / 지문 / 문제 / 출처코드 / 등록자 / 원본 파일명",
+          "role": "textbox"
+        },
+        "e43127": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43128": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43129": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43130": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43131": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43132": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43133": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43134": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43135": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43136": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e43137": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e43138": {
+          "name": "단일",
+          "role": "checkbox"
+        },
+        "e43139": {
+          "name": "세트",
+          "role": "checkbox"
+        },
+        "e43140": {
+          "name": "전체",
+          "role": "checkbox"
+        },
+        "e43141": {
+          "name": "초안",
+          "role": "checkbox"
+        },
+        "e43142": {
+          "name": "실패(재등록)",
+          "role": "checkbox"
+        },
+        "e43143": {
+          "name": "승인(사용)",
+          "role": "checkbox"
+        },
+        "e43144": {
+          "name": "승인(미사용)",
+          "role": "checkbox"
+        },
+        "e43145": {
+          "name": "폐기",
+          "role": "checkbox"
+        },
+        "e43146": {
+          "name": " 초기화",
+          "role": "button"
+        },
+        "e43147": {
+          "name": " 조회",
+          "role": "button"
+        },
+        "e43148": {
+          "name": "2089242",
+          "role": "cell"
+        },
+        "e43149": {
+          "name": "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$",
+          "role": "cell"
+        },
+        "e43150": {
+          "name": "주관식 > 단답형 > 일반형 최하",
+          "role": "cell"
+        },
+        "e43151": {
+          "name": "2089241 (4)",
+          "role": "cell"
+        },
+        "e43152": {
+          "name": "승인(사용)",
+          "role": "cell"
+        },
+        "e43153": {
+          "name": "세트 문항",
+          "role": "cell"
+        },
+        "e43154": {
+          "name": "",
+          "role": "cell"
+        },
+        "e43155": {
+          "name": "문항 ID",
+          "role": "option"
+        },
+        "e43156": {
+          "name": "지문",
+          "role": "option"
+        },
+        "e43157": {
+          "name": "문제",
+          "role": "option"
+        },
+        "e43158": {
+          "name": "출처코드",
+          "role": "option"
+        },
+        "e43159": {
+          "name": "등록자 ID",
+          "role": "option"
+        },
+        "e43160": {
+          "name": "원본 파일명",
+          "role": "option"
+        },
+        "e43161": {
+          "name": "교육과정 전체",
+          "role": "option"
+        },
+        "e43162": {
+          "name": "22",
+          "role": "option"
+        },
+        "e43163": {
+          "name": "15",
+          "role": "option"
+        },
+        "e43164": {
+          "name": "학교급 전체",
+          "role": "option"
+        },
+        "e43165": {
+          "name": "초등",
+          "role": "option"
+        },
+        "e43166": {
+          "name": "중학",
+          "role": "option"
+        },
+        "e43167": {
+          "name": "고등",
+          "role": "option"
+        },
+        "e43168": {
+          "name": "과목군 전체",
+          "role": "option"
+        },
+        "e43169": {
+          "name": "수학군",
+          "role": "option"
+        },
+        "e43170": {
+          "name": "과목 전체",
+          "role": "option"
+        },
+        "e43171": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43172": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43173": {
+          "name": "공통수학1",
+          "role": "option"
+        },
+        "e43174": {
+          "name": "공통수학2",
+          "role": "option"
+        },
+        "e43175": {
+          "name": "기본수학1",
+          "role": "option"
+        },
+        "e43176": {
+          "name": "기본수학2",
+          "role": "option"
+        },
+        "e43177": {
+          "name": "수학1",
+          "role": "option"
+        },
+        "e43178": {
+          "name": "수학2",
+          "role": "option"
+        },
+        "e43179": {
+          "name": "대수",
+          "role": "option"
+        },
+        "e43180": {
+          "name": "미적분1",
+          "role": "option"
+        },
+        "e43181": {
+          "name": "미적분2",
+          "role": "option"
+        },
+        "e43182": {
+          "name": "확률과통계",
+          "role": "option"
+        },
+        "e43183": {
+          "name": "기하",
+          "role": "option"
+        },
+        "e43184": {
+          "name": "직무수학",
+          "role": "option"
+        },
+        "e43185": {
+          "name": "인공지능수학",
+          "role": "option"
+        },
+        "e43186": {
+          "name": "수학과 문화",
+          "role": "option"
+        },
+        "e43187": {
+          "name": "수학",
+          "role": "option"
+        },
+        "e43188": {
+          "name": "학년 전체",
+          "role": "option"
+        },
+        "e43189": {
+          "name": "중학1",
+          "role": "option"
+        },
+        "e43190": {
+          "name": "고등1",
+          "role": "option"
+        },
+        "e43191": {
+          "name": "초등1",
+          "role": "option"
+        },
+        "e43192": {
+          "name": "중학2",
+          "role": "option"
+        },
+        "e43193": {
+          "name": "초등2",
+          "role": "option"
+        },
+        "e43194": {
+          "name": "고등2",
+          "role": "option"
+        },
+        "e43195": {
+          "name": "고등3",
+          "role": "option"
+        },
+        "e43196": {
+          "name": "중학3",
+          "role": "option"
+        },
+        "e43197": {
+          "name": "초등3",
+          "role": "option"
+        },
+        "e43198": {
+          "name": "고등 공통",
+          "role": "option"
+        },
+        "e43199": {
+          "name": "초등4",
+          "role": "option"
+        },
+        "e43200": {
+          "name": "초등5",
+          "role": "option"
+        },
+        "e43201": {
+          "name": "초등6",
+          "role": "option"
+        },
+        "e43202": {
+          "name": "학기 전체",
+          "role": "option"
+        },
+        "e43203": {
+          "name": "공통학기",
+          "role": "option"
+        },
+        "e43204": {
+          "name": "1학기",
+          "role": "option"
+        },
+        "e43205": {
+          "name": "2학기",
+          "role": "option"
+        },
+        "e43206": {
+          "name": "난이도 전체",
+          "role": "option"
+        },
+        "e43207": {
+          "name": "최상",
+          "role": "option"
+        },
+        "e43208": {
+          "name": "상",
+          "role": "option"
+        },
+        "e43209": {
+          "name": "중",
+          "role": "option"
+        },
+        "e43210": {
+          "name": "하",
+          "role": "option"
+        },
+        "e43211": {
+          "name": "최하",
+          "role": "option"
+        },
+        "e43212": {
+          "name": "형태1 전체",
+          "role": "option"
+        },
+        "e43213": {
+          "name": "객관식",
+          "role": "option"
+        },
+        "e43214": {
+          "name": "주관식",
+          "role": "option"
+        },
+        "e43215": {
+          "name": "서술형",
+          "role": "option"
+        },
+        "e43216": {
+          "name": "형태2 전체",
+          "role": "option"
+        },
+        "e43217": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e43218": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e43219": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e43220": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e43221": {
+          "name": "기본형",
+          "role": "option"
+        },
+        "e43222": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e43223": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e43224": {
+          "name": "형태3 전체",
+          "role": "option"
+        },
+        "e43225": {
+          "name": "N지 선다",
+          "role": "option"
+        },
+        "e43226": {
+          "name": "O/X 형",
+          "role": "option"
+        },
+        "e43227": {
+          "name": "N지 선다",
+          "role": "option"
+        },
+        "e43228": {
+          "name": "O/X 형",
+          "role": "option"
+        },
+        "e43229": {
+          "name": "일반형",
+          "role": "option"
+        },
+        "e43230": {
+          "name": "그리기형",
+          "role": "option"
+        },
+        "e43231": {
+          "name": "영역 선택형",
+          "role": "option"
+        },
+        "e43232": {
+          "name": "일반형",
+          "role": "option"
+        },
+        "e43233": {
+          "name": "영역선택형",
+          "role": "option"
+        },
+        "e43234": {
+          "name": "선그리기형",
+          "role": "option"
+        },
+        "e43235": {
+          "name": "드래그앤 드롭형",
+          "role": "option"
+        },
+        "e43236": {
+          "name": "기본 서술형",
+          "role": "option"
+        },
+        "e43237": {
+          "name": "단답 서술형",
+          "role": "option"
+        },
+        "e43238": {
+          "name": "다답 서술형",
+          "role": "option"
+        },
+        "e43239": {
+          "name": "문항 ID",
+          "role": "columnheader"
+        },
+        "e43240": {
+          "name": "문제",
+          "role": "columnheader"
+        },
+        "e43241": {
+          "name": "형태 / 난이도",
+          "role": "columnheader"
+        },
+        "e43242": {
+          "name": "세트ID (문항수)",
+          "role": "columnheader"
+        },
+        "e43243": {
+          "name": "상태",
+          "role": "columnheader"
+        },
+        "e43244": {
+          "name": "매핑 정보",
+          "role": "columnheader"
+        },
+        "e43245": {
+          "name": "추가",
+          "role": "columnheader"
+        },
+        "e43246": {
+          "name": "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$",
+          "role": "link"
+        },
+        "e43247": {
+          "name": "",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e43069]\n      - link \"문제은행 마스터 CMS\" [ref=e43070]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e43082]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e43083]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e43084]\n          - link \"HML 문항 등록\" [ref=e43085]\n          - link \"디피니션 문항 등록\" [ref=e43086]\n          - link \"쌍둥이 그룹 관리\" [ref=e43087]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e43088]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e43089]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e43090]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e43071]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 상세\"\n      - heading \"문항 상세\" [level=2, ref=e43072]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089246\"\n      - generic\n        - link \" 목록\" [ref=e43073]\n          - StaticText \"\"\n          - StaticText \"목록\"\n        - generic\n          - link \" 이전 문항\" [ref=e43091]\n            - StaticText \"\"\n            - StaticText \"이전 문항\"\n          - StaticText \"20 / 35566건\"\n          - link \"다음 문항 \" [ref=e43092]\n            - StaticText \"다음 문항\"\n            - StaticText \"\"\n      - generic\n        - heading \"MASTER\" [level=3, ref=e43074]\n        - generic\n          - heading \"HTML\" [level=3, ref=e43095]\n          - generic\n            - heading \"문항ID 2089246 초안 하 주관식 > 단답형 > 일반형\" [level=4, ref=e43103]\n              - StaticText \"문항ID 2089246\"\n              - StaticText \"초안\"\n              - StaticText \"하\"\n              - StaticText \"주관식 > 단답형 > 일반형\"\n            - button \" OMR 미리보기\" [ref=e43104]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - article\n              - paragraph\n                - StaticText \"행렬 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLTable\n                        - MathMLTableRow\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLNumber\n                                - StaticText \"2\"\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLRow\n                                - MathMLText\n                                - MathMLNumber\n                                  - StaticText \"4\"\n                        - MathMLTableRow\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLRow\n                                - MathMLOperator\n                                  - StaticText \"−\"\n                                - MathMLNumber\n                                  - StaticText \"3\"\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLRow\n                                - MathMLText\n                                - MathMLNumber\n                                  - StaticText \"0\"\n                        - MathMLTableRow\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLNumber\n                                - StaticText \"5\"\n                          - MathMLTableCell\n                            - MathMLRow\n                              - MathMLRow\n                                - MathMLText\n                                - MathMLNumber\n                                  - StaticText \"1\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                - StaticText \"에 대하여 다음을 구하시오.\"\n              - paragraph\n                - StaticText \"(1) \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLOperator\n                        - StaticText \"(\"\n                      - MathMLNumber\n                        - StaticText \"3\"\n                      - MathMLOperator\n                        - StaticText \",\"\n                      - MathMLText\n                      - MathMLNumber\n                        - StaticText \"2\"\n                      - MathMLOperator\n                        - StaticText \")\"\n                - StaticText \" 성분\"\n              - paragraph\n                - StaticText \"(2) 제 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"2\"\n                - StaticText \"행의 모든 성분의 합\"\n              - paragraph\n                - StaticText \"(3) 제 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLNumber\n                        - StaticText \"1\"\n                - StaticText \"열의 모든 성분의 합\"\n              - generic\n                - heading \"정답\" [level=3, ref=e43119]\n                - paragraph\n                  - StaticText \"(1) \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"1\"\n                - paragraph\n                  - StaticText \"(2) \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"−\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                - paragraph\n                  - StaticText \"(3) \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"4\"\n            - generic [ref=e43115] focusable [tabindex]\n              - button \" 배포하기\" [disabled, ref=e43118]\n                - StaticText \"\"\n                - StaticText \"배포하기\"\n        - generic\n          - heading \"HML\" [level=3, ref=e43096]\n          - generic\n            - heading \"문항ID 2089246\" [level=4, ref=e43105]\n              - StaticText \"문항ID 2089246\"\n            - generic\n              - StaticText \"문제\"\n              - link \"문제\" [ref=e43116]\n                - image \"문제\"\n              - separator\n              - StaticText \"해답\"\n              - link \"해답\" [ref=e43117]\n                - image \"해답\"\n        - button \" 쌍둥이 문항 생성\" [disabled, ref=e43075]\n          - StaticText \"\"\n          - StaticText \"쌍둥이 문항 생성\"\n        - button \" 쌍둥이 생성 이력\" [ref=e43076]\n          - StaticText \"\"\n          - StaticText \"쌍둥이 생성 이력\"\n        - link \" 문항 수정\" [ref=e43077]\n          - StaticText \"\"\n          - StaticText \"문항 수정\"\n      - generic\n        - heading \"상태 정보\" [level=3, ref=e43078]\n          - StaticText \"\"\n          - StaticText \"상태 정보\"\n        - button \" 수정\" [ref=e43079]\n          - StaticText \"\"\n          - StaticText \"수정\"\n        - form\n          - group\n            - LabelText\n              - StaticText \"On-line 전용\"\n            - combobox [expanded=false, disabled, ref=e43097]: 온오프 전체\n              - MenuListPopup\n                - option \"온오프 전체\" [disabled, ref=e43106]\n                - option \"온라인 전용\" [disabled, ref=e43107]\n            - LabelText\n              - StaticText \"용도\"\n            - combobox [expanded=false, disabled, ref=e43098]: 공통\n              - MenuListPopup\n                - option \"공통\" [disabled, ref=e43108]\n                - option \"교사용\" [disabled, ref=e43109]\n            - LabelText\n              - StaticText \"상태값\"\n            - generic\n              - LabelText\n                - radio \"초안\" [checked=true, disabled, ref=e43110]\n                - StaticText \"초안\"\n              - LabelText\n                - radio \"실패(재등록)\" [checked=false, disabled, ref=e43111]\n                - StaticText \"실패(재등록)\"\n              - LabelText\n                - radio \"승인(사용)\" [checked=false, disabled, ref=e43112]\n                - StaticText \"승인(사용)\"\n              - LabelText\n                - radio \"승인(미사용)\" [checked=false, disabled, ref=e43113]\n                - StaticText \"승인(미사용)\"\n              - LabelText\n                - radio \"폐기\" [checked=false, disabled, ref=e43114]\n                - StaticText \"폐기\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e43080]\n          - StaticText \"\"\n          - StaticText \"기본 정보\"\n        - generic\n          - DescriptionList\n            - term \"문항 ID\"\n            - definition\n              - StaticText \"2089246 (2088877)\"\n            - term \"생성 방식\"\n            - definition\n              - StaticText \"HML 변환\"\n            - term \"원본 파일\"\n            - definition\n              - StaticText \"QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml\"\n              - button \" 다운로드\" [ref=e43099]\n                - StaticText \"\"\n                - StaticText \"다운로드\"\n            - term \"썸네일\"\n            - definition\n              - StaticText \"-\"\n            - term \"난이도\"\n            - definition\n              - StaticText \"하\"\n            - term \"문항 형태\"\n            - definition\n              - StaticText \"주관식 > 단답형 > 일반형\"\n            - term \"배포\"\n            - definition\n              - StaticText \"-\"\n          - DescriptionList\n            - term \"세트 문항\"\n            - definition\n              - StaticText \"-\"\n            - term \"쌍둥이 문항\"\n            - definition\n              - StaticText \"0개\"\n              - button \" 목록 조회\" [ref=e43100]\n                - StaticText \"\"\n                - StaticText \"목록 조회\"\n            - term \"평가지 등록\"\n            - definition\n              - StaticText \"0개\"\n              - button \" 목록 조회\" [ref=e43101]\n                - StaticText \"\"\n                - StaticText \"목록 조회\"\n            - term \"출처\"\n            - definition\n              - StaticText \"1개\"\n              - button \" 목록 조회\" [ref=e43102]\n                - StaticText \"\"\n                - StaticText \"목록 조회\"\n            - term \"등록\"\n            - definition\n              - StaticText \"jaehyuk.myung · 2026-11-09\"\n          - separator\n          - DescriptionList\n            - term \"단원코드\"\n            - definition\n              - StaticText \"[22HMAC1GHG1006010000]\"\n              - StaticText \"22 > 고등 > 수학군 > 공통수학1 > 고호경 > 고등1 > 공통학기 > 행렬 > 행렬의 뜻 > >\"\n            - term \" 성취기준\"\n              - StaticText \"\"\n              - StaticText \"성취기준\"\n            - definition\n              - StaticText \"[10공수1-04-01] 행렬의 뜻을 알고, 실생활 상황을 행렬로 표현할 수 있다.\"\n            - term \" 내용영역\"\n              - StaticText \"\"\n              - StaticText \"내용영역\"\n            - definition\n              - StaticText \"-\"\n          - DescriptionList\n            - term \"행동영역\"\n            - definition\n              - StaticText \"계산\"\n            - term \"교과역량\"\n            - definition\n              - StaticText \"문제해결\"\n            - term \"유형정보\"\n            - definition\n              - StaticText \"[MA191100] 행렬의 뜻과 성분 알아보기\"\n      - dialog\n        - document\n          - generic\n            - heading \"쌍둥이 문항 관리\" [level=5, ref=e43120]\n              - StaticText \"\"\n              - StaticText \"쌍둥이 문항 관리\"\n            - StaticText \"문항 ID\"\n            - StaticText \"2089246\"\n            - button \"Close\" [ref=e43121]\n            - generic\n              - tablist\n                - tab \"현재 쌍둥이 0\" [ref=e43123]\n                  - StaticText \"현재 쌍둥이\"\n                  - StaticText \"0\"\n                - tab \" 쌍둥이 추가\" [selected, ref=e43124]\n                  - StaticText \"\"\n                  - StaticText \"쌍둥이 추가\"\n              - tabpanel \" 쌍둥이 추가\"\n                - generic\n                  - combobox [expanded=false, ref=e43125]: 문항 ID\n                    - MenuListPopup\n                      - option \"문항 ID\" [selected, ref=e43155]\n                      - option \"지문\" [ref=e43156]\n                      - option \"문제\" [ref=e43157]\n                      - option \"출처코드\" [ref=e43158]\n                      - option \"등록자 ID\" [ref=e43159]\n                      - option \"원본 파일명\" [ref=e43160]\n                  - textbox \"문항 ID / 지문 / 문제 / 출처코드 / 등록자 / 원본 파일명\" [ref=e43126]: 2089242\n                    - StaticText \"2089242\"\n                  - combobox [expanded=false, ref=e43127]: 22\n                    - MenuListPopup\n                      - option \"교육과정 전체\" [ref=e43161]\n                      - option \"22\" [selected, ref=e43162]\n                      - option \"15\" [ref=e43163]\n                  - combobox [expanded=false, ref=e43128]: 학교급 전체\n                    - MenuListPopup\n                      - option \"학교급 전체\" [selected, ref=e43164]\n                      - option \"초등\" [ref=e43165]\n                      - option \"중학\" [ref=e43166]\n                      - option \"고등\" [ref=e43167]\n                  - combobox [expanded=false, ref=e43129]: 과목군 전체\n                    - MenuListPopup\n                      - option \"과목군 전체\" [selected, ref=e43168]\n                      - option \"수학군\" [ref=e43169]\n                  - combobox [expanded=false, disabled, ref=e43130]: 과목 전체\n                    - MenuListPopup\n                      - option \"과목 전체\" [disabled, ref=e43170]\n                      - option \"수학\" [disabled, ref=e43171]\n                      - option \"수학\" [disabled, ref=e43172]\n                      - option \"공통수학1\" [disabled, ref=e43173]\n                      - option \"공통수학2\" [disabled, ref=e43174]\n                      - option \"기본수학1\" [disabled, ref=e43175]\n                      - option \"기본수학2\" [disabled, ref=e43176]\n                      - option \"수학1\" [disabled, ref=e43177]\n                      - option \"수학2\" [disabled, ref=e43178]\n                      - option \"대수\" [disabled, ref=e43179]\n                      - option \"미적분1\" [disabled, ref=e43180]\n                      - option \"미적분2\" [disabled, ref=e43181]\n                      - option \"확률과통계\" [disabled, ref=e43182]\n                      - option \"기하\" [disabled, ref=e43183]\n                      - option \"직무수학\" [disabled, ref=e43184]\n                      - option \"인공지능수학\" [disabled, ref=e43185]\n                      - option \"수학과 문화\" [disabled, ref=e43186]\n                      - option \"수학\" [disabled, ref=e43187]\n                  - combobox [expanded=false, disabled, ref=e43131]: 학년 전체\n                    - MenuListPopup\n                      - option \"학년 전체\" [disabled, ref=e43188]\n                      - option \"중학1\" [disabled, ref=e43189]\n                      - option \"고등1\" [disabled, ref=e43190]\n                      - option \"초등1\" [disabled, ref=e43191]\n                      - option \"중학2\" [disabled, ref=e43192]\n                      - option \"초등2\" [disabled, ref=e43193]\n                      - option \"고등2\" [disabled, ref=e43194]\n                      - option \"고등3\" [disabled, ref=e43195]\n                      - option \"중학3\" [disabled, ref=e43196]\n                      - option \"초등3\" [disabled, ref=e43197]\n                      - option \"고등 공통\" [disabled, ref=e43198]\n                      - option \"초등4\" [disabled, ref=e43199]\n                      - option \"초등5\" [disabled, ref=e43200]\n                      - option \"초등6\" [disabled, ref=e43201]\n                  - combobox [expanded=false, ref=e43132]: 학기 전체\n                    - MenuListPopup\n                      - option \"학기 전체\" [selected, ref=e43202]\n                      - option \"공통학기\" [ref=e43203]\n                      - option \"1학기\" [ref=e43204]\n                      - option \"2학기\" [ref=e43205]\n                  - combobox [expanded=false, ref=e43133]: 난이도 전체\n                    - MenuListPopup\n                      - option \"난이도 전체\" [selected, ref=e43206]\n                      - option \"최상\" [ref=e43207]\n                      - option \"상\" [ref=e43208]\n                      - option \"중\" [ref=e43209]\n                      - option \"하\" [ref=e43210]\n                      - option \"최하\" [ref=e43211]\n                  - combobox [expanded=false, ref=e43134]: 형태1 전체\n                    - MenuListPopup\n                      - option \"형태1 전체\" [selected, ref=e43212]\n                      - option \"객관식\" [ref=e43213]\n                      - option \"주관식\" [ref=e43214]\n                      - option \"서술형\" [ref=e43215]\n                  - combobox [expanded=false, disabled, ref=e43135]: 형태2 전체\n                    - MenuListPopup\n                      - option \"형태2 전체\" [disabled, ref=e43216]\n                      - option \"단답형\" [disabled, ref=e43217]\n                      - option \"다답형\" [disabled, ref=e43218]\n                      - option \"단답형\" [disabled, ref=e43219]\n                      - option \"다답형\" [disabled, ref=e43220]\n                      - option \"기본형\" [disabled, ref=e43221]\n                      - option \"단답형\" [disabled, ref=e43222]\n                      - option \"다답형\" [disabled, ref=e43223]\n                  - combobox [expanded=false, disabled, ref=e43136]: 형태3 전체\n                    - MenuListPopup\n                      - option \"형태3 전체\" [disabled, ref=e43224]\n                      - option \"N지 선다\" [disabled, ref=e43225]\n                      - option \"O/X 형\" [disabled, ref=e43226]\n                      - option \"N지 선다\" [disabled, ref=e43227]\n                      - option \"O/X 형\" [disabled, ref=e43228]\n                      - option \"일반형\" [disabled, ref=e43229]\n                      - option \"그리기형\" [disabled, ref=e43230]\n                      - option \"영역 선택형\" [disabled, ref=e43231]\n                      - option \"일반형\" [disabled, ref=e43232]\n                      - option \"영역선택형\" [disabled, ref=e43233]\n                      - option \"선그리기형\" [disabled, ref=e43234]\n                      - option \"드래그앤 드롭형\" [disabled, ref=e43235]\n                      - option \"기본 서술형\" [disabled, ref=e43236]\n                      - option \"단답 서술형\" [disabled, ref=e43237]\n                      - option \"다답 서술형\" [disabled, ref=e43238]\n                  - StaticText \"세트 여부\"\n                  - LabelText\n                    - checkbox \"전체\" [checked=true, ref=e43137]\n                    - StaticText \"전체\"\n                  - LabelText\n                    - checkbox \"단일\" [checked=true, ref=e43138]\n                    - StaticText \"단일\"\n                  - LabelText\n                    - checkbox \"세트\" [checked=true, ref=e43139]\n                    - StaticText \"세트\"\n                  - StaticText \"상태\"\n                  - LabelText\n                    - checkbox \"전체\" [checked=false, ref=e43140]\n                    - StaticText \"전체\"\n                  - LabelText\n                    - checkbox \"초안\" [checked=true, ref=e43141]\n                    - StaticText \"초안\"\n                  - LabelText\n                    - checkbox \"실패(재등록)\" [checked=true, ref=e43142]\n                    - StaticText \"실패(재등록)\"\n                  - LabelText\n                    - checkbox \"승인(사용)\" [checked=true, ref=e43143]\n                    - StaticText \"승인(사용)\"\n                  - LabelText\n                    - checkbox \"승인(미사용)\" [checked=true, ref=e43144]\n                    - StaticText \"승인(미사용)\"\n                  - LabelText\n                    - checkbox \"폐기\" [checked=false, ref=e43145]\n                    - StaticText \"폐기\"\n                  - generic\n                    - button \" 초기화\" [ref=e43146]\n                      - StaticText \"\"\n                      - StaticText \"초기화\"\n                    - button \" 조회\" [ref=e43147]\n                      - StaticText \"\"\n                      - StaticText \"조회\"\n                - table\n                  - rowgroup\n                    - row\n                      - columnheader \"문항 ID\" [ref=e43239]\n                      - columnheader \"문제\" [ref=e43240]\n                      - columnheader \"형태 / 난이도\" [ref=e43241]\n                      - columnheader \"세트ID (문항수)\" [ref=e43242]\n                        - StaticText \"세트ID\"\n                        - LineBreak \"\\n\"\n                        - StaticText \"(문항수)\"\n                      - columnheader \"상태\" [ref=e43243]\n                      - columnheader \"매핑 정보\" [ref=e43244]\n                      - columnheader \"추가\" [ref=e43245]\n                  - row\n                    - cell \"2089242\" [ref=e43148]\n                    - cell \"$\\\\left(\\\\begin{gathered}2 \\\\\\\\ 3\\\\end{gathered}\\\\right)$\" [ref=e43149]\n                      - link \"$\\\\left(\\\\begin{gathered}2 \\\\\\\\ 3\\\\end{gathered}\\\\right)$\" [ref=e43246]\n                    - cell \"주관식 > 단답형 > 일반형 최하\" [ref=e43150]\n                      - StaticText \"주관식 > 단답형 > 일반형\"\n                      - StaticText \"최하\"\n                    - cell \"2089241 (4)\" [ref=e43151]\n                      - StaticText \"2089241\"\n                      - StaticText \"(4)\"\n                    - cell \"승인(사용)\" [ref=e43152]\n                    - cell \"세트 문항\" [ref=e43153]\n                    - cell \"\" [ref=e43154]\n                      - button \"\" [disabled, ref=e43247]\n                        - StaticText \"\"\n            - button \"닫기\" [ref=e43122]\n      - generic\n        - link \" 목록\" [ref=e43081]\n          - StaticText \"\"\n          - StaticText \"목록\"\n        - generic\n          - link \" 이전 문항\" [ref=e43093]\n            - StaticText \"\"\n            - StaticText \"이전 문항\"\n          - StaticText \"20 / 35566건\"\n          - link \"다음 문항 \" [ref=e43094]\n            - StaticText \"다음 문항\"\n            - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.134
+  },
+  "screenshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_configured"
+      },
+      "path": "D:\\jaehyuk.myung\\claude_demo\\Demo_36_REA_test\\cms-knowledge\\master-cms\\evidence\\3357-mixed-twin-single-candidate-visual.png"
+    },
+    "error": null,
+    "localSeconds": 0.257
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2414-own-copy2089239-edit-gate-click",
+  "startedUtc": "2026-11-10T01:14:44.594928+00:00",
+  "command": [
+    "eval",
+    "(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089239'||document.querySelector('.modal.show'))throw Error('Own copy detail required');const link=document.querySelector('a[data-modify-url]');if(!link||!link.getAttribute('data-modify-url').includes('itemId=2089239'))throw Error('Own observed modify link required');link.click();return {clickedHref:link.getAttribute('href'),modifyUrl:link.getAttribute('data-modify-url')};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"
+    },
+    "error": null,
+    "localSeconds": 0.096
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239",
+      "result": {
+        "clickedHref": "/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10&openModify=Y",
+        "modifyUrl": "/item/all/modify.donga?itemId=2089239&pageNum=1&pageSize=10"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.119
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089239&pageNum=1&pageSize=10",
+      "refs": {
+        "e31802": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e31803": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e31804": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e31805": {
+          "name": "문항 상세",
+          "role": "heading"
+        },
+        "e31806": {
+          "name": " 목록",
+          "role": "link"
+        },
+        "e31807": {
+          "name": "MASTER",
+          "role": "heading"
+        },
+        "e31808": {
+          "name": " 문항 수정",
+          "role": "link"
+        },
+        "e31809": {
+          "name": "상태 정보",
+          "role": "heading"
+        },
+        "e31810": {
+          "name": " 수정",
+          "role": "button"
+        },
+        "e31811": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e31812": {
+          "name": " 목록",
+          "role": "link"
+        },
+        "e31813": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e31814": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e31815": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e31816": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e31817": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e31818": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e31819": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e31820": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e31821": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e31822": {
+          "name": " 이전 문항",
+          "role": "link"
+        },
+        "e31823": {
+          "name": "다음 문항 ",
+          "role": "link"
+        },
+        "e31824": {
+          "name": " 이전 문항",
+          "role": "link"
+        },
+        "e31825": {
+          "name": "다음 문항 ",
+          "role": "link"
+        },
+        "e31826": {
+          "name": "HTML",
+          "role": "heading"
+        },
+        "e31827": {
+          "name": "HML",
+          "role": "heading"
+        },
+        "e31828": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e31829": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e31830": {
+          "name": " 목록 조회",
+          "role": "button"
+        },
+        "e31831": {
+          "name": " 목록 조회",
+          "role": "button"
+        },
+        "e31832": {
+          "name": "문항ID 2089239 초안 하 객관식 > 단답형 > N지 선다",
+          "role": "heading"
+        },
+        "e31833": {
+          "name": " OMR 미리보기",
+          "role": "button"
+        },
+        "e31834": {
+          "name": "문항ID 2089239",
+          "role": "heading"
+        },
+        "e31835": {
+          "name": "온오프 전체",
+          "role": "option"
+        },
+        "e31836": {
+          "name": "온라인 전용",
+          "role": "option"
+        },
+        "e31837": {
+          "name": "공통",
+          "role": "option"
+        },
+        "e31838": {
+          "name": "교사용",
+          "role": "option"
+        },
+        "e31839": {
+          "name": "초안",
+          "role": "radio"
+        },
+        "e31840": {
+          "name": "실패(재등록)",
+          "role": "radio"
+        },
+        "e31841": {
+          "name": "승인(사용)",
+          "role": "radio"
+        },
+        "e31842": {
+          "name": "승인(미사용)",
+          "role": "radio"
+        },
+        "e31843": {
+          "name": "폐기",
+          "role": "radio"
+        },
+        "e31845": {
+          "name": "문제",
+          "role": "link"
+        },
+        "e31846": {
+          "name": "해답",
+          "role": "link"
+        },
+        "e31847": {
+          "name": " 배포하기",
+          "role": "button"
+        },
+        "e31848": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e31849": {
+          "name": "풀이",
+          "role": "heading"
+        }
+      },
+      "removedRefs": [
+        "@e31844"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e31802]\n      - link \"문제은행 마스터 CMS\" [ref=e31803]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e31813]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e31814]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e31815]\n          - link \"HML 문항 등록\" [ref=e31816]\n          - link \"디피니션 문항 등록\" [ref=e31817]\n          - link \"쌍둥이 그룹 관리\" [ref=e31818]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e31819]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e31820]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e31821]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e31804]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 상세\"\n      - heading \"문항 상세\" [level=2, ref=e31805]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089239\"\n      - generic\n        - link \" 목록\" [ref=e31806]\n          - StaticText \"\"\n          - StaticText \"목록\"\n        - generic\n          - link \" 이전 문항\" [ref=e31822]\n            - StaticText \"\"\n            - StaticText \"이전 문항\"\n          - StaticText \"7 / 35547건\"\n          - link \"다음 문항 \" [ref=e31823]\n            - StaticText \"다음 문항\"\n            - StaticText \"\"\n      - generic\n        - heading \"MASTER\" [level=3, ref=e31807]\n        - generic\n          - heading \"HTML\" [level=3, ref=e31826]\n          - generic\n            - heading \"문항ID 2089239 초안 하 객관식 > 단답형 > N지 선다\" [level=4, ref=e31832]\n              - StaticText \"문항ID 2089239\"\n              - StaticText \"초안\"\n              - StaticText \"하\"\n              - StaticText \"객관식 > 단답형 > N지 선다\"\n            - button \" OMR 미리보기\" [ref=e31833]\n              - StaticText \"\"\n              - StaticText \"OMR 미리보기\"\n            - article\n              - paragraph\n                - StaticText \"다음 중 그림과 같은 반비례 관계 \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLIdentifier\n                        - StaticText \"𝑦\"\n                      - MathMLOperator\n                        - StaticText \"=\"\n                      - MathMLRow\n                        - MathMLFraction\n                          - MathMLIdentifier\n                            - StaticText \"𝑎\"\n                          - MathMLIdentifier\n                            - StaticText \"𝑥\"\n                - StaticText \"의 그래프 위의 점이 아닌 것은? (단, \"\n                - MathMLMath\n                  - MathMLRow\n                    - MathMLRow\n                      - MathMLIdentifier\n                        - StaticText \"𝑎\"\n                - StaticText \"는 상수이다.)\"\n              - paragraph\n                - image \"image\"\n              - listitem [level=1]\n                - generic\n                  - StaticText \"①\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLNumber\n                          - StaticText \"2\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLNumber\n                          - StaticText \"6\"\n                        - MathMLOperator\n                          - StaticText \")\"\n              - listitem [level=1]\n                - generic\n                  - StaticText \"②\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLNumber\n                          - StaticText \"1\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLNumber\n                          - StaticText \"12\"\n                        - MathMLOperator\n                          - StaticText \")\"\n              - listitem [level=1]\n                - generic\n                  - StaticText \"③\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLNumber\n                          - StaticText \"4\"\n                        - MathMLOperator\n                          - StaticText \")\"\n              - listitem [level=1]\n                - generic\n                  - StaticText \"④\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLOperator\n                          - StaticText \"−\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLNumber\n                          - StaticText \"4\"\n                        - MathMLOperator\n                          - StaticText \")\"\n              - listitem [level=1]\n                - generic\n                  - StaticText \"⑤\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"(\"\n                        - MathMLOperator\n                          - StaticText \"−\"\n                        - MathMLNumber\n                          - StaticText \"6\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLOperator\n                          - StaticText \"−\"\n                        - MathMLNumber\n                          - StaticText \"2\"\n                        - MathMLOperator\n                          - StaticText \")\"\n              - generic\n                - heading \"정답\" [level=3, ref=e31848]\n                - paragraph\n                  - StaticText \"④\"\n              - generic\n                - heading \"풀이\" [level=3, ref=e31849]\n                - paragraph\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLIdentifier\n                          - StaticText \"𝑦\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLRow\n                          - MathMLFraction\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                  - StaticText \"에 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLIdentifier\n                          - StaticText \"𝑥\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLNumber\n                          - StaticText \"4\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                        - MathMLText\n                        - MathMLIdentifier\n                          - StaticText \"𝑦\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                  - StaticText \"을 대입하면\"\n                - paragraph\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"3\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLRow\n                          - MathMLFraction\n                            - MathMLIdentifier\n                              - StaticText \"𝑎\"\n                            - MathMLNumber\n                              - StaticText \"4\"\n                        - MathMLText\n                        - MathMLOperator\n                          - StaticText \"∴\"\n                        - MathMLText\n                        - MathMLIdentifier\n                          - StaticText \"𝑎\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLNumber\n                          - StaticText \"12\"\n                - paragraph\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLOperator\n                          - StaticText \"∴\"\n                        - MathMLText\n                        - MathMLIdentifier\n                          - StaticText \"𝑦\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLRow\n                          - MathMLFraction\n                            - MathMLNumber\n                              - StaticText \"12\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                - paragraph\n                  - StaticText \"④\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLIdentifier\n                          - StaticText \"𝑦\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLRow\n                          - MathMLFraction\n                            - MathMLNumber\n                              - StaticText \"12\"\n                            - MathMLIdentifier\n                              - StaticText \"𝑥\"\n                  - StaticText \"에 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLIdentifier\n                          - StaticText \"𝑥\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLOperator\n                          - StaticText \"−\"\n                        - MathMLNumber\n                          - StaticText \"3\"\n                        - MathMLOperator\n                          - StaticText \",\"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLIdentifier\n                          - StaticText \"𝑦\"\n                        - MathMLOperator\n                          - StaticText \"=\"\n                        - MathMLNumber\n                          - StaticText \"4\"\n                  - StaticText \"를 대입하면 \"\n                  - MathMLMath\n                    - MathMLRow\n                      - MathMLRow\n                        - MathMLNumber\n                          - StaticText \"4\"\n                        - MathMLOperator\n                          - StaticText \"≠\"\n                        - MathMLRow\n                          - MathMLFraction\n                            - MathMLNumber\n                              - StaticText \"12\"\n                            - MathMLRow\n                              - MathMLOperator\n                                - StaticText \"−\"\n                              - MathMLNumber\n                                - StaticText \"3\"\n                - paragraph\n                  - StaticText \"따라서 그래프 위의 점이 아닌 것은 ④이다.\"\n            - button \" 배포하기\" [disabled, ref=e31847]\n              - StaticText \"\"\n              - StaticText \"배포하기\"\n        - generic\n          - heading \"HML\" [level=3, ref=e31827]\n          - generic\n            - heading \"문항ID 2089239\" [level=4, ref=e31834]\n              - StaticText \"문항ID 2089239\"\n            - generic\n              - StaticText \"문제\"\n              - link \"문제\" [ref=e31845]\n                - image \"문제\"\n              - separator\n              - StaticText \"해답\"\n              - link \"해답\" [ref=e31846]\n                - image \"해답\"\n        - link \" 문항 수정\" [ref=e31808]\n          - StaticText \"\"\n          - StaticText \"문항 수정\"\n      - generic\n        - heading \"상태 정보\" [level=3, ref=e31809]\n          - StaticText \"\"\n          - StaticText \"상태 정보\"\n        - button \" 수정\" [ref=e31810]\n          - StaticText \"\"\n          - StaticText \"수정\"\n        - form\n          - group\n            - LabelText\n              - StaticText \"On-line 전용\"\n            - combobox [expanded=false, disabled, ref=e31828]: 온오프 전체\n              - MenuListPopup\n                - option \"온오프 전체\" [disabled, ref=e31835]\n                - option \"온라인 전용\" [disabled, ref=e31836]\n            - LabelText\n              - StaticText \"용도\"\n            - combobox [expanded=false, disabled, ref=e31829]: 교사용\n              - MenuListPopup\n                - option \"공통\" [disabled, ref=e31837]\n                - option \"교사용\" [disabled, ref=e31838]\n            - LabelText\n              - StaticText \"상태값\"\n            - generic\n              - LabelText\n                - radio \"초안\" [checked=true, disabled, ref=e31839]\n                - StaticText \"초안\"\n              - LabelText\n                - radio \"실패(재등록)\" [checked=false, disabled, ref=e31840]\n                - StaticText \"실패(재등록)\"\n              - LabelText\n                - radio \"승인(사용)\" [checked=false, disabled, ref=e31841]\n                - StaticText \"승인(사용)\"\n              - LabelText\n                - radio \"승인(미사용)\" [checked=false, disabled, ref=e31842]\n                - StaticText \"승인(미사용)\"\n              - LabelText\n                - radio \"폐기\" [checked=false, disabled, ref=e31843]\n                - StaticText \"폐기\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e31811]\n          - StaticText \"\"\n          - StaticText \"기본 정보\"\n        - generic\n          - DescriptionList\n            - term \"문항 ID\"\n            - definition\n              - StaticText \"2089239 (2088871)\"\n            - term \"생성 방식\"\n            - definition\n              - StaticText \"복제\"\n              - StaticText \"(부모 문항 ID 2089216)\"\n            - term \"원본 파일\"\n            - definition\n              - StaticText \"-\"\n            - term \"썸네일\"\n            - definition\n              - StaticText \"-\"\n            - term \"난이도\"\n            - definition\n              - StaticText \"하\"\n            - term \"문항 형태\"\n            - definition\n              - StaticText \"객관식 > 단답형 > N지 선다\"\n            - term \"배포\"\n            - definition\n              - StaticText \"-\"\n          - DescriptionList\n            - term \"세트 문항\"\n            - definition\n              - StaticText \"-\"\n            - term \"쌍둥이 문항\"\n            - definition\n              - StaticText \"3개\"\n              - button \" 목록 조회\" [ref=e31830]\n                - StaticText \"\"\n                - StaticText \"목록 조회\"\n            - term \"평가지 등록\"\n            - definition\n              - StaticText \"0개\"\n              - button \" 목록 조회\" [ref=e31831]\n                - StaticText \"\"\n                - StaticText \"목록 조회\"\n            - term \"출처\"\n            - definition\n              - StaticText \"-\"\n            - term \"등록\"\n            - definition\n              - StaticText \"jaehyuk.myung · 2026-11-09\"\n          - separator\n          - DescriptionList\n            - term \"단원코드\"\n            - definition\n              - StaticText \"[22MMAT0KOK1004040000]\"\n              - StaticText \"22 > 중학 > 수학군 > 수학 > 강옥기 > 중학1 > 공통학기 > 좌표평면과 그래프 > 반비례와 그 그래프 > >\"\n            - term \" 성취기준\"\n              - StaticText \"\"\n              - StaticText \"성취기준\"\n            - definition\n              - StaticText \"[9수02-07] 정비례, 반비례 관계를 이해하고, 그 관계를 표, 식, 그래프로 나타낼 수 있다.\"\n            - term \" 내용영역\"\n              - StaticText \"\"\n              - StaticText \"내용영역\"\n            - definition\n              - StaticText \"[22MMAT01020000] 변화와 관계 > >\"\n          - DescriptionList\n            - term \"행동영역\"\n            - definition\n              - StaticText \"계산\"\n            - term \"교과역량\"\n            - definition\n              - StaticText \"문제해결\"\n            - term \"유형정보\"\n            - definition\n              - StaticText \"[MA146100] 반비례 관계 y=a/x의 그래프 활용\"\n      - generic\n        - link \" 목록\" [ref=e31812]\n          - StaticText \"\"\n          - StaticText \"목록\"\n        - generic\n          - link \" 이전 문항\" [ref=e31824]\n            - StaticText \"\"\n            - StaticText \"이전 문항\"\n          - StaticText \"7 / 35547건\"\n          - link \"다음 문항 \" [ref=e31825]\n            - StaticText \"다음 문항\"\n            - StaticText \"\""
+    },
+    "error": null,
+    "localSeconds": 0.456
+  }
+}

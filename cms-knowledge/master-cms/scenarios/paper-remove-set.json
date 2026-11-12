@@ -1,0 +1,17 @@
+{
+ "steps":[
+  {"label":"1181-paper-discard-seed","command":["snapshot"]},
+  {"label":"1182-paper-discard-cancel","command":["click","{ref}"],"refPattern":"- button \"취소\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1183-paper-draft-restored","command":["click","{ref}"],"refPattern":"- radio \"초안\" \\[checked=false, ref=(e\\d+)\\]"},
+  {"label":"1184-paper-start-restored","command":["fill","input[name=startPageNum]","2"]},
+  {"label":"1185-paper-remove-scroll","command":["scroll","down","650","--selector",".page-wrapper"]},
+  {"label":"1186-paper-remove-set-open","command":["click","{ref}"],"refPattern":"- button \"제외\" \\[ref=(e\\d+)\\]","expectMatches":2,"matchIndex":1},
+  {"label":"1187-paper-remove-set-confirm","command":["snapshot"],"screenshot":true},
+  {"label":"1188-paper-remove-set-accept","command":["click","{ref}"],"refPattern":"- button \"제외\" \\[ref=(e\\d+)\\]","scopeAfter":"- dialog"},
+  {"label":"1189-paper-one-group-remaining","command":["eval","--file","sources/runtime/paper-form-observation.js"],"screenshot":true},
+  {"label":"1190-paper-add-modal-open","command":["click","{ref}"],"refPattern":"- button \"[^\"]* 문항 추가\" \\[ref=(e\\d+)\\]"},
+  {"label":"1191-paper-add-modal-initial","command":["snapshot"]},
+  {"label":"1192-paper-add-modal-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1193-paper-add-modal-loaded","command":["snapshot"],"screenshot":true}
+ ],"tailChars":15000
+}

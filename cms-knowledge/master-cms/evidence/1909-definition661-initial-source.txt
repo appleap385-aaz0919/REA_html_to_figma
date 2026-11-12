@@ -1,0 +1,178 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e21051]
+      - link "문제은행 마스터 CMS" [ref=e21052]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e21060]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e21061]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e21062]
+          - link "HML 문항 등록" [ref=e21063]
+          - link "디피니션 문항 등록" [ref=e21064]
+          - link "쌍둥이 그룹 관리" [ref=e21065]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e21066]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e21067]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e21068]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e21053]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "디피니션 문항 등록"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "상세"
+      - heading "디피니션 상세" [level=2, ref=e21054]
+      - StaticText "초안"
+      - generic
+        - heading "기본 정보" [level=3, ref=e21058]
+        - DescriptionList
+          - term "시험지 ID"
+          - definition
+            - StaticText "661"
+          - term "원본 파일"
+          - definition
+            - StaticText "QA-DIFI-20261109-01.zip"
+            - button " 다운로드" [ref=e21071]
+              - StaticText ""
+              - StaticText "다운로드"
+          - term "출처"
+          - definition
+            - StaticText "[22-E-MA-T0-3-2-DCL-FB-2025]"
+            - StaticText "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025"
+          - term "단원 코드"
+          - definition
+            - StaticText "[22EMAT0NGS31]"
+            - StaticText "22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기"
+          - term "페이지"
+          - definition
+            - StaticText "1 ~ 1"
+          - term "용도"
+          - definition
+            - StaticText "공통"
+          - term "등록"
+          - definition
+            - StaticText "jaehyuk.myung · 2026-11-09"
+          - term "수정"
+          - definition
+            - StaticText "-"
+        - LabelText
+          - StaticText "비고"
+        - textbox [ref=e21069]
+      - generic
+        - heading "분리 문항 리스트" [level=3, ref=e21059]
+        - generic
+          - StaticText "#1"
+          - StaticText "문항ID 2089175 (2088808)"
+          - combobox [expanded=false, ref=e21070]: 등록성공
+            - MenuListPopup
+              - option "등록대기" [disabled, ref=e21072]
+              - option "등록성공" [selected, ref=e21073]
+              - option "등록실패" [ref=e21074]
+              - option "삭제" [ref=e21075]
+          - article
+            - paragraph
+              - StaticText "[QA-DIFI-20261109-01]"
+            - paragraph
+              - StaticText "다음 □ 안에 알맞은 자연수들의 합을 구하시오."
+            - paragraph
+            - StaticText "(가) 가장 작은 소수는 □이다."
+            - LineBreak "\n"
+            - StaticText "(나) 짝수인 소수는 □개이다."
+            - LineBreak "\n"
+            - StaticText "(다) □은 소수도 아니고 합성수도 아니다."
+            - paragraph
+            - generic
+              - heading "정답" [level=3, ref=e21076]
+              - paragraph
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "4"
+            - generic
+              - heading "풀이" [level=3, ref=e21077]
+              - paragraph
+                - StaticText "(가) 가장 작은 소수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "2"
+                - StaticText "이다."
+                - LineBreak "\n"
+                - StaticText "(나) 짝수인 소수는 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "2"
+                - StaticText "의 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "1"
+                - StaticText "개이다."
+                - LineBreak "\n"
+                - StaticText "(다) "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLText
+                          - StaticText "1"
+                - StaticText "은 소수도 아니고 합성수도 아니다."
+                - LineBreak "\n"
+                - StaticText "따라서 □ 안에 알맞은 자연수들의 합은 "
+                - MathMLMath
+                  - MathMLRow
+                    - MathMLRow
+                      - MathMLNumber
+                        - StaticText "2"
+                      - MathMLOperator
+                        - StaticText "+"
+                      - MathMLNumber
+                        - StaticText "1"
+                      - MathMLOperator
+                        - StaticText "+"
+                      - MathMLNumber
+                        - StaticText "1"
+                      - MathMLOperator
+                        - StaticText "="
+                      - MathMLNumber
+                        - StaticText "4"
+      - link "목록" [ref=e21055]
+      - button "폐기" [ref=e21056]
+      - button "승인" [ref=e21057]

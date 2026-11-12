@@ -1,0 +1,33 @@
+{
+ "schemaVersion":1,"date":"2026-11-09","status":"evidence_recorded_metadata_completion_pending","evidenceRange":[1826,1940],"lastEvidence":"1940-definition661-metadata-scroll",
+ "summary":"Definition 교육과정22의 기존15건과 상태별 상세8개, ZIP 폼의 파일·필수값·취소 정책을 검증했다. 별도 QA ZIP을 실제 등록해 문서661/문항2089175를 생성하고 P→R을 확인했으며, 최종 승인 후 M 메타추천중으로 전환됐다. 확정 Master 업무 변경은26회다. AI 추천 완료 후 최종 상태와 실제 폐기 등은 남아 있다.",
+ "inventory":{"initialRecords":15,"initialStatusCounts":{"Y":7,"D":4,"F":2,"W":1,"P":1,"R":0,"M":0},"scope":"Master dev, curriculum22, before QA import","file":"definition-documents-inventory-20261109.json","afterQaImportRecords":16,"recordCountReadbackEvidence":1906},
+ "observations":[
+  {"evidence":[1826,1827,1828,1829,1830,1831],"result":"기존 목록15건을100개 보기로 모두 보존했다. ID/파일/출처/과목/학년·학기/평가지등록여부/상태/등록자·일자의8열이다. HML 목록의 문항 성공·실패·삭제 개수 열은 없다.7상태 필터는 존재하지만 이 시점 R/M 행은 없었다. MOCK-M172와 MOCK-D171은 현재Y다."},
+  {"evidence":[1832,1833,1834,1835,1836,1837,1838,1839,1840,1841,1842,1843,1844,1845,1846,1847,1848,1849,1850,1851,1852,1853,1854,1855,1856,1857,1858,1859,1860,1861,1862,1863],"result":"W169/P170/D179/D180/F175/F299/Y173/Y530의 표시·소스·상단부터 하단 실제 스크롤을 보존했다. W/P는 분리 전, D179는 삭제 카드1개를 유지하지만 문항ID가숨김이고 상세/수정이 없으며 D180은 카드가 없다. F는 파싱실패 안내와 원본 재등록 경로를 제공하며 보조문구에 HML이 남는다. Y173은 채점정보 표가 있고 Y530은 없으며 각1문항이다. 표의 수를 문항 수로 세지 않는다. 자세한 비교와 행별 끝점은 definition-state-review-20261109.md와 각 scroll 증거에 보존했다. DOM/스크롤 관찰이며 픽셀 완료를 뜻하지 않는다."},
+  {"evidence":[1864,1865,1866,1867,1868],"result":"현재 ZIP 등록 폼의 required 출처/단원/시작/끝/용도, 단원maxlength20, 페이지min1, 용도C/T, 등록자disabled를 보존했다. 파일 없이 실제 등록시작을 누르면 HML 파일을 선택해 주세요라는 잘못된 안내가 표시된다."},
+  {"evidence":[1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879],"result":"사용자 데이터가 없는 시험파일로 로컬 검증을 실행했다. .txt102B는 .ZIP 파일만 업로드할 수 있습니다로 거부되고 제거된다.22B 빈 ZIP은 accepted/queued가 되지만 내용 파싱 성공을 뜻하지 않는다. 필수 메타정보 누락은 미입력 정보가 있습니다로 차단하며 문서ID는 비어 있고 등록 버튼이 활성 상태로 남는다. 두 번째 ZIP은 You cannot upload any more files로 거부하고 첫 파일을 유지한다.52,428,801B는 파일이 너무 큽니다(50MB). 최대50MB로 거부한다. 경계 초과1B가 반올림으로50/50으로 보이는 문제를 기록했다. 이 구간에는 실제 등록 완료가 없다."},
+  {"evidence":[1880,1881,1882,1883,1884,1885,1886,1887,1888,1889,1890],"result":"21자 단원 입력은20자로 제한되고 두 페이지0은1이상 오류가 된다. 임의20자 단원은 브라우저 validity가true지만 서버 존재/길이/조합 검증을 입증하지 않는다. ZIP 등록 취소 확인을 취소하면 파일과 입력을 유지하고 저장하지않고이동을 확인하면 기존15건 목록으로 돌아간다. 로컬 파일은 제출되지 않았다."},
+  {"evidence":[1891,1892,1893,1894,1895],"result":"530 원본 다운로드 클릭 도구는30초후 outcome_unknown으로 끝났다. 새 관찰에서 다운로드 리소스 기록/오류/오버레이가 없고 로컬 다운로드 파일도 없었다. 성공으로 간주하거나 같은 클릭을 재시도하지 않았다. 이어 화면의 data-download-url/name과 공통 소스에 따른 정확한 /file/download.donga 읽기GET으로200 application/zip942B를 받았다. 이는 UI 클릭 다운로드 성공과 별도 근거다. 내부750774.json 한 개1808B,16최상위키, 외부리소스없는 단답형 문항이며 파일SHA와 구조는 definition530-zip-inventory-20261109.json에 보존했다."},
+  {"evidence":[1896,1897,1898,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910],"result":"원본 JSON의 구조를 보존하고 질문/마스터/채점/정답 외부ID를 별도의 양의int32범위 QA값으로 바꾸고 본문에 QA표시를 넣은974B ZIP을 준비했다. 의도/해시/메타를 기록한 후 실제 등록시작을 한 번 눌렀다. 목록15→16, 신규문서661이P로 표시되고 새GET상세에서 R과 새문항2089175/detail2088808, QA표시가 확인됐다. 서버 응답별 네트워크 본문은 수집하지 않았으므로 발급/PUT/create 각 상태코드까지 주장하지 않는다. 원본530 문항2087992와 생성문항ID는 다르다. R상세 실제스크롤은329+1071=1400이다."},
+  {"evidence":[1911,1912,1913,1914,1915,1916,1917,1918,1919,1920,1921,1922,1923,1924,1925,1926,1927,1928,1929,1930],"result":"백그라운드 탭의 모달 닫힘이 완료되지 않은 상태에서 후속 동작이 진행되어 여러 모달이 겹쳤다.1911~1928은 깨끗한 정책 검증에서 제외했다. 최종 확인 버튼은 누르지 않았다. 닫힘 미완료를 실패로 처리하고 모달1개만 허용하도록 helper를 보완했으며 새GET으로 로컬상태를 초기화했다. 선택한 조사탭에만 CDP active/focus 렌더링을 일시 에뮬레이션했고 네이티브 창/마우스는 이동하지 않았다.1930 스크린샷은 다시10060으로 실패했으므로 픽셀 증거는 없다."},
+  {"evidence":[1931,1932,1933,1934],"result":"이벤트 shown/hidden을 각각 확인하면서 깨끗한 QA661에서5개 분기를 재검증했다. 모두D는 승인차단, F는 최종 승인확인창까지 진입, S+빈비고 폐기는 사유요구, 비고입력 후 폐기는 되돌릴수없음 확인, S승인은 AI메타추천 확인을 표시한다. 각 창을 실제로 닫고 모달0개를 확인했다. F의 최종 제출은 하지 않아 서버 수용 여부는 미확인이다. Definition R에는 paperReg 컨트롤이 없어 HML의 평가지 선택 누락 검사가 적용되지 않았다."},
+  {"evidence":[1935,1936,1937,1938,1939,1940],"result":"QA661의 S/문항2089175/QA비고/문서ID/확인창을 검증하고 최종승인을 한 번 눌렀다. 새 화면에서 M메타추천중, 완료되면자동승인/그때까지편집배포불가 안내를 확인했다. 다운로드/목록만 남고 비고가읽기전용이며 검수select와 승인/폐기 버튼이 사라졌다. 실제스크롤399+1071=1470에 도달했다. M이 실제 생성된 것은 확인했으나 AI완료·Y최종상태·최종문항메타는 아직 미확인이다."}
+ ],
+ "sourcePolicies":[
+  "Dropzone acceptedFiles.zip/maxFiles1/maxFilesize50, autoProcessQueue=false다. 발급POST→presigned binary PUT→create POST 연결, 전송실패시 버튼재활성화/다음제출전QUEUED 복원은 소스에서 확인했다. 정상등록의 최종 결과는 실제로 확인했지만 개별요청 상태코드/부분실패/재시도는 미확인이다.",
+  "단원자동완성은3자/300ms/캐시없음/최대20후보다. input에는 required/maxlength만 있고 pattern/minlength, 시작≤끝 비교는 읽은클라이언트에 없다. 서버정책은 별도검증이 필요하다.",
+  "승인은 W미검수→모두D→paperReg가존재할때만미선택→최종확인 순서다. 각블록data-item-ids를 itemIds/loadFlags 쌍으로 펼쳐 제출한다. Definition661은 paperReg가없다. 비고는trim후빈값이면폐기차단한다.",
+  "화면기획의 안내문구와 실제 처리결과/정적구현/도구실패/픽셀누락을 구분한다. 현재사이트나모든분기100%완료를주장하지않는다."
+ ],
+ "artifacts":["definition-state-review-20261109.md","definition-documents-inventory-20261109.json","definition530-zip-inventory-20261109.json","definition-qa-import-intent.json","sources/definition-registration-form-current-20261109.html","sources/definition661-draft-initial-20261109.html","sources/definition661-metadata-pending-20261109.html"],
+ "persistentChanges":{"confirmedMasterOperations":26,"newMasterChangesInThisPhase":2,"qaDocumentId":661,"qaItemId":2089175,"qaDetailId":2088808,"currentDocumentState":"M","finalDocumentDiscardSubmitted":false,"serviceDeployment":false},
+ "remaining":[
+  "QA661을 다시 읽어 AI 메타 추천 완료 후의 최종 상태와 생성 문항을 확인한다.",
+  "별도의 격리한 QA 문서에서 실제 폐기와 손상/부적합 ZIP의 서버 처리를 확인하고, 의도와 확정 변경을 기록한다.",
+  "HML 실제 업로드/파싱/승인, 문항 수정의 임시저장 선택과 실패 분기, 교육과정15/복합필터/추가 서버 입력 검증을 이어간다.",
+  "HML 편집기의 실제 번역 파일/다른 슬롯 저장/공유 지문, 쌍둥이/평가지/OMR/랩의 남은 분기와 각 화면의 픽셀 누락을 이어간다."
+ ],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=661&curriculum=22&pageNum=1&pageSize=100","tab":"t21 research Definition661 metadata pending at bottom","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "tooling":{"renderOverride":"See browser-render-override-state.json; temporary target-only override holds at most1200seconds and must be cleared when ending this research run.","failedScreenshotEvidence":1930,"excludedGuardEvidenceRange":[1911,1928]}
+}

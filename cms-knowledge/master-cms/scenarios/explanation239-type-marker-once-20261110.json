@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"3222-own-copy239-explanation-input-preflight","command":["eval","(()=>{const q=new URLSearchParams(location.search),c=document.querySelector('#webhwpFrame')?.contentWindow.HwpCtrl,p=window.opener;if(q.get('itemId')!=='2089239'||q.get('itemDetailId')!=='2089019'||!document.querySelector('[data-slot=explain].active')||!c||c.IsModified||c.PageCount!==1||!window.__qaExplain239BeforeText||window.__qaExplain239BeforeCaret?.x!==309||window.__qaExplain239BeforeCaret?.y!==326||!document.querySelector('[data-webhwp-status]').textContent.includes('2089216_A.hml')||new URL(p.location.href).searchParams.get('itemId')!=='2089239'||p.document.querySelector('[data-editor-url]')?.dataset.itemDetailId!=='2089019'||[...p.document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Exact unmodified copied explanation required');return {ready:true,caretClick:window.__qaExplain239BeforeCaret};})()"]},
+ {"label":"3223-own-copy239-explanation-focus-ime-move","command":["mouse","move","309","326"]},
+ {"label":"3224-own-copy239-explanation-focus-ime-down","command":["mouse","down"]},
+ {"label":"3225-own-copy239-explanation-focus-ime-up","command":["mouse","up"]},
+ {"label":"3226-own-copy239-explanation-document-start","command":["press","Control+Home"]},
+ {"label":"3227-own-copy239-explanation-marker-type-once","command":["keyboard","type","[QA-EXPLANATION-HML-20261110] "]},
+ {"label":"3228-own-copy239-explanation-edited-text-verify","command":["eval","--file","sources/runtime/explanation239-popup-text-and-caret-read.js"]},
+ {"label":"3229-own-copy239-explanation-edited-doc-visual","command":["eval","--file","sources/runtime/explanation239-popup-ui-observation.js"],"screenshot":true}
+],"tailChars":120}

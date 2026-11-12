@@ -1,0 +1,13 @@
+{
+ "steps":[
+  {"label":"1315-source-test-year-change","command":["select","select[name=publishYear]","2048"]},
+  {"label":"1316-source-test-purpose-change","command":["select","select[name=serviceUsage]","교사용"]},
+  {"label":"1317-source-test-display-change","command":["fill","input[name=viewName]","QA-SOURCE-20261109-EDITED"]},
+  {"label":"1318-source-test-remark-change","command":["fill","textarea[name=remark]","QA edited source 2026-11-09; unmapped and unused."]},
+  {"label":"1319-source-test-update-values","command":["eval","--file","sources/runtime/source-form-observation.js"]},
+  {"label":"1320-source-test-update-submit","command":["eval","--file","sources/runtime/source-update-isolated-test.js"]},
+  {"label":"1321-source-test-update-readback","command":["snapshot"]},
+  {"label":"1322-source-test-updated-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1323-source-test-updated-inventory","command":["eval","--file","sources/runtime/source-read-inventory.js"]}
+ ],"tailChars":6500
+}

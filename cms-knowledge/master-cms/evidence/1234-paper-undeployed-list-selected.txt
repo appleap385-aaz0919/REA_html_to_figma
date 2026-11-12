@@ -1,0 +1,264 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e6986]
+      - link "문제은행 마스터 CMS" [ref=e6987]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e7012]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e7013]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e7014]
+          - link "HML 문항 등록" [ref=e7015]
+          - link "디피니션 문항 등록" [ref=e7016]
+          - link "쌍둥이 그룹 관리" [ref=e7017]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e7018]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e7019]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e7020]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e6990]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+      - heading "전체 문항" [level=2, ref=e6988]
+      - generic
+        - combobox [expanded=false, ref=e6992]: 교육과정 선택
+          - MenuListPopup
+            - option "교육과정 선택" [selected, ref=e7046]
+            - option "22" [ref=e7047]
+            - option "15" [ref=e7048]
+        - combobox [expanded=false, disabled, ref=e6993]: 학교급 선택
+          - MenuListPopup
+            - option "학교급 선택" [disabled, ref=e7049]
+            - option "초등" [disabled, ref=e7050]
+            - option "중학" [disabled, ref=e7051]
+            - option "고등" [disabled, ref=e7052]
+        - combobox [expanded=false, disabled, ref=e6994]: 과목군 선택
+          - MenuListPopup
+            - option "과목군 선택" [disabled, ref=e7053]
+            - option "수학군" [disabled, ref=e7054]
+        - list
+          - listitem [level=1, ref=e7055] clickable [cursor:pointer]
+            - LabelText
+              - checkbox [checked=true, ref=e7136]
+            - StaticText "전체"
+      - button "" [ref=e6989]
+        - StaticText ""
+      - StaticText "선택한 단원 내에서 검색됩니다."
+      - generic
+        - combobox [expanded=false, ref=e6995]: 문항 ID
+          - MenuListPopup
+            - option "문항 ID" [selected, ref=e7056]
+            - option "지문 ID" [ref=e7057]
+            - option "지문" [ref=e7058]
+            - option "문제" [ref=e7059]
+            - option "출처코드" [ref=e7060]
+            - option "등록자 ID" [ref=e7061]
+            - option "원본 파일명" [ref=e7062]
+        - textbox "문항 ID / 지문 ID / 지문 / 문제 / 출처코드 / 등록자 ID" [ref=e6996]: 2087725,2087727
+          - StaticText "2087725,2087727"
+        - combobox [expanded=false, ref=e6997]: 난이도 전체
+          - MenuListPopup
+            - option "난이도 전체" [selected, ref=e7063]
+            - option "최상" [ref=e7064]
+            - option "상" [ref=e7065]
+            - option "중" [ref=e7066]
+            - option "하" [ref=e7067]
+            - option "최하" [ref=e7068]
+        - combobox [expanded=false, ref=e6998]: 생성 방식 전체
+          - MenuListPopup
+            - option "생성 방식 전체" [selected, ref=e7069]
+            - option "HML 변환" [ref=e7070]
+            - option "디피니션" [ref=e7071]
+            - option "AI생성" [ref=e7072]
+            - option "복제" [ref=e7073]
+        - combobox [expanded=false, ref=e6999]: 형태1 전체
+          - MenuListPopup
+            - option "형태1 전체" [selected, ref=e7074]
+            - option "객관식" [ref=e7075]
+            - option "주관식" [ref=e7076]
+            - option "서술형" [ref=e7077]
+        - combobox [expanded=false, disabled, ref=e7000]: 형태2 전체
+          - MenuListPopup
+            - option "형태2 전체" [disabled, ref=e7078]
+            - option "단답형" [disabled, ref=e7079]
+            - option "다답형" [disabled, ref=e7080]
+            - option "단답형" [disabled, ref=e7081]
+            - option "다답형" [disabled, ref=e7082]
+            - option "기본형" [disabled, ref=e7083]
+            - option "단답형" [disabled, ref=e7084]
+            - option "다답형" [disabled, ref=e7085]
+        - combobox [expanded=false, disabled, ref=e7001]: 형태3 전체
+          - MenuListPopup
+            - option "형태3 전체" [disabled, ref=e7086]
+            - option "N지 선다" [disabled, ref=e7087]
+            - option "O/X 형" [disabled, ref=e7088]
+            - option "N지 선다" [disabled, ref=e7089]
+            - option "O/X 형" [disabled, ref=e7090]
+            - option "일반형" [disabled, ref=e7091]
+            - option "그리기형" [disabled, ref=e7092]
+            - option "영역 선택형" [disabled, ref=e7093]
+            - option "일반형" [disabled, ref=e7094]
+            - option "영역선택형" [disabled, ref=e7095]
+            - option "선그리기형" [disabled, ref=e7096]
+            - option "드래그앤 드롭형" [disabled, ref=e7097]
+            - option "기본 서술형" [disabled, ref=e7098]
+            - option "단답 서술형" [disabled, ref=e7099]
+            - option "다답 서술형" [disabled, ref=e7100]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e7021]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e7022]
+          - button "30일" [ref=e7023]
+          - button "90일" [ref=e7024]
+          - button "전체" [ref=e7025]
+        - StaticText "배포"
+        - LabelText [ref=e7002] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e7026]
+          - StaticText "전체"
+        - LabelText [ref=e7003] clickable [cursor:pointer]
+          - checkbox "배포됨" [checked=true, ref=e7027]
+          - StaticText "배포됨"
+        - LabelText [ref=e7004] clickable [cursor:pointer]
+          - checkbox "미배포" [checked=true, ref=e7028]
+          - StaticText "미배포"
+        - combobox [expanded=false, disabled, ref=e7005]: 배포 대상 전체
+          - MenuListPopup
+            - option "배포 대상 전체" [disabled, ref=e7101]
+            - option "AI출제마법사 CMS" [disabled, ref=e7102]
+            - option "개발 서비스" [disabled, ref=e7103]
+        - StaticText "상태"
+        - LabelText [ref=e7006] clickable [cursor:pointer]
+          - checkbox "전체" [checked=true, ref=e7029]
+          - StaticText "전체"
+        - LabelText [ref=e7007] clickable [cursor:pointer]
+          - checkbox "초안" [checked=true, ref=e7030]
+          - StaticText "초안"
+        - LabelText [ref=e7008] clickable [cursor:pointer]
+          - checkbox "실패(재등록)" [checked=true, ref=e7031]
+          - StaticText "실패(재등록)"
+        - LabelText [ref=e7009] clickable [cursor:pointer]
+          - checkbox "승인(사용)" [checked=true, ref=e7032]
+          - StaticText "승인(사용)"
+        - LabelText [ref=e7010] clickable [cursor:pointer]
+          - checkbox "승인(미사용)" [checked=true, ref=e7033]
+          - StaticText "승인(미사용)"
+        - LabelText [ref=e7011] clickable [cursor:pointer]
+          - checkbox "폐기" [checked=true, ref=e7034]
+          - StaticText "폐기"
+        - generic
+          - button " 초기화" [ref=e7035]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e7036]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e6991]: 10개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [selected, ref=e7037]
+            - option "30개씩 보기" [ref=e7038]
+            - option "50개씩 보기" [ref=e7039]
+            - option "100개씩 보기" [ref=e7040]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "2"
+        - StaticText "건"
+        - table
+          - rowgroup
+            - row
+              - columnheader "문항 ID" [ref=e7124]
+              - columnheader "문제" [ref=e7125]
+              - columnheader "출처" [ref=e7126]
+              - columnheader "단원" [ref=e7127]
+              - columnheader "형태" [ref=e7128]
+              - columnheader "난이도" [ref=e7129]
+              - columnheader "쌍둥이" [ref=e7130]
+              - columnheader "상태" [ref=e7131]
+              - columnheader "배포" [ref=e7132]
+              - columnheader "등록자 · 등록일" [ref=e7133]
+          - row
+            - cell "2087727" [ref=e7104]
+              - StaticText "2087727"
+            - cell "$xy<0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오." [ref=e7105]
+              - link "$xy<0$이고 $x$의 절댓값이 $7$, $y$의 절댓값이 $3$일 때, $xy$의 값을 구하는 과정을 서술하시오." [ref=e7134]
+            - cell "22-M-MA-T0-1-0-DCL-MA-2025" [ref=e7106]
+              - StaticText "22-M-MA-T0-1-0-DCL-MA-2025"
+            - cell "05 정수와 유리수의 곱셈" [ref=e7107]
+              - StaticText "05 정수와 유리수의 곱셈"
+            - cell "서술형-단답형 단답 서술형" [ref=e7108]
+              - StaticText "서술형-단답형"
+              - StaticText "단답 서술형"
+            - cell "하" [ref=e7109]
+            - cell "3개" [ref=e7110]
+            - cell "승인(사용)" [ref=e7111]
+            - cell "-" [ref=e7112]
+            - cell "hyuntaek.kim 2026-10-08" [ref=e7113]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-08"
+          - row
+            - cell "2087725" [ref=e7114]
+              - StaticText "2087725"
+            - cell "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오." [ref=e7115]
+              - link "$- \\dfrac{5}{2} a+4+ \\dfrac{1}{3} a- \\dfrac{8}{3}$을 간단히 하시오." [ref=e7135]
+            - cell "22-M-MA-T0-1-0-DCL-MA-2025" [ref=e7116]
+              - StaticText "22-M-MA-T0-1-0-DCL-MA-2025"
+            - cell "04 일차식의 덧셈과 뺄셈" [ref=e7117]
+              - StaticText "04 일차식의 덧셈과 뺄셈"
+            - cell "주관식-단답형 일반형" [ref=e7118]
+              - StaticText "주관식-단답형"
+              - StaticText "일반형"
+            - cell "하" [ref=e7119]
+            - cell "2개" [ref=e7120]
+            - cell "승인(사용)" [ref=e7121]
+            - cell "-" [ref=e7122]
+            - cell "hyuntaek.kim 2026-10-08" [ref=e7123]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-08"
+        - generic
+          - StaticText "총 2건 중 1∼2 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e7041]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e7042]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e7043]
+          - listitem [level=1]
+            - link "다음" [ref=e7044]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e7045]
+              - StaticText ""

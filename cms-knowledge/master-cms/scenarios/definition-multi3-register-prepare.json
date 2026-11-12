@@ -1,0 +1,12 @@
+{"steps":[
+ {"label":"2650-definition-multi3-registration-form-open","command":["open","https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"2651-definition-multi3-registration-form-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2652-definition-multi3-registration-form-initial-state","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"2653-definition-multi3-qa-zip-select","command":["upload","input.dz-hidden-input","D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/cms-knowledge/master-cms/fixtures/QA-DIFI-20261110-04-MULTI3.zip"]},
+ {"label":"2654-definition-multi3-source13-select","command":["select","select[name=productId]","13"]},
+ {"label":"2655-definition-multi3-unit20-fill","command":["fill","#unitCodeInput","22MMAT0KOK1001020000"]},
+ {"label":"2656-definition-multi3-start-page-fill","command":["fill","input[name=startPageNum]","1"]},
+ {"label":"2657-definition-multi3-end-page-fill","command":["fill","input[name=endPageNum]","3"]},
+ {"label":"2658-definition-multi3-common-purpose-select","command":["select","select[name=serviceUsage]","C"]},
+ {"label":"2659-definition-multi3-before-submit-verified","command":["eval","--file","sources/runtime/definition-multi3-before-submit-verify.js"]}
+],"tailChars":220}

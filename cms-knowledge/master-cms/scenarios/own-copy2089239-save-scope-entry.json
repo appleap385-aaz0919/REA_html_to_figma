@@ -1,0 +1,4 @@
+{"steps":[
+ {"label":"2412-own-copy2089239-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239"]},
+ {"label":"2413-own-copy2089239-save-scope-actions","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089239')throw Error('Own QA copy required');return {url:location.href,actions:[...document.querySelectorAll('a,button')].filter(e=>/수정|저장|반영/.test(e.innerText)).map(e=>({tag:e.tagName,text:e.innerText,href:e.getAttribute('href'),id:e.id,modifyUrl:e.getAttribute('data-modify-url'),onclick:e.getAttribute('onclick'),disabled:e.matches(':disabled')})),fields:[...document.querySelectorAll('input:checked,select')].map(e=>({name:e.name,value:e.value})),text:document.body.innerText.slice(-6500)};})()"]}
+],"tailChars":400}

@@ -1,0 +1,298 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e13867]
+      - link "문제은행 마스터 CMS" [ref=e13868]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e13880]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e13881]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e13882]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e13883]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e13884]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e13869]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - link " 랩" [ref=e13864]
+      - StaticText ""
+      - StaticText "랩"
+    - heading "OMR 복원 테스트 (JSON → 화면)" [level=2, ref=e13865]
+    - StaticText "유형 선택 → 빈 폼 렌더 → OMR/정답 JSON 붙여넣고 복원. serialize 역방향(hydrate) 검증용."
+    - button " 좁게 보기" [ref=e13866]
+      - StaticText ""
+      - StaticText "좁게 보기"
+    - generic
+      - generic
+        - heading "문항유형" [level=3, ref=e13870]
+          - StaticText ""
+          - StaticText "문항유형"
+        - StaticText "유형 코드"
+        - combobox [expanded=false, ref=e13875]: ESMA00 · 다답형 › 다답 서술형
+          - MenuListPopup
+            - option "선택" [ref=e13885]
+            - group "객관식"
+              - option "OBSACN · 단답형 › N지 선다" [ref=e13886]
+              - option "OBSAOX · 단답형 › O/X 형" [ref=e13887]
+              - option "OBMACN · 다답형 › N지 선다" [ref=e13888]
+              - option "OBMAOX · 다답형 › O/X 형" [ref=e13889]
+            - group "주관식"
+              - option "SBSANM · 단답형 › 일반형" [ref=e13890]
+              - option "SBSADR · 단답형 › 그리기형" [ref=e13891]
+              - option "SBSAAS · 단답형 › 영역 선택형" [ref=e13892]
+              - option "SBMANM · 다답형 › 일반형" [ref=e13893]
+              - option "SBMAAS · 다답형 › 영역 선택형" [ref=e13894]
+              - option "SBMALD · 다답형 › 선그리기형" [ref=e13895]
+              - option "SBMADD · 다답형 › 드래그앤드롭형" [ref=e13896]
+            - group "서술형"
+              - option "ESBA00 · 기본형 › 기본 서술형" [ref=e13897]
+              - option "ESSA00 · 단답형 › 단답 서술형" [ref=e13898]
+              - option "ESMA00 · 다답형 › 다답 서술형" [selected, ref=e13899]
+      - generic
+        - heading "OMR / 정답 JSON" [level=3, ref=e13871]
+          - StaticText ""
+          - StaticText "OMR / 정답 JSON"
+        - button " 폼 비우기" [ref=e13872]
+          - StaticText ""
+          - StaticText "폼 비우기"
+        - button " 복원" [ref=e13873]
+          - StaticText ""
+          - StaticText "복원"
+        - generic
+          - LabelText
+            - StaticText "OMR JSON (필드 배열 "
+            - code
+              - StaticText "[...]"
+            - StaticText ")"
+          - button " Pretty" [ref=e13876]
+            - StaticText ""
+            - StaticText "Pretty"
+          - textbox "OMR JSON (필드 배열 [...])" [ref=e13877]: [
+  {
+    "type": "COMMENT"
+  },
+  {
+    "type": "TEXT"
+  }
+]
+            - generic
+              - StaticText "["
+              - LineBreak "\n"
+              - StaticText "  {"
+              - LineBreak "\n"
+              - StaticText "    \"type\": \"COMMENT\""
+              - LineBreak "\n"
+              - StaticText "  },"
+              - LineBreak "\n"
+              - StaticText "  {"
+              - LineBreak "\n"
+              - StaticText "    \"type\": \"TEXT\""
+              - LineBreak "\n"
+              - StaticText "  }"
+              - LineBreak "\n"
+              - StaticText "]"
+          - LabelText
+            - StaticText "정답 JSON (rule_type 트리)"
+          - button " Pretty" [ref=e13878]
+            - StaticText ""
+            - StaticText "Pretty"
+          - textbox "정답 JSON (rule_type 트리)" [ref=e13879]: {
+  "rule_type": "ORDERED",
+  "nodes": [
+    {
+      "rule_type": "MANUAL"
+    },
+    {
+      "rule_type": "UNORDERED",
+      "nodes": [
+        {
+          "rule_type": "UNORDERED",
+          "nodes": [
+            {
+              "rule_type": "VALUE",
+              "allowed_answer": [
+                {
+                  "value": "",
+                  "value_type": "math",
+                  "case_sensitive": false,
+                  "space_sensitive": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+            - generic
+              - StaticText "{"
+              - LineBreak "\n"
+              - StaticText "  \"rule_type\": \"ORDERED\","
+              - LineBreak "\n"
+              - StaticText "  \"nodes\": ["
+              - LineBreak "\n"
+              - StaticText "    {"
+              - LineBreak "\n"
+              - StaticText "      \"rule_type\": \"MANUAL\""
+              - LineBreak "\n"
+              - StaticText "    },"
+              - LineBreak "\n"
+              - StaticText "    {"
+              - LineBreak "\n"
+              - StaticText "      \"rule_type\": \"UNORDERED\","
+              - LineBreak "\n"
+              - StaticText "      \"nodes\": ["
+              - LineBreak "\n"
+              - StaticText "        {"
+              - LineBreak "\n"
+              - StaticText "          \"rule_type\": \"UNORDERED\","
+              - LineBreak "\n"
+              - StaticText "          \"nodes\": ["
+              - LineBreak "\n"
+              - StaticText "            {"
+              - LineBreak "\n"
+              - StaticText "              \"rule_type\": \"VALUE\","
+              - LineBreak "\n"
+              - StaticText "              \"allowed_answer\": ["
+              - LineBreak "\n"
+              - StaticText "                {"
+              - LineBreak "\n"
+              - StaticText "                  \"value\": \"\","
+              - LineBreak "\n"
+              - StaticText "                  \"value_type\": \"math\","
+              - LineBreak "\n"
+              - StaticText "                  \"case_sensitive\": false,"
+              - LineBreak "\n"
+              - StaticText "                  \"space_sensitive\": false"
+              - LineBreak "\n"
+              - StaticText "                }"
+              - LineBreak "\n"
+              - StaticText "              ]"
+              - LineBreak "\n"
+              - StaticText "            }"
+              - LineBreak "\n"
+              - StaticText "          ]"
+              - LineBreak "\n"
+              - StaticText "        }"
+              - LineBreak "\n"
+              - StaticText "      ]"
+              - LineBreak "\n"
+              - StaticText "    }"
+              - LineBreak "\n"
+              - StaticText "  ]"
+              - LineBreak "\n"
+              - StaticText "}"
+      - generic
+        - heading "실제 화면" [level=3, ref=e13874]
+          - StaticText ""
+          - StaticText "실제 화면"
+        - generic
+          - heading "OMR 편집 (정답 설정)" [level=3, ref=e14070]
+            - StaticText ""
+            - StaticText "OMR 편집 (정답 설정)"
+          - button " OMR 미리보기" [ref=e14071]
+            - StaticText ""
+            - StaticText "OMR 미리보기"
+          - StaticText "타이틀 "
+          - StaticText "1"
+          - textbox "풀이 과정" [ref=e14072]
+          - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+          - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+          - button " 순서 바꾸기" [ref=e14080]
+            - StaticText ""
+            - StaticText "순서 바꾸기"
+          - StaticText "타이틀 "
+          - StaticText "2"
+          - textbox "정답" [ref=e14073]
+          - LabelText
+            - checkbox "OMR SET끼리 순서 고정(유순)" [checked=false, ref=e14081]
+            - StaticText "OMR SET끼리 순서 고정(유순)"
+          - StaticText "1"
+          - StaticText ") "
+          - StaticText "OMR SET"
+          - LabelText
+            - checkbox "순서 고정(유순)" [checked=false, ref=e14082]
+            - StaticText "순서 고정(유순)"
+          - button "SET 삭제" [disabled, ref=e14074]
+          - StaticText "1"
+          - StaticText ") "
+          - StaticText "정답 SET"
+          - combobox [expanded=false, ref=e14075]: 입력 박스형
+            - MenuListPopup
+              - option "입력 박스형" [selected, ref=e14095]
+              - option "범례 선택형" [ref=e14096]
+          - LabelText
+            - checkbox "쉼표 구분여부" [checked=false, ref=e14083]
+            - StaticText "쉼표 구분여부"
+          - button "SET 삭제" [disabled, ref=e14076]
+          - StaticText "설정"
+          - generic
+            - math "math input field" [ref=e14084] editable [tabindex, contenteditable]
+              - textbox [ref=e14097]
+              - generic
+                - button "Menu Menu" [ref=e14100]
+                  - image "Menu"
+                  - StaticText "Menu"
+              - status
+            - button "Σ" [ref=e14085]
+          - button "" [expanded=false, ref=e14086]
+            - StaticText ""
+          - generic
+            - math "math input field" [ref=e14087] editable [tabindex, contenteditable]
+              - textbox [ref=e14098]
+              - generic
+                - button "Menu Menu" [ref=e14101]
+                  - image "Menu"
+                  - StaticText "Menu"
+              - status
+            - button "Σ" [ref=e14088]
+          - button "" [expanded=false, ref=e14089]
+            - StaticText ""
+          - StaticText "정답"
+          - generic
+            - math "math input field" [ref=e14090] editable [tabindex, contenteditable]
+              - textbox [ref=e14099]
+              - generic
+                - button "Menu Menu" [ref=e14102]
+                  - image "Menu"
+                  - StaticText "Menu"
+              - status
+            - button "Σ" [ref=e14091]
+          - button "" [expanded=false, ref=e14092]
+            - StaticText ""
+          - LabelText
+            - checkbox "대소구분" [checked=false, ref=e14093]
+            - StaticText "대소구분"
+          - LabelText
+            - checkbox "공백구분" [checked=false, ref=e14094]
+            - StaticText "공백구분"
+          - button " 유사 정답 추가" [ref=e14077]
+            - StaticText ""
+            - StaticText "유사 정답 추가"
+          - button " 정답 SET 추가" [ref=e14078]
+            - StaticText ""
+            - StaticText "정답 SET 추가"
+          - button " OMR SET 추가" [ref=e14079]
+            - StaticText ""
+            - StaticText "OMR SET 추가"

@@ -1,0 +1,16 @@
+{
+ "steps":[
+  {"label":"1148-paper-list-all-seed","command":["snapshot"]},
+  {"label":"1149-paper-thirty-page","command":["select","{ref}","30개씩 보기"],"refPattern":"- combobox \\[expanded=false, ref=(e\\d+)\\]: 10개씩 보기"},
+  {"label":"1150-paper-all-seventeen","command":["snapshot"],"screenshot":true},
+  {"label":"1151-paper-list-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1152-paper-list-all-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1153-paper-list-scroll-middle","command":["scroll","down","600","--selector",".page-wrapper"],"screenshot":true},
+  {"label":"1154-paper-list-bottom-measure","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+  {"label":"1155-paper-mock-focus","command":["focus","{ref}"],"refPattern":"- link \"\\[MOCK-HML-M\\] 템플릿_시험지2 \\(복제10\\)\" \\[ref=(e\\d+)\\]"},
+  {"label":"1156-paper-mock-open","command":["press","Enter"]},
+  {"label":"1157-paper-mock-detail","command":["snapshot"],"screenshot":true},
+  {"label":"1158-paper-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+  {"label":"1159-paper-detail-geometry","command":["eval","--file","sources/runtime/dom-form-observation.js"]}
+ ],"tailChars":10000
+}

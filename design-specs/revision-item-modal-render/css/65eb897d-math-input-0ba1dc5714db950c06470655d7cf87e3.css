@@ -1,0 +1,498 @@
+/* 수식 입력 위젯 스타일(수식입력기 다이얼로그 · 키패드 · 행렬 선택 · 단독 답안 필드) — 문항수정/lab 공용, 하이브리드 에디터·잉크·수식노드 스타일은 데모 전용(math-demo.css) */
+/* 시안: Figma 문제은행-디자인-최종 > 수식입력기(1744:40937) 고등 화면. 값은 프론트(douclass_exambank) 디자인 토큰과 같다 */
+
+/* ===== 수식입력기 다이얼로그 ===== */
+.math-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+}
+.math-dialog {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 16px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+.math-dialog__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 26px 20px 30px;
+}
+.math-dialog__title {
+  flex: 1;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.math-dialog__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+}
+.math-dialog__close svg {
+  width: 20px;
+  height: 20px;
+}
+.math-dialog__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 30px;
+}
+.math-dialog__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 43px;
+}
+.math-dialog__tabs {
+  display: flex;
+}
+.math-dialog__tab {
+  padding: 8px 10px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #777;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.math-dialog__tab.is-active {
+  border-bottom-color: #000;
+  color: #000;
+  font-weight: 700;
+}
+.math-dialog__hint {
+  margin: 0;
+  color: #939393;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: right;
+}
+.math-dialog__keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* 입력창 (시안 Textfield 60, 포커스 테두리) */
+.math-dialog__field {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  padding: 0 15px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+/* 가상 키보드·메뉴 토글은 쓰지 않는다 (키패드가 창 안에 있음) */
+.math-dialog__field::part(virtual-keyboard-toggle),
+.math-dialog__field::part(menu-toggle),
+.math-answer-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+.math-dialog__field::part(content) {
+  min-height: 58px;
+}
+
+/* 손글씨 */
+.math-dialog__ink {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* 한 획/전체 지우기는 탭 줄 버튼이 맡으므로 캔버스 자체 버튼은 숨김 */
+.math-dialog__ink .ink-canvas__actions {
+  display: none;
+}
+.math-dialog__ink-actions {
+  display: flex;
+  gap: 10px;
+}
+.math-dialog__ink-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid #e2e7ee;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.math-dialog__ink-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.math-dialog__ink-btn.is-primary {
+  min-width: 104px;
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+.math-dialog__ink-btn:disabled {
+  border-color: #e2e7ee;
+  background: #fff;
+  color: #b7b7b7;
+  cursor: default;
+}
+.math-dialog__result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.math-dialog__result-label {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.math-dialog__result-box {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 15px;
+  border: 1px solid #c7cdd5;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.math-dialog__result-box.is-filled {
+  border-color: #000;
+}
+.math-dialog__error {
+  color: #ff3737;
+  font-size: 14px;
+}
+.math-dialog__actions {
+  display: flex;
+  gap: 10px;
+  padding: 20px 30px 30px;
+}
+.math-dialog__btn {
+  flex: 1;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid #e2e7ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.math-dialog__btn.is-primary {
+  border-color: #2068e5;
+  background: #2068e5;
+  color: #fff;
+}
+
+/* ===== 키패드 ===== */
+.keypad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* 세그먼트 탭 (시안 160×39) */
+.keypad__tabs {
+  display: flex;
+  gap: 1px;
+  border-radius: 10px;
+  background: #edf1f7;
+}
+.keypad__tab {
+  width: 160px;
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.keypad__tab.is-active {
+  border-color: #000;
+  background: #fff;
+  font-weight: 700;
+}
+/* 회색 판 위에 블록들을 나란히 */
+.keypad__body {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #edf1f7;
+  box-sizing: border-box;
+}
+.keypad__block {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+/* 숫자패드: 옆 블록 높이에 맞춰 행을 늘린다 */
+.keypad__block.is-fill {
+  align-self: stretch;
+}
+.keypad__block.is-fill .keypad__row {
+  flex: 1;
+}
+.keypad__row {
+  display: flex;
+}
+.keypad__key {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0;
+  border: 1px solid #e2e7ee;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  font-size: 16.5px; /* 라벨 글자 크기는 KaTeX 가 1.21배 하므로 시안 픽셀÷1.21. 프론트 MathKeypad.vue 와 같은 값 */
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.keypad__key:active,
+.keypad__key.is-pressed {
+  background: #e2e7ee;
+}
+.keypad__key.is-fn {
+  background: #f6f8fb;
+}
+.keypad__key.is-fn:active {
+  background: #e2e7ee;
+}
+.keypad__key.is-lg {
+  font-size: 20px;
+}
+.keypad__key.is-sm {
+  font-size: 14px;
+}
+.keypad__key.is-xs {
+  font-size: 10px;
+}
+.keypad__key.is-start {
+  justify-content: flex-start;
+}
+.keypad__key.is-end {
+  justify-content: flex-end;
+}
+/* 행 높이 56 이상(알파벳·숫자패드)은 기호도 크게 */
+.keypad__block.is-tall .keypad__key:not(.is-lg):not(.is-sm):not(.is-xs) {
+  font-size: 18px;
+}
+.keypad__icon {
+  flex-shrink: 0;
+  width: 45px;
+  max-width: none; /* Tabler 의 img { max-width: 100% } 가 키 폭에 맞춰 아이콘을 줄인다 */
+  height: 45px;
+}
+.keypad__icon.is-backspace {
+  width: 30px;
+  height: 30px;
+}
+.keypad__key.is-start .keypad__icon {
+  margin-left: 4px;
+}
+.keypad__key.is-end .keypad__icon {
+  margin-right: 4px;
+}
+.keypad__text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.keypad__label {
+  display: inline-block; /* transform(라벨 맞춤 축소)이 먹도록 */
+  pointer-events: none;
+  white-space: nowrap;
+}
+/* 우상단 삼각 표시 (시안 8×8 영역에 6.87 삼각형) */
+.keypad__mark {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 6.87px;
+  height: 6.87px;
+  pointer-events: none;
+}
+/* 길게 누르기 변형 목록: 누른 키 바로 위 */
+.keypad__variants {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  padding: 4px;
+  border: 1px solid #2068e5;
+  border-radius: 8px;
+  background: #fff;
+  transform: translate(-50%, -100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.keypad__variant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #000;
+  font-size: 16.5px;
+  cursor: pointer;
+}
+.keypad__variant.is-hover {
+  background: #2068e5;
+  color: #fff;
+}
+
+/* ===== 행렬 선택 팝업 (시안 행렬선택-POP-PC 460) ===== */
+.matrix-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100; /* 수식입력기(1000)보다 위 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+}
+.matrix-dialog {
+  width: 460px;
+  max-width: 100%;
+  border-radius: 16px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.matrix-dialog__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 26px 20px 30px;
+}
+.matrix-dialog__title {
+  flex: 1;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.matrix-dialog__body {
+  display: flex;
+  gap: 10px;
+  padding: 0 30px;
+}
+.matrix-dialog__select {
+  position: relative;
+  flex: 1;
+}
+.matrix-dialog__select select {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px 0 15px;
+  border: 1px solid #c7cdd5;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  appearance: none;
+  cursor: pointer;
+}
+.matrix-dialog__select select:focus {
+  border-color: #000;
+  outline: none;
+}
+.matrix-dialog__select svg {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.matrix-dialog__actions {
+  display: flex;
+  justify-content: center;
+  padding: 40px 30px 30px;
+}
+.matrix-dialog__btn {
+  width: 200px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #2068e5;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== 단독 답안 필드(MathLive math-field) ===== */
+.math-answer-field {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  font-size: 18px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+/* 값 형태 셀(value-type-input)의 수식 칸 + Σ(수식입력기) 버튼 — 텍스트·이미지 칸의 input-group 과 같은 모양 */
+.vt-math-group {
+  flex-wrap: nowrap;
+}
+.vt-math-group > .math-answer-field {
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: var(--tblr-body-color); /* 옆 텍스트 칸(.form-control)과 같은 글자색 — MathLive 기본은 #000 */
+}
+.vt-math-open {
+  cursor: pointer;
+}
+/* 같은 셀의 텍스트·이미지 칸 글자 크기를 수식 칸(.math-answer-field 18px)과 맞춤 — Tabler 기본은 14px, 줄 높이는 Tabler 고정 20px 라 같이 키움(작으면 ① 같은 대체 글꼴 문자 아래가 잘림) */
+.vt-input .form-control {
+  font-size: 18px;
+  line-height: 1.5;
+}

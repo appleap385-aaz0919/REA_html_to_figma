@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/6f20adfa-tabler.min-8497cabbf265b335c86458729f06f306.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/8f71cfdf-tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/be63e6ff-tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/c005bb55-custom-4f213f104c14367e2495ee02d06e6fb6.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/65eb897d-math-input-0ba1dc5714db950c06470655d7cf87e3.css" rel="stylesheet"/><link href="file:///D:/jaehyuk.myung/claude_demo/Demo_36_REA_test/design-specs/revision-item-modal-render/css/65eb897d-math-input-0ba1dc5714db950c06470655d7cf87e3.css" rel="stylesheet"/><style>html,body{margin:0!important;background:#fff!important}body{padding:12px!important;pointer-events:none!important}.modal{display:block!important;position:relative!important;inset:auto!important;opacity:1!important;overflow:visible!important}.modal-dialog{margin:0 auto!important;transform:none!important;min-height:0!important}.modal-body{max-height:none!important;overflow:visible!important}.matrix-dialog-backdrop{display:flex!important;position:relative!important;inset:auto!important;background:transparent!important;padding:0!important;width:100%!important;height:auto!important}</style></head><body><div class="modal show" id="unitPickModal" style="display:block;" tabindex="-1">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title mb-0">단원코드 추가 (검색)</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="card mb-3" data-filter="" id="unitPickFilter">
+<div class="card-body">
+<div class="d-flex flex-nowrap gap-2 mb-2">
+<div style="width: 15%;">
+<select class="form-select cursor-pointer filter-select" name="keywordType">
+<option value="unitCode">단원 코드</option>
+<option value="unitName">단원명</option>
+</select>
+</div>
+<div class="flex-fill">
+<input class="form-control" name="keyword" placeholder="단원 코드 / 단원명" type="text">
+</input></div>
+</div>
+<div class="d-flex flex-nowrap gap-2 mb-3">
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" data-code-source="curriculum" data-default-value="22" id="unitPickCurriculumSelect" name="curriculum">
+<option value="">교육과정 전체</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" data-code-parent="classtype" data-code-source="classtype" name="classType">
+<option value="">학교급 전체</option>
+<option value="E">초등</option>
+<option value="M">중학</option>
+<option value="H">고등</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" data-code-source="subjectcategory" id="unitPickSubjectCategorySelect" name="subjectCategory">
+<option value="">과목군 전체</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" data-code-multi-child="curriculum,classtype,subjectcategory" disabled="" name="subject">
+<option value="">과목 전체</option>
+<option data-code-classtype="E" data-code-curriculum="22" data-code-subjectcategory="MA" value="T0">수학</option>
+<option data-code-classtype="M" data-code-curriculum="22" data-code-subjectcategory="MA" value="T0">수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="C1">공통수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="C2">공통수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="B1">기본수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="B2">기본수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="T1">수학1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="T2">수학2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="A0">대수</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="D1">미적분1</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="D2">미적분2</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="S0">확률과통계</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="G0">기하</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="P0">직무수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="I0">인공지능수학</option>
+<option data-code-classtype="H" data-code-curriculum="22" data-code-subjectcategory="MA" value="U0">수학과 문화</option>
+<option data-code-classtype="M" data-code-curriculum="15" data-code-subjectcategory="MA" value="T0">수학</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" data-code-child="classtype" disabled="" name="grade">
+<option value="">학년 전체</option>
+<option data-code-parent-value="M" value="1">중학1</option>
+<option data-code-parent-value="H" value="1">고등1</option>
+<option data-code-parent-value="E" value="1">초등1</option>
+<option data-code-parent-value="M" value="2">중학2</option>
+<option data-code-parent-value="E" value="2">초등2</option>
+<option data-code-parent-value="H" value="2">고등2</option>
+<option data-code-parent-value="H" value="3">고등3</option>
+<option data-code-parent-value="M" value="3">중학3</option>
+<option data-code-parent-value="E" value="3">초등3</option>
+<option data-code-parent-value="E" value="4">초등4</option>
+<option data-code-parent-value="H" value="4">고등 공통</option>
+<option data-code-parent-value="E" value="5">초등5</option>
+<option data-code-parent-value="E" value="6">초등6</option>
+</select>
+</div>
+<div class="flex-fill">
+<select class="form-select cursor-pointer filter-select" name="term">
+<option value="">학기 전체</option>
+<option value="0">공통학기</option>
+<option value="1">1학기</option>
+<option value="2">2학기</option>
+</select>
+</div>
+</div>
+<div class="d-flex justify-content-end gap-2">
+<button class="btn" data-reset="" type="button"><i class="ti ti-refresh me-1"></i>초기화</button>
+<button class="btn btn-primary" hx-get="/learning/unit/pick-modal.donga" hx-include="#unitPickFilter" hx-swap="outerHTML" hx-target="#unitPickResult" type="button">
+<i class="ti ti-search me-1"></i>조회
+                                </button>
+</div>
+</div>
+</div>
+<div hx-get="/learning/unit/pick-modal.donga" hx-include="#unitPickFilter" hx-swap="outerHTML" hx-target="this" hx-trigger="shown.bs.modal from:#unitPickModal" id="unitPickResult">
+<div class="text-center text-muted py-5">
+                            검색 조건을 입력한 뒤 조회해 주세요.
+                        </div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn" data-bs-dismiss="modal" type="button">취소</button>
+<button class="btn btn-primary" type="button">단원코드 추가</button>
+</div>
+</div>
+</div>
+</div></body></html>

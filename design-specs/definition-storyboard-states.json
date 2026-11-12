@@ -1,0 +1,1820 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "definition_storyboard_states",
+  "title": "디피니션 문항 등록 메뉴의 화면·동작별 상태",
+  "preparedDate": "2026-11-11",
+  "pathConvention": "evidence와 screenshot은 작업 폴더 D:/jaehyuk.myung/claude_demo/Demo_36_REA_test 기준의 상대 경로입니다. screenshot=null은 해당 상태의 실제 PNG를 연결하지 못한 경우입니다.",
+  "scope": {
+    "application": "문제은행 마스터 CMS",
+    "menu": "문항 관리 > 디피니션 문항 등록",
+    "basis": "기존 로컬 보고서·보존 HTML·실행 JSON·PNG 경로만 읽었습니다. 새 브라우저/CMS/네트워크 작업을 실행하지 않았습니다.",
+    "historicalAndFollowup": "초기 등록 폼·W/P/Y/D/F 표시를 후속 실제 R/M/Y·S/F 최종 승인·문서 폐기·유형/이미지 단독 성공·Master D 이후 문서 유지 결과로 보완했습니다.",
+    "verificationRule": "실제 동작·실제 표시·소스 확인·미검증을 구분합니다. PNG 경로가 있다는 사실만으로 모든 화면과 후속 상태의 픽셀 검토를 완료했다고 일반화하지 않습니다.",
+    "unresolved": [
+      "정상 Definition 세트·다중 JSON 성공·혼합 S/F/D 최종 검수",
+      "발급·전송·생성 단계별 실패/재시도·중복·경합·권한/세션",
+      "모든 메타 서버 검증·AI 내부 처리·저장 OMR 생성/복구·서비스 채점/배포",
+      "목록 0건·모든 필터·다른 역할/반응형의 실제 표시"
+    ],
+    "wholeSiteCompletionPercent": null
+  },
+  "statusAxes": {
+    "document": [
+      {
+        "code": "W",
+        "label": "등록대기"
+      },
+      {
+        "code": "P",
+        "label": "등록중"
+      },
+      {
+        "code": "R",
+        "label": "초안"
+      },
+      {
+        "code": "M",
+        "label": "메타추천중"
+      },
+      {
+        "code": "Y",
+        "label": "승인"
+      },
+      {
+        "code": "D",
+        "label": "폐기"
+      },
+      {
+        "code": "F",
+        "label": "실패"
+      }
+    ],
+    "review": [
+      {
+        "code": "W",
+        "label": "미검수 선택지, 관측 초안에서 비활성"
+      },
+      {
+        "code": "S",
+        "label": "등록성공"
+      },
+      {
+        "code": "F",
+        "label": "등록실패"
+      },
+      {
+        "code": "D",
+        "label": "삭제"
+      }
+    ],
+    "warning": "문서 Y·검수 S·Master Y는 서로 다른 값입니다. 문서 Y와 검수 F가 공존하고 생성 Master가 나중에 D가 돼도 문서 Y를 유지한 실제 사례가 있습니다."
+  },
+  "screens": [
+    {
+      "id": "MST_DIFI_01_LIST",
+      "title": "디피니션 문항 등록 목록",
+      "states": [
+        {
+          "id": "DIFI_LIST_DEFAULT",
+          "title": "목록 기본 표시",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "문항 관리에서 디피니션 문항 등록을 선택합니다.",
+          "visibleChanges": [
+            "필터, 검색결과 수, ZIP 등록 버튼과 문서 목록을 표시합니다.",
+            "열은 시험지 ID, 파일명, 출처, 과목, 학년·학기, 평가지 등록여부, 상태, 등록자·등록일입니다."
+          ],
+          "policy": [
+            "HML 목록의 문항 성공·실패·삭제 개수 열을 이 목록에 추가하지 않습니다.",
+            "문서 ID·파일명 링크로 해당 상세를 엽니다."
+          ],
+          "exceptions": [
+            "15건은 당시 교육과정 22의 관측 결과이며 현재 전체 건수나 고정 기본값이 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/275-definition-list-settled.json",
+            "cms-knowledge/master-cms/evidence/1830-definition-current-all-rows.json",
+            "cms-knowledge/master-cms/evidence/1831-definition-current-all-source.json",
+            "cms-knowledge/master-cms/session-20261109-phase28.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/275-definition-list-settled.png"
+        },
+        {
+          "id": "DIFI_LIST_FILTERS",
+          "title": "검색 조건과 상태 필터",
+          "verification": "필터 실제 표시, 전체 조합 미검증",
+          "trigger": "검색 종류·검색어, 교육과정·학교급·과목군·과목·학년·학기, 등록일과 상태를 설정합니다.",
+          "visibleChanges": [
+            "검색 종류에 시험지 ID·파일명·출처코드·등록자 ID가 있습니다.",
+            "등록일 빠른 선택 7일·30일·90일·전체, 상태 전체·등록대기·등록중·초안·메타추천중·승인·폐기·실패, 초기화·조회가 있습니다."
+          ],
+          "policy": [
+            "상태 코드는 W·P·R·M·Y·D·F입니다.",
+            "필터 표시와 실제 모든 조합의 검색 성공을 구분합니다."
+          ],
+          "exceptions": [
+            "교육과정 15, 복합 조건·기간 경계·권한별 결과와 초기화 후 모든 기본값은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1830-definition-current-all-rows.json",
+            "cms-knowledge/master-cms/evidence/1831-definition-current-all-source.json",
+            "cms-knowledge/master-cms/definition-state-review-20261109.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_LIST_PAGINATION",
+          "title": "페이지와 표시 개수 변경",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "페이지 번호 또는 10·30·50·100개씩 보기를 선택합니다.",
+          "visibleChanges": [
+            "페이지별 문서 행과 총 건수·현재 표시 범위가 달라집니다.",
+            "2페이지 이동과 100개 보기에서 당시 15개 행 전체를 확인했습니다."
+          ],
+          "policy": [
+            "표시 개수는 문서 행 수이며 ZIP 내부 문항 수가 아닙니다."
+          ],
+          "exceptions": [
+            "대량 목록의 마지막 페이지·빈 페이지·조건 변경 시 페이지 초기화 전체 규칙은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/286-definition-page-two-open.json",
+            "cms-knowledge/master-cms/evidence/287-definition-page-two.json",
+            "cms-knowledge/master-cms/evidence/288-definition-page-two-scroll.json",
+            "cms-knowledge/master-cms/evidence/1827-definition-current-list-source.json",
+            "cms-knowledge/master-cms/evidence/1828-definition-current-list-state.json",
+            "cms-knowledge/master-cms/evidence/1830-definition-current-all-rows.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/287-definition-page-two.png"
+        },
+        {
+          "id": "DIFI_LIST_BADGE_IDENTITY",
+          "title": "파일명과 실제 상태 구분",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록의 모의 파일명을 읽고 상태 열을 확인합니다.",
+          "visibleChanges": [
+            "파일명에 MOCK-DIFI-M 또는 MOCK-DIFI-D가 있어도 문서 172·171의 실제 상태는 승인 Y로 보입니다."
+          ],
+          "policy": [
+            "파일명 문자열로 상태를 판정하지 않고 상태 열·배지·실제 코드를 사용합니다."
+          ],
+          "exceptions": [
+            "해당 모의 자료를 정상 ZIP 내부 형식이나 해당 M/D 상태의 실행 근거로 사용하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1830-definition-current-all-rows.json",
+            "cms-knowledge/master-cms/evidence/1831-definition-current-all-source.json",
+            "cms-knowledge/master-cms/evidence/2645-definition171172-complex-reference-inventory-read.json",
+            "cms-knowledge/master-cms/definition-state-review-20261109.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_LIST_REGISTER_ENTRY",
+          "title": "ZIP 신규 등록으로 이동",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록의 ZIP 등록을 누릅니다.",
+          "visibleChanges": [
+            "제목이 ZIP 신규 등록인 폼으로 이동합니다.",
+            "목록 검색 문맥을 포함한 취소 경로가 있습니다."
+          ],
+          "policy": [
+            "새 문서 등록과 기존 문서 재처리·파일 교체를 구분합니다."
+          ],
+          "exceptions": [
+            "목록의 모든 필터가 등록 후 정확히 복원되는지는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/250-definition-form-open.json",
+            "cms-knowledge/master-cms/evidence/251-definition-form.json",
+            "cms-knowledge/master-cms/evidence/1864-definition-form-current-open.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/251-definition-form.png"
+        },
+        {
+          "id": "DIFI_LIST_NO_RESULTS",
+          "title": "검색 결과가 없는 목록",
+          "verification": "미검증",
+          "trigger": "검색 결과가 0건인 조건으로 조회하는 경우입니다.",
+          "visibleChanges": [
+            "이 메뉴에서 실제 0건 결과를 확인한 근거가 없어 빈 결과의 정확한 문구·배치는 확정하지 않았습니다."
+          ],
+          "policy": [
+            "빈 목록 상태를 스토리보드 검증 대상으로 남깁니다."
+          ],
+          "exceptions": [
+            "다른 메뉴의 빈 결과 화면을 디피니션의 확정 화면으로 복제하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1831-definition-current-all-source.json",
+            "cms-knowledge/master-cms/coverage-supplement-20261110-phase69.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_02_REGISTER",
+      "title": "ZIP 신규 등록 폼과 입력 검증",
+      "states": [
+        {
+          "id": "DIFI_FORM_INITIAL",
+          "title": "신규 등록 초기 폼",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "ZIP 신규 등록 화면에 진입합니다.",
+          "visibleChanges": [
+            "ZIP 드롭 영역·파일 선택, 출처 조회, 단원 코드 입력·조회, 페이지 시작·끝, 용도, 등록자를 표시합니다.",
+            "하단에 취소·등록 시작이 있습니다. 안내는 .ZIP 형식만 지원·최대 50MB·1개 파일=1문항입니다."
+          ],
+          "policy": [
+            "출처·단원·시작/끝 페이지·용도는 필수이며 용도는 공통 C·교사용 T입니다.",
+            "등록자는 비활성이며 단원은 최대 20자, 페이지는 최소 1입니다.",
+            "파일 1개 제한과 ZIP 내부 문항 개수의 지원 정책을 동일시하지 않습니다."
+          ],
+          "exceptions": [
+            "정상 Definition 세트 ZIP 표본은 현재 없으며 다중/세트 지원을 이 안내만으로 확정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/251-definition-form.json",
+            "cms-knowledge/master-cms/evidence/252-definition-form-bottom.json",
+            "cms-knowledge/master-cms/evidence/1865-definition-form-current-source.json",
+            "cms-knowledge/master-cms/evidence/1866-definition-form-current-upload-state.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form-current-20261109.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/251-definition-form.png"
+        },
+        {
+          "id": "DIFI_FORM_QUEUED",
+          "title": "ZIP 한 개 선택",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "정상 확장자·용량의 ZIP 파일을 선택합니다.",
+          "visibleChanges": [
+            "파일명·크기가 로컬 파일 목록에 보이고 파일 상태가 queued, accepted 파일 수가 1이 됩니다."
+          ],
+          "policy": [
+            "선택만으로 전송하지 않으며 등록 시작 전까지 로컬 큐에 둡니다."
+          ],
+          "exceptions": [
+            "22바이트 빈 ZIP도 로컬 수용됐지만 서버에서는 실패했습니다. 확장자 수용이 내용 유효성을 뜻하지 않습니다.",
+            "실제 포인터로 파일을 드래그하는 동작과 파일 선택 수용은 별도입니다.",
+            "0바이트 파일·파일 제거 후 교체·전송 중 중단의 실제 정책은 별도 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1872-definition-empty-zip-select.json",
+            "cms-knowledge/master-cms/evidence/1873-definition-empty-zip-local-state.json",
+            "cms-knowledge/master-cms/evidence/1985-definition-qa-empty-end-fill.json",
+            "cms-knowledge/master-cms/evidence/1993-definition663-failed-source.json",
+            "cms-knowledge/master-cms/definition-state-review-20261109.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_NO_FILE",
+          "title": "파일 없이 등록 시작",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "파일을 선택하지 않고 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "HML 파일을 선택해 주세요.라는 토스트를 표시하고 등록을 진행하지 않습니다.",
+            "문서 ID는 비어 있고 등록 시작 버튼은 활성 상태입니다."
+          ],
+          "policy": [
+            "ZIP 폼에 남아 있는 실제 문구 오류로 기록합니다."
+          ],
+          "exceptions": [
+            "HML 파일이 허용된다는 안내로 해석하거나 임의로 정상 문구로 고쳐 그리지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/263-definition-no-file-validation.json",
+            "cms-knowledge/master-cms/evidence/1867-definition-form-submit-no-file.json",
+            "cms-knowledge/master-cms/evidence/1868-definition-form-no-file-result.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/263-definition-no-file-validation.png"
+        },
+        {
+          "id": "DIFI_FORM_BAD_EXTENSION",
+          "title": "ZIP이 아닌 파일 반려",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "TXT 파일을 선택합니다.",
+          "visibleChanges": [
+            ".ZIP 파일만 업로드할 수 있습니다. 경고가 표시되고 반려 파일은 목록에서 제거됩니다."
+          ],
+          "policy": [
+            "accepted=false인 파일을 제거합니다."
+          ],
+          "exceptions": [
+            "위장 확장자·MIME 변조·서버 콘텐츠 검증과 대문자 .ZIP의 실제 수용은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1870-definition-invalid-extension-select.json",
+            "cms-knowledge/master-cms/evidence/1871-definition-invalid-extension-result.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_SECOND_FILE",
+          "title": "두 번째 파일 반려",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "이미 ZIP 한 개가 있는 상태에서 두 번째 ZIP을 선택합니다.",
+          "visibleChanges": [
+            "You cannot upload any more files.라는 영어 경고가 표시됩니다.",
+            "두 번째 파일은 제거되고 첫 ZIP은 queued 상태로 남습니다."
+          ],
+          "policy": [
+            "파일 개수는 한 개로 제한하며 자동 교체하지 않습니다."
+          ],
+          "exceptions": [
+            "여러 파일 동시 드래그·첫 파일 제거 후 교체·전송 중 제거는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1876-definition-second-file-select.json",
+            "cms-knowledge/master-cms/evidence/1877-definition-second-file-result.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_OVERSIZE",
+          "title": "50MiB 초과 파일 반려",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "52,428,801바이트 ZIP을 선택합니다.",
+          "visibleChanges": [
+            "파일이 너무 큽니다(50MB). 최대 50MB. 경고가 표시되고 해당 파일은 제거됩니다.",
+            "표시값 반올림으로 현재 크기와 한도가 모두 50MB로 보입니다."
+          ],
+          "policy": [
+            "소스상 50×1024×1024바이트를 초과하면 거절합니다."
+          ],
+          "exceptions": [
+            "정확히 50MiB와 바로 아래 경계값, 압축 해제 후 크기 제한은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1878-definition-oversize-file-select.json",
+            "cms-knowledge/master-cms/evidence/1879-definition-oversize-file-result.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_REQUIRED",
+          "title": "필수 메타정보 누락",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "ZIP을 둔 채 출처·단원·페이지·용도의 필수값 없이 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "미입력 정보가 있습니다.를 표시합니다.",
+            "파일은 queued로 유지되고 문서 ID는 비어 있으며 등록 시작 버튼은 활성 상태입니다."
+          ],
+          "policy": [
+            "파일 유무 검사 뒤 폼 제약을 검사합니다."
+          ],
+          "exceptions": [
+            "전체 네트워크 계측 없이 요청 수가 0이었다고 주장하지 않습니다. 필드별 모든 오류 우선순위는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1874-definition-metadata-missing-submit.json",
+            "cms-knowledge/master-cms/evidence/1875-definition-metadata-missing-result.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_UNIT_LIMIT",
+          "title": "단원 최대 길이·불일치 후보",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "단원에 21자리 문자열을 입력합니다.",
+          "visibleChanges": [
+            "실제 입력은 20자로 제한됩니다.",
+            "존재하지 않는 입력에서는 일치하는 단원 코드가 없습니다.라는 자동완성 안내를 관측했습니다."
+          ],
+          "policy": [
+            "브라우저 validity=true와 실재 단원·서버 등록 유효성은 별개입니다."
+          ],
+          "exceptions": [
+            "단원 존재·허용 길이·출처 조합의 서버 검증 전체는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1882-definition-unit-maxlength.json",
+            "cms-knowledge/master-cms/evidence/1883-definition-field-validity.json",
+            "cms-knowledge/master-cms/evidence/1884-definition-registration-cancel-open.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_PAGE_MIN",
+          "title": "페이지 0 입력",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "페이지 시작과 끝에 0을 입력합니다.",
+          "visibleChanges": [
+            "두 필드가 invalid이며 값은 1 이상이어야 합니다.라고 표시합니다."
+          ],
+          "policy": [
+            "시작·끝은 number·required·min=1입니다."
+          ],
+          "exceptions": [
+            "시작>끝 역전, 소수·큰 수, 원본 페이지와의 정합성은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1880-definition-start-zero.json",
+            "cms-knowledge/master-cms/evidence/1881-definition-end-zero.json",
+            "cms-knowledge/master-cms/evidence/1883-definition-field-validity.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_CANCEL_MODAL",
+          "title": "등록 취소 확인창",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "폼의 취소 링크를 누릅니다.",
+          "visibleChanges": [
+            "ZIP 등록 취소 확인창과 저장하지 않고 이동하시겠습니까? 안내를 표시합니다.",
+            "취소와 저장 하지 않고 이동을 선택할 수 있습니다."
+          ],
+          "policy": [
+            "이 확인창은 로컬 등록 폼 이탈이며 문서 폐기와 다릅니다."
+          ],
+          "exceptions": [
+            "모든 메뉴 이동·뒤로가기·새로고침·탭 닫기를 같은 경고로 막는다고 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/264-definition-form-cancel.json",
+            "cms-knowledge/master-cms/evidence/1884-definition-registration-cancel-open.json",
+            "cms-knowledge/master-cms/evidence/1885-definition-registration-cancel-state.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/264-definition-form-cancel.png"
+        },
+        {
+          "id": "DIFI_FORM_CANCEL_STAY",
+          "title": "취소창에서 폼에 남기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "등록 취소 확인창의 취소를 누릅니다.",
+          "visibleChanges": [
+            "확인창이 닫히고 선택 ZIP·단원 20자·페이지 0 값이 그대로 남습니다."
+          ],
+          "policy": [
+            "로컬 입력 보존을 확인했습니다."
+          ],
+          "exceptions": [
+            "서버 임시 저장이 수행된 결과는 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1886-definition-registration-cancel-stay.json",
+            "cms-knowledge/master-cms/evidence/1887-definition-registration-cancel-retained.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FORM_CANCEL_LEAVE",
+          "title": "저장하지 않고 목록으로 이동",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "등록 취소 확인창에서 저장 하지 않고 이동을 누릅니다.",
+          "visibleChanges": [
+            "등록 폼을 떠나 디피니션 목록으로 돌아갑니다."
+          ],
+          "policy": [
+            "폼 이탈을 업로드 객체 삭제·등록 철회·문서 폐기 동작으로 세지 않습니다."
+          ],
+          "exceptions": [
+            "전송 중 취소와 서버 잔여 객체 정리는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/265-definition-discard-local.json",
+            "cms-knowledge/master-cms/evidence/1888-definition-registration-leave-open.json",
+            "cms-knowledge/master-cms/evidence/1889-definition-registration-leave-confirm.json",
+            "cms-knowledge/master-cms/evidence/1890-definition-list-after-cancel.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/265-definition-discard-local.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_03_SOURCE",
+      "title": "등록 폼의 출처 조회 모달",
+      "states": [
+        {
+          "id": "DIFI_SOURCE_OPEN",
+          "title": "출처 조회 열기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "출처 옆 조회를 누릅니다.",
+          "visibleChanges": [
+            "출처코드/출처명 검색어, 교육과정·학교급·과목군·과목·학년·학기·용도 필터와 초기화·조회를 표시합니다.",
+            "선택 라디오, 출처코드·명, 과목, 학교급, 판형, 용도, 상태, 등록일 표와 선택·취소가 있습니다."
+          ],
+          "policy": [
+            "당시 59건과 첫 10행을 표시했습니다."
+          ],
+          "exceptions": [
+            "건수는 관측 시점 값이며 고정값이 아닙니다. 모든 검색 조합·페이지는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/257-definition-source-lookup.json",
+            "cms-knowledge/master-cms/evidence/258-definition-source-lookup-bottom.json",
+            "cms-knowledge/master-cms/research/definition-registration-behavior.md"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/257-definition-source-lookup.png"
+        },
+        {
+          "id": "DIFI_SOURCE_SELECTED",
+          "title": "출처 라디오 선택",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "조회 결과의 사용 중인 출처 라디오를 선택합니다.",
+          "visibleChanges": [
+            "선택된 행의 라디오가 checked 상태가 됩니다.",
+            "아직 부모 폼의 출처 적용 전 단계입니다."
+          ],
+          "policy": [
+            "선택과 최종 등록을 구분합니다."
+          ],
+          "exceptions": [
+            "미사용 출처의 서버 반려·직접 적용·모든 행 클릭 정책은 이 관측으로 확정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/259-definition-source-radio.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/259-definition-source-radio.png"
+        },
+        {
+          "id": "DIFI_SOURCE_APPLIED",
+          "title": "선택 출처를 폼에 적용",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "모달의 선택 버튼을 누릅니다.",
+          "visibleChanges": [
+            "모달이 닫히고 부모 출처 선택값이 22-M-MA-T0-1-0-DCL-MA-2025로 바뀝니다.",
+            "용도는 여전히 미선택입니다."
+          ],
+          "policy": [
+            "출처 적용은 부모 product 선택값만 바꾸며 출처의 교사용 여부를 폼 용도에 자동 복사하지 않았습니다.",
+            "Source 13을 사용한 후속 정상 단독 등록도 수용됐습니다."
+          ],
+          "exceptions": [
+            "로컬 적용 자체를 문서 등록·문항 출처 연결 저장의 완료로 세지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/260-definition-source-apply.json",
+            "cms-knowledge/master-cms/evidence/2713-definition-essay1-before-submit-verified.json",
+            "cms-knowledge/master-cms/evidence/2727-definition-five1-before-submit-verified.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/260-definition-source-apply.png"
+        },
+        {
+          "id": "DIFI_SOURCE_SEARCH_EMPTY",
+          "title": "출처 검색·초기화·결과 없음",
+          "verification": "소스 확인, 미실행 분기 포함",
+          "trigger": "출처 조회 모달에서 필터 조회·초기화·무결과 조건을 사용합니다.",
+          "visibleChanges": [
+            "필터와 결과 영역 갱신 구조는 보존 소스에서 확인했습니다.",
+            "이 모달의 실제 무결과 문구와 모든 조합의 결과 화면은 확인하지 않았습니다."
+          ],
+          "policy": [
+            "교육과정·학교급·과목군에 따른 연동은 소스 확인 범위로 표시합니다."
+          ],
+          "exceptions": [
+            "다른 메뉴의 출처 검색 결과를 이 모달의 실제 실행 결과로 옮기지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/257-definition-source-lookup.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form.html",
+            "cms-knowledge/master-cms/research/definition-registration-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_SOURCE_CLOSE",
+          "title": "출처 모달 취소·닫기",
+          "verification": "컨트롤 실제 표시, 상세 닫기 보존 정책 미검증",
+          "trigger": "출처를 적용하지 않고 취소 또는 X로 닫습니다.",
+          "visibleChanges": [
+            "취소·닫기 컨트롤이 선언돼 있습니다."
+          ],
+          "policy": [
+            "닫기와 선택 적용은 별도 동작입니다."
+          ],
+          "exceptions": [
+            "미적용 선택값의 재열기 유지·초기화 결과는 이 메뉴의 실제 근거로 확정하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/257-definition-source-lookup.json",
+            "cms-knowledge/master-cms/evidence/258-definition-source-lookup-bottom.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form.html"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/258-definition-source-lookup-bottom.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_04_UNIT",
+      "title": "등록 폼의 단원 조회와 자동완성",
+      "states": [
+        {
+          "id": "DIFI_UNIT_MODAL_OPEN",
+          "title": "단원 코드 조회 열기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "단원 코드 옆 조회를 누릅니다.",
+          "visibleChanges": [
+            "단원 코드/단원명, 교육과정·학교급·과목군·과목·학년·학기 필터와 초기화·조회를 표시합니다.",
+            "단원 코드·대단원·중단원·소단원·소소단원 표와 하단 닫기가 있습니다. 당시 732건입니다."
+          ],
+          "policy": [
+            "출처 조회와 달리 선택 버튼이 없습니다."
+          ],
+          "exceptions": [
+            "732건은 시점별 조회값입니다. 다른 페이지·검색 조합·행 클릭 적용은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/261-definition-unit-lookup.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/261-definition-unit-lookup.png"
+        },
+        {
+          "id": "DIFI_UNIT_MODAL_CLOSE",
+          "title": "단원 조회 닫기",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "단원 코드 조회 모달의 닫기를 누릅니다.",
+          "visibleChanges": [
+            "모달을 닫고 등록 폼으로 돌아갑니다."
+          ],
+          "policy": [
+            "조회 모달을 열고 닫은 실제 동작만 완료로 기록합니다."
+          ],
+          "exceptions": [
+            "행 선택으로 단원 값이 자동 적용된다고 그리지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/261-definition-unit-lookup.json",
+            "cms-knowledge/master-cms/evidence/262-definition-unit-close.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/262-definition-unit-close.png"
+        },
+        {
+          "id": "DIFI_UNIT_AUTOCOMPLETE",
+          "title": "단원 코드 후보 표시·선택",
+          "verification": "소스 확인",
+          "trigger": "단원 입력란에 3자 이상을 입력합니다.",
+          "visibleChanges": [
+            "소스는 300ms 후 최대 20개 코드 후보를 조회하며 선택 문자열을 입력값에 넣도록 구성돼 있습니다.",
+            "입력 안내는 학기 12자리·대단원 14자리·전체 20자리입니다."
+          ],
+          "policy": [
+            "자동완성과 조회 모달은 서로 다른 입력 경로입니다."
+          ],
+          "exceptions": [
+            "정상 후보 선택·Tab 선택·통신 실패·실재 코드 정합성의 전체 실제 동작은 미검증입니다. 직접 코드 입력 수용과 구분합니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1865-definition-form-current-source.json",
+            "cms-knowledge/master-cms/evidence/1883-definition-field-validity.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form-current-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_UNIT_AUTOCOMPLETE_EMPTY",
+          "title": "일치하는 단원 없음",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "일치하지 않는 단원 문자열을 입력합니다.",
+          "visibleChanges": [
+            "일치하는 단원 코드가 없습니다. 안내를 관측했습니다."
+          ],
+          "policy": [
+            "안내가 있어도 required·maxlength만 통과한 임의 값이 브라우저에서는 valid일 수 있습니다."
+          ],
+          "exceptions": [
+            "서버의 실재 코드·허용 길이 거절 정책은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1883-definition-field-validity.json",
+            "cms-knowledge/master-cms/evidence/1884-definition-registration-cancel-open.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_05_UPLOAD",
+      "title": "등록 제출과 업로드·파싱 처리",
+      "states": [
+        {
+          "id": "DIFI_UPLOAD_START",
+          "title": "유효한 폼으로 등록 시작",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "ZIP과 필수 메타를 채우고 등록 시작을 누릅니다.",
+          "visibleChanges": [
+            "소스상 등록 시작 버튼을 잠그고 업로드 주소 발급을 요청합니다.",
+            "같은 식별 입력을 한 번 제출한 후 새 문서가 목록에 나타나는 실제 등록을 여러 QA 표본에서 확인했습니다."
+          ],
+          "policy": [
+            "최종 등록 확인 모달을 별도로 추가하지 않습니다.",
+            "주소 발급·파일 전송·문서 생성은 서로 다른 단계입니다."
+          ],
+          "exceptions": [
+            "폼 전체를 잠근다고 일반화하지 않습니다. 모든 단계의 실제 진행 화면·실패 복구는 별도 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1902-definition-qa-purpose-select.json",
+            "cms-knowledge/master-cms/evidence/1903-definition-qa-before-submit.json",
+            "cms-knowledge/master-cms/evidence/1906-definition-qa-registration-fresh-state.json",
+            "cms-knowledge/master-cms/evidence/2661-definition-multi3-register-submit-once.json",
+            "cms-knowledge/master-cms/evidence/2679-definition-ordered1-register-submit-once.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/session-20261109-phase28.json",
+            "cms-knowledge/master-cms/evidence/1904-definition-qa-registration-submit.json",
+            "cms-knowledge/master-cms/evidence/1905-definition-qa-registration-post-state.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_UPLOAD_PROGRESS",
+          "title": "파일 전송 진행률",
+          "verification": "소스 확인",
+          "trigger": "발급된 주소로 ZIP 전송이 시작됩니다.",
+          "visibleChanges": [
+            "소스상 sending 시 파일 진행 막대를 보이고 complete 시 숨깁니다."
+          ],
+          "policy": [
+            "막대는 파일 전송 진행률이며 서버 파싱·AI 추천 전체의 진행률이 아닙니다."
+          ],
+          "exceptions": [
+            "실제 진행률 변화·전송 중 파일 제거·취소·끊김 복구는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1865-definition-form-current-source.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/research/definition-registration-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_UPLOAD_CREATED_P",
+          "title": "생성 후 등록중 목록",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "정상 단독 ZIP을 한 번 제출한 뒤 목록을 조회합니다.",
+          "visibleChanges": [
+            "새 문서 661·695 등에서 등록중 P를 확인했습니다.",
+            "파일명·문서 ID가 새 행으로 나타납니다."
+          ],
+          "policy": [
+            "파일 전송 성공과 파싱 성공을 분리합니다."
+          ],
+          "exceptions": [
+            "모든 문서에서 P가 관측된 것은 아닙니다. 빈 ZIP 663의 중간 P는 확인하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1906-definition-qa-registration-fresh-state.json",
+            "cms-knowledge/master-cms/evidence/2681-definition-ordered1-list-readback.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_UPLOAD_DRAFT_READY",
+          "title": "파싱 완료 후 초안 카드 생성",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "같은 새 문서의 상세를 후속 조회합니다.",
+          "visibleChanges": [
+            "문서가 초안 R로 표시되고 분리 문항 카드와 문제·정답·풀이, 비고·검수값·승인·폐기 버튼이 나타납니다.",
+            "ORDERED·ESSAY·FIVE·SHORT 및 단독 이미지 표본에서 각각 카드 한 개 생성을 확인했습니다."
+          ],
+          "policy": [
+            "순차 조회의 P→R 관측이며 서버 이벤트 전체와 정확한 처리 소요시간을 뜻하지 않습니다."
+          ],
+          "exceptions": [
+            "W를 모든 신규 등록의 필수 중간 단계로 추가하지 않습니다. 정상 세트·복수 JSON 생성은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1908-definition661-initial-state.json",
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2719-definition696-essay-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2733-definition697-five-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2773-definition698-body-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2802-definition699-choice-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2832-definition700-short-draft-observation.json",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/definition-image-resources-roundtrip-20261110.md",
+            "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.png"
+        },
+        {
+          "id": "DIFI_UPLOAD_ORIGINAL_RETAINED",
+          "title": "저장된 원본 다운로드·무결성",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "상세 원본 다운로드를 사용하거나 기록된 다운로드 경로를 읽습니다.",
+          "visibleChanges": [
+            "정상 원본 ZIP과 빈 ZIP·실패 MULTI3의 보존 파일을 실제로 확보한 근거가 있습니다.",
+            "실패 694의 다운로드 ZIP은 제출 파일과 SHA가 같았습니다."
+          ],
+          "policy": [
+            "다운로드로 원본 바이트가 확인된 것과 파싱 성공은 별개입니다.",
+            "530의 UI 클릭은 도구 timeout이었고 별도 읽기 GET의 성공과 구분합니다."
+          ],
+          "exceptions": [
+            "모든 다운로드 UI 클릭·권한·세션 만료·오류 토스트 분기는 실행하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1891-definition530-download-open.json",
+            "cms-knowledge/master-cms/evidence/1895-definition530-proxy-file-read.json",
+            "cms-knowledge/master-cms/evidence/1993-definition663-failed-source.json",
+            "cms-knowledge/master-cms/evidence/2668-definition694-upload-integrity-read.json",
+            "cms-knowledge/master-cms/evidence/2648-definition430529-original-downloads-read.json",
+            "cms-knowledge/master-cms/definition530-zip-inventory-20261109.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/1995-definition663-original-integrity.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_UPLOAD_ERRORS_RETRY",
+          "title": "발급·전송·생성 실패와 재시도",
+          "verification": "소스 확인, 실제 실패 분기 미검증",
+          "trigger": "업로드 주소 발급, 파일 전송 또는 문서 생성 중 오류가 발생하는 경우입니다.",
+          "visibleChanges": [
+            "소스에는 오류 토스트·버튼 재활성화·재제출 전 queued 재설정 분기가 있습니다."
+          ],
+          "policy": [
+            "정상 등록의 관측 로그에서 PUT 행이 없다는 이유만으로 실제 전송 실패를 확정하지 않습니다."
+          ],
+          "exceptions": [
+            "단계별 강제 실패·재시도 성공·중복 제출·부분 생성·세션 만료·잔여 객체 정리는 미검증입니다.",
+            "자동 네트워크 재시도나 고정 timeout을 추가 사양으로 만들지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2660-definition-multi3-fresh-submit-preflight.json",
+            "cms-knowledge/master-cms/evidence/2668-definition694-upload-integrity-read.json",
+            "cms-knowledge/master-cms/sources/definition-registration-form-current-20261109.html",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_06_DETAIL",
+      "title": "문서 상태별 디피니션 상세",
+      "states": [
+        {
+          "id": "DIFI_DETAIL_COMMON",
+          "title": "상세 기본정보와 문항 영역",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "목록에서 문서 상세를 엽니다.",
+          "visibleChanges": [
+            "상태 안내, 시험지 ID·원본 파일·출처·단원·페이지 범위·용도·등록/수정 정보·비고를 표시합니다.",
+            "문항 영역은 상태와 파싱 결과에 따라 카드 또는 빈 안내를 표시합니다."
+          ],
+          "policy": [
+            "문서 상태, 문항 검수 결과, 개별 Master 상태를 각각 표시합니다.",
+            "일반 상세에 평가지 등록여부를 새 입력란으로 추가하지 않습니다."
+          ],
+          "exceptions": [
+            "표본별 채점 기준·선지·이미지·지문 유무를 하나의 고정 카드로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1833-definition169-state.json",
+            "cms-knowledge/master-cms/evidence/1857-definition173-state.json",
+            "cms-knowledge/master-cms/evidence/1861-definition530-state.json",
+            "cms-knowledge/master-cms/evidence/1908-definition661-initial-state.json",
+            "cms-knowledge/master-cms/evidence/268-definition-approved-detail.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/268-definition-approved-detail.png"
+        },
+        {
+          "id": "DIFI_DETAIL_W",
+          "title": "등록대기 W",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "기존 문서 169의 상세를 엽니다.",
+          "visibleChanges": [
+            "파싱을 기다리는 중입니다.와 입력 정보·원본 파일만 확인할 수 있다는 안내를 표시합니다.",
+            "아직 문항이 분리되지 않았습니다.가 나타나며 비고는 비활성, 다운로드·목록만 있습니다."
+          ],
+          "policy": [
+            "W는 실제 표시 표본이며 파싱 시작·재시도 버튼을 추가하지 않습니다."
+          ],
+          "exceptions": [
+            "이 표본의 W→P 전이·대기열 내부 처리는 실행 확인하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1833-definition169-state.json",
+            "cms-knowledge/master-cms/evidence/1834-definition169-source.json",
+            "cms-knowledge/master-cms/evidence/1835-definition169-scroll.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DETAIL_P",
+          "title": "등록중 P",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "기존 문서 170 또는 신규 등록중 문서를 조회합니다.",
+          "visibleChanges": [
+            "파싱이 진행 중입니다.와 페이지를 닫아도 파싱은 계속됩니다. 안내를 표시합니다.",
+            "문항을 분리하는 중입니다. 빈 영역과 다운로드·목록, 비활성 비고가 있습니다."
+          ],
+          "policy": [
+            "안내 문구와 실제 백그라운드 지속 검증을 구분합니다."
+          ],
+          "exceptions": [
+            "중지·재시도·진행률·창을 닫은 뒤 완료까지의 연속 검증은 미확인입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1837-definition170-state.json",
+            "cms-knowledge/master-cms/evidence/1838-definition170-source.json",
+            "cms-knowledge/master-cms/evidence/1839-definition170-scroll.json",
+            "cms-knowledge/master-cms/evidence/1906-definition-qa-registration-fresh-state.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DETAIL_R",
+          "title": "초안 R의 검수 가능 상세",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "정상 ZIP 파싱 후 문서 초안을 조회합니다.",
+          "visibleChanges": [
+            "문항 카드의 문제·정답·풀이와 검수 선택 S/F/D, 활성 비고, 목록·폐기·승인이 나타납니다.",
+            "검수 W 선택지는 비활성이고 정상 한 문항 표본은 S가 초기 선택입니다."
+          ],
+          "policy": [
+            "검수 S는 문서 승인 Y나 Master 승인 상태가 아닙니다.",
+            "Definition 초안에는 HML의 평가지 등록 선택 컨트롤이 없습니다."
+          ],
+          "exceptions": [
+            "다중/세트 카드의 혼합 검수와 W 미검수 차단 실제 동작은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1908-definition661-initial-state.json",
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2719-definition696-essay-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2733-definition697-five-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.png"
+        },
+        {
+          "id": "DIFI_DETAIL_M",
+          "title": "메타추천중 M",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "초안 문서를 최종 승인한 뒤 후속 상세를 확인합니다.",
+          "visibleChanges": [
+            "AI 메타 추천 중입니다.와 완료되면 자동으로 승인 처리되며 그때까지 편집·배포 불가라는 안내를 표시합니다.",
+            "문항 검수 선택과 승인·폐기 버튼은 사라지고 비고는 비활성입니다. 다운로드·목록은 남습니다."
+          ],
+          "policy": [
+            "실제 661과 F 단독 승인한 695에서 M을 확인했습니다.",
+            "열린 상세의 M과 더 늦게 조회한 목록의 Y를 역전으로 판정하지 않습니다."
+          ],
+          "exceptions": [
+            "실제 AI 요청·응답·항목별 추천 성공·실패·정체·제한 우회는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1937-definition661-approval-fresh-state.json",
+            "cms-knowledge/master-cms/evidence/1938-definition661-approval-fresh-source.json",
+            "cms-knowledge/master-cms/evidence/1939-definition661-metadata-controls.json",
+            "cms-knowledge/master-cms/evidence/2697-definition695-f-approval-post-state.json",
+            "cms-knowledge/master-cms/evidence/2698-definition695-f-approval-list-readback.json",
+            "cms-knowledge/master-cms/evidence/2701-definition695-f-approved-page-observation.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DETAIL_Y",
+          "title": "승인 Y의 읽기 전용 문서",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "메타 추천 후 같은 문서를 신선하게 다시 조회합니다.",
+          "visibleChanges": [
+            "문서 승인 배지, 저장된 비고의 비활성 표시, 카드별 등록 결과와 Master 현재 상태가 보입니다.",
+            "카드에 문항 상세·문항 수정이 있고 문서 자체 승인·폐기 버튼은 없습니다."
+          ],
+          "policy": [
+            "S 최종 승인 후 ESSAY/FIVE/SHORT·이미지 단독 표본은 문서 Y·Master R이었습니다.",
+            "F 단독 승인도 문서 Y·Master F를 만들었습니다."
+          ],
+          "exceptions": [
+            "문서 Y를 모든 메타·OMR 준비 완료·Master Y·서비스 배포로 해석하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1943-definition661-approved-controls.json",
+            "cms-knowledge/master-cms/evidence/2704-definition695-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2742-definition697-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2753-definition696-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2786-definition698-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2816-definition699-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2844-definition700-approved-final-observation.json",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/definition-short-answer-type-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2756-definition696-approved-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.png"
+        },
+        {
+          "id": "DIFI_DETAIL_D_CARD",
+          "title": "폐기 D, 기존 카드 유지",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "QA 문서 662를 사유와 함께 최종 폐기한 뒤 재조회합니다.",
+          "visibleChanges": [
+            "폐기된 시험지입니다. 조회만 가능하며 복원할 수 없습니다. 안내를 표시합니다.",
+            "기존 문제·정답·풀이와 삭제 배지는 남지만 문항 ID는 숨김이며 상세·수정·승인·폐기 버튼은 없습니다.",
+            "비고는 비활성이고 다운로드·목록만 남습니다."
+          ],
+          "policy": [
+            "삭제 배지는 실행 버튼이 아닙니다.",
+            "동일 자식 2089204의 Master 조회는 목록으로 리다이렉트됐습니다."
+          ],
+          "exceptions": [
+            "물리 DB 삭제·모든 필터의 제외·모든 역할의 복원 불가를 입증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1973-definition662-final-discard-submit.json",
+            "cms-knowledge/master-cms/evidence/1975-definition662-discard-readback-open.json",
+            "cms-knowledge/master-cms/evidence/1976-definition662-discard-source.json",
+            "cms-knowledge/master-cms/evidence/1977-definition662-discard-controls.json",
+            "cms-knowledge/master-cms/evidence/1979-definition662-discarded-item-read.json",
+            "cms-knowledge/master-cms/session-20261109-phase29.json",
+            "cms-knowledge/master-cms/sources/definition662-discarded-20261109.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DETAIL_D_EMPTY",
+          "title": "폐기 D, 카드 없는 상세",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "기존 폐기 문서 180을 조회합니다.",
+          "visibleChanges": [
+            "폐기·조회 전용·복원 불가 안내와 표시할 문항이 없습니다.를 표시합니다.",
+            "비활성 비고와 다운로드·목록만 있습니다."
+          ],
+          "policy": [
+            "폐기 문서는 항상 기존 카드를 보여 주는 것은 아닙니다."
+          ],
+          "exceptions": [
+            "이 표본의 과거 폐기 실행·카드 부재 원인은 확인하지 않았습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1845-definition180-state.json",
+            "cms-knowledge/master-cms/evidence/1846-definition180-source.json",
+            "cms-knowledge/master-cms/evidence/1847-definition180-scroll.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DETAIL_F",
+          "title": "파싱 실패 F와 빈 문항 영역",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "실패 문서 299·663·694를 조회합니다.",
+          "visibleChanges": [
+            "상단은 ZIP 파일 자체에 오류가 있어 파싱을 시작하지 못했습니다.와 원본 수정 후 재등록 안내입니다.",
+            "등록된 문항이 없습니다. 아래 보조문구에는 HML 파일 자체 오류라는 잘못된 파일 유형이 남아 있습니다.",
+            "비고는 비활성이고 다운로드·목록만 있습니다."
+          ],
+          "policy": [
+            "현재 상세의 재시도·파일 교체·승인·폐기 버튼을 추가하지 않습니다.",
+            "실제 문구 오류를 서버가 HML 파서를 사용했다는 근거로 해석하지 않습니다."
+          ],
+          "exceptions": [
+            "정확한 파서 실패 원인·서버 예외·실패 줄·중첩 ZIP의 영향은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1853-definition299-state.json",
+            "cms-knowledge/master-cms/evidence/1854-definition299-source.json",
+            "cms-knowledge/master-cms/evidence/1990-definition-qa-empty-register-fresh.json",
+            "cms-knowledge/master-cms/evidence/1991-definition663-failed-open.json",
+            "cms-knowledge/master-cms/evidence/2667-definition694-failed-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2668-definition694-upload-integrity-read.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2669-definition694-failure-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2670-definition694-failure-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2669-definition694-failure-top-visual.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_07_REVIEW",
+      "title": "초안 문항 검수와 최종 승인",
+      "states": [
+        {
+          "id": "DIFI_REVIEW_JUDGMENT",
+          "title": "카드별 검수 S/F/D 선택",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "초안의 문항 처리 선택값을 바꿉니다.",
+          "visibleChanges": [
+            "S 등록성공, F 등록실패, D 삭제를 선택할 수 있으며 W는 비활성입니다."
+          ],
+          "policy": [
+            "카드 검수값을 문서 R/M/Y나 Master R/F/Y/N/D와 혼동하지 않습니다."
+          ],
+          "exceptions": [
+            "여러 카드 혼합·세트 묶음·W가 남은 문서의 실제 처리 정책은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1908-definition661-initial-state.json",
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/evidence/2693-definition695-f-approval-modal-state.json",
+            "cms-knowledge/master-cms/evidence/2695-definition695-f-modal-shown-verified.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_ALL_D_BLOCK",
+          "title": "모두 D이면 승인 차단",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "모든 카드를 D로 선택하고 승인을 누릅니다.",
+          "visibleChanges": [
+            "시험지 승인 안내창에 모든 문항을 삭제로 선택해 승인할 수 없습니다.와 확인 버튼을 표시합니다."
+          ],
+          "policy": [
+            "승인 확인창 진입 전에 모두 D를 차단하는 실제 한 카드 QA 표본입니다."
+          ],
+          "exceptions": [
+            "모든 크기의 문서·서버 직접 요청·다른 역할을 검증한 것은 아닙니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_APPROVAL_CONFIRM_S",
+          "title": "S 승인 확인창",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "S 상태 문항을 둔 초안에서 승인을 누릅니다.",
+          "visibleChanges": [
+            "시험지 승인 확인창에 승인하시겠습니까? AI 메타 추천이 시작되며 되돌릴 수 없습니다.와 취소·승인을 표시합니다."
+          ],
+          "policy": [
+            "확인창 열기와 최종 승인 제출은 별도 단계입니다.",
+            "확인창을 취소하면 최종 승인을 실행하지 않습니다."
+          ],
+          "exceptions": [
+            "전환 중 modalCount=0이나 helper guard 중단을 서버 저장 실패로 분류하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/evidence/1933-definition661-final-approval-open.json",
+            "cms-knowledge/master-cms/evidence/2736-definition697-s-modal-observation.json",
+            "cms-knowledge/master-cms/evidence/2747-definition696-s-modal-observation.json",
+            "cms-knowledge/master-cms/evidence/2837-definition700-s-modal-observation.json",
+            "cms-knowledge/master-cms/evidence/2838-definition700-s-modal-fresh-observation.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_APPROVAL_CONFIRM_F",
+          "title": "F 단독 승인도 확인창 진입",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "유일한 문항을 F로 두고 승인을 누릅니다.",
+          "visibleChanges": [
+            "S와 같은 AI 메타 추천·되돌릴 수 없음 확인창이 열립니다."
+          ],
+          "policy": [
+            "모두 D 차단과 F 단독 승인 가능성을 구분합니다.",
+            "최종 F 승인 수용까지 695에서 후속 검증됐으므로 더 이상 확인창 진입만 검증한 상태로 남기지 않습니다."
+          ],
+          "exceptions": [
+            "AI가 F 문항을 어떻게 처리·제외하는지는 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/evidence/2693-definition695-f-approval-modal-state.json",
+            "cms-knowledge/master-cms/evidence/2695-definition695-f-modal-shown-verified.json",
+            "cms-knowledge/master-cms/evidence/2696-definition695-f-final-approval-submit-once.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_SUBMIT_S",
+          "title": "S 최종 승인과 M→Y 후속 확인",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "확인창의 승인을 한 번 누릅니다.",
+          "visibleChanges": [
+            "661은 M 후 Y를 동일 문서에서 확인했습니다.",
+            "696·697·698·699·700도 S 최종 승인 후 신선한 목록·상세가 Y이며 Master는 R입니다."
+          ],
+          "policy": [
+            "문항 ID와 검수값의 쌍을 최종 제출합니다.",
+            "메타 추천 자동 완료를 별도의 사용자 승인 제출로 세지 않습니다."
+          ],
+          "exceptions": [
+            "메타추천 내부 구현·정확한 처리 시간·실패/중복/경합과 Service는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1935-definition661-final-approval-submit.json",
+            "cms-knowledge/master-cms/evidence/1937-definition661-approval-fresh-state.json",
+            "cms-knowledge/master-cms/evidence/1943-definition661-approved-controls.json",
+            "cms-knowledge/master-cms/evidence/2737-definition697-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2748-definition696-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2781-definition698-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2811-definition699-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2839-definition700-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2844-definition700-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2758-definition697-approved-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2759-definition697-approved-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2758-definition697-approved-top-visual.png"
+        },
+        {
+          "id": "DIFI_REVIEW_SUBMIT_F",
+          "title": "F 단독 최종 승인 결과",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "문서 695에서 F 한 개로 최종 승인을 한 번 누릅니다.",
+          "visibleChanges": [
+            "후속 문서는 M→Y로 표시됐고 최종 카드는 등록실패·실패(재등록)를 함께 표시합니다.",
+            "개별 Master 2089375는 F이며 상세·수정 GET 접근이 가능해졌습니다."
+          ],
+          "policy": [
+            "S가 반드시 한 개 있어야 승인된다는 규칙을 만들지 않습니다.",
+            "이 결과는 문서 승인 Y와 문항 F를 별도로 기록합니다."
+          ],
+          "exceptions": [
+            "다중 S/F/D·세트 승인·F의 AI 내부 처리·다른 역할은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2696-definition695-f-final-approval-submit-once.json",
+            "cms-knowledge/master-cms/evidence/2697-definition695-f-approval-post-state.json",
+            "cms-knowledge/master-cms/evidence/2698-definition695-f-approval-list-readback.json",
+            "cms-knowledge/master-cms/evidence/2704-definition695-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2705-definition695-approved-failed-item-fresh-read.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_BEFORE_MASTER_ACCESS",
+          "title": "문서 승인 전 카드 ID의 Master 접근",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "문서 695 초안에서 카드 ID로 개별 Master를 읽습니다.",
+          "visibleChanges": [
+            "카드에는 2089375/2089082가 있었지만 해당 시점 상세·수정 GET은 전체 문항 목록으로 리다이렉트됐습니다."
+          ],
+          "policy": [
+            "HTTP 200 목록 착지를 개별 문항 상세 접근 성공으로 세지 않습니다."
+          ],
+          "exceptions": [
+            "모든 문서·역할에 적용되는 접근 선행조건으로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2685-definition695-created-item2089375-read.json",
+            "cms-knowledge/master-cms/evidence/2686-definition695-preapproval-master-item-availability.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_REVIEW_MIXED_UNVERIFIED",
+          "title": "다중·세트·혼합 검수의 미검증 상태",
+          "verification": "미검증",
+          "trigger": "복수 카드의 S/F/D 혼합이나 정상 세트 ZIP 검수를 설계하는 경우입니다.",
+          "visibleChanges": [
+            "정상 다중/세트 검수 화면의 실제 표본을 확보하지 못했습니다.",
+            "MULTI3는 문항 0개로 실패해 계획한 혼합 검수를 실행하지 못했습니다."
+          ],
+          "policy": [
+            "HML의 혼합 S/F/D 성공 결과를 Definition에 전이하지 않습니다."
+          ],
+          "exceptions": [
+            "부분 파싱·세트 묶음·다중 승인·W 미검수·부분 실패 정책은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2667-definition694-failed-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/user-sample-availability-20261110.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_08_DISCARD",
+      "title": "초안 문서 폐기",
+      "states": [
+        {
+          "id": "DIFI_DISCARD_REASON_REQUIRED",
+          "title": "폐기 사유 누락 차단",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "비고를 비워 두고 폐기를 누릅니다.",
+          "visibleChanges": [
+            "시험지 폐기 안내창에 폐기 사유를 비고에 입력해 주세요.와 확인 버튼을 표시합니다."
+          ],
+          "policy": [
+            "문서 폐기 사유는 비고로 입력합니다."
+          ],
+          "exceptions": [
+            "문항별 F/D 판정이나 Master 상태 폐기와 구분합니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DISCARD_CONFIRM",
+          "title": "문서 전체 폐기 확인창",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "비고에 사유를 입력하고 폐기를 누릅니다.",
+          "visibleChanges": [
+            "폐기하시겠습니까? 모든 문항이 삭제 처리되며 되돌릴 수 없습니다.와 취소·폐기를 표시합니다."
+          ],
+          "policy": [
+            "최종 폐기 버튼을 누르기 전에는 서버 폐기 완료로 기록하지 않습니다."
+          ],
+          "exceptions": [
+            "취소 후 모든 필드·선택의 재열기 보존 조합은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/evidence/1970-definition662-discard-reason-fill.json",
+            "cms-knowledge/master-cms/evidence/1971-definition662-final-discard-open.json",
+            "cms-knowledge/master-cms/evidence/1972-definition662-discard-before-final.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DISCARD_CANCEL",
+          "title": "폐기 확인 취소",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "폐기 확인창의 취소를 누릅니다.",
+          "visibleChanges": [
+            "확인창이 닫히고 초안 화면으로 돌아갑니다."
+          ],
+          "policy": [
+            "깨끗한 QA 661에서 shown/hidden과 최종 제출 없음으로 확인했습니다."
+          ],
+          "exceptions": [
+            "모달이 겹쳤던 1911~1928을 깨끗한 정책 검증으로 사용하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1931-definition661-clean-local-guards.json",
+            "cms-knowledge/master-cms/session-20261109-phase28.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_DISCARD_SUBMIT",
+          "title": "최종 폐기와 D 재조회",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "QA 문서 662의 ID·카드·사유를 확인하고 폐기를 한 번 누릅니다.",
+          "visibleChanges": [
+            "폐기되었습니다. 토스트와 문서 D를 확인했습니다.",
+            "신선한 재조회에서도 QA 본문·삭제 배지를 유지하지만 ID·문항 액션은 숨기며 비고는 비활성입니다."
+          ],
+          "policy": [
+            "실제 최종 폐기는 완료된 경로로 기록합니다.",
+            "단일 QA 문서 폐기를 물리 DB 삭제나 모든 상태·권한의 동작으로 확대하지 않습니다."
+          ],
+          "exceptions": [
+            "정상 Definition 세트·혼합 문항 문서의 폐기 범위는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1973-definition662-final-discard-submit.json",
+            "cms-knowledge/master-cms/evidence/1975-definition662-discard-readback-open.json",
+            "cms-knowledge/master-cms/evidence/1976-definition662-discard-source.json",
+            "cms-knowledge/master-cms/evidence/1977-definition662-discard-controls.json",
+            "cms-knowledge/master-cms/evidence/1979-definition662-discarded-item-read.json",
+            "cms-knowledge/master-cms/sources/definition662-discarded-20261109.html"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_09_GENERATED",
+      "title": "승인 문서의 생성 문항과 콘텐츠 표시",
+      "states": [
+        {
+          "id": "DIFI_GENERATED_TYPES",
+          "title": "유형별 카드·정답·풀이",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "단독 유형별 ZIP의 초안 또는 승인 상세를 조회합니다.",
+          "visibleChanges": [
+            "FIVE는 원래 5개 선지·정답 ④, ESSAY는 풀이 참조와 서술형 답안 표시가 생성 모델에 나타납니다.",
+            "후속 Master 타입은 FIVE OBSACN, ESSAY ESBA00, ORDERED SBMANM, SHORT SBSANM으로 구분됐습니다."
+          ],
+          "policy": [
+            "실제 저장 타입은 qtCurrent와 상세 형태를 사용합니다.",
+            "inert 수정 HTML의 초기 OB/OBSA/OBSACN 기본 선택값을 ESSAY 등 실제 타입으로 오인하지 않습니다."
+          ],
+          "exceptions": [
+            "서버 전체 타입 변환표와 학습자 채점·순서·공백·수식 동치·부분 점수는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2743-definition697-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2754-definition696-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2705-definition695-approved-failed-item-fresh-read.json",
+            "cms-knowledge/master-cms/evidence/2845-definition700-s-master-item-readback.json",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/definition-short-answer-type-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2756-definition696-approved-bottom-visual.png",
+            "cms-knowledge/master-cms/evidence/2758-definition697-approved-top-visual.png",
+            "cms-knowledge/master-cms/evidence/2759-definition697-approved-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_BODY_IMAGE",
+          "title": "본문 PNG 카드",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "JSON 1개·본문 PNG 1개인 BODY1을 등록합니다.",
+          "visibleChanges": [
+            "본문의 수직선 그림이 실제로 로드되고 정답·풀이와 함께 표시됩니다.",
+            "문서 698 초안과 S 승인 후 동일 모델·이미지 행·정상 로드를 확인했습니다."
+          ],
+          "policy": [
+            "본문 이미지 바이트는 입력 PNG와 같음을 별도 보존 근거로 확인했습니다."
+          ],
+          "exceptions": [
+            "자산 누락·손상·MIME/크기 불일치·다른 형식·외부 URL·모든 리소스 정책은 미검증입니다.",
+            "해당 PNG는 초안 화면이며 최종 Y 화면 전체 픽셀로 전이하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2773-definition698-body-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2774-definition698-body-image-load-observation.json",
+            "cms-knowledge/master-cms/evidence/2775-definition698-body-image-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2776-definition698-body-image-bottom-visual.json",
+            "cms-knowledge/master-cms/evidence/2786-definition698-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2788-definition698-approved-image-readback.json",
+            "cms-knowledge/master-cms/definition-image-resources-roundtrip-20261110.md",
+            "cms-knowledge/master-cms/definition698-image-integrity-20261110.json",
+            "cms-knowledge/master-cms/evidence/2776-definition698-body-image-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2775-definition698-body-image-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_CHOICE_IMAGES",
+          "title": "선지 PNG 다섯 개 카드",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "JSON 1개·선지 PNG 5개인 CHOICE1을 등록합니다.",
+          "visibleChanges": [
+            "다섯 선지 이미지가 입력 HTML 순서대로 실제 로드됩니다.",
+            "문서 699의 S 승인 전후 모델·이미지 배열이 정확히 같았습니다."
+          ],
+          "policy": [
+            "관측 자산 번호는 이 표본의 HTML 순서에 대응합니다.",
+            "승인 전 원본 바이트 검증과 승인 후 같은 URL·로드 대조를 구분합니다."
+          ],
+          "exceptions": [
+            "승인 후 이미지 바이트를 재다운로드한 것은 아닙니다. 모든 파서의 번호 매김 알고리즘으로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2802-definition699-choice-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2803-definition699-choice-image-load-observation.json",
+            "cms-knowledge/master-cms/evidence/2804-definition699-choice-image-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2805-definition699-choice-image-middle-visual.json",
+            "cms-knowledge/master-cms/evidence/2806-definition699-choice-image-bottom-visual.json",
+            "cms-knowledge/master-cms/evidence/2818-definition699-approved-five-image-readback.json",
+            "cms-knowledge/master-cms/definition-image-resources-roundtrip-20261110.md",
+            "cms-knowledge/master-cms/definition699-choice-after-approval-comparison-20261110.json",
+            "cms-knowledge/master-cms/evidence/2805-definition699-choice-image-middle-visual.png",
+            "cms-knowledge/master-cms/evidence/2806-definition699-choice-image-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2804-definition699-choice-image-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_OMR_MISSING",
+          "title": "표시 정답과 저장 OMR 부재",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "승인 문서에서 생성된 문항의 OMR 미리보기를 누릅니다.",
+          "visibleChanges": [
+            "661 생성 문항은 OMR 미리보기 불가 / OMR 이 입력되지 않았습니다. 경고를 표시했습니다.",
+            "미리보기 모달·iframe은 생성되지 않았습니다."
+          ],
+          "policy": [
+            "본문 정답과 grading 모델이 있다는 사실은 저장 OMR·저장 정답 데이터 완성을 뜻하지 않습니다.",
+            "후속 유형·이미지 표본도 문서 Y 후 저장 OMR/answerData가 null이고 일부 메타가 공란입니다."
+          ],
+          "exceptions": [
+            "1951의 모달 대기 timeout을 CMS 미리보기 장애로 기록하지 않습니다. 보완 저장·실제 채점·생성 누락 원인은 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1951-qa-item2089175-omr-preview-open.json",
+            "cms-knowledge/master-cms/evidence/1953-qa-item2089175-omr-fresh-state.json",
+            "cms-knowledge/master-cms/evidence/1954-qa-item2089175-empty-omr-notice.json",
+            "cms-knowledge/master-cms/evidence/2743-definition697-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2754-definition696-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2817-definition699-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2845-definition700-s-master-item-readback.json",
+            "cms-knowledge/master-cms/definition-qa-processing-review-20261109.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_GENERATED_ITEM_LINKS",
+          "title": "문항 상세·수정 진입",
+          "verification": "링크·최종 Master 접근 확인, 카드 수정 분기 일부 소스 확인",
+          "trigger": "Y 문서의 문항 상세 또는 문항 수정을 누릅니다.",
+          "visibleChanges": [
+            "문항 상세 링크와 문항 수정 버튼이 표시됩니다.",
+            "수정은 저장 임시본 유무를 확인하고 없으면 수정 화면, 있으면 임시저장/검수완료 선택창을 여는 소스가 있습니다."
+          ],
+          "policy": [
+            "문서 승인과 개별 문항 승인·편집·배포는 별도 작업입니다."
+          ],
+          "exceptions": [
+            "Definition 카드에서 임시본 있음/없음·선택·취소·새 탭 차단·조회 실패의 전체 실제 실행은 미검증입니다. 전체 문항 메뉴의 선행 검증을 그대로 복제하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1943-definition661-approved-controls.json",
+            "cms-knowledge/master-cms/evidence/2704-definition695-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2705-definition695-approved-failed-item-fresh-read.json",
+            "cms-knowledge/master-cms/evidence/2845-definition700-s-master-item-readback.json",
+            "cms-knowledge/master-cms/sources/definition-approved-detail.html"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_GENERATED_MASTER_D_AFTER_Y",
+          "title": "생성 Master가 나중에 D가 된 승인 문서",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "695의 생성 문항 2089375를 Master에서 F→D로 저장한 뒤 문서를 재조회합니다.",
+          "visibleChanges": [
+            "문서는 여전히 승인 Y이고 카드 Master 상태는 폐기로 바뀌며 등록 결과 F 등록실패는 남습니다.",
+            "문항 상세 링크는 유지하고 문항 수정은 비활성으로 바뀝니다."
+          ],
+          "policy": [
+            "문서 상태·카드 등록 결과·현재 Master 상태를 세 축으로 표현합니다.",
+            "Definition 문서 자체 폐기 662와 Master 문항 폐기 2089375를 별도 상태로 그립니다."
+          ],
+          "exceptions": [
+            "이 후속 변화는 문서 승인 재실행이나 문서 D 전환이 아닙니다. 물리 삭제·다른 연결 영향은 이 문서 카드만으로 확정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2912-own-failed-item375-discard-final-once.json",
+            "cms-knowledge/master-cms/evidence/2915-own-definition695-after-master-discard-read.json",
+            "cms-knowledge/master-cms/evidence/2919-own-definition695-with-discarded-card-source.json",
+            "cms-knowledge/master-cms/evidence/2920-own-definition695-with-discarded-card-observation.json",
+            "cms-knowledge/master-cms/evidence/2921-own-definition695-discarded-card-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2922-own-definition695-discarded-card-bottom-visual.json",
+            "cms-knowledge/master-cms/master-status-unused-and-discard-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2922-own-definition695-discarded-card-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2921-own-definition695-discarded-card-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_ESSAY",
+          "title": "서술형 카드 표시",
+          "verification": "실제 표시·후속 조회 확인",
+          "trigger": "ESSAY 단독 문서 696의 승인 상세를 조회합니다.",
+          "visibleChanges": [
+            "서술형 답안 영역은 생성 모델에서 [서술형 답안]으로 표현되고 정답은 풀이 참조입니다.",
+            "Master의 실제 형태는 서술형 > 기본형 > 기본 서술형, qtCurrent는 ESBA00입니다."
+          ],
+          "policy": [
+            "원본 legacy HTML과 생성 v3 표현이 바뀐 사실을 입력 ZIP 바이트 변조로 혼동하지 않습니다."
+          ],
+          "exceptions": [
+            "exact_match와 빈 answerValues만으로 서술형 실제 채점 정책을 확정하지 않습니다. 저장 OMR·answerData는 null입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2719-definition696-essay-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2753-definition696-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2754-definition696-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2756-definition696-approved-bottom-visual.json",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/evidence/2756-definition696-approved-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2755-definition696-approved-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_FIVE",
+          "title": "5지 선다형 카드 표시",
+          "verification": "실제 표시·후속 조회 확인",
+          "trigger": "FIVE_CHOICE 단독 문서 697을 조회합니다.",
+          "visibleChanges": [
+            "문제·원래 5개 선지·정답 ④·풀이가 표시됩니다.",
+            "생성 모델의 grading.mode는 choice이며 실제 Master 타입은 OBSACN입니다."
+          ],
+          "policy": [
+            "문서 S 승인 후 문서 Y·Master R을 각각 표시합니다."
+          ],
+          "exceptions": [
+            "저장 OMR·정답 JSON의 완성이나 서비스 채점을 뜻하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2733-definition697-five-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2742-definition697-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2743-definition697-s-master-item-readback.json",
+            "cms-knowledge/master-cms/evidence/2758-definition697-approved-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2759-definition697-approved-bottom-visual.json",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/evidence/2759-definition697-approved-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2758-definition697-approved-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_ORDERED",
+          "title": "ORDERED 단독 카드 표시",
+          "verification": "실제 표시·후속 조회 확인",
+          "trigger": "ORDERED 단독 문서 695의 초안 또는 승인 상세를 조회합니다.",
+          "visibleChanges": [
+            "세 조건의 합을 답하는 문제와 정답 4·풀이가 표시됩니다.",
+            "실제 입력칸·정답 객체는 한 개이며 Master 형태는 주관식 > 다답형 > 일반형, qtCurrent는 SBMANM입니다."
+          ],
+          "policy": [
+            "여러 조건을 제시한다는 이유로 답칸을 임의로 세 개 만들지 않습니다.",
+            "최종 F 단독 승인 당시 Master F였고 후속 Master 폐기 후에는 D로 표시됐습니다."
+          ],
+          "exceptions": [
+            "SHORT와 입력 문항·채점 옵션이 함께 다르므로 questionType 하나만이 타입을 결정했다고 단정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2689-definition695-bottom-visual.json",
+            "cms-knowledge/master-cms/evidence/2705-definition695-approved-failed-item-fresh-read.json",
+            "cms-knowledge/master-cms/evidence/2920-own-definition695-with-discarded-card-observation.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/definition-short-answer-type-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2689-definition695-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2687-definition695-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_SHORT",
+          "title": "SHORT_ANSWER 단답형 카드 표시",
+          "verification": "실제 표시·후속 조회 확인",
+          "trigger": "SHORT1 문서 700의 초안을 조회합니다.",
+          "visibleChanges": [
+            "문제와 정답 11·풀이가 표시됩니다.",
+            "S 승인 후 문서 Y·Master R이며 실제 형태는 주관식 > 단답형 > 일반형, qtCurrent는 SBSANM입니다."
+          ],
+          "policy": [
+            "입력 JSON에 추가 변형 없이 단독 등록된 후속 성공 표본입니다.",
+            "본문 정답과 저장 OMR은 별도이며 OMR·answerData는 null입니다."
+          ],
+          "exceptions": [
+            "순서·공백·수식 동치·부분 점수·유사 정답과 서비스 채점은 미검증입니다.",
+            "연결 PNG는 초안 R 시점이며 최종 Y의 전체 픽셀 완료로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2832-definition700-short-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2833-definition700-short-draft-top-visual.json",
+            "cms-knowledge/master-cms/evidence/2834-definition700-short-draft-bottom-visual.json",
+            "cms-knowledge/master-cms/evidence/2839-definition700-s-final-approval-once.json",
+            "cms-knowledge/master-cms/evidence/2844-definition700-approved-final-observation.json",
+            "cms-knowledge/master-cms/evidence/2845-definition700-s-master-item-readback.json",
+            "cms-knowledge/master-cms/definition-short-answer-type-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/2834-definition700-short-draft-bottom-visual.png"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2833-definition700-short-draft-top-visual.png"
+        },
+        {
+          "id": "DIFI_GENERATED_GRADING_VARIANTS",
+          "title": "채점 기준이 있는 카드와 없는 카드",
+          "verification": "실제 DOM·소스 표시 확인, 비교 PNG 미연결",
+          "trigger": "기존 승인 문서 173과 530의 카드를 비교합니다.",
+          "visibleChanges": [
+            "173은 문제·정답·풀이와 채점 기준 표를 표시합니다.",
+            "530은 정답 4·풀이가 있지만 같은 채점 기준 표는 없습니다."
+          ],
+          "policy": [
+            "채점 기준·모범 답안·선지·자산 영역은 실제 콘텐츠 유무에 따라 구분해 그립니다.",
+            "채점 기준 표 행 수를 분리 문항 개수로 세지 않습니다."
+          ],
+          "exceptions": [
+            "두 표본의 표시 차이로 모든 유형·서버의 채점 규칙을 확정하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1857-definition173-state.json",
+            "cms-knowledge/master-cms/evidence/1858-definition173-source.json",
+            "cms-knowledge/master-cms/evidence/1861-definition530-state.json",
+            "cms-knowledge/master-cms/evidence/1862-definition530-source.json",
+            "cms-knowledge/master-cms/definition-state-review-20261109.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_DIFI_10_FAILURE_BOUNDARIES",
+      "title": "빈 ZIP·다중 ZIP 실패와 미검증 범위",
+      "states": [
+        {
+          "id": "DIFI_EMPTY_ZIP_FAILURE",
+          "title": "빈 ZIP은 로컬 수용 후 문서 F",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "멤버 0개인 유효한 22바이트 ZIP을 한 번 등록합니다.",
+          "visibleChanges": [
+            "문서 663이 F로 생기고 분리 문항이 없는 실패 상세를 표시합니다.",
+            "보존된 원본 ZIP 다운로드는 제출 파일과 SHA가 같았습니다."
+          ],
+          "policy": [
+            "클라이언트 queued와 서버 파싱 성공을 구분합니다.",
+            "실제로 보지 못한 중간 P/W 상태를 추가하지 않습니다."
+          ],
+          "exceptions": [
+            "모든 손상·누락 JSON·압축 형식·빈 콘텐츠 정책을 이 표본 하나로 일반화하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1985-definition-qa-empty-end-fill.json",
+            "cms-knowledge/master-cms/evidence/1988-definition-qa-empty-register-submit.json",
+            "cms-knowledge/master-cms/evidence/1990-definition-qa-empty-register-fresh.json",
+            "cms-knowledge/master-cms/evidence/1991-definition663-failed-open.json",
+            "cms-knowledge/master-cms/evidence/1993-definition663-failed-source.json",
+            "cms-knowledge/master-cms/definition-qa-empty-intent.json",
+            "cms-knowledge/master-cms/sources/definition663-empty-failed-20261109.html",
+            "cms-knowledge/master-cms/evidence/1987-definition-qa-empty-before-submit.json",
+            "cms-knowledge/master-cms/evidence/1995-definition663-original-integrity.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_MULTI3_FAILURE_CONTROLS",
+          "title": "다중 JSON 실패와 같은 바이트의 단독 성공",
+          "verification": "실제 표시·동작 확인",
+          "trigger": "ESSAY·FIVE·ORDERED 세 JSON의 MULTI3를 등록한 뒤 각각 단독 대조를 등록합니다.",
+          "visibleChanges": [
+            "MULTI3 문서 694는 F·문항 0개였지만 같은 JSON의 ORDERED·ESSAY·FIVE 단독은 각각 정상 초안 카드를 만들었습니다."
+          ],
+          "policy": [
+            "개별 유형·JSON 바이트 자체가 항상 파싱 불가능하다는 설명은 후속 단독 성공으로 범위가 좁혀졌습니다.",
+            "다운로드 원본 일치와 실패 표시를 별도로 확인했습니다."
+          ],
+          "exceptions": [
+            "정확한 다중 실패 원인, 순서·개수·혼합·부분 처리·정상 세트 지원은 미확정입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2667-definition694-failed-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2668-definition694-upload-integrity-read.json",
+            "cms-knowledge/master-cms/evidence/2684-definition695-control-detail-observation.json",
+            "cms-knowledge/master-cms/evidence/2719-definition696-essay-draft-observation.json",
+            "cms-knowledge/master-cms/evidence/2733-definition697-five-draft-observation.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/definition-type-single-controls-mapping-20261110.md",
+            "cms-knowledge/master-cms/evidence/2669-definition694-failure-top-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2669-definition694-failure-top-visual.png"
+        },
+        {
+          "id": "DIFI_NESTED_SOURCE_BOUNDARY",
+          "title": "실패 원본 ZIP의 구조와 정상 세트 표본 부재",
+          "verification": "원본 정적 확인, 정상 세트 입력 미검증",
+          "trigger": "기존 실패 문서 299의 실제 원본과 모의 문서를 비교합니다.",
+          "visibleChanges": [
+            "299 원본은 루트 JSON 없이 개별 ZIP 13개를 담은 바깥 ZIP입니다.",
+            "실제 일부 내부 단독 JSON·PNG는 후속 정상 단독 등록에 사용됐습니다."
+          ],
+          "policy": [
+            "중첩 구조만으로 실패 원인을 단정하지 않습니다.",
+            "171/172의 ZIP 표시·HML 주소 모의 자료와 원본 파일 없는 Master 세트 seed를 정상 Definition 세트 ZIP 규격 근거로 사용하지 않습니다."
+          ],
+          "exceptions": [
+            "정상 Definition 세트 ZIP 표본은 사용자가 현재 없다고 답했습니다. 사용자 응답 대기가 아니라 표본 부재에 따른 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2644-definition-existing-set2088663-master-current-read.json",
+            "cms-knowledge/master-cms/evidence/2645-definition171172-complex-reference-inventory-read.json",
+            "cms-knowledge/master-cms/evidence/2649-definition299-original-download-read.json",
+            "cms-knowledge/master-cms/definition299-nested-inventory-20261110.json",
+            "cms-knowledge/master-cms/definition-resources-input-schema-20261110.md",
+            "cms-knowledge/master-cms/user-sample-availability-20261110.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "id": "DIFI_FAILURE_RECOVERY_UNVERIFIED",
+          "title": "실패 후 수정·재등록·서버 오류 복구",
+          "verification": "실패 표시 확인, 복구 경로 미검증",
+          "trigger": "실패 원본을 수정해 새로 등록하거나 단계별 오류 후 복구하는 경우입니다.",
+          "visibleChanges": [
+            "실패 상세는 원본을 내려받아 수정한 뒤 다시 등록하라고 안내합니다.",
+            "상세 안의 재시도·재파싱·파일 교체 UI는 확인되지 않았습니다."
+          ],
+          "policy": [
+            "안내 문구를 실행 가능한 상세 내 재시도 기능으로 바꾸지 않습니다."
+          ],
+          "exceptions": [
+            "같은 원본을 교정해 성공시키는 연속 실험, 중복 방지·예약 외부 ID·롤백·객체 정리·권한/세션 오류 복구는 미검증입니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1853-definition299-state.json",
+            "cms-knowledge/master-cms/evidence/1991-definition663-failed-open.json",
+            "cms-knowledge/master-cms/evidence/2667-definition694-failed-detail-observation.json",
+            "cms-knowledge/master-cms/definition-single-control-and-f-only-policy-20261110.md",
+            "cms-knowledge/master-cms/evidence/277-definition-failed-detail.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/277-definition-failed-detail.png"
+        }
+      ]
+    }
+  ],
+  "validationScope": {
+    "screenCount": 10,
+    "stateCount": 69,
+    "requiredStateFields": [
+      "title",
+      "trigger",
+      "visibleChanges",
+      "policy",
+      "exceptions",
+      "evidence",
+      "screenshot"
+    ],
+    "singleWriteTarget": "design-specs/definition-storyboard-states.json",
+    "otherFilesChanged": false,
+    "browserOrCmsUsed": false,
+    "referenceCheck": {
+      "allLocalTargetsExist": true,
+      "uniqueLocalPaths": 220,
+      "evidenceJsonFilesParsed": 175,
+      "pngHeadersVerified": 31,
+      "screenshotLinkedStateCount": 29,
+      "uniqueIds": true,
+      "utf8Verified": true,
+      "otherFileWrites": 0
+    }
+  }
+}

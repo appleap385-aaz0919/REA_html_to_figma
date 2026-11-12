@@ -1,0 +1,9 @@
+(() => {
+ if(location.hostname!=='dev-exambank.dongahub.com'||new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show')||!document.getElementById('twinAddTabBtn').classList.contains('active')||document.getElementById('twinCountBadge').innerText.trim()!=='0'||window.__qaSamePassageAddProbeAttempted)throw Error('Only own unlinked same-passage candidate probe allowed');
+ const filter=document.getElementById('twinSearchFilter'),button=document.querySelector('#twinAddResult [hx-post="/item/all/twin-add.donga?targetItemId=2089359"]'),row=button?.closest('tr');
+ if(filter.querySelector('[name="anchorItemId"]').value!=='2089358'||!row?.innerText.includes('2089357')||button.matches(':disabled'))throw Error('Observed enabled own sibling9359 in own passage9357 required');
+ window.__qaSamePassageAddProbeAttempted=true;window.__qaSamePassageAddProbeResponse={received:false};const request={observed:false};
+ const before=e=>{if(e.detail.elt!==button)return;request.observed=true;request.path=e.detail.requestConfig?.path;request.verb=e.detail.requestConfig?.verb;request.anchorItemId=e.detail.requestConfig?.parameters?.anchorItemId;document.body.removeEventListener('htmx:beforeRequest',before);};
+ const after=e=>{if(e.detail.elt!==button)return;window.__qaSamePassageAddProbeResponse={received:true,httpStatus:e.detail.xhr.status,trigger:e.detail.xhr.getResponseHeader('HX-Trigger')};document.body.removeEventListener('htmx:afterRequest',after);};
+ document.body.addEventListener('htmx:beforeRequest',before);document.body.addEventListener('htmx:afterRequest',after);button.click();return {clickedOnce:true,anchorItemId:2089358,targetItemId:2089359,samePassageId:2089357,operation:'Probe enabled normal-UI same-passage candidate',request,serviceDeployment:false};
+})()

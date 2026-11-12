@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2270-own-shared-html-full-apply-submit-once",
+  "startedUtc": "2026-11-10T00:02:07.512556+00:00",
+  "command": [
+    "eval",
+    "(() => {if(location.pathname!=='/item/all/modify.donga'||new URLSearchParams(location.search).get('itemId')!=='2089242'||document.querySelectorAll('.modal.show').length!==1||!document.querySelector('#applyAllModal.show')||window.__qaSharedHtmlApplyAttempted)throw Error('Own validated apply confirmation required');const doc=window.itemEditors.passage.getDocument(),root=document.querySelector('#omrSlot [data-omr-code=SBSANM]'),answer=window.omrSerializers.SBSANM.serialize(root).answer.nodes[0].allowed_answer[0].value,slash=String.fromCharCode(92);if(!doc.content.promptText.includes('[QA-SHARED-HTML-20261110]')||answer!=='2'+slash+'times1'+slash+'text{행렬}'||[...document.querySelectorAll('[data-webhwp-result]')].some(e=>e.value))throw Error('Own HTML-only payload precondition mismatch');window.__qaSharedHtmlApplyAttempted=true;document.querySelector('#applyAllModal [data-action-ok]').click();return {clickedOnce:true,itemId:2089242,passageId:2089241,htmlMarker:'[QA-SHARED-HTML-20261110]',answer,hmlPendingEmpty:true};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.092
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10",
+      "result": {
+        "answer": "2\\times1\\text{행렬}",
+        "clickedOnce": true,
+        "hmlPendingEmpty": true,
+        "htmlMarker": "[QA-SHARED-HTML-20261110]",
+        "itemId": 2089242,
+        "passageId": 2089241
+      }
+    },
+    "error": null,
+    "localSeconds": 0.154
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089242&pageNum=1&pageSize=10",
+      "refs": {
+        "e29916": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e29917": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e29918": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e29919": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e29920": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e29921": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e29922": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e29923": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e29924": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e29925": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e29926": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e29927": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e29928": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e29929": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e29930": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e29931": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e29932": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e29933": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e29934": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e29935": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e29936": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e29937": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e29938": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e29939": {
+          "name": "",
+          "role": "button"
+        },
+        "e29993": {
+          "name": "문항 형태 *",
+          "role": "heading"
+        },
+        "e29994": {
+          "name": "이미지 업로드",
+          "role": "heading"
+        },
+        "e29997": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e29998": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e29999": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e30000": {
+          "name": " 업로드",
+          "role": "button"
+        },
+        "e30005": {
+          "name": "객관식",
+          "role": "option"
+        },
+        "e30006": {
+          "name": "주관식",
+          "role": "option"
+        },
+        "e30007": {
+          "name": "서술형",
+          "role": "option"
+        },
+        "e30008": {
+          "name": "단답형",
+          "role": "option"
+        },
+        "e30009": {
+          "name": "다답형",
+          "role": "option"
+        },
+        "e30010": {
+          "name": "일반형",
+          "role": "option"
+        },
+        "e30011": {
+          "name": "그리기형",
+          "role": "option"
+        },
+        "e30012": {
+          "name": "영역 선택형",
+          "role": "option"
+        },
+        "e30033": {
+          "name": "지문 편집",
+          "role": "heading"
+        },
+        "e30034": {
+          "name": "문항 편집",
+          "role": "heading"
+        },
+        "e30035": {
+          "name": "지문",
+          "role": "heading"
+        },
+        "e30036": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30037": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e30038": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e30039": {
+          "name": "풀이",
+          "role": "heading"
+        },
+        "e30040": {
+          "name": "모범 답안",
+          "role": "heading"
+        },
+        "e30041": {
+          "name": "채점 기준",
+          "role": "heading"
+        },
+        "e30042": {
+          "name": "↶ 실행취소",
+          "role": "button"
+        },
+        "e30043": {
+          "name": "↷ 다시실행",
+          "role": "button"
+        },
+        "e30044": {
+          "name": "문단 정렬",
+          "role": "combobox"
+        },
+        "e30045": {
+          "name": "문단",
+          "role": "button"
+        },
+        "e30046": {
+          "name": "B",
+          "role": "button"
+        },
+        "e30047": {
+          "name": "I",
+          "role": "button"
+        },
+        "e30048": {
+          "name": "U",
+          "role": "button"
+        },
+        "e30049": {
+          "name": "A",
+          "role": "button"
+        },
+        "e30050": {
+          "name": "+ 수식",
+          "role": "button"
+        },
+        "e30051": {
+          "name": "🖼 이미지",
+          "role": "button"
+        },
+        "e30052": {
+          "name": "⊞ 표",
+          "role": "button"
+        },
+        "e30053": {
+          "name": "글상자",
+          "role": "button"
+        },
+        "e30054": {
+          "name": "d-box",
+          "role": "button"
+        },
+        "e30055": {
+          "name": "d-input",
+          "role": "button"
+        },
+        "e30056": {
+          "name": "특수문자",
+          "role": "button"
+        },
+        "e30057": {
+          "name": "글자 겹치기",
+          "role": "button"
+        },
+        "e30058": {
+          "name": "↶ 실행취소",
+          "role": "button"
+        },
+        "e30059": {
+          "name": "↷ 다시실행",
+          "role": "button"
+        },
+        "e30060": {
+          "name": "문단 정렬",
+          "role": "combobox"
+        },
+        "e30061": {
+          "name": "문단",
+          "role": "button"
+        },
+        "e30062": {
+          "name": "B",
+          "role": "button"
+        },
+        "e30063": {
+          "name": "I",
+          "role": "button"
+        },
+        "e30064": {
+          "name": "U",
+          "role": "button"
+        },
+        "e30065": {
+          "name": "A",
+          "role": "button"
+        },
+        "e30066": {
+          "name": "+ 수식",
+          "role": "button"
+        },
+        "e30067": {
+          "name": "🖼 이미지",
+          "role": "button"
+        },
+        "e30068": {
+          "name": "⊞ 표",
+          "role": "button"
+        },
+        "e30069": {
+          "name": "글상자",
+          "role": "button"
+        },
+        "e30070": {
+          "name": "d-box",
+          "role": "button"
+        },
+        "e30071": {
+          "name": "d-input",
+          "role": "button"
+        },
+        "e30072": {
+          "name": "특수문자",
+          "role": "button"
+        },
+        "e30073": {
+          "name": "글자 겹치기",
+          "role": "button"
+        },
+        "e30074": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30075": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30076": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30077": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30078": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30079": {
+          "name": "문제",
+          "role": "heading"
+        },
+        "e30080": {
+          "name": "정답",
+          "role": "heading"
+        },
+        "e30081": {
+          "name": "정렬: 기본",
+          "role": "option"
+        },
+        "e30082": {
+          "name": "왼쪽",
+          "role": "option"
+        },
+        "e30083": {
+          "name": "가운데",
+          "role": "option"
+        },
+        "e30084": {
+          "name": "오른쪽",
+          "role": "option"
+        },
+        "e30085": {
+          "name": "정렬: 기본",
+          "role": "option"
+        },
+        "e30086": {
+          "name": "왼쪽",
+          "role": "option"
+        },
+        "e30087": {
+          "name": "가운데",
+          "role": "option"
+        },
+        "e30088": {
+          "name": "오른쪽",
+          "role": "option"
+        },
+        "e30089": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30090": {
+          "name": "",
+          "role": "generic"
+        },
+        "e30091": {
+          "name": "전체 반영",
+          "role": "heading"
+        },
+        "e30092": {
+          "name": "닫기",
+          "role": "button"
+        },
+        "e30093": {
+          "name": "취소",
+          "role": "button"
+        },
+        "e30094": {
+          "name": "저장",
+          "role": "button"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e29916]\n      - link \"문제은행 마스터 CMS\" [ref=e29917]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e29930]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e29931]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e29932]\n          - link \"HML 문항 등록\" [ref=e29933]\n          - link \"디피니션 문항 등록\" [ref=e29934]\n          - link \"쌍둥이 그룹 관리\" [ref=e29935]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e29936]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e29937]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e29938]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e29918]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e29919]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089242 (2088873)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"2089241\"\n      - StaticText \"원본 파일\"\n      - StaticText \"QA-HML-20261109-03-ACTIVE-SET4-SINGLE1.hml\"\n      - button \"\" [ref=e29939]\n        - StaticText \"\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"HML 변환\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e29926]\n        - tab \"한글(HML) 수정\" [ref=e29927]\n        - tab \"HTML 수정\" [selected, ref=e29928]\n        - tab \"OMR 수정\" [ref=e29929]\n      - link \"취소\" [ref=e29920]\n      - button \"임시 저장\" [ref=e29921]\n      - button \"전체 반영\" [ref=e29922]\n      - generic\n        - generic\n          - heading \"문항 형태 *\" [level=3, ref=e29993]\n            - StaticText \"\"\n            - StaticText \"문항 형태 *\"\n          - combobox [expanded=false, ref=e29997]: 주관식\n            - MenuListPopup\n              - option \"객관식\" [ref=e30005]\n              - option \"주관식\" [selected, ref=e30006]\n              - option \"서술형\" [ref=e30007]\n          - combobox [expanded=false, ref=e29998]: 단답형\n            - MenuListPopup\n              - option \"단답형\" [selected, ref=e30008]\n              - option \"다답형\" [ref=e30009]\n          - combobox [expanded=false, ref=e29999]: 일반형\n            - MenuListPopup\n              - option \"일반형\" [selected, ref=e30010]\n              - option \"그리기형\" [ref=e30011]\n              - option \"영역 선택형\" [ref=e30012]\n        - generic\n          - heading \"이미지 업로드\" [level=3, ref=e29994]\n            - StaticText \"\"\n            - StaticText \"이미지 업로드\"\n          - button \" 업로드\" [ref=e30000]\n            - StaticText \"\"\n            - StaticText \"업로드\"\n        - tabpanel\n          - generic\n            - heading \"지문 편집\" [level=3, ref=e30033]\n              - StaticText \"\"\n              - StaticText \"지문 편집\"\n            - generic\n              - generic\n                - StaticText \"지문 passage:2089241 편집\"\n                - button \"↶ 실행취소\" [ref=e30042]\n                - button \"↷ 다시실행\" [ref=e30043]\n                - combobox \"문단 정렬\" [expanded=false, ref=e30044]: 정렬: 기본\n                  - MenuListPopup\n                    - option \"정렬: 기본\" [selected, ref=e30081]\n                    - option \"왼쪽\" [ref=e30082]\n                    - option \"가운데\" [ref=e30083]\n                    - option \"오른쪽\" [ref=e30084]\n                - button \"문단\" [ref=e30045]\n                - button \"B\" [ref=e30046]\n                - button \"I\" [ref=e30047]\n                - button \"U\" [ref=e30048]\n                - button \"A\" [ref=e30049]\n                - button \"+ 수식\" [ref=e30050]\n                - button \"🖼 이미지\" [ref=e30051]\n                - button \"⊞ 표\" [ref=e30052]\n                - button \"글상자\" [ref=e30053]\n                - button \"d-box\" [ref=e30054]\n                - button \"d-input\" [ref=e30055]\n                - button \"특수문자\" [ref=e30056]\n                - button \"글자 겹치기\" [ref=e30057]\n              - StaticText \"본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다\"\n              - heading \"지문\" [level=3, ref=e30035]\n              - generic [ref=e30036] editable [contenteditable]:  [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오.\n                - paragraph\n                  - StaticText \" [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오.\"\n              - paragraph\n                - StaticText \"미리보기 (실서비스 뷰어 렌더)\"\n              - paragraph\n                - StaticText \" [QA-SHARED-HTML-20261110]다음 행렬의 꼴을 말하시오.\"\n          - generic\n            - heading \"문항 편집\" [level=3, ref=e30034]\n              - StaticText \"\"\n              - StaticText \"문항 편집\"\n            - generic\n              - generic\n                - StaticText \"문항 편집\"\n                - button \"↶ 실행취소\" [ref=e30058]\n                - button \"↷ 다시실행\" [ref=e30059]\n                - combobox \"문단 정렬\" [expanded=false, ref=e30060]: 정렬: 기본\n                  - MenuListPopup\n                    - option \"정렬: 기본\" [selected, ref=e30085]\n                    - option \"왼쪽\" [ref=e30086]\n                    - option \"가운데\" [ref=e30087]\n                    - option \"오른쪽\" [ref=e30088]\n                - button \"문단\" [ref=e30061]\n                - button \"B\" [ref=e30062]\n                - button \"I\" [ref=e30063]\n                - button \"U\" [ref=e30064]\n                - button \"A\" [ref=e30065]\n                - button \"+ 수식\" [ref=e30066]\n                - button \"🖼 이미지\" [ref=e30067]\n                - button \"⊞ 표\" [ref=e30068]\n                - button \"글상자\" [ref=e30069]\n                - button \"d-box\" [ref=e30070]\n                - button \"d-input\" [ref=e30071]\n                - button \"특수문자\" [ref=e30072]\n                - button \"글자 겹치기\" [ref=e30073]\n              - StaticText \"본문에 $ 를 입력하거나 [+ 수식]으로 수식을 만들 수 있습니다. 표는 열·행 경계를 끌어 크기를 조절할 수 있습니다. 글상자는 클릭 후 조절점을 끌어 크기를 조절합니다. [d-box]는 선택한 문단을 테두리 상자로 감싸며, 맨 끝 d-box는 마지막 줄에서 ↓ 로 빠져나옵니다. 텍스트를 드래그해 굵게(Ctrl+B)·이탤릭·밑줄·글자색을 적용할 수 있습니다\"\n              - heading \"문제\" [level=3, ref=e30037]\n              - article\n                - generic [ref=e30074] editable [contenteditable]: (\n2\n\n\n3\n)\n(\n2\n3\n\t​\n\n)\n\n                  - paragraph\n                    - generic [ref=e30089] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLOperator\n                              - StaticText \"(\"\n                            - MathMLTable\n                              - MathMLTableRow\n                                - MathMLTableCell\n                                  - MathMLRow\n                                    - MathMLNumber\n                                      - StaticText \"2\"\n                              - MathMLTableRow\n                                - MathMLTableCell\n                                  - MathMLRow\n                                    - MathMLNumber\n                                      - StaticText \"3\"\n                            - MathMLOperator\n                              - StaticText \")\"\n                    - LineBreak \"\\n\"\n              - heading \"정답\" [level=3, ref=e30038]\n              - article\n                - generic [ref=e30075] editable [contenteditable]: 2\n×\n1\n2×1행렬\n                  - paragraph\n                    - generic [ref=e30090] clickable [cursor:pointer]\n                      - MathMLMath\n                        - MathMLRow\n                          - MathMLRow\n                            - MathMLNumber\n                              - StaticText \"2\"\n                            - MathMLOperator\n                              - StaticText \"×\"\n                            - MathMLNumber\n                              - StaticText \"1\"\n                    - StaticText \"행렬\"\n              - heading \"풀이\" [level=3, ref=e30039]\n              - article\n                - generic [ref=e30076] editable [contenteditable]: \n\n                  - paragraph\n                    - LineBreak \"\\n\"\n              - heading \"모범 답안\" [level=3, ref=e30040]\n              - article\n                - generic [ref=e30077] editable [contenteditable]: \n\n                  - paragraph\n                    - LineBreak \"\\n\"\n              - heading \"채점 기준\" [level=3, ref=e30041]\n              - article\n                - generic [ref=e30078] editable [contenteditable]: \n\n                  - paragraph\n                    - LineBreak \"\\n\"\n              - paragraph\n                - StaticText \"미리보기 (실서비스 뷰어 렌더)\"\n              - article\n                - generic\n                  - heading \"문제\" [level=3, ref=e30079]\n                  - paragraph\n                    - MathMLMath\n                      - MathMLRow\n                        - MathMLRow\n                          - MathMLOperator\n                            - StaticText \"(\"\n                          - MathMLTable\n                            - MathMLTableRow\n                              - MathMLTableCell\n                                - MathMLRow\n                                  - MathMLNumber\n                                    - StaticText \"2\"\n                            - MathMLTableRow\n                              - MathMLTableCell\n                                - MathMLRow\n                                  - MathMLNumber\n                                    - StaticText \"3\"\n                          - MathMLOperator\n                            - StaticText \")\"\n                - generic\n                  - heading \"정답\" [level=3, ref=e30080]\n                  - paragraph\n                    - MathMLMath\n                      - MathMLRow\n                        - MathMLRow\n                          - MathMLNumber\n                            - StaticText \"2\"\n                          - MathMLOperator\n                            - StaticText \"×\"\n                          - MathMLNumber\n                            - StaticText \"1\"\n                    - StaticText \"행렬\"\n      - link \"취소\" [ref=e29923]\n      - button \"임시 저장\" [ref=e29924]\n      - button \"전체 반영\" [ref=e29925]\n      - dialog\n        - generic\n          - heading \"전체 반영\" [level=5, ref=e30091]\n          - button \"닫기\" [ref=e30092]\n          - StaticText \"저장하시겠습니까?\"\n          - button \"취소\" [ref=e30093]\n          - button \"저장\" [ref=e30094]"
+    },
+    "error": null,
+    "localSeconds": 0.159
+  }
+}

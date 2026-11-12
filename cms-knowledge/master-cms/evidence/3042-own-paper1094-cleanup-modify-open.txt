@@ -1,0 +1,208 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e39953]
+      - link "문제은행 마스터 CMS" [ref=e39954]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e39961]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e39962]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e39963]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e39964]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e39965]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e39956]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "평가지 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "수정"
+      - heading "평가지 수정" [level=2, ref=e39955]
+      - form
+        - generic
+          - heading "기본 정보" [level=3, ref=e39959]
+          - DescriptionList
+            - term "평가지 ID"
+            - definition
+              - StaticText "1094 (1176)"
+            - term "평가지명 *"
+              - StaticText "평가지명"
+              - StaticText "*"
+            - definition
+              - textbox [required, ref=e40006]: QA-HML-20261109-02-SET4-SINGLE1
+                - StaticText "QA-HML-20261109-02-SET4-SINGLE1"
+            - term "상태"
+            - definition
+              - LabelText
+                - radio "초안" [checked=true, ref=e40026]
+                - StaticText "초안"
+              - LabelText
+                - radio "사용" [checked=false, ref=e40027]
+                - StaticText "사용"
+              - LabelText
+                - radio "미사용" [checked=false, ref=e40028]
+                - StaticText "미사용"
+              - LabelText
+                - radio "폐기" [checked=false, ref=e40029]
+                - StaticText "폐기"
+            - term "생성 방식"
+            - definition
+              - StaticText "HML 생성"
+            - term "단원 코드"
+            - definition
+              - StaticText "[22HMAC1GHG1006010000]"
+              - StaticText "22 > 고등 > 수학군 > 공통수학1 > 고호경 > 고등1 > 공통학기 > 행렬 > 행렬의 뜻 > >"
+            - term "등록"
+            - definition
+              - StaticText "jaehyuk.myung · 2026-11-09"
+          - DescriptionList
+            - term "시험지"
+            - definition
+              - link "665 | QA-HML-20261109-02-SET4-SINGLE1.hml" [ref=e40007]
+            - term "출처"
+            - definition
+              - StaticText "[22-H-MA-C1-1-0-DCL-KI-2025]"
+              - StaticText "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025"
+            - term "페이지 *"
+              - StaticText "페이지"
+              - StaticText "*"
+            - definition
+              - spinbutton "예: 24" [required, ref=e40008]: 1
+                - StaticText "1"
+              - StaticText "~"
+              - spinbutton "예: 25" [required, ref=e40009]: 1
+                - StaticText "1"
+            - term "용도 *"
+              - StaticText "용도"
+              - StaticText "*"
+            - definition
+              - LabelText
+                - radio "공통" [checked=true, ref=e40030]
+                - StaticText "공통"
+              - LabelText
+                - radio "교사용" [checked=false, ref=e40031]
+                - StaticText "교사용"
+            - term "문제 구성"
+            - definition
+              - StaticText "주관식 > 단답형 > 일반형 (5)"
+            - term "문항 수"
+            - definition
+              - StaticText "5문항"
+        - generic
+          - heading "포함 문항 (5)" [level=3, ref=e39960]
+            - StaticText "포함 문항 ("
+            - StaticText "5"
+            - StaticText ")"
+          - button " 문항 추가" [ref=e39966]
+            - StaticText ""
+            - StaticText "문항 추가"
+          - table
+            - rowgroup
+              - row
+                - columnheader [ref=e40010]
+                - columnheader "순서" [ref=e40011]
+                - columnheader "문항 ID" [ref=e40012]
+                - columnheader "문제" [ref=e40013]
+                - columnheader "형태" [ref=e40014]
+                - columnheader "난이도" [ref=e40015]
+                - columnheader "단원 코드" [ref=e40016]
+                - columnheader "문항 상태" [ref=e40017]
+                - columnheader "제외" [ref=e40018]
+            - row
+              - cell "" [ref=e39967]
+                - StaticText ""
+              - cell "1" [ref=e39968]
+              - cell "2089238" [ref=e39969]
+                - StaticText "2089238"
+              - cell "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e39970]
+                - link "행렬 $\\left(\\begin{gathered}2&amp;~4 \\\\ -3&amp;~0 \\\\ 5&amp;~1\\end{gathered}\\right)$에 대하여 다음을 구하시오.(1) $(3,~2)$ 성분(2) 제 $2$행의 모든 성분의 합(3) 제 $1$열의 모든 성분의 합" [ref=e40019]
+              - cell "주관식 > 단답형 > 일반형" [ref=e39971]
+              - cell "하" [ref=e39972]
+              - cell "22HMAC1GHG1006010000" [ref=e39973]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "초안" [ref=e39974]
+              - cell "제외" [ref=e39975]
+                - button "제외" [ref=e40020]
+                  - StaticText ""
+            - row
+              - cell "" [ref=e39976]
+                - StaticText ""
+              - cell "2" [ref=e39977]
+              - cell "2089242 지문 ID 2089241" [ref=e39978]
+                - StaticText "2089242"
+                - StaticText "지문 ID 2089241"
+              - cell "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$" [ref=e39979]
+                - link "$\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$" [ref=e40021]
+              - cell "주관식 > 단답형 > 일반형" [ref=e39980]
+              - cell "최하" [ref=e39981]
+              - cell "22HMAC1GHG1006010000" [ref=e39982]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "승인(사용)" [ref=e39983]
+              - cell "제외" [ref=e39984]
+                - button "제외" [ref=e40022]
+                  - StaticText ""
+            - row
+              - cell "3" [ref=e39985]
+              - cell "2089243 지문 ID 2089241" [ref=e39986]
+                - StaticText "2089243"
+                - StaticText "지문 ID 2089241"
+              - cell "$\\left( -2~4~3\\right)$" [ref=e39987]
+                - link "$\\left( -2~4~3\\right)$" [ref=e40023]
+              - cell "주관식 > 단답형 > 일반형" [ref=e39988]
+              - cell "최하" [ref=e39989]
+              - cell "22HMAC1GHG1006010000" [ref=e39990]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "승인(사용)" [ref=e39991]
+            - row
+              - cell "4" [ref=e39992]
+              - cell "2089244 지문 ID 2089241" [ref=e39993]
+                - StaticText "2089244"
+                - StaticText "지문 ID 2089241"
+              - cell "$\\left(\\begin{gathered}1&amp;~0 \\\\ 0&amp;~1\\end{gathered}\\right)$" [ref=e39994]
+                - link "$\\left(\\begin{gathered}1&amp;~0 \\\\ 0&amp;~1\\end{gathered}\\right)$" [ref=e40024]
+              - cell "주관식 > 단답형 > 일반형" [ref=e39995]
+              - cell "최하" [ref=e39996]
+              - cell "22HMAC1GHG1006010000" [ref=e39997]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "승인(사용)" [ref=e39998]
+            - row
+              - cell "5" [ref=e39999]
+              - cell "2089245 지문 ID 2089241" [ref=e40000]
+                - StaticText "2089245"
+                - StaticText "지문 ID 2089241"
+              - cell "$\\left(\\begin{gathered}3&amp;~-2&amp;~0 \\\\ 1&amp;~5&amp;~-3\\end{gathered}\\right)$" [ref=e40001]
+                - link "$\\left(\\begin{gathered}3&amp;~-2&amp;~0 \\\\ 1&amp;~5&amp;~-3\\end{gathered}\\right)$" [ref=e40025]
+              - cell "주관식 > 단답형 > 일반형" [ref=e40002]
+              - cell "최하" [ref=e40003]
+              - cell "22HMAC1GHG1006010000" [ref=e40004]
+                - StaticText "22HMAC1GHG1006010000"
+              - cell "승인(사용)" [ref=e40005]
+        - link "취소" [ref=e39957]
+        - button "저장" [ref=e39958]

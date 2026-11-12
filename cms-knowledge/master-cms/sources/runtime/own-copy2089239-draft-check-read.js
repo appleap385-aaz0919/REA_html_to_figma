@@ -1,0 +1,1 @@
+(async()=>{if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');const response=await fetch('/item/all/draft-check.donga?itemId=2089239',{credentials:'same-origin'});if(!response.ok||response.redirected)throw Error('Own draft check unavailable');return {itemId:2089239,httpStatus:response.status,draft:await response.json()};})()

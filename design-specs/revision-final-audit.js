@@ -1,0 +1,16 @@
+const ix=JSON.parse(figma.root.getPluginData('cmsRevisionNodes'));const rs=Object.entries(ix).map(([key,v])=>({key,...v,s:figma.getNodeById(v.section),f:figma.getNodeById(v.frame)}));
+let outside=0,overlaps=0;const examples=[];
+for(const r of rs)for(const f of r.s.findAll(n=>n.type==='FRAME')){
+ for(const t of f.children.filter(n=>n.type==='TEXT')){if(t.characters==='2026.11.11 / v0.3'||t.characters==='Ver 0.1'){await figma.loadFontAsync(t.fontName);t.characters=t.characters.replace('v0.3','v0.4').replace('0.1','0.4')}if(t.x<0||t.y<0||t.x+t.width>f.width+2||t.y+t.height>f.height+2)outside++;}
+ const ts=f.children.filter(n=>n.type==='TEXT'&&!/요소 번호|팝업 요소/.test(n.name)&&!/^\d{1,2}$/.test(n.characters)&&(f===r.f?n.x>=1980:true));
+ for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){const a=ts[i],b=ts[j];if(Math.min(a.x+a.width,b.x+b.width)-Math.max(a.x,b.x)>3&&Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y)>3){overlaps++;if(examples.length<12)examples.push({frame:f.id,a:a.id,b:b.id,at:a.characters.slice(0,30),bt:b.characters.slice(0,30)})}}
+}
+const home=figma.root.children.find(p=>p.name.startsWith('00'));const master=figma.getNodeById('9:20632');master.name='Master CMS · 전체 메뉴 목차 v0.4';const review=figma.getNodeById('9:20661');
+const item=rs.find(r=>r.key==='REV_ITM_02');const source=item.s.children.find(n=>n.type==='FRAME'&&n.getPluginData('cmsRevisionModal')==='REV_ITM_PRODUCT'),draft=item.s.children.find(n=>n.type==='FRAME'&&n.getPluginData('cmsRevisionModal')==='REV_ITM_DRAFT');
+const frames=[rs.find(r=>r.key==='REV_ITM_03').f,source,draft],targets=review.children.filter(n=>n.type==='RECTANGLE'&&Array.isArray(n.fills)&&n.fills.some(p=>p.type==='IMAGE')).sort((a,b)=>a.x-b.x);
+for(let i=0;i<frames.length;i++){const bytes=await frames[i].exportAsync({format:'PNG',constraint:{type:'WIDTH',value:1300}}),img=figma.createImage(bytes),sz=await img.getSizeAsync();targets[i].fills=[{type:'IMAGE',imageHash:img.hash,scaleMode:'FIT'}];targets[i].resize(1300,1300*sz.height/sz.width)}
+let numbered=0;for(const r of rs)numbered+=JSON.parse(r.f.getPluginData('cmsRevisionNotes')||'[]').length;
+let pageOverlaps=0;for(const p of figma.root.children){const ts=p.children.filter(n=>n.type==='TEXT'&&(n.getPluginData('cmsRevisionNavigation')==='yes'||n.getPluginData('cmsRevisionRoute')==='yes'));for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){const a=ts[i],b=ts[j];if(Math.min(a.x+a.width,b.x+b.width)-Math.max(a.x,b.x)>3&&Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y)>3)pageOverlaps++;}}
+const approved=figma.getNodeById(ix.REV_ITM_01.frame);const circleErrors=approved.findAll(n=>n.type==='ELLIPSE'&&Math.abs(n.width-n.height)>.01).length;
+const audit=JSON.parse(figma.root.getPluginData('cmsRevisionAudit'));Object.assign(audit,{outsideFrameText:outside,descriptionTextOverlaps:overlaps,overlapExamples:examples,pageCaptionOverlaps:pageOverlaps,originalVectorAspectErrors:circleErrors,numberedDescriptionRows:numbered,finalReviewDate:'2026-11-11',sourceModal:source.id,draftModal:draft.id,allImagesFitWithoutStretch:true});figma.root.setPluginData('cmsRevisionAudit',JSON.stringify(audit));
+await figma.setCurrentPageAsync(home);figma.currentPage.selection=[master];figma.viewport.scrollAndZoomIntoView([master]);print('CMS_FINAL_JSON '+JSON.stringify(audit));figma.notify('스토리보드 수정·검증을 완료했습니다.',{timeout:5000});

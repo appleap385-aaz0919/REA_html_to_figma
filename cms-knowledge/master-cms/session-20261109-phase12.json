@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "status": "in_progress",
+  "scope": "Master CMS and its embedded OMR preview component",
+  "evidenceRange": [778, 800],
+  "testItemId": 2088985,
+  "savedDetailId": 2088697,
+  "observations": [
+    {"code": "ESBA00", "evidence": [778, 779, 780, 781, 782, 783, 784, 785], "result": "Default essay leaf is basic essay. Form has one optional title and no answer input. Set title QA 풀이 과정. Preview renders title, Write answer and Select file. Empty Grade returns unknown: MANUAL rule has no automatic comparison value and requires teacher review. Pointer click783 and focused keyboard785 on Write answer produce no observed editor opening."},
+    {"code": "ESBA00", "evidence": [789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800], "result": "Full apply793 creates Master detail2088697; basic-essay type confirmed794. Reentry798 restores leafESBA00 and title QA 풀이 과정. Preview reopened800 with restored title. No automatic correct/incorrect assertion for this MANUAL leaf."}
+  ],
+  "previewSource": {
+    "publicEntry": "sources/omr-preview-entry.html",
+    "entryUrl": "https://dev-exambank.douclass.com/omr-preview",
+    "manifest": "sources/omr-preview-assets.manifest.json",
+    "referencedPublicJsFiles": 39,
+    "downloaded": 39,
+    "resourceRule": "Unauthenticated GET of literal JS paths already referenced by the observed preview entry; no profile/cookie export.",
+    "evidenceFiles": ["sources/omr-preview-assets/CMo_b7JC.js", "sources/omr-preview-assets/CHZCu2qy.js", "sources/omr-preview-assets/Y1_n5oYk.js", "sources/assets/omrPreview-c59d76018482dcb8bfb460b8d8e6698c.js"],
+    "findings": [
+      "Y1_n5oYk: StudentExamAnswerMethod emits write/file for its two buttons; StudentExamAnswerControl forwards these events.",
+      "CHZCu2qy: StudentExamOmrTable forwards write/file with question number.",
+      "CMo_b7JC: current omr-preview page binds onPick and onInput on the shared table, and does not bind write/file handlers. This explains the observed absence of opening a writer/file chooser in this preview. It does not establish student-service behavior or intended product specification.",
+      "Current preview uses default variant omr. Grade calls POST /api/omr-preview/check with answer/value. The CMS parent handles ready/rendered messages and does not implement grading itself.",
+      "CMS parent captures current form values on preview open, validates them, then sends render to the exact iframe origin; closing clears the iframe. Its15s ready deadline shows an error but late ready is still handled."
+    ]
+  },
+  "reaCapture": {
+    "bundle": "sources/rea-master-20261109.bundle.json",
+    "parentEvidenceId": "ev_0e63abc49f5069d71a77d83212b45e6b40d14e438a6b20d564c67f6fad5b4174",
+    "summaryEvidenceId": "ev_314c67f3cf7370579799939b2331d23b4452c175f3d97acd0f77f08bea3c8667",
+    "bundleBytes": 7410303,
+    "retainedRecords": 2,
+    "scriptsObserved": 53,
+    "sourceArtifacts": 53,
+    "staticSourceStatus": {"complete": 51, "unavailable": 2},
+    "unavailableReason": "Per-script10s analysis deadline, not proof of missing script capture.",
+    "unavailableFiles": ["donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js", "mathlive.min-559c2cef6e97f3aac30208cfedc9bf38.js"],
+    "limitations": "Source parsing/candidate enumeration are partial. Zero extracted route patterns is not evidence that application routes are absent. Backend/DB and all-page coverage remain unknown."
+  },
+  "connectionPreference": {
+    "userChoice": "Keep currently logged-in Chrome",
+    "rule": "Reuse agent-browser connection. Announce a necessary new source-analysis connection before triggering a Chrome consent prompt. Do not switch to a separate automation profile.",
+    "retryHistory": "Initial REA socket discovery timed out. User explained late consent and explicitly requested another retry; final retry succeeded. Do not infer incompatibility from those consent-window timeouts.",
+    "references": ["https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session", "https://github.com/ChromeDevTools/chrome-devtools-mcp/issues/825", "https://developer.chrome.com/docs/devtools/agents/get-started/configuration"]
+  },
+  "qualityNotes": [
+    {"evidence": [787, 788, 789], "rule": "Frame selection returned a frame ref, but subsequent eval inventory identified the main CMS document.788 is not child-preview script/source evidence. Returned to main frame789. Child sources were separately obtained from public entry resources."},
+    {"rule": "REA advertised generic view schema lacked required discriminator details. Corrected contract is view:{kind:javascript-routes,collection:summary}. Input-contract errors did not analyze or mutate CMS."},
+    {"rule": "A user-facing statement that2 source files were not acquired was corrected after reading full Evidence: the2 unavailable statuses concern static-analysis deadlines. Preserve this distinction."}
+  ],
+  "remaining": ["Two mixed essay leaves, edited OBSACN save and OMR boundaries.", "HML four editor slots and remaining Master modules.", "The intended specification of disabled/unhandled preview writer/file actions needs separate product confirmation; do not classify automatically as a service defect."]
+}

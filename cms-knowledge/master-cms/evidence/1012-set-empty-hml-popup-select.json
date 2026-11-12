@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1012-set-empty-hml-popup-select",
+  "startedUtc": "2026-11-09T03:46:22.191684+00:00",
+  "command": [
+    "tab",
+    "D5B2FC8962D733382D9AAFA94AF15DAE"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "D5B2FC8962D733382D9AAFA94AF15DAE",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2088663&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.093
+  },
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "label": null,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "tabId": "t22",
+      "targetId": "D5B2FC8962D733382D9AAFA94AF15DAE",
+      "title": "한글(HML) 수정",
+      "url": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2088663&itemDetailId=2087893"
+    },
+    "error": null,
+    "localSeconds": 0.104
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/webhwp/editor.donga?itemId=2088663&itemDetailId=2087893",
+      "refs": {
+        "e2625": {
+          "name": "저장",
+          "role": "button"
+        },
+        "e2626": {
+          "name": "",
+          "role": "Iframe"
+        },
+        "e2627": {
+          "name": "지문 수정",
+          "role": "button"
+        },
+        "e2628": {
+          "name": "지문해석 수정",
+          "role": "button"
+        },
+        "e2629": {
+          "name": "문제 수정",
+          "role": "button"
+        },
+        "e2630": {
+          "name": "해답 수정",
+          "role": "button"
+        },
+        "e2631": {
+          "name": "",
+          "role": "Iframe"
+        }
+      },
+      "removedRefs": [],
+      "snapshot": "- generic\n  - generic\n    - button \"지문 수정\" [disabled, ref=e2627]\n    - button \"지문해석 수정\" [disabled, ref=e2628]\n    - button \"문제 수정\" [ref=e2629]\n    - button \"해답 수정\" [ref=e2630]\n  - button \"저장\" [ref=e2625]\n  - StaticText \"준비되었습니다. 편집할 파일을 선택하세요.\"\n  - Iframe [ref=e2626]\n    - Iframe [ref=e2631]"
+    },
+    "error": null,
+    "localSeconds": 0.102
+  },
+  "configuredTargetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "targetMetadataCorrection": "From captured post-URL and observed tab inventory; phase16 checkpoint."
+}

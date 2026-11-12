@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "status": "final_approval_accepted_documentY_itemF",
+  "scopeHost": "dev-exambank.dongahub.com",
+  "operation": "Approve isolated Definition695 after marking its only card F through normal review UI",
+  "examDocumentId": 695,
+  "stagingItemId": 2089375,
+  "stagingDetailId": 2089082,
+  "expectedJudgement": "F",
+  "remark": "QA-DIFI-20261110-06-ORDERED1 F-only review acceptance and final item-state check; development research.",
+  "beforeDocumentState": "R",
+  "confirmedMasterOperationsBefore": 64,
+  "rationale": "Existing UI allowed F-only approval confirmation but server acceptance was not proven. This isolated own control now has one successfully parsed card and permits an actual F-only final review.",
+  "expectedServerOutcome": "Unknown until observed; do not assume document Y or failed Master item creation",
+  "serviceDeployment": false,
+  "submitRule": "Fresh exact own document/card/judge/modal guards; click final approval once; reconcile exact document before retry.",
+  "preflightEvidence": 2695,
+  "plannedSubmitEvidence": 2696,
+  "submitEvidence": 2696,
+  "readbackEvidence": [
+    2697,
+    2698,
+    2699,
+    2701,
+    2704,
+    2705
+  ],
+  "finalDocumentState": "Y",
+  "finalMasterViewFlag": "F",
+  "confirmedMasterOperationsAfter": 65,
+  "approvalReplayRequired": false
+}

@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"1663-lab-math-output-details-open","command":["eval","(() => {const items=[...document.querySelectorAll('.page-wrapper details')];for(const d of items)if(!d.open)d.querySelector('summary').click();return {action:'Expand all native output details',details:items.map(e=>({summary:e.querySelector('summary').innerText,open:e.open}))};})()"]},
+ {"label":"1664-lab-math-full-output-state","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1665-lab-math-full-output-top-screen","command":["snapshot"],"screenshot":true},
+ {"label":"1666-lab-math-scroll-first-screen","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1667-lab-math-scroll-second-screen","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1668-lab-math-scroll-third-screen","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1669-lab-math-scroll-fourth-screen","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"],"screenshot":true},
+ {"label":"1670-lab-math-final-bottom-state","command":["eval","--file","sources/runtime/lab-math-observation.js"]}
+],"tailChars":500}

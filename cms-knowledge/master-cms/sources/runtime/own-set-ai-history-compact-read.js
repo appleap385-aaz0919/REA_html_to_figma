@@ -1,0 +1,1 @@
+(async()=>{if(location.hostname!=='dev-exambank.dongahub.com')throw Error('Development only');const r=await fetch('/item/all/twin-histories.donga?itemId=2089242',{signal:AbortSignal.timeout(15000)});if(!r.ok||r.redirected)throw Error('Own history read unavailable');return {anchorItemId:2089242,status:r.status,histories:await r.json()};})()

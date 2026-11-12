@@ -1,0 +1,1144 @@
+{
+  "screens": [
+    {
+      "id": "MST_ITM_01_STATES",
+      "title": "전체 문항 목록 · 동작과 결과",
+      "states": [
+        {
+          "title": "검색·분류 조건 변경",
+          "trigger": "교육과정·학교급·과목군과 단원을 선택하고 조회합니다.",
+          "visibleChanges": [
+            "선택한 단원 내에서 검색합니다.",
+            "조회 결과와 총 건수, 페이지 구간이 바뀝니다."
+          ],
+          "policy": [
+            "형태1 선택 전에는 형태2·형태3이 비활성입니다.",
+            "검색 조건은 화면의 현재 선택값을 기준으로 적용합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/128-all-items-current.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/128-all-items-current.png"
+        },
+        {
+          "title": "검색 조건 메뉴 펼침",
+          "trigger": "검색 기준 드롭다운을 펼칩니다.",
+          "visibleChanges": [
+            "문항 ID·지문 ID·지문·문제·출처코드·등록자 ID·원본 파일명을 선택합니다."
+          ],
+          "policy": [
+            "난이도는 최상·상·중·하·최하입니다.",
+            "생성 방식은 HML 변환·디피니션·AI생성·복제입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/knowledge.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "페이지 이동과 상세 진입",
+          "trigger": "목록의 페이지를 이동하거나 문제 링크를 선택합니다.",
+          "visibleChanges": [
+            "현재 페이지가 바뀌며 목록 하단의 표시 구간을 갱신합니다.",
+            "문제 링크는 해당 문항 상세로 이동합니다."
+          ],
+          "policy": [
+            "표시 개수 10·30·50·100을 제공합니다.",
+            "상세 진입 시 검색 조건과 pageNum·pageSize를 전달합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/129-all-items-end.json",
+            "cms-knowledge/master-cms/evidence/130-set-item-open.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/129-all-items-end.png"
+        },
+        {
+          "title": "검색 결과 없음",
+          "trigger": "일치하는 결과가 없는 조건으로 조회합니다.",
+          "visibleChanges": [
+            "목록 행 대신 빈 결과 안내를 표시합니다."
+          ],
+          "policy": [
+            "빈 결과의 고유 문구와 페이지 링크 정책은 전체 문항 화면에서 추가 확인할 수 있습니다.",
+            "다른 메뉴의 빈 결과 정책을 이 화면에 전용하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/knowledge.json"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_02",
+      "title": "문항 상세 · 단건과 세트",
+      "states": [
+        {
+          "title": "단건 상세 기본 화면",
+          "trigger": "전체 문항 목록에서 단건 문항을 선택합니다.",
+          "visibleChanges": [
+            "기본정보·문제/정답/해설·상태·출처·쌍둥이·평가지·배포 정보를 표시합니다.",
+            "상하단에 목록과 이전·다음 이동을 제공합니다."
+          ],
+          "policy": [
+            "예시 ID·버전·건수는 표본값입니다.",
+            "상태·쌍둥이 관계·배포 정보는 별도 값입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3256-own-copy239-explanation-final-detail-top-visual.json",
+            "cms-knowledge/master-cms/evidence/3257-own-copy239-explanation-final-detail-middle-visual.json",
+            "cms-knowledge/master-cms/evidence/3258-own-copy239-explanation-final-detail-bottom-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3256-own-copy239-explanation-final-detail-top-visual.png"
+        },
+        {
+          "title": "세트 상세와 구성원 이동",
+          "trigger": "세트 문항을 열거나 구성원 ID를 선택합니다.",
+          "visibleChanges": [
+            "공유 지문과 세트 문항 목록을 표시합니다.",
+            "선택한 자식 문항의 상세를 확인합니다."
+          ],
+          "policy": [
+            "지문 ID와 자식 문항 ID를 구분합니다.",
+            "원본·COPY·AI 세트는 서로 다른 논리 지문을 가질 수 있습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/131-set-item-detail.json",
+            "cms-knowledge/master-cms/evidence/132-set-detail-middle.json",
+            "cms-knowledge/master-cms/evidence/133-set-detail-lower.json",
+            "cms-knowledge/master-cms/evidence/134-set-detail-bottom.json",
+            "cms-knowledge/master-cms/evidence/171-set-first-member-detail.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/131-set-item-detail.png"
+        },
+        {
+          "title": "OMR 미리보기 팝업",
+          "trigger": "상세의 OMR 미리보기를 선택합니다.",
+          "visibleChanges": [
+            "별도 모달에서 문항·응답 UI를 표시합니다.",
+            "학생 입력·채점 결과·정답 보기 상태를 전환합니다."
+          ],
+          "policy": [
+            "미리보기 결과는 CMS 확인 범위입니다.",
+            "실제 서비스의 채점은 별도 확인 대상입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/118-omr-edit-preview.json",
+            "cms-knowledge/master-cms/evidence/122-omr-correct-grade.json",
+            "cms-knowledge/master-cms/evidence/125-omr-answer-mode.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/118-omr-edit-preview.png"
+        },
+        {
+          "title": "HML 원본 미리보기 카드",
+          "trigger": "상세의 오른쪽 HML 카드를 확인합니다.",
+          "visibleChanges": [
+            "문제·해답 및 연결된 지문 카드에 원본 HML의 미리보기 이미지를 표시합니다."
+          ],
+          "policy": [
+            "사용자 설명에 따른 정상 사양입니다.",
+            "일부 과거 빈 카드 화면은 오류 관측이며 기능 미지원으로 해석하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3256-own-copy239-explanation-final-detail-top-visual.json",
+            "cms-knowledge/master-cms/evidence/3257-own-copy239-explanation-final-detail-middle-visual.json",
+            "cms-knowledge/master-cms/evidence/3258-own-copy239-explanation-final-detail-bottom-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3256-own-copy239-explanation-final-detail-top-visual.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_03",
+      "title": "상태 수정 · 승인·폐기·이탈",
+      "states": [
+        {
+          "title": "상태 수정 잠금 해제",
+          "trigger": "상태 정보의 수정을 누릅니다.",
+          "visibleChanges": [
+            "필드셋이 활성화되고 취소·저장 버튼을 표시합니다."
+          ],
+          "policy": [
+            "현재 문항에서 허용된 라디오만 선택할 수 있습니다.",
+            "On-line 전용·용도·문항 상태는 서로 다른 필드입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/157-status-edit-mode.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/157-status-edit-mode.png"
+        },
+        {
+          "title": "상태 저장 확인창",
+          "trigger": "변경한 상태에서 저장을 누릅니다.",
+          "visibleChanges": [
+            "일반 저장 확인창을 표시합니다.",
+            "확인창에서 저장해야 최종 제출합니다."
+          ],
+          "policy": [
+            "현재 표본에서 R→N 및 N→Y→N 저장을 실제 확인했습니다.",
+            "모든 역할과 상태 조합의 허용을 확정하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/158-status-confirmation.json",
+            "cms-knowledge/master-cms/evidence/3371-copy239-status-n-to-y-confirm-open.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/158-status-confirmation.png"
+        },
+        {
+          "title": "승인 전 필수값·OMR 차단",
+          "trigger": "초안에서 Y/N 승인을 선택하고 저장합니다.",
+          "visibleChanges": [
+            "검사 자료가 있을 때 난이도·단원·행동영역·문항 형태·저장 OMR 오류를 안내합니다."
+          ],
+          "policy": [
+            "오류가 있으면 확인창 진입 전에 차단됩니다.",
+            "세트는 해당 자식 ID와 오류를 함께 확인합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2114-master-qa-status-cancel-readback.json",
+            "cms-knowledge/master-cms/evidence/2118-master-qa-complete-select-approved.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "세트 전체 상태 변경 확인",
+          "trigger": "세트 문항에서 상태 저장을 진행합니다.",
+          "visibleChanges": [
+            "세트 전체의 상태가 함께 변경된다는 안내를 표시합니다."
+          ],
+          "policy": [
+            "세트의 모든 자식 승인과 전체 폐기를 실제 확인했습니다.",
+            "용도·On-line 필드까지 모두 일괄 변경된다고 확대하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2516-own-set-child2089244-omr-edit-open.json",
+            "cms-knowledge/master-cms/evidence/3169-own-disposable-set389-stable-confirm-ready.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "폐기 확인과 잠금 결과",
+          "trigger": "폐기를 선택하고 확인창에서 최종 저장합니다.",
+          "visibleChanges": [
+            "폐기 경고 후 D 상태를 표시합니다.",
+            "상세 조회는 가능하고 수정 진입은 잠깁니다."
+          ],
+          "policy": [
+            "연결된 단건·세트의 현재 쌍둥이 관계에서 제외됩니다.",
+            "생성 이력과 문항 조회는 유지되는 표본을 확인했습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2911-own-failed-item375-discard-modal-observation.json",
+            "cms-knowledge/master-cms/evidence/2917-own-discarded-item375-status-visual.json",
+            "cms-knowledge/master-cms/evidence/3082-own-disposable387-before-discard-current.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2917-own-discarded-item375-status-visual.png"
+        },
+        {
+          "title": "상태 취소·변경 후 이탈",
+          "trigger": "취소하거나 값이 바뀐 채 목록·이전·다음·문항 수정으로 이동합니다.",
+          "visibleChanges": [
+            "취소는 서버 렌더의 기본값으로 복원하고 다시 잠급니다.",
+            "지정 이동 링크에서는 미저장 변경 안내를 표시합니다."
+          ],
+          "policy": [
+            "열기만 하고 값이 같으면 이탈 경고 조건과 다릅니다.",
+            "모든 브라우저 종료·새로고침 보호를 보장하는 규칙으로 확대하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/160-status-edit-cancel.json",
+            "cms-knowledge/master-cms/evidence/158-status-confirmation.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/160-status-edit-cancel.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_04",
+      "title": "문항 상세 · 출처·평가지·배포 팝업",
+      "states": [
+        {
+          "title": "현재 출처 목록",
+          "trigger": "출처 수 또는 출처 관리를 선택합니다.",
+          "visibleChanges": [
+            "연결된 출처와 페이지·용도 정보를 조회합니다."
+          ],
+          "policy": [
+            "출처 사용 Y/N과 연결 가능 여부를 구분합니다.",
+            "기존 마지막 출처의 해제는 클라이언트에서 차단되는 것을 확인했습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/148-set-source-membership.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/148-set-source-membership.png"
+        },
+        {
+          "title": "출처 추가 검색·적용",
+          "trigger": "추가 탭에서 출처를 조회하고 선택합니다.",
+          "visibleChanges": [
+            "조회 결과에서 출처를 선택하고 페이지·용도를 입력하여 연결합니다."
+          ],
+          "policy": [
+            "출처199를 실제로 추가·수정·해제했습니다.",
+            "기존 연결과 같은 출처의 중복 추가를 화면 규칙에 따라 처리합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/149-source-add-search.json",
+            "cms-knowledge/master-cms/evidence/150-source-search-end.json",
+            "cms-knowledge/master-cms/evidence/152-source-query-result.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/149-source-add-search.png"
+        },
+        {
+          "title": "등록된 평가지 조회",
+          "trigger": "평가지 수를 선택합니다.",
+          "visibleChanges": [
+            "등록된 평가지 목록과 상세 이동 링크를 표시합니다."
+          ],
+          "policy": [
+            "평가지 편성·단건/세트 순서는 평가지 메뉴의 별도 화면 범위입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/146-set-paper-membership.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/146-set-paper-membership.png"
+        },
+        {
+          "title": "배포 대상 선택",
+          "trigger": "승인 문항의 배포하기를 선택합니다.",
+          "visibleChanges": [
+            "AI출제마법사 CMS·개발 서비스의 대상 선택 모달을 표시합니다.",
+            "같은 버전에 대한 재배포 안내가 발생할 수 있습니다."
+          ],
+          "policy": [
+            "배포 모달과 재배포 안내까지만 관찰했습니다.",
+            "최종 배포·서비스 수신·채점은 미검증입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/154-set-deployment-options.json",
+            "cms-knowledge/master-cms/evidence/155-redeploy-notice.json",
+            "cms-knowledge/master-cms/evidence/156-deployment-cancel.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/154-set-deployment-options.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_05",
+      "title": "문항 수정 · 메타정보와 선택 모달",
+      "states": [
+        {
+          "title": "메타정보 수정 탭",
+          "trigger": "문항 상세에서 수정을 선택합니다.",
+          "visibleChanges": [
+            "메타정보·한글(HML)·HTML·OMR 수정 탭을 제공합니다.",
+            "난이도·단원·행동영역·성취기준·내용영역 등을 편집합니다."
+          ],
+          "policy": [
+            "전체 반영 시 난이도·단원·행동영역·문항 형태를 검사합니다.",
+            "세트 여부·ID·평가지 등록여부는 직접 변경하는 필드와 구분합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/299-omr-type-edit-tab.json",
+            "cms-knowledge/master-cms/evidence/613-item-edit-source-refresh-state.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/299-omr-type-edit-tab.png"
+        },
+        {
+          "title": "단원 조회와 선택",
+          "trigger": "단원 추가 또는 조회를 누릅니다.",
+          "visibleChanges": [
+            "분류에 맞는 단원 검색 모달과 후보를 표시합니다.",
+            "선택 단원을 부모 폼에 반영하고 과목·학년·유형 정보를 갱신합니다."
+          ],
+          "policy": [
+            "단원은 여러 개 연결할 수 있고 전체 반영에는 1개 이상 필요합니다.",
+            "하위 선택지 유효성은 상위 분류 변경에 연동됩니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/item-edit-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "성취기준·내용영역 검색",
+          "trigger": "각 추가 버튼으로 검색창을 엽니다.",
+          "visibleChanges": [
+            "후보를 조회하여 항목을 추가하고 연결된 항목을 개별 삭제합니다."
+          ],
+          "policy": [
+            "동일 코드의 중복 추가를 막는 소스 규칙을 확인했습니다.",
+            "선택지·최대 개수·필수 여부를 같은 것으로 취급하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/item-edit-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "유형정보와 메타 필수값",
+          "trigger": "단원이나 문항 속성을 변경합니다.",
+          "visibleChanges": [
+            "종속된 메타정보의 후보와 표시가 바뀝니다."
+          ],
+          "policy": [
+            "현재 페이지에서 보이는 필드와 숨은 템플릿 수를 구분합니다.",
+            "전체 반영 시 오류는 최종 확인창 전에 안내합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2421-own-copy2089239-incomplete-fullapply-guard.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "썸네일과 이미지 업로드",
+          "trigger": "이미지 선택·업로드·제거 컨트롤을 사용합니다.",
+          "visibleChanges": [
+            "미리보기·파일 상태·결과 URL을 표시합니다."
+          ],
+          "policy": [
+            "확장자·파일 크기 등 소스 선언 경계는 해당 안내를 따릅니다.",
+            "모든 실패·권한 상황은 실제 검증 범위 밖입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/item-edit-behavior.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_06",
+      "title": "HTML 수정 · 도구와 문서 변화",
+      "states": [
+        {
+          "title": "HTML 편집 탭",
+          "trigger": "HTML 수정 탭을 선택합니다.",
+          "visibleChanges": [
+            "문항 형태와 이미지 업로드, 문제·정답·해설 편집 영역을 표시합니다."
+          ],
+          "policy": [
+            "형태 변경에 따라 선지와 OMR이 함께 갱신됩니다.",
+            "HTML과 HML 저장은 각각 별도 경로입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1109-hml-html-channel-state.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/1109-hml-html-channel-state.png"
+        },
+        {
+          "title": "문단과 표 입력",
+          "trigger": "툴바에서 문단 설정 또는 표를 선택합니다.",
+          "visibleChanges": [
+            "문단 설정창·표 입력과 결과를 표시합니다."
+          ],
+          "policy": [
+            "취소·실행취소·다시실행 결과를 확인한 캡처를 연결합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/html-editor-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "수식 입력창",
+          "trigger": "수식 버튼으로 입력창을 엽니다.",
+          "visibleChanges": [
+            "수식 입력창에서 작성·적용·취소합니다."
+          ],
+          "policy": [
+            "원문 HTML의 수식 표시와 편집기 정규화는 구분합니다.",
+            "HML 텍스트 추출에는 수식이 생략될 수 있습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/html-editor-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "이미지·기호·글자 겹치기",
+          "trigger": "이미지·특수문자·글자 겹치기 메뉴를 선택합니다.",
+          "visibleChanges": [
+            "각 삽입 대화상자와 설정 결과를 표시합니다."
+          ],
+          "policy": [
+            "이미지는 URL 및 문서 자산 참조를 사용합니다.",
+            "실행 확인과 입력 규칙의 소스 확인 범위를 구분합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/102-html-overlap-shapes-visible.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/102-html-overlap-shapes-visible.png"
+        },
+        {
+          "title": "글상자와 취소",
+          "trigger": "글상자를 삽입하거나 편집 후 취소합니다.",
+          "visibleChanges": [
+            "글상자 설정창과 본문 변경·취소 결과를 표시합니다."
+          ],
+          "policy": [
+            "HTML 수집과 검증 저장 API는 다른 단계입니다.",
+            "최종 CMS 반영은 전체 반영 흐름에서 확인합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/105-html-textbox-dialog.json",
+            "cms-knowledge/master-cms/evidence/107-html-textbox-edit.json",
+            "cms-knowledge/master-cms/evidence/108-html-textbox-cancel.json",
+            "cms-knowledge/master-cms/evidence/109-html-textbox-undo.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/105-html-textbox-dialog.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_08",
+      "title": "한글(HML) 수정 · 별도 편집기 창",
+      "states": [
+        {
+          "title": "부모 CMS의 HML 수정 탭",
+          "trigger": "한글(HML) 수정에서 편집기 열기를 선택합니다.",
+          "visibleChanges": [
+            "별도 창으로 HML 편집기를 엽니다.",
+            "부모 화면에는 슬롯별 기존 경로와 반영 대기 결과를 표시합니다."
+          ],
+          "policy": [
+            "HTML 수정 탭과 별도 문서 채널입니다.",
+            "팝업 차단·연결 상태에 따라 열리지 않는 경우가 있습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1034-hml-set-hml-cards.json",
+            "cms-knowledge/master-cms/evidence/1083-hml-parent-preview-before-apply.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/1034-hml-set-hml-cards.png"
+        },
+        {
+          "title": "문제·해답 슬롯 전환",
+          "trigger": "별도 창에서 문제 또는 해답 탭을 선택합니다.",
+          "visibleChanges": [
+            "해당 HML 문서를 열고 미리보기 및 편집 영역을 교체합니다."
+          ],
+          "policy": [
+            "단건에서는 지문·해석 탭이 비활성인 표본을 확인했습니다.",
+            "미저장 Q→A→Q 전환에서 경고 없이 입력이 유실된 관측을 기록합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3218-own-copy239-explanation-popup-initial-state-visual.json",
+            "cms-knowledge/master-cms/evidence/3220-own-copy239-explanation-loaded-slot-ui-visual.json",
+            "cms-knowledge/master-cms/evidence/1065-hml-marker-visual.json",
+            "cms-knowledge/master-cms/evidence/1070-hml-unsaved-return-loaded.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3218-own-copy239-explanation-popup-initial-state-visual.png"
+        },
+        {
+          "title": "공유 지문 슬롯",
+          "trigger": "세트 문항의 지문 탭을 선택합니다.",
+          "visibleChanges": [
+            "공유 지문 문서를 편집합니다."
+          ],
+          "policy": [
+            "원본 공유 지문 변경은 해당 세트에 반영됩니다.",
+            "COPY 세트는 자체 논리 지문과 파일 격리 결과를 확인했습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/1038-hml-set-passage-open.json",
+            "cms-knowledge/master-cms/evidence/1040-hml-passage-loaded.json",
+            "cms-knowledge/master-cms/evidence/1041-hml-passage-true-bottom.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/1038-hml-set-passage-open.png"
+        },
+        {
+          "title": "해석 HML 경계",
+          "trigger": "해석 탭의 활성 및 파일 연결을 확인합니다.",
+          "visibleChanges": [
+            "해석 파일이 없는 표본에서는 정상 편집·저장 사례를 확정할 수 없습니다."
+          ],
+          "policy": [
+            "실제 해석 HML 표본 부재를 메모했습니다.",
+            "파일이 있는 정상 사양의 열기·편집·저장은 추후 검증 범위입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/research/hml-editor-behavior.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "편집기 저장 후 안내",
+          "trigger": "HML 편집기에서 저장을 누릅니다.",
+          "visibleChanges": [
+            "편집기 임시 HML과 이미지가 생성됩니다.",
+            "CMS에서 임시 저장 또는 전체 반영하라는 안내창을 표시합니다."
+          ],
+          "policy": [
+            "편집기 저장만으로 CMS 확정본이 바뀌지 않습니다.",
+            "해답 슬롯만 편집했을 때 기존 문제 파일과 원본 자산은 보존됐습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3442-hml-vendor-pending-cancel-editor-save-outcome.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3442-hml-vendor-pending-cancel-editor-save-outcome.png"
+        },
+        {
+          "title": "CMS 취소 후 반영 대기 처리",
+          "trigger": "편집기 저장 후 CMS 취소창에서 취소 또는 저장하지 않고 이동을 선택합니다.",
+          "visibleChanges": [
+            "머물면 두 임시 파일 참조가 남습니다.",
+            "저장하지 않고 이동한 뒤 재진입하면 대기 참조가 없습니다."
+          ],
+          "policy": [
+            "확정 HML·PNG 6개의 바이트와 문항 내용·관계를 대조했습니다.",
+            "편집기 임시 파일의 물리 삭제 여부는 미확인입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3447-hml-vendor-pending-cancel-first-confirmation.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3447-hml-vendor-pending-cancel-first-confirmation.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_09",
+      "title": "임시저장·전체반영·버전 선택",
+      "states": [
+        {
+          "title": "임시저장 확인창",
+          "trigger": "수정 화면에서 임시 저장을 선택합니다.",
+          "visibleChanges": [
+            "임시저장 확인창을 표시합니다."
+          ],
+          "policy": [
+            "난이도가 공란인 R 복제 표본도 임시저장이 가능했습니다.",
+            "모든 HTML·OMR 오류를 무조건 허용하는 규칙으로 확대하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2424-own-copy2089239-temp-save-confirm-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2424-own-copy2089239-temp-save-confirm-pixels.png"
+        },
+        {
+          "title": "임시저장 후 버전 선택",
+          "trigger": "임시본이 있는 문항에서 수정을 선택합니다.",
+          "visibleChanges": [
+            "저장시각과 확정본·임시저장본 선택창을 표시합니다."
+          ],
+          "policy": [
+            "확정본으로 들어가면 현행 값을, 임시본으로 들어가면 임시 수정값을 복원합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2431-own-copy2089239-existing-draft-gate-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2431-own-copy2089239-existing-draft-gate-pixels.png"
+        },
+        {
+          "title": "전체반영 확인창",
+          "trigger": "필수 메타·문서·OMR 검사 통과 후 전체 반영을 선택합니다.",
+          "visibleChanges": [
+            "최종 저장 확인창을 표시합니다."
+          ],
+          "policy": [
+            "전체 반영은 새 상세 버전을 생성하며 기존 임시본을 해소한 표본을 확인했습니다.",
+            "전체반영과 승인 Y·서비스 배포는 별개입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2443-own-copy2089239-draft-fullapply-confirm-pixels.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/2443-own-copy2089239-draft-fullapply-confirm-pixels.png"
+        },
+        {
+          "title": "필수값 차단",
+          "trigger": "난이도 등 필수값을 비운 뒤 전체반영합니다.",
+          "visibleChanges": [
+            "최종 확인창 전에 오류를 안내합니다."
+          ],
+          "policy": [
+            "누락 보완 후 정상 전체반영할 수 있습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/2421-own-copy2089239-incomplete-fullapply-guard.json"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "수정 취소 확인창",
+          "trigger": "수정 화면의 취소 링크를 선택합니다.",
+          "visibleChanges": [
+            "저장하지 않고 이동 확인창이 나타납니다."
+          ],
+          "policy": [
+            "취소는 현재 화면에 머물고, 저장하지 않고 이동은 상세로 돌아갑니다.",
+            "이미 저장된 임시본의 존속과 현재 미저장 입력은 별도입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/3447-hml-vendor-pending-cancel-first-confirmation.json",
+            "cms-knowledge/master-cms/evidence/2434-own-copy2089239-confirmed-cancel-confirmation.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/3447-hml-vendor-pending-cancel-first-confirmation.png"
+        },
+        {
+          "title": "공유 세트의 임시본과 반영",
+          "trigger": "공유 지문을 편집한 뒤 임시저장·전체반영합니다.",
+          "visibleChanges": [
+            "선택 자식의 임시본과 확정 세트의 공유 결과가 달라집니다."
+          ],
+          "policy": [
+            "COPY 공유 지문을 전체반영한 뒤 네 자식의 상세 버전과 원본 보존을 확인했습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/item-temporary-save-policy-20261110.md"
+          ],
+          "screenshot": null
+        },
+        {
+          "title": "오래된 수정폼의 덮어쓰기 관측",
+          "trigger": "두 수정폼에서 순차적으로 저장합니다.",
+          "visibleChanges": [
+            "오래된 폼이 새로 저장된 미편집 메타값을 덮어쓴 사례가 있습니다."
+          ],
+          "policy": [
+            "동일 계정·R 복제의 실제 관측입니다.",
+            "충돌 보호가 항상 있다는 정책을 기재하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/item-temporary-save-policy-20261110.md"
+          ],
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_07",
+      "title": "OMR 수정 · 14개 유형",
+      "states": [
+        {
+          "title": "객관식 단답형 N지 선다 · OBSACN",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/944-single-choice-initial-five.png"
+        },
+        {
+          "title": "객관식 단답형 O/X · OBSAOX",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/321-omr-ox-select-answer.png"
+        },
+        {
+          "title": "객관식 다답형 N지 선다 · OBMACN",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/356-omr-multiple-answer-three.png"
+        },
+        {
+          "title": "객관식 다답형 O/X · OBMAOX",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/380-omr-ox-set-first-comma.png"
+        },
+        {
+          "title": "주관식 단답형 일반형 · SBSANM",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/458-legend-second-value.png"
+        },
+        {
+          "title": "주관식 단답형 그리기형 · SBSADR",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/483-subjective-drawing-form.png"
+        },
+        {
+          "title": "주관식 단답형 영역 선택형 · SBSAAS",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/510-area-correct-select.png"
+        },
+        {
+          "title": "주관식 다답형 일반형 · SBMANM",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/546-multiple-general-two-by-two-bottom.png"
+        },
+        {
+          "title": "주관식 다답형 영역 선택형 · SBMAAS",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/644-multiple-area-lower-scroll.png"
+        },
+        {
+          "title": "주관식 다답형 선그리기형 · SBMALD",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/701-line-left-two-target-four.png"
+        },
+        {
+          "title": "주관식 다답형 드래그앤드롭형 · SBMADD",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/777-drag-restored-bottom-visual.png"
+        },
+        {
+          "title": "기본 서술형 · ESBA00",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/781-basic-essay-preview-settled.png"
+        },
+        {
+          "title": "단답 서술형 · ESSA00",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/813-single-essay-swapped-bottom-visual.png"
+        },
+        {
+          "title": "다답 서술형 · ESMA00",
+          "trigger": "HTML/OMR 상단의 문항 형태를 해당 유형으로 변경합니다.",
+          "visibleChanges": [
+            "OMR 입력 폼을 유형에 맞게 교체합니다.",
+            "정답·선택지·응답 형태와 미리보기 입력 UI가 바뀝니다."
+          ],
+          "policy": [
+            "유형별 폼·미리보기·저장·재진입 근거를 별도로 확인합니다.",
+            "상위 형태를 바꾸면 하위 답형과 세부 형태가 새 부모의 첫 유효 선택지로 바뀝니다.",
+            "주관식 일반형은 저장된 value_type에 따라 수식과 텍스트 답안을 구분합니다."
+          ],
+          "exceptions": [
+            "기존 유형에서 입력한 값이 새 폼에도 보존된다고 가정하지 않습니다.",
+            "미리보기의 채점 결과를 실제 서비스 채점으로 확대하지 않습니다."
+          ],
+          "evidence": [
+            "cms-knowledge/master-cms/omr-runtime-coverage.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/875-multi-essay-configured-bottom.png"
+        }
+      ]
+    },
+    {
+      "id": "MST_ITM_07_PREVIEW",
+      "title": "OMR 미리보기와 입력 검증",
+      "states": [
+        {
+          "title": "선택지 수 경계",
+          "trigger": "객관식 N지 선다에서 선지를 추가·삭제합니다.",
+          "visibleChanges": [
+            "선택지 최소 2개·최대 7개를 확인합니다."
+          ],
+          "policy": [
+            "단답형은 정답 1개를 선택합니다.",
+            "다답형과 단답형의 정답 개수를 같은 규칙으로 취급하지 않습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/947-single-choice-max-seven.json",
+            "cms-knowledge/master-cms/evidence/956-single-choice-min-two.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/947-single-choice-max-seven.png"
+        },
+        {
+          "title": "정답·중복·빈 값 차단",
+          "trigger": "정답 미선택·중복 선택지·빈 값으로 미리보기를 실행합니다.",
+          "visibleChanges": [
+            "검증 오류를 안내하고 잘못된 미리보기 진입을 차단합니다."
+          ],
+          "policy": [
+            "예시 경계는 OBSACN 실험입니다.",
+            "다른 유형은 각 validate 규칙을 확인합니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/962-single-choice-no-correct-result.json",
+            "cms-knowledge/master-cms/evidence/967-single-choice-duplicate-result.json",
+            "cms-knowledge/master-cms/evidence/970-single-choice-blank-result.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/962-single-choice-no-correct-result.png"
+        },
+        {
+          "title": "학생 응답과 정답 보기",
+          "trigger": "미리보기에서 응답 후 채점하거나 정답 보기로 전환합니다.",
+          "visibleChanges": [
+            "정오 결과와 정답 표시를 바꿉니다."
+          ],
+          "policy": [
+            "객관식 정답/오답 결과와 정답 보기 상태를 실제 확인했습니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/976-single-choice-valid-preview-ready.json",
+            "cms-knowledge/master-cms/evidence/983-single-choice-correct-result.json",
+            "cms-knowledge/master-cms/evidence/980-single-choice-wrong-result.json",
+            "cms-knowledge/master-cms/evidence/985-single-choice-answer-view-state.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/976-single-choice-valid-preview-ready.png"
+        },
+        {
+          "title": "수식·텍스트 값 입력창",
+          "trigger": "정답 값 형식 또는 수식 버튼을 선택합니다.",
+          "visibleChanges": [
+            "값 형식 메뉴와 수식 입력 팝업을 표시합니다."
+          ],
+          "policy": [
+            "대소문자·공백 구분 플래그는 해당 허용 정답 값의 속성입니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/973-single-choice-value-kind-menu-state.json",
+            "cms-knowledge/master-cms/evidence/507-area-second-math-popup.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/973-single-choice-value-kind-menu-state.png"
+        },
+        {
+          "title": "그리기·영역·선 연결·드래그",
+          "trigger": "각 유형의 미리보기에서 실제 응답을 입력합니다.",
+          "visibleChanges": [
+            "그리기 영역·정답 영역 선택·연결 선·드래그 대상 상태가 바뀝니다."
+          ],
+          "policy": [
+            "입력 폼 구성과 미리보기 응답을 각각 표현합니다.",
+            "답 순서와 집합 판정은 저장된 정답 트리를 따릅니다."
+          ],
+          "exceptions": [],
+          "evidence": [
+            "cms-knowledge/master-cms/evidence/485-drawing-preview-open.json",
+            "cms-knowledge/master-cms/evidence/511-area-preview-open.json",
+            "cms-knowledge/master-cms/evidence/702-line-student-preview.json",
+            "cms-knowledge/master-cms/evidence/714-line-preview-wrong-grade.json",
+            "cms-knowledge/master-cms/evidence/777-drag-restored-bottom-visual.json"
+          ],
+          "screenshot": "cms-knowledge/master-cms/evidence/485-drawing-preview-open.png"
+        }
+      ]
+    }
+  ]
+}

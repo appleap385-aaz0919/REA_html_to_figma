@@ -1,0 +1,10 @@
+{"steps":[
+ {"label":"2487-own-copy2089239-concurrent-return-main-tab","command":["tab","C06F56F8973F594BE8196DCB15B2DEBC"]},
+ {"label":"2488-own-copy2089239-concurrent-close-owned-test-tab","command":["tab","close","7DEE6B23E1A8F95D11D455F48D9F5F97"]},
+ {"label":"2489-own-copy2089239-concurrent-main-current-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089239&pageNum=1&pageSize=10"]},
+ {"label":"2490-own-copy2089239-concurrent-final-server-read","command":["eval","--file","sources/runtime/own-copy2089239-persistent-state-read.js"]},
+ {"label":"2491-own-copy2089239-concurrent-anchor-control-read","command":["eval","--file","sources/runtime/own-item2089216-persistent-summary.js"]},
+ {"label":"2492-own-copy2089239-concurrent-paper-control-read","command":["eval","--file","sources/runtime/own-paper1093-server-readback.js"]},
+ {"label":"2493-own-copy2089239-concurrent-final-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2494-own-copy2089239-concurrent-final-visual-state","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]}
+],"tailChars":220}

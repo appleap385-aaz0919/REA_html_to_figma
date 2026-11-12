@@ -1,0 +1,425 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e16847]
+      - link "문제은행 마스터 CMS" [ref=e16848]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e16853]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=false, ref=e16854]
+            - StaticText ""
+            - StaticText "문항 관리"
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e16855]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e16856]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e16857]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e16849]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 출처 관리"
+      - heading "문항 출처 관리" [level=2, ref=e16850]
+      - generic
+        - combobox [expanded=false, ref=e16858]: 출처코드
+          - MenuListPopup
+            - option "출처코드" [selected, ref=e16893]
+            - option "출처명" [ref=e16894]
+        - textbox "출처코드 / 출처명" [ref=e16859]
+        - combobox [expanded=false, ref=e16860]: 22
+          - MenuListPopup
+            - option "교육과정 전체" [ref=e16895]
+            - option "22" [selected, ref=e16896]
+            - option "15" [ref=e16897]
+        - combobox [expanded=false, ref=e16861]: 학교급 전체
+          - MenuListPopup
+            - option "학교급 전체" [selected, ref=e16898]
+            - option "초등" [ref=e16899]
+            - option "중학" [ref=e16900]
+            - option "고등" [ref=e16901]
+        - combobox [expanded=false, ref=e16862]: 과목군 전체
+          - MenuListPopup
+            - option "과목군 전체" [selected, ref=e16902]
+            - option "수학군" [ref=e16903]
+        - combobox [expanded=false, disabled, ref=e16863]: 과목 전체
+          - MenuListPopup
+            - option "과목 전체" [disabled, ref=e16904]
+            - option "수학" [disabled, ref=e16905]
+            - option "수학" [disabled, ref=e16906]
+            - option "공통수학1" [disabled, ref=e16907]
+            - option "공통수학2" [disabled, ref=e16908]
+            - option "기본수학1" [disabled, ref=e16909]
+            - option "기본수학2" [disabled, ref=e16910]
+            - option "수학1" [disabled, ref=e16911]
+            - option "수학2" [disabled, ref=e16912]
+            - option "대수" [disabled, ref=e16913]
+            - option "미적분1" [disabled, ref=e16914]
+            - option "미적분2" [disabled, ref=e16915]
+            - option "확률과통계" [disabled, ref=e16916]
+            - option "기하" [disabled, ref=e16917]
+            - option "직무수학" [disabled, ref=e16918]
+            - option "인공지능수학" [disabled, ref=e16919]
+            - option "수학과 문화" [disabled, ref=e16920]
+            - option "수학" [disabled, ref=e16921]
+        - combobox [expanded=false, disabled, ref=e16864]: 학년 전체
+          - MenuListPopup
+            - option "학년 전체" [disabled, ref=e16922]
+            - option "중학1" [disabled, ref=e16923]
+            - option "고등1" [disabled, ref=e16924]
+            - option "초등1" [disabled, ref=e16925]
+            - option "중학2" [disabled, ref=e16926]
+            - option "초등2" [disabled, ref=e16927]
+            - option "고등2" [disabled, ref=e16928]
+            - option "고등3" [disabled, ref=e16929]
+            - option "중학3" [disabled, ref=e16930]
+            - option "초등3" [disabled, ref=e16931]
+            - option "고등 공통" [disabled, ref=e16932]
+            - option "초등4" [disabled, ref=e16933]
+            - option "초등5" [disabled, ref=e16934]
+            - option "초등6" [disabled, ref=e16935]
+        - combobox [expanded=false, ref=e16865]: 학기 전체
+          - MenuListPopup
+            - option "학기 전체" [selected, ref=e16936]
+            - option "공통학기" [ref=e16937]
+            - option "1학기" [ref=e16938]
+            - option "2학기" [ref=e16939]
+        - combobox [expanded=false, ref=e16866]: 판형
+          - MenuListPopup
+            - option "판형" [selected, ref=e16940]
+            - option "2000" [ref=e16941]
+            - option "2001" [ref=e16942]
+            - option "2002" [ref=e16943]
+            - option "2003" [ref=e16944]
+            - option "2004" [ref=e16945]
+            - option "2005" [ref=e16946]
+            - option "2006" [ref=e16947]
+            - option "2007" [ref=e16948]
+            - option "2008" [ref=e16949]
+            - option "2009" [ref=e16950]
+            - option "2010" [ref=e16951]
+            - option "2011" [ref=e16952]
+            - option "2012" [ref=e16953]
+            - option "2013" [ref=e16954]
+            - option "2014" [ref=e16955]
+            - option "2015" [ref=e16956]
+            - option "2016" [ref=e16957]
+            - option "2017" [ref=e16958]
+            - option "2018" [ref=e16959]
+            - option "2019" [ref=e16960]
+            - option "2020" [ref=e16961]
+            - option "2021" [ref=e16962]
+            - option "2022" [ref=e16963]
+            - option "2023" [ref=e16964]
+            - option "2024" [ref=e16965]
+            - option "2025" [ref=e16966]
+            - option "2026" [ref=e16967]
+            - option "2027" [ref=e16968]
+            - option "2028" [ref=e16969]
+            - option "2029" [ref=e16970]
+            - option "2030" [ref=e16971]
+            - option "2031" [ref=e16972]
+            - option "2032" [ref=e16973]
+            - option "2033" [ref=e16974]
+            - option "2034" [ref=e16975]
+            - option "2035" [ref=e16976]
+            - option "2036" [ref=e16977]
+            - option "2037" [ref=e16978]
+            - option "2038" [ref=e16979]
+            - option "2039" [ref=e16980]
+            - option "2040" [ref=e16981]
+            - option "2041" [ref=e16982]
+            - option "2042" [ref=e16983]
+            - option "2043" [ref=e16984]
+            - option "2044" [ref=e16985]
+            - option "2045" [ref=e16986]
+            - option "2046" [ref=e16987]
+            - option "2047" [ref=e16988]
+            - option "2048" [ref=e16989]
+            - option "2049" [ref=e16990]
+            - option "2050" [ref=e16991]
+        - combobox [expanded=false, ref=e16867]: 용도 전체
+          - MenuListPopup
+            - option "용도 전체" [selected, ref=e16992]
+            - option "공통" [ref=e16993]
+            - option "교사용" [ref=e16994]
+        - StaticText "등록일"
+        - generic
+          - textbox "시작일 ~ 종료일" [ref=e16871]
+          - StaticText ""
+        - generic
+          - button "7일" [ref=e16872]
+          - button "30일" [ref=e16873]
+          - button "90일" [ref=e16874]
+          - button "전체" [ref=e16875]
+        - StaticText "상태"
+        - checkbox "전체" [checked=true, ref=e16868]
+        - LabelText [ref=e16869] clickable [cursor:pointer]
+          - checkbox "사용" [checked=true, ref=e16876]
+          - StaticText "사용"
+        - LabelText [ref=e16870] clickable [cursor:pointer]
+          - checkbox "미사용" [checked=true, ref=e16877]
+          - StaticText "미사용"
+        - generic
+          - button " 초기화" [ref=e16878]
+            - StaticText ""
+            - StaticText "초기화"
+          - button " 조회" [ref=e16879]
+            - StaticText ""
+            - StaticText "조회"
+      - generic
+        - combobox [expanded=false, ref=e16851]: 10개씩 보기
+          - MenuListPopup
+            - option "10개씩 보기" [selected, ref=e16880]
+            - option "30개씩 보기" [ref=e16881]
+            - option "50개씩 보기" [ref=e16882]
+            - option "100개씩 보기" [ref=e16883]
+        - StaticText "검색결과 : "
+        - strong
+          - StaticText "60"
+        - StaticText "건"
+        - link " 등록" [ref=e16852]
+          - StaticText ""
+          - StaticText "등록"
+        - table
+          - rowgroup
+            - row
+              - columnheader "출처 ID" [ref=e17125]
+              - columnheader "출처코드" [ref=e17126]
+              - columnheader "출처명" [ref=e17127]
+              - columnheader "과목" [ref=e17128]
+              - columnheader "교육과정" [ref=e17129]
+              - columnheader "판형" [ref=e17130]
+              - columnheader "용도" [ref=e17131]
+              - columnheader "학교급" [ref=e17132]
+              - columnheader "학년" [ref=e17133]
+              - columnheader "학기" [ref=e17134]
+              - columnheader "상태" [ref=e17135]
+              - columnheader "매핑문항" [ref=e17136]
+              - columnheader "등록자 · 등록일" [ref=e17137]
+          - row
+            - cell "199" [ref=e16995]
+            - cell "22-M-MA-T0-1-1-SMT-TP-2048" [ref=e16996]
+              - link "22-M-MA-T0-1-1-SMT-TP-2048" [ref=e17138]
+            - cell "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048" [ref=e16997]
+              - link "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2048" [ref=e17139]
+            - cell "수학" [ref=e16998]
+            - cell "22" [ref=e16999]
+            - cell "2048" [ref=e17000]
+            - cell "교사용" [ref=e17001]
+            - cell "중학" [ref=e17002]
+            - cell "중학1" [ref=e17003]
+            - cell "1학기" [ref=e17004]
+            - cell "미사용" [ref=e17005]
+            - cell "0" [ref=e17006]
+            - cell "jaehyuk.myung 2026-11-09" [ref=e17007]
+              - StaticText "jaehyuk.myung"
+              - StaticText "2026-11-09"
+          - row
+            - cell "166" [ref=e17008]
+            - cell "22-M-MA-T0-1-1-SMT-TP-2000" [ref=e17009]
+              - link "22-M-MA-T0-1-1-SMT-TP-2000" [ref=e17140]
+            - cell "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000" [ref=e17010]
+              - link "22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2000" [ref=e17141]
+            - cell "수학" [ref=e17011]
+            - cell "22" [ref=e17012]
+            - cell "2000" [ref=e17013]
+            - cell "공통" [ref=e17014]
+            - cell "중학" [ref=e17015]
+            - cell "중학1" [ref=e17016]
+            - cell "1학기" [ref=e17017]
+            - cell "미사용" [ref=e17018]
+            - cell "0" [ref=e17019]
+            - cell "suna.lee 2026-10-30" [ref=e17020]
+              - StaticText "suna.lee"
+              - StaticText "2026-10-30"
+          - row
+            - cell "134" [ref=e17021]
+            - cell "22-M-MA-T0-1-0-DCL-MA-2025" [ref=e17022]
+              - link "22-M-MA-T0-1-0-DCL-MA-2025" [ref=e17142]
+            - cell "22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025" [ref=e17023]
+              - link "22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025" [ref=e17143]
+            - cell "수학" [ref=e17024]
+            - cell "22" [ref=e17025]
+            - cell "2025" [ref=e17026]
+            - cell "교사용" [ref=e17027]
+            - cell "중학" [ref=e17028]
+            - cell "중학1" [ref=e17029]
+            - cell "공통학기" [ref=e17030]
+            - cell "사용" [ref=e17031]
+            - cell "102" [ref=e17032]
+            - cell "hyuntaek.kim 2026-10-08" [ref=e17033]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-08"
+          - row
+            - cell "133" [ref=e17034]
+            - cell "22-H-MA-C1-1-0-DCL-KI-2025" [ref=e17035]
+              - link "22-H-MA-C1-1-0-DCL-KI-2025" [ref=e17144]
+            - cell "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025" [ref=e17036]
+              - link "22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025" [ref=e17145]
+            - cell "공통수학1" [ref=e17037]
+            - cell "22" [ref=e17038]
+            - cell "2025" [ref=e17039]
+            - cell "교사용" [ref=e17040]
+            - cell "고등" [ref=e17041]
+            - cell "고등1" [ref=e17042]
+            - cell "공통학기" [ref=e17043]
+            - cell "사용" [ref=e17044]
+            - cell "62" [ref=e17045]
+            - cell "hyuntaek.kim 2026-10-08" [ref=e17046]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-08"
+          - row
+            - cell "102" [ref=e17047]
+            - cell "22-E-MA-T0-5-1-DCL-FB-2026" [ref=e17048]
+              - link "22-E-MA-T0-5-1-DCL-FB-2026" [ref=e17146]
+            - cell "22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026" [ref=e17049]
+              - link "22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026" [ref=e17147]
+            - cell "수학" [ref=e17050]
+            - cell "22" [ref=e17051]
+            - cell "2026" [ref=e17052]
+            - cell "교사용" [ref=e17053]
+            - cell "초등" [ref=e17054]
+            - cell "초등5" [ref=e17055]
+            - cell "1학기" [ref=e17056]
+            - cell "사용" [ref=e17057]
+            - cell "20" [ref=e17058]
+            - cell "hyuntaek.kim 2026-10-07" [ref=e17059]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-07"
+          - row
+            - cell "101" [ref=e17060]
+            - cell "22-E-MA-T0-4-2-DCL-FB-2025" [ref=e17061]
+              - link "22-E-MA-T0-4-2-DCL-FB-2025" [ref=e17148]
+            - cell "22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025" [ref=e17062]
+              - link "22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025" [ref=e17149]
+            - cell "수학" [ref=e17063]
+            - cell "22" [ref=e17064]
+            - cell "2025" [ref=e17065]
+            - cell "교사용" [ref=e17066]
+            - cell "초등" [ref=e17067]
+            - cell "초등4" [ref=e17068]
+            - cell "2학기" [ref=e17069]
+            - cell "사용" [ref=e17070]
+            - cell "21" [ref=e17071]
+            - cell "hyuntaek.kim 2026-10-07" [ref=e17072]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-07"
+          - row
+            - cell "100" [ref=e17073]
+            - cell "22-E-MA-T0-4-1-DCL-FB-2005" [ref=e17074]
+              - link "22-E-MA-T0-4-1-DCL-FB-2005" [ref=e17150]
+            - cell "22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005" [ref=e17075]
+              - link "22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005" [ref=e17151]
+            - cell "수학" [ref=e17076]
+            - cell "22" [ref=e17077]
+            - cell "2005" [ref=e17078]
+            - cell "교사용" [ref=e17079]
+            - cell "초등" [ref=e17080]
+            - cell "초등4" [ref=e17081]
+            - cell "1학기" [ref=e17082]
+            - cell "사용" [ref=e17083]
+            - cell "9" [ref=e17084]
+            - cell "hyuntaek.kim 2026-10-07" [ref=e17085]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-07"
+          - row
+            - cell "69" [ref=e17086]
+            - cell "22-E-MA-T0-3-2-DCL-FB-2025" [ref=e17087]
+              - link "22-E-MA-T0-3-2-DCL-FB-2025" [ref=e17152]
+            - cell "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025" [ref=e17088]
+              - link "22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025" [ref=e17153]
+            - cell "수학" [ref=e17089]
+            - cell "22" [ref=e17090]
+            - cell "2025" [ref=e17091]
+            - cell "교사용" [ref=e17092]
+            - cell "초등" [ref=e17093]
+            - cell "초등3" [ref=e17094]
+            - cell "2학기" [ref=e17095]
+            - cell "사용" [ref=e17096]
+            - cell "38" [ref=e17097]
+            - cell "hyuntaek.kim 2026-10-06" [ref=e17098]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-06"
+          - row
+            - cell "68" [ref=e17099]
+            - cell "22-E-MA-T0-3-1-DCL-FB-2025" [ref=e17100]
+              - link "22-E-MA-T0-3-1-DCL-FB-2025" [ref=e17154]
+            - cell "22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025" [ref=e17101]
+              - link "22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025" [ref=e17155]
+            - cell "수학" [ref=e17102]
+            - cell "22" [ref=e17103]
+            - cell "2025" [ref=e17104]
+            - cell "교사용" [ref=e17105]
+            - cell "초등" [ref=e17106]
+            - cell "초등3" [ref=e17107]
+            - cell "1학기" [ref=e17108]
+            - cell "사용" [ref=e17109]
+            - cell "12" [ref=e17110]
+            - cell "hyuntaek.kim 2026-10-06" [ref=e17111]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-06"
+          - row
+            - cell "67" [ref=e17112]
+            - cell "22-M-MA-T0-1-0-DCL-DA-2025" [ref=e17113]
+              - link "22-M-MA-T0-1-0-DCL-DA-2025" [ref=e17156]
+            - cell "22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025" [ref=e17114]
+              - link "22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025" [ref=e17157]
+            - cell "수학" [ref=e17115]
+            - cell "22" [ref=e17116]
+            - cell "2025" [ref=e17117]
+            - cell "교사용" [ref=e17118]
+            - cell "중학" [ref=e17119]
+            - cell "중학1" [ref=e17120]
+            - cell "공통학기" [ref=e17121]
+            - cell "사용" [ref=e17122]
+            - cell "25" [ref=e17123]
+            - cell "hyuntaek.kim 2026-10-06" [ref=e17124]
+              - StaticText "hyuntaek.kim"
+              - StaticText "2026-10-06"
+        - generic
+          - StaticText "총 60건 중 1∼10 표시"
+        - list
+          - listitem [level=1]
+            - link "맨 앞" [ref=e16884]
+              - StaticText ""
+          - listitem [level=1]
+            - link "이전" [ref=e16885]
+              - StaticText ""
+          - listitem [level=1]
+            - link "1" [ref=e16886]
+          - listitem [level=1]
+            - link "2" [ref=e16887]
+          - listitem [level=1]
+            - link "3" [ref=e16888]
+          - listitem [level=1]
+            - link "4" [ref=e16889]
+          - listitem [level=1]
+            - link "5" [ref=e16890]
+          - listitem [level=1]
+            - link "다음" [ref=e16891]
+              - StaticText ""
+          - listitem [level=1]
+            - link "맨 뒤" [ref=e16892]
+              - StaticText ""

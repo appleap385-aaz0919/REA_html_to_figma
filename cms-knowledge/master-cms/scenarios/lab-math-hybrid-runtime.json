@@ -1,0 +1,17 @@
+{"steps":[
+ {"label":"1648-lab-math-hybrid-inline-insert-open","command":["eval","(() => {const b=document.querySelector('.tox-tbtn[aria-label=\"수식 입력\"]');if(!b)throw Error('Observed inline math toolbar button absent');b.click();return {action:'Click TinyMCE inline math toolbar button'};})()"]},
+ {"label":"1649-lab-math-hybrid-inline-value","command":["eval","--file","sources/runtime/lab-math-press-one-plus-two.js"]},
+ {"label":"1650-lab-math-hybrid-inline-apply","command":["eval","(() => {document.querySelector('.math-dialog__confirm').click();return {action:'Insert inline1+2 in hybrid editor'};})()"]},
+ {"label":"1651-lab-math-hybrid-inline-result","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1652-lab-math-hybrid-existing-node-edit","command":["eval","(() => {const n=document.querySelector('#mre1 [data-type=inline-math]');if(!n)throw Error('Inserted inline node absent');const before=n.dataset.latex;n.click();return {action:'Click existing inline node to edit',before};})()"]},
+ {"label":"1653-lab-math-hybrid-edit-value9","command":["eval","--file","sources/runtime/lab-math-keypad-nine.js"]},
+ {"label":"1654-lab-math-hybrid-edit-apply","command":["eval","(() => {document.querySelector('.math-dialog__confirm').click();return {action:'Apply existing inline formula9'};})()"]},
+ {"label":"1655-lab-math-hybrid-edited-result","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1656-lab-math-hybrid-multiline-open","command":["eval","(() => {window.tinymce.get('mre1').focus();const b=document.querySelector('.tox-tbtn[aria-label=\"수식 입력\"]');if(!b)throw Error('Inline toolbar absent');b.click();return {action:'Open inline insert for multiline policy test'};})()"]},
+ {"label":"1657-lab-math-hybrid-multiline-first-line","command":["eval","--file","sources/runtime/lab-math-press-one-plus-two.js"]},
+ {"label":"1658-lab-math-hybrid-multiline-second-line","command":["eval","--file","sources/runtime/lab-math-keypad-newline-three.js"]},
+ {"label":"1659-lab-math-hybrid-multiline-apply","command":["eval","(() => {document.querySelector('.math-dialog__confirm').click();return {action:'Apply multiline from inline insertion action'};})()"]},
+ {"label":"1660-lab-math-hybrid-multiline-result","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1661-lab-math-hybrid-final-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1662-lab-math-hybrid-final-screen","command":["snapshot"],"screenshot":true}
+],"tailChars":1300}

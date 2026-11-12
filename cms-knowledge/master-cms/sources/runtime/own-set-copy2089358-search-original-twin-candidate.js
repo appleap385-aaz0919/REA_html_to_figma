@@ -1,0 +1,8 @@
+(async()=>{
+ if(location.hostname!=='dev-exambank.dongahub.com'||new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show')||!document.getElementById('twinAddTabBtn').classList.contains('active')||document.getElementById('twinCountBadge').innerText.trim()!=='0')throw Error('Own unlinked set Add tab required');
+ const filter=document.getElementById('twinSearchFilter'),result=document.getElementById('twinAddResult'),kind=filter.querySelector('[name="keywordType"]'),keyword=filter.querySelector('[name="keyword"]'),button=filter.querySelector('[hx-get="/item/all/twin-search.donga"]');
+ if(filter.querySelector('[name="anchorItemId"]').value!=='2089358'||!button||button.matches(':disabled'))throw Error('Observed own anchor search required');
+ kind.value='itemId';keyword.value='2089242';for(const e of [kind,keyword]){e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));}
+ const after=new Promise((resolve,reject)=>{const listener=e=>{if(e.target.id==='twinAddResult'&&result.querySelector('[hx-post="/item/all/twin-add.donga?targetItemId=2089242"]')){cleanup();resolve();}};const timer=setTimeout(()=>{cleanup();reject(Error('Original candidate response unavailable'));},6000);function cleanup(){clearTimeout(timer);document.body.removeEventListener('htmx:afterSwap',listener);}document.body.addEventListener('htmx:afterSwap',listener);});
+ button.click();await after;return {searchedItemId:2089242,rows:[...result.querySelectorAll('tbody tr')].map(row=>({cells:[...row.querySelectorAll('td')].map(e=>e.innerText),buttons:[...row.querySelectorAll('button')].map(e=>({post:e.getAttribute('hx-post'),disabled:e.matches(':disabled')}))}))};
+})()

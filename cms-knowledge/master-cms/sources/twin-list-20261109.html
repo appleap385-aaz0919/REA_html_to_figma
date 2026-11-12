@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>쌍둥이 그룹 관리 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css">
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css">
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css">
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css">
+    
+    
+<style>.htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}</style></head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white" title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown active">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle show" href="#menu-ITEM" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <a class="dropdown-item" data-loading="" href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading="" href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading="" href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item active" data-loading="" href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading="" href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">문항 관리</li>
+        <li class="breadcrumb-item">쌍둥이 그룹 관리</li>
+    
+    
+</ol>
+        <h2 class="page-title">쌍둥이 그룹 관리</h2>
+    </div>
+
+    <div id="twinGroupTableArea" class="mt-3">
+
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center gap-2">
+    <select class="form-select form-select-sm w-auto cursor-pointer" name="pageSize" hx-trigger="change" hx-include="[data-filter], [data-unit-filter]" hx-vals="{&quot;pageNum&quot;: 1}" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga" hx-target="#twinGroupTableArea">
+        <option value="10">10개씩 보기</option>
+        <option value="30">30개씩 보기</option>
+        <option value="50" selected="selected">50개씩 보기</option>
+        <option value="100">100개씩 보기</option>
+    </select>
+    <span class="text-muted">검색결과 : <strong>43</strong>건</span>
+</div>
+        </div>
+
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table card-table table-vcenter" style="table-layout: fixed;">
+                    <thead>
+                    <tr>
+                        <th class="text-center" style="width: 10%;">그룹 ID</th>
+                        <th class="text-center" style="width: 8%;">유형</th>
+                        <th class="text-center">대표 문제</th>
+                        <th class="text-center" style="width: 8%;">개수</th>
+                        <th class="text-center" style="width: 12%;">수정자</th>
+                        <th class="text-center" style="width: 14%;">수정일시</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">2088665</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2088665&amp;pageNum=1&amp;pageSize=50">다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?
+$(-3,~1)$
+$(-9,~3)$
+$(1,~-3)$
+$(3,~-1)$
+$(12,~-4)$</a>
+                        </td>
+                        <td class="text-center">8개</td>
+                        <td class="text-center">jaehyuk.myung</td>
+                        <td class="text-center">2026-11-06 13:55</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2088612</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2088612&amp;pageNum=1&amp;pageSize=50">다음 중 좌표평면 위의 점의 좌표를 나타낸 것으로 옳은 것은?
+$\rm A(3,~0)$
+$\rm B(2,~4)$
+$\rm C(-1,~-2)$
+$\rm D(-3,~3)$
+$\rm E(1,~-3)$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">sungkuk.chae</td>
+                        <td class="text-center">2026-11-04 09:14</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2088380</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2088380&amp;pageNum=1&amp;pageSize=50">다음 □ 안에 알맞은 자연수들의 합을 구하시오. (가) 가장 작은 소수는 □이다. (나) 짝수인 소수는 □개이다. (다) □은 소수도 아니고 합성수도 아니다.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">suna.lee</td>
+                        <td class="text-center">2026-10-30 16:46</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087985</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087985&amp;pageNum=1&amp;pageSize=50">➜ $y=$$k=$</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">jaehyuk.myung</td>
+                        <td class="text-center">2026-10-15 14:02</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087954</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087954&amp;pageNum=1&amp;pageSize=50">$- \dfrac{5}{2} a+4+ \dfrac{1}{3} a- \dfrac{8}{3}$을 간단히 하시오.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hyuntaek.kim</td>
+                        <td class="text-center">2026-10-14 15:38</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087730</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087730&amp;pageNum=1&amp;pageSize=50">$2x ^{2} -7x-4=0$</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-08 14:56</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087610</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087610&amp;pageNum=1&amp;pageSize=50">$-1,~2$</a>
+                        </td>
+                        <td class="text-center">3세트</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-08 14:57</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087291</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087291&amp;pageNum=1&amp;pageSize=50">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \div 4 =$ $\boxed{\phantom{00000}}$ $\cdots$ $\boxed{\phantom{00000}}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">heejin.jeong</td>
+                        <td class="text-center">2026-10-08 10:37</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087192</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087192&amp;pageNum=1&amp;pageSize=50">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \div 4 =$ $\boxed{\phantom{00000}}$ $\cdots$ $\boxed{\phantom{00000}}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">heejin.jeong</td>
+                        <td class="text-center">2026-10-08 09:21</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087168</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087168&amp;pageNum=1&amp;pageSize=50">이차방정식 $x^{2}-5 x+3=0$의 두 근을 $\alpha,~ \beta$라 할 때, $3-\alpha$, $3-\beta$를 두 근으로 하고 $x^{2}$의 계수가 $1$인 이차방정식은?$x^{2}-3 x-1=0$$x^{2}-3 x+1=0$$x^{2}-x-3=0$$x^{2}-x+3=0$$x^{2}+x+3=0$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-07 17:48</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087164</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087164&amp;pageNum=1&amp;pageSize=50">(평균)$=9$변량$6$$7$$8$$11$$13$편차</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-07 17:20</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2087144</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2087144&amp;pageNum=1&amp;pageSize=50">$x ^{2} +2x-4$</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-07 16:36</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086796</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086796&amp;pageNum=1&amp;pageSize=50">그림을 보고 $27100$과 $26700$의 크기를 비교하여  안에 $&amp;gt;$, $=$, $&amp;lt;$를 알맞게 써넣으세요.$27100$$26700$</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">hyuntaek.kim</td>
+                        <td class="text-center">2026-10-08 17:05</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086656</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086656&amp;pageNum=1&amp;pageSize=50">사다리꼴의 넓이를 구하시오.&nbsp;$(16+10 \sqrt{3} ) \rm cm ^{2}$&nbsp;$(16+8 \sqrt{3} ) \rm cm ^{2}$&nbsp;$(16+12 \sqrt{3} ) \rm cm ^{2}$$(16+12 \sqrt{6} ) \rm cm ^{2}$&nbsp;$(16+11\sqrt{3} ) \rm cm ^{2}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-07 14:36</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086431</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086431&amp;pageNum=1&amp;pageSize=50">다음 일차부등식 중 해를 수직선 위에 나타내었을 때, 아래 그림과 같은 것은?&nbsp;$3x+ 7 \le x +11$$x+ 7 \le 5x +11$$-2x+5 \ge x+11$$-x+3 \le x-1$$5x+4 &amp;lt; 3x+ 8$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-06 17:20</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086391</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086391&amp;pageNum=1&amp;pageSize=50">이차부등식 $x^2 -4 \le 2 \left|x-2\right|$의 해를 구하시오.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">heejin.jeong</td>
+                        <td class="text-center">2026-10-06 16:35</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086288</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086288&amp;pageNum=1&amp;pageSize=50">부등식 $-x ^{2} +2(k+1)x+3(k+1)&amp;gt;0$의 해가 존재하지 않도록 하는 정수 $k$의 개수는?$1$$2$$3$$4$$5$</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">nanju.kim</td>
+                        <td class="text-center">2026-10-06 15:32</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086272</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086272&amp;pageNum=1&amp;pageSize=50">몫이 가장 큰 나눗셈을 골라 보세요.$21 \div 3$$45 \div 9$$35 \div 7$$18 \div 9$$72 \div 8$</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">nanju.kim</td>
+                        <td class="text-center">2026-10-06 15:36</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086240</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086240&amp;pageNum=1&amp;pageSize=50">삼차방정식 $x^{3} +ax^{2} +bx-15=0$의 한 근이 $1+2 i$일 때, 두 실수 $a$, $b$에 대하여 $ab$의 값은?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(단, $i=\sqrt{-1}$)$-28$$-36$$-45$$-55$$-66$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">heejin.jeong</td>
+                        <td class="text-center">2026-10-02 16:25</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086223</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086223&amp;pageNum=1&amp;pageSize=50">나눗셈을 하여 몫과 나머지를 □ 안에 차례로 써넣으세요.$87 \div 4 =$ $\boxed{\phantom{00000}}$ $\cdots$ $\boxed{\phantom{00000}}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-01 18:36</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086206</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086206&amp;pageNum=1&amp;pageSize=50">$\dfrac{17}{5}$ 를 대분수로 바르게 나타낸 것은?
+$2 {\dfrac{2}{5}}$
+$3 {\dfrac{1}{5}}$
+$3 {\dfrac{2}{5}}$
+$3 {\dfrac{3}{5}}$
+$4 {\dfrac{2}{5}}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">wonrae.cho</td>
+                        <td class="text-center">2026-10-01 15:43</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086190</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086190&amp;pageNum=1&amp;pageSize=50">변량$6$$7$$8$$11$$13$편차</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">heejin.jeong</td>
+                        <td class="text-center">2026-10-01 11:47</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086187</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086187&amp;pageNum=1&amp;pageSize=50">$\dfrac{5}{24} \times n$, $\dfrac{7}{30} \times n$의 값이 모두 자연수가 되도록 하는 자연수 $n$의 값 중 가장 작은 수를 구하시오. [$6$점]</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">wonrae.cho</td>
+                        <td class="text-center">2026-10-01 11:26</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086092</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086092&amp;pageNum=1&amp;pageSize=50">그림과 같이 지름의 길이가 $8$인 원에 내접하는 직사각형의 넓이가 $32$일 때, 이 직사각형의 둘레의 길이는?
+$8 \sqrt{2}$
+$12 \sqrt{2}$
+$16 \sqrt{2}$
+$20 \sqrt{2}$
+$24 \sqrt{2}$</a>
+                        </td>
+                        <td class="text-center">4개</td>
+                        <td class="text-center">sungkuk.chae</td>
+                        <td class="text-center">2026-10-07 16:03</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086089</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086089&amp;pageNum=1&amp;pageSize=50">삼각형 ABC의 넓이는?
+$2$
+$3$
+$4$
+$6$
+$9$</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">sungkuk.chae</td>
+                        <td class="text-center">2026-09-30 14:37</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086085</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086085&amp;pageNum=1&amp;pageSize=50">$a+b+c=2$, $a ^{2} +b ^{2} +c ^{2} =8$, $\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} =1$일 때, $\dfrac{1}{a ^{2}} + \dfrac{1}{b ^{2}} + \dfrac{1}{c ^{2}}$의 값은?
+$1$
+$3$
+$5$
+$7$
+$9$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">sungkuk.chae</td>
+                        <td class="text-center">2026-10-01 09:38</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2086024</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2086024&amp;pageNum=1&amp;pageSize=50">집합 {X=\{x \mid 0 \leq x \leq 3\}}에 대하여 {X}에서 {X}로의 함수 {y=f(x)}의 그래프가 다음 그림과 같을 때, {(f \circ f \circ f \circ f)(1/3)}의 값을 구하시오. [서술형 답안]</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">sungkuk.chae</td>
+                        <td class="text-center">2026-10-01 09:44</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2061771</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2061771&amp;pageNum=1&amp;pageSize=50">$32,~68~$</a>
+                        </td>
+                        <td class="text-center">3세트</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">2026-09-14 17:33</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2061585</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2061585&amp;pageNum=1&amp;pageSize=50">다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \mathrm{A}에서 만난다. 점 \mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">2026-09-02 16:37</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2061584</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2061584&amp;pageNum=1&amp;pageSize=50">삼각형 ABC의 넓이는?
+$2$
+$3$
+$4$
+$6$
+$9$</a>
+                        </td>
+                        <td class="text-center">3세트</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">2026-08-31 14:11</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2061583</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=2061583&amp;pageNum=1&amp;pageSize=50">다음 그림과 같이 정비례 관계 y=2 x의 그래프와 반비례 관계 y=a/x의 그래프가 점 \mathrm{A}에서 만난다. 점 \mathrm{A}의 x좌표가 3일 때, 상수 a의 값은?</a>
+                        </td>
+                        <td class="text-center">5개</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">2026-09-14 17:10</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">529</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=529&amp;pageNum=1&amp;pageSize=50">삼차방정식 $x^{3} -3x^{2} +ax +b=0$의 한 근이 $1+ \sqrt{2}i$일 때, 두 실수 $a$, $b$의 값과 나머지 두 근을 각각 구하시오.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">jaehyuk.myung</td>
+                        <td class="text-center">2026-10-30 14:03</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">499</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=499&amp;pageNum=1&amp;pageSize=50">다항식 $3 x^{2}-x y-2 y^{3}+y-2 x+4$에 대하여 다음과 같이 정리하시오.
+$x$에 대하여 내림차순</a>
+                        </td>
+                        <td class="text-center">3세트</td>
+                        <td class="text-center">sangwon.jo</td>
+                        <td class="text-center">2026-10-28 11:34</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">496</td>
+                        <td class="text-center">세트 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=496&amp;pageNum=1&amp;pageSize=50">$10$, $15$, $25$</a>
+                        </td>
+                        <td class="text-center">2세트</td>
+                        <td class="text-center">sangwon.jo</td>
+                        <td class="text-center">2026-10-28 10:30</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">463</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=463&amp;pageNum=1&amp;pageSize=50">그림은 계현이네 반 학생 $15$명의 $2$회에 걸친 글쓰기 성적을 조사하여 나타낸 산점도이다. $1$회와 $2$회 성적의 평균이 $8$점 이상인 학생 수는?$6$명$7$명$8$명$9$명$10$명</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-14 15:34</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">430</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=430&amp;pageNum=1&amp;pageSize=50">아래에서 $x$의 값이 커질 때 $y$의 값이 대체로 커지는지 작아지는지 뚜렷하지 않은 산점도를 모두 골라 보면? (정답 $2$개)</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">jaehyuk.myung</td>
+                        <td class="text-center">2026-10-12 11:33</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">397</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=397&amp;pageNum=1&amp;pageSize=50">다음 중 $x$의 값이 증가함에 따라 $y$의 값이 대체로 증가하는지 감소하는지가 분명하지 않은 경우의 산점도를 모두 고르면? (정답 $2$개)</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-08 15:23</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">367</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=367&amp;pageNum=1&amp;pageSize=50">다음 자료의 분산이 $42$일 때, 양수 $a$의 값을 구하시오.$a+2$ $3a-3$ $5a+1$</a>
+                        </td>
+                        <td class="text-center">4개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-07 17:32</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">366</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=366&amp;pageNum=1&amp;pageSize=50">주어진 선분을 한 변으로 하는 예각삼각형을 완성해 보세요.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hari.im</td>
+                        <td class="text-center">2026-10-07 17:27</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">365</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=365&amp;pageNum=1&amp;pageSize=50">관계있는 것끼리 이어 보세요.㉠ $8\,\mathrm{L}$⦁⦁① $4300\,\mathrm{mL}$㉡ $4\,\mathrm{L}$ $300\,\mathrm{mL}$⦁⦁② $8000\,\mathrm{mL}$</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">hyuntaek.kim</td>
+                        <td class="text-center">2026-10-07 15:28</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">364</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=364&amp;pageNum=1&amp;pageSize=50">평행사변형 $\rm ABCD$에서 점 $\rm A$와 직선 $\rm BC$ 사이의 거리를 $x\hspace{0.25em}\mathrm{cm}$, 점 $\rm A$와 직선 $\rm CD$ 사이의 거리를 $y\hspace{0.25em}\mathrm{cm}$라고 할 때, $x$, $y$의 값을 각각 구하시오.</a>
+                        </td>
+                        <td class="text-center">2개</td>
+                        <td class="text-center">minhye.park</td>
+                        <td class="text-center">2026-10-07 14:08</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">332</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=332&amp;pageNum=1&amp;pageSize=50">$4$, $5$, $8$로 나누면 모두 $2$가 남는 세 자리의 자연수 중에서 가장 작은 수를 구하시오.(이윤미 수정해보기)</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">younme.lee</td>
+                        <td class="text-center">2026-10-06 17:55</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">331</td>
+                        <td class="text-center">단일 문항</td>
+                        <td class="text-truncate">
+                            <a class="text-decoration-none" data-loading="" href="/item/twin/detail.donga?twinGroupId=331&amp;pageNum=1&amp;pageSize=50">등식 $\alpha ^{2} +(k-2i) \alpha +(-3+2i)=0$을 만족시키는 실수 $\alpha$, $k$에 대하여 $k$의 값을 구하시오.</a>
+                        </td>
+                        <td class="text-center">3개</td>
+                        <td class="text-center">yoonhye.lee</td>
+                        <td class="text-center">2026-10-06 16:54</td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center mt-3">
+    <div class="flex-fill">
+        <span class="text-muted">
+            총 <span>43</span>건 중
+            <span>1</span>∼<span>43</span> 표시
+        </span>
+    </div>
+    <ul class="pagination pagination-outline mb-0">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="맨 앞" hx-include="[data-filter], [data-unit-filter]" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga?pageNum=1&amp;pageSize=50" hx-target="#twinGroupTableArea"><i class="ti ti-chevrons-left"></i></a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-label="이전" hx-include="[data-filter], [data-unit-filter]" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga?pageNum=1&amp;pageSize=50" hx-target="#twinGroupTableArea"><i class="ti ti-chevron-left"></i></a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link" href="#" hx-include="[data-filter], [data-unit-filter]" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga?pageNum=1&amp;pageSize=50" hx-target="#twinGroupTableArea">1</a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="다음" hx-include="[data-filter], [data-unit-filter]" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga?pageNum=1&amp;pageSize=50" hx-target="#twinGroupTableArea"><i class="ti ti-chevron-right"></i></a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="맨 뒤" hx-include="[data-filter], [data-unit-filter]" hx-swap="outerHTML" hx-push-url="true" hx-get="/item/twin/list.donga?pageNum=1&amp;pageSize=50" hx-target="#twinGroupTableArea"><i class="ti ti-chevrons-right"></i></a>
+        </li>
+    </ul>
+    <div class="flex-fill"></div>
+</div>
+
+    </div>
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok="">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+
+
+</body></html>

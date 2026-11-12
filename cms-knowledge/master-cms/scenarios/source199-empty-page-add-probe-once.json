@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"2364-own-source199-empty-page-add-probe","command":["eval","--file","sources/runtime/own-source199-empty-page-add-once.js"]},
+ {"label":"2365-own-source199-empty-page-probe-server-readback","command":["eval","--file","sources/runtime/own-source199-and-item2089216-baseline-read.js"]},
+ {"label":"2366-own-source199-empty-page-probe-ui","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own item only');return {modals:[...document.querySelectorAll('.modal.show')].map(e=>e.id),current:document.getElementById('productCurrent')?.innerText,candidates:document.getElementById('itemProductAddResult')?.innerText,count:document.getElementById('productCountText')?.innerText,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText)};})()"]}
+],"tailChars":130}

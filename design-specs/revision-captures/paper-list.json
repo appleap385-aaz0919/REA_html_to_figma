@@ -1,0 +1,733 @@
+{
+  "controls": [
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 16,
+        "y": 12
+      },
+      "href": null,
+      "id": "sidebarToggle",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "메뉴",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 192.65625,
+        "x": 52,
+        "y": 18
+      },
+      "href": "/main.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문제은행 마스터 CMS",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 72
+      },
+      "href": "/main.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "홈",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 116
+      },
+      "href": "#menu-ITEM",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문항 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 160
+      },
+      "href": "/paper/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "평가지 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 204
+      },
+      "href": "/product/list.donga?curriculum=22",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "문항 출처 관리",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 44,
+        "w": 240,
+        "x": 8,
+        "y": 248
+      },
+      "href": "/lab/index.donga",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "랩",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 108,
+        "x": 2061,
+        "y": 8
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "로그아웃",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 28,
+        "w": 1897,
+        "x": 272,
+        "y": 105.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "H2",
+      "text": "평가지 관리"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 185.5,
+        "x": 293,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "keywordType",
+      "tag": "SELECT",
+      "text": "평가지 ID\n평가지명\n등록자 ID",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 381.28125,
+        "x": 486.5,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "keyword",
+      "tag": "INPUT",
+      "text": "평가지 ID / 평가지명 / 등록자 ID",
+      "type": "text"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 875.78125,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "paperCurriculumSelect",
+      "name": "curriculum",
+      "tag": "SELECT",
+      "text": "교육과정 전체\n22\n15",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 1050.71875,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "paperClassTypeSelect",
+      "name": "classType",
+      "tag": "SELECT",
+      "text": "학교급 전체\n초등\n중학\n고등",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 1225.65625,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "paperSubjectCategorySelect",
+      "name": "subjectCategory",
+      "tag": "SELECT",
+      "text": "과목군 전체\n수학군",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 1400.59375,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "paperSubjectSelect",
+      "name": "subject",
+      "tag": "SELECT",
+      "text": "과목 전체\n수학\n수학\n공통수학1\n공통수학2\n기본수학1\n기본수학2\n수학1\n수학2\n대수\n미적분1\n미적분2\n확률과통계\n기하\n직무수학\n인공지능수학\n수학과 문화\n수학",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 1575.53125,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "paperGradeSelect",
+      "name": "grade",
+      "tag": "SELECT",
+      "text": "학년 전체\n중학1\n고등1\n초등1\n중학2\n초등2\n고등2\n고등3\n중학3\n초등3\n고등 공통\n초등4\n초등5\n초등6",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 166.9375,
+        "x": 1750.46875,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "term",
+      "tag": "SELECT",
+      "text": "학기 전체\n공통학기\n1학기\n2학기",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 222.59375,
+        "x": 1925.40625,
+        "y": 170.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "unitCode",
+      "tag": "INPUT",
+      "text": "단원 코드 입력",
+      "type": "text"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 230,
+        "x": 343,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "INPUT",
+      "text": "시작일 ~ 종료일",
+      "type": "text"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 55.71875,
+        "x": 581,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "7일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 63.421875,
+        "x": 635.71875,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "30일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 63.421875,
+        "x": 698.140625,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "90일",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 62,
+        "x": 760.5625,
+        "y": 218.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "전체",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 337,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "전체"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 337,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "INPUT",
+      "text": "on",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 405,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "초안"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 405,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "R",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 473,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "사용"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 473,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "Y",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 66,
+        "x": 541,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "미사용"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 541,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "N",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 52,
+        "x": 623,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "LABEL",
+      "text": "폐기"
+    },
+    {
+      "box": {
+        "h": 20,
+        "w": 20,
+        "x": 623,
+        "y": 284.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "statuses",
+      "tag": "INPUT",
+      "text": "D",
+      "type": "checkbox"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 94,
+        "x": 1969.078125,
+        "y": 274.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "초기화",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 40,
+        "w": 80,
+        "x": 2068,
+        "y": 274.140625
+      },
+      "href": null,
+      "id": "",
+      "name": null,
+      "tag": "BUTTON",
+      "text": "조회",
+      "type": "button"
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 131,
+        "x": 272,
+        "y": 351.140625
+      },
+      "href": null,
+      "id": "",
+      "name": "pageSize",
+      "tag": "SELECT",
+      "text": "10개씩 보기\n30개씩 보기\n50개씩 보기\n100개씩 보기",
+      "type": "select-one"
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 239.015625,
+        "x": 436.59375,
+        "y": 448.140625
+      },
+      "href": "/paper/detail.donga?paperId=1094&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-HML-20261109-02-SET4-SINGLE1",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 171.96875,
+        "x": 436.59375,
+        "y": 513.140625
+      },
+      "href": "/paper/detail.donga?paperId=1093&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "QA-HML-20261109-01-SET",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 243.09375,
+        "x": 436.59375,
+        "y": 578.140625
+      },
+      "href": "/paper/detail.donga?paperId=531&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "중1-2_수매씽유형_유형북_8-08단원 (1)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 56,
+        "x": 436.59375,
+        "y": 643.140625
+      },
+      "href": "/paper/detail.donga?paperId=530&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "행렬세트",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 262.84375,
+        "x": 436.59375,
+        "y": 708.140625
+      },
+      "href": "/paper/detail.donga?paperId=341&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제10)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 255.140625,
+        "x": 436.59375,
+        "y": 773.140625
+      },
+      "href": "/paper/detail.donga?paperId=340&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제9)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 255.140625,
+        "x": 436.59375,
+        "y": 838.140625
+      },
+      "href": "/paper/detail.donga?paperId=339&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제8)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 255.140625,
+        "x": 436.59375,
+        "y": 903.140625
+      },
+      "href": "/paper/detail.donga?paperId=338&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제7)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 255.140625,
+        "x": 436.59375,
+        "y": 968.140625
+      },
+      "href": "/paper/detail.donga?paperId=337&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제6)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 18,
+        "w": 255.140625,
+        "x": 436.59375,
+        "y": 1033.140625
+      },
+      "href": "/paper/detail.donga?paperId=336&curriculum=22&pageNum=1&pageSize=10",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "[MOCK-HML-M] 템플릿_시험지2 (복제5)",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1185.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "맨 앞",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1220.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "이전",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1255.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "1",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1290.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "2",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1325.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "다음",
+      "type": ""
+    },
+    {
+      "box": {
+        "h": 32,
+        "w": 32,
+        "x": 1360.90625,
+        "y": 1091.140625
+      },
+      "href": "#",
+      "id": "",
+      "name": null,
+      "tag": "A",
+      "text": "맨 뒤",
+      "type": ""
+    }
+  ],
+  "height": 1123,
+  "images": [],
+  "modals": [],
+  "text": "문제은행 마스터 CMS\n홈\n문항 관리\n평가지 관리\n문항 출처 관리\n랩\n마스터\n접속자 jaehyuk.myung\n로그아웃\n시스템 관리\n평가지 관리\n평가지 관리\n평가지 ID\n평가지명\n등록자 ID\n교육과정 전체\n22\n15\n학교급 전체\n초등\n중학\n고등\n과목군 전체\n수학군\n과목 전체\n수학\n수학\n공통수학1\n공통수학2\n기본수학1\n기본수학2\n수학1\n수학2\n대수\n미적분1\n미적분2\n확률과통계\n기하\n직무수학\n인공지능수학\n수학과 문화\n수학\n학년 전체\n중학1\n고등1\n초등1\n중학2\n초등2\n고등2\n고등3\n중학3\n초등3\n고등 공통\n초등4\n초등5\n초등6\n학기 전체\n공통학기\n1학기\n2학기\n등록일\n7일\n30일\n90일\n전체\n상태\n전체\n초안\n사용\n미사용\n폐기\n초기화 \n조회\n10개씩 보기\n30개씩 보기\n50개씩 보기\n100개씩 보기\n검색결과 : 19건\n평가지 ID\t평가지명\t단원 코드\t문항 수\t생성 방식\t상태\t등록자 · 등록일\n1094\tQA-HML-20261109-02-SET4-SINGLE1\t\n22HMAC1GHG1006010000\n\t1\tHML 생성\t초안\t\njaehyuk.myung\n2026-11-09\n\n1093\tQA-HML-20261109-01-SET\t\n22MMAT0KOK1004040000\n\t1\tHML 생성\t사용\t\njaehyuk.myung\n2026-11-09\n\n531\t중1-2_수매씽유형_유형북_8-08단원 (1)\t\n22MMAT0KOK1208010000 등 5개\n\t120\tHML 생성\t초안\t\nhari.im\n2026-10-27\n\n530\t행렬세트\t\n22HMAC1GHG1006010000\n\t35\tHML 생성\t초안\t\nhari.im\n2026-10-27\n\n341\t[MOCK-HML-M] 템플릿_시험지2 (복제10)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n\n340\t[MOCK-HML-M] 템플릿_시험지2 (복제9)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n\n339\t[MOCK-HML-M] 템플릿_시험지2 (복제8)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n\n338\t[MOCK-HML-M] 템플릿_시험지2 (복제7)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n\n337\t[MOCK-HML-M] 템플릿_시험지2 (복제6)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n\n336\t[MOCK-HML-M] 템플릿_시험지2 (복제5)\t\n22EMAT0NGS3101070000 등 9개\n\t4\tHML 생성\t초안\t\nsangwon.jo\n2026-10-19\n총 19건 중 1∼10 표시\n1\n2",
+  "title": "평가지 관리 | 문제은행 마스터 CMS",
+  "url": "https://dev-exambank.dongahub.com/paper/list.donga?curriculum=22",
+  "width": 2200
+}

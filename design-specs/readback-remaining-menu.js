@@ -1,0 +1,16 @@
+const BATCH=801;
+const audit=JSON.parse(figma.root.getPluginData("cmsRemainingAudit"));
+const names=audit.pages.map(p=>p.name);
+const states=figma.root.children.filter(p=>names.includes(p.name)).flatMap(p=>p.children.filter(n=>n.type==="SECTION").flatMap(s=>s.children.filter(n=>n.getPluginData("cmsStoryboardState"))));
+const raw=states.flatMap(f=>f.children.filter(n=>n.type==="TEXT"&&n.characters.startsWith("• {")));
+if(raw.length)throw Error("Unformatted policy objects: "+raw.length);
+audit.rawPolicyObjects=raw.length;
+const master=figma.getNodeById(audit.masterIndex);
+const menuLinks=master.children.filter(n=>n.type==="TEXT"&&n.hyperlink);
+if(menuLinks.length!==8)throw Error("Master index link count "+menuLinks.length);
+audit.menuLinks=menuLinks.length;
+figma.root.setPluginData("cmsRemainingAudit",JSON.stringify(audit));
+await figma.setCurrentPageAsync(master.parent);
+figma.currentPage.selection=[master];figma.viewport.scrollAndZoomIntoView([master]);
+figma.notify("CMS_READBACK "+JSON.stringify(audit),{timeout:60000});
+figma.notify("CMS 스토리보드 배치 801 완료",{timeout:60000});

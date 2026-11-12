@@ -1,0 +1,9 @@
+{"steps":[
+ {"label":"1365-source-list-all60-observation","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1366-source-list-code-filter-input","command":["fill","input[name=keyword]","22-M-MA-T0-1-1-SMT-TP-2048"]},
+ {"label":"1367-source-list-code-query","command":["eval","(() => {const b=document.querySelector('button[hx-get=\"/product/list.donga\"]');if(!b)throw Error('Query absent');b.click();return {action:'Observed query button click'};})()"]},
+ {"label":"1368-source-list-code-result","command":["eval","--file","sources/runtime/source-list-observation.js"]},
+ {"label":"1369-source-list-empty-keyword-input","command":["fill","input[name=keyword]","QA-NO-SUCH-SOURCE-20261109"]},
+ {"label":"1370-source-list-empty-query","command":["eval","(() => {document.querySelector('button[hx-get=\"/product/list.donga\"]').click();return {action:'Query nonmatching code'};})()"]},
+ {"label":"1371-source-list-empty-result","command":["eval","--file","sources/runtime/source-list-observation.js"]}
+],"tailChars":1500}

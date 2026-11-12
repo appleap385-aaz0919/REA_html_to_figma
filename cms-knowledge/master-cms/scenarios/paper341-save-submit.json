@@ -1,0 +1,59 @@
+{
+  "steps": [
+    {
+      "label": "1718-paper341-test-name-input",
+      "command": [
+        "fill",
+        "input[name=paperName]",
+        "[MOCK-HML-M] 템플릿_시험지2 (복제10) [QA-PAPER-20261109]"
+      ]
+    },
+    {
+      "label": "1719-paper341-test-start-page3",
+      "command": [
+        "fill",
+        "input[name=startPageNum]",
+        "3"
+      ]
+    },
+    {
+      "label": "1720-paper341-test-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-form-observation.js"
+      ]
+    },
+    {
+      "label": "1721-paper341-test-save-submit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper341-submit-isolated-test.js"
+      ]
+    },
+    {
+      "label": "1722-paper341-test-save-readback",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "1723-paper341-test-save-detail-values",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/paper-detail-observation.js"
+      ]
+    },
+    {
+      "label": "1724-paper341-test-save-detail-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 700
+}

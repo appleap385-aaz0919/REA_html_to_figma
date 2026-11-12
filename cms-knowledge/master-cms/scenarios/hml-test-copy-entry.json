@@ -1,0 +1,9 @@
+{
+ "steps":[
+  {"label":"1054-test-hml-fresh","command":["snapshot"]},
+  {"label":"1055-test-hml-tab-focus","command":["focus","{ref}"],"refPattern":"- tab \"한글\\(HML\\) 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1056-test-hml-tab-enter","command":["press","Enter"]},
+  {"label":"1057-test-hml-before-slots","command":["eval","--file","sources/runtime/hml-parent-slots.js"]},
+  {"label":"1058-test-hml-popup-open","command":["click","{ref}"],"refPattern":"- button \"한글 편집기 열기\" \\[ref=(e\\d+)\\]"}
+ ],"tailChars":1500
+}

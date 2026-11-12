@@ -1,0 +1,12 @@
+{
+ "steps":[
+  {"label":"1046-hml-question-return-seed","command":["snapshot"]},
+  {"label":"1047-hml-set-question-return","command":["click","{ref}"],"refPattern":"- button \"문제 수정\" \\[ref=(e\\d+)\\]"},
+  {"label":"1048-hml-set-question-return-loaded","command":["snapshot"],"screenshot":true},
+  {"label":"1049-hml-set-question-bottom","command":["eval","--file","sources/runtime/hml-scroll-bottom.js"],"screenshot":true},
+  {"label":"1050-hml-editable-controls","command":["eval","--file","sources/runtime/hml-editable-controls.js"]},
+  {"label":"1051-hml-return-parent","command":["tab","C06F56F8973F594BE8196DCB15B2DEBC"]},
+  {"label":"1052-hml-close-readonly-popup","command":["tab","close","DE767F26D12D138B6395D12D0CDBC099"]},
+  {"label":"1053-hml-select-test-copy","command":["tab","0EFB900C688AC111C33EDFA475104F9D"]}
+ ],"tailChars":1800
+}

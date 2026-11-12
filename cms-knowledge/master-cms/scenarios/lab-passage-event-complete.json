@@ -1,0 +1,11 @@
+{"steps":[
+ {"label":"1478-lab-passage-fresh-after-load","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]},
+ {"label":"1479-lab-passage-direct-event-complete","command":["eval","--file","sources/runtime/lab-select-direct-tab.js"]},
+ {"label":"1480-lab-passage-direct-save-after-mount","command":["eval","(() => {document.querySelector('[data-side=direct] [data-call=save]').click();return {action:'Validate mounted direct passage editor'};})()"]},
+ {"label":"1481-lab-passage-direct-state","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]},
+ {"label":"1482-lab-passage-frame-event-complete","command":["eval","--file","sources/runtime/lab-select-frame-tab.js"]},
+ {"label":"1483-lab-passage-frame-save-after-mount","command":["eval","(() => {document.querySelector('[data-side=frame] [data-call=save]').click();return {action:'Validate mounted iframe passage editor'};})()"]},
+ {"label":"1484-lab-passage-final-compare","command":["eval","(() => {document.querySelector('#frameDocCompare').click();return {action:'Compare fully mounted passage editors'};})()"]},
+ {"label":"1485-lab-passage-final-state","command":["eval","--file","sources/runtime/lab-editor-frame-observation.js"]},
+ {"label":"1486-lab-passage-bottom-scroll","command":["eval","--file","sources/runtime/observed-scroll-one-viewport.js"]}
+],"tailChars":1100}

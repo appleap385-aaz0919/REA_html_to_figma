@@ -1,0 +1,123 @@
+{
+  "steps": [
+    {
+      "label": "963-single-choice-before-validation",
+      "command": [
+        "snapshot"
+      ]
+    },
+    {
+      "label": "964-single-choice-select-first-correct",
+      "command": [
+        "check",
+        "{ref}"
+      ],
+      "refPattern": "- radio \\[checked=false, ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "965-single-choice-duplicate-alpha",
+      "command": [
+        "fill",
+        "{ref}",
+        "Alpha"
+      ],
+      "refPattern": "- textbox \"선택지\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "966-single-choice-duplicate-preview",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "967-single-choice-duplicate-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "968-single-choice-blank-second",
+      "command": [
+        "fill",
+        "{ref}",
+        ""
+      ],
+      "refPattern": "- textbox \"선택지\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "969-single-choice-blank-preview",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "970-single-choice-blank-result",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "971-single-choice-restore-beta",
+      "command": [
+        "fill",
+        "{ref}",
+        "Beta"
+      ],
+      "refPattern": "- textbox \"선택지\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "972-single-choice-value-kind-menu",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "973-single-choice-value-kind-menu-state",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "974-single-choice-value-kind-menu-close",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2
+    },
+    {
+      "label": "975-single-choice-valid-preview-open",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "976-single-choice-valid-preview-ready",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 6000
+}

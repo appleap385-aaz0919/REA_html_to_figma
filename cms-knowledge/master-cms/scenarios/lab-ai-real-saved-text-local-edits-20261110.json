@@ -1,0 +1,42 @@
+{
+  "steps": [
+    {
+      "label": "3324-own-lab-ai9382-local-text-input-edit",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/omr-render.donga'||document.querySelector('#omrTypeSel').value!=='SBSANM'||window.__qaLabActiveSourceItemId!==2089382)throw Error('Actual AI Lab fixture required');const r=document.querySelector('#omrSlot [data-omr-code=SBSANM]'),a=window.__qaLabSavedOmrFixtures.find(e=>e.itemId===2089382).answer.nodes[0].allowed_answer[0],xs=[...r.querySelectorAll('input[type=text]')].filter(e=>e.value===a.value&&!e.matches(':disabled'));if(xs.length!==1)throw Error('Exact actual text answer input required');xs[0].value=a.value+' [LAB]';xs[0].dispatchEvent(new Event('input',{bubbles:true}));xs[0].dispatchEvent(new Event('change',{bubbles:true}));return {sourceItemId:2089382,localTextValue:xs[0].value,cmsSave:false};})()"
+      ]
+    },
+    {
+      "label": "3325-own-lab-ai9382-local-text-auto-json-result",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-real-saved-omr-current-roundtrip-read.js"
+      ]
+    },
+    {
+      "label": "3326-own-lab-ai9382-local-case-sensitive-toggle",
+      "command": [
+        "eval",
+        "(()=>{const r=document.querySelector('#omrSlot [data-omr-code=SBSANM]'),s=window.omrSerializers.SBSANM.serialize(r);if(window.__qaLabActiveSourceItemId!==2089382||s.answer.nodes[0].allowed_answer[0].value!=='2 TIMES 1행렬 [LAB]'||s.answer.nodes[0].allowed_answer[0].value_type!=='text')throw Error('Expected edited actual AI text');const xs=[...r.querySelectorAll('input[type=checkbox]')].filter(e=>e.closest('label')?.textContent.trim()==='대소구분');if(xs.length!==1||xs[0].checked||xs[0].matches(':disabled'))throw Error('Normal case-sensitive checkbox required');xs[0].click();return {caseSensitiveChecked:xs[0].checked,cmsSave:false};})()"
+      ]
+    },
+    {
+      "label": "3327-own-lab-ai9382-local-flags-and-serialized-json",
+      "command": [
+        "eval",
+        "(()=>{const r=document.querySelector('#omrSlot [data-omr-code=SBSANM]'),s=window.omrSerializers.SBSANM.serialize(r);return {sourceItemId:2089382,serialization:s,automaticAnswerJson:JSON.parse(document.querySelector('#ansJsonIn').value),automaticOmrJson:JSON.parse(document.querySelector('#omrJsonIn').value),inputValue:[...r.querySelectorAll('input[type=text]')].map(e=>e.value)};})()"
+      ]
+    },
+    {
+      "label": "3328-own-lab-ai9382-after-local-edits-source",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/sanitized-page-source.js"
+      ]
+    }
+  ],
+  "tailChars": 120
+}

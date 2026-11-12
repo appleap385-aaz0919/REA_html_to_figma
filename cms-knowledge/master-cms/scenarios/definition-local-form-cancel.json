@@ -1,0 +1,13 @@
+{"steps":[
+ {"label":"1880-definition-start-zero","command":["fill","input[name=startPageNum]","0"]},
+ {"label":"1881-definition-end-zero","command":["fill","input[name=endPageNum]","0"]},
+ {"label":"1882-definition-unit-maxlength","command":["fill","#unitCodeInput","123456789012345678901"]},
+ {"label":"1883-definition-field-validity","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"1884-definition-registration-cancel-open","command":["eval","(() => {if(location.pathname!=='/item/difi/form.donga')throw Error('Expected ZIP form');document.querySelector('#examForm [data-confirm-cancel]').click();return {action:'Actual cancel link'};})()"]},
+ {"label":"1885-definition-registration-cancel-state","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"1886-definition-registration-cancel-stay","command":["eval","(() => new Promise((resolve,reject) => {const m=document.querySelector('#cancelConfirmModal.show');if(!m)return reject(Error('Expected ZIP cancel modal'));m.addEventListener('hidden.bs.modal',()=>resolve({action:'Cancel leaving the ZIP form'}),{once:true});m.querySelector('.modal-footer [data-bs-dismiss=modal]').click();}))()"]},
+ {"label":"1887-definition-registration-cancel-retained","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"1888-definition-registration-leave-open","command":["eval","document.querySelector('#examForm [data-confirm-cancel]').click()"]},
+ {"label":"1889-definition-registration-leave-confirm","command":["eval","(() => {const m=document.querySelector('#cancelConfirmModal.show');if(!m||location.pathname!=='/item/difi/form.donga')throw Error('Expected ZIP cancel modal');m.querySelector('[data-action-ok]').click();return {action:'Leave without saving the local QA file or metadata'};})()"]},
+ {"label":"1890-definition-list-after-cancel","command":["snapshot"]}
+],"tailChars":450}

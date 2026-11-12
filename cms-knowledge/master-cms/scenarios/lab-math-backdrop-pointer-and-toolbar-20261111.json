@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "label": "3404-lab-math-backdrop-pointer-move",
+      "command": [
+        "mouse",
+        "move",
+        "300",
+        "900"
+      ]
+    },
+    {
+      "label": "3405-lab-math-backdrop-pointer-down",
+      "command": [
+        "mouse",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "label": "3406-lab-math-backdrop-pointer-up",
+      "command": [
+        "mouse",
+        "up",
+        "left"
+      ]
+    },
+    {
+      "label": "3407-lab-math-backdrop-closed-local-state",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/lab-math-edge-observation.js"
+      ]
+    },
+    {
+      "label": "3408-lab-math-rich-editor-toolbar-focus",
+      "command": [
+        "eval",
+        "(()=>{if(location.pathname!=='/lab/view/math-demo.donga'||window.MathFieldDialog.get().backdrop.style.display!=='none')throw Error('Expected closed math dialog');const e=window.tinymce.get('mre1');if(!e)throw Error('Inline math editor unavailable');e.focus();const p=e.getBody().querySelector('p');e.selection.select(p,true);e.selection.collapse(false);return {active:document.activeElement.id,toolbar:[...document.querySelectorAll('.tox-toolbar button,.tox-toolbar__primary button')].filter(b=>b.getClientRects().length).map(b=>({text:b.textContent.trim(),aria:b.getAttribute('aria-label'),title:b.title}))};})()"
+      ]
+    }
+  ],
+  "tailChars": 160
+}

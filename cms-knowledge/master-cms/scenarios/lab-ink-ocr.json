@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"1631-lab-math-ink-drawn-screen","command":["snapshot"],"screenshot":true},
+ {"label":"1632-lab-math-ink-recognize-submit","command":["eval","(() => {const d=window.MathFieldDialog.get(),b=d.backdrop.querySelector('[data-ink=recognize]');if(d.tab!=='ink'||d.ink.isEmpty||b.disabled)throw Error('Expected nonempty handwriting ready for OCR');b.click();return {action:'Submit drawn single stroke via actual Recognize button once',endpointPath:'/api/math-ocr',strokeCount:d.ink.strokes.length};})()"]},
+ {"label":"1633-lab-math-ink-recognize-readback","command":["eval","--file","sources/runtime/lab-math-dialog-observation.js"]},
+ {"label":"1634-lab-math-ink-recognize-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":1300}

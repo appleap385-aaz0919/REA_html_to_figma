@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"1602-lab-math-answer-dialog-open","command":["eval","(() => {const b=document.querySelector('#answerField').parentElement.querySelector('.vt-math-open');if(!b)throw Error('Observed Sigma trigger missing');b.click();return {action:'Click answer field Sigma trigger'};})()"]},
+ {"label":"1603-lab-math-answer-dialog-state","command":["eval","--file","sources/runtime/lab-math-observation.js"]},
+ {"label":"1604-lab-math-answer-dialog-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":2500}

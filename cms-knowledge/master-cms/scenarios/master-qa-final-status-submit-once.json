@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2121-master-qa-final-approved-status-submit","command":["eval","(() => {const m=document.querySelector('#statusSaveModal.show'),f=document.getElementById('statusForm'),fs=document.getElementById('statusFields');if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089216'||!m||document.querySelectorAll('.modal.show').length!==1||f.getAttribute('hx-post')!=='/item/all/status-save.donga'||f.elements.itemId.value!=='2089216'||fs.disabled||fs.querySelector('[name=viewFlag]:checked').value!=='Y'||f.elements.onlineFlag.value!=='N'||f.elements.serviceUsage.value!=='T')throw Error('Final own objective status precondition mismatch');m.querySelector('[data-action-ok]').click();return {action:'Submit actual Master approved-use status once',itemId:'2089216',viewFlag:'Y',onlineFlag:'N',serviceUsage:'T'};})()"]},
+ {"label":"2122-master-qa-after-approved-status","command":["eval","--file","sources/runtime/owned-item-status-observation.js"]},
+ {"label":"2123-master-qa-approved-server-readback","command":["eval","--file","sources/runtime/master-qa-approved-server-readback.js"]},
+ {"label":"2124-master-qa-approved-detail-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]}
+],"tailChars":550}

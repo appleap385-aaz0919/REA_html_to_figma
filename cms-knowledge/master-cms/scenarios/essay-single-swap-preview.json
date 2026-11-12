@@ -1,0 +1,12 @@
+{
+  "steps": [
+    {"label":"809-single-essay-before-swap","command":["snapshot"],"assertText":["QA-process","QA-answer"]},
+    {"label":"810-single-essay-swap-blocks","command":["click","{ref}"],"refPattern":"- button \"[^\"]*순서 바꾸기\" \\[ref=(e\\d+)\\]"},
+    {"label":"811-single-essay-swapped-model","command":["eval","--file","sources/runtime/dom-form-observation.js"]},
+    {"label":"812-single-essay-scroll-bottom","command":["scroll","down","700","--selector",".page-wrapper"]},
+    {"label":"813-single-essay-swapped-bottom-visual","command":["snapshot"],"screenshot":true},
+    {"label":"814-single-essay-preview-open","command":["click","{ref}"],"refPattern":"- button \"[^\"]*OMR 미리보기\" \\[ref=(e\\d+)\\]"},
+    {"label":"815-single-essay-preview-settled","command":["snapshot"]}
+  ],
+  "tailChars":7000
+}

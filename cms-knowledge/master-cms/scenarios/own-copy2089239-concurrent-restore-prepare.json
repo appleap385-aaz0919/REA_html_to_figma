@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2478-own-copy2089239-concurrent-stale-result-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2479-own-copy2089239-concurrent-restore-edit-open","command":["eval","(() => {if(location.pathname!=='/item/all/detail.donga'||new URLSearchParams(location.search).get('itemId')!=='2089239'||document.querySelector('.modal.show'))throw Error('Own stale-save result detail required');const link=document.querySelector('a[data-modify-url]');if(!link?.dataset.modifyUrl.includes('itemId=2089239'))throw Error('Own modify link required');link.click();return {clicked:true,operation:'open latest for OMR restore'};})()"]},
+ {"label":"2480-own-copy2089239-concurrent-restore-live-state","command":["eval","--file","sources/runtime/own-copy2089239-live-edit-inspect.js"]},
+ {"label":"2481-own-copy2089239-concurrent-omr-four-restore-local","command":["eval","--file","sources/runtime/own-copy2089239-concurrent-restore-omr-local.js"]},
+ {"label":"2482-own-copy2089239-concurrent-restore-confirm-open","command":["eval","--file","sources/runtime/own-copy2089239-concurrent-restore-confirm-open.js"]}
+],"tailChars":200}

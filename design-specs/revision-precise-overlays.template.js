@@ -1,0 +1,29 @@
+const INPUT=PRECISE_DATA;const R={family:'Inter',style:'Regular'},B={family:'Inter',style:'Bold'};await figma.loadFontAsync(R);await figma.loadFontAsync(B);
+HELPERS
+const ix=JSON.parse(figma.root.getPluginData('cmsRevisionNodes'));let controls=0,frames=0;
+for(const record of INPUT){const section=figma.getNodeById(ix[record.screen].section),main=figma.getNodeById(ix[record.screen].frame),f=section.children.find(n=>n.type==='FRAME'&&n.getPluginData('cmsRevisionModal')===record.modalId);if(!f)continue;
+ const images=f.children.filter(n=>n.type==='FRAME'&&n.name.includes('실제 UI')).sort((a,b)=>a.y-b.y||a.x-b.x),extra=f.children.find(n=>n.getPluginData('cmsRevisionSourceReconstructed')==='yes');if(images.length!==record.variants.length)throw Error('Variant geometry mismatch '+record.modalId);
+ const policy=f.children.find(n=>n.type==='TEXT'&&n.characters==='동작·정책·예외'),descX=policy?policy.x:Math.max(...images.map(n=>n.x+n.width))+100,oldHeader=f.children.find(n=>n.type==='TEXT'&&Math.abs(n.y-73)<1)?.characters||'';
+ for(const n of [...f.children])if(n.type!=='FRAME')n.remove();
+ txt(f,35,22,Math.max(900,descX+865),record.title,30,true);txt(f,35,73,Math.max(900,descX+865),oldHeader,17,false,'#6a798b');
+ let col=descX,y=135,maxX=descX+940;const ph=txt(f,col,y,900,'동작·정책·예외',24,true),pb=txt(f,col,ph.y+ph.height+15,900,record.body,18);y=pb.y+pb.height+30;
+ function entry(label,body,bold=false){const est=(body?Math.ceil(body.length/47)*24:0)+65;if(y+est>f.height-65){col+=980;maxX=Math.max(maxX,col+940);y=135;}const h=txt(f,col,y,900,label,bold?21:18,true,bold?'#0870cb':'#263548');if(body){const b=txt(f,col,h.y+h.height+6,900,body,16);y=b.y+b.height+18;}else y=h.y+h.height+18;}
+ for(let vi=0;vi<images.length;vi++){const p=images[vi],v=record.variants[vi];p.name=v.label+' · 실제 UI';txt(f,p.x,p.y-127,p.width+40,v.label,22,true,'#0870cb');txt(f,p.x,p.y-87,p.width+40,v.provenance==='preserved-dom-readonly'?'보존한 실제 DOM·스타일로 재현':v.provenance==='source-reconstructed'?'원본 컴포넌트 소스로 재현':'실제 CMS 화면',15,false,'#718092');entry(v.label+' · 요소 설명','',true);
+  for(let i=0;i<v.controls.length;i++){const c=v.controls[i],sx=p.width/v.width,sy=p.height/v.height;cue(f,p.x+Math.max(13,c.box.x-5)*sx,p.y+Math.max(13,c.box.y-5)*sy,i+1);entry(String(i+1).padStart(2,'0')+'  '+c.label,c.body||'이 요소의 동작과 조건은 위 정책을 따릅니다.');controls++;}
+  const acts=v.controls.filter(c=>c.kind==='button'&&c.box.y>v.height-125&&/^(취소|닫기|닫기·X|확인|적용|저장|임시 저장|승인|폐기|배포|생성 시작|제외|추가|등록|미사용.*|저장 하지 않고 이동|검수완료 수정하기|임시저장 수정하기)$/.test(c.label)).slice(-3);
+  for(let ai=0;ai<acts.length;ai++){const c=acts[ai],cancel=/취소|닫기/.test(c.label),cw=(p.width-18)/2,cx=p.x+(ai%2)*(cw+18),cy=p.y+p.height+90+Math.floor(ai/2)*85;let target=main.id,result=cancel?'원래 화면으로 복귀':'성공 시 결과 반영',dynamic=false;
+   if(/DRAFT/.test(record.modalId)&&/수정하기/.test(c.label)){target=ix.REV_ITM_03.frame;result=/임시저장/.test(c.label)?'임시본으로 문항 수정':'검수완료본으로 문항 수정'}
+   else if(/^(REV_ITM_TEMP|REV_ITM_APPLY)$/.test(record.modalId)&&!cancel){target=ix.REV_ITM_02.frame;result='저장 성공 후 문항 상세'}
+   else if(record.modalId==='REV_PAP_DISCARD'&&!cancel){target=ix.REV_PAP_DETAIL.frame;result='저장 성공 후 평가지 상세'}
+   else if(record.modalId==='REV_ITM_STATUS_LEAVE'&&c.label==='이동'){result='원래 선택한 화면으로 이동';dynamic=true;}
+   else if(/하지 않고|않고 이동/.test(c.label)){const id=record.screen.startsWith('REV_SRC')?(record.screen==='REV_SRC_FORM'?'REV_SRC_LIST':'REV_SRC_DETAIL'):record.screen==='REV_PAP_EDIT'?'REV_PAP_DETAIL':record.screen==='REV_ITM_03'?'REV_ITM_02':record.screen==='MST_HML_C02'?'MST_HML_C01':record.screen==='MST_DIFI_C02'?'MST_DIFI_C01':record.screen;target=ix[id].frame;result='미저장 변경을 버리고 이동'}
+   else if(record.modalId==='REV_HML_SAVED'&&!cancel){target=ix.REV_ITM_04.frame;result='CMS에서 임시 저장 / 전체 반영'}
+   else if(/PRODUCT|CURRENT_ADD/.test(record.modalId)&&!cancel){target=f.id;result='현재 연결 목록 갱신'}
+   else if(/C03/.test(record.screen)&&/승인|폐기/.test(c.label)){target=ix[record.screen.replace('C03','C04')].frame;result='처리 성공 후 상태별 상세'}
+   rect(f,cx,cy,cw,64,cancel?'#edf5ff':'#fff8e7',cancel?'#b9d8fa':'#edcf85');const t=txt(f,cx+10,cy+8,cw-20,c.label+' → '+result,14,true,cancel?'#0870cb':'#9a6700');if(!dynamic)t.hyperlink={type:'URL',value:'https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id='+target.replace(':','-')};const sx=p.x+(c.box.x+c.box.w/2)*p.width/v.width,sy=p.y+(c.box.y+c.box.h/2)*p.height/v.height,ex=p.x+p.width+8+ai*7,turn=cy-18-ai*6;arrow(f,[[sx,sy],[sx+7+ai*3,sy+8+ai*4],[ex,sy+8+ai*4],[ex,turn],[cx+cw/2,turn],[cx+cw/2,cy]],c.label+' 결과',cancel?'#0870cb':'#da8b00',cancel);}
+  if(vi>0&&/추가|손글씨|LaTeX/.test(v.label)){const from=images[0],sv=record.variants[0],tab=sv.controls.find(c=>c.kind==='tab'&&/추가|손글씨|LaTeX|탭/.test(c.label));if(tab){const sx=from.x+(tab.box.x+tab.box.w*.75)*from.width/sv.width,sy=from.y+(tab.box.y+tab.box.h/2)*from.height/sv.height,gap=from.x+from.width+35,ty=p.y+30;arrow(f,[[sx,sy],[sx,sy-18],[gap,sy-18],[gap,ty],[p.x,ty]],'실제 탭 선택 → '+v.label);txt(f,p.x,p.y-55,p.width,'탭 선택 → '+v.label,14,true,'#b57000');}}
+ }
+ if(extra){extra.x=Math.max(maxX,Math.max(...images.map(n=>n.x+n.width)))+100;maxX=extra.x+extra.width+40;const p=images[0];arrow(f,[[p.x+526,p.y+245],[p.x+526,100],[extra.x-25,100],[extra.x-25,extra.y+20],[extra.x,extra.y+20]],'알파벳·그리스 문자 탭');}
+ for(const n of f.children)if('constraints'in n)n.constraints={horizontal:'MIN',vertical:'MIN'};f.resize(Math.max(maxX,Math.max(...images.map(n=>n.x+n.width))+50),f.height);section.resizeWithoutConstraints(Math.max(section.width,f.x+f.width+80),section.height);f.setPluginData('cmsRevisionPreciseControls','yes');frames++;
+}
+const a=JSON.parse(figma.root.getPluginData('cmsRevisionAudit'));a.precisePopupComponents=frames;a.precisePopupControls=controls;a.mergedFooterGuessingRemoved=true;figma.root.setPluginData('cmsRevisionAudit',JSON.stringify(a));figma.notify('모달의 탭별 요소 번호를 확인했습니다.',{timeout:5000});

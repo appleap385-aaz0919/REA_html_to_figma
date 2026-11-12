@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>ZIP 신규 등록 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css"/>
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css"/>
+    
+    
+</head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue"
+           data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle"
+                        aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white"
+                   title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown active">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle show" href="#menu-ITEM" data-bs-toggle="dropdown"
+                               data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <a class="dropdown-item" data-loading
+                                   href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item" data-loading
+                                   href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item active" data-loading
+                                   href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading
+                                   href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon invisible"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading><!-- CSRF-bearing tag omitted -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">문항 관리</li>
+        <li class="breadcrumb-item">디피니션 문항 등록</li>
+    
+    <li class="breadcrumb-item">신규 등록</li>
+</ol>
+        <h2 class="page-title">ZIP 신규 등록</h2>
+    </div>
+
+    
+    <form id="examForm" method="post" action="/item/difi/upload-url.donga"
+          hx-swap="none" hx-validate="true"
+          class="needs-validation" novalidate hx-post="/item/difi/upload-url.donga"><!-- CSRF-bearing tag omitted -->
+        <!-- CSRF-bearing tag omitted -->
+
+        
+        <input type="hidden" name="examDocumentId"/>
+        <input type="hidden" name="filePath"/>
+        <input type="hidden" name="fileOrgName"/>
+
+        <div class="card mt-3 mb-3">
+            <div class="card-header bg-secondary-lt">
+                <h3 class="card-title"><span>ZIP 파일 업로드</span><span class="text-danger ms-1">*</span></h3>
+            </div>
+            <div class="card-body">
+                <div id="hmlDropzone" class="dropzone">
+                    <div class="dz-message">
+                        <div class="mb-2"><i class="ti ti-upload fs-1 text-primary"></i></div>
+                        <div class="mb-1">ZIP 파일을 여기에 드래그하거나 클릭하여 선택</div>
+                        <div class="text-secondary mb-3">.ZIP 형식만 지원 · 최대 50MB · 1개 파일 = 1문항</div>
+                        
+                        <span class="btn btn-primary"><i class="ti ti-folder me-1"></i>파일 선택</span>
+                    </div>
+                </div>
+                <div id="hmlFileList" class="list-group list-group-flush mt-2"></div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header bg-secondary-lt">
+                <h3 class="card-title">메타정보 입력 (파싱 성공 시 생성 문항에 적용)</h3>
+            </div>
+            <div class="card-body">
+
+                <div class="row g-2 mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">출처<span class="text-danger ms-1">*</span></label>
+                        <div class="input-group">
+                            <select class="form-select cursor-pointer filter-select" name="productId" required>
+                                <option value="">출처 선택</option>
+                                <option value="134">22-M-MA-T0-1-0-DCL-MA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-중간고사 대비-2025)</option>
+                                <option value="133">22-H-MA-C1-1-0-DCL-KI-2025(22-고등-수학군-공통수학1-고등1-공통학기-두클래스-기출문제 자료집-2025)</option>
+                                <option value="102">22-E-MA-T0-5-1-DCL-FB-2026(22-초등-수학군-수학-초등5-1학기-두클래스-형성 평가_기본-2026)</option>
+                                <option value="101">22-E-MA-T0-4-2-DCL-FB-2025(22-초등-수학군-수학-초등4-2학기-두클래스-형성 평가_기본-2025)</option>
+                                <option value="100">22-E-MA-T0-4-1-DCL-FB-2005(22-초등-수학군-수학-초등4-1학기-두클래스-형성 평가_기본-2005)</option>
+                                <option value="69">22-E-MA-T0-3-2-DCL-FB-2025(22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025)</option>
+                                <option value="68">22-E-MA-T0-3-1-DCL-FB-2025(22-초등-수학군-수학-초등3-1학기-두클래스-형성 평가_기본-2025)</option>
+                                <option value="67">22-M-MA-T0-1-0-DCL-DA-2025(22-중학-수학군-수학-중학1-공통학기-두클래스-수준별 문제집_대단원 평가-2025)</option>
+                                <option value="49">22-H-MA-B2-2-1-DCL-FA-2025(22-고등-수학군-기본수학2-고등2-1학기-두클래스-기말고사 대비-2025)</option>
+                                <option value="48">22-H-MA-B1-1-2-DCL-MA-2025(22-고등-수학군-기본수학1-고등1-2학기-두클래스-중간고사 대비-2025)</option>
+                                <option value="47">22-H-MA-U0-3-2-DCL-SV-2025(22-고등-수학군-수학과 문화-고등3-2학기-두클래스-소단원 평가_발전-2025)</option>
+                                <option value="45">22-H-MA-P0-3-1-DCL-SF-2024(22-고등-수학군-직무수학-고등3-1학기-두클래스-소단원 평가_기초-2024)</option>
+                                <option value="44">22-H-MA-C2-4-2-ABG-MN-2023(22-고등-수학군-공통수학2-고등 공통-2학기-절대등급-본책-2023)</option>
+                                <option value="43">22-H-MA-C1-4-1-NLS-MN-2023(22-고등-수학군-공통수학1-고등 공통-1학기-날선유형스타트-본책-2023)</option>
+                                <option value="42">22-H-MA-G0-3-2-SMB-MN-2022(22-고등-수학군-기하-고등3-2학기-수매씽-본책-2022)</option>
+                                <option value="41">22-H-MA-S0-2-1-SMB-MN-2022(22-고등-수학군-확률과통계-고등2-1학기-수매씽-본책-2022)</option>
+                                <option value="39">22-H-MA-D1-2-2-ABG-MN-2025(22-고등-수학군-미적분1-고등2-2학기-절대등급-본책-2025)</option>
+                                <option value="38">22-H-MA-A0-1-1-SMB-MN-2025(22-고등-수학군-대수-고등1-1학기-수매씽-본책-2025)</option>
+                                <option value="37">22-H-MA-T2-1-2-SMB-MN-2025(22-고등-수학군-수학2-고등1-2학기-수매씽-본책-2025)</option>
+                                <option value="36">22-H-MA-T1-1-1-NLS-MN-2025(22-고등-수학군-수학1-고등1-1학기-날선유형스타트-본책-2025)</option>
+                                <option value="35">22-H-MA-G0-3-1-NLS-MN-2024(22-고등-수학군-기하-고등3-1학기-날선유형스타트-본책-2024)</option>
+                                <option value="34">22-H-MA-S0-3-2-DCL-TW-2024(22-고등-수학군-확률과통계-고등3-2학기-두클래스-쌍둥이 문제-2024)</option>
+                                <option value="33">22-H-MA-D2-3-1-DCL-KI-2024(22-고등-수학군-미적분2-고등3-1학기-두클래스-기출문제 자료집-2024)</option>
+                                <option value="32">22-H-MA-D1-2-1-DCL-MS-2024(22-고등-수학군-미적분1-고등2-1학기-두클래스-최소 성취수준 보장 지도 자료집-2024)</option>
+                                <option value="31">22-H-MA-A0-2-1-DCL-FA-2023(22-고등-수학군-대수-고등2-1학기-두클래스-기말고사 대비-2023)</option>
+                                <option value="30">22-H-MA-T2-2-2-DCL-MA-2023(22-고등-수학군-수학2-고등2-2학기-두클래스-중간고사 대비-2023)</option>
+                                <option value="29">22-H-MA-T1-2-1-DCL-ES-2023(22-고등-수학군-수학1-고등2-1학기-두클래스-서술형 평가-2023)</option>
+                                <option value="28">22-H-MA-B2-1-2-DCL-DA-2023(22-고등-수학군-기본수학2-고등1-2학기-두클래스-대단원 평가-2023)</option>
+                                <option value="27">22-H-MA-B1-1-1-DCL-SV-2022(22-고등-수학군-기본수학1-고등1-1학기-두클래스-소단원 평가_발전-2022)</option>
+                                <option value="26">22-H-MA-C2-4-0-DCL-SB-2022(22-고등-수학군-공통수학2-고등 공통-공통학기-두클래스-소단원 평가_기본-2022)</option>
+                                <option value="25">22-H-MA-C1-4-0-DCL-SF-2022(22-고등-수학군-공통수학1-고등 공통-공통학기-두클래스-소단원 평가_기초-2022)</option>
+                                <option value="24">22-M-MA-T0-3-1-DCL-DA-2022(22-중학-수학군-수학-중학3-1학기-두클래스-수준별 문제집_대단원 평가-2022)</option>
+                                <option value="23">22-M-MA-T0-2-2-DCL-SB-2025(22-중학-수학군-수학-중학2-2학기-두클래스-수준별 문제집_소단원 평가_기본-2025)</option>
+                                <option value="22">22-M-MA-T0-1-2-DCL-SF-2025(22-중학-수학군-수학-중학1-2학기-두클래스-수준별 문제집_소단원 평가_기초-2025)</option>
+                                <option value="21">22-M-MA-T0-3-2-DCL-TW-2025(22-중학-수학군-수학-중학3-2학기-두클래스-해결해요 추가_쌍둥이 문제-2025)</option>
+                                <option value="20">22-M-MA-T0-3-1-DCL-PR-2024(22-중학-수학군-수학-중학3-1학기-두클래스-준비 학습지-2024)</option>
+                                <option value="19">22-M-MA-T0-3-1-EXG-SP-2024(22-중학-수학군-수학-중학3-1학기-특급기출-부록-2024)</option>
+                                <option value="18">22-M-MA-T0-2-1-EXG-MN-2024(22-중학-수학군-수학-중학2-1학기-특급기출-본책-2024)</option>
+                                <option value="17">22-M-MA-T0-2-2-SMK-WB-2023(22-중학-수학군-수학-중학2-2학기-수매씽 개념-워크북-2023)</option>
+                                <option value="16">22-M-MA-T0-2-1-SMK-KN-2023(22-중학-수학군-수학-중학2-1학기-수매씽 개념-개념북-2023)</option>
+                                <option value="15">22-M-MA-T0-1-1-ABG-MN-2023(22-중학-수학군-수학-중학1-1학기-절대등급-본책-2023)</option>
+                                <option value="14">22-M-MA-T0-1-2-SMT-WB-2022(22-중학-수학군-수학-중학1-2학기-수매씽 유형-워크북-2022)</option>
+                                <option value="13">22-M-MA-T0-1-1-SMT-TP-2022(22-중학-수학군-수학-중학1-1학기-수매씽 유형-유형북-2022)</option>
+                                <option value="12">22-E-MA-T0-6-2-DCL-CA-2025(22-초등-수학군-수학-초등6-2학기-두클래스-연산 학습지-2025)</option>
+                                <option value="11">22-E-MA-T0-6-1-DCL-FA-2025(22-초등-수학군-수학-초등6-1학기-두클래스-기말 평가-2025)</option>
+                                <option value="9">22-E-MA-T0-5-1-DCL-ES-2024(22-초등-수학군-수학-초등5-1학기-두클래스-서술형 평가-2024)</option>
+                                <option value="8">22-E-MA-T0-4-2-DCL-PA-2024(22-초등-수학군-수학-초등4-2학기-두클래스-수행 평가-2024)</option>
+                                <option value="7">22-E-MA-T0-4-1-DCL-DH-2023(22-초등-수학군-수학-초등4-1학기-두클래스-단원 평가_심화-2023)</option>
+                                <option value="6">22-E-MA-T0-3-2-DCL-DC-2023(22-초등-수학군-수학-초등3-2학기-두클래스-단원 평가_보충-2023)</option>
+                                <option value="5">22-E-MA-T0-3-1-DCL-DA-2023(22-초등-수학군-수학-초등3-1학기-두클래스-단원 평가_기본-2023)</option>
+                                <option value="4">22-E-MA-T0-2-2-DCL-FB-2022(22-초등-수학군-수학-초등2-2학기-두클래스-형성 평가_기본-2022)</option>
+                                <option value="3">22-E-MA-T0-2-1-DCL-FO-2022(22-초등-수학군-수학-초등2-1학기-두클래스-형성 평가_기초-2022)</option>
+                                <option value="2">22-E-MA-T0-1-1-DCL-DG-2022(22-초등-수학군-수학-초등1-1학기-두클래스-진단 평가-2022)</option>
+                                <option value="1">22-E-MA-T0-1-1-TCD-MN-2022(22-초등-수학군-수학-초등1-1학기-전자책 등-본책-2022)</option>
+                            </select>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#productSearchModal">
+                                <i class="ti ti-search me-1"></i>조회
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">단원 코드<span class="text-danger ms-1">*</span></label>
+                        <div class="position-relative" id="unitCodeBox">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="unitCodeInput" name="unitCode"
+                                       maxlength="20" autocomplete="off" required
+                                       placeholder="3자 이상 입력하면 자동완성"/>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#unitSearchModal">
+                                    <i class="ti ti-search me-1"></i>조회
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-danger mt-1">※ 학기(12자리) · 대단원(14자리) · 전체(20자리) 중 하나로 입력</div>
+                    </div>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-md-2">
+                        <label class="form-label">페이지 시작<span class="text-danger ms-1">*</span></label>
+                        <input type="number" class="form-control" name="startPageNum" min="1" required placeholder="예: 24"/>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">페이지 끝<span class="text-danger ms-1">*</span></label>
+                        <input type="number" class="form-control" name="endPageNum" min="1" required placeholder="예: 25"/>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">용도<span class="text-danger ms-1">*</span></label>
+                        <select class="form-select cursor-pointer" name="serviceUsage" required>
+                            <option value="">용도 선택</option>
+                            <option value="C">공통</option>
+                            <option value="T">교사용</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">등록자</label>
+                        <div class="input-icon">
+                            <input type="text" class="form-control" disabled
+                                   value="jaehyuk.myung"/>
+                            <span class="input-icon-addon"><i class="ti ti-lock"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-2 mb-3">
+            <a class="btn" data-loading data-confirm-cancel
+               href="/item/difi/list.donga?curriculum=22&amp;pageNum=1&amp;pageSize=10">취소</a>
+            <button type="submit" class="btn btn-primary">등록 시작</button>
+        </div>
+
+    </form>
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="cancelConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ZIP 등록 취소</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">저장하지 않고 이동하시겠습니까?</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok>저장 하지 않고 이동</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div>
+    <div class="modal modal-blur fade" id="productSearchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title mb-0">출처 조회</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="card mb-3" id="productSearchFilter" data-filter>
+                        <div class="card-body">
+                            <div class="d-flex flex-nowrap gap-2 mb-2">
+                                <div style="width: 15%;">
+                                    <select class="form-select cursor-pointer filter-select" name="keywordType">
+                                        <option value="productCode">출처코드</option>
+                                        <option value="productName">출처명</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="text" class="form-control" name="keyword" placeholder="출처코드 / 출처명"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-nowrap gap-2 mb-3">
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" id="productCurriculumSelect"
+                                            name="curriculum" data-code-source="curriculum" data-default-value="22">
+                                        <option value="">교육과정 전체</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="classType"
+                                            data-code-parent="classtype" data-code-source="classtype">
+                                        <option value="">학교급 전체</option>
+                                        <option value="E">초등</option>
+                                        <option value="M">중학</option>
+                                        <option value="H">고등</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" id="productSubjectCategorySelect"
+                                            name="subjectCategory" data-code-source="subjectcategory">
+                                        <option value="">과목군 전체</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="subject"
+                                            data-code-multi-child="curriculum,classtype,subjectcategory" disabled>
+                                        <option value="">과목 전체</option>
+                                        <option value="T0" data-code-curriculum="22" data-code-classtype="E" data-code-subjectcategory="MA">수학</option>
+                                        <option value="T0" data-code-curriculum="22" data-code-classtype="M" data-code-subjectcategory="MA">수학</option>
+                                        <option value="C1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">공통수학1</option>
+                                        <option value="C2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">공통수학2</option>
+                                        <option value="B1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기본수학1</option>
+                                        <option value="B2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기본수학2</option>
+                                        <option value="T1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학1</option>
+                                        <option value="T2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학2</option>
+                                        <option value="A0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">대수</option>
+                                        <option value="D1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">미적분1</option>
+                                        <option value="D2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">미적분2</option>
+                                        <option value="S0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">확률과통계</option>
+                                        <option value="G0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기하</option>
+                                        <option value="P0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">직무수학</option>
+                                        <option value="I0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">인공지능수학</option>
+                                        <option value="U0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학과 문화</option>
+                                        <option value="T0" data-code-curriculum="15" data-code-classtype="M" data-code-subjectcategory="MA">수학</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="grade"
+                                            data-code-child="classtype" disabled>
+                                        <option value="">학년 전체</option>
+                                        <option value="1" data-code-parent-value="M">중학1</option>
+                                        <option value="1" data-code-parent-value="H">고등1</option>
+                                        <option value="1" data-code-parent-value="E">초등1</option>
+                                        <option value="2" data-code-parent-value="M">중학2</option>
+                                        <option value="2" data-code-parent-value="E">초등2</option>
+                                        <option value="2" data-code-parent-value="H">고등2</option>
+                                        <option value="3" data-code-parent-value="H">고등3</option>
+                                        <option value="3" data-code-parent-value="M">중학3</option>
+                                        <option value="3" data-code-parent-value="E">초등3</option>
+                                        <option value="4" data-code-parent-value="E">초등4</option>
+                                        <option value="4" data-code-parent-value="H">고등 공통</option>
+                                        <option value="5" data-code-parent-value="E">초등5</option>
+                                        <option value="6" data-code-parent-value="E">초등6</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="term">
+                                        <option value="">학기 전체</option>
+                                        <option value="0">공통학기</option>
+                                        <option value="1">1학기</option>
+                                        <option value="2">2학기</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="serviceUsage">
+                                        <option value="">용도 전체</option>
+                                        <option value="C">공통</option>
+                                        <option value="T">교사용</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn" data-reset><i class="ti ti-refresh me-1"></i>초기화</button>
+                                <button type="button" class="btn btn-primary"
+                                        hx-get="/product/search-modal.donga" hx-target="#productSearchResult"
+                                        hx-swap="outerHTML" hx-include="#productSearchFilter">
+                                    <i class="ti ti-search me-1"></i>조회
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="productSearchResult" hx-get="/product/search-modal.donga" hx-trigger="shown.bs.modal from:#productSearchModal"
+                         hx-target="this" hx-swap="outerHTML" hx-include="#productSearchFilter">
+
+                        <div class="text-center text-muted py-5">
+                            검색 조건을 입력한 뒤 조회해 주세요.
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" data-product-confirm>선택</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subjectRows = [{"classType":"E","curriculum":"22","sequence":1,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"초등 수학"},{"classType":"M","curriculum":"22","sequence":2,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"},{"classType":"H","curriculum":"22","sequence":3,"subject":"C1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학1","viewSubjectName":"고등 공통수학1"},{"classType":"H","curriculum":"22","sequence":4,"subject":"C2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학2","viewSubjectName":"고등 공통수학2"},{"classType":"H","curriculum":"22","sequence":5,"subject":"B1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학1","viewSubjectName":"고등 기본수학1"},{"classType":"H","curriculum":"22","sequence":6,"subject":"B2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학2","viewSubjectName":"고등 기본수학2"},{"classType":"H","curriculum":"22","sequence":7,"subject":"T1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학1","viewSubjectName":"고등 수학1"},{"classType":"H","curriculum":"22","sequence":8,"subject":"T2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학2","viewSubjectName":"고등 수학2"},{"classType":"H","curriculum":"22","sequence":9,"subject":"A0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"대수","viewSubjectName":"고등 대수"},{"classType":"H","curriculum":"22","sequence":10,"subject":"D1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분1","viewSubjectName":"고등 미적분1"},{"classType":"H","curriculum":"22","sequence":11,"subject":"D2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분2","viewSubjectName":"고등 미적분2"},{"classType":"H","curriculum":"22","sequence":12,"subject":"S0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"확률과통계","viewSubjectName":"고등 확률과통계"},{"classType":"H","curriculum":"22","sequence":13,"subject":"G0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기하","viewSubjectName":"고등 기하"},{"classType":"H","curriculum":"22","sequence":14,"subject":"P0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"직무수학","viewSubjectName":"고등 직무수학"},{"classType":"H","curriculum":"22","sequence":15,"subject":"I0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"인공지능수학","viewSubjectName":"고등 인공지능수학"},{"classType":"H","curriculum":"22","sequence":16,"subject":"U0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학과 문화","viewSubjectName":"고등 수학과 문화"},{"classType":"M","curriculum":"15","sequence":17,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"}];
+
+            populateSelectOptions(document.getElementById('productCurriculumSelect'),
+                distinctBy(subjectRows, r => r.curriculum).map(r => ({value: r.curriculum, text: r.curriculum})),
+                '교육과정 전체');
+
+            populateSelectOptions(document.getElementById('productSubjectCategorySelect'),
+                distinctBy(subjectRows, r => r.subjectCategory).map(r => ({value: r.subjectCategory, text: r.subjectCategoryName})),
+                '과목군 전체');
+        });
+    </script>
+
+    <script>
+        // 행 아무 데나 클릭해도 라디오가 잡히게 함(결과 표가 htmx 로 갈아끼워져 모달에 위임) — 미사용 행은 pe-none 이라 클릭이 안 온다
+        document.getElementById('productSearchModal').addEventListener('click', e => {
+            const radio = e.target.closest('tbody tr')?.querySelector('input[name="productPick"]');
+            if (radio) radio.checked = true;
+        });
+    </script>
+</div>
+    <div>
+    <div class="modal modal-blur fade" id="unitSearchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title mb-0">단원 코드 조회</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="card mb-3" id="unitSearchFilter" data-filter>
+                        <div class="card-body">
+                            <div class="d-flex flex-nowrap gap-2 mb-2">
+                                <div style="width: 15%;">
+                                    <select class="form-select cursor-pointer filter-select" name="keywordType">
+                                        <option value="unitCode">단원 코드</option>
+                                        <option value="unitName">단원명</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="text" class="form-control" name="keyword" placeholder="단원 코드 / 단원명"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-nowrap gap-2 mb-3">
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" id="unitCurriculumSelect"
+                                            name="curriculum" data-code-source="curriculum" data-default-value="22">
+                                        <option value="">교육과정 전체</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="classType"
+                                            data-code-parent="classtype" data-code-source="classtype">
+                                        <option value="">학교급 전체</option>
+                                        <option value="E">초등</option>
+                                        <option value="M">중학</option>
+                                        <option value="H">고등</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" id="unitSubjectCategorySelect"
+                                            name="subjectCategory" data-code-source="subjectcategory">
+                                        <option value="">과목군 전체</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="subject"
+                                            data-code-multi-child="curriculum,classtype,subjectcategory" disabled>
+                                        <option value="">과목 전체</option>
+                                        <option value="T0" data-code-curriculum="22" data-code-classtype="E" data-code-subjectcategory="MA">수학</option>
+                                        <option value="T0" data-code-curriculum="22" data-code-classtype="M" data-code-subjectcategory="MA">수학</option>
+                                        <option value="C1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">공통수학1</option>
+                                        <option value="C2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">공통수학2</option>
+                                        <option value="B1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기본수학1</option>
+                                        <option value="B2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기본수학2</option>
+                                        <option value="T1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학1</option>
+                                        <option value="T2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학2</option>
+                                        <option value="A0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">대수</option>
+                                        <option value="D1" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">미적분1</option>
+                                        <option value="D2" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">미적분2</option>
+                                        <option value="S0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">확률과통계</option>
+                                        <option value="G0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">기하</option>
+                                        <option value="P0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">직무수학</option>
+                                        <option value="I0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">인공지능수학</option>
+                                        <option value="U0" data-code-curriculum="22" data-code-classtype="H" data-code-subjectcategory="MA">수학과 문화</option>
+                                        <option value="T0" data-code-curriculum="15" data-code-classtype="M" data-code-subjectcategory="MA">수학</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="grade"
+                                            data-code-child="classtype" disabled>
+                                        <option value="">학년 전체</option>
+                                        <option value="1" data-code-parent-value="M">중학1</option>
+                                        <option value="1" data-code-parent-value="H">고등1</option>
+                                        <option value="1" data-code-parent-value="E">초등1</option>
+                                        <option value="2" data-code-parent-value="M">중학2</option>
+                                        <option value="2" data-code-parent-value="E">초등2</option>
+                                        <option value="2" data-code-parent-value="H">고등2</option>
+                                        <option value="3" data-code-parent-value="H">고등3</option>
+                                        <option value="3" data-code-parent-value="M">중학3</option>
+                                        <option value="3" data-code-parent-value="E">초등3</option>
+                                        <option value="4" data-code-parent-value="E">초등4</option>
+                                        <option value="4" data-code-parent-value="H">고등 공통</option>
+                                        <option value="5" data-code-parent-value="E">초등5</option>
+                                        <option value="6" data-code-parent-value="E">초등6</option>
+                                    </select>
+                                </div>
+                                <div class="flex-fill">
+                                    <select class="form-select cursor-pointer filter-select" name="term">
+                                        <option value="">학기 전체</option>
+                                        <option value="0">공통학기</option>
+                                        <option value="1">1학기</option>
+                                        <option value="2">2학기</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn" data-reset><i class="ti ti-refresh me-1"></i>초기화</button>
+                                <button type="button" class="btn btn-primary"
+                                        hx-get="/learning/unit/search-modal.donga" hx-target="#unitSearchResult"
+                                        hx-swap="outerHTML" hx-include="#unitSearchFilter">
+                                    <i class="ti ti-search me-1"></i>조회
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="unitSearchResult" hx-get="/learning/unit/search-modal.donga" hx-trigger="shown.bs.modal from:#unitSearchModal"
+                         hx-target="this" hx-swap="outerHTML" hx-include="#unitSearchFilter">
+
+                        <div class="text-center text-muted py-5">
+                            검색 조건을 입력한 뒤 조회해 주세요.
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">닫기</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subjectRows = [{"classType":"E","curriculum":"22","sequence":1,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"초등 수학"},{"classType":"M","curriculum":"22","sequence":2,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"},{"classType":"H","curriculum":"22","sequence":3,"subject":"C1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학1","viewSubjectName":"고등 공통수학1"},{"classType":"H","curriculum":"22","sequence":4,"subject":"C2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"공통수학2","viewSubjectName":"고등 공통수학2"},{"classType":"H","curriculum":"22","sequence":5,"subject":"B1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학1","viewSubjectName":"고등 기본수학1"},{"classType":"H","curriculum":"22","sequence":6,"subject":"B2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기본수학2","viewSubjectName":"고등 기본수학2"},{"classType":"H","curriculum":"22","sequence":7,"subject":"T1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학1","viewSubjectName":"고등 수학1"},{"classType":"H","curriculum":"22","sequence":8,"subject":"T2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학2","viewSubjectName":"고등 수학2"},{"classType":"H","curriculum":"22","sequence":9,"subject":"A0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"대수","viewSubjectName":"고등 대수"},{"classType":"H","curriculum":"22","sequence":10,"subject":"D1","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분1","viewSubjectName":"고등 미적분1"},{"classType":"H","curriculum":"22","sequence":11,"subject":"D2","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"미적분2","viewSubjectName":"고등 미적분2"},{"classType":"H","curriculum":"22","sequence":12,"subject":"S0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"확률과통계","viewSubjectName":"고등 확률과통계"},{"classType":"H","curriculum":"22","sequence":13,"subject":"G0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"기하","viewSubjectName":"고등 기하"},{"classType":"H","curriculum":"22","sequence":14,"subject":"P0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"직무수학","viewSubjectName":"고등 직무수학"},{"classType":"H","curriculum":"22","sequence":15,"subject":"I0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"인공지능수학","viewSubjectName":"고등 인공지능수학"},{"classType":"H","curriculum":"22","sequence":16,"subject":"U0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학과 문화","viewSubjectName":"고등 수학과 문화"},{"classType":"M","curriculum":"15","sequence":17,"subject":"T0","subjectCategory":"MA","subjectCategoryName":"수학군","subjectName":"수학","viewSubjectName":"중학 수학"}];
+
+            populateSelectOptions(document.getElementById('unitCurriculumSelect'),
+                distinctBy(subjectRows, r => r.curriculum).map(r => ({value: r.curriculum, text: r.curriculum})),
+                '교육과정 전체');
+
+            populateSelectOptions(document.getElementById('unitSubjectCategorySelect'),
+                distinctBy(subjectRows, r => r.subjectCategory).map(r => ({value: r.subjectCategory, text: r.subjectCategoryName})),
+                '과목군 전체');
+        });
+    </script>
+</div>
+
+    
+    <template id="hmlPreviewTemplate">
+        <div class="dz-preview list-group-item d-flex align-items-center gap-3">
+            <i class="ti ti-file-text fs-2 text-secondary"></i>
+            <div class="flex-fill" style="min-width: 0;">
+                <div class="text-truncate" data-dz-name></div>
+                <div class="text-secondary" data-dz-size></div>
+                
+                <div class="progress progress-sm mt-1 d-none" data-progress>
+                    <div class="progress-bar" data-dz-uploadprogress></div>
+                </div>
+                <div class="text-danger mt-1" data-dz-errormessage></div>
+            </div>
+            <a href="#" class="btn btn-icon btn-ghost-secondary" data-dz-remove aria-label="파일 제거">
+                <i class="ti ti-x"></i>
+            </a>
+        </div>
+    </template>
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok>로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+    <script src="/webjars/tabler__core/1.7.0/dist/libs/dropzone/dist/dropzone-min-636df3a8e27015e39c86a5f61372c4e5.js"></script>
+    <script>
+        /*
+          Dropzone 은 JS 만 쓴다(기본 CSS 는 이미지 썸네일 전용이라 미로드).
+          autoProcessQueue=false: 파일만 담아두고 전송은 폼 제출 시 한 번에 한다.
+        */
+        // 확장자만 메뉴마다 다르다. 서버도 저장 때 경로 확장자를 같은 기준으로 다시 본다
+        const examFileExtension = ".zip";
+
+        const hmlDropzone = new Dropzone('#hmlDropzone', {
+            url: '#',  // 발급받은 주소로 갈아끼운다. Dropzone 이 생성 시점에 값을 요구할 뿐이다
+            autoProcessQueue: false,
+            maxFiles: 1,
+            maxFilesize: 50,
+            acceptedFiles: examFileExtension,
+            addRemoveLinks: false,
+            previewsContainer: '#hmlFileList',
+            previewTemplate: document.getElementById('hmlPreviewTemplate').innerHTML,
+            dictInvalidFileType: examFileExtension.toUpperCase() + ' 파일만 업로드할 수 있습니다.',
+            dictFileTooBig: '파일이 너무 큽니다({{filesize}}MB). 최대 {{maxFilesize}}MB.'
+        });
+    </script>
+
+    
+    <script src="/webjars/tarekraafat__autocomplete.js/10.2.10/dist/autoComplete.min-242d7afca41a4270c56d72daddf1a8b7.js"></script>
+    <script>
+        const unitCodesUrl = "\/learning\/unit\/codes.donga";
+
+        new autoComplete({
+            selector: '#unitCodeInput',
+            wrapper: false,
+            threshold: 3,
+            debounce: 300,
+            data: {
+                cache: false,
+                src: async query => {
+                    const res = await fetch(unitCodesUrl + '?q=' + encodeURIComponent(query));
+
+                    return res.json();
+                }
+            },
+            resultsList: {
+                // 기본값은 입력칸 뒤(형제)라 absolute 기준이 카드가 된다. 박스 안으로 넣어야 폭이 맞는다
+                destination: '#unitCodeBox',
+                position: 'beforeend',
+                class: 'dropdown-menu show w-100',
+                maxResults: 20,
+                tabSelect: true,
+                noResults: true,
+                element: (list, data) => {
+                    if (data.results.length) return;
+
+                    const message = document.createElement('div');
+                    message.className = 'dropdown-item text-secondary';
+                    message.textContent = '일치하는 단원 코드가 없습니다.';
+                    list.append(message);
+                }
+            },
+            resultItem: {
+                class: 'dropdown-item cursor-pointer',
+                selected: 'active',
+                highlight: true
+            },
+            events: {
+                input: {
+                    selection: e => {
+                        document.getElementById('unitCodeInput').value = e.detail.selection.value;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        /*
+          제출 → 발급(hx-post) → 업로드 → 저장(create) 순서로 이어진다.
+          업로드만 htmx 밖이라 이 스크립트가 두 이음매를 잇는다.
+        */
+        const createUrl = "\/item\/difi\/create.donga";
+        const examForm = document.getElementById('examForm');
+        const examSubmitButton = examForm.querySelector('button[type="submit"]');
+
+        // 다음 단계가 이어지는 응답인지 표시. 중간에 끝나면 버튼을 다시 열어준다
+        let examStepContinues = false;
+
+        // 파일은 Dropzone 이 들고 있어 폼 유효성 검사에 안 걸림 — 형식·용량 반려 파일도 files 에 남으므로 승인된 것만 센다
+        examForm.addEventListener('submit', e => {
+            if (hmlDropzone.getAcceptedFiles().length === 0) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                showToast('HML 파일을 선택해 주세요.', 'danger');
+
+                return;
+            }
+
+            // 필수값이 비면 common.js 가 제출을 막는다. 요청이 안 나가니 버튼도 잠그면 안 된다
+            if (!examForm.checkValidity()) {
+                return;
+            }
+
+            // 앞서 업로드에 실패했으면 상태가 error 로 남아 processQueue 가 건너뛴다
+            hmlDropzone.getAcceptedFiles().forEach(file => file.status = Dropzone.QUEUED);
+
+            examStepContinues = false;
+            examSubmitButton.disabled = true;
+        });
+
+        document.body.addEventListener('examUploadReady', e => {
+            const upload = e.detail;
+
+            examForm.querySelector('[name="examDocumentId"]').value = upload.examDocumentId;
+            examForm.querySelector('[name="filePath"]').value = upload.filePath;
+            examForm.querySelector('[name="fileOrgName"]').value = hmlDropzone.getAcceptedFiles()[0].name;
+
+            // 발급받은 주소로 곧장 PUT. contentType 은 서명에 포함돼 있어 받은 값을 그대로 써야 한다
+            hmlDropzone.options.url = upload.uploadUrl;
+            hmlDropzone.options.method = 'PUT';
+            hmlDropzone.options.binaryBody = true;
+            hmlDropzone.options.headers = { 'Content-Type': upload.contentType };
+
+            examStepContinues = true;
+            hmlDropzone.processQueue();
+        });
+
+        hmlDropzone.on('sending', file => file.previewElement.querySelector('[data-progress]').classList.remove('d-none'));
+
+        hmlDropzone.on('complete', file => file.previewElement.querySelector('[data-progress]').classList.add('d-none'));
+
+        hmlDropzone.on('success', () => htmx.ajax('POST', createUrl, { source: examForm }));
+
+        hmlDropzone.on('error', (file, message) => {
+            showToast(typeof message === 'string' ? message : '파일 업로드에 실패했습니다.', 'danger');
+
+            // 형식·용량으로 반려된 파일은 목록에 남겨둘 이유가 없다
+            if (!file.accepted) {
+                hmlDropzone.removeFile(file);
+
+                return;
+            }
+
+            examSubmitButton.disabled = false;
+        });
+
+        examForm.addEventListener('htmx:afterRequest', () => {
+            if (examStepContinues) {
+                examStepContinues = false;
+
+                return;
+            }
+
+            examSubmitButton.disabled = false;
+        });
+    </script>
+
+    <script>
+        // 검색 모달에서 고른 값을 폼에 반영한다. 모달은 어디에 넣을지 모르므로 쓰는 화면이 받는다.
+        document.querySelector('[data-product-confirm]').addEventListener('click', () => {
+            const picked = document.querySelector('#productSearchModal input[name="productPick"]:checked');
+            if (!picked) return;
+
+            document.querySelector('select[name="productId"]').value = picked.value;
+
+            bootstrap.Modal.getInstance(document.getElementById('productSearchModal')).hide();
+        });
+    </script>
+
+</body>
+</html>
+

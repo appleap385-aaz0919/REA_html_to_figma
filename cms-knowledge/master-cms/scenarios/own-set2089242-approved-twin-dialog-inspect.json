@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"2539-own-set2089242-approved-twin-detail-open","command":["open","https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089242"]},
+ {"label":"2540-own-set2089242-approved-twin-button-availability","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089242')throw Error('Own approved shared set required');return {viewFlag:document.querySelector('#statusForm [name=viewFlag]:checked')?.value,twinCount:document.getElementById('twinCountText')?.innerText,generateDisabled:document.querySelector('[data-twin-generate]')?.matches(':disabled'),working:document.querySelector('[data-twin-generate]')?.dataset.working,modalIsSet:document.getElementById('twinGenerateModal')?.dataset.isSet};})()"]},
+ {"label":"2541-own-set2089242-approved-twin-dialog-open","command":["eval","--file","sources/runtime/qa2089242-open-set-twin-dialog.js"]},
+ {"label":"2542-own-set2089242-approved-twin-dialog-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2543-own-set2089242-approved-twin-dialog-pixels","command":["snapshot"],"screenshot":true}
+],"tailChars":250}

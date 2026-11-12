@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1951-qa-item2089175-omr-preview-open",
+  "startedUtc": "2026-11-09T08:23:22.813967+00:00",
+  "command": [
+    "eval",
+    "(async()=>{const main=document.querySelector('.page-wrapper'),buttons=[...main.querySelectorAll('button')].filter(e=>e.innerText.includes('OMR 미리보기'));if(new URLSearchParams(location.search).get('itemId')!=='2089175'||buttons.length!==1||document.querySelector('.modal.show'))throw Error('Expected QA OMR preview control');const modal=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('OMR modal did not finish showing')),3500);document.addEventListener('shown.bs.modal',e=>{clearTimeout(timer);resolve(e.target);},{once:true});buttons[0].click();});return {modalId:modal.id,text:modal.innerText};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089175"
+    },
+    "error": null,
+    "localSeconds": 0.068
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "action_returned",
+  "action": {
+    "success": false,
+    "data": null,
+    "error": "Evaluation error: Error: OMR modal did not finish showing\n    at <anonymous>:1:407",
+    "localSeconds": 3.605
+  }
+}

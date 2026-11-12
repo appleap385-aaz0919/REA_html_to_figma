@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "targetUrl": "https://dev-exambank.dongahub.com/main.donga",
+  "status": "active",
+  "summary": "Owned paper1094/R/1177 at 1–1 accepted normal Save of 2–1. Both controls passed HTML min/required checks; normal POST was observed and independent GET confirmed 1190/2–1 plus a success toast. Immediately restored 1–1 through normal Save, resulting in detail1191. All baseline detail fields, actions and tables match after ignoring version and transient alerts. Member2089238, title, source, Common usage and draft status preserved. Both PNGs viewed. Master95; no Service deployment.",
+  "runtimeContext": {
+    "app": "Orca",
+    "source": "사용자 확인",
+    "blocker": null,
+    "blockedPath": "C:\\Users\\jaehyuk.myung\\AppData\\Roaming\\orca\\orca-runtime.json",
+    "error": null,
+    "connection": "verified_working_via_agent_browser_explicit_cdp",
+    "targetWindowId": 6755210,
+    "snapshotNamespace": "master-cms-learning-20261105",
+    "correction": "앞서 안내한 ChatGPT 데스크톱 앱의 확장 프로그램 설치만으로 이 Orca 세션에 연결된다고 확인된 것은 아니다."
+  },
+  "counts": {
+    "userProvidedEntryUrls": 1,
+    "observedCmsPages": null,
+    "userScreenshotObservedPages": 1,
+    "observedCmsFunctions": null,
+    "verifiedCmsBehaviors": null,
+    "siteDataMutations": 95,
+    "totalPages": null,
+    "totalFunctions": null,
+    "overallCompletionPercent": null
+  },
+  "connectionObservations": [
+    {
+      "method": "확장 프로그램 설치 후 cua_repl surface inventory 재확인",
+      "result": "browser access host unavailable; native pipe unavailable",
+      "implication": "확장 프로그램 설치 이후에도 이 세션에서 직접 Chrome을 읽을 수 없었다."
+    },
+    {
+      "method": "Orca computer capabilities / list-apps",
+      "result": "runtime_unavailable: Could not read Orca runtime metadata",
+      "implication": "Orca 자체 도구도 런타임 연결 정보에 접근하지 못했다."
+    },
+    {
+      "method": "Orca 런타임 메타데이터 경로 Get-Item",
+      "result": "System.UnauthorizedAccessException: Access is denied",
+      "implication": "해당 파일의 메타데이터 조회가 거부되었다. 단순히 Orca가 실행되지 않았다고 결론내릴 수 없다. 파일 내용이나 인증정보는 읽거나 저장하지 않았다."
+    },
+    {
+      "method": "cua_repl Chrome tab connection",
+      "result": "The browser access host is unavailable",
+      "implication": "이 세션에서 브라우저 호스트를 통해 Chrome 탭을 읽을 수 없었다. 사이트 자체의 장애를 의미하지 않는다."
+    },
+    {
+      "method": "cua_repl surface inventory",
+      "result": "apps=[], browsers=[]; native pipe unavailable; browser access host unavailable",
+      "implication": "이 세션에서 브라우저와 Windows 화면 제어 연결을 사용할 수 없었다."
+    },
+    {
+      "method": "Windows Computer Use @oai/sky app inventory",
+      "result": "Computer Use native pipe is unavailable: failed to connect native pipe (os error 2)",
+      "implication": "별도 Windows Computer Use 진입점에서도 같은 연결 제약을 확인했다."
+    },
+    {
+      "method": "REA browser target discovery at http://127.0.0.1:9222",
+      "result": "provider_unavailable / endpoint_unreachable",
+      "implication": "통상적인 CDP 포트에서 접근 가능한 디버깅 브라우저를 찾지 못했다. 실제 Chrome 설정이나 다른 포트의 존재 여부는 확인하지 못했다."
+    },
+    {
+      "method": "Web reader open target URL",
+      "result": "URL is not accessible via this tool",
+      "implication": "별도 웹 읽기 도구에서는 대상을 읽지 못했다. Chrome 로그인 세션을 사용한 접근은 아니다."
+    },
+    {
+      "method": "PowerShell unauthenticated HTTP GET target URL",
+      "result": "원격 서버에 연결할 수 없습니다.",
+      "implication": "현재 실행 환경에서 직접 HTTP 요청도 실패했다. 원인이나 사용자 Chrome의 접속 가능 여부는 확정할 수 없다."
+    }
+  ],
+  "nextSteps": [
+    "Use the latest coverage map and source evidence for future monitoring, QA and storyboards.",
+    "Verify the outstanding sample-specific cases when a real translation HML or normal Definition set ZIP/parser specification becomes available.",
+    "Start Service CMS research when the user supplies that environment."
+  ],
+  "unknowns": [
+    "Remaining pages, state variants and detailed role-dependent permissions.",
+    "Deployment/service propagation and remaining editor/OMR branches.",
+    "Server/DB implementation and intended cross-channel synchronization policy."
+  ],
+  "latestSessionEvidence": "session-20261111-phase77.json",
+  "coverageSnapshot": {
+    "cutoffEvidence": 354,
+    "inventoryRecords": 128,
+    "featureGroups": 232,
+    "completionPercent": null
+  },
+  "lastRetainedEvidence": "3473-paper1094-reversed-range-final-independent-readback",
+  "resumeNote": "Owned paper1094/R/1177 at 1–1 accepted normal Save of 2–1. Both controls passed HTML min/required checks; normal POST was observed and independent GET confirmed 1190/2–1 plus a success toast. Immediately restored 1–1 through normal Save, resulting in detail1191. All baseline detail fields, actions and tables match after ignoring version and transient alerts. Member2089238, title, source, Common usage and draft status preserved. Both PNGs viewed. Master95; no Service deployment.",
+  "countsMeaning": "siteDataMutations counts confirmed server operations, not affected rows. Use mutation-ledger.json for exact operations. Inventory through354 is historical; subsequent runtime evidence is in session phase records.",
+  "omrRuntimeCoverage": "omr-runtime-coverage.json",
+  "plannedResumeDate": "2026-11-09",
+  "handoffFile": "PAUSED-20261109-2235.md",
+  "lastResumeDate": "2026-11-10",
+  "pauseReason": null,
+  "latestCoverageMap": "coverage-supplement-20261111-phase77.json",
+  "actionableQueue": {
+    "identified": 6,
+    "verified": 6,
+    "remaining": 0
+  }
+}

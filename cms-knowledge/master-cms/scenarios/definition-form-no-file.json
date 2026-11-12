@@ -1,0 +1,7 @@
+{"steps":[
+ {"label":"1864-definition-form-current-open","command":["open","https://dev-exambank.dongahub.com/item/difi/form.donga?curriculum=22&pageNum=1&pageSize=100"]},
+ {"label":"1865-definition-form-current-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"1866-definition-form-current-upload-state","command":["eval","--file","sources/runtime/registration-upload-observation.js"]},
+ {"label":"1867-definition-form-submit-no-file","command":["eval","(() => {const f=document.querySelector('#examForm');if(location.pathname!=='/item/difi/form.donga'||!f||document.querySelectorAll('.dz-preview').length)throw Error('Expected empty ZIP form');f.querySelector('button[type=submit]').click();return {action:'Click actual registration Save with no uploaded file'};})()"]},
+ {"label":"1868-definition-form-no-file-result","command":["eval","--file","sources/runtime/registration-upload-observation.js"]}
+],"tailChars":700}

@@ -1,0 +1,522 @@
+[
+  {
+    "modalId": "REV_PAP_DEPLOY",
+    "variants": [
+      {
+        "label": "실제 배포 모달·미배포2건",
+        "source": "cms-knowledge/master-cms/evidence/1226-paper-used-deploy-dialog.png",
+        "crop": {
+          "x": 635,
+          "y": 298,
+          "w": 540,
+          "h": 479
+        },
+        "controls": [
+          {
+            "label": "배포 확인·포함 문항 안내",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 490,
+              "h": 112
+            },
+            "body": "포함 문항 전체 배포와 Master 폐기 문항 제외를 안내합니다."
+          },
+          {
+            "label": "AI출제마법사 CMS",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 237,
+              "w": 490,
+              "h": 74
+            },
+            "body": "대상 선택과 가능 여부를 표시합니다. 이 상태는 미배포 문항2건으로 선택할 수 없습니다."
+          },
+          {
+            "label": "개발 서비스",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 319,
+              "w": 490,
+              "h": 74
+            },
+            "body": "대상 선택과 가능 여부를 표시합니다. 이 상태는 미배포 문항2건으로 선택할 수 없습니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 403,
+              "y": 432,
+              "w": 50,
+              "h": 32
+            },
+            "body": "배포하지 않고 창을 닫습니다. 우측 닫기와 같은 설명을 사용합니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "배포",
+            "kind": "button",
+            "box": {
+              "x": 465,
+              "y": 432,
+              "w": 50,
+              "h": 32
+            },
+            "body": "선택 가능한 대상을 선택해야 활성화됩니다. 이 상태는 비활성이며 실제 배포는 미실행입니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_PAP_ADD",
+    "variants": [
+      {
+        "label": "실제3010 crop·결과1건·안내 닫힘",
+        "source": "cms-knowledge/master-cms/evidence/3010-own-paper1094-set242-search-result.png",
+        "crop": {
+          "x": 335,
+          "y": 28,
+          "w": 1140,
+          "h": 523
+        },
+        "mapping": "보존 DOM의 header/filter 좌표는 동일합니다. 실제 세트 후보 행의 높이 차이15px는 table 높이와 footer y에만 반영했습니다. 초기화/조회는 filter 영역이며 footer 번호를 부여하지 않습니다.",
+        "controls": [
+          {
+            "label": "추가 조건 안내",
+            "kind": "button",
+            "box": {
+              "x": 122.625,
+              "y": 8.5,
+              "w": 40,
+              "h": 40
+            },
+            "body": "정보 아이콘으로 사용·미사용 문항, 세트 단위 추가, 같은 출처 조건을 안내합니다.",
+            "region": "header"
+          },
+          {
+            "label": "검색 기준·검색어",
+            "kind": "fields",
+            "box": {
+              "x": 46,
+              "y": 102,
+              "w": 314.171875,
+              "h": 40
+            },
+            "body": "문항 ID·지문·문제·등록자 ID·원본 파일명 기준으로 검색어를 입력합니다."
+          },
+          {
+            "label": "교과 분류",
+            "kind": "fields",
+            "box": {
+              "x": 368.171875,
+              "y": 102,
+              "w": 725.828125,
+              "h": 40
+            },
+            "body": "교육과정·학교급·과목군·과목·학년·학기를 선택하며 하위 선택지는 상위 분류와 연동됩니다."
+          },
+          {
+            "label": "난이도·형태",
+            "kind": "fields",
+            "box": {
+              "x": 46,
+              "y": 150,
+              "w": 568.9375,
+              "h": 40
+            },
+            "body": "난이도와 형태1·형태2·형태3으로 검색합니다."
+          },
+          {
+            "label": "상태",
+            "kind": "fields",
+            "box": {
+              "x": 86.5,
+              "y": 208,
+              "w": 617.59375,
+              "h": 20
+            },
+            "body": "전체·초안·실패(재등록)·승인(사용)·승인(미사용)·폐기를 선택하며 기본 선택은 사용·미사용입니다."
+          },
+          {
+            "label": "초기화",
+            "kind": "button",
+            "box": {
+              "x": 915.078125,
+              "y": 198,
+              "w": 94,
+              "h": 40
+            },
+            "body": "검색 조건을 기본값으로 되돌립니다. 결과를 갱신하려면 조회를 누릅니다.",
+            "region": "filter"
+          },
+          {
+            "label": "조회",
+            "kind": "button",
+            "box": {
+              "x": 1014,
+              "y": 198,
+              "w": 80,
+              "h": 40
+            },
+            "body": "현재 검색 조건으로 후보 결과를 갱신합니다.",
+            "region": "filter"
+          },
+          {
+            "label": "검색 결과·후보 선택",
+            "kind": "table",
+            "box": {
+              "x": 25,
+              "y": 303,
+              "w": 1090,
+              "h": 118
+            },
+            "body": "후보의 선택·ID·문제·형태/난이도·단원·상태·선택 불가 사유를 확인합니다. 세트는 한 자식을 선택해도 전체 그룹으로 추가되며 이미 포함된 문항은 선택할 수 없습니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 979,
+              "y": 464,
+              "w": 62,
+              "h": 40
+            },
+            "body": "추가하지 않고 창을 닫습니다. 우측 닫기와 같은 종료 설명을 사용합니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "추가",
+            "kind": "button",
+            "box": {
+              "x": 1053,
+              "y": 464,
+              "w": 62,
+              "h": 40
+            },
+            "body": "선택 후보를 수정 폼에 추가합니다. 후보가 없으면 비활성이며 평가지 저장 전에는 로컬 변경입니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_PAP_REMOVE",
+    "variants": [
+      {
+        "label": "실제 세트4문항 제외",
+        "source": "cms-knowledge/master-cms/evidence/3022-own-paper1094-remove-set-dialog-read.png",
+        "crop": {
+          "x": 715,
+          "y": 432,
+          "w": 380,
+          "h": 211
+        },
+        "controls": [
+          {
+            "label": "제외 확인·대상",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 330,
+              "h": 44
+            },
+            "body": "평가지 제외 여부와 지문 ID·문항 수를 확인합니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 243,
+              "y": 164,
+              "w": 50,
+              "h": 32
+            },
+            "body": "그룹을 유지하고 창을 닫습니다. 우측 닫기와 같은 설명을 사용합니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "제외",
+            "kind": "button",
+            "box": {
+              "x": 305,
+              "y": 164,
+              "w": 50,
+              "h": 32
+            },
+            "body": "대상 단건 또는 세트 그룹 전체를 로컬 구성에서 제외합니다. Master 문항 삭제가 아닙니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_PAP_CANCEL",
+    "variants": [
+      {
+        "label": "실제 평가지 수정 취소",
+        "source": "cms-knowledge/master-cms/evidence/1212-paper-original-detail-restored.png",
+        "crop": {
+          "x": 715,
+          "y": 444,
+          "w": 380,
+          "h": 187
+        },
+        "controls": [
+          {
+            "label": "이동 확인",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 330,
+              "h": 20
+            },
+            "body": "저장하지 않고 이동할지 확인합니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 158.34375,
+              "y": 140,
+              "w": 50,
+              "h": 32
+            },
+            "body": "창을 닫고 수정 화면에 머뭅니다. 우측 닫기와 같은 설명을 사용합니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "kind": "button",
+            "box": {
+              "x": 220.34375,
+              "y": 140,
+              "w": 134.65625,
+              "h": 32
+            },
+            "body": "로컬 변경을 저장하지 않고 현재본 상세로 돌아갑니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_PAP_DISCARD",
+    "variants": [
+      {
+        "label": "실제 D 선택 후 평가지 저장",
+        "source": "cms-knowledge/master-cms/evidence/1180-paper-discard-confirm-state.png",
+        "crop": {
+          "x": 715,
+          "y": 434,
+          "w": 380,
+          "h": 207
+        },
+        "controls": [
+          {
+            "label": "저장 확인·폐기 안내",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 330,
+              "h": 40
+            },
+            "body": "저장 여부와 폐기 후 다시 수정할 수 없음을 안내합니다. 실제 제목은 평가지 저장입니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 243,
+              "y": 160,
+              "w": 50,
+              "h": 32
+            },
+            "body": "폐기 저장을 실행하지 않고 창을 닫습니다. 우측 닫기와 같은 설명을 사용합니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "저장",
+            "kind": "button",
+            "box": {
+              "x": 305,
+              "y": 160,
+              "w": 50,
+              "h": 32
+            },
+            "body": "D 상태의 저장을 최종 제출하는 소스 경로입니다. 실제 최종 폐기는 미실행입니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_SRC_CREATE_CANCEL",
+    "variants": [
+      {
+        "label": "보존 DOM readonly crop",
+        "image": "design-specs/revision-captures/preserved-dom-source-create-cancel-crop.png",
+        "provenance": "preserved-dom-readonly",
+        "controls": [
+          {
+            "label": "확인 내용",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 330,
+              "h": 20
+            },
+            "body": "저장하지 않고 등록 폼을 떠날지 확인합니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 158.34375,
+              "y": 140,
+              "w": 50,
+              "h": 32
+            },
+            "body": "취소 또는 우측 닫기로 창을 닫고 기존 입력 상태에 머뭅니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "kind": "button",
+            "box": {
+              "x": 220.34375,
+              "y": 140,
+              "w": 134.65625,
+              "h": 32
+            },
+            "body": "등록하지 않고 출처 목록으로 이동합니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_SRC_USE_IMPACT",
+    "variants": [
+      {
+        "label": "보존 DOM readonly crop",
+        "image": "design-specs/revision-captures/preserved-dom-source-use-impact-crop.png",
+        "provenance": "preserved-dom-readonly",
+        "controls": [
+          {
+            "label": "확인 내용",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 490,
+              "h": 247
+            },
+            "body": "출처코드·출처명·매핑 수와 기존 매핑 유지·신규 등록 후보 제외 영향을 확인합니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 322.28125,
+              "y": 366,
+              "w": 50,
+              "h": 32
+            },
+            "body": "취소 또는 우측 닫기로 창을 닫고 기존 입력 상태에 머뭅니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "미사용(N)으로 변경",
+            "kind": "button",
+            "box": {
+              "x": 384.28125,
+              "y": 366,
+              "w": 130.71875,
+              "h": 32
+            },
+            "body": "미사용(N) 선택을 로컬 폼에 유지합니다. 서버 변경은 이후 최종 저장에서 확정됩니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modalId": "REV_SRC_EDIT_CANCEL",
+    "variants": [
+      {
+        "label": "보존 DOM readonly crop",
+        "image": "design-specs/revision-captures/preserved-dom-source-edit-cancel-crop.png",
+        "provenance": "preserved-dom-readonly",
+        "controls": [
+          {
+            "label": "확인 내용",
+            "kind": "fields",
+            "box": {
+              "x": 25,
+              "y": 81,
+              "w": 330,
+              "h": 20
+            },
+            "body": "저장하지 않고 수정 폼을 떠날지 확인합니다."
+          },
+          {
+            "label": "취소",
+            "kind": "button",
+            "box": {
+              "x": 158.34375,
+              "y": 140,
+              "w": 50,
+              "h": 32
+            },
+            "body": "취소 또는 우측 닫기로 창을 닫고 기존 입력 상태에 머뭅니다.",
+            "region": "footer",
+            "footerNo": 1
+          },
+          {
+            "label": "저장 하지 않고 이동",
+            "kind": "button",
+            "box": {
+              "x": 220.34375,
+              "y": 140,
+              "w": 134.65625,
+              "h": 32
+            },
+            "body": "변경을 저장하지 않고 돌아가는 소스 경로이며 모든 입력 보존은 미검증입니다.",
+            "region": "footer",
+            "footerNo": 2
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "schemaVersion":1,"date":"2026-11-10","status":"set_membership_restored_and_same_passage_error_confirmed","evidenceRange":[2567,2602],"lastEvidence":"2602-own-set-copy2089358-membership-final-visual-state",
+  "summary":"복제 지문2089357의 쌍둥이 연결을 해제하자 두 세트의 여덟 자식 모두 그룹0개가 됐고 생성 이력과 내용·버전·상태는 유지됐다. 같은 지문의 형제2089359는 추가 가능으로 표시됐으나 실제 추가에서HTTP500이 발생했다. 오류는 비활성 현재 탭에 들어가 활성 추가 탭에서는 보이지 않았다. 서로 다른 원본 지문2089241의 문항2089242를 정상 추가하면HTTP200으로 두 세트 연결이 복원됐다. 최종 원본4Y·복제4R·내용·버전·이력은 유지되고 모달은 닫혔다. 확정Master업무60회다.",
+  "observations":[
+    {"evidence":[2567,2568,2569,2570,2571,2572,2573,2574,2575],"result":"정상 그룹 목록에서 복제 지문2089357의 해제만 한 번 눌렀다. 전송은PASSAGE/지문9357·앵커문항9358이다. 두 세트의 모든 여덟 문항에서 그룹0개를 확인했다. 원본 생성 이력은 유지됐고 원본/복제 수정 참조와 상태는 그대로였다."},
+    {"evidence":[2576,2577,2578,2579],"result":"정상 추가 탭의 기본 목록은 앵커 자신9358을 본인 문항으로 비활성화하고 단건9246을 세트 문항 아님으로 비활성화한다. 반면 같은 지문9357의 형제9359 등은 추가 가능·활성 버튼으로 표시된다. 원본 세트의 각 문항도 추가 가능으로 표시된다."},
+    {"evidence":[2580,2581,2582,2583,2584,2585],"result":"활성인 같은 지문 형제9359의 버튼을 한 번 눌렀다. 실제XHR응답은500·HX-Trigger없음이다. 여덟 문항의 그룹은0개로 유지됐다. 서버 오류 안내는#twinCurrent에 들어갔지만 현재 탭은비활성이고 추가 탭이 활성이라 화면에 보이지 않았다. 표시되는 오류 알림은없었다. 추가 탭의 실제PNG를 직접봤다."},
+    {"evidence":[2586,2587,2588,2589,2590,2591,2592,2593,2594,2595,2596,2597],"result":"문항ID2089242로 정상 조회해 원본 지문2089241 후보 한 건을 확인했다. 추가를 한 번 누르자 등록 안내와 그룹2개가 나타났고 여덟 문항 재조회에서도 두 세트·각4행·기존 이력이 복원됐다. ResourceTiming은 같은 지문 요청500과 서로 다른 지문 요청200을 각각 기록했다. 원본/복제 모델·OMR·HML·상세번호·상태는 유지됐다."},
+    {"evidence":[2598,2599,2600,2601,2602],"result":"현재 쌍둥이 탭을 실제로 열어 복원된 두 세트·여덟 행과 상태를 확인하고PNG를 직접봤다. 모달을 닫았으며 저장되지 않은 내용과 논리적 연결 복원 작업은 남아있지 않다."}
+  ],
+  "artifacts":["set-twin-membership-intent-20261110.json","set-twin-same-passage-add-error-20261110.json","record-set-twin-unlinked.py","record-set-twin-readded.py"],
+  "persistentChanges":{"confirmedMasterOperations":60,"newMasterChangesInThisPhase":2,"unlinkOperations":1,"manualReaddOperations":1,"samePassageFailedProbeAddedToOperationCount":false,"originalPassageId":2089241,"copyPassageId":2089357,"finalMemberSetCount":2,"finalVisibleChildRowCount":8,"originalChildViewFlags":"all Y","copyChildViewFlags":"all R","originalAndCopyVersionsModelsOmrAndHmlUnchanged":true,"generationHistoriesUnchanged":true,"logicalMembershipRestorationPending":false,"serviceDeployment":false},
+  "confirmedIssue":{"type":"same_passage_sibling_candidate_enabled_then_http500_with_hidden_error","anchorItemId":2089358,"targetSiblingItemId":2089359,"sharedPassageId":2089357,"candidateEnabledEvidence":2579,"submitEvidence":2580,"xhrStatusEvidence":2581,"httpStatus":500,"errorTarget":"#twinCurrent","activeTab":"#twinAddPane","visibleError":false,"visibilityEvidence":2585,"positiveControlTargetItemId":2089242,"positiveControlPassageId":2089241,"positiveControlHttpStatus":200,"resourceTimingEvidence":2597,"backendRootCause":null},
+  "pixelEvidence":{"viewed":[2582,2589,2599],"scope":"같은 지문 추가 실패 뒤의 활성 탭, 다른 지문의 정상 후보, 복원된 그룹 목록 세 상태다. 내용 상세는 바뀌지 않았으며 전체스크롤PNG는phase46에 있다."},
+  "remaining":["복제 세트의 공유HTML을 별도로 편집했을 때 원본 세트의 지문과 질문·HML·OMR이 유지되는지 확인한다.","공유 임시저장·세트AI·서로 다른 기존 그룹 병합·디피니션 복합 자료 등 남은 분기를 이어간다.","파생 문항의 생성/이력 버튼 노출 조건, 역할별 서버 동작, 실제 서비스 CMS와 배포는 아직 미검증이다."],
+  "resume":{"url":"https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089358","tab":"t21 copied set at bottom; group2 restored; modal closed","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+  "evidenceLimits":["HTTP500의서버로그·스택·DB는확인하지않아중복제약등근본원인을추정하지않는다.","실패후현재관계의불변을확인했다. 내부의고아행등보이지않는DB변경전체를부정하지않는다.","정상추가의body위임afterRequest관찰은받지못했다. 성공판정은토스트/독립GET/ResourceTiming의200을함께근거로삼는다.","마지막정리시나리오JSON에로컬문법오류가있어브라우저실행전에중단됐다. 고친후2597부터처음실행했으며사이트저장·추가를재제출하지않았다.","같은계정·자체4자식세트·정상UI의표본이다. 모든세트수/상태/역할/서비스로일반화하지않는다.","전체사이트100%완료를주장하지않는다."]
+}

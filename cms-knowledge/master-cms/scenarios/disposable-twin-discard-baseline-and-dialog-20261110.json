@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"3067-own-single216-before-disposable-copy-memberships-history","command":["eval","--file","sources/runtime/qa2089216-twin-readback.js"]},
+ {"label":"3068-own-single-family-before-disposable-copy-controls","command":["eval","--file","sources/runtime/disposable-single-twin-original-controls-read.js"]},
+ {"label":"3069-own-single216-disposable-copy-dialog-open","command":["eval","--file","sources/runtime/qa2089216-open-twin-dialog.js"]},
+ {"label":"3070-own-single216-disposable-copy-dialog-review","command":["eval","(()=>{const m=document.querySelector('#twinGenerateModal');return {shown:m.classList.contains('show'),transitioning:bootstrap.Modal.getInstance(m)?._isTransitioning,isSet:m.dataset.isSet,text:m.innerText,fields:[...m.querySelectorAll('input')].filter(e=>!/token|csrf/i.test(e.name)).map(e=>({name:e.name,value:e.value,checked:e.checked,disabled:e.disabled})),anchorStatus:document.querySelector('#statusForm input[name=viewFlag]:checked')?.value,working:document.querySelector('[data-twin-generate]')?.dataset.working};})()"]}
+],"tailChars":120}

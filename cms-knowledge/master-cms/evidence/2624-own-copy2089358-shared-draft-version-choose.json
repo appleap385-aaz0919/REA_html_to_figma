@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "2624-own-copy2089358-shared-draft-version-choose",
+  "startedUtc": "2026-11-10T02:46:25.783781+00:00",
+  "command": [
+    "eval",
+    "(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#draftLoadModal.show'))throw Error('Own saved draft choice required');const button=document.getElementById('draftEditDraft');if(button.matches(':disabled'))throw Error('Draft choice unavailable');button.click();return {clicked:true,choice:'draft',itemId:2089358};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/all/detail.donga?itemId=2089358&pageNum=1&pageSize=10"
+    },
+    "error": null,
+    "localSeconds": 0.077
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089358&pageNum=1&pageSize=10&draft=Y",
+      "result": {
+        "choice": "draft",
+        "clicked": true,
+        "itemId": 2089358
+      }
+    },
+    "error": null,
+    "localSeconds": 0.643
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/all/modify.donga?itemId=2089358&pageNum=1&pageSize=10&draft=Y",
+      "refs": {
+        "e34687": {
+          "name": "메뉴",
+          "role": "button"
+        },
+        "e34688": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e34689": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e34690": {
+          "name": "문항 수정",
+          "role": "heading"
+        },
+        "e34691": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e34692": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e34693": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e34694": {
+          "name": "취소",
+          "role": "link"
+        },
+        "e34695": {
+          "name": "임시 저장",
+          "role": "button"
+        },
+        "e34696": {
+          "name": "전체 반영",
+          "role": "button"
+        },
+        "e34697": {
+          "name": "메타정보 수정",
+          "role": "tab"
+        },
+        "e34698": {
+          "name": "한글(HML) 수정",
+          "role": "tab"
+        },
+        "e34699": {
+          "name": "HTML 수정",
+          "role": "tab"
+        },
+        "e34700": {
+          "name": "OMR 수정",
+          "role": "tab"
+        },
+        "e34701": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e34702": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e34703": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e34704": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e34705": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e34706": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e34707": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e34708": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e34709": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e34710": {
+          "name": "MASTER",
+          "role": "heading"
+        },
+        "e34711": {
+          "name": "기본 메타 정보",
+          "role": "heading"
+        },
+        "e34712": {
+          "name": "학습 · 매핑 정보",
+          "role": "heading"
+        },
+        "e34713": {
+          "name": " 등록",
+          "role": "button"
+        },
+        "e34714": {
+          "name": " 삭제",
+          "role": "button"
+        },
+        "e34715": {
+          "name": "",
+          "role": "combobox"
+        },
+        "e34716": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e34717": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e34718": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e34719": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e34720": {
+          "name": " 추가",
+          "role": "button"
+        },
+        "e34721": {
+          "name": "지문ID 2089357",
+          "role": "heading"
+        },
+        "e34722": {
+          "name": "문항ID 2089358 초안 최하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e34723": {
+          "name": "문항ID 2089359 초안 최하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e34724": {
+          "name": "문항ID 2089360 초안 최하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e34725": {
+          "name": "문항ID 2089361 초안 최하 주관식 > 단답형 > 일반형",
+          "role": "heading"
+        },
+        "e34726": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e34727": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e34728": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e34729": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e34730": {
+          "name": "×",
+          "role": "link"
+        },
+        "e34731": {
+          "name": "×",
+          "role": "link"
+        },
+        "e34732": {
+          "name": "2089359",
+          "role": "link"
+        },
+        "e34733": {
+          "name": "2089360",
+          "role": "link"
+        },
+        "e34734": {
+          "name": "2089361",
+          "role": "link"
+        },
+        "e34735": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e34736": {
+          "name": "선택",
+          "role": "option"
+        },
+        "e34737": {
+          "name": "최상",
+          "role": "option"
+        },
+        "e34738": {
+          "name": "상",
+          "role": "option"
+        },
+        "e34739": {
+          "name": "중",
+          "role": "option"
+        },
+        "e34740": {
+          "name": "하",
+          "role": "option"
+        },
+        "e34741": {
+          "name": "최하",
+          "role": "option"
+        },
+        "e34742": {
+          "name": "",
+          "role": "button"
+        },
+        "e34743": {
+          "name": "",
+          "role": "button"
+        },
+        "e34744": {
+          "name": "[MA191100] 행렬의 뜻과 성분 알아보기",
+          "role": "checkbox"
+        },
+        "e34745": {
+          "name": "[MA191200] 두 행렬이 서로 같을 조건",
+          "role": "checkbox"
+        }
+      },
+      "removedRefs": [
+        "@e34614",
+        "@e34615",
+        "@e34616",
+        "@e34617",
+        "@e34618",
+        "@e34619",
+        "@e34620",
+        "@e34621",
+        "@e34622",
+        "@e34623",
+        "@e34624",
+        "@e34625",
+        "@e34626",
+        "@e34627",
+        "@e34628",
+        "@e34629",
+        "@e34630",
+        "@e34631",
+        "@e34632",
+        "@e34633",
+        "@e34634",
+        "@e34635",
+        "@e34636",
+        "@e34637",
+        "@e34638",
+        "@e34639",
+        "@e34640",
+        "@e34641",
+        "@e34642",
+        "@e34643",
+        "@e34644",
+        "@e34645",
+        "@e34646",
+        "@e34647",
+        "@e34648",
+        "@e34649",
+        "@e34650",
+        "@e34651",
+        "@e34652",
+        "@e34653",
+        "@e34654",
+        "@e34655",
+        "@e34656",
+        "@e34657",
+        "@e34658",
+        "@e34659",
+        "@e34660",
+        "@e34661",
+        "@e34662",
+        "@e34663",
+        "@e34664",
+        "@e34665",
+        "@e34666",
+        "@e34667",
+        "@e34668",
+        "@e34669",
+        "@e34670",
+        "@e34671",
+        "@e34672",
+        "@e34673",
+        "@e34674",
+        "@e34675",
+        "@e34676",
+        "@e34677",
+        "@e34678",
+        "@e34679",
+        "@e34680",
+        "@e34681",
+        "@e34682",
+        "@e34683",
+        "@e34684",
+        "@e34685",
+        "@e34686"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - button \"메뉴\" [expanded=false, ref=e34687]\n      - link \"문제은행 마스터 CMS\" [ref=e34688]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e34701]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e34702]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e34703]\n          - link \"HML 문항 등록\" [ref=e34704]\n          - link \"디피니션 문항 등록\" [ref=e34705]\n          - link \"쌍둥이 그룹 관리\" [ref=e34706]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e34707]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e34708]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e34709]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e34689]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"전체 문항\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 수정\"\n      - heading \"문항 수정\" [level=2, ref=e34690]\n      - StaticText \"문항 ID\"\n      - StaticText \"2089358 (2089077)\"\n      - StaticText \"지문 ID\"\n      - StaticText \"2089357\"\n      - StaticText \"원본 파일\"\n      - StaticText \"-\"\n      - StaticText \"상태\"\n      - StaticText \"초안\"\n      - StaticText \"배포 여부\"\n      - StaticText \"미배포\"\n      - StaticText \"생성 방식\"\n      - StaticText \"복제\"\n      - alert\n        - StaticText \"\"\n        - StaticText \"임시저장된 정보입니다.\"\n      - tablist\n        - tab \"메타정보 수정\" [ref=e34697]\n        - tab \"한글(HML) 수정\" [ref=e34698]\n        - tab \"HTML 수정\" [ref=e34699]\n        - tab \"OMR 수정\" [ref=e34700]\n      - link \"취소\" [ref=e34691]\n      - button \"임시 저장\" [ref=e34692]\n      - button \"전체 반영\" [ref=e34693]\n      - generic\n        - tabpanel\n          - generic\n            - heading \"MASTER\" [level=3, ref=e34710]\n            - generic\n              - generic\n                - heading \"지문ID 2089357\" [level=4, ref=e34721]\n                  - StaticText \"지문ID 2089357\"\n              - generic\n                - heading \"문항ID 2089358 초안 최하 주관식 > 단답형 > 일반형\" [level=4, ref=e34722]\n                  - StaticText \"문항ID 2089358\"\n                  - StaticText \"초안\"\n                  - StaticText \"최하\"\n                  - StaticText \"주관식 > 단답형 > 일반형\"\n              - generic\n                - heading \"문항ID 2089359 초안 최하 주관식 > 단답형 > 일반형\" [level=4, ref=e34723]\n                  - StaticText \"문항ID \"\n                  - link \"2089359\" [ref=e34732]\n                  - StaticText \"초안\"\n                  - StaticText \"최하\"\n                  - StaticText \"주관식 > 단답형 > 일반형\"\n              - generic\n                - heading \"문항ID 2089360 초안 최하 주관식 > 단답형 > 일반형\" [level=4, ref=e34724]\n                  - StaticText \"문항ID \"\n                  - link \"2089360\" [ref=e34733]\n                  - StaticText \"초안\"\n                  - StaticText \"최하\"\n                  - StaticText \"주관식 > 단답형 > 일반형\"\n              - generic\n                - heading \"문항ID 2089361 초안 최하 주관식 > 단답형 > 일반형\" [level=4, ref=e34725]\n                  - StaticText \"문항ID \"\n                  - link \"2089361\" [ref=e34734]\n                  - StaticText \"초안\"\n                  - StaticText \"최하\"\n                  - StaticText \"주관식 > 단답형 > 일반형\"\n          - generic\n            - heading \"기본 메타 정보\" [level=3, ref=e34711]\n              - StaticText \"\"\n              - StaticText \"기본 메타 정보\"\n            - generic\n              - LabelText\n                - StaticText \"썸네일 (jpg/jpeg/png)\"\n              - StaticText \"-\"\n              - button \" 등록\" [ref=e34713]\n                - StaticText \"\"\n                - StaticText \"등록\"\n              - button \" 삭제\" [ref=e34714]\n                - StaticText \"\"\n                - StaticText \"삭제\"\n              - LabelText\n                - StaticText \"과목 · 학년 (단원코드 기반)\"\n              - generic\n                - textbox [disabled, ref=e34735]: 고등1 공통수학1\n                  - StaticText \"고등1 공통수학1\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"문제\"\n              - generic\n                - textbox [disabled, ref=e34726]: $\\left(\\begin{gathered}2 \\\\ 3\\end{gathered}\\right)$\n                  - StaticText \"$\\\\left(\\\\begin{gathered}2 \\\\\\\\ 3\\\\end{gathered}\\\\right)$\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"난이도\"\n                - StaticText \"*\"\n              - combobox [expanded=false, ref=e34715]: 최하\n                - MenuListPopup\n                  - option \"선택\" [ref=e34736]\n                  - option \"최상\" [ref=e34737]\n                  - option \"상\" [ref=e34738]\n                  - option \"중\" [ref=e34739]\n                  - option \"하\" [ref=e34740]\n                  - option \"최하\" [selected, ref=e34741]\n              - LabelText\n                - StaticText \"세트 문항\"\n              - generic\n                - textbox [disabled, ref=e34727]: Y\n                  - StaticText \"Y\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"세트 ID\"\n              - generic\n                - textbox [disabled, ref=e34728]: 2089357\n                  - StaticText \"2089357\"\n                - StaticText \"\"\n              - LabelText\n                - StaticText \"평가지 등록 여부\"\n              - generic\n                - textbox [disabled, ref=e34729]: N\n                  - StaticText \"N\"\n                - StaticText \"\"\n          - generic\n            - heading \"학습 · 매핑 정보\" [level=3, ref=e34712]\n              - StaticText \"\"\n              - StaticText \"학습 · 매핑 정보\"\n            - StaticText \"* 필수\"\n            - generic\n              - LabelText\n                - StaticText \"단원코드 (N개)\"\n                - StaticText \"*\"\n              - button \" 추가\" [ref=e34716]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"변경 시 좌측 과목 · 학년 · 단원 자동 갱신.\"\n              - generic\n                - StaticText \"22HMAC1GHG1006010000\"\n                - StaticText \"행렬 > 행렬의 뜻 > >\"\n                - button \"\" [ref=e34742]\n                  - StaticText \"\"\n              - LabelText\n                - StaticText \"성취기준 (N개)\"\n              - button \" 추가\" [ref=e34717]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - generic\n                - StaticText \"[10공수1-04-01] 행렬의 뜻을 알고, 실생활 상황을 행렬로 표현할 수 있다.\"\n                - button \"\" [ref=e34743]\n                  - StaticText \"\"\n              - LabelText\n                - StaticText \"내용영역 (N개)\"\n              - button \" 추가\" [ref=e34718]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - LabelText\n                - StaticText \"교과역량 (최대 3개)\"\n              - button \" 추가\" [ref=e34719]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"문제해결\"\n              - link \"×\" [ref=e34730]\n              - LabelText\n                - StaticText \"행동영역\"\n                - StaticText \"*\"\n              - button \" 추가\" [ref=e34720]\n                - StaticText \"\"\n                - StaticText \"추가\"\n              - StaticText \"이해\"\n              - link \"×\" [ref=e34731]\n              - LabelText\n                - StaticText \"유형정보 (단원코드 매핑)\"\n              - generic\n                - LabelText\n                  - StaticText \"[MA191100] 행렬의 뜻과 성분 알아보기\"\n                  - checkbox \"[MA191100] 행렬의 뜻과 성분 알아보기\" [checked=true, ref=e34744]\n                - LabelText\n                  - StaticText \"[MA191200] 두 행렬이 서로 같을 조건\"\n                  - checkbox \"[MA191200] 두 행렬이 서로 같을 조건\" [checked=false, ref=e34745]\n      - link \"취소\" [ref=e34694]\n      - button \"임시 저장\" [ref=e34695]\n      - button \"전체 반영\" [ref=e34696]"
+    },
+    "error": null,
+    "localSeconds": 0.377
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "steps": [
+    {
+      "label": "842-multi-essay-initial-top",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "843-multi-essay-process-title",
+      "command": [
+        "fill",
+        "{ref}",
+        "QA-multi-process"
+      ],
+      "refPattern": "- textbox \"풀이 과정\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "844-multi-essay-answer-title",
+      "command": [
+        "fill",
+        "{ref}",
+        "QA-multi-answer"
+      ],
+      "refPattern": "- textbox \"정답\" \\[[^\\]]*ref=(e\\d+)\\]"
+    },
+    {
+      "label": "845-multi-essay-outer-fixed",
+      "command": [
+        "check",
+        "{ref}"
+      ],
+      "refPattern": "- checkbox \"OMR SET끼리 순서 고정\\(유순\\)\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "846-multi-essay-answer-1-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 3,
+      "matchIndex": 2
+    },
+    {
+      "label": "847-multi-essay-answer-1-popup",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 3,
+      "matchIndex": 2
+    },
+    {
+      "label": "848-multi-essay-answer-1-digit",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"1\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "849-multi-essay-answer-1-apply",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"적용\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "850-multi-essay-add-first-inner",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 SET 추가\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "851-multi-essay-answer-2-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 6,
+      "matchIndex": 5
+    },
+    {
+      "label": "852-multi-essay-answer-2-popup",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 6,
+      "matchIndex": 5
+    },
+    {
+      "label": "853-multi-essay-answer-2-digit",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"2\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "854-multi-essay-answer-2-apply",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"적용\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "855-multi-essay-add-outer",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR SET 추가\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "856-multi-essay-second-inner-fixed",
+      "command": [
+        "check",
+        "{ref}"
+      ],
+      "refPattern": "- checkbox \"순서 고정\\(유순\\)\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "857-multi-essay-answer-3-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 9,
+      "matchIndex": 8
+    },
+    {
+      "label": "858-multi-essay-answer-3-popup",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 9,
+      "matchIndex": 8
+    },
+    {
+      "label": "859-multi-essay-answer-3-digit",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"3\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "860-multi-essay-answer-3-apply",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"적용\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "861-multi-essay-second-inner-add-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 SET 추가\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "862-multi-essay-add-second-inner",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*정답 SET 추가\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 2,
+      "matchIndex": 1
+    },
+    {
+      "label": "863-multi-essay-answer-4-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 12,
+      "matchIndex": 11
+    },
+    {
+      "label": "864-multi-essay-answer-4-popup",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"Σ\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 12,
+      "matchIndex": 11
+    },
+    {
+      "label": "865-multi-essay-answer-4-digit",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"4\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "866-multi-essay-answer-4-apply",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"적용\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "867-multi-essay-swap-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*순서 바꾸기\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "868-multi-essay-swap-blocks",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*순서 바꾸기\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "869-multi-essay-configured-model",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/dom-form-observation.js"
+      ]
+    },
+    {
+      "label": "870-multi-essay-scroll-top",
+      "command": [
+        "scroll",
+        "up",
+        "3000",
+        "--selector",
+        ".page-wrapper"
+      ]
+    },
+    {
+      "label": "871-multi-essay-configured-top",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "872-multi-essay-scroll-middle",
+      "command": [
+        "scroll",
+        "down",
+        "700",
+        "--selector",
+        ".page-wrapper"
+      ]
+    },
+    {
+      "label": "873-multi-essay-configured-middle",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "874-multi-essay-scroll-bottom",
+      "command": [
+        "scroll",
+        "down",
+        "700",
+        "--selector",
+        ".page-wrapper"
+      ]
+    },
+    {
+      "label": "875-multi-essay-configured-bottom",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "876-multi-essay-bottom-model",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/dom-form-observation.js"
+      ]
+    },
+    {
+      "label": "877-multi-essay-preview-reveal",
+      "command": [
+        "scrollintoview",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "878-multi-essay-preview-open",
+      "command": [
+        "click",
+        "{ref}"
+      ],
+      "refPattern": "- button \"[^\"]*OMR 미리보기\" \\[[^\\]]*ref=(e\\d+)\\]",
+      "expectMatches": 1,
+      "matchIndex": 0
+    },
+    {
+      "label": "879-multi-essay-preview-ready",
+      "command": [
+        "snapshot"
+      ],
+      "screenshot": true
+    }
+  ],
+  "tailChars": 7500
+}

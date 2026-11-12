@@ -1,0 +1,6 @@
+{"steps":[
+ {"label":"2195-own-qa-clone-add-once","command":["eval","--file","sources/runtime/qa2089216-add-own-clone-once.js"]},
+ {"label":"2196-own-qa-clone-add-independent-readback","command":["eval","--file","sources/runtime/qa2089216-twin-readback.js"]},
+ {"label":"2197-own-qa-clone-add-candidate-after","command":["eval","(() => {if(new URLSearchParams(location.search).get('itemId')!=='2089216')throw Error('Own anchor only');return {current:document.getElementById('twinCurrent').innerText,candidate:document.getElementById('twinAddResult').innerText,buttons:[...document.querySelectorAll('#twinAddResult button[hx-post]')].map(e=>({path:e.getAttribute('hx-post'),disabled:e.matches(':disabled')})),count:document.getElementById('twinCountText').innerText,alerts:[...document.querySelectorAll('[role=alert]')].map(e=>e.innerText)};})()"],"screenshot":true},
+ {"label":"2198-own-qa-pair-detail-server-readback","command":["eval","--file","sources/runtime/qa-twin-pair-detail-readback.js"]}
+],"tailChars":150}

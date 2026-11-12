@@ -1,0 +1,69 @@
+{
+  "steps": [
+    {
+      "label": "3443-hml-vendor-pending-cancel-editor-notice-dismiss",
+      "command": [
+        "click",
+        "#webhwpSavedModal.show .modal-footer button"
+      ]
+    },
+    {
+      "label": "3444-hml-vendor-pending-cancel-return-to-owned-parent",
+      "command": [
+        "tab",
+        "t8"
+      ]
+    },
+    {
+      "label": "3445-hml-vendor-pending-cancel-close-owned-popup",
+      "command": [
+        "tab",
+        "close",
+        "t15"
+      ]
+    },
+    {
+      "label": "3446-hml-vendor-pending-cancel-parent-pending-before",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-parent-pending-observation.js"
+      ]
+    },
+    {
+      "label": "3447-hml-vendor-pending-cancel-first-confirmation",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-open-parent-cancel.js"
+      ],
+      "screenshot": true
+    },
+    {
+      "label": "3448-hml-vendor-pending-cancel-stay-on-edit",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-stay.js"
+      ]
+    },
+    {
+      "label": "3449-hml-vendor-pending-cancel-parent-pending-after-stay",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-parent-pending-observation.js"
+      ]
+    },
+    {
+      "label": "3450-hml-vendor-pending-cancel-reopen-confirmation",
+      "command": [
+        "eval",
+        "--file",
+        "sources/runtime/hml-cancel239-open-parent-cancel.js"
+      ]
+    }
+  ],
+  "tailChars": 120,
+  "stopOnScreenshotFailure": false
+}

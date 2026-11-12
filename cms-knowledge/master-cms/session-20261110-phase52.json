@@ -1,0 +1,16 @@
+{
+ "schemaVersion":1,"date":"2026-11-10","status":"definition_single_control_and_f_only_approval_confirmed","evidenceRange":[2671,2705],"lastEvidence":"2705-definition695-approved-failed-item-fresh-read",
+ "summary":"694의ORDERED JSON을바이트그대로단독ZIP으로등록해695/P→R/1카드를확인했다. 같은Source13/단원20/페이지1~3/C에서정상파싱됐으므로다중694실패를단독JSON자체와동일시하지않는다. 승인전2089375상세·수정은목록redirect, 이후F단독최종승인을1회실행해문서M→Y와Master2089375/F를확인했다. OMRnull/난이도·단원등메타공란/출처1/평가지0이다. Master업무65회,Service배포없음.",
+ "observations":[
+  {"evidence":[2671,2672,2673,2674,2675,2676,2677,2678,2679,2681,2684],"result":"978B/SHA95c54b6c52e7e4149121df71dd2a4e51cb88963e811f7c27564ba7c8e819ee56인단독ZIP을1회등록했다. 목록20건/695등록중후초안,카드2089375/2089082/검수초기S/본문정답풀이가표시된다."},
+  {"evidence":[2685,2686],"result":"첫직접Master조회helper가redirect를오류로던졌고별도읽기에서상세·수정모두최종item/all/list로redirect임을확인했다. 서버파싱실패나권한미승인으로분류하지않는다."},
+  {"evidence":[2687,2688,2689],"result":"초안높이1400/viewport1014~1015에서0→385스크롤로전체를확인했다. 상단2687·하단2689PNG를직접보았다.2688/2689는동일하단위치다."},
+  {"evidence":[2690,2691,2692,2693,2694,2695,2696],"result":"단일카드F/QA비고입력후승인확인창과최종버튼을구분했다.2693은전환중modals0,2694재진입guard가이미있는modal로차단,2695shown확정후2696에서최종1회클릭했다. 생성hidden은itemIds2089375/loadFlagsF다."},
+  {"evidence":[2697,2698,2699,2700,2701,2702,2703,2704,2705],"result":"승인토스트/문서M중간화면과별도최신목록Y를관찰했고새GET에서최종문서Y를확정했다. Master문항F/2089082는상세·수정에접근가능하고단답형입력은주관식>다답형>일반형으로표시된다. 문서Y의카드는등록실패/실패(재등록)표시와문항상세·수정버튼을갖는다."}
+ ],
+ "artifacts":["definition-ordered1-control-intent-20261110.json","definition695-f-only-approval-intent-20261110.json","definition-multi3-failure-static-review-20261110.md","sources/definition695-control-draft-20261110.html","sources/definition695-f-only-approved-final-20261110.html"],
+ "persistentChanges":{"confirmedMasterOperations":65,"newMasterChangesInThisPhase":2,"newDefinitionDocumentId":695,"finalDocumentState":"Y","finalMasterItemId":2089375,"finalMasterDetailId":2089082,"finalMasterViewFlag":"F","serviceDeployment":false},
+ "remaining":["ESSAY와FIVE_CHOICE도694와동일멤버바이트의단독ZIP으로비교하여유형혼합/다중멤버실패후보를좁힌다.","ASSET3는아직미등록이며개별자산입력의정상구조를확인한뒤실제업로드·표시를검증한다.","다중S/F/D혼합검수와정상Definition세트입력은미확정이다.실제해석HML/정상세트ZIP의사용자ID응답과독립조사는계속한다."],
+ "resume":{"url":"https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=695&curriculum=22&pageNum=1&pageSize=100","tab":"t21 own Definition695 final approved document","targetId":"C06F56F8973F594BE8196DCB15B2DEBC","modal":null,"unsavedState":null},
+ "evidenceLimits":["단독성공은qId≠masterId/표지span/현메타정보가이표본에서수용됐다는근거이며다중구성의정확한실패원인은아니다.","F승인후메타공란을확인했으나AI백엔드가어떤분기로처리했는지는미확인이다.","동일외부ID재사용의내부예약여부/중복정책은UI문항0만으로확정하지않았다.","전체100%완료를주장하지않는다."]
+}

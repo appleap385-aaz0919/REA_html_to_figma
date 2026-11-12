@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "controller": "agent-browser",
+  "label": "1973-definition662-final-discard-submit",
+  "startedUtc": "2026-11-09T08:32:39.724380+00:00",
+  "command": [
+    "eval",
+    "(() => {const m=document.querySelector('#examDiscardModal.show'),f=document.getElementById('examDiscardForm');if(new URLSearchParams(location.search).get('examDocumentId')!=='662'||!m||document.querySelectorAll('.modal.show').length!==1||f.elements.examDocumentId.value!=='662'||document.querySelector('[data-exam-judge]')?.dataset.itemIds!=='2089204'||document.querySelector('[name=remark]').value!=='QA-DIFI-20261109-02-DISCARD: isolated development test of final document discard.')throw Error('Final own-QA discard precondition mismatch');m.querySelector('[data-action-ok]').click();return {action:'Submit actual final discard once for QA662 and its own new item2089204'};})()"
+  ],
+  "session": "cms-master-20261109",
+  "targetId": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "before": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "url": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=662&curriculum=22&pageNum=1&pageSize=100"
+    },
+    "error": null,
+    "localSeconds": 0.079
+  },
+  "targetIdBefore": "C06F56F8973F594BE8196DCB15B2DEBC",
+  "stage": "post_snapshot_returned",
+  "action": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=662&curriculum=22&pageNum=1&pageSize=100",
+      "result": {
+        "action": "Submit actual final discard once for QA662 and its own new item2089204"
+      }
+    },
+    "error": null,
+    "localSeconds": 0.122
+  },
+  "snapshot": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 11597230194258808447
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "https://dev-exambank.dongahub.com/item/difi/detail.donga?examDocumentId=662&curriculum=22&pageNum=1&pageSize=100",
+      "refs": {
+        "e21599": {
+          "name": "문제은행 마스터 CMS",
+          "role": "link"
+        },
+        "e21600": {
+          "name": "디피니션 상세",
+          "role": "heading"
+        },
+        "e21601": {
+          "name": "목록",
+          "role": "link"
+        },
+        "e21602": {
+          "name": " 로그아웃",
+          "role": "button"
+        },
+        "e21603": {
+          "name": "기본 정보",
+          "role": "heading"
+        },
+        "e21604": {
+          "name": "분리 문항 리스트",
+          "role": "heading"
+        },
+        "e21605": {
+          "name": "",
+          "role": "textbox"
+        },
+        "e21606": {
+          "name": " 홈",
+          "role": "link"
+        },
+        "e21607": {
+          "name": " 문항 관리",
+          "role": "button"
+        },
+        "e21608": {
+          "name": "전체 문항",
+          "role": "link"
+        },
+        "e21609": {
+          "name": "HML 문항 등록",
+          "role": "link"
+        },
+        "e21610": {
+          "name": "디피니션 문항 등록",
+          "role": "link"
+        },
+        "e21611": {
+          "name": "쌍둥이 그룹 관리",
+          "role": "link"
+        },
+        "e21612": {
+          "name": " 평가지 관리",
+          "role": "link"
+        },
+        "e21613": {
+          "name": " 문항 출처 관리",
+          "role": "link"
+        },
+        "e21614": {
+          "name": " 랩",
+          "role": "link"
+        },
+        "e21615": {
+          "name": " 다운로드",
+          "role": "button"
+        }
+      },
+      "removedRefs": [
+        "@e21568",
+        "@e21569",
+        "@e21570",
+        "@e21571",
+        "@e21572",
+        "@e21573",
+        "@e21574",
+        "@e21575",
+        "@e21576",
+        "@e21577",
+        "@e21578",
+        "@e21579",
+        "@e21580",
+        "@e21581",
+        "@e21582",
+        "@e21583",
+        "@e21584",
+        "@e21585",
+        "@e21586",
+        "@e21587",
+        "@e21588",
+        "@e21589",
+        "@e21590",
+        "@e21591",
+        "@e21592",
+        "@e21593",
+        "@e21594",
+        "@e21595",
+        "@e21596",
+        "@e21597",
+        "@e21598"
+      ],
+      "snapshot": "- generic\n  - generic\n    - complementary\n      - link \"문제은행 마스터 CMS\" [ref=e21599]\n      - list\n        - listitem [level=1]\n          - link \" 홈\" [ref=e21606]\n            - StaticText \"\"\n            - StaticText \"홈\"\n        - listitem [level=1]\n          - button \" 문항 관리\" [expanded=true, ref=e21607]\n            - StaticText \"\"\n            - StaticText \"문항 관리\"\n          - link \"전체 문항\" [ref=e21608]\n          - link \"HML 문항 등록\" [ref=e21609]\n          - link \"디피니션 문항 등록\" [ref=e21610]\n          - link \"쌍둥이 그룹 관리\" [ref=e21611]\n        - listitem [level=1]\n          - link \" 평가지 관리\" [ref=e21612]\n            - StaticText \"\"\n            - StaticText \"평가지 관리\"\n        - listitem [level=1]\n          - link \" 문항 출처 관리\" [ref=e21613]\n            - StaticText \"\"\n            - StaticText \"문항 출처 관리\"\n        - listitem [level=1]\n          - link \" 랩\" [ref=e21614]\n            - StaticText \"\"\n            - StaticText \"랩\"\n    - banner\n      - StaticText \"마스터\"\n      - generic\n        - StaticText \"접속자 \"\n        - strong\n          - StaticText \"jaehyuk.myung\"\n      - form\n        - button \" 로그아웃\" [ref=e21602]\n          - StaticText \"\"\n          - StaticText \"로그아웃\"\n    - generic\n      - list \"breadcrumbs\"\n        - listitem [level=1]\n          - StaticText \"시스템 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"문항 관리\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"디피니션 문항 등록\"\n        - listitem [level=1]\n          - StaticText \"›\"\n          - StaticText \"상세\"\n      - heading \"디피니션 상세\" [level=2, ref=e21600]\n      - StaticText \"폐기\"\n      - generic\n        - StaticText \"폐기된 시험지입니다.\"\n        - StaticText \"조회만 가능하며 복원할 수 없습니다.\"\n      - generic\n        - heading \"기본 정보\" [level=3, ref=e21603]\n        - DescriptionList\n          - term \"시험지 ID\"\n          - definition\n            - StaticText \"662\"\n          - term \"원본 파일\"\n          - definition\n            - StaticText \"QA-DIFI-20261109-02-DISCARD.zip\"\n            - button \" 다운로드\" [ref=e21615]\n              - StaticText \"\"\n              - StaticText \"다운로드\"\n          - term \"출처\"\n          - definition\n            - StaticText \"[22-E-MA-T0-3-2-DCL-FB-2025]\"\n            - StaticText \"22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025\"\n          - term \"단원 코드\"\n          - definition\n            - StaticText \"[22EMAT0NGS31]\"\n            - StaticText \"22 > 초등 > 수학군 > 수학 > 나귀수 > 초등3 > 1학기\"\n          - term \"페이지\"\n          - definition\n            - StaticText \"2 ~ 3\"\n          - term \"용도\"\n          - definition\n            - StaticText \"교사용\"\n          - term \"등록\"\n          - definition\n            - StaticText \"jaehyuk.myung · 2026-11-09\"\n          - term \"수정\"\n          - definition\n            - StaticText \"jaehyuk.myung · 2026-11-09\"\n        - LabelText\n          - StaticText \"비고\"\n        - textbox [disabled, ref=e21605]: QA-DIFI-20261109-02-DISCARD: isolated development test of final document discard.\n          - StaticText \"QA-DIFI-20261109-02-DISCARD: isolated development test of final document discard.\"\n      - generic\n        - heading \"분리 문항 리스트\" [level=3, ref=e21604]\n        - generic\n          - StaticText \"#1\"\n          - StaticText \"삭제\"\n      - link \"목록\" [ref=e21601]\n  - status"
+    },
+    "error": null,
+    "localSeconds": 0.582
+  }
+}

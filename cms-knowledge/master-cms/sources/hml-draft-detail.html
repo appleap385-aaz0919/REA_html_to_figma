@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-navbar-position="combined">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>HML 상세 | 문제은행 마스터 CMS</title>
+    <!-- 저장된 테마를 렌더 전에 적용(FOUC 방지) -->
+    <script>(function () { try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark'); } catch (e) {} })();</script>
+    <!-- 저장된 사이드바 접힘을 렌더 전에 적용(큰 화면만, 펼쳤다 접히는 깜빡임 방지) -->
+    <script>(function () { try { if (localStorage.getItem('sidebar') === 'folded' && matchMedia('(min-width: 992px)').matches) document.documentElement.setAttribute('data-bs-sidebar', 'folded'); } catch (e) {} })();</script>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler.min-8497cabbf265b335c86458729f06f306.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__core/1.7.0/dist/css/tabler-themes.min-24d2bc2b59bff15ff0c69f51c56fa9e3.css"/>
+    <link rel="stylesheet" href="/webjars/tabler__icons-webfont/3.49.0/dist/tabler-icons.min-cb7928bd18ff36b63a6778f3bbfa4e41.css"/>
+    <link rel="stylesheet" href="/css/custom-4f213f104c14367e2495ee02d06e6fb6.css"/>
+    
+    
+</head>
+<body>
+
+<div class="page">
+    <!-- 사이드바 -->
+    
+    <aside class="navbar navbar-vertical navbar-expand-lg bg-primary" data-bs-theme-primary="blue"
+           data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+                <button class="navbar-toggler" type="button" id="sidebarToggle"
+                        aria-expanded="false" aria-controls="sidebar-menu" aria-label="메뉴">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a href="/main.donga" class="text-decoration-none text-white"
+                   title="MASTER">문제은행 마스터 CMS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/main.donga">
+                            <span class="nav-link-icon"><i class="ti ti-home"></i></span>
+                            <span class="nav-link-title">홈</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item  dropdown active">
+
+                        
+                        
+
+                        
+                        
+                            <a class="nav-link dropdown-toggle show" href="#menu-ITEM" data-bs-toggle="dropdown"
+                               data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon"><i class="ti ti-files"></i></span>
+                                <span class="nav-link-title">문항 관리</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <a class="dropdown-item" data-loading
+                                   href="/item/all/list.donga?unitCurriculum=22">전체 문항</a><a class="dropdown-item active" data-loading
+                                   href="/item/hml/list.donga?curriculum=22">HML 문항 등록</a><a class="dropdown-item" data-loading
+                                   href="/item/difi/list.donga?curriculum=22">디피니션 문항 등록</a><a class="dropdown-item" data-loading
+                                   href="/item/twin/list.donga">쌍둥이 그룹 관리</a>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/paper/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-clipboard-list"></i></span>
+                            <span class="nav-link-title">평가지 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/product/list.donga?curriculum=22">
+                            <span class="nav-link-icon"><i class="ti ti-database"></i></span>
+                            <span class="nav-link-title">문항 출처 관리</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                    <li class="nav-item">
+
+                        
+                        <a class="nav-link" data-loading
+                           href="/lab/index.donga">
+                            <span class="nav-link-icon"><i class="ti ti-flask"></i></span>
+                            <span class="nav-link-title">랩</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 상단바 -->
+    
+    <header class="navbar navbar-expand-lg d-print-none border-bottom border-primary border-4" data-bs-theme-primary="blue">
+        <div class="container-fluid">
+            <span class="status fs-3 fw-semibold status-blue">
+                
+                <span>마스터</span>
+            </span>
+            <div class="navbar-nav flex-row order-lg-last ms-auto">
+                <div class="d-flex align-items-center gap-3">
+                    <!-- 공식 기능 아님, 확정 전까지 숨김 -->
+                    <button type="button" class="btn btn-icon d-none" id="themeToggle" aria-label="다크모드 전환">
+                        <i class="ti ti-moon invisible"></i>
+                    </button>
+                    
+                    <span class="text-muted" title="권한 : ADMIN">접속자 <strong>jaehyuk.myung</strong></span>
+                    
+                    <form action="/logout.donga" method="post" class="m-0" id="logoutForm" data-loading><!-- CSRF-bearing tag omitted -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal">
+                            <i class="ti ti-logout me-1"></i>로그아웃
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="container-fluid">
+                <section>
+
+    <div class="page-header d-print-none">
+        <ol class="breadcrumb breadcrumb-arrows fs-5 mb-1" aria-label="breadcrumbs">
+    <li class="breadcrumb-item">시스템 관리</li>
+    
+        <li class="breadcrumb-item">문항 관리</li>
+        <li class="breadcrumb-item">HML 문항 등록</li>
+    
+    <li class="breadcrumb-item">상세</li>
+</ol>
+        <div class="d-flex align-items-center gap-2">
+            <h2 class="page-title mb-0">HML 상세</h2>
+            <span class="badge bg-secondary-lt">초안</span>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="card mt-3 mb-3">
+        <div class="card-header bg-secondary-lt">
+            <h3 class="card-title">기본 정보</h3>
+        </div>
+        <div class="card-body">
+            <div class="row g-3 gx-5">
+
+                <div class="col-md-6">
+                    
+                    <dl class="row mb-0 dl-detail">
+                        <dt class="col-2 form-label fw-semibold mb-0">시험지 ID</dt>
+                        <dd class="col-10">369</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">원본 파일</dt>
+                        <dd class="col-10">
+                            
+                                <span>중1_두클래스_해결해요추가_5_3단원.hml</span>
+                                
+                                <button type="button" class="btn btn-sm ms-2"
+                                        data-download-url="/exam/369/c9e7a04c-2b98-41f3-a1ef-a0b2d85c9980.hml" data-download-name="중1_두클래스_해결해요추가_5_3단원.hml">
+                                    <i class="ti ti-download me-1"></i>다운로드</button>
+                            
+                            
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">출처</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            
+                                <div>[22-E-MA-T0-3-2-DCL-FB-2025]</div>
+                                <div class="text-secondary">22-초등-수학군-수학-초등3-2학기-두클래스-형성 평가_기본-2025</div>
+                            
+                            
+                        </dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">단원 코드</dt>
+                        <dd class="col-10 flex-column align-items-start justify-content-center">
+                            <div>[22EMAT0NGS3101040000]</div>
+                            <div class="text-secondary">22 &gt; 초등 &gt; 수학군 &gt; 수학 &gt; 나귀수 &gt; 초등3 &gt; 1학기 &gt; 덧셈과 뺄셈 &gt; 덧셈의 어림셈을 어떻게 할까요 &gt;  &gt; </div>
+                        </dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">페이지</dt>
+                        <dd class="col-10">1 ~ 2</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">용도</dt>
+                        <dd class="col-10">교사용</dd>
+
+                        <dt class="col-2 form-label fw-semibold mb-0">등록</dt>
+                        <dd class="col-10">minhye.park · 2026-10-07</dd>
+
+                        
+                        <dt class="col-2 form-label fw-semibold mb-0">수정</dt>
+                        <dd class="col-10">-</dd>
+                    </dl>
+                </div>
+
+                
+                <div class="col-md-6">
+                    
+                    <div class="d-flex align-items-center gap-3 mb-3" data-paper-reg>
+                        <label class="form-label mb-0 required">평가지 등록여부</label>
+                        <div>
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="paperRegYn" value="Y">
+                                <span class="form-check-label">등록</span>
+                            </label>
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="paperRegYn" value="N">
+                                <span class="form-check-label">미등록</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <label class="form-label">비고</label>
+                        <textarea class="form-control resize-none" name="remark" rows="8" maxlength="1000"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header bg-secondary-lt d-flex justify-content-between align-items-center">
+            <h3 class="card-title">분리 문항 리스트</h3>
+        </div>
+        <div class="card-body">
+
+            
+            
+
+            
+
+            
+            
+
+            
+            <div class="row g-3">
+                <div class="col-md-6">
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#1</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086540 (2084729)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="1" data-item-ids="2086540">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086540/2084729/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "ㄴ, ㄷ", "promptText": "그림과 같이 직선 $4$개가 한 평면 위에 있다. 다음 [보기]에서 옳은 것을 모두 고르시오.[보기]ㄱ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm CD}$는 서로 평행하다.ㄴ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm BC}$는 한 점에서 만난다.ㄷ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm BC}$는 만나지 않는다.ㄹ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm CD}$는 일치한다.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">ㄴ, ㄷ</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그림과 같이 직선 $4$개가 한 평면 위에 있다. 다음 [보기]에서 옳은 것을 모두 고르시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086540/2084729/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"1\" width=\"123\" height=\"91\" data-asset-id=\"img-1\"></span></p><div class=\"node-table hml-table hml-frame-table\"><table data-hml-width=\"22678\" data-hml-height=\"10100\" style=\"box-sizing:border-box;width:323.971429px;height:144.285714px;table-layout:fixed\"><tbody><tr><td class=\"hml-b-b hml-b-l hml-b-r hml-b-t\" style=\"padding-left:7.285714px;padding-right:7.285714px;padding-top:12.142857px;padding-bottom:12.142857px;vertical-align:middle\"><div class=\"align-c\">[보기]</div><div class=\"align-l\">ㄱ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm CD}$는 서로 평행하다.</div><div class=\"align-l\">ㄴ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm BC}$는 한 점에서 만난다.</div><div class=\"align-l\">ㄷ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm BC}$는 만나지 않는다.</div><div class=\"align-l\">ㄹ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm CD}$는 일치한다.</div></td></tr></tbody></table></div></d-question>", "explanationHtml": "<p style=\"margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">ㄱ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm CD}$는 한 점에서 만난다.</span></p><p style=\"margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">ㄹ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm CD}$는 점 D에서 만난다.</span></p>", "explanationText": "ㄱ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm CD}$는 한 점에서 만난다.\nㄹ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm CD}$는 점 D에서 만난다.", "modelAnswerHtml": "", "explanationLines": ["ㄱ. $\\overleftrightarrow{\\rm AB}$와 $\\overleftrightarrow{\\rm CD}$는 한 점에서 만난다.", "ㄹ. $\\overleftrightarrow{\\rm AD}$와 $\\overleftrightarrow{\\rm CD}$는 점 D에서 만난다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "ㄴ, ㄷ"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#2</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086541 (2084730)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="2" data-item-ids="2086541">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086541/2084730/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "($1$) 한 점에서 만난다.($2$) 꼬인 위치에 있다.($3$) 평행하다.", "promptText": "그림과 같이 밑면이 정사각형인 사각뿔에서 다음 두 모서리의 위치 관계를 쓰시오.($1$) 모서리 $\\rm AB$와 모서리 $\\rm AC$($2$) 모서리 $\\rm AD$와 모서리 $\\rm BE$($3$) 모서리 $\\rm BC$와 모서리 $\\rm DE$", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 한 점에서 만난다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 평행하다.</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그림과 같이 밑면이 정사각형인 사각뿔에서 다음<br> 두 모서리의 위치 관계를 쓰시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086541/2084730/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"2\" width=\"109\" height=\"101\" data-asset-id=\"img-1\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AB$와 모서리 $\\rm AC$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm AD$와 모서리 $\\rm BE$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm BC$와 모서리 $\\rm DE$</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AB$와 모서리 $\\rm AC$는 점 $\\rm A$에서 만난다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm AD$와 모서리 $\\rm BE$는 만나지도 않고, 평행하지도 않으므로 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 사각뿔의 밑면이 정사각형이므로 모서리 $\\rm BC$와 모서리 $\\rm DE$는 평행하다.</span></p>", "explanationText": "($1$) 모서리 $\\rm AB$와 모서리 $\\rm AC$는 점 $\\rm A$에서 만난다.\n($2$) 모서리 $\\rm AD$와 모서리 $\\rm BE$는 만나지도 않고, 평행하지도 않으므로 꼬인 위치에 있다.\n($3$) 사각뿔의 밑면이 정사각형이므로 모서리 $\\rm BC$와 모서리 $\\rm DE$는 평행하다.", "modelAnswerHtml": "", "explanationLines": ["($1$) 모서리 $\\rm AB$와 모서리 $\\rm AC$는 점 $\\rm A$에서 만난다.", "($2$) 모서리 $\\rm AD$와 모서리 $\\rm BE$는 만나지도 않고, 평행하지도 않으므로 꼬인 위치에 있다.", "($3$) 사각뿔의 밑면이 정사각형이므로 모서리 $\\rm BC$와 모서리 $\\rm DE$는 평행하다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "($1$) 한 점에서 만난다.($2$) 꼬인 위치에 있다.($3$) 평행하다."}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#3</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086542 (2084731)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="3" data-item-ids="2086542">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [], "content": {"choices": [], "answerText": "두 직선 $l$, $m$은 서로 평행하다.", "promptText": "공간에 평면 $P$와 서로 다른 두 직선 $l$, $m$이 있다. $l \\perp P$, $m \\perp P$일 때, 두 직선 $l$, $m$의 위치 관계를 쓰시오.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">두 직선 $l$, $m$은 서로 평행하다.</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">공간에 평면 $P$와 서로 다른 두 직선 $l$, $m$이 있다. $l \\perp P$, $m \\perp P$일 때, 두 직선 $l$, $m$의 위치 관계를 쓰시오.</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">한 평면에 수직인 두 직선은 서로 평행하다.</span></p>", "explanationText": "한 평면에 수직인 두 직선은 서로 평행하다.", "modelAnswerHtml": "", "explanationLines": ["한 평면에 수직인 두 직선은 서로 평행하다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "두 직선 $l$, $m$은 서로 평행하다."}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#4</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086543 (2084732)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="4" data-item-ids="2086543">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086543/2084732/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": ["모서리 $\\rm AB$와 모서리 $\\rm BC$는 한 점에서 만난다.", "모서리 $\\rm FG$와 평행한 면은 $4$개이다.", "모서리 $\\rm CG$와 수직으로 만나는 모서리는 $4$개이다.", "모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 $6$개이다.", "모서리 $\\rm CD$와 한 점에서 만나는 면은 $2$개이다."], "answerText": "①, ⑤", "promptText": "그림은 정육면체에서 삼각기둥을 잘라 내고 남은 입체도형이다. 다음 중 옳은 것을 모두 고르면? (정답 $2$개)모서리 $\\rm AB$와 모서리 $\\rm BC$는 한 점에서 만난다.모서리 $\\rm FG$와 평행한 면은 $4$개이다.모서리 $\\rm CG$와 수직으로 만나는 모서리는 $4$개이다.모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 $6$개이다.모서리 $\\rm CD$와 한 점에서 만나는 면은 $2$개이다.", "correctHtml": "<p><span class=\"font-s20\">①, ⑤<span class=\"hml-tab\">\t</span><span class=\"hml-tab\">\t</span></span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그림은 정육면체에서 삼각기둥을 잘라 내고 남은 입체도형이다. 다음 중 옳은 것을 모두 고르면? (정답 $2$개)</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086543/2084732/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"3\" width=\"109\" height=\"109\" data-asset-id=\"img-1\"></span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">모서리 $\\rm AB$와 모서리 $\\rm BC$는 한 점에서 만난다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">모서리 $\\rm FG$와 평행한 면은 $4$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">모서리 $\\rm CG$와 수직으로 만나는 모서리는 $4$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 $6$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">모서리 $\\rm CD$와 한 점에서 만나는 면은 $2$개이다.</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">② 모서리 $\\rm FG$와 평행한 면은 면 $\\rm ABCD$, 면 $\\rm AEHD$ 의 $2$개이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">③ 모서리 $\\rm CG$와 수직으로 만나는 모서리는 모서리 $\\rm CD$, 모서리 $\\rm GH$의 $2$개이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">④ 모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm BC$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm FG$의 $5$개이다.</span></p>", "explanationText": "② 모서리 $\\rm FG$와 평행한 면은 면 $\\rm ABCD$, 면 $\\rm AEHD$ 의 $2$개이다.\n③ 모서리 $\\rm CG$와 수직으로 만나는 모서리는 모서리 $\\rm CD$, 모서리 $\\rm GH$의 $2$개이다.\n④ 모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm BC$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm FG$의 $5$개이다.", "modelAnswerHtml": "", "explanationLines": ["② 모서리 $\\rm FG$와 평행한 면은 면 $\\rm ABCD$, 면 $\\rm AEHD$ 의 $2$개이다.", "③ 모서리 $\\rm CG$와 수직으로 만나는 모서리는 모서리 $\\rm CD$, 모서리 $\\rm GH$의 $2$개이다.", "④ 모서리 $\\rm DH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm BC$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm FG$의 $5$개이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "①, ⑤", "choices": [1, 5]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#5</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086544 (2084733)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="5" data-item-ids="2086544">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086544/2084733/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "모서리 $\\rm AB$", "promptText": "직육면체에서 다음 조건을 만족시키는 모서리를 구하시오.⦁모서리 $\\rm FG$와 꼬인 위치에 있다.⦁면 $\\rm EFGH$와 만나지 않는다.⦁모서리 $\\rm CG$와 만나지 않는다.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\rm AB$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">직육면체에서 다음 조건을 만족시키는 모서리를 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086544/2084733/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"4\" width=\"111\" height=\"89\" data-asset-id=\"img-1\"></span></p><div class=\"node-table hml-table hml-frame-table\"><table data-hml-width=\"22678\" data-hml-height=\"6075\" style=\"box-sizing:border-box;width:323.971429px;height:86.785714px;table-layout:fixed\" data-hml-column-widths=\"22678\"><colgroup><col style=\"width:323.971429px\"></colgroup><tbody><tr><td class=\"hml-b-b hml-b-l hml-b-r hml-b-t align-l\" style=\"padding-left:7.285714px;padding-right:7.285714px;padding-top:12.142857px;padding-bottom:12.142857px;vertical-align:middle\">⦁모서리 $\\rm FG$와 꼬인 위치에 있다.<br>⦁면 $\\rm EFGH$와 만나지 않는다.<br>⦁모서리 $\\rm CG$와 만나지 않는다.</td></tr></tbody></table></div></d-question>", "explanationHtml": "<p style=\"margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\rm FG$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$, 모서리 $\\rm AE$, 모서리 $\\rm DH$이다. 이 중에서 면 $\\rm EFGH$와 만나지 않는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$이다. 이 중에서 모서리 $\\rm CG$와 만나지 않는 모서리는 모서리 $\\rm AB$이다.</span></p>", "explanationText": "모서리 $\\rm FG$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$, 모서리 $\\rm AE$, 모서리 $\\rm DH$이다. 이 중에서 면 $\\rm EFGH$와 만나지 않는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$이다. 이 중에서 모서리 $\\rm CG$와 만나지 않는 모서리는 모서리 $\\rm AB$이다.", "modelAnswerHtml": "", "explanationLines": ["모서리 $\\rm FG$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$, 모서리 $\\rm AE$, 모서리 $\\rm DH$이다. 이 중에서 면 $\\rm EFGH$와 만나지 않는 모서리는 모서리 $\\rm AB$, 모서리 $\\rm CD$이다. 이 중에서 모서리 $\\rm CG$와 만나지 않는 모서리는 모서리 $\\rm AB$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "모서리 $\\rm AB$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#6</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086545 (2084734)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="6" data-item-ids="2086545">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086545/2084734/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "($1$) 변 $\\rm BC$($2$) 변 $\\rm AD$, 변 $\\rm BC$", "promptText": "사다리꼴에서 다음을 구하시오.($1$) 변 $\\rm AD$와 평행한 변($2$) 변 $\\rm CD$와 한 점에서 만나는 변", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 변 $\\rm BC$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 변 $\\rm AD$, 변 $\\rm BC$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">사다리꼴에서 다음을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086545/2084734/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"5\" width=\"108\" height=\"66\" data-asset-id=\"img-1\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 변 $\\rm AD$와 평행한 변</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 변 $\\rm CD$와 한 점에서 만나는 변</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 사각형 $\\rm ABCD$는 사다리꼴이고 변 $\\rm AD$와 평행한 변은 변 $\\rm BC$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 변 $\\rm CD$와 변 $\\rm AD$는 점 $\\rm D$에서 만나고 변 $\\rm CD$와 변 $\\rm BC$는 점 $\\rm C$에서 만난다.</span></p>", "explanationText": "($1$) 사각형 $\\rm ABCD$는 사다리꼴이고 변 $\\rm AD$와 평행한 변은 변 $\\rm BC$이다.\n($2$) 변 $\\rm CD$와 변 $\\rm AD$는 점 $\\rm D$에서 만나고 변 $\\rm CD$와 변 $\\rm BC$는 점 $\\rm C$에서 만난다.", "modelAnswerHtml": "", "explanationLines": ["($1$) 사각형 $\\rm ABCD$는 사다리꼴이고 변 $\\rm AD$와 평행한 변은 변 $\\rm BC$이다.", "($2$) 변 $\\rm CD$와 변 $\\rm AD$는 점 $\\rm D$에서 만나고 변 $\\rm CD$와 변 $\\rm BC$는 점 $\\rm C$에서 만난다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "($1$) 변 $\\rm BC$($2$) 변 $\\rm AD$, 변 $\\rm BC$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#7</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086546 (2084735)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="7" data-item-ids="2086546">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086546/2084735/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "($1$) 모서리 $\\rm AC$, 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm BE$($2$) 모서리 $\\rm DE$($3$) 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$", "promptText": "삼각기둥에서 다음을 구하시오.($1$) 모서리 $\\rm AB$와 만나는 모서리($2$) 모서리 $\\rm AB$와 평행한 모서리($3$) 모서리 $\\rm AB$와 꼬인 위치에 있는 모서리", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AC$, 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm BE$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm DE$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">삼각기둥에서 다음을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086546/2084735/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"6\" width=\"106\" height=\"101\" data-asset-id=\"img-1\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AB$와 만나는 모서리</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm AB$와 평행한 모서리</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm AB$와 꼬인 위치에 있는 모서리</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AB$와 점 $\\rm A$에서 만나는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AD$이고, 모서리 $\\rm AB$와 점 $\\rm B$에서 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm BE$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 삼각기둥에서 옆면 $\\rm ADEB$는 직사각형이므로 모서리 $\\rm AB$와 평행한 모서리는 모서리 $\\rm DE$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm AB$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$이다.</span></p>", "explanationText": "($1$) 모서리 $\\rm AB$와 점 $\\rm A$에서 만나는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AD$이고, 모서리 $\\rm AB$와 점 $\\rm B$에서 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm BE$이다.\n($2$) 삼각기둥에서 옆면 $\\rm ADEB$는 직사각형이므로 모서리 $\\rm AB$와 평행한 모서리는 모서리 $\\rm DE$이다.\n($3$) 모서리 $\\rm AB$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$이다.", "modelAnswerHtml": "", "explanationLines": ["($1$) 모서리 $\\rm AB$와 점 $\\rm A$에서 만나는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AD$이고, 모서리 $\\rm AB$와 점 $\\rm B$에서 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm BE$이다.", "($2$) 삼각기둥에서 옆면 $\\rm ADEB$는 직사각형이므로 모서리 $\\rm AB$와 평행한 모서리는 모서리 $\\rm DE$이다.", "($3$) 모서리 $\\rm AB$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "($1$) 모서리 $\\rm AC$, 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm BE$($2$) 모서리 $\\rm DE$($3$) 모서리 $\\rm CF$, 모서리 $\\rm DF$, 모서리 $\\rm EF$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#8</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086547 (2084736)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="8" data-item-ids="2086547">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086547/2084736/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "($1$) 면 $\\rm AEHD$, 면 $\\rm EFGH$($2$) 면 $\\rm ABFE$, 면 $\\rm DCGH$($3$) 면 $\\rm ABFE$, 면 $\\rm BFGC$($4$) 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm FG$, 모서리 $\\rm EH$", "promptText": "직육면체에서 다음을 구하시오.($1$) 모서리 $\\rm BC$와 평행한 면($2$) 모서리 $\\rm BC$와 직교하는 면($3$) 모서리 $\\rm BF$를 포함하는 면($4$) 면 $\\rm ABFE$와 한 점에서 만나는 모서리", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 면 $\\rm AEHD$, 면 $\\rm EFGH$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 면 $\\rm ABFE$, 면 $\\rm DCGH$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 면 $\\rm ABFE$, 면 $\\rm BFGC$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm FG$, 모서리 $\\rm EH$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">직육면체에서 다음을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086547/2084736/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"7\" width=\"111\" height=\"89\" data-asset-id=\"img-1\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm BC$와 평행한 면</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm BC$와 직교하는 면</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm BF$를 포함하는 면</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 면 $\\rm ABFE$와 한 점에서 만나는 모서리</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm BC$와 평행한 면은 면 $\\rm AEHD$, 면 $\\rm EFGH$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm BC$와 수직으로 만나는 면은 면 $\\rm ABFE$, 면 $\\rm DCGH$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm BF$를 포함하는 면은 면 $\\rm ABFE$, 면 $\\rm BFGC$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 면 $\\rm ABFE$와 모서리 $\\rm AD$는 점 $\\rm A$에서 만나고, 모서리 $\\rm BC$는 점 $\\rm B$에서 만나고, 모서리 $\\rm FG$는 점 $\\rm F$에서 만나고, 모서리 $\\rm EH$는 점 $\\rm E$에서 만난다.</span></p>", "explanationText": "($1$) 모서리 $\\rm BC$와 평행한 면은 면 $\\rm AEHD$, 면 $\\rm EFGH$이다.\n($2$) 모서리 $\\rm BC$와 수직으로 만나는 면은 면 $\\rm ABFE$, 면 $\\rm DCGH$이다.\n($3$) 모서리 $\\rm BF$를 포함하는 면은 면 $\\rm ABFE$, 면 $\\rm BFGC$이다.\n($4$) 면 $\\rm ABFE$와 모서리 $\\rm AD$는 점 $\\rm A$에서 만나고, 모서리 $\\rm BC$는 점 $\\rm B$에서 만나고, 모서리 $\\rm FG$는 점 $\\rm F$에서 만나고, 모서리 $\\rm EH$는 점 $\\rm E$에서 만난다.", "modelAnswerHtml": "", "explanationLines": ["($1$) 모서리 $\\rm BC$와 평행한 면은 면 $\\rm AEHD$, 면 $\\rm EFGH$이다.", "($2$) 모서리 $\\rm BC$와 수직으로 만나는 면은 면 $\\rm ABFE$, 면 $\\rm DCGH$이다.", "($3$) 모서리 $\\rm BF$를 포함하는 면은 면 $\\rm ABFE$, 면 $\\rm BFGC$이다.", "($4$) 면 $\\rm ABFE$와 모서리 $\\rm AD$는 점 $\\rm A$에서 만나고, 모서리 $\\rm BC$는 점 $\\rm B$에서 만나고, 모서리 $\\rm FG$는 점 $\\rm F$에서 만나고, 모서리 $\\rm EH$는 점 $\\rm E$에서 만난다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "($1$) 면 $\\rm AEHD$, 면 $\\rm EFGH$($2$) 면 $\\rm ABFE$, 면 $\\rm DCGH$($3$) 면 $\\rm ABFE$, 면 $\\rm BFGC$($4$) 모서리 $\\rm AD$, 모서리 $\\rm BC$, 모서리 $\\rm FG$, 모서리 $\\rm EH$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#9</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086548 (2084737)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="9" data-item-ids="2086548">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086548/2084737/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": ["점 $\\rm C$는 모서리 $\\rm HI$ 위에 있다.", "모서리 $\\rm DI$와 평행한 모서리는$2$개이다.", "모서리 $\\rm CD$와 평행한 면은 $1$개이다.", "모서리 $\\rm CH$와 수직으로 만나는 모서리는 $2$개이다.", "모서리 $\\rm HI$와 모서리 $\\rm AF$는 꼬인 위치에 있다."], "answerText": "③, ⑤", "promptText": "다음 중 그림의 오각기둥에 대한 설명으로 옳은 것을 모두 고르면? (정답 $2$개) 점 $\\rm C$는 모서리 $\\rm HI$ 위에 있다.모서리 $\\rm DI$와 평행한 모서리는$2$개이다.모서리 $\\rm CD$와 평행한 면은 $1$개이다.모서리 $\\rm CH$와 수직으로 만나는 모서리는 $2$개이다.모서리 $\\rm HI$와 모서리 $\\rm AF$는 꼬인 위치에 있다.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">③, ⑤</span><span class=\"hml-align-space\" style=\"display:inline-block;width:4em;white-space:pre\">        </span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">다음 중 그림의 오각기둥에 대한 설명으로 옳은 것을 모두 고르면? (정답 $2$개)</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086548/2084737/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"8\" width=\"97\" height=\"126\" data-asset-id=\"img-1\"></span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">점 $\\rm C$는 모서리 $\\rm HI$ 위에 있다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">모서리 $\\rm DI$와 평행한 모서리는$2$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">모서리 $\\rm CD$와 평행한 면은 $1$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">모서리 $\\rm CH$와 수직으로 만나는 모서리는 $2$개이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">모서리 $\\rm HI$와 모서리 $\\rm AF$는 꼬인 위치에 있다.</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">① 점 $\\rm C$는 모서리 $\\rm HI$ 위에 있지 않다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">② 모서리 $\\rm DI$와 평행한 모서리는 모서리 $\\rm AF$, 모서리 $\\rm BG$, 모서리 $\\rm CH$, 모서리 $\\rm EJ$의 $4$개이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">④ 모서리 $\\rm CH$와 수직으로 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm GH$, 모서리 $\\rm CD$, 모서리 $\\rm HI$의 $4$개이다.</span></p>", "explanationText": "① 점 $\\rm C$는 모서리 $\\rm HI$ 위에 있지 않다.\n② 모서리 $\\rm DI$와 평행한 모서리는 모서리 $\\rm AF$, 모서리 $\\rm BG$, 모서리 $\\rm CH$, 모서리 $\\rm EJ$의 $4$개이다.\n④ 모서리 $\\rm CH$와 수직으로 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm GH$, 모서리 $\\rm CD$, 모서리 $\\rm HI$의 $4$개이다.", "modelAnswerHtml": "", "explanationLines": ["① 점 $\\rm C$는 모서리 $\\rm HI$ 위에 있지 않다.", "② 모서리 $\\rm DI$와 평행한 모서리는 모서리 $\\rm AF$, 모서리 $\\rm BG$, 모서리 $\\rm CH$, 모서리 $\\rm EJ$의 $4$개이다.", "④ 모서리 $\\rm CH$와 수직으로 만나는 모서리는 모서리 $\\rm BC$, 모서리 $\\rm GH$, 모서리 $\\rm CD$, 모서리 $\\rm HI$의 $4$개이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "③, ⑤", "choices": [3, 5]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6">
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#10</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086549 (2084738)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="10" data-item-ids="2086549">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086549/2084738/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "$5$", "promptText": "그림은 정육면체를 네 꼭짓점 $\\rm A$, $\\rm B$, $\\rm G$, $\\rm H$를 지나는 평면으로 잘라서 만든 입체도형이다. 면 $\\rm ABGH$에 수직인 면의 개수를 $a$, 면 $\\rm BFG$에 수직인 모서리의 개수를 $b$라고 할 때, $a+b$의 값을 구하시오.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$5$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그림은 정육면체를 네 꼭짓점 $\\rm A$, $\\rm B$, $\\rm G$, $\\rm H$를 지나는 평면으로 잘라서 만든 입체도형이다. 면 $\\rm ABGH$에 수직인 면의 개수를 $a$, 면 $\\rm BFG$에 수직인 모서리의 개수를 $b$라고 할 때, $a+b$의 값을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086549/2084738/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"9\" width=\"109\" height=\"108\" data-asset-id=\"img-1\"></span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">면 $\\rm ABGH$에 수직인 면은 면 $\\rm AEH$, 면 $\\rm BFG$의 $2$개이므로 $a=2$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">면 $\\rm BFG$에 수직인 모서리는 모서리 $\\rm AB$, 모서리 $\\rm EF$, 모서리 $\\rm HG$의 $3$개이므로 $b=3$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">따라서 $a+b=2+3=5$</span></p>", "explanationText": "면 $\\rm ABGH$에 수직인 면은 면 $\\rm AEH$, 면 $\\rm BFG$의 $2$개이므로 $a=2$\n면 $\\rm BFG$에 수직인 모서리는 모서리 $\\rm AB$, 모서리 $\\rm EF$, 모서리 $\\rm HG$의 $3$개이므로 $b=3$\n따라서 $a+b=2+3=5$", "modelAnswerHtml": "", "explanationLines": ["면 $\\rm ABGH$에 수직인 면은 면 $\\rm AEH$, 면 $\\rm BFG$의 $2$개이므로 $a=2$", "면 $\\rm BFG$에 수직인 모서리는 모서리 $\\rm AB$, 모서리 $\\rm EF$, 모서리 $\\rm HG$의 $3$개이므로 $b=3$", "따라서 $a+b=2+3=5$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "$5$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#11</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086550 (2084739)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="11" data-item-ids="2086550">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [], "content": {"choices": [], "answerText": "ㄹ", "promptText": "공간에 서로 다른 세 직선 $l$, $m$, $n$과 서로 다른 두 평면 $P$, $Q$의 위치 관계에 대한 설명으로 다음 [보기]에서 옳지 않은 것을 모두 고르시오.[보기]ㄱ. $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$, $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $n$이면 $m\\bm{/}\\hspace{-0.3em}\\bm{/}$ $n$이다.ㄴ. $P BOTl$, $P BOTm$이면 $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$이다.ㄷ. $P \\perp l$, $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$이면 $P \\perp m$이다.ㄹ. $P \\perp l$, $l \\perp$ $n$이면 $P \\perp$ $n$이다.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">ㄹ</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">공간에 서로 다른 세 직선 $l$, $m$, $n$과 서로 다른 두 평면 $P$, $Q$의 위치 관계에 대한 설명으로 다음 [보기]에서 옳지 <u>않은</u> 것을 모두 고르시오.</span></p><div class=\"node-table hml-table hml-frame-table\"><table data-hml-width=\"22678\" data-hml-height=\"9200\" style=\"box-sizing:border-box;width:323.971429px;height:131.428571px;table-layout:fixed\" data-hml-column-widths=\"22678\"><colgroup><col style=\"width:323.971429px\"></colgroup><tbody><tr><td class=\"hml-b-b hml-b-l hml-b-r hml-b-t\" style=\"padding-left:7.285714px;padding-right:7.285714px;padding-top:12.142857px;padding-bottom:12.142857px;vertical-align:middle\"><div class=\"align-c\">[보기]</div><div class=\"align-l\">ㄱ. $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$, $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $n$이면 $m\\bm{/}\\hspace{-0.3em}\\bm{/}$ $n$이다.</div><div class=\"align-l\">ㄴ. $P BOTl$, $P BOTm$이면 $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$이다.</div><div class=\"align-l\">ㄷ. $P \\perp l$, $l\\bm{/}\\hspace{-0.3em}\\bm{/}$ $m$이면 $P \\perp m$이다.</div><div class=\"align-l\">ㄹ. $P \\perp l$, $l \\perp$ $n$이면 $P \\perp$ $n$이다.</div></td></tr></tbody></table></div></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">ㄹ. $P \\perp$ $l$, $l BOTn$이면 $P\\bm{/}\\hspace{-0.3em}\\bm{/}n$이다.</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p>", "explanationText": "ㄹ. $P \\perp$ $l$, $l BOTn$이면 $P\\bm{/}\\hspace{-0.3em}\\bm{/}n$이다.", "modelAnswerHtml": "", "explanationLines": ["ㄹ. $P \\perp$ $l$, $l BOTn$이면 $P\\bm{/}\\hspace{-0.3em}\\bm{/}n$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "ㄹ"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#12</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086551 (2084740)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="12" data-item-ids="2086551">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086551/2084740/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "($1$) 모서리 $\\rm BE$, 모서리 $\\rm CF$($2$) 면 $\\rm ABC$, 면 $\\rm DEF$($3$) 모서리 $\\rm AC$, 모서리 $\\rm DF$($4$) 면 $\\rm ACFD$, 면 $\\rm DEF$", "promptText": "삼각기둥에서 다음을 구하시오.($1$) 모서리 $\\rm AD$와 평행한 모서리($2$) 모서리 $\\rm CF$와 한 점에서 만나는 면($3$) 모서리 $\\BE$와 꼬인 위치에 있는 모서리($4$) 모서리 $\\rm DF$가 교선인 두 면", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm BE$, 모서리 $\\rm CF$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 면 $\\rm ABC$, 면 $\\rm DEF$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm AC$, 모서리 $\\rm DF$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 면 $\\rm ACFD$, 면 $\\rm DEF$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">삼각기둥에서 다음을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086551/2084740/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"10\" width=\"104\" height=\"92\" data-asset-id=\"img-1\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 모서리 $\\rm AD$와 평행한 모서리</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm CF$와 한 점에서 만나는 면</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\BE$와 꼬인 위치에 있는 모서리</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 모서리 $\\rm DF$가 교선인 두 면</span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($1$) 삼각기둥의 옆면은 직사각형이므로 모서리 $\\rm AD$와 평행한 모서리는 모서리 $\\rm BE$, 모서리 $\\rm CF$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($2$) 모서리 $\\rm CF$와 점 $\\rm C$에서 만나는 면은 면 $\\rm ABC$이고, 점 $\\rm F$에서 만나는 면은 면 $\\rm DEF$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($3$) 모서리 $\\rm BE$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm AC$, 모서리 $\\rm DF$이다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">($4$) 모서리 $\\rm DF$가 교선인 두 면은 면 $\\rm ACFD$, 면 $\\rm DEF$이다.</span></p>", "explanationText": "($1$) 삼각기둥의 옆면은 직사각형이므로 모서리 $\\rm AD$와 평행한 모서리는 모서리 $\\rm BE$, 모서리 $\\rm CF$이다.\n($2$) 모서리 $\\rm CF$와 점 $\\rm C$에서 만나는 면은 면 $\\rm ABC$이고, 점 $\\rm F$에서 만나는 면은 면 $\\rm DEF$이다.\n($3$) 모서리 $\\rm BE$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm AC$, 모서리 $\\rm DF$이다.\n($4$) 모서리 $\\rm DF$가 교선인 두 면은 면 $\\rm ACFD$, 면 $\\rm DEF$이다.", "modelAnswerHtml": "", "explanationLines": ["($1$) 삼각기둥의 옆면은 직사각형이므로 모서리 $\\rm AD$와 평행한 모서리는 모서리 $\\rm BE$, 모서리 $\\rm CF$이다.", "($2$) 모서리 $\\rm CF$와 점 $\\rm C$에서 만나는 면은 면 $\\rm ABC$이고, 점 $\\rm F$에서 만나는 면은 면 $\\rm DEF$이다.", "($3$) 모서리 $\\rm BE$와 만나지도 않고 평행하지도 않은 모서리는 모서리 $\\rm AC$, 모서리 $\\rm DF$이다.", "($4$) 모서리 $\\rm DF$가 교선인 두 면은 면 $\\rm ACFD$, 면 $\\rm DEF$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "($1$) 모서리 $\\rm BE$, 모서리 $\\rm CF$($2$) 면 $\\rm ABC$, 면 $\\rm DEF$($3$) 모서리 $\\rm AC$, 모서리 $\\rm DF$($4$) 면 $\\rm ACFD$, 면 $\\rm DEF$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#13</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086552 (2084741)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="13" data-item-ids="2086552">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086552/2084741/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$", "promptText": "직육면체에서 $\\overline{\\rm AG}$와 꼬인 위치에 있는 모서리를 모두 구하시오.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">직육면체에서 $\\overline{\\rm AG}$와 꼬인 위치에 있는 모서리를 모두 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086552/2084741/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"11\" width=\"111\" height=\"89\" data-asset-id=\"img-1\"></span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$\\overline{\\rm AG}$와 만나지도 평행하지도 않은 모서리는 모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$이다.</span></p>", "explanationText": "$\\overline{\\rm AG}$와 만나지도 평행하지도 않은 모서리는 모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$이다.", "modelAnswerHtml": "", "explanationLines": ["$\\overline{\\rm AG}$와 만나지도 평행하지도 않은 모서리는 모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$이다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "모서리 $\\rm BC$, 모서리 $\\rm CD$, 모서리 $\\rm BF$, 모서리 $\\rm EF$, 모서리 $\\rm EH$, 모서리 $\\rm DH$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#14</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086553 (2084742)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="14" data-item-ids="2086553">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [], "content": {"choices": ["$l BOTm$, $m BOTn$이면 $l BOTn$이다.", "$l\\bm{/}\\hspace{-0.3em}\\bm{/}P$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.", "$l BOTP$, $m BOTP$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.", "$l BOTP$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l BOTm$이다.", "$l \\bm{/}\\hspace{-0.3em}\\bm{/}m$, $l BOTn$이면 $m BOTn$이다."], "answerText": "③", "promptText": "다음 중 공간에서 서로 다른 세 직선 $l$, $m$, $n$과 평면 $P$의 위치 관계에 대한 설명으로 옳은 것은?$l BOTm$, $m BOTn$이면 $l BOTn$이다.$l\\bm{/}\\hspace{-0.3em}\\bm{/}P$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.$l BOTP$, $m BOTP$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.$l BOTP$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l BOTm$이다.$l \\bm{/}\\hspace{-0.3em}\\bm{/}m$, $l BOTn$이면 $m BOTn$이다.", "correctHtml": "<p><span class=\"font-s20\">③<span class=\"hml-align-space\" style=\"display:inline-block;width:1.5em;white-space:pre\">   </span><span class=\"hml-tab\">\t</span></span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">다음 중 공간에서 서로 다른 세 직선 $l$, $m$, $n$과<br> 평면 $P$의 위치 관계에 대한 설명으로 옳은 것은?</span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">$l BOTm$, $m BOTn$이면 $l BOTn$이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">$l\\bm{/}\\hspace{-0.3em}\\bm{/}P$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">$l BOTP$, $m BOTP$이면 $l \\bm{/}\\hspace{-0.3em}\\bm{/}m$이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">$l BOTP$, $m\\bm{/}\\hspace{-0.3em}\\bm{/}P$이면 $l BOTm$이다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">$l \\bm{/}\\hspace{-0.3em}\\bm{/}m$, $l BOTn$이면 $m BOTn$이다.</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">① 두 직선 $l$, $n$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">② 두 직선 $l$, $m$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">④ 두 직선 $l$, $m$은 수직이거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">⑤ 두 직선 $m$, $n$은 수직이거나 꼬인 위치에 있다.</span></p>", "explanationText": "① 두 직선 $l$, $n$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.\n② 두 직선 $l$, $m$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.\n④ 두 직선 $l$, $m$은 수직이거나 꼬인 위치에 있다.\n⑤ 두 직선 $m$, $n$은 수직이거나 꼬인 위치에 있다.", "modelAnswerHtml": "", "explanationLines": ["① 두 직선 $l$, $n$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.", "② 두 직선 $l$, $m$은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.", "④ 두 직선 $l$, $m$은 수직이거나 꼬인 위치에 있다.", "⑤ 두 직선 $m$, $n$은 수직이거나 꼬인 위치에 있다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "③", "choices": [3]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#15</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086554 (2084743)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="15" data-item-ids="2086554">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [], "content": {"choices": ["서로 다른 두 직선이 만나지 않으면 평행하다.", "한 직선에 수직인 서로 다른 두 직선은 평행하다.", "한 직선에 평행한 서로 다른 두 직선은 평행하다.", "한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 꼬인 위치에 있다.", "한 평면에 평행한 서로 다른 두 직선은 만나지 않는다."], "answerText": "③", "promptText": "다음 중 공간에서 두 직선의 위치 관계에 대한 설명으로 옳은 것은?서로 다른 두 직선이 만나지 않으면 평행하다.한 직선에 수직인 서로 다른 두 직선은 평행하다.한 직선에 평행한 서로 다른 두 직선은 평행하다.한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 꼬인 위치에 있다.한 평면에 평행한 서로 다른 두 직선은 만나지 않는다.", "correctHtml": "<p><span class=\"font-s20\">③<span class=\"hml-align-space\" style=\"display:inline-block;width:3.5em;white-space:pre\">       </span><span class=\"hml-tab\">\t</span></span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">다음 중 공간에서 두 직선의 위치 관계에 대한 설명으로 옳은 것은?</span></p></d-question><d-choicewrapper><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"1\">서로 다른 두 직선이 만나지 않으면 평행하다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"2\">한 직선에 수직인 서로 다른 두 직선은 평행하다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"3\">한 직선에 평행한 서로 다른 두 직선은 평행하다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"4\">한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 꼬인 위치에 있다.</d-choicecount></li><li data-custom-list-item=\"\" class=\"d-choice\"><d-choicecount key=\"5\">한 평면에 평행한 서로 다른 두 직선은 만나지 않는다.</d-choicecount></li></d-choicewrapper>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">① 서로 다른 두 직선이 만나지 않으면 평행하거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">② 한 직선에 수직인 서로 다른 두 직선은 평행하거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">④ 한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">⑤ 한 평면에 평행한 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.</span></p>", "explanationText": "① 서로 다른 두 직선이 만나지 않으면 평행하거나 꼬인 위치에 있다.\n② 한 직선에 수직인 서로 다른 두 직선은 평행하거나 꼬인 위치에 있다.\n④ 한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.\n⑤ 한 평면에 평행한 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.", "modelAnswerHtml": "", "explanationLines": ["① 서로 다른 두 직선이 만나지 않으면 평행하거나 꼬인 위치에 있다.", "② 한 직선에 수직인 서로 다른 두 직선은 평행하거나 꼬인 위치에 있다.", "④ 한 직선과 꼬인 위치에 있는 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다.", "⑤ 한 평면에 평행한 서로 다른 두 직선은 한 점에서 만나거나 평행하거나 꼬인 위치에 있다."], "gradingCriteriaHtml": ""}, "grading": {"mode": "choice", "value": "③", "choices": [3]}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#16</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086555 (2084744)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="16" data-item-ids="2086555">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086555/2084744/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "$8$", "promptText": "그림은 정육면체를 세 꼭짓점 $\\rm A$, $\\rm C$, $\\rm F$를 지나는 평면으로 잘라서 만든 입체도형이다. 모서리 $\\rm EH$와 꼬인 위치에 있는 모서리의 개수를 $a$, 면 $\\rm EFGH$와 평행한 모서리의 개수를 $b$라고 할 때, $a+b$의 값을 구하시오.", "correctHtml": "<p><span class=\"font-s20\">$8$<span class=\"hml-tab\">\t</span></span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">그림은 정육면체를 세 꼭짓점 $\\rm A$, $\\rm C$, $\\rm F$를 지나는 평면으로 잘라서 만든 입체도형이다. 모서리 $\\rm EH$와 꼬인 위치에 있는 모서리의 개수를 $a$, 면 $\\rm EFGH$와 평행한 모서리의 개수를 $b$라고 할 때, $a+b$의 값을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086555/2084744/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"12\" width=\"109\" height=\"108\" data-asset-id=\"img-1\"></span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\rm EH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AF$, 모서리 $\\rm CF$, 모서리 $\\rm CD$, 모서리 $\\rm CG$의 $5$개이므로 $a=5$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">면 $\\rm EFGH$와 평행한 모서리는 모서리 $\\rm AC$, 모서리 $\\rm CD$, 모서리 $\\rm AD$의 $3$개이므로 $b=3$</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">따라서 $a+b=5+3=8$</span></p>", "explanationText": "모서리 $\\rm EH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AF$, 모서리 $\\rm CF$, 모서리 $\\rm CD$, 모서리 $\\rm CG$의 $5$개이므로 $a=5$\n면 $\\rm EFGH$와 평행한 모서리는 모서리 $\\rm AC$, 모서리 $\\rm CD$, 모서리 $\\rm AD$의 $3$개이므로 $b=3$\n따라서 $a+b=5+3=8$", "modelAnswerHtml": "", "explanationLines": ["모서리 $\\rm EH$와 꼬인 위치에 있는 모서리는 모서리 $\\rm AC$, 모서리 $\\rm AF$, 모서리 $\\rm CF$, 모서리 $\\rm CD$, 모서리 $\\rm CG$의 $5$개이므로 $a=5$", "면 $\\rm EFGH$와 평행한 모서리는 모서리 $\\rm AC$, 모서리 $\\rm CD$, 모서리 $\\rm AD$의 $3$개이므로 $b=3$", "따라서 $a+b=5+3=8$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "$8$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="card mb-6">
+                    <div class="card-header d-flex justify-content-between align-items-center gap-2">
+                        <span class="d-inline-flex align-items-center gap-2">
+                            <span class="fw-semibold">#17</span>
+                            
+                            
+                            
+                                <span class="text-secondary">문항ID 2086556 (2084745)</span>
+                                
+                                
+                            
+                        </span>
+
+                        
+                        <span class="d-inline-flex align-items-center gap-2">
+                            
+
+                            
+                            <select class="form-select form-select-sm cursor-pointer w-auto"
+                                    data-exam-judge data-block-no="17" data-item-ids="2086556">
+                                <option value="W" disabled="disabled">등록대기</option>
+                                <option value="S" selected="selected">등록성공</option>
+                                <option value="F">등록실패</option>
+                                <option value="D">삭제</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+
+                    
+                    <div class="card-body">
+                        
+                        <div class="qv-item" data-qv-layout="card">
+                            <script type="application/json">{"assets": [{"alt": "image", "path": "/item/208/2086556/2084745/asset/image-1.png", "role": "question", "type": "image", "width": null, "height": null, "assetId": "img-1", "external": false, "mimeType": "image/png"}, {"alt": "image", "path": "/item/208/2086556/2084745/asset/image-explanation-1.png", "role": "explanation", "type": "image", "width": null, "height": null, "assetId": "img-2", "external": false, "mimeType": "image/png"}], "content": {"choices": [], "answerText": "$8$", "promptText": "전개도로 만든 정육면체에서 모서리 $\\AB$와 평행한 면의 개수를 $a$, 모서리 $\\AC$와 수직인 면의 개수를 $b$, 모서리 $\\AB$와 꼬인 위치에 있는 모서리의 개수를 $c$라고 할 때, $a+b+c$의 값을 구하시오.", "correctHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">$8$</span></p>", "questionHtml": "<d-question><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">전개도로 만든 정육면체에서 모서리 $\\AB$와 평행한 면의 개수를 $a$, 모서리 $\\AC$와 수직인 면의 개수를 $b$, 모서리 $\\AB$와 꼬인 위치에 있는 모서리의 개수를 $c$라고 할 때, $a+b+c$의 값을 구하시오.</span></p><p class=\"align-c\"><span class=\"font-s20\"><img src=\"/item/208/2086556/2084745/asset/image-1.png\" alt=\"image\" data-hml-binitem=\"13\" width=\"130\" height=\"97\" data-asset-id=\"img-1\"></span></p></d-question>", "explanationHtml": "<p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">전개도로 만든 정육면체는 그림과 같다.</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p><span class=\"font-s20\"><img src=\"/item/208/2086556/2084745/asset/image-explanation-1.png\" alt=\"image\" data-hml-binitem=\"14\" width=\"86\" height=\"86\" data-asset-id=\"img-2\"></span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\AB$와 평행한 면은 $2$개이므로 $a=2$</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\AC$와 수직인 면은 $2$개이므로 $b=2$</span><span class=\"hml-align-space\" style=\"display:inline-block;width:0.5em;white-space:pre\"> </span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">모서리 $\\AB$와 꼬인 위치에 있는 모서리는 $4$개이므로 $c=4$</span></p><p style=\"margin-left:0px;margin-right:0px;padding-left:0px;text-indent:0px;margin-top:0;margin-bottom:0;line-height:1.5\"><span class=\"font-s20\">따라서 $a+b+c=2+2+4=8$</span></p>", "explanationText": "전개도로 만든 정육면체는 그림과 같다.\n모서리 $\\AB$와 평행한 면은 $2$개이므로 $a=2$\n모서리 $\\AC$와 수직인 면은 $2$개이므로 $b=2$\n모서리 $\\AB$와 꼬인 위치에 있는 모서리는 $4$개이므로 $c=4$\n따라서 $a+b+c=2+2+4=8$", "modelAnswerHtml": "", "explanationLines": ["전개도로 만든 정육면체는 그림과 같다.", "모서리 $\\AB$와 평행한 면은 $2$개이므로 $a=2$", "모서리 $\\AC$와 수직인 면은 $2$개이므로 $b=2$", "모서리 $\\AB$와 꼬인 위치에 있는 모서리는 $4$개이므로 $c=4$", "따라서 $a+b+c=2+2+4=8$"], "gradingCriteriaHtml": ""}, "grading": {"mode": "exact_match", "value": "$8$"}, "outType": "split", "passageKey": "", "contentVersion": "v3"}</script>
+                            <div class="qv-render"></div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="d-flex justify-content-center gap-2 mb-3">
+        <a class="btn" data-loading
+           href="/item/hml/list.donga?curriculum=22&amp;statuses=R&amp;pageNum=1&amp;pageSize=10">목록</a>
+        <button type="button" class="btn btn-outline-danger" data-exam-discard>폐기</button>
+        <button type="button" class="btn btn-primary" data-exam-approve>승인</button>
+    </div>
+
+    
+        
+        <form id="examApproveForm" class="d-none" hx-include="[name='remark'], [name='paperRegYn']" hx-swap="none" hx-post="/item/hml/approve.donga">
+            <input type="hidden" name="examDocumentId" value="369">
+            <div data-judge-fields></div>
+        </form>
+        <div>
+    <div class="modal modal-blur fade" id="examApproveModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 승인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">승인하시겠습니까?<br><span class='fw-normal small'>AI 메타 추천이 시작되며 되돌릴 수 없습니다.</span></div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok>승인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div>
+    <div class="modal modal-blur fade" id="examUnjudgedModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 승인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold"><span data-unjudged-list></span><br>미검수입니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" data-alert-ok>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div>
+    <div class="modal modal-blur fade" id="examAllDeleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 승인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">모든 문항을 삭제로 선택해 승인할 수 없습니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" data-alert-ok>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div>
+    <div class="modal modal-blur fade" id="examPaperRegModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 승인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">평가지 등록여부를 선택해 주세요.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" data-alert-ok>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <form id="examDiscardForm" class="d-none" hx-include="[name='remark']" hx-swap="none" hx-post="/item/hml/discard.donga">
+            <input type="hidden" name="examDocumentId" value="369">
+        </form>
+        <div>
+    <div class="modal modal-blur fade" id="examDiscardModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 폐기</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">폐기하시겠습니까?<br><span class='fw-normal small'>모든 문항이 삭제 처리되며 되돌릴 수 없습니다.</span></div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-action-ok>폐기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div>
+    <div class="modal modal-blur fade" id="examDiscardReasonModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시험지 폐기</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="fw-bold">폐기 사유를 비고에 입력해 주세요.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" data-alert-ok>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    
+    
+
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <div>
+    <div class="modal modal-blur fade" id="logoutConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-lt">
+                    <h5 class="modal-title">
+                        <i class="ti me-2 ti-alert-triangle text-warning"></i><span>로그아웃</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fw-bold mb-3"><div class="text-center">로그아웃하시겠습니까?</div></div>
+                    <div id="logoutConfirmBody" class="text-secondary text-center">로그인 화면으로 나갑니다.</div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-sm btn-warning" data-action-ok>로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 토스트 팝업 -->
+
+
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<script src="/webjars/tabler__core/1.7.0/dist/js/tabler.min-17579e48ae4969feb55b54f2ad3563e3.js"></script>
+<script src="/webjars/htmx.org/2.0.11/dist/htmx.min-3d6553be673509e52e526683624b4e2b.js"></script>
+<script src="/webjars/tabler__core/1.7.0/dist/libs/litepicker/dist/litepicker-19693754a71f7d0ffb70fd7b2a1cade5.js"></script>
+<script src="/js/common-8dc66a9d95b497a50939a25f89dee707.js"></script>
+
+    
+    <script>
+        (function () {
+            const form = document.getElementById('examApproveForm');
+            const judgeFields = form.querySelector('[data-judge-fields]');
+            const modalEl = document.getElementById('examApproveModal');
+            const unjudgedModalEl = document.getElementById('examUnjudgedModal');
+            const allDeleteModalEl = document.getElementById('examAllDeleteModal');
+            const paperModalEl = document.getElementById('examPaperRegModal');
+            const paperReg = document.querySelector('[data-paper-reg]');
+            const selects = [...document.querySelectorAll('select[data-exam-judge]')];
+            let scrollTarget = null;
+
+            selects.forEach(function (select) {
+                select.addEventListener('change', function () {
+                    select.classList.remove('text-secondary');
+                });
+            });
+
+            function scrollToTarget() {
+                if (!scrollTarget) return;
+                scrollTarget.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                scrollTarget.focus({ preventScroll: true });
+                scrollTarget = null;
+            }
+            unjudgedModalEl.addEventListener('hidden.bs.modal', scrollToTarget);
+            // 디피니션은 평가지 항목이 없어 모달도 없다
+            if (paperModalEl) paperModalEl.addEventListener('hidden.bs.modal', scrollToTarget);
+
+            document.querySelector('[data-exam-approve]').addEventListener('click', function () {
+                const unjudged = selects.filter(function (select) { return select.value === 'W'; });
+                if (unjudged.length) {
+                    unjudgedModalEl.querySelector('[data-unjudged-list]').textContent =
+                        unjudged.map(function (select) { return '#' + select.dataset.blockNo; }).join(', ');
+                    scrollTarget = unjudged[0];
+                    bootstrap.Modal.getOrCreateInstance(unjudgedModalEl).show();
+                    return;
+                }
+                // 고칠 자리가 한 곳이 아니라 스크롤 대상을 잡지 않는다
+                if (selects.length && selects.every(function (select) { return select.value === 'D'; })) {
+                    bootstrap.Modal.getOrCreateInstance(allDeleteModalEl).show();
+                    return;
+                }
+                if (paperReg && !paperReg.querySelector('input[name="paperRegYn"]:checked')) {
+                    scrollTarget = paperReg.querySelector('input[name="paperRegYn"]');
+                    bootstrap.Modal.getOrCreateInstance(paperModalEl).show();
+                    return;
+                }
+                bootstrap.Modal.getOrCreateInstance(modalEl).show();
+            });
+
+            modalEl.querySelector('[data-action-ok]').addEventListener('click', function () {
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+
+                // 이중 대괄호는 Thymeleaf 인라인 표현식으로 읽혀 파싱 오류가 나므로 쓰지 않는다
+                function appendHidden(name, value) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = name;
+                    input.value = value;
+                    judgeFields.appendChild(input);
+                }
+
+                judgeFields.replaceChildren();
+                selects.forEach(function (select) {
+                    select.dataset.itemIds.split(',').forEach(function (itemId) {
+                        appendHidden('itemIds', itemId);
+                        appendHidden('loadFlags', select.value);
+                    });
+                });
+                form.requestSubmit();
+            });
+
+            form.addEventListener('htmx:afterRequest', function (e) {
+                const trigger = e.detail.xhr.getResponseHeader('HX-Trigger');
+                if (!trigger) return;
+
+                const payload = JSON.parse(trigger);
+                if (!payload.examApproved) return;
+
+                toastAfterMove('승인 되었습니다.');
+                showLoadingOverlay();
+                location.reload();
+            });
+        })();
+    </script>
+
+    
+    <script>
+        (function () {
+            const form = document.getElementById('examDiscardForm');
+            const modalEl = document.getElementById('examDiscardModal');
+            const reasonModalEl = document.getElementById('examDiscardReasonModal');
+            const remark = document.querySelector('textarea[name="remark"]');
+
+            document.querySelector('[data-exam-discard]').addEventListener('click', function () {
+                if (!remark.value.trim()) {
+                    bootstrap.Modal.getOrCreateInstance(reasonModalEl).show();
+                    return;
+                }
+                bootstrap.Modal.getOrCreateInstance(modalEl).show();
+            });
+
+            reasonModalEl.addEventListener('hidden.bs.modal', function () {
+                remark.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                remark.focus({ preventScroll: true });
+            });
+
+            modalEl.querySelector('[data-action-ok]').addEventListener('click', function () {
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+                form.requestSubmit();
+            });
+
+            form.addEventListener('htmx:afterRequest', function (e) {
+                const trigger = e.detail.xhr.getResponseHeader('HX-Trigger');
+                if (!trigger) return;
+
+                const payload = JSON.parse(trigger);
+                if (!payload.examDiscarded) return;
+
+                toastAfterMove('폐기 되었습니다.');
+                showLoadingOverlay();
+                location.reload();
+            });
+        })();
+    </script>
+
+    
+    
+
+    
+        
+    <script src="/js/vendor/donga-question-viewer/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js"></script>
+    <script>
+        (function () {
+            if (!window.DongaQuestionViewer) return;
+            var cdnBaseUrl = "https:\/\/dev-items.douclass.com\/itembank";
+
+            // data-qv-layout="card" 인 요소만 카드 레이아웃, 없으면 뷰어 기본
+            window.renderQuestionView = function (target, doc, layout) {
+                DongaQuestionViewer.render(target, doc, { imageBaseUrl: cdnBaseUrl, showAnswer: true, showExplanation: true, showModelAnswer: true, showGradingCriteria: true, layout: layout || undefined });
+            };
+            // renderPassage는 { passageContent } 플랫 객체를 받음. 본문은 지문 문서의 content.passageHtml
+            window.renderPassageView = function (target, doc) {
+                DongaQuestionViewer.renderPassage(target, { passageContent: (doc && doc.content && doc.content.passageHtml) || '' }, { imageBaseUrl: cdnBaseUrl });
+            };
+
+            document.querySelectorAll('.qv-item').forEach(function (item) {
+                var dataEl = item.querySelector('script[type="application/json"]');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderQuestionView(target, JSON.parse(dataEl.textContent), item.getAttribute('data-qv-layout'));
+                } catch (e) {
+                    console.error('문항 렌더 실패', e);
+                }
+            });
+            document.querySelectorAll('.qv-passage').forEach(function (item) {
+                var dataEl = item.querySelector('script');
+                var target = item.querySelector('.qv-render');
+                if (!dataEl || !target) return;
+                try {
+                    window.renderPassageView(target, JSON.parse(dataEl.textContent));
+                } catch (e) {
+                    console.error('지문 렌더 실패', e);
+                }
+            });
+        })();
+    </script>
+
+    
+
+</body>
+</html>
+

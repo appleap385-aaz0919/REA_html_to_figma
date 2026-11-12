@@ -1,0 +1,1181 @@
+- generic
+  - generic
+    - complementary
+      - button "메뉴" [expanded=false, ref=e1416]
+      - link "문제은행 마스터 CMS" [ref=e1417]
+      - list
+        - listitem [level=1]
+          - link " 홈" [ref=e1430]
+            - StaticText ""
+            - StaticText "홈"
+        - listitem [level=1]
+          - button " 문항 관리" [expanded=true, ref=e1431]
+            - StaticText ""
+            - StaticText "문항 관리"
+          - link "전체 문항" [ref=e1432]
+          - link "HML 문항 등록" [ref=e1433]
+          - link "디피니션 문항 등록" [ref=e1434]
+          - link "쌍둥이 그룹 관리" [ref=e1435]
+        - listitem [level=1]
+          - link " 평가지 관리" [ref=e1436]
+            - StaticText ""
+            - StaticText "평가지 관리"
+        - listitem [level=1]
+          - link " 문항 출처 관리" [ref=e1437]
+            - StaticText ""
+            - StaticText "문항 출처 관리"
+        - listitem [level=1]
+          - link " 랩" [ref=e1438]
+            - StaticText ""
+            - StaticText "랩"
+    - banner
+      - StaticText "마스터"
+      - generic
+        - StaticText "접속자 "
+        - strong
+          - StaticText "jaehyuk.myung"
+      - form
+        - button " 로그아웃" [ref=e1418]
+          - StaticText ""
+          - StaticText "로그아웃"
+    - generic
+      - list "breadcrumbs"
+        - listitem [level=1]
+          - StaticText "시스템 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 관리"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "전체 문항"
+        - listitem [level=1]
+          - StaticText "›"
+          - StaticText "문항 수정"
+      - heading "문항 수정" [level=2, ref=e1419]
+      - StaticText "문항 ID"
+      - StaticText "2088985 (2088698)"
+      - StaticText "지문 ID"
+      - StaticText "-"
+      - StaticText "원본 파일"
+      - StaticText "-"
+      - StaticText "상태"
+      - StaticText "초안"
+      - StaticText "배포 여부"
+      - StaticText "미배포"
+      - StaticText "생성 방식"
+      - StaticText "복제"
+      - tablist
+        - tab "메타정보 수정" [ref=e1426]
+        - tab "한글(HML) 수정" [ref=e1427]
+        - tab "HTML 수정" [ref=e1428]
+        - tab "OMR 수정" [selected, ref=e1429]
+      - link "취소" [ref=e1420]
+      - button "임시 저장" [ref=e1421]
+      - button "전체 반영" [ref=e1422]
+      - generic
+        - generic
+          - heading "문항 형태 *" [level=3, ref=e1473]
+            - StaticText ""
+            - StaticText "문항 형태 *"
+          - combobox [expanded=false, ref=e1476]: 서술형
+            - MenuListPopup
+              - option "객관식" [ref=e1486]
+              - option "주관식" [ref=e1487]
+              - option "서술형" [selected, ref=e1488]
+          - combobox [expanded=false, ref=e1477]: 다답형
+            - MenuListPopup
+              - option "기본형" [ref=e1489]
+              - option "단답형" [ref=e1490]
+              - option "다답형" [selected, ref=e1491]
+          - combobox [expanded=false, ref=e1478]: 다답 서술형
+            - MenuListPopup
+              - option "다답 서술형" [selected, ref=e1525]
+        - generic
+          - heading "이미지 업로드" [level=3, ref=e1474]
+            - StaticText ""
+            - StaticText "이미지 업로드"
+          - button " 업로드" [ref=e1479]
+            - StaticText ""
+            - StaticText "업로드"
+        - tabpanel
+          - generic
+            - heading "문항 2088985" [level=3, ref=e1475]
+              - StaticText ""
+              - StaticText "문항 2088985"
+            - article
+              - paragraph
+                - StaticText "다음 중 그림과 같은 정비례 관계의 그래프 위의 점이 아닌 것은?"
+              - paragraph
+                - image "image"
+              - generic
+                - heading "정답" [level=3, ref=e1526]
+                - paragraph
+                  - StaticText "③"
+              - generic
+                - heading "풀이" [level=3, ref=e1527]
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLText
+                        - MathMLOperator
+                          - StaticText "("
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLNumber
+                          - StaticText "0"
+                        - MathMLOperator
+                          - StaticText ")"
+                  - StaticText "로 놓고 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                  - StaticText "를 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "2"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "6"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑎"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "∴"
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                - paragraph
+                  - StaticText "③"
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                  - StaticText "에 "
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLIdentifier
+                          - StaticText "𝑥"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLNumber
+                          - StaticText "1"
+                        - MathMLOperator
+                          - StaticText ","
+                        - MathMLText
+                        - MathMLIdentifier
+                          - StaticText "𝑦"
+                        - MathMLOperator
+                          - StaticText "="
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                  - StaticText "을 대입하면"
+                - paragraph
+                  - MathMLMath
+                    - MathMLRow
+                      - MathMLRow
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLNumber
+                          - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "≠"
+                        - MathMLOperator
+                          - StaticText "−"
+                        - MathMLRow
+                          - MathMLFraction
+                            - MathMLNumber
+                              - StaticText "1"
+                            - MathMLNumber
+                              - StaticText "3"
+                        - MathMLOperator
+                          - StaticText "×"
+                        - MathMLNumber
+                          - StaticText "1"
+          - generic
+            - heading "OMR 편집 (정답 설정)" [level=3, ref=e1515]
+              - StaticText ""
+              - StaticText "OMR 편집 (정답 설정)"
+            - button " OMR 미리보기" [ref=e1516]
+              - StaticText ""
+              - StaticText "OMR 미리보기"
+            - StaticText "타이틀 "
+            - StaticText "1"
+            - textbox "풀이 과정" [ref=e1517]: QA-multi-process
+              - StaticText "QA-multi-process"
+            - StaticText "학생이 풀이 과정을 직접 그리기/사진으로 작성하는 영역"
+            - StaticText "※ 자유 서술형 · 수동 채점 (관리자 입력 없음)"
+            - button " 순서 바꾸기" [ref=e1528]
+              - StaticText ""
+              - StaticText "순서 바꾸기"
+            - StaticText "타이틀 "
+            - StaticText "2"
+            - textbox "정답" [ref=e1518]: QA-multi-answer
+              - StaticText "QA-multi-answer"
+            - LabelText
+              - checkbox "OMR SET끼리 순서 고정(유순)" [checked=true, ref=e1529]
+              - StaticText "OMR SET끼리 순서 고정(유순)"
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "OMR SET"
+            - LabelText
+              - checkbox "순서 고정(유순)" [checked=false, ref=e1530]
+              - StaticText "순서 고정(유순)"
+            - button "SET 삭제" [disabled, ref=e1519]
+            - StaticText "1"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1520]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1543]
+                - option "범례 선택형" [ref=e1544]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1531]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1521]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1532] editable [tabindex, contenteditable]
+                - textbox [ref=e1545]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e1548]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1533]
+            - button "" [expanded=false, ref=e1534]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1535] editable [tabindex, contenteditable]
+                - textbox [ref=e1546]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e1549]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1536]
+            - button "" [expanded=false, ref=e1537]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1538] editable [tabindex, contenteditable]
+                - textbox [ref=e1547]
+                - generic
+                  - button "Menu Menu" [ref=e1550]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1539]
+            - button "" [expanded=false, ref=e1540]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1541]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1542]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1522]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - StaticText "2"
+            - StaticText ") "
+            - StaticText "정답 SET"
+            - combobox [expanded=false, ref=e1652]: 입력 박스형
+              - MenuListPopup
+                - option "입력 박스형" [selected, ref=e1667]
+                - option "범례 선택형" [ref=e1668]
+            - LabelText
+              - checkbox "쉼표 구분여부" [checked=false, ref=e1655]
+              - StaticText "쉼표 구분여부"
+            - button "SET 삭제" [ref=e1653]
+            - StaticText "설정"
+            - generic
+              - math "math input field" [ref=e1656] editable [tabindex, contenteditable]
+                - textbox [ref=e1669]
+                - generic
+                  - generic
+                    - StaticText "앞 수식어"
+                  - button "Menu Menu" [ref=e1672]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1657]
+            - button "" [expanded=false, ref=e1658]
+              - StaticText ""
+            - generic
+              - math "math input field" [ref=e1659] editable [tabindex, contenteditable]
+                - textbox [ref=e1670]
+                - generic
+                  - generic
+                    - StaticText "뒤 수식어"
+                  - button "Menu Menu" [ref=e1673]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1660]
+            - button "" [expanded=false, ref=e1661]
+              - StaticText ""
+            - StaticText "정답"
+            - generic
+              - math "math input field" [ref=e1662] editable [tabindex, contenteditable]
+                - textbox [ref=e1671]
+                - generic
+                  - generic
+                    - StaticText "정답 입력"
+                  - button "Menu Menu" [ref=e1674]
+                    - image "Menu"
+                    - StaticText "Menu"
+                - status
+              - button "Σ" [ref=e1663]
+            - button "" [expanded=false, ref=e1664]
+              - StaticText ""
+            - LabelText
+              - checkbox "대소구분" [checked=false, ref=e1665]
+              - StaticText "대소구분"
+            - LabelText
+              - checkbox "공백구분" [checked=false, ref=e1666]
+              - StaticText "공백구분"
+            - button " 유사 정답 추가" [ref=e1654]
+              - StaticText ""
+              - StaticText "유사 정답 추가"
+            - button " 정답 SET 추가" [ref=e1523]
+              - StaticText ""
+              - StaticText "정답 SET 추가"
+            - button " OMR SET 추가" [ref=e1524]
+              - StaticText ""
+              - StaticText "OMR SET 추가"
+      - link "취소" [ref=e1423]
+      - button "임시 저장" [ref=e1424]
+      - button "전체 반영" [ref=e1425]
+  - generic
+    - dialog
+      - paragraph
+        - StaticText "수식입력기"
+      - button "닫기" [ref=e1551]
+      - generic
+        - tablist
+          - tab "키보드" [ref=e1648]
+        - paragraph
+          - StaticText "텍스트·숫자는 키보드로 직접 입력, 수식 기호는 아래 키패드를 이용하세요"
+        - math "math input field" [ref=e1554] editable [tabindex, contenteditable]
+          - textbox [ref=e1649]
+          - generic
+          - status
+        - tablist
+          - tab "숫자·연산·기호" [selected, ref=e1768]
+          - tab "알파벳·그리스 문자" [ref=e1769]
+        - button "+" [ref=e1675]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "+"
+        - button "-" [ref=e1676]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "−"
+        - button "\\times" [ref=e1677]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "×"
+        - button "<" [ref=e1678]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "<"
+        - button ">" [ref=e1679]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText ">"
+        - button "\\div" [ref=e1680]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "÷"
+        - button "=" [ref=e1681]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "="
+        - button ":" [ref=e1682]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText ":"
+        - button "\\le" [ref=e1683]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "≤"
+        - button "\\ge" [ref=e1684]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "≥"
+        - button "\\left\\{\\begin{smallmatrix}\\square\\\\\\square\\end{smallmatrix}\\right." [ref=e1685]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "{"
+                - MathMLRow
+                  - MathMLTable
+                    - MathMLTableRow
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+                    - MathMLTableRow
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+        - button "|\\square|" [ref=e1686]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "∣"
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLIdentifier
+                  - StaticText "∣"
+        - button "\\%" [ref=e1687]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "%"
+        - button "(" [ref=e1688]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "("
+        - button ")" [ref=e1689]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\dfrac{\\square}{\\square}" [ref=e1690]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLRow
+                  - MathMLFraction
+                    - MathMLIdentifier
+                      - StaticText "□"
+                    - MathMLIdentifier
+                      - StaticText "□"
+        - button "\\square^{\\square}" [ref=e1691]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLIdentifier
+                    - StaticText "□"
+        - button "\\square_{\\square}" [ref=e1692]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLIdentifier
+                    - StaticText "□"
+        - button "[" [ref=e1693]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "["
+        - button "]" [ref=e1694]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "]"
+        - button "\\sqrt{\\square}" [ref=e1695]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSquareRoot
+                  - MathMLIdentifier
+                    - StaticText "□"
+        - button "\\overline{\\square}" [ref=e1696]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOver
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLOperator
+                    - StaticText "‾"
+        - button "행렬" [ref=e1697]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLRow
+                  - MathMLTable
+                    - MathMLTableRow
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+                    - MathMLTableRow
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+                      - MathMLTableCell
+                        - MathMLRow
+                          - MathMLIdentifier
+                            - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\{" [ref=e1698]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "{"
+        - button "\\}" [ref=e1699]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "}"
+        - button "\\angle" [ref=e1700]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "∠"
+        - button "\\square" [ref=e1701]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "□"
+        - button "\\mathrel{/\\!\\!/}" [ref=e1702]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "/"
+                  - StaticText " ⁣"
+                  - StaticText " ⁣"
+                  - StaticText "/"
+        - button "\\backsim" [ref=e1703]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∽"
+        - button "\\equiv" [ref=e1704]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "≡"
+        - button "\\perp" [ref=e1705]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "⊥"
+        - button "/" [ref=e1706]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "/"
+        - button "'" [ref=e1707]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLRow
+                  - MathMLOperator
+                    - StaticText "′"
+        - button "," [ref=e1708]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText ","
+        - button "\\pi" [ref=e1709]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝜋"
+        - button "\\in" [ref=e1710]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∈"
+        - button "\\not\\in" [ref=e1711]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∉"
+        - button "\\subset" [ref=e1712]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "⊂"
+        - button "\\not\\subset" [ref=e1713]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "⊄"
+        - button "i" [ref=e1714]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝑖"
+        - button "\\cup" [ref=e1715]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∪"
+        - button "\\cap" [ref=e1716]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∩"
+        - button "\\varnothing" [ref=e1717]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "∅"
+        - button "\\circ" [ref=e1718]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∘"
+        - button "{}^{\\circ}" [ref=e1719]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLRow
+                  - MathMLOperator
+                    - StaticText "∘"
+        - button "\\square^{c}" [ref=e1720]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLIdentifier
+                    - StaticText "𝑐"
+        - button "n(\\square)" [ref=e1721]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝑛"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\to" [ref=e1722]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "→"
+        - button "\\sim" [ref=e1723]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∼"
+        - button "|" [ref=e1724]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "∣"
+        - button "\\log\\square" [ref=e1725]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "log"
+                - MathMLOperator
+                  - StaticText "⁡"
+                - MathMLIdentifier
+                  - StaticText "□"
+        - button "\\log_{\\square}\\square" [ref=e1726]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLRow
+                    - MathMLIdentifier
+                      - StaticText "log"
+                    - MathMLOperator
+                      - StaticText "⁡"
+                  - MathMLIdentifier
+                    - StaticText "□"
+                - MathMLIdentifier
+                  - StaticText "□"
+        - button "e" [ref=e1727]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝑒"
+        - button "{}^{\\circ}" [ref=e1728]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLRow
+                  - MathMLOperator
+                    - StaticText "∘"
+        - button "\\sin" [ref=e1729]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "sin"
+                - MathMLOperator
+                  - StaticText "⁡"
+        - button "\\cos" [ref=e1730]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "cos"
+                - MathMLOperator
+                  - StaticText "⁡"
+        - button "\\tan" [ref=e1731]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "tan"
+                - MathMLOperator
+                  - StaticText "⁡"
+        - button "\\Sigma" [ref=e1732]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "Σ"
+        - button "\\lim" [ref=e1733]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "lim"
+                - MathMLOperator
+                  - StaticText "⁡"
+        - button "\\infty" [ref=e1734]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "∞"
+        - button "\\int" [ref=e1735]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "∫"
+        - button "\\int_{\\square}^{\\square}" [ref=e1736]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSubSup
+                  - MathMLOperator
+                    - StaticText "∫"
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLIdentifier
+                    - StaticText "□"
+        - button "dx" [ref=e1737]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝑑"
+                - MathMLIdentifier
+                  - StaticText "𝑥"
+        - button "f'(\\square)" [ref=e1738]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSup
+                  - MathMLIdentifier
+                    - StaticText "𝑓"
+                  - MathMLOperator
+                    - StaticText "′"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\dfrac{dy}{dx}" [ref=e1739]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLRow
+                  - MathMLFraction
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑑"
+                      - MathMLIdentifier
+                        - StaticText "𝑦"
+                    - MathMLRow
+                      - MathMLIdentifier
+                        - StaticText "𝑑"
+                      - MathMLIdentifier
+                        - StaticText "𝑥"
+        - button "\\Delta" [ref=e1740]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "Δ"
+        - button "{}_{n}\\mathrm{P}_{r}" [ref=e1741]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑛"
+                - MathMLSub
+                  - MathMLIdentifier
+                    - StaticText "P"
+                  - MathMLIdentifier
+                    - StaticText "𝑟"
+        - button "{}_{n}\\mathrm{C}_{r}" [ref=e1742]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑛"
+                - MathMLSub
+                  - MathMLIdentifier
+                    - StaticText "C"
+                  - MathMLIdentifier
+                    - StaticText "𝑟"
+        - button "{}_{n}\\Pi_{r}" [ref=e1743]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑛"
+                - MathMLSub
+                  - MathMLIdentifier
+                    - StaticText "Π"
+                  - MathMLIdentifier
+                    - StaticText "𝑟"
+        - button "{}_{n}\\mathrm{H}_{r}" [ref=e1744]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLSub
+                  - MathMLRow
+                  - MathMLIdentifier
+                    - StaticText "𝑛"
+                - MathMLSub
+                  - MathMLIdentifier
+                    - StaticText "H"
+                  - MathMLIdentifier
+                    - StaticText "𝑟"
+        - button "!" [ref=e1745]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "!"
+        - button "\\cdots" [ref=e1746]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLOperator
+                  - StaticText "⋯"
+        - button "\\mathrm{P}(\\square)" [ref=e1747]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "P"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\mathrm{P}(\\square|\\square)" [ref=e1748]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "P"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLIdentifier
+                  - StaticText "∣"
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\mathrm{E}(\\square)" [ref=e1749]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "E"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\mathrm{V}(\\square)" [ref=e1750]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "V"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\sigma(\\square)" [ref=e1751]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "𝜎"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "\\mathrm{N}(\\square,\\square^2)" [ref=e1752]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "N"
+                - MathMLOperator
+                  - StaticText "("
+                - MathMLIdentifier
+                  - StaticText "□"
+                - MathMLOperator
+                  - StaticText ","
+                - MathMLSup
+                  - MathMLIdentifier
+                    - StaticText "□"
+                  - MathMLNumber
+                    - StaticText "2"
+                - MathMLOperator
+                  - StaticText ")"
+        - button "7" [ref=e1753]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "7"
+        - button "8" [ref=e1754]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "8"
+        - button "9" [ref=e1755]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "9"
+        - button "왼쪽" [ref=e1756]
+        - button "4" [ref=e1757]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "4"
+        - button "5" [ref=e1758]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "5"
+        - button "6" [ref=e1759]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "6"
+        - button "오른쪽" [ref=e1760]
+        - button "1" [ref=e1761]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "1"
+        - button "2" [ref=e1762]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "2"
+        - button "3" [ref=e1763]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "3"
+        - button "줄바꿈" [ref=e1764]
+        - button "0" [ref=e1765]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLNumber
+                  - StaticText "0"
+        - button "." [ref=e1766]
+          - MathMLMath
+            - MathMLRow
+              - MathMLRow
+                - MathMLIdentifier
+                  - StaticText "."
+        - button "지우기" [ref=e1767]
+      - button "취소" [ref=e1552]
+      - button "적용" [ref=e1553]

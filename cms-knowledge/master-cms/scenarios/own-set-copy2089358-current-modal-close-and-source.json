@@ -1,0 +1,5 @@
+{"steps":[
+ {"label":"2564-own-set-copy2089358-twin-current-modal-source","command":["eval","--file","sources/runtime/sanitized-page-source.js"]},
+ {"label":"2565-own-set-copy2089358-twin-current-modal-close","command":["eval","(async()=>{if(new URLSearchParams(location.search).get('itemId')!=='2089358'||!document.querySelector('#itemTwinModal.show'))throw Error('Own twin list modal required');const modal=document.getElementById('itemTwinModal'),button=modal.querySelector('.modal-footer [data-bs-dismiss=modal]');if(!button||button.matches(':disabled'))throw Error('Actual close required');const hidden=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Modal hidden timeout')),5000);modal.addEventListener('hidden.bs.modal',()=>{clearTimeout(timer);resolve();},{once:true});});button.click();await hidden;return {closed:true};})()"]},
+ {"label":"2566-own-set-copy2089358-final-visual-state","command":["eval","--file","sources/runtime/cms-page-visual-state.js"]}
+],"tailChars":180}
