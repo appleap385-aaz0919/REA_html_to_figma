@@ -6,6 +6,8 @@
 
 ### 2026-11-20 최신: 다음 세션 인계와 지정 원격 저장소 보존
 
+**보존 완료:** 누적 구현·근거 스냅샷 `d46ccca30cde5eee014247329f13839985027c46`를 지정 원격 `main`에 푸시했고 원격 ref와 일치함을 확인했습니다. 이 완료 기록은 후속 문서 커밋으로 함께 보존합니다. 원격 최신 HEAD는 `git log -1`과 `git ls-remote origin refs/heads/main`으로 대조합니다.
+
 사용자가 작업 기록을 빠짐없이 남기고 커밋·푸시하도록 지시한 뒤 원격 주소를 직접 지정했습니다. 기존 원격 설정은 없었으며 `origin`을 `https://github.com/appleap385-aaz0919/REA_html_to_figma.git`으로 연결했습니다. 최초 조회에서 원격 ref는 0개였습니다. 이번 스냅샷의 상태·실제 커밋·푸시 결과는 `docs/repository-preservation-20261120.json`을 확인합니다. 이전 문단의 “커밋·업로드 없음”은 각 작업 완료 당시의 이력입니다.
 
 재개 시 `master-cms-mockup/index.html`을 일반 Chrome·Edge에서 열고, 자동 요청 전달이 필요하면 `master-cms-mockup/검수 연결.cmd`를 실행한 뒤 HTML에서 프로젝트의 `review-work` 폴더를 연결합니다. 백엔드 서버는 필요하지 않습니다. 연결 설정·프로세스·브라우저 핸들은 버전 관리에서 제외하며 새 환경에서는 현재 연결을 다시 관찰합니다. 실제 사용자 브라우저 localStorage는 Git에 포함되지 않습니다. 보존한 jobs/updates는 기존 요청·질문·답변·승인 근거이며 새 작업으로 재실행하거나 삭제한 과거 요청을 복원하지 않습니다.
