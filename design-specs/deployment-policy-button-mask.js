@@ -1,0 +1,3 @@
+const f=figma.getNodeById('8:16538'),cover=f.children.find(n=>n.name==='문항 배포 · 비사용 상태 비활성 배경'),button=f.children.find(n=>n.getPluginData('deploymentPolicyImage')==='item-button-N');
+const before={x:cover.x,y:cover.y,w:cover.width,h:cover.height};cover.x=48+862.5*1490/1800-2;cover.y=220+1182.65625*1490/1800-2;cover.resize(108,46);button.x=cover.x;button.y=cover.y;button.resize(108,46);for(const n of f.children.filter(n=>n.name==='요소 번호 12'))f.appendChild(n);
+const value={before,after:{x:cover.x,y:cover.y,w:cover.width,h:cover.height},reason:'원본 캡처의 버튼 크기가 이전 앵커보다 커서 남은 파란 가장자리를 전체 마스킹했습니다.',newNumberedDescriptions:0};f.setPluginData('cmsDeploymentButtonMask',JSON.stringify(value));print('DEPLOYMENT_BUTTON_MASK '+JSON.stringify(value));

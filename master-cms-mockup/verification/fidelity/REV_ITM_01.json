@@ -1,0 +1,789 @@
+{
+  "title": "전체 문항",
+  "overflow": false,
+  "controls": [
+    {
+      "tag": "SELECT",
+      "name": "treeCurriculum",
+      "action": "",
+      "label": "단원 교육과정",
+      "disabled": false,
+      "box": {
+        "x": 293,
+        "y": 170,
+        "w": 106.8125,
+        "h": 32
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "treeSchool",
+      "action": "",
+      "label": "단원 학교급",
+      "disabled": false,
+      "box": {
+        "x": 403.8125,
+        "y": 170,
+        "w": 106.8125,
+        "h": 32
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "treeSubjectGroup",
+      "action": "",
+      "label": "단원 과목군",
+      "disabled": false,
+      "box": {
+        "x": 514.625,
+        "y": 170,
+        "w": 106.8125,
+        "h": 32
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "",
+      "action": "tree-unit",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 313,
+        "y": 225,
+        "w": 14,
+        "h": 14
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "tree-collapse",
+      "label": "단원 트리 접기",
+      "disabled": false,
+      "box": {
+        "x": 658.4375,
+        "y": 149,
+        "w": 40,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "criterion",
+      "action": "",
+      "label": "검색 기준",
+      "disabled": false,
+      "box": {
+        "x": 679.4375,
+        "y": 218,
+        "w": 121.671875,
+        "h": 40
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "q",
+      "action": "",
+      "label": "검색어",
+      "disabled": false,
+      "box": {
+        "x": 809.109375,
+        "y": 218,
+        "w": 219.359375,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "difficulty",
+      "action": "",
+      "label": "난이도",
+      "disabled": false,
+      "box": {
+        "x": 1036.46875,
+        "y": 218,
+        "w": 138.90625,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "method",
+      "action": "",
+      "label": "생성 방식",
+      "disabled": false,
+      "box": {
+        "x": 1183.375,
+        "y": 218,
+        "w": 138.90625,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "category",
+      "action": "",
+      "label": "형태1",
+      "disabled": false,
+      "box": {
+        "x": 1330.28125,
+        "y": 218,
+        "w": 138.90625,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "answerMode",
+      "action": "",
+      "label": "형태2",
+      "disabled": false,
+      "box": {
+        "x": 1477.1875,
+        "y": 218,
+        "w": 138.90625,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "subtype",
+      "action": "",
+      "label": "형태3",
+      "disabled": false,
+      "box": {
+        "x": 1624.09375,
+        "y": 218,
+        "w": 138.90625,
+        "h": 40
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "from",
+      "action": "",
+      "label": "등록 시작일",
+      "disabled": false,
+      "box": {
+        "x": 797.4375,
+        "y": 366,
+        "w": 180,
+        "h": 40
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "to",
+      "action": "",
+      "label": "등록 종료일",
+      "disabled": false,
+      "box": {
+        "x": 797.4375,
+        "y": 418,
+        "w": 180,
+        "h": 40
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "date-done",
+      "label": "선택 완료",
+      "disabled": false,
+      "box": {
+        "x": 747.4375,
+        "y": 470,
+        "w": 256,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "quick-date",
+      "label": "7일",
+      "disabled": false,
+      "box": {
+        "x": 966.4375,
+        "y": 266,
+        "w": 53.71875,
+        "h": 40
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "quick-date",
+      "label": "30일",
+      "disabled": false,
+      "box": {
+        "x": 1019.15625,
+        "y": 266,
+        "w": 61.421875,
+        "h": 40
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "quick-date",
+      "label": "90일",
+      "disabled": false,
+      "box": {
+        "x": 1079.578125,
+        "y": 266,
+        "w": 61.421875,
+        "h": 40
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "quick-date",
+      "label": "전체",
+      "disabled": false,
+      "box": {
+        "x": 1140,
+        "y": 266,
+        "w": 60,
+        "h": 40
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 1264,
+        "y": 276,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "deployed",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 1332,
+        "y": 276,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "deployed",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 1414,
+        "y": 276,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "target",
+      "action": "",
+      "label": "배포 대상",
+      "disabled": false,
+      "box": {
+        "x": 1496,
+        "y": 266,
+        "w": 162,
+        "h": 40
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 723.4375,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "status",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 791.4375,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "status",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 859.4375,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "status",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 977.96875,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "status",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 1082.5,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "INPUT",
+      "name": "status",
+      "action": "",
+      "label": "",
+      "disabled": false,
+      "box": {
+        "x": 1201.03125,
+        "y": 340,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "filter-reset",
+      "label": "초기화",
+      "disabled": false,
+      "box": {
+        "x": 1594,
+        "y": 330,
+        "w": 76,
+        "h": 40
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "",
+      "label": "조회",
+      "disabled": false,
+      "box": {
+        "x": 1678,
+        "y": 330,
+        "w": 85,
+        "h": 40
+      }
+    },
+    {
+      "tag": "SELECT",
+      "name": "pageSize",
+      "action": "",
+      "label": "표시 개수",
+      "disabled": false,
+      "box": {
+        "x": 658.4375,
+        "y": 407,
+        "w": 131,
+        "h": 32
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "다음 중 소수인 수를 고르시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 512.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "1개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 510.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "방정식 3x + 5 = 20의 해를 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 585.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "1개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 583.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "다음 그림과 같은 반비례 관계 y = 12/x의 그래프 위의 점이 아닌 것은?",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 658.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 656.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "두 정수 −3과 7의 합을 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 731.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 729.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "x² − 5x + 6 = 0의 두 근의 합을 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 804.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 802.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "주어진 자료를 이용하여 풀이 과정을 서술하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 877.140625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 875.140625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "행렬 A의 (1, 1) 성분을 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 951.640625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 949.640625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "행렬 A의 (2, 1) 성분을 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 1027.640625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 1025.640625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "행렬 A의 모든 성분의 합을 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 1103.640625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 1101.640625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "A",
+      "name": "",
+      "action": "",
+      "label": "행렬 A의 열의 개수를 구하시오.",
+      "disabled": false,
+      "box": {
+        "x": 761.3125,
+        "y": 1179.640625,
+        "w": 301.84375,
+        "h": 20
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "item-twins",
+      "label": "0개",
+      "disabled": false,
+      "box": {
+        "x": 1491.203125,
+        "y": 1177.640625,
+        "w": 21.71875,
+        "h": 24
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "«",
+      "disabled": false,
+      "box": {
+        "x": 1079.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "‹",
+      "disabled": true,
+      "box": {
+        "x": 1115.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "1",
+      "disabled": false,
+      "box": {
+        "x": 1151.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "2",
+      "disabled": false,
+      "box": {
+        "x": 1187.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "3",
+      "disabled": false,
+      "box": {
+        "x": 1223.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "4",
+      "disabled": false,
+      "box": {
+        "x": 1259.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "›",
+      "disabled": false,
+      "box": {
+        "x": 1295.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "name": "",
+      "action": "page",
+      "label": "»",
+      "disabled": false,
+      "box": {
+        "x": 1331.21875,
+        "y": 1244.140625,
+        "w": 32,
+        "h": 32
+      }
+    }
+  ],
+  "headings": [
+    "전체 문항"
+  ]
+}

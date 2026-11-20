@@ -1,0 +1,473 @@
+{
+  "OBSACN": {
+    "omr": [
+      {
+        "options": [
+          {
+            "value": "1",
+            "value_type": "text"
+          },
+          {
+            "value": "2",
+            "value_type": "text"
+          },
+          {
+            "value": "3",
+            "value_type": "text"
+          },
+          {
+            "value": "4",
+            "value_type": "text"
+          },
+          {
+            "value": "5",
+            "value_type": "text"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "VALUE",
+      "allowed_answer": [
+        {
+          "value": "1",
+          "value_type": "text",
+          "case_sensitive": false,
+          "space_sensitive": false
+        }
+      ]
+    }
+  },
+  "OBSAOX": {
+    "omr": [
+      {
+        "type": "BUTTON",
+        "options": [
+          {
+            "value": "O",
+            "value_type": "text"
+          },
+          {
+            "value": "X",
+            "value_type": "text"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "VALUE",
+      "allowed_answer": [
+        {
+          "value": "O",
+          "value_type": "text",
+          "case_sensitive": false,
+          "space_sensitive": false
+        }
+      ]
+    }
+  },
+  "OBMACN": {
+    "omr": [
+      {
+        "options": [
+          {
+            "value": "1",
+            "value_type": "text"
+          },
+          {
+            "value": "2",
+            "value_type": "text"
+          },
+          {
+            "value": "3",
+            "value_type": "text"
+          },
+          {
+            "value": "4",
+            "value_type": "text"
+          },
+          {
+            "value": "5",
+            "value_type": "text"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "UNORDERED",
+      "nodes": [
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "1",
+              "value_type": "text",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OBMAOX": {
+    "omr": [
+      {
+        "type": "BUTTON",
+        "options": [
+          {
+            "value": "O",
+            "value_type": "text"
+          },
+          {
+            "value": "X",
+            "value_type": "text"
+          }
+        ]
+      },
+      {
+        "type": "BUTTON",
+        "options": [
+          {
+            "value": "O",
+            "value_type": "text"
+          },
+          {
+            "value": "X",
+            "value_type": "text"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "O",
+              "value_type": "text",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        },
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "O",
+              "value_type": "text",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "SBSANM": {
+    "omr": [
+      {
+        "type": "TEXT"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "정답",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "SBSADR": {
+    "omr": [
+      {
+        "type": "COMMENT"
+      }
+    ],
+    "answer": {
+      "rule_type": "MANUAL"
+    }
+  },
+  "SBSAAS": {
+    "omr": [
+      {
+        "type": "SELECT",
+        "options": [
+          {
+            "value": "1",
+            "value_type": "math"
+          },
+          {
+            "value": "2",
+            "value_type": "math"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "VALUE",
+      "allowed_answer": [
+        {
+          "value": "1",
+          "value_type": "math",
+          "case_sensitive": false,
+          "space_sensitive": false
+        }
+      ]
+    }
+  },
+  "SBMANM": {
+    "omr": [
+      {
+        "type": "TEXT"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "ORDERED",
+          "nodes": [
+            {
+              "rule_type": "VALUE",
+              "allowed_answer": [
+                {
+                  "value": "정답",
+                  "value_type": "math",
+                  "case_sensitive": false,
+                  "space_sensitive": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "SBMAAS": {
+    "omr": [
+      {
+        "type": "SELECT",
+        "options": [
+          {
+            "value": "1",
+            "value_type": "math"
+          },
+          {
+            "value": "2",
+            "value_type": "math"
+          }
+        ]
+      }
+    ],
+    "answer": {
+      "rule_type": "VALUE",
+      "allowed_answer": [
+        {
+          "value": "1",
+          "value_type": "math",
+          "case_sensitive": false,
+          "space_sensitive": false
+        }
+      ]
+    }
+  },
+  "SBMALD": {
+    "omr": [
+      {
+        "left_fields": [
+          {
+            "value": "1",
+            "value_type": "math"
+          },
+          {
+            "value": "2",
+            "value_type": "math"
+          }
+        ],
+        "right_fields": [
+          {
+            "value": "3",
+            "value_type": "math"
+          },
+          {
+            "value": "4",
+            "value_type": "math"
+          }
+        ],
+        "multi_flag": "Y"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "3",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        },
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "4",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "SBMADD": {
+    "omr": [
+      {
+        "left_fields": [
+          {
+            "value": "1",
+            "value_type": "math"
+          },
+          {
+            "value": "2",
+            "value_type": "math"
+          }
+        ],
+        "right_fields": [
+          {
+            "value": "3",
+            "value_type": "math"
+          },
+          {
+            "value": "4",
+            "value_type": "math"
+          }
+        ],
+        "multi_flag": "N"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "3",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        },
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "4",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ESBA00": {
+    "omr": [
+      {
+        "type": "COMMENT"
+      }
+    ],
+    "answer": {
+      "rule_type": "MANUAL"
+    }
+  },
+  "ESSA00": {
+    "omr": [
+      {
+        "type": "COMMENT"
+      },
+      {
+        "type": "TEXT"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "MANUAL"
+        },
+        {
+          "rule_type": "VALUE",
+          "allowed_answer": [
+            {
+              "value": "정답",
+              "value_type": "math",
+              "case_sensitive": false,
+              "space_sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ESMA00": {
+    "omr": [
+      {
+        "type": "COMMENT"
+      },
+      {
+        "type": "TEXT"
+      }
+    ],
+    "answer": {
+      "rule_type": "ORDERED",
+      "nodes": [
+        {
+          "rule_type": "MANUAL"
+        },
+        {
+          "rule_type": "UNORDERED",
+          "nodes": [
+            {
+              "rule_type": "UNORDERED",
+              "nodes": [
+                {
+                  "rule_type": "VALUE",
+                  "allowed_answer": [
+                    {
+                      "value": "정답",
+                      "value_type": "math",
+                      "case_sensitive": false,
+                      "space_sensitive": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

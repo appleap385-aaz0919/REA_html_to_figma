@@ -1,0 +1,1 @@
+const report=v=>print('DEPLOYMENT_ITEM_EXPORT '+JSON.stringify(v));const f=figma.getNodeById('8:16538'),b=await f.exportAsync({format:'PNG',constraint:{type:'SCALE',value:.55}});report({id:f.id,base64:figma.base64Encode(b)});

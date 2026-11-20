@@ -1,0 +1,2 @@
+const report=v=>print('LIST_DESCRIPTION '+JSON.stringify(v));
+const ix=JSON.parse(figma.root.getPluginData('cmsRevisionNodes')),f=figma.getNodeById(ix.REV_ITM_01.section);report({id:f.id,children:f.children.map(n=>({id:n.id,name:n.name,type:n.type})),texts:f.findAll(n=>n.type==='TEXT').filter(n=>!n.parent||n.parent.id!=='7:2').map(n=>({id:n.id,name:n.name,text:n.characters,x:n.x,y:n.y,parent:n.parent.id}))});

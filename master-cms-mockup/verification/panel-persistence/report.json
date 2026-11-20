@@ -1,0 +1,44 @@
+{
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Status save replaces only service UI and preserves the exact panel DOM, request and unsent input",
+      "status": "passed"
+    },
+    {
+      "name": "Full code reload restores open panel, expanded request/details, panel scroll and unsent input",
+      "status": "passed"
+    },
+    {
+      "name": "Route changes keep the panel open; an explicit close remains closed after reload",
+      "status": "passed"
+    },
+    {
+      "name": "Sent rework and supplemental requests stay visible in the body while the composer clears",
+      "status": "passed"
+    },
+    {
+      "name": "Already sent text left by the prior version migrates into visible history and out of the editor",
+      "status": "passed"
+    },
+    {
+      "name": "All 25 state combinations obey the transition matrix; reverting and prohibited synthetic changes are safe",
+      "status": "passed"
+    },
+    {
+      "name": "A set-wide update cannot restore a discarded member",
+      "status": "passed"
+    },
+    {
+      "name": "The update banner loads changed code and automatically restores the still-open result panel",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "files": {
+    "app.js": "29336164286796a8dcb2cbfbaa71b5918ad691956a832dbde484e762037debba",
+    "review.js": "e10899da853a74c0f93d2310343ff0fa0c4aaf1b2d4f072cc2590bd968f374e7"
+  }
+}

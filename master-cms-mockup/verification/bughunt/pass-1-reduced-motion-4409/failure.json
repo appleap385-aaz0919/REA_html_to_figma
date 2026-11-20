@@ -1,0 +1,33 @@
+{
+  "pass": 1,
+  "policy": "reduced-motion",
+  "seed": 4409,
+  "status": "failed",
+  "error": "Locator.check: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".modal-overlay\").last.locator(\"[name=studentChoice][value=\\\"3\\\"]\")\n",
+  "trace": "Traceback (most recent call last):\n  File \"D:\\jaehyuk.myung\\claude_demo\\Demo_21_출제 마법사_v2_REA\\master-cms-mockup\\bughunt_mockup.py\", line 195, in <module>\n    modal().locator('[name=studentChoice][value=\"3\"]').check();obs('student answer under reduced motion')\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 15535, in check\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.check(\n        ^^^^^^^^^^^^^^^^^^^^^\n    ...<5 lines>...\n        )\n        ^\n    )\n    ^\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\_impl\\_locator.py\", line 146, in check\n    return await self._frame.check(self._selector, strict=True, **params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 847, in check\n    await self._channel.send(\"check\", self._timeout, locals_to_params(locals()))\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jaehyuk.myung\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Locator.check: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".modal-overlay\").last.locator(\"[name=studentChoice][value=\\\"3\\\"]\")\n\n",
+  "actions": [
+    {
+      "action": "fresh launch",
+      "at": 439843.3446578,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 0
+    },
+    {
+      "action": "deep-link /items/2100001/edit/omr",
+      "at": 439843.4746671,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html#/items/2100001/edit/omr",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 0
+    },
+    {
+      "action": "preview without animation",
+      "at": 439843.7263038,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html#/items/2100001/edit/omr",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 1
+    }
+  ],
+  "runtimeErrors": [],
+  "httpRequests": []
+}

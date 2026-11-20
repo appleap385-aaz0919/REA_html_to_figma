@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-19",
+  "status": "verified",
+  "change": "Completed requests show current marks or the recorded pre-change image and area; Figma annotations consolidated into 08.",
+  "reports": [
+    "verification/completed-marks/report.json",
+    "verification/panel-persistence/report.json",
+    "verification/request1/report.json"
+  ],
+  "passed": [
+    7,
+    8,
+    11
+  ],
+  "failed": 0,
+  "hashes": {
+    "app.js": "7e604f80aa6b44d9b44084f942788e89914fb948e4082962ce95415c4911f97b",
+    "review.js": "f8ff97d17fb075ec8fd59b04636e573d90bd9addcf75b2802281fee178f8def2",
+    "review.css": "91e1055049370be3ffa65c3c7dc85a1dc0dacb8df803be969eb829cba2832932"
+  },
+  "visualEvidence": [
+    "actual-request.png",
+    "removed-before-area.png",
+    "historical-mobile.png"
+  ],
+  "figmaEvidence": "../../../design-specs/policy-evidence/request1-status08-consolidated.json",
+  "rollback": "../../../rollback/before-completed-marks-20261119",
+  "businessPolicyChanged": false,
+  "userRequestHistoryModified": false,
+  "limits": "Offline Chrome file://; original whole-CMS and OMR comparisons not rerun. Historical area uses the saved capture rather than guessing a current location."
+}

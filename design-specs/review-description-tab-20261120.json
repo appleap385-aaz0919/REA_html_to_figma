@@ -1,0 +1,69 @@
+{
+  "id": "REVIEW-DESCRIPTION-TAB-20261120",
+  "date": "2026-11-20",
+  "status": "html_implemented_verified",
+  "summary": "완료 옆 Description 탭에서 현재 화면의 실제 Figma 설명·번호를 표시합니다.",
+  "entry": "master-cms-mockup/index.html",
+  "source": {
+    "file": "design-specs/figma-review-descriptions-export.json",
+    "capturedAt": "2026-11-20T03:14:48.430Z",
+    "figmaFile": "xCjdhdFkSbToMiRVlXVN2V",
+    "screens": 30,
+    "descriptions": 185,
+    "popups": 52,
+    "renderedNotesRead": 185,
+    "figmaWrites": 0
+  },
+  "sync": {
+    "exportScript": "design-specs/export-review-descriptions.js",
+    "publisher": "master-cms-mockup/publish_descriptions.py",
+    "static": "master-cms-mockup/description-data.js",
+    "live": "review-work/runtime-browser/descriptions.json",
+    "completionHook": "review_agent.py synced --description-export <fresh-export>",
+    "remoteFigmaWatcher": false,
+    "manualEditsRequireExportAndPublish": true,
+    "unconnectedHtmlRequiresReload": true
+  },
+  "preserved": [
+    "문항 상세 08번 유지, 13·14번 추가 없음",
+    "현재 화면·편집 탭·등록 상태·연결된 팝업·팝업 탭에 해당하는 설명·번호",
+    "요청·완료 기록·작성 중 입력·패널 열림·탭·스크롤",
+    "HTML 검수→사용자 승인→Figma·정책 반영 순서"
+  ],
+  "businessPolicyChanged": false,
+  "figmaContentChanged": false,
+  "actualCmsServerWrites": 0,
+  "reviewRequestsAutoApproved": false,
+  "priorOneTimeApprovalWaiverExtended": false,
+  "directChatTaskNotFabricatedAsReviewJob": true,
+  "verification": "master-cms-mockup/verification/descriptions/build-verification.json",
+  "passed": 114,
+  "failed": 0,
+  "reloadNotice": "master-cms-mockup/verification/descriptions/live-reload-notice.json",
+  "rollback": "rollback/before-description-tab-20261120",
+  "connectionCleanupPending": false,
+  "userReviewHelperLeftRunning": true,
+  "commitCreated": false,
+  "remoteUpload": false,
+  "next": "사용자가 HTML을 수동 새로고침해 Description 탭을 확인합니다. 후속 Figma 반영 때 최신 내보내기를 synced로 함께 게시합니다.",
+  "latestLabelColorRevision": {
+    "date": "2026-11-20",
+    "status": "verified",
+    "scope": "Description 화면 번호·설명 목록 번호·선택 강조 색상",
+    "normal": "#7c3aed",
+    "hoverSelected": "#5b21b6",
+    "selectedBackground": "#f3edff",
+    "whiteNumberContrast": 5.7,
+    "hoverContrast": 8.98,
+    "verification": "master-cms-mockup/verification/description-label-color/report.json",
+    "cssSha256": "adb8bd14ea3145d83c0f067cca79145213b2dfabc5f5f7b765c8eef874f280f5",
+    "rollback": "rollback/before-description-label-color-20261120",
+    "businessPolicyChanged": false,
+    "figmaContentChanged": false,
+    "reloadNotice": {
+      "status": "not_delivered",
+      "reason": "Existing Chrome connection handshake timed out; no page reload or user-data change performed.",
+      "next": "사용자가 HTML을 직접 새로고침합니다."
+    }
+  }
+}

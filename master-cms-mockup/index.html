@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>문제은행 마스터 CMS · 로컬 목업</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vendor/omr-counter-styles.css">
+  <link rel="stylesheet" href="source-omr.css">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <a href="#main" class="skip">본문으로 이동</a>
+  <header class="topbar"><div class="brand"><button id="menu-toggle" class="icon-button" aria-label="메뉴 접기"></button><strong>문제은행 마스터 CMS</strong></div><div class="top-content"><span class="master-label">마스터</span><span class="mock-label">로컬 목업 · 예시 데이터</span><span class="top-spacer"></span><span class="user-label">접속자 <b>demo.editor</b></span><button class="btn primary" data-action="logout">로그아웃</button></div></header>
+  <aside class="sidebar" id="sidebar" aria-label="주요 메뉴"></aside>
+  <main id="main" tabindex="-1"></main>
+  <div id="modal-root"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="catalog.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="vendor/question-editor.js"></script>
+  <script src="vendor/question-viewer.js"></script>
+  <script src="vendor/value-type-input.js"></script>
+  <script src="vendor/value-type-dropdown.js"></script>
+  <script src="vendor/omr-monitor.js"></script>
+  <script src="vendor/omr-leaves.js"></script>
+  <script src="omr-templates.js"></script>
+  <script src="source-omr.js"></script>
+  <script src="source-html.js"></script>
+  <script src="source-preview.js"></script>
+  <script src="editor.js"></script>
+  <script src="lab.js"></script>
+  <script src="source-isolation.js"></script>
+  <script src="source-value-demo.js"></script>
+  <script src="vendor/html2canvas/html2canvas.min.js"></script>
+  <script src="description-data.js"></script>
+  <script src="review-descriptions.js"></script>
+  <script src="review.js"></script>
+  <script src="review_file_bridge.js"></script>
+  <script>DongaQuestionEditor.__internal.loadMathlive().then(function(m){m.MathfieldElement.fontsDirectory=null;m.MathfieldElement.soundsDirectory=null;CMS.start();});</script>
+</body>
+</html>

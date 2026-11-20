@@ -1,0 +1,1 @@
+print('DEPLOYMENT_APPLIED '+figma.root.getPluginData('cmsDeploymentPolicyApplied'));

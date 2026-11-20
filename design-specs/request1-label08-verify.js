@@ -1,0 +1,3 @@
+const f=figma.getNodeById('8:16538');for(const n of f.children.filter(n=>n.name==='요소 번호 13'))n.x=245;
+const result={frame:f.id,badges:f.children.filter(n=>n.name==='요소 번호 8'||n.name==='요소 번호 13').map(n=>({id:n.id,type:n.type,name:n.name,x:n.x,y:n.y})),description08:JSON.parse(f.getPluginData('cmsRevisionNotes')).find(n=>n.number===8)};
+result.single08=result.badges.filter(n=>n.type==='ELLIPSE'&&n.name==='요소 번호 8').length===1;result.mainSave08=result.badges.filter(n=>n.name==='요소 번호 8').every(n=>n.x===1430&&n.y<1500);figma.root.setPluginData('cmsStatus08LabelVerification',JSON.stringify(result));print('LABEL08_VERIFY '+JSON.stringify(result));const b=f.absoluteBoundingBox;figma.viewport.zoom=1;figma.viewport.center={x:b.x+1170,y:b.y+1490};

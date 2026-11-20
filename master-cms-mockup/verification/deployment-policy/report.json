@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-20",
+  "passed": 17,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Only Y can deploy; R/F/N/D disabled and direct handler calls denied",
+      "status": "passed"
+    },
+    {
+      "name": "Target required; cancel preserves data; usable item deploy and redeploy work",
+      "status": "passed"
+    },
+    {
+      "name": "Commit rechecks item status after modal opened",
+      "status": "passed"
+    },
+    {
+      "name": "Discarded item excluded from payload, preflight and missing-item list; targets independent",
+      "status": "passed"
+    },
+    {
+      "name": "Never-deployed D does not require a Service record and is not deployed implicitly",
+      "status": "passed"
+    },
+    {
+      "name": "Paper requires prior individual deployment; paper deployment never deploys missing items",
+      "status": "passed"
+    },
+    {
+      "name": "Included R/F/N block paper deployment even when previously deployed",
+      "status": "passed"
+    },
+    {
+      "name": "Only usable paper may open deployment, including direct handler validation",
+      "status": "passed"
+    },
+    {
+      "name": "Paper commit rechecks all prerequisites with no partial deployment",
+      "status": "passed"
+    },
+    {
+      "name": "Draft-to-use requires all items Y including discarded-item check",
+      "status": "passed"
+    },
+    {
+      "name": "Last Y stopped => paper N; item recovery does not resume paper; admin can resume",
+      "status": "passed"
+    },
+    {
+      "name": "All D => automatic paper D, edit locked and no resurrection",
+      "status": "passed"
+    },
+    {
+      "name": "No Y plus at least one N stops paper even with other non-use states",
+      "status": "passed"
+    },
+    {
+      "name": "One remaining Y prevents automatic stop",
+      "status": "passed"
+    },
+    {
+      "name": "Manual N-to-Y needs at least one usable item; deployment checks remain independent",
+      "status": "passed"
+    },
+    {
+      "name": "Editing an already-used paper preserves discarded composition and source items",
+      "status": "passed"
+    },
+    {
+      "name": "Automatic state and audit event persist after file reload",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "files": {
+    "app.js": "29336164286796a8dcb2cbfbaa71b5918ad691956a832dbde484e762037debba"
+  },
+  "scope": "Offline Master mockup UI. Service runtime and actual CMS writes not exercised."
+}

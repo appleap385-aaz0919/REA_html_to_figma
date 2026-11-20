@@ -1,0 +1,12 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><style>html,body{margin:0;background:white}body{display:flow-root}</style><div id="host"></div><script src="vendor/question-editor.js"></script><script src="vendor/question-viewer.js"></script><script>
+let api;
+function send(kind,value){parent.postMessage({nativeIsolation:true,kind,value,height:document.body.scrollHeight},'*');}
+DongaQuestionEditor.__internal.loadMathlive().then(m=>{
+ m.MathfieldElement.fontsDirectory=null;m.MathfieldElement.soundsDirectory=null;
+ addEventListener('message',e=>{if(e.source!==parent||!e.data?.nativeIsolation)return;const {command,doc}=e.data;
+  if(command==='mount'){api?.destroy();api=DongaQuestionEditor.create(document.getElementById('host'),doc,{outputProfile:'html-only',showSaveButton:false,onChange:()=>{if(api)send('change',api.getDocument());}});send('change',api.getDocument());}
+  else if(api){if(command==='objective')api.setMultipleChoice(e.data.enabled);else if(command==='destroy'){api.destroy();api=null;}else send('output',command==='save'?api.save():api.getDocument());if(api)send('change',api.getDocument());}
+ });
+ new ResizeObserver(()=>send('height',null)).observe(document.body);send('ready',null);
+});
+</script></html>

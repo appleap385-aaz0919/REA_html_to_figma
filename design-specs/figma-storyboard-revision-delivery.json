@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-12",
-  "status": "revised_verified_ready_for_user_review",
+  "date": "2026-11-20",
+  "status": "html_figma_descriptions_applied_verified",
   "figmaFile": "xCjdhdFkSbToMiRVlXVN2V",
   "masterIndexUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-20632",
   "sourceModalUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16776",
@@ -94,7 +94,8 @@
   "provenance": {
     "primaryScreens": "실제 전체 페이지 캡처, 보존 DOM의 읽기 전용 렌더, 승인된 목록 벡터를 사용합니다.",
     "popupUi": "실제 캡처와 보존 DOM·스타일을 사용합니다. 원본 소스 기반 재현2개는 실제 CMS 실행 캡처와 구분해 표기했습니다.",
-    "controls": "variant별 실제 이미지와 DOM bbox를 사용하며 통합 buttons 배열을 푸터로 가정하지 않습니다."
+    "controls": "variant별 실제 이미지와 DOM bbox를 사용하며 통합 buttons 배열을 푸터로 가정하지 않습니다.",
+    "latestApprovedDelta": "실제 CMS 원본 화면을 보존하고 상태 정보 카드에 사용자 승인 HTML 캡처를 반영했습니다. 실제 CMS 적용 전이라는 표기와 승인 Description을 함께 표시합니다."
   },
   "knownUnverifiedScope": [
     "실제 해석 HML 파일의 편집·저장",
@@ -112,7 +113,9 @@
     "sourceVisual": "review-v4-source-precise.png",
     "mathVisual": "review-v4-math-precise-final.png",
     "hmlPaperLimitPolicy": "hml-paper-limit-policy.json",
-    "hmlPaperLimitVisual": "policy-evidence/2026-11-12-figma-hml-paper-limit.png"
+    "hmlPaperLimitVisual": "policy-evidence/2026-11-12-figma-hml-paper-limit.png",
+    "deploymentPolicy": "paper-item-deployment-policy-20261120.json",
+    "deploymentPolicyVerification": "deployment-policy-sync-verification.json"
   },
   "cmsServerWritesDuringStoryboardRevision": 0,
   "priorCmsInvestigationPersistentMutations": 95,
@@ -128,6 +131,123 @@
       "verificationArtifact": "hml-paper-limit-verification.json",
       "summary": "HML 50문항 초과 시 평가지 미등록(N) 선택·비활성화 및 안내 문구. HML 등록·승인은 기존 조건에 따라 허용. 기존 초과 평가지 정보만 정리하고 원본 HML·문항 유지.",
       "legacyCleanupExecuted": false
+    },
+    {
+      "id": "ITEM-STATUS-EDIT-20261119",
+      "date": "2026-11-19",
+      "userApproved": true,
+      "approvalAt": "2026-11-19T05:49:09.569Z",
+      "storyboardApplied": true,
+      "cmsApplied": false,
+      "url": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+      "statesUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-25076",
+      "policyArtifact": "item-status-approved-policy.json",
+      "verificationArtifact": "item-status-sync-verification.json",
+      "summary": "문항 상세에서 폐기 외 즉시 편집, 실제 변경값 기준 저장 활성화·원복, 허용 상태 전환 및 폐기 잠금, 저장 후 서비스 영역 갱신과 검수 패널 유지."
+    },
+    {
+      "id": "PAPER-ITEM-DEPLOYMENT-20261120",
+      "date": "2026-11-20",
+      "status": "html_figma_descriptions_applied_verified",
+      "summary": "사용(Y) 문항만 배포. 폐기(D)는 평가지 배포·선행 배포·Service 존재 검사에서 제외. 포함 문항의 선행 배포 필요. Master 평가지 자동 폐기·미사용(N) 및 관리자 수동 복귀. 사용 중지=미사용(N).",
+      "authorization": {
+        "scope": "PAPER-ITEM-DEPLOYMENT-20261120",
+        "skipIntermediateApproval": true,
+        "userInstruction": "이번에만 승인 없이 HTML·Figma·Description 모두 반영",
+        "futureRequestsRequireExistingApprovalFlow": true,
+        "reviewRequestsAutoApproved": false
+      },
+      "policyArtifact": "paper-item-deployment-policy-20261120.json",
+      "verificationArtifact": "deployment-policy-sync-verification.json",
+      "storyboardApplied": true,
+      "mockupApplied": true,
+      "cmsApplied": false,
+      "newNumberedDescriptions": 0,
+      "existingDescriptionsUpdated": 8,
+      "url": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19545",
+      "itemUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+      "editUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19677",
+      "rollback": "../rollback/before-deployment-policy-20261120",
+      "figmaRollbackFrame": "36:2"
     }
-  ]
+  ],
+  "latestApprovedDelta": {
+    "id": "ITEM-STATUS-EDIT-20261119",
+    "date": "2026-11-19",
+    "userApproved": true,
+    "approvalAt": "2026-11-19T05:49:09.569Z",
+    "storyboardApplied": true,
+    "cmsApplied": false,
+    "url": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+    "statesUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-25076",
+    "policyArtifact": "item-status-approved-policy.json",
+    "verificationArtifact": "item-status-sync-verification.json",
+    "summary": "문항 상세에서 폐기 외 즉시 편집, 실제 변경값 기준 저장 활성화·원복, 허용 상태 전환 및 폐기 잠금, 저장 후 서비스 영역 갱신과 검수 패널 유지."
+  },
+  "latestAnnotationCorrection": {
+    "date": "2026-11-19",
+    "status": "verified",
+    "screen": "REV_ITM_02",
+    "figmaFrame": "8:16538",
+    "descriptionNumbers": [
+      8
+    ],
+    "removedNumbers": [
+      13,
+      14
+    ],
+    "label08AtMainSave": true,
+    "label08AboveImage": true,
+    "descriptionRows": 12,
+    "textOutside": 0,
+    "textOverlaps": 0,
+    "evidence": "policy-evidence/request1-status08-consolidated.json",
+    "screenshot": "policy-evidence/2026-11-19-status08-consolidated.png",
+    "businessPolicyChanged": false,
+    "artifact": "request1-status08-correction.json"
+  },
+  "latestPolicyDelta": {
+    "id": "PAPER-ITEM-DEPLOYMENT-20261120",
+    "date": "2026-11-20",
+    "status": "html_figma_descriptions_applied_verified",
+    "summary": "사용(Y) 문항만 배포. 폐기(D)는 평가지 배포·선행 배포·Service 존재 검사에서 제외. 포함 문항의 선행 배포 필요. Master 평가지 자동 폐기·미사용(N) 및 관리자 수동 복귀. 사용 중지=미사용(N).",
+    "authorization": {
+      "scope": "PAPER-ITEM-DEPLOYMENT-20261120",
+      "skipIntermediateApproval": true,
+      "userInstruction": "이번에만 승인 없이 HTML·Figma·Description 모두 반영",
+      "futureRequestsRequireExistingApprovalFlow": true,
+      "reviewRequestsAutoApproved": false
+    },
+    "policyArtifact": "paper-item-deployment-policy-20261120.json",
+    "verificationArtifact": "deployment-policy-sync-verification.json",
+    "storyboardApplied": true,
+    "mockupApplied": true,
+    "cmsApplied": false,
+    "newNumberedDescriptions": 0,
+    "existingDescriptionsUpdated": 8,
+    "url": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19545",
+    "itemUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+    "editUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19677",
+    "rollback": "../rollback/before-deployment-policy-20261120",
+    "figmaRollbackFrame": "36:2"
+  },
+  "latestDescriptionTab": {
+    "id": "REVIEW-DESCRIPTION-TAB-20261120",
+    "date": "2026-11-20",
+    "status": "html_implemented_verified",
+    "artifact": "review-description-tab-20261120.json",
+    "verification": "../master-cms-mockup/verification/descriptions/build-verification.json",
+    "figmaReadOnly": true,
+    "businessPolicyChanged": false,
+    "sourceDescriptionCount": 185,
+    "passed": 114,
+    "latestLabelColorRevision": {
+      "artifact": "review-description-tab-20261120.json#latestLabelColorRevision",
+      "normal": "#7c3aed",
+      "hoverSelected": "#5b21b6",
+      "verification": "../master-cms-mockup/verification/description-label-color/report.json",
+      "fullSuiteRerunAfterColorChange": false
+    }
+  },
+  "repositoryPreservation": "../docs/repository-preservation-20261120.json"
 }

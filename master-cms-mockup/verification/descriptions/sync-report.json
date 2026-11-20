@@ -1,0 +1,36 @@
+{
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Actual Figma snapshot, offline script and live folder JSON contain identical 30 screens / 185 descriptions / 52 popups",
+      "status": "passed"
+    },
+    {
+      "name": "Figma sync completion publishes the same bundle and records its revision in the isolated receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Stale Figma export cannot mark a newer request synced or write a completion receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Unchanged browser bridge retries a replaced file snapshot and delivers new descriptions without page reload or user-data changes (DirectoryHandle adapter)",
+      "status": "passed"
+    },
+    {
+      "name": "Description synchronization never writes back description data or fabricates review jobs/approval",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "nativePermissionPromptTested": false,
+  "transport": "DirectoryHandle adapter; real bridge JS, no actual request transmission",
+  "files": {
+    "publish_descriptions.py": "cc6c89bac0f33bd8d830f0de53804fe8df299032f7eebf64127d6074f547ab6d",
+    "review_agent.py": "dfc1773c02f3e2ceca32187aca30a0d13b1bac93da953b6098318390315d4c11",
+    "review_file_bridge.js": "7b115a071f5ef370967be441a389279d7d545b1ea03a74362c619ed900b55a0d",
+    "description-data.js": "3af5232bf0628689b39d73b26474d5edfa0123b3574bade8eb04b9e0bd0bc1d1"
+  }
+}

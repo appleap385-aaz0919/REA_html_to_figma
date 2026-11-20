@@ -1,0 +1,40 @@
+{
+  "pass": 1,
+  "policy": "masher",
+  "seed": 4409,
+  "status": "failed",
+  "error": "{\"oracle\": \"O-2\", \"expected\": \"visible enabled command\", \"actual\": \"navigate after rapid save\"}",
+  "trace": "Traceback (most recent call last):\n  File \"D:\\jaehyuk.myung\\claude_demo\\Demo_21_출제 마법사_v2_REA\\master-cms-mockup\\bughunt_mockup.py\", line 121, in <module>\n    click(page.locator('.sidebar a[href=\"#/items\"]'),'navigate after rapid save')\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\jaehyuk.myung\\claude_demo\\Demo_21_출제 마법사_v2_REA\\master-cms-mockup\\bughunt_mockup.py\", line 81, in click\n    require(locator.is_visible() and locator.is_enabled(),'O-2','visible enabled command',label)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\jaehyuk.myung\\claude_demo\\Demo_21_출제 마법사_v2_REA\\master-cms-mockup\\bughunt_mockup.py\", line 16, in require\n    if not value:raise AssertionError(json.dumps({'oracle':oracle,'expected':expected,'actual':actual},ensure_ascii=False))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {\"oracle\": \"O-2\", \"expected\": \"visible enabled command\", \"actual\": \"navigate after rapid save\"}\n",
+  "actions": [
+    {
+      "action": "fresh launch",
+      "at": 113524.0127457,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 0
+    },
+    {
+      "action": "deep-link /papers/5001/edit",
+      "at": 113524.1270852,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html#/papers/5001/edit",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 0
+    },
+    {
+      "action": "fill 연속 저장 4409",
+      "at": 113524.225011,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html#/papers/5001/edit",
+      "stateHash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539",
+      "modals": 0
+    },
+    {
+      "action": "double paper save",
+      "at": 113524.5611336,
+      "url": "file:///D:/jaehyuk.myung/claude_demo/Demo_21_%EC%B6%9C%EC%A0%9C%20%EB%A7%88%EB%B2%95%EC%82%AC_v2_REA/master-cms-mockup/index.html#/papers/5001",
+      "stateHash": "28b32372bc1244b917d804cc1c56ab4c14de21b3e99ebdccd396483511daac2b",
+      "modals": 0
+    }
+  ],
+  "runtimeErrors": [],
+  "httpRequests": []
+}

@@ -1,0 +1,77 @@
+{
+  "sourceHtml": "cms-knowledge/master-cms/sources/lab-omr-gallery-20261109.html",
+  "sha256": "5b4dbb37c0a7f51e878e2b456095d5b5dc8835f9073b37b758d9f0529127481d",
+  "templates": [
+    "OBSACN",
+    "OBSAOX",
+    "OBMACN",
+    "OBMAOX",
+    "SBSANM",
+    "SBSADR",
+    "SBSAAS",
+    "SBMANM",
+    "SBMAAS",
+    "SBMALD",
+    "SBMADD",
+    "ESBA00",
+    "ESSA00",
+    "ESMA00"
+  ],
+  "inlineControllers": "first 14 unique OMR scripts, excluding duplicate locked-comparison copies and gallery navigation",
+  "files": [
+    {
+      "file": "value-type-input.js",
+      "source": "cms-knowledge/master-cms/sources/assets/value-type-input-e9baf9376abc1252905dc6460081bd77.js",
+      "originalSha256": "05a1ebbfad221ac22b36a2740a96706c762a97a9014b5d4bac3d7745c1314465",
+      "adaptations": [
+        "External thumbnail hover limited to local data:image URLs."
+      ],
+      "localSha256": "44846d85ec58c1b780b80a85d2abb1060ea29211f1d3b8761e78d60c50a0ecfc"
+    },
+    {
+      "file": "value-type-dropdown.js",
+      "source": "cms-knowledge/master-cms/sources/assets/value-type-dropdown-7af64cf1cc9a3dad481b4c4bc3c4cad4.js",
+      "originalSha256": "3da8700fa85e493d6dbf6da0dc2a3bb909b332c1ecb8d605e88ae6680476ff57",
+      "adaptations": [],
+      "localSha256": "595dc2a50b6d061ad99982595b35ee8975ead929de9674be373b821764661aca"
+    },
+    {
+      "file": "omr-monitor.js",
+      "source": "cms-knowledge/master-cms/sources/assets/omrMonitor-023b42ef6d70938f6d9e24d4cdb01e3f.js",
+      "originalSha256": "f5ca2727f787cfc40b5c0fe323b412f9326d67a6c9067a549aefcaa63c5c0d0a",
+      "adaptations": [],
+      "localSha256": "ad75ea7f52983b49ba7baf69fdf28e2c27f2d04230ad88cd8b7d19061294601d"
+    },
+    {
+      "file": "question-editor.js",
+      "source": "cms-knowledge/master-cms/sources/assets/donga-question-editor.min-2da16fddbc2dd1522ca1b7947ea73f1e.js",
+      "originalSha256": "1e774fb0b47d4190781338ca943e40d93ea93cfffed92f7558c38f93e0fc5b51",
+      "adaptations": [
+        "Two MathLive virtual-keyboard target origins use * only when window.origin is the opaque local-file origin null; this fixes file:// iframe math input."
+      ],
+      "localSha256": "e1114335a4f2c037b8168cff2edee108797bca62b52b3f1e44e3a37be1f037ef"
+    },
+    {
+      "file": "question-viewer.js",
+      "source": "cms-knowledge/master-cms/sources/assets/donga-question-viewer.min-1f8549449e8223caff4dcc003a92cf03.js",
+      "originalSha256": "25e1a48cb23f9ddb1faf49e70ce25233067f262f9a51a29d22244a7f24bf150d",
+      "adaptations": [],
+      "localSha256": "25e1a48cb23f9ddb1faf49e70ce25233067f262f9a51a29d22244a7f24bf150d"
+    }
+  ],
+  "use": "Local reconstruction inside the existing private investigation workspace; no server requests.",
+  "date": "2026-11-17",
+  "adapterNotes": [
+    "MathLive fontsDirectory/soundsDirectory set to null before CMS startup; no remote fonts or sounds.",
+    "Original OMR leaf events/serializers/validators are unchanged. SourceOmr adapts local storage, scopes radio names and snapshots deleted rows after source events.",
+    "HTML document keys correctHtml and gradingCriteriaHtml map to the local example fields.",
+    "Original value-type demo markup/listeners are reused; initialization runs on local route mounting.",
+    "Preview transport is local and schema-driven; it is not the remote service renderer/grader."
+  ],
+  "servicePreview": {
+    "entry": "omr-preview.html",
+    "source": "vendor/omr-preview/provenance.json",
+    "buildRecipe": "python -X utf8 master-cms-mockup/build_preview_runtime.py",
+    "backend": "Grade and OCR transports are local adapters; the renderer and answer controls are preserved originals."
+  }
+}

@@ -1,0 +1,1 @@
+export const t=(component,props=[])=>{const target=component.__vccOpts||component;for(const [k,v]of props)target[k]=v;return target;};export const y=()=>{};

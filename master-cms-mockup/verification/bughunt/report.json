@@ -1,0 +1,838 @@
+{
+  "seeds": [
+    1103,
+    2207,
+    3301,
+    4409
+  ],
+  "policies": [
+    "new-user",
+    "masher",
+    "draft-resume",
+    "interruptions",
+    "resize",
+    "slow-user",
+    "monkey",
+    "localization",
+    "reduced-motion",
+    "two-sessions"
+  ],
+  "passes": 2,
+  "profile": "crud-app",
+  "rng": "Python Random MT19937, one stream per seed/case",
+  "build": {
+    "app.js": "60d1c1dd4df4a0aa1ec6a07f8241f4699da624638a66930e773ab0a9f506aaa2",
+    "catalog.js": "dc3b39fc4635daeb86048a8d778f935015178f821853550a4607ae6b6417193e",
+    "data.js": "003089f6d4b5a0fa2106bc9295613b4b593f4b9166ea0139e14486aba28fbf2e",
+    "editor.js": "5d58018e4895ace00f941e6a624e8b4d1b495a498d4c42a9a0834d0e33517c80",
+    "index.html": "051eb6b6d49c5a7e60f70d7f03a30d93842cdf9d0187f20d89c7cb7ee07bc069",
+    "isolation-frame.html": "8fb6b0f81b07dfd3ba5745930491c442550c8ba75b6e08e13db5dc019f04419e",
+    "lab.js": "7e63e9aa766ba23a806e358957beb99786a9590216dcb187803d68b21aa716d6",
+    "omr-templates.js": "bb8de581236aaf7e12893c2e39d0b5f10937c14e3329e50e0923e957fe0a93bd",
+    "source-html.js": "25e45f7abff53f424d43a94d92812a70f9741d21f57ca9fcf362c8172162057d",
+    "source-isolation.js": "b1b8a8a59e63b695627843eefc0a64044e4d5a57845406b21df175be46b8f9c7",
+    "source-omr.css": "cc8f00952820ccfe136cb5a1c1189bcc1c557b96cd630d9b8d74e86b34b231ee",
+    "source-omr.js": "fe1feb81e00f160595abe07dd577af5305969813f9c67f5bac04d3cc182cae81",
+    "source-preview.js": "72c96693f6089583103fce63e0404e5601e2f33f27bbb3613d5a26e67068f4f0",
+    "source-value-demo.js": "9872c053b696a3a339c3267bd9590b22df9a1628cabc80055aa34568212eee23",
+    "styles.css": "266c99d94d7cd3e283b500ecee35a212518d1ce5be9a3debfb7fb56febb540eb",
+    "vendor/omr-counter-styles.css": "497ae0a739ededa79669d4c5155c88e66fcac835a483375f5da8ca4bff0abbc0",
+    "vendor/omr-leaves.js": "f6db0e87fb34e4485ed67528d0c9dd1061d5548be132593ad88c98edf112c7de",
+    "vendor/omr-monitor.js": "ad75ea7f52983b49ba7baf69fdf28e2c27f2d04230ad88cd8b7d19061294601d",
+    "vendor/question-editor.js": "e1114335a4f2c037b8168cff2edee108797bca62b52b3f1e44e3a37be1f037ef",
+    "vendor/question-viewer.js": "25e1a48cb23f9ddb1faf49e70ce25233067f262f9a51a29d22244a7f24bf150d",
+    "vendor/value-type-dropdown.js": "595dc2a50b6d061ad99982595b35ee8975ead929de9674be373b821764661aca",
+    "vendor/value-type-input.js": "44846d85ec58c1b780b80a85d2abb1060ea29211f1d3b8761e78d60c50a0ecfc",
+    "verification/precise/value-demo-source.js": "9b2d676fdb82a13d150f80565ebd7f3a9dd3e711de67f0f11fe109610a07da84",
+    "vendor/omr-preview/AppHeader.DWuAr3vs.css": "50464a98f7974253fec95b96c96a8f74d8a99f68f198584658028c5f45c1ef7a",
+    "vendor/omr-preview/BottomSheet.CdNSZOdF.css": "b080118df29582fa32b38b2a0a676e496ec9255179d2fe858ff45987e6849aa0",
+    "vendor/omr-preview/CloseButton._grNypjV.css": "4b275d28f3b2e2ffac27c4218e9785cede7188a564314bdb2ccaed6f772a52b8",
+    "vendor/omr-preview/ConfirmDialog.CV5yLyDo.css": "24b10f8ae30ebf544e7d59e257ead1cfae7c51f1b414695b0f37b4488115c428",
+    "vendor/omr-preview/entry.OCy--Zus.css": "3ed8c8d68329673dfdaa56093d69689a992ce33626ccb282545866c6f3078f63",
+    "vendor/omr-preview/ExamAnswerControl.BbiogCI7.css": "dfa749c830af83fee76872e7ac3ab9f31ba39fd77848de54b6ff538040419e02",
+    "vendor/omr-preview/ExamOmrTable.BYl3y91J.css": "bfbc8aadd40a9f9173ec03cdb0cab13ced8f35d00315ae486698e8c7ec9d1d87",
+    "vendor/omr-preview/Footer.MwxiBs1b.css": "bca843475f33f7052ccb0eb46220a2be7c14eba7a0f46e620bf18098dfb9c47c",
+    "vendor/omr-preview/MathAnswerField.D8MzhzaT.css": "38e5cc44a3dc051ea3fc511551d1d33207704e5a9d61c22719ed4d37b0a3f01c",
+    "vendor/omr-preview/Modal.yhVQMQ9r.css": "12ccad4c77a7579957b1d607953ba0ee8bb12fd9551e732065ec7fcba09fbe93",
+    "vendor/omr-preview/page-inline.css": "a5ca08ae3a3c89ba3e973c48aa08410215fc74f0b1581a81aa3d626055138ee5",
+    "vendor/omr-preview/runtime.js": "859312687f3e54410f191f3354cd5314d4911a5cf74221844b9b1431566a1b63",
+    "vendor/omr-preview/Select.9D8nNCpL.css": "57cce94897e7e764a8e23485ffab27e23ee86fc5906be71127d4a6f75381a685",
+    "vendor/omr-preview/source/-EIimQu0.js": "bca3a16fa5cfa004e932ff6fa2eabbc5bee2dafbbb595d1e26039795e01a8098",
+    "vendor/omr-preview/source/8uJXABZy.js": "15a01d75d957febffe17e071dacb545ce786cbbaab018ebd59e58c472b1a3c2a",
+    "vendor/omr-preview/source/aVcGJ-7_.js": "baf3da34084575c859f7839328c7433ea2a9a7a725c43d1386caea71fe94fbdf",
+    "vendor/omr-preview/source/BFxMqP97.js": "8d6191f969f91b463ac5555a9f039e84f7250d0442aacf2c1814cebff7d55601",
+    "vendor/omr-preview/source/C6zEzIug.js": "5a1a855f1d847164343c168daededcb1cd2e165e43d3bc2c587b911d06d0f500",
+    "vendor/omr-preview/source/CHZCu2qy.js": "c7e40d3548b64b8de943df692331bb64010aa82d9eb12384042514428f22f56a",
+    "vendor/omr-preview/source/CMo_b7JC.js": "bb37b17269a4c11b664a3cf7fb7c5b610dcb86cd05c57254c27f0a465c60bd2e",
+    "vendor/omr-preview/source/CNs_Ozdc.js": "bdf2e55a3d779ecf81cb8ff9de6c2f2382019d88bdcc37bf14052f2cdeff2355",
+    "vendor/omr-preview/source/COsCKZWP.js": "e4fd106600ed4e4c10c8d8a035fc4c21e414962a880eb4e70b09a290c23b58bf",
+    "vendor/omr-preview/source/CR7uvW5E.js": "62772258da39a487d08b5272fca4c9034f347a3a0371df27ac824bd3d306d3a4",
+    "vendor/omr-preview/source/CWT44DWd.js": "07d5328063c53b5234abeb5c82b0a90e2489f69bb2aa6068c7256c7aa9693fc5",
+    "vendor/omr-preview/source/CzFqmaqM.js": "856a13298330fb67907f0b06caaab7f2db21717a0b4ba80d6edb2bebebe9923b",
+    "vendor/omr-preview/source/D0Ojt8zw.js": "d95bbb884c7503397727433935a1f885be16fab1be0a3a3c54f180dfcd74aeb3",
+    "vendor/omr-preview/source/DhuA3TEA.js": "34e7c4c21c3cbdaf1d843735a65e79e3a2f899cec8e686c6d88c713b8519bedc",
+    "vendor/omr-preview/source/Dn7CRAow.js": "1cc89e0c0933b4455c7fb19c146d6b27b8598f13b50fd67957e5ba9b93f21e48",
+    "vendor/omr-preview/source/Drc2WqKd.js": "97cb1e171eda60b40b803b5d434410475d0558556bead567a55a32b6e5c380ed",
+    "vendor/omr-preview/source/DsHCOj37.js": "63a2ef6f6e09fde16e1f615adc853014df9ae2c391eff21d3c2a1a0b307fd1f0",
+    "vendor/omr-preview/source/ebkOLk70.js": "d4c4f31ce261c5413585a105eca9e9ea7d91446d9618889461bc6b71ade09164",
+    "vendor/omr-preview/source/entry.js": "b23a5737fff8a4bb7ccbdf402cb567915ae85ca189f1fa07ad732522c04bf3cb",
+    "vendor/omr-preview/source/nuxt-shim.js": "4c74c556d24d4c4bcbe81ae384f227462d86c614a0d6baf349b507f3fb6b268d",
+    "vendor/omr-preview/source/offline-api.js": "d944d271f465665f05b246e14bf8d8dfc48f7fa3c02a1295b17a4069cc7039c0",
+    "vendor/omr-preview/source/Y1_n5oYk.js": "ae8264a3e02bacc9f5cdba7b0bb799c245d6ec43c1a90d078efcad47c7efc2be"
+  },
+  "input": "file:// + isolated Chrome + offline=True",
+  "probe": "CMS.db read-only; no mutations via evaluate",
+  "sampling": "before/after each logged user action; settled-frame geometry",
+  "oracles": [
+    "O-1",
+    "O-2",
+    "O-3",
+    "O-4",
+    "O-5",
+    "O-6",
+    "O-7",
+    "O-8",
+    "O-10"
+  ],
+  "oracleLimits": {
+    "O-3": "visible screen readiness; no production async backend",
+    "O-4": "clicked target geometry and root horizontal overflow; not per-frame or native soft keyboard",
+    "O-6": "normalized logical end-state; excludes timestamps and version counters",
+    "O-9": "not applicable: no real account or authentication model"
+  },
+  "command": "python -X utf8 -u master-cms-mockup/bughunt_mockup.py",
+  "browserVersion": "157.0.8103.51",
+  "runAt": "2026-11-17 12:23:46",
+  "cases": [
+    {
+      "pass": 1,
+      "policy": "new-user",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 4.27,
+      "hash": "bc192f1d74f6e4d10b9aa38019ea1a08c8539cef9552f8fb8302b6223516edaa"
+    },
+    {
+      "pass": 1,
+      "policy": "new-user",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.72,
+      "hash": "0ed9e93d053bf7d384d4fa6737751159084eaff85156306743a029049895146d"
+    },
+    {
+      "pass": 1,
+      "policy": "new-user",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.32,
+      "hash": "2ffb189fae1a9491a8d849ac84daa9230aea37f0106bb36e03c377eadd6d1a18"
+    },
+    {
+      "pass": 1,
+      "policy": "new-user",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.58,
+      "hash": "8a1dfccd4d8d998213212ffceca59687423b127924bc2bc37539af9493de3816"
+    },
+    {
+      "pass": 1,
+      "policy": "masher",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.22,
+      "hash": "f782b929e7705c2141c4e52f67af82b77e76bbc7b2fe7e50d6dd8b64b10afd3d"
+    },
+    {
+      "pass": 1,
+      "policy": "masher",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.06,
+      "hash": "dd371337f6ee33492b540c93f5dd3360fef24753a6b9fbf74503cdab358c5876"
+    },
+    {
+      "pass": 1,
+      "policy": "masher",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 2.95,
+      "hash": "ad87436a40922bec37bbf80650bdc0d173959ec9d5bba692a26ccd3ff6e3eb55"
+    },
+    {
+      "pass": 1,
+      "policy": "masher",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.03,
+      "hash": "28b32372bc1244b917d804cc1c56ab4c14de21b3e99ebdccd396483511daac2b"
+    },
+    {
+      "pass": 1,
+      "policy": "draft-resume",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 6.62,
+      "hash": "d7555021281ff17e765f937e42404da77e29b087fab7b8615736ac174deabfc3"
+    },
+    {
+      "pass": 1,
+      "policy": "draft-resume",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 6.86,
+      "hash": "aaaa35a7843fc38e461ca6f7dcfff3fd45e7bf25e33906538dd5d0f103464632"
+    },
+    {
+      "pass": 1,
+      "policy": "draft-resume",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 6.56,
+      "hash": "46b21eec7d5491aab553b3e7f0084f8b1121496bde5576b9ba0d1604492895fa"
+    },
+    {
+      "pass": 1,
+      "policy": "draft-resume",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 5.88,
+      "hash": "46b21eec7d5491aab553b3e7f0084f8b1121496bde5576b9ba0d1604492895fa"
+    },
+    {
+      "pass": 1,
+      "policy": "interruptions",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 2.4,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 1,
+      "policy": "interruptions",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 3.24,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 1,
+      "policy": "interruptions",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 4.34,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 1,
+      "policy": "interruptions",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 3.01,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 1,
+      "policy": "resize",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 4.22,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "resize",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 4.81,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "resize",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 4.61,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "resize",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 4.45,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "slow-user",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.87,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 1,
+      "policy": "slow-user",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 4.01,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 1,
+      "policy": "slow-user",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.84,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 1,
+      "policy": "slow-user",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.78,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 1,
+      "policy": "monkey",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.92,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "monkey",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 21,
+      "seconds": 3.68,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "monkey",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.32,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "monkey",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 23,
+      "seconds": 4.04,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "localization",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.53,
+      "hash": "0676cf28b24e670ce86ff492c6b8eb6b9880c3635ed7f8730c6d739c1c2841e5"
+    },
+    {
+      "pass": 1,
+      "policy": "localization",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.73,
+      "hash": "2099418dadf3895d8858232131297796c6a39159859260712cb086d510a46615"
+    },
+    {
+      "pass": 1,
+      "policy": "localization",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.44,
+      "hash": "22e504349f0ce16f6ef69b843427c111aaf76efbc2de6e8c7d4d1048a1cc1024"
+    },
+    {
+      "pass": 1,
+      "policy": "localization",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.49,
+      "hash": "b9cfe78decc564fb1dd8fe35507d413cdcd1143047be94409b8a66e5baed5930"
+    },
+    {
+      "pass": 1,
+      "policy": "reduced-motion",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.19,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "reduced-motion",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.66,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "reduced-motion",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.86,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "reduced-motion",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.25,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 1,
+      "policy": "two-sessions",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 2.57,
+      "hash": "9f0cc17b6358311e663107dbb7033d5c5ec056745f8c2ea2f7b2de7fec18d333"
+    },
+    {
+      "pass": 1,
+      "policy": "two-sessions",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 2.87,
+      "hash": "443cb60a0270b337e3cccda26fc989ffe2bbc5dd53c3e29413974570d9df26cc"
+    },
+    {
+      "pass": 1,
+      "policy": "two-sessions",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.23,
+      "hash": "b403ba125f8c244842be35518a88c2ed52a9f07895b9cf9d27ff5c96f48a5dcc"
+    },
+    {
+      "pass": 1,
+      "policy": "two-sessions",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 2.9,
+      "hash": "278ee2dcdc36475d26d642cfad2003c75321d086c4115c3ebb4a78cbedb33c1f"
+    },
+    {
+      "pass": 2,
+      "policy": "new-user",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 2.91,
+      "hash": "bc192f1d74f6e4d10b9aa38019ea1a08c8539cef9552f8fb8302b6223516edaa"
+    },
+    {
+      "pass": 2,
+      "policy": "new-user",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 2.72,
+      "hash": "0ed9e93d053bf7d384d4fa6737751159084eaff85156306743a029049895146d"
+    },
+    {
+      "pass": 2,
+      "policy": "new-user",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 2.94,
+      "hash": "2ffb189fae1a9491a8d849ac84daa9230aea37f0106bb36e03c377eadd6d1a18"
+    },
+    {
+      "pass": 2,
+      "policy": "new-user",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.53,
+      "hash": "8a1dfccd4d8d998213212ffceca59687423b127924bc2bc37539af9493de3816"
+    },
+    {
+      "pass": 2,
+      "policy": "masher",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 2.53,
+      "hash": "f782b929e7705c2141c4e52f67af82b77e76bbc7b2fe7e50d6dd8b64b10afd3d"
+    },
+    {
+      "pass": 2,
+      "policy": "masher",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 2.67,
+      "hash": "dd371337f6ee33492b540c93f5dd3360fef24753a6b9fbf74503cdab358c5876"
+    },
+    {
+      "pass": 2,
+      "policy": "masher",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.13,
+      "hash": "ad87436a40922bec37bbf80650bdc0d173959ec9d5bba692a26ccd3ff6e3eb55"
+    },
+    {
+      "pass": 2,
+      "policy": "masher",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.02,
+      "hash": "28b32372bc1244b917d804cc1c56ab4c14de21b3e99ebdccd396483511daac2b"
+    },
+    {
+      "pass": 2,
+      "policy": "draft-resume",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 6.23,
+      "hash": "d7555021281ff17e765f937e42404da77e29b087fab7b8615736ac174deabfc3"
+    },
+    {
+      "pass": 2,
+      "policy": "draft-resume",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 5.77,
+      "hash": "aaaa35a7843fc38e461ca6f7dcfff3fd45e7bf25e33906538dd5d0f103464632"
+    },
+    {
+      "pass": 2,
+      "policy": "draft-resume",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 6.03,
+      "hash": "46b21eec7d5491aab553b3e7f0084f8b1121496bde5576b9ba0d1604492895fa"
+    },
+    {
+      "pass": 2,
+      "policy": "draft-resume",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 5.78,
+      "hash": "46b21eec7d5491aab553b3e7f0084f8b1121496bde5576b9ba0d1604492895fa"
+    },
+    {
+      "pass": 2,
+      "policy": "interruptions",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 2.67,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 2,
+      "policy": "interruptions",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 2.57,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 2,
+      "policy": "interruptions",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 2.93,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 2,
+      "policy": "interruptions",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 9,
+      "seconds": 2.62,
+      "hash": "da5d994152deaa1ddad37129ed444d555ab2be55ecde16468e3d39a896eec378"
+    },
+    {
+      "pass": 2,
+      "policy": "resize",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 3.66,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "resize",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 3.66,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "resize",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 3.62,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "resize",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 13,
+      "seconds": 4.07,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "slow-user",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.67,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 2,
+      "policy": "slow-user",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.49,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 2,
+      "policy": "slow-user",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.23,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 2,
+      "policy": "slow-user",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.26,
+      "hash": "daacf2ee95e5e7be06bca63e071e7ddc7ad194298681bc0768a1f31c53ea1f1c"
+    },
+    {
+      "pass": 2,
+      "policy": "monkey",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.15,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "monkey",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 21,
+      "seconds": 3.97,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "monkey",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 19,
+      "seconds": 3.31,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "monkey",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 23,
+      "seconds": 3.6,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "localization",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.35,
+      "hash": "0676cf28b24e670ce86ff492c6b8eb6b9880c3635ed7f8730c6d739c1c2841e5"
+    },
+    {
+      "pass": 2,
+      "policy": "localization",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.42,
+      "hash": "2099418dadf3895d8858232131297796c6a39159859260712cb086d510a46615"
+    },
+    {
+      "pass": 2,
+      "policy": "localization",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.47,
+      "hash": "22e504349f0ce16f6ef69b843427c111aaf76efbc2de6e8c7d4d1048a1cc1024"
+    },
+    {
+      "pass": 2,
+      "policy": "localization",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 1.77,
+      "hash": "b9cfe78decc564fb1dd8fe35507d413cdcd1143047be94409b8a66e5baed5930"
+    },
+    {
+      "pass": 2,
+      "policy": "reduced-motion",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.38,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "reduced-motion",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.65,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "reduced-motion",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.32,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "reduced-motion",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 10,
+      "seconds": 3.45,
+      "hash": "678b9567cf08ef0a5e56a9ae9560ddff504671c79cfae5f9ffa2719c48308539"
+    },
+    {
+      "pass": 2,
+      "policy": "two-sessions",
+      "seed": 1103,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 2.73,
+      "hash": "9f0cc17b6358311e663107dbb7033d5c5ec056745f8c2ea2f7b2de7fec18d333"
+    },
+    {
+      "pass": 2,
+      "policy": "two-sessions",
+      "seed": 2207,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 2.76,
+      "hash": "443cb60a0270b337e3cccda26fc989ffe2bbc5dd53c3e29413974570d9df26cc"
+    },
+    {
+      "pass": 2,
+      "policy": "two-sessions",
+      "seed": 3301,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.01,
+      "hash": "b403ba125f8c244842be35518a88c2ed52a9f07895b9cf9d27ff5c96f48a5dcc"
+    },
+    {
+      "pass": 2,
+      "policy": "two-sessions",
+      "seed": 4409,
+      "status": "passed",
+      "steps": 8,
+      "seconds": 3.16,
+      "hash": "278ee2dcdc36475d26d642cfad2003c75321d086c4115c3ebb4a78cbedb33c1f"
+    }
+  ],
+  "passed": 80,
+  "failed": 0,
+  "expectedCases": 80,
+  "steps": 924,
+  "seconds": 291.18,
+  "remainingLimits": [
+    "실제 CMS·HML/ZIP 파서·AI·서비스 채점·필기 인식은 모의 처리 범위입니다.",
+    "전 프레임, 실제 OS IME·소프트 키보드·실기기 검증은 수행하지 않았습니다.",
+    "71개 변형 전부의 픽셀 비교와 모든 입력 조합을 검증하지 않았습니다."
+  ]
+}

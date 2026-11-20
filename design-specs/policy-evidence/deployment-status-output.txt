@@ -1,0 +1,7 @@
+const value=figma.root.getPluginData
+('cmsDeploymentPolicyApplied');
+print('DEPLOYMENT_STATUS '+JSON.stringify({applied:value?JSON.
+parse(value):null,backups:figma.getNodeById('0:1').children.
+filter(n=>n.name.startsWith('ROLLBACK · 2026.11.20')).map(n=>(
+{id:n.id,name:n.name,children:n.children.length}))}));
+ 

@@ -1,0 +1,3286 @@
+{
+  "passed": 52,
+  "failed": 0,
+  "scope": "52 catalog entries; one representative UI state each; source field/button inventories retained for review; not every variant or pixel equivalence",
+  "results": [
+    {
+      "id": "REV_HOME_LOGOUT",
+      "status": "passed",
+      "route": "/home",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "로그아웃"
+      ],
+      "observed": {
+        "title": "로그아웃",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "로그아웃",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "로그아웃×로그아웃하시겠습니까?로그인 화면으로 나갑니다.취소로그아웃",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_HOME_LOGOUT.png"
+    },
+    {
+      "id": "REV_ITM_DETAIL_OMR",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "유형별 응답 영역",
+        "채점 결과",
+        "정답 보기"
+      ],
+      "sourceButtons": [
+        "닫기"
+      ],
+      "observed": {
+        "title": "OMR 미리보기",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "OMR 미리보기×닫기",
+        "width": 522,
+        "fits": true
+      },
+      "capture": "REV_ITM_DETAIL_OMR.png"
+    },
+    {
+      "id": "REV_ITM_STATUS_SAVE",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장",
+        "닫기(X)"
+      ],
+      "observed": {
+        "title": "상태 정보 저장",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "상태 정보 저장×저장하시겠습니까?취소저장",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_ITM_STATUS_SAVE.png"
+    },
+    {
+      "id": "REV_ITM_STATUS_LEAVE",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "이동"
+      ],
+      "observed": {
+        "title": "이동",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "이동×저장하지 않은 변경이 사라집니다. 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_ITM_STATUS_LEAVE.png"
+    },
+    {
+      "id": "REV_ITM_PRODUCT",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "현재 출처",
+        "출처 추가",
+        "페이지",
+        "용도",
+        "출처코드/출처명",
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "학기"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "추가",
+        "수정",
+        "해제"
+      ],
+      "observed": {
+        "title": "출처 관리",
+        "fields": [
+          {
+            "name": "start",
+            "type": "number",
+            "label": "시작 페이지",
+            "disabled": false
+          },
+          {
+            "name": "end",
+            "type": "number",
+            "label": "끝 페이지",
+            "disabled": false
+          },
+          {
+            "name": "usage",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "현재 출처",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "출처 추가",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "수정",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "해제",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "‹",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "1",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "›",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "출처 관리×현재 출처출처 추가출처코드 / 출처명페이지용도상태수정 / 해제22-MA-M1-TP-2022-0122-중등 수학 1-수매씽 유형북-2022-1 ~ 공통교사용사용수정해제검색결과 1건1 ~ 1‹1›닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_PRODUCT.png"
+    },
+    {
+      "id": "REV_ITM_PAPERS",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "평가지 ID",
+        "평가지명",
+        "생성 방식",
+        "상태",
+        "등록자 · 등록일"
+      ],
+      "sourceButtons": [
+        "닫기"
+      ],
+      "observed": {
+        "title": "평가지 목록",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "평가지 목록×평가지 ID평가지명생성 방식상태등록자 · 등록일5001[예시] 중1 수학 · 단원 확인 평가HML초안demo.editor · 2026-11-10닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_PAPERS.png"
+    },
+    {
+      "id": "REV_ITM_DEPLOY",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "배포 대상",
+        "AI출제마법사 CMS",
+        "개발 서비스"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "배포"
+      ],
+      "observed": {
+        "title": "문항 배포",
+        "fields": [
+          {
+            "name": "deployTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "deployTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "배포",
+            "label": null,
+            "disabled": true
+          }
+        ],
+        "text": "문항 배포×목업의 배포 상태만 변경합니다. 실제 서비스로 전송하지 않습니다.AI출제마법사 CMS 개발 서비스 이미 배포됨 · 재배포취소배포",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "REV_ITM_DEPLOY.png"
+    },
+    {
+      "id": "REV_ITM_DRAFT",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "임시저장 시각"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "observed": {
+        "title": "임시 저장 확인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "임시저장 수정하기",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "검수완료 수정하기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "임시 저장 확인×2026-11-17 12:18:42에 임시 저장된 내용이 있습니다.어느 버전을 수정하시겠습니까?취소임시저장 수정하기검수완료 수정하기",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "REV_ITM_DRAFT.png"
+    },
+    {
+      "id": "TWN_C03_CURRENT_ADD",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "문항 ID·세트 ID(세트일 때)",
+        "현재 쌍둥이 / 쌍둥이 추가 탭",
+        "현재 표: 문항 ID·문제·단원코드·형태/난이도·상태·해제",
+        "검색 기준: 문항 ID/지문/문제/출처코드/등록자 ID/원본 파일명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·난이도·형태1/2/3",
+        "세트 여부(단일/세트)·상태(R/F/Y/N/D)",
+        "결과 표: 문항 ID·문제·형태/난이도·세트 ID(문항수)·상태·매핑 정보·추가"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "현재 쌍둥이",
+        "쌍둥이 추가",
+        "초기화",
+        "조회",
+        "추가",
+        "해제",
+        "닫기"
+      ],
+      "observed": {
+        "title": "쌍둥이 문항 관리",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "현재 쌍둥이",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "쌍둥이 추가",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "해제",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "해제",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "쌍둥이 문항 관리×현재 쌍둥이쌍둥이 추가문항 / 세트 ID문제단원 코드상태해제2100001다음 중 소수인 수를 고르시오.22MMATOK1001010000승인(사용)해제2100002방정식 3x + 5 = 20의 해를 구하시오.22MMATOK1002010000승인(사용)해제닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "TWN_C03_CURRENT_ADD.png"
+    },
+    {
+      "id": "TWN_C03_GENERATE",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "생성 방식: 복제(COPY, 기본 선택) / AI 생성",
+        "세트일 때: 세트에 속한 모든 문항이 함께 생성됨 안내"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "취소",
+        "생성 시작"
+      ],
+      "observed": {
+        "title": "쌍둥이 문항 생성",
+        "fields": [
+          {
+            "name": "generate",
+            "type": "radio",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "generate",
+            "type": "radio",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "생성 시작",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "쌍둥이 문항 생성×복제 (COPY)현재 문항을 그대로 복제합니다.AI 생성목업에서는 예시 문항을 생성합니다. 실제 AI에 요청하지 않습니다.취소생성 시작",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "TWN_C03_GENERATE.png"
+    },
+    {
+      "id": "TWN_C03_HISTORY",
+      "status": "passed",
+      "route": "/items/2100001",
+      "sourceFields": [
+        "문항 ID·방식·요청자·생성일시 표",
+        "세트는 한 생성 묶음의 자식 ID별 행과 방식/요청자/일시 병합 셀"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "닫기"
+      ],
+      "observed": {
+        "title": "쌍둥이 생성 이력",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "쌍둥이 생성 이력×문항 ID방식요청자생성일시아직 생성된 쌍둥이 문항이 없습니다.닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "TWN_C03_HISTORY.png"
+    },
+    {
+      "id": "REV_ITM_UNIT",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [
+        "단원 코드/단원명",
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "학기",
+        "조회 결과 선택"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "단원코드 추가"
+      ],
+      "observed": {
+        "title": "단원코드 추가 (검색)",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "소인수분해",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "정수와 유리수",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "일차방정식",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "반비례의 그래프",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "행렬의 뜻",
+            "disabled": false
+          },
+          {
+            "name": "pick-unit",
+            "type": "radio",
+            "label": "이차방정식",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "단원코드 추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "단원코드 추가 (검색)×검색 기준단원 코드단원명검색어교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회선택단원 코드단원 경로22MMATOK1001010000중학교 > 수학 1 > 수와 연산 > 소인수분해22MMATOK1002010000중학교 > 수학 1 > 수와 연산 > 정수와 유리수22MMATOK1003010000중학교 > 수학 1 > 문자와 식 > 일차방정식22MMATOK1004040000중학교 > 수학 1 > 좌표평면과 그래프 > 반비례22HMAC1HG1006010000고등학교 > 공통수학 1 > 행렬 > 행렬과 그 연산22HMAC1HG1002010000고등학교 > 공통수학 1 > 방정식과 부등식 > 이차방정식취소단원코드 추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_UNIT.png"
+    },
+    {
+      "id": "REV_ITM_ACHIEVEMENT",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "조회 결과 선택"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "성취기준 추가"
+      ],
+      "observed": {
+        "title": "성취기준 추가 (검색)",
+        "fields": [
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "성취기준 추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "성취기준 추가 (검색)×교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회조회 버튼을 눌러 후보를 확인하세요.취소성취기준 추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_ACHIEVEMENT.png"
+    },
+    {
+      "id": "REV_ITM_DOMAIN",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "조회 결과 선택"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "내용영역 추가"
+      ],
+      "observed": {
+        "title": "내용영역 추가 (검색)",
+        "fields": [
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "내용영역 추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "내용영역 추가 (검색)×교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회조회 버튼을 눌러 후보를 확인하세요.취소내용영역 추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_DOMAIN.png"
+    },
+    {
+      "id": "REV_ITM_COMPETENCY",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "조회 결과 선택"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "교과역량 추가"
+      ],
+      "observed": {
+        "title": "교과역량 추가 (검색)",
+        "fields": [
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "교과역량 추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "교과역량 추가 (검색)×교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회조회 버튼을 눌러 후보를 확인하세요.취소교과역량 추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_COMPETENCY.png"
+    },
+    {
+      "id": "REV_ITM_BEHAVIOR",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [
+        "과목군",
+        "조회 결과 선택"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "행동영역 추가"
+      ],
+      "observed": {
+        "title": "행동영역 추가 (검색)",
+        "fields": [
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "행동영역 추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "행동영역 추가 (검색)×교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회조회 버튼을 눌러 후보를 확인하세요.취소행동영역 추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_ITM_BEHAVIOR.png"
+    },
+    {
+      "id": "REV_ITM_TEMP",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "임시 저장"
+      ],
+      "observed": {
+        "title": "임시 저장",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "임시 저장",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "임시 저장×임시 저장하시겠습니까? 확정본과 서비스 배포는 변경하지 않습니다.취소임시 저장",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_ITM_TEMP.png"
+    },
+    {
+      "id": "REV_ITM_APPLY",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장"
+      ],
+      "observed": {
+        "title": "전체 반영",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "전체 반영×저장하시겠습니까? 내용과 메타정보를 반영하며 승인 상태와 서비스 배포는 별도입니다.취소저장",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_ITM_APPLY.png"
+    },
+    {
+      "id": "REV_ITM_CANCEL",
+      "status": "passed",
+      "route": "/items/2100001/edit/meta",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "문항 수정 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "문항 수정 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_ITM_CANCEL.png"
+    },
+    {
+      "id": "REV_ITM_HTML_PARAGRAPH",
+      "status": "passed",
+      "kind": "preserved-native-editor-surface",
+      "observed": {
+        "text": "문단 설정 (pt)\n왼쪽 여백\n오른쪽 여백\n첫 줄 (음수: 내어쓰기)\n문단 앞\n문단 뒤\n줄간격 (배율)\n적용\n취소",
+        "fields": [
+          {
+            "type": "number",
+            "label": "왼쪽 여백"
+          },
+          {
+            "type": "number",
+            "label": "오른쪽 여백"
+          },
+          {
+            "type": "number",
+            "label": "첫 줄 (음수: 내어쓰기)"
+          },
+          {
+            "type": "number",
+            "label": "문단 앞"
+          },
+          {
+            "type": "number",
+            "label": "문단 뒤"
+          },
+          {
+            "type": "number",
+            "label": "줄간격 (배율)"
+          }
+        ],
+        "buttons": [
+          "적용",
+          "취소"
+        ]
+      },
+      "capture": "REV_ITM_HTML_PARAGRAPH.png"
+    },
+    {
+      "id": "REV_ITM_HTML_MATH",
+      "status": "passed",
+      "kind": "preserved-native-editor-surface",
+      "observed": {
+        "text": "수식 편집\n⌨ 팔레트\n비주얼 편집\nLaTeX 소스\n한글 크기 \n작게\n기본\n크게\nx\n자주 쓰는 패턴:\n기본\nb\na\n\t​\n\nx\n\t​\n\nx\n2\n3×4\n676÷5\n1\n3\n2\n\t​\n\nx\n1\n\t​\n\n0.\n3\n동아\n□\ncm\n㉠\n①\n12\n+34\n46\n\t​\n\n\t​\n\n46\n−12\n34\n\t​\n\n\t​\n\n5\n676\n기호\n≤\n≥\n\n=\n45°\nπ\n미리보기 (KaTeX — 실서비스 렌더)\n팁: 비주얼 편집에서 1/2 → 분수, sqrt → √, pi → π 로 빠르게 입력됩니다",
+        "fields": [
+          {
+            "type": "select-one",
+            "label": null
+          },
+          {
+            "type": "textarea",
+            "label": null
+          }
+        ],
+        "buttons": [
+          "⌨ 팔레트",
+          "비주얼 편집",
+          "LaTeX 소스",
+          "ba​",
+          "x​",
+          "x2",
+          "3×4",
+          "676÷5",
+          "132​",
+          "x1​",
+          "0.3",
+          "□",
+          "cm",
+          "㉠",
+          "①",
+          "12+3446​​",
+          "46−1234​​",
+          "5676",
+          "≤",
+          "≥",
+          "=",
+          "45°",
+          "π"
+        ]
+      },
+      "capture": "REV_ITM_HTML_MATH.png"
+    },
+    {
+      "id": "REV_ITM_HTML_IMAGE_URL",
+      "status": "passed",
+      "route": "/items/2100001/edit/html",
+      "kind": "native-browser-prompt",
+      "observed": {
+        "type": "prompt",
+        "message": "추가할 이미지의 전체 URL을 입력하세요. (http:// 또는 https://)",
+        "default": "https://"
+      },
+      "cancel": "dismissed; no image inserted",
+      "note": "Headless screenshot does not include browser chrome; actual prompt event recorded."
+    },
+    {
+      "id": "REV_ITM_HTML_SYMBOL",
+      "status": "passed",
+      "kind": "preserved-native-editor-surface",
+      "observed": {
+        "text": "①\n②\n③\n④\n⑤\n⑥\n⑦\n⑧\n⑨\n⑩\n㉠\n㉡\n㉢\n㉣\n㉤\n㉥\n㉦\n㉧\n㉮\n㉯\n㉰\n㉱\n㉲\n□\n■\n○\n●\n△\n▲\n▽\n◇\n◆\n☆\n★\n→\n←\n↑\n↓\n↔\n⇒\n※\n·\n…\n～\n〈\n〉\n《\n》\n「\n」\n『\n』",
+        "fields": [],
+        "buttons": [
+          "①",
+          "②",
+          "③",
+          "④",
+          "⑤",
+          "⑥",
+          "⑦",
+          "⑧",
+          "⑨",
+          "⑩",
+          "㉠",
+          "㉡",
+          "㉢",
+          "㉣",
+          "㉤",
+          "㉥",
+          "㉦",
+          "㉧",
+          "㉮",
+          "㉯",
+          "㉰",
+          "㉱",
+          "㉲",
+          "□",
+          "■",
+          "○",
+          "●",
+          "△",
+          "▲",
+          "▽",
+          "◇",
+          "◆",
+          "☆",
+          "★",
+          "→",
+          "←",
+          "↑",
+          "↓",
+          "↔",
+          "⇒",
+          "※",
+          "·",
+          "…",
+          "～",
+          "〈",
+          "〉",
+          "《",
+          "》",
+          "「",
+          "」",
+          "『",
+          "』"
+        ]
+      },
+      "capture": "REV_ITM_HTML_SYMBOL.png"
+    },
+    {
+      "id": "REV_ITM_HTML_OVERLAP",
+      "status": "passed",
+      "kind": "preserved-native-editor-surface",
+      "observed": {
+        "text": "겹칠 글자\n모양\n없음 (글자끼리 겹치기)\n원\n검은 원\n사각형\n검은 사각형\n둥근 사각형\n삼각형\n검은 삼각형\n마름모\n검은 마름모\n글자를 한 자리에 포개기\n미리보기\n취소\n확인",
+        "fields": [
+          {
+            "type": "text",
+            "label": null
+          },
+          {
+            "type": "select-one",
+            "label": null
+          },
+          {
+            "type": "checkbox",
+            "label": null
+          }
+        ],
+        "buttons": [
+          "취소",
+          "확인"
+        ]
+      },
+      "capture": "REV_ITM_HTML_OVERLAP.png"
+    },
+    {
+      "id": "REV_ITM_HTML_TEXTBOX",
+      "status": "passed",
+      "kind": "preserved-native-editor-surface",
+      "observed": {
+        "text": "글상자 편집\n줄 정렬\n여러 정렬\n상자 기본\n왼쪽 정렬\n가운데 정렬\n오른쪽 정렬\n\n\n\n\n너비\n높이\n최소 높이\n한글 원본 크기(px)입니다. 글자가 넘쳐도 상자 크기는 그대로입니다.\n\nEnter=새 줄 · Shift+Enter=줄바꿈 · Ctrl+Enter=적용 · Esc=취소. 이 편집은 서비스 HTML/뷰어에 반영됩니다.\n\n취소\n적용",
+        "fields": [
+          {
+            "type": "select-one",
+            "label": null
+          },
+          {
+            "type": "number",
+            "label": null
+          },
+          {
+            "type": "number",
+            "label": null
+          },
+          {
+            "type": "number",
+            "label": null
+          }
+        ],
+        "buttons": [
+          "취소",
+          "적용"
+        ]
+      },
+      "capture": "REV_ITM_HTML_TEXTBOX.png"
+    },
+    {
+      "id": "REV_ITM_OMR_PREVIEW",
+      "status": "passed",
+      "route": "/items/2100001/edit/omr",
+      "sourceFields": [
+        "유형별 학생 응답",
+        "채점 결과",
+        "정답 보기 상태"
+      ],
+      "sourceButtons": [
+        "닫기"
+      ],
+      "observed": {
+        "title": "OMR 미리보기",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "OMR 미리보기×닫기",
+        "width": 522,
+        "fits": true
+      },
+      "capture": "REV_ITM_OMR_PREVIEW.png"
+    },
+    {
+      "id": "REV_HML_SAVED",
+      "status": "passed",
+      "route": "/items/2100001/edit/hml",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "확인"
+      ],
+      "observed": {
+        "title": "한글 편집",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "확인",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "한글 편집×CMS에서 ‘임시 저장’ 또는 ‘전체 반영’ 버튼을 눌러주세요.확인",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_HML_SAVED.png"
+    },
+    {
+      "id": "REV_LAB_BUNDLE",
+      "status": "passed",
+      "route": "/lab",
+      "sourceFields": [
+        "번들",
+        "버전",
+        "donga-question-viewer",
+        "donga-question-editor"
+      ],
+      "sourceButtons": [
+        "닫기"
+      ],
+      "observed": {
+        "title": "외부 번들 버전",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "외부 번들 버전×번들버전donga-question-viewer1.13.6donga-question-editor0.3.10닫기",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_LAB_BUNDLE.png"
+    },
+    {
+      "id": "REV_LAB_CACHE",
+      "status": "passed",
+      "route": "/lab",
+      "sourceFields": [
+        "전체",
+        "공통코드",
+        "단원",
+        "사이트"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "reload"
+      ],
+      "observed": {
+        "title": "캐시 reload",
+        "fields": [
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "reload",
+            "label": null,
+            "disabled": true
+          }
+        ],
+        "text": "캐시 reload×다시 읽을 캐시를 고르세요.모든 서버에 적용됩니다.전체공통코드단원사이트취소reload",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_LAB_CACHE.png"
+    },
+    {
+      "id": "REV_LAB_SESSION",
+      "status": "passed",
+      "route": "/lab",
+      "sourceFields": [
+        "전체",
+        "[MASTER] 관리자 (ADMIN)",
+        "[MASTER] 사용자 (USER)",
+        "[DOUCLASS] 관리자 (ADMIN)",
+        "[DOUCLASS] 사용자 (USER)"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "로그아웃"
+      ],
+      "observed": {
+        "title": "역할별 로그아웃",
+        "fields": [
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "adminTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "로그아웃",
+            "label": null,
+            "disabled": true
+          }
+        ],
+        "text": "역할별 로그아웃×로그아웃할 사이트 · 역할을 고르세요.고른 사이트 세션만 끊기고, 본인 세션은 제외됩니다.전체[MASTER] 관리자 (ADMIN)[MASTER] 사용자 (USER)[DOUCLASS] 관리자 (ADMIN)[DOUCLASS] 사용자 (USER)취소로그아웃",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_LAB_SESSION.png"
+    },
+    {
+      "id": "REV_LAB_MATH",
+      "status": "passed",
+      "route": "/lab/math",
+      "sourceFields": [
+        "키보드",
+        "손글씨",
+        "수식 입력",
+        "숫자·연산·기호",
+        "알파벳·그리스 문자",
+        "손글씨 캔버스",
+        "인식 결과",
+        "오류 안내"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "적용",
+        "한 획 지우기",
+        "전체 지우기",
+        "인식하기"
+      ],
+      "observed": {
+        "title": "수식입력기",
+        "fields": [
+          {
+            "name": "",
+            "type": "textarea",
+            "label": "LaTeX 수식 입력",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "키보드",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "손글씨",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "숫자·연산·기호",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "알파벳·그리스 문자",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "행렬",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "7",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "8",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "9",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "+",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "−",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "4",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "5",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "6",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "×",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "÷",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "1",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "2",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "3",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "=",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "ab",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "0",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": ".",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "(",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": ")",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "x",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "x^2",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "x_{1}",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "≤",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "≥",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "∞",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "∑",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "∫",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "π",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "θ",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "적용",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "수식입력기×키보드손글씨숫자·연산·기호알파벳·그리스 문자행렬789+−456×÷123=ab0.()xx^2x_{1}≤≥∞∑∫πθLaTeX 수식 입력\\frac{1}{2}분수·근호·위첨자·아래첨자·행렬과 기본 기호를 미리 봅니다. 전체 KaTeX 문법은 지원하지 않습니다.12취소적용",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_LAB_MATH.png"
+    },
+    {
+      "id": "REV_LAB_MATRIX",
+      "status": "passed",
+      "route": "/lab/math",
+      "sourceFields": [
+        "행",
+        "열"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "추가"
+      ],
+      "observed": {
+        "title": "행렬 선택",
+        "fields": [
+          {
+            "name": "rows",
+            "type": "select-one",
+            "label": "행",
+            "disabled": false
+          },
+          {
+            "name": "cols",
+            "type": "select-one",
+            "label": "열",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "추가",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "행렬 선택×1234512345추가",
+        "width": 460,
+        "fits": true
+      },
+      "capture": "REV_LAB_MATRIX.png"
+    },
+    {
+      "id": "HML_C02_SOURCE",
+      "status": "passed",
+      "route": "/hml/new",
+      "sourceFields": [
+        "검색 기준: 출처코드/출처명",
+        "검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·용도",
+        "선택 라디오와 출처 결과 표·페이지"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "취소",
+        "선택"
+      ],
+      "observed": {
+        "title": "출처 조회",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "usage",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2022-1",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2022-2",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2022-3",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2022-4",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2023-5",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2023-6",
+            "disabled": true
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2023-7",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2023-8",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-고등 공통수학 1-수매씽 유형북-2024-9",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-고등 공통수학 1-수매씽 워크북-2024-10",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "‹",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "1",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "2",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "›",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "선택",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "출처 조회×검색 기준출처코드출처명검색어교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기용도전체공통교사용초기화조회미사용 출처는 신규 등록에서 선택할 수 없습니다. 용도는 자동 선택되지 않습니다.선택출처코드출처명용도상태22-MA-M1-TP-2022-0122-중등 수학 1-수매씽 유형북-2022-1T사용22-MA-M1-WB-2022-0222-중등 수학 1-수매씽 워크북-2022-2C사용22-MA-M1-TP-2022-0322-중등 수학 1-수매씽 유형북-2022-3C사용22-MA-M1-WB-2022-0422-중등 수학 1-수매씽 워크북-2022-4C사용22-MA-M1-TP-2023-0522-중등 수학 1-수매씽 유형북-2023-5T사용22-MA-M1-WB-2023-0622-중등 수학 1-수매씽 워크북-2023-6C미사용22-MA-M1-TP-2023-0722-중등 수학 1-수매씽 유형북-2023-7C사용22-MA-M1-WB-2023-0822-중등 수학 1-수매씽 워크북-2023-8C사용22-MA-H1-TP-2024-0922-고등 공통수학 1-수매씽 유형북-2024-9T사용22-MA-H1-WB-2024-1022-고등 공통수학 1-수매씽 워크북-2024-10C사용검색결과 16건1 ~ 10‹12›취소선택",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "HML_C02_SOURCE.png"
+    },
+    {
+      "id": "HML_C02_UNIT",
+      "status": "passed",
+      "route": "/hml/new",
+      "sourceFields": [
+        "검색 기준: 단원 코드/단원명",
+        "검색어",
+        "교육과정·학교급·과목군·과목·학년·학기",
+        "단원 코드·대/중/소/소소단원 결과 표·페이지"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "닫기"
+      ],
+      "observed": {
+        "title": "단원 코드 조회",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "단원 코드 조회×검색 기준단원 코드단원명검색어교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회단원 코드단원 경로22MMATOK1001010000중학교 > 수학 1 > 수와 연산 > 소인수분해22MMATOK1002010000중학교 > 수학 1 > 수와 연산 > 정수와 유리수22MMATOK1003010000중학교 > 수학 1 > 문자와 식 > 일차방정식22MMATOK1004040000중학교 > 수학 1 > 좌표평면과 그래프 > 반비례22HMAC1HG1006010000고등학교 > 공통수학 1 > 행렬 > 행렬과 그 연산22HMAC1HG1002010000고등학교 > 공통수학 1 > 방정식과 부등식 > 이차방정식닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "HML_C02_UNIT.png"
+    },
+    {
+      "id": "HML_C02_CANCEL",
+      "status": "passed",
+      "route": "/hml/new",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기(X)",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "등록 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "등록 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "HML_C02_CANCEL.png"
+    },
+    {
+      "id": "HML_C03_UNJUDGED",
+      "status": "passed",
+      "route": "/hml/6001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "승인"
+      ],
+      "observed": {
+        "title": "시험지 승인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "확인",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "시험지 승인×평가지 등록여부를 선택해 주세요.확인",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "HML_C03_UNJUDGED.png"
+    },
+    {
+      "id": "HML_C03_REASON",
+      "status": "passed",
+      "route": "/hml/6001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "폐기"
+      ],
+      "observed": {
+        "title": "시험지 폐기",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "확인",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "시험지 폐기×비고에 폐기 사유를 입력해 주세요.확인",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "HML_C03_REASON.png"
+    },
+    {
+      "id": "HML_C04_DRAFT",
+      "status": "passed",
+      "route": "/hml/6003",
+      "sourceFields": [
+        "임시 저장 시각"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "observed": {
+        "title": "임시 저장 확인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "임시저장 수정하기",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "검수완료 수정하기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "임시 저장 확인×2026-11-17 12:19:23에 임시 저장된 내용이 있습니다.어느 버전을 수정하시겠습니까?취소임시저장 수정하기검수완료 수정하기",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "HML_C04_DRAFT.png"
+    },
+    {
+      "id": "DIFI_C02_SOURCE",
+      "status": "passed",
+      "route": "/definition/new",
+      "sourceFields": [
+        "출처코드/출처명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·용도",
+        "라디오 선택·출처 결과 표·페이지"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "취소",
+        "선택"
+      ],
+      "observed": {
+        "title": "출처 조회",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "usage",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2022-1",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2022-2",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2022-3",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2022-4",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2023-5",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2023-6",
+            "disabled": true
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 유형북-2023-7",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-중등 수학 1-수매씽 워크북-2023-8",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-고등 공통수학 1-수매씽 유형북-2024-9",
+            "disabled": false
+          },
+          {
+            "name": "pick-source",
+            "type": "radio",
+            "label": "22-고등 공통수학 1-수매씽 워크북-2024-10",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "‹",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "1",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "2",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "›",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "선택",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "출처 조회×검색 기준출처코드출처명검색어교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기용도전체공통교사용초기화조회미사용 출처는 신규 등록에서 선택할 수 없습니다. 용도는 자동 선택되지 않습니다.선택출처코드출처명용도상태22-MA-M1-TP-2022-0122-중등 수학 1-수매씽 유형북-2022-1T사용22-MA-M1-WB-2022-0222-중등 수학 1-수매씽 워크북-2022-2C사용22-MA-M1-TP-2022-0322-중등 수학 1-수매씽 유형북-2022-3C사용22-MA-M1-WB-2022-0422-중등 수학 1-수매씽 워크북-2022-4C사용22-MA-M1-TP-2023-0522-중등 수학 1-수매씽 유형북-2023-5T사용22-MA-M1-WB-2023-0622-중등 수학 1-수매씽 워크북-2023-6C미사용22-MA-M1-TP-2023-0722-중등 수학 1-수매씽 유형북-2023-7C사용22-MA-M1-WB-2023-0822-중등 수학 1-수매씽 워크북-2023-8C사용22-MA-H1-TP-2024-0922-고등 공통수학 1-수매씽 유형북-2024-9T사용22-MA-H1-WB-2024-1022-고등 공통수학 1-수매씽 워크북-2024-10C사용검색결과 16건1 ~ 10‹12›취소선택",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "DIFI_C02_SOURCE.png"
+    },
+    {
+      "id": "DIFI_C02_UNIT",
+      "status": "passed",
+      "route": "/definition/new",
+      "sourceFields": [
+        "단원 코드/단원명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기",
+        "단원 코드·대/중/소/소소단원 결과 표·페이지"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "닫기"
+      ],
+      "observed": {
+        "title": "단원 코드 조회",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "닫기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "단원 코드 조회×검색 기준단원 코드단원명검색어교육과정 *선택2022 개정2015 개정학교급 *선택초등학교중학교고등학교과목군 *선택수학영어국어과목 *선택수학 1공통수학 1학년 *선택중1중2중3학기 *선택공통학기1학기2학기초기화조회단원 코드단원 경로22MMATOK1001010000중학교 > 수학 1 > 수와 연산 > 소인수분해22MMATOK1002010000중학교 > 수학 1 > 수와 연산 > 정수와 유리수22MMATOK1003010000중학교 > 수학 1 > 문자와 식 > 일차방정식22MMATOK1004040000중학교 > 수학 1 > 좌표평면과 그래프 > 반비례22HMAC1HG1006010000고등학교 > 공통수학 1 > 행렬 > 행렬과 그 연산22HMAC1HG1002010000고등학교 > 공통수학 1 > 방정식과 부등식 > 이차방정식닫기",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "DIFI_C02_UNIT.png"
+    },
+    {
+      "id": "DIFI_C02_CANCEL",
+      "status": "passed",
+      "route": "/definition/new",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기(X)",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "등록 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "등록 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "DIFI_C02_CANCEL.png"
+    },
+    {
+      "id": "DIFI_C03_ALL_D",
+      "status": "passed",
+      "route": "/definition/7001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "승인"
+      ],
+      "observed": {
+        "title": "시험지 승인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "확인",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "시험지 승인×모든 문항이 삭제 상태이므로 승인할 수 없습니다.확인",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "DIFI_C03_ALL_D.png"
+    },
+    {
+      "id": "DIFI_C03_REASON",
+      "status": "passed",
+      "route": "/definition/7001",
+      "sourceFields": [],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "폐기"
+      ],
+      "observed": {
+        "title": "시험지 폐기",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "확인",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "시험지 폐기×비고에 폐기 사유를 입력해 주세요.확인",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "DIFI_C03_REASON.png"
+    },
+    {
+      "id": "DIFI_C04_DRAFT",
+      "status": "passed",
+      "route": "/definition/7002",
+      "sourceFields": [
+        "임시 저장 시각"
+      ],
+      "sourceButtons": [
+        "닫기(X)",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "observed": {
+        "title": "임시 저장 확인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "임시저장 수정하기",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "검수완료 수정하기",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "임시 저장 확인×2026-11-17 12:19:31에 임시 저장된 내용이 있습니다.어느 버전을 수정하시겠습니까?취소임시저장 수정하기검수완료 수정하기",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "DIFI_C04_DRAFT.png"
+    },
+    {
+      "id": "REV_PAP_DEPLOY",
+      "status": "passed",
+      "route": "/papers/5001",
+      "sourceFields": [
+        "포함 문항 수와 전체 배포 안내",
+        "Master 폐기 문항 제외 안내",
+        "배포 대상: AI출제마법사 CMS / 개발 서비스",
+        "대상별 가능/불가 사유",
+        "재배포 안내(소스 분기)"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "배포"
+      ],
+      "observed": {
+        "title": "평가지 배포",
+        "fields": [
+          {
+            "name": "deployTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "deployTarget",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "배포",
+            "label": null,
+            "disabled": true
+          }
+        ],
+        "text": "평가지 배포×목업의 배포 상태만 변경합니다. 실제 서비스로 전송하지 않습니다.포함 문항을 함께 배포하며 Master 폐기 문항은 제외합니다.AI출제마법사 CMS 개발 서비스 취소배포",
+        "width": 680,
+        "fits": true
+      },
+      "capture": "REV_PAP_DEPLOY.png"
+    },
+    {
+      "id": "REV_PAP_ADD",
+      "status": "passed",
+      "route": "/papers/5001/edit",
+      "sourceFields": [
+        "문항 ID/지문/문제/등록자 ID/원본 파일명 검색",
+        "교육과정·학교급·과목군·과목·학년·학기·난이도·형태1~3·상태 필터",
+        "결과: 선택·문항 ID·문제·형태/난이도·단원 코드·문항 상태·선택 불가 사유",
+        "후보 선택·전체 선택",
+        "사용/미사용·같은 출처·세트 단위 추가 안내"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "추가"
+      ],
+      "observed": {
+        "title": "문항 추가",
+        "fields": [
+          {
+            "name": "criterion",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "q",
+            "type": "text",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "curriculum",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "school",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subjectGroup",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subject",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "grade",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "semester",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "difficulty",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "category",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "answerMode",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "subtype",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "status",
+            "type": "select-one",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "",
+            "type": "checkbox",
+            "label": "",
+            "disabled": false
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100001 선택",
+            "disabled": true
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100002 선택",
+            "disabled": false
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100004 선택",
+            "disabled": false
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100007 선택",
+            "disabled": true
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100008 선택",
+            "disabled": true
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100009 선택",
+            "disabled": true
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100010 선택",
+            "disabled": true
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100011 선택",
+            "disabled": false
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100012 선택",
+            "disabled": false
+          },
+          {
+            "name": "addItem",
+            "type": "checkbox",
+            "label": "문항 2100013 선택",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "초기화",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "조회",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "‹",
+            "label": null,
+            "disabled": true
+          },
+          {
+            "text": "1",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "2",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "3",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "›",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "추가",
+            "label": null,
+            "disabled": true
+          }
+        ],
+        "text": "문항 추가×검색 기준문항 ID지문 ID지문문제출처코드등록자 ID원본 파일명검색어교육과정전체2022 개정2015 개정학교급전체중학교고등학교과목군전체수학국어영어과목전체수학 1공통수학 1학년전체중1중2중3고1고2고3학기전체1학기2학기난이도전체최상상중하최하형태1전체객관식주관식서술형형태2전체단답형다답형형태3전체N지 선다OX일반형그리기영역 선택선 연결드래그상태전체승인(사용/미사용)승인(사용)승인(미사용)초기화조회승인(사용/미사용) 문항만 표시합니다. 세트 자식 하나를 선택하면 전체 세트가 추가됩니다.현재 결과 전체 선택선택문항 ID문제형태 / 난이도상태선택 안내2100001다음 중 소수인 수를 고르시오.객관식 / 하승인(사용)이미 포함됨2100002방정식 3x + 5 = 20의 해를 구하시오.객관식 / 중승인(사용)추가 가능2100004두 정수 −3과 7의 합을 구하시오.주관식 / 상승인(미사용)추가 가능2100007행렬 A의 (1, 1) 성분을 구하시오.세트 전체 추가 · 지문 91001주관식 / 중승인(사용)이미 포함됨2100008행렬 A의 (2, 1) 성분을 구하시오.세트 전체 추가 · 지문 91001주관식 / 중승인(사용)이미 포함됨2100009행렬 A의 모든 성분의 합을 구하시오.세트 전체 추가 · 지문 91001주관식 / 상승인(사용)이미 포함됨2100010행렬 A의 열의 개수를 구하시오.세트 전체 추가 · 지문 91001주관식 / 최상승인(사용)이미 포함됨2100011x² − 5x + 6 = 0의 두 근의 합을 구하시오.주관식 / 하승인(사용)추가 가능2100012주어진 자료를 이용하여 풀이 과정을 서술하시오.서술형 / 중승인(사용)추가 가능2100013다음 중 소수인 수를 고르시오.객관식 / 중승인(사용)추가 가능검색결과 27건1 ~ 10‹123›취소추가",
+        "width": 1180,
+        "fits": true
+      },
+      "capture": "REV_PAP_ADD.png"
+    },
+    {
+      "id": "REV_PAP_REMOVE",
+      "status": "passed",
+      "route": "/papers/5001/edit",
+      "sourceFields": [
+        "제외 대상: 문항 ID 또는 지문 ID·문항 수"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "제외"
+      ],
+      "observed": {
+        "title": "문항 제외",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "제외",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "문항 제외×이 단건 또는 세트 그룹 전체를 구성에서 제외하시겠습니까? Master 문항은 유지됩니다.취소제외",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_PAP_REMOVE.png"
+    },
+    {
+      "id": "REV_PAP_CANCEL",
+      "status": "passed",
+      "route": "/papers/5001/edit",
+      "sourceFields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "평가지 수정 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "평가지 수정 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_PAP_CANCEL.png"
+    },
+    {
+      "id": "REV_PAP_DISCARD",
+      "status": "passed",
+      "route": "/papers/5001/edit",
+      "sourceFields": [
+        "폐기한 평가지는 다시 수정할 수 없습니다."
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장"
+      ],
+      "observed": {
+        "title": "평가지 저장",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "평가지 저장×폐기한 평가지는 다시 수정할 수 없습니다.취소저장",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_PAP_DISCARD.png"
+    },
+    {
+      "id": "REV_SRC_CREATE_CANCEL",
+      "status": "passed",
+      "route": "/sources/new",
+      "sourceFields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "출처 등록 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "출처 등록 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_SRC_CREATE_CANCEL.png"
+    },
+    {
+      "id": "REV_SRC_USE_IMPACT",
+      "status": "passed",
+      "route": "/sources/8001/edit",
+      "sourceFields": [
+        "출처코드·출처명",
+        "매핑 문항 수",
+        "기존 매핑 문항 정보 유지(서비스 노출 유지) 안내",
+        "신규 문항 등록의 출처 선택에서 제외 안내"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "미사용(N)으로 변경"
+      ],
+      "observed": {
+        "title": "영향 범위 확인",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "미사용(N)으로 변경",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "영향 범위 확인×출처코드: 22-MA-M1-TP-2022-01출처명: 22-중등 수학 1-수매씽 유형북-2022-1매핑 문항 수: 7건기존 매핑 문항 정보는 유지하며 서비스 노출도 유지합니다. 신규 문항 등록의 출처 선택에서 제외됩니다. 미사용으로 변경하시겠습니까?취소미사용(N)으로 변경",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_SRC_USE_IMPACT.png"
+    },
+    {
+      "id": "REV_SRC_EDIT_CANCEL",
+      "status": "passed",
+      "route": "/sources/8001/edit",
+      "sourceFields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "sourceButtons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "observed": {
+        "title": "출처 수정 취소",
+        "fields": [],
+        "buttons": [
+          {
+            "text": "×",
+            "label": "닫기",
+            "disabled": false
+          },
+          {
+            "text": "취소",
+            "label": null,
+            "disabled": false
+          },
+          {
+            "text": "저장 하지 않고 이동",
+            "label": null,
+            "disabled": false
+          }
+        ],
+        "text": "출처 수정 취소×저장하지 않고 이동하시겠습니까?취소저장 하지 않고 이동",
+        "width": 380,
+        "fits": true
+      },
+      "capture": "REV_SRC_EDIT_CANCEL.png"
+    }
+  ],
+  "build": {
+    "app.js": "60d1c1dd4df4a0aa1ec6a07f8241f4699da624638a66930e773ab0a9f506aaa2",
+    "catalog.js": "dc3b39fc4635daeb86048a8d778f935015178f821853550a4607ae6b6417193e",
+    "data.js": "003089f6d4b5a0fa2106bc9295613b4b593f4b9166ea0139e14486aba28fbf2e",
+    "editor.js": "5d58018e4895ace00f941e6a624e8b4d1b495a498d4c42a9a0834d0e33517c80",
+    "index.html": "051eb6b6d49c5a7e60f70d7f03a30d93842cdf9d0187f20d89c7cb7ee07bc069",
+    "lab.js": "7e63e9aa766ba23a806e358957beb99786a9590216dcb187803d68b21aa716d6",
+    "omr-templates.js": "bb8de581236aaf7e12893c2e39d0b5f10937c14e3329e50e0923e957fe0a93bd",
+    "source-html.js": "25e45f7abff53f424d43a94d92812a70f9741d21f57ca9fcf362c8172162057d",
+    "source-isolation.js": "b1b8a8a59e63b695627843eefc0a64044e4d5a57845406b21df175be46b8f9c7",
+    "source-omr.css": "cc8f00952820ccfe136cb5a1c1189bcc1c557b96cd630d9b8d74e86b34b231ee",
+    "source-omr.js": "fe1feb81e00f160595abe07dd577af5305969813f9c67f5bac04d3cc182cae81",
+    "source-preview.js": "72c96693f6089583103fce63e0404e5601e2f33f27bbb3613d5a26e67068f4f0",
+    "source-value-demo.js": "9872c053b696a3a339c3267bd9590b22df9a1628cabc80055aa34568212eee23",
+    "styles.css": "266c99d94d7cd3e283b500ecee35a212518d1ce5be9a3debfb7fb56febb540eb",
+    "vendor/omr-counter-styles.css": "497ae0a739ededa79669d4c5155c88e66fcac835a483375f5da8ca4bff0abbc0",
+    "vendor/omr-leaves.js": "f6db0e87fb34e4485ed67528d0c9dd1061d5548be132593ad88c98edf112c7de",
+    "vendor/omr-monitor.js": "ad75ea7f52983b49ba7baf69fdf28e2c27f2d04230ad88cd8b7d19061294601d",
+    "vendor/omr-preview/AppHeader.DWuAr3vs.css": "50464a98f7974253fec95b96c96a8f74d8a99f68f198584658028c5f45c1ef7a",
+    "vendor/omr-preview/BottomSheet.CdNSZOdF.css": "b080118df29582fa32b38b2a0a676e496ec9255179d2fe858ff45987e6849aa0",
+    "vendor/omr-preview/CloseButton._grNypjV.css": "4b275d28f3b2e2ffac27c4218e9785cede7188a564314bdb2ccaed6f772a52b8",
+    "vendor/omr-preview/ConfirmDialog.CV5yLyDo.css": "24b10f8ae30ebf544e7d59e257ead1cfae7c51f1b414695b0f37b4488115c428",
+    "vendor/omr-preview/ExamAnswerControl.BbiogCI7.css": "dfa749c830af83fee76872e7ac3ab9f31ba39fd77848de54b6ff538040419e02",
+    "vendor/omr-preview/ExamOmrTable.BYl3y91J.css": "bfbc8aadd40a9f9173ec03cdb0cab13ced8f35d00315ae486698e8c7ec9d1d87",
+    "vendor/omr-preview/Footer.MwxiBs1b.css": "bca843475f33f7052ccb0eb46220a2be7c14eba7a0f46e620bf18098dfb9c47c",
+    "vendor/omr-preview/MathAnswerField.D8MzhzaT.css": "38e5cc44a3dc051ea3fc511551d1d33207704e5a9d61c22719ed4d37b0a3f01c",
+    "vendor/omr-preview/Modal.yhVQMQ9r.css": "12ccad4c77a7579957b1d607953ba0ee8bb12fd9551e732065ec7fcba09fbe93",
+    "vendor/omr-preview/Select.9D8nNCpL.css": "57cce94897e7e764a8e23485ffab27e23ee86fc5906be71127d4a6f75381a685",
+    "vendor/omr-preview/entry.OCy--Zus.css": "3ed8c8d68329673dfdaa56093d69689a992ce33626ccb282545866c6f3078f63",
+    "vendor/omr-preview/page-inline.css": "a5ca08ae3a3c89ba3e973c48aa08410215fc74f0b1581a81aa3d626055138ee5",
+    "vendor/omr-preview/runtime.js": "859312687f3e54410f191f3354cd5314d4911a5cf74221844b9b1431566a1b63",
+    "vendor/omr-preview/source/-EIimQu0.js": "bca3a16fa5cfa004e932ff6fa2eabbc5bee2dafbbb595d1e26039795e01a8098",
+    "vendor/omr-preview/source/8uJXABZy.js": "15a01d75d957febffe17e071dacb545ce786cbbaab018ebd59e58c472b1a3c2a",
+    "vendor/omr-preview/source/BFxMqP97.js": "8d6191f969f91b463ac5555a9f039e84f7250d0442aacf2c1814cebff7d55601",
+    "vendor/omr-preview/source/C6zEzIug.js": "5a1a855f1d847164343c168daededcb1cd2e165e43d3bc2c587b911d06d0f500",
+    "vendor/omr-preview/source/CHZCu2qy.js": "c7e40d3548b64b8de943df692331bb64010aa82d9eb12384042514428f22f56a",
+    "vendor/omr-preview/source/CMo_b7JC.js": "bb37b17269a4c11b664a3cf7fb7c5b610dcb86cd05c57254c27f0a465c60bd2e",
+    "vendor/omr-preview/source/CNs_Ozdc.js": "bdf2e55a3d779ecf81cb8ff9de6c2f2382019d88bdcc37bf14052f2cdeff2355",
+    "vendor/omr-preview/source/COsCKZWP.js": "e4fd106600ed4e4c10c8d8a035fc4c21e414962a880eb4e70b09a290c23b58bf",
+    "vendor/omr-preview/source/CR7uvW5E.js": "62772258da39a487d08b5272fca4c9034f347a3a0371df27ac824bd3d306d3a4",
+    "vendor/omr-preview/source/CWT44DWd.js": "07d5328063c53b5234abeb5c82b0a90e2489f69bb2aa6068c7256c7aa9693fc5",
+    "vendor/omr-preview/source/CzFqmaqM.js": "856a13298330fb67907f0b06caaab7f2db21717a0b4ba80d6edb2bebebe9923b",
+    "vendor/omr-preview/source/D0Ojt8zw.js": "d95bbb884c7503397727433935a1f885be16fab1be0a3a3c54f180dfcd74aeb3",
+    "vendor/omr-preview/source/DhuA3TEA.js": "34e7c4c21c3cbdaf1d843735a65e79e3a2f899cec8e686c6d88c713b8519bedc",
+    "vendor/omr-preview/source/Dn7CRAow.js": "1cc89e0c0933b4455c7fb19c146d6b27b8598f13b50fd67957e5ba9b93f21e48",
+    "vendor/omr-preview/source/Drc2WqKd.js": "97cb1e171eda60b40b803b5d434410475d0558556bead567a55a32b6e5c380ed",
+    "vendor/omr-preview/source/DsHCOj37.js": "63a2ef6f6e09fde16e1f615adc853014df9ae2c391eff21d3c2a1a0b307fd1f0",
+    "vendor/omr-preview/source/Y1_n5oYk.js": "ae8264a3e02bacc9f5cdba7b0bb799c245d6ec43c1a90d078efcad47c7efc2be",
+    "vendor/omr-preview/source/aVcGJ-7_.js": "baf3da34084575c859f7839328c7433ea2a9a7a725c43d1386caea71fe94fbdf",
+    "vendor/omr-preview/source/ebkOLk70.js": "d4c4f31ce261c5413585a105eca9e9ea7d91446d9618889461bc6b71ade09164",
+    "vendor/omr-preview/source/entry.js": "b23a5737fff8a4bb7ccbdf402cb567915ae85ca189f1fa07ad732522c04bf3cb",
+    "vendor/omr-preview/source/nuxt-shim.js": "4c74c556d24d4c4bcbe81ae384f227462d86c614a0d6baf349b507f3fb6b268d",
+    "vendor/omr-preview/source/offline-api.js": "d944d271f465665f05b246e14bf8d8dfc48f7fa3c02a1295b17a4069cc7039c0",
+    "vendor/question-editor.js": "e1114335a4f2c037b8168cff2edee108797bca62b52b3f1e44e3a37be1f037ef",
+    "vendor/question-viewer.js": "25e1a48cb23f9ddb1faf49e70ce25233067f262f9a51a29d22244a7f24bf150d",
+    "vendor/value-type-dropdown.js": "595dc2a50b6d061ad99982595b35ee8975ead929de9674be373b821764661aca",
+    "vendor/value-type-input.js": "44846d85ec58c1b780b80a85d2abb1060ea29211f1d3b8761e78d60c50a0ecfc",
+    "verification/precise/value-demo-source.js": "9b2d676fdb82a13d150f80565ebd7f3a9dd3e711de67f0f11fe109610a07da84"
+  }
+}

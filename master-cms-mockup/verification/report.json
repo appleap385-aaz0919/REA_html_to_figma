@@ -1,0 +1,175 @@
+{
+  "runAt": "2026-11-20 12:44:11",
+  "launch": "Chrome headless / isolated profile / offline=True / file://index.html",
+  "cases": [
+    {
+      "name": "30 storyboard screen entries render without runtime errors",
+      "status": "passed",
+      "seconds": 3.81
+    },
+    {
+      "name": "Search, empty result, reset-before-query and preserved page context",
+      "status": "passed",
+      "seconds": 0.91
+    },
+    {
+      "name": "Source creation generates code and persists after reload",
+      "status": "passed",
+      "seconds": 1.07
+    },
+    {
+      "name": "Source inactive confirmation cancel, accept and existing relation preservation",
+      "status": "passed",
+      "seconds": 1.12
+    },
+    {
+      "name": "Current/add source tabs, inactive candidate, add/remove and minimum one source",
+      "status": "passed",
+      "seconds": 1.69
+    },
+    {
+      "name": "Draft chooser, temporary save keeps current version, apply updates and clears draft",
+      "status": "passed",
+      "seconds": 1.37
+    },
+    {
+      "name": "Unsaved navigation cancel preserves input, leave discards local edit",
+      "status": "passed",
+      "seconds": 1.11
+    },
+    {
+      "name": "51-item HML N disabled, warning, approval allowed and no paper created",
+      "status": "passed",
+      "seconds": 1.75
+    },
+    {
+      "name": "Review all-D approval blocked and discard requires reason",
+      "status": "passed",
+      "seconds": 0.78
+    },
+    {
+      "name": "Definition has no paper radio and document approval differs from Master status",
+      "status": "passed",
+      "seconds": 1.51
+    },
+    {
+      "name": "Registration source does not set usage, 50 boundary and unjudged approval guard",
+      "status": "passed",
+      "seconds": 1.11
+    },
+    {
+      "name": "Paper set moves as one group, save, last-group guard and cancel exclude",
+      "status": "passed",
+      "seconds": 1.22
+    },
+    {
+      "name": "Paper candidate duplicate guard and local-only add before save",
+      "status": "passed",
+      "seconds": 0.87
+    },
+    {
+      "name": "Legacy paper cleanup preserves HML documents and Master items",
+      "status": "passed",
+      "seconds": 0.76
+    },
+    {
+      "name": "COPY creates draft and history; relation removal preserves item and generation history",
+      "status": "passed",
+      "seconds": 2.21
+    },
+    {
+      "name": "Vendor HML save is pending until CMS temporary save",
+      "status": "passed",
+      "seconds": 1.67
+    },
+    {
+      "name": "HTML table, symbol and textbox insertion with temporary save",
+      "status": "passed",
+      "seconds": 1.19
+    },
+    {
+      "name": "OMR correct-answer editing, preview response and empty answer validation",
+      "status": "passed",
+      "seconds": 1.82
+    },
+    {
+      "name": "All 14 OMR forms restore and invalid JSON preserves previous valid form",
+      "status": "passed",
+      "seconds": 1.4
+    },
+    {
+      "name": "Math cancel/apply, MathML preview and empty-handwriting disabled state",
+      "status": "passed",
+      "seconds": 1.65
+    },
+    {
+      "name": "iframe editing remains isolated, compare and destroy behavior",
+      "status": "passed",
+      "seconds": 1.24
+    },
+    {
+      "name": "Metadata search pickers, deduplication, competency maximum and behavior single choice",
+      "status": "passed",
+      "seconds": 1.74
+    },
+    {
+      "name": "Duplicate source classification is blocked even when usage differs",
+      "status": "passed",
+      "seconds": 0.59
+    },
+    {
+      "name": "Definition discard persists and removes approval controls",
+      "status": "passed",
+      "seconds": 1.19
+    },
+    {
+      "name": "Paper use transition validates members and discard locks modification",
+      "status": "passed",
+      "seconds": 1.56
+    },
+    {
+      "name": "Deployment selection, redeploy notice and local-only completion",
+      "status": "passed",
+      "seconds": 1.02
+    },
+    {
+      "name": "Lab admin selection guards and nested 2 by 3 matrix insertion",
+      "status": "passed",
+      "seconds": 1.89
+    },
+    {
+      "name": "Source, twin candidate and paper candidate popup pagination",
+      "status": "passed",
+      "seconds": 1.89
+    },
+    {
+      "name": "Paragraph settings modify actual content and overlap shape uses triangle geometry",
+      "status": "passed",
+      "seconds": 1.08
+    },
+    {
+      "name": "Second ZIP is rejected without losing the first and Definition remains single-item",
+      "status": "passed",
+      "seconds": 0.86
+    },
+    {
+      "name": "Every base screen stays within root width at 1600, 1280 and 760 pixels",
+      "status": "passed",
+      "seconds": 8.98
+    },
+    {
+      "name": "1280 layout and tablet navigation",
+      "status": "passed",
+      "seconds": 0.68
+    }
+  ],
+  "passed": 32,
+  "failed": 0,
+  "runtimeErrors": [],
+  "httpRequests": [],
+  "notCovered": [
+    "실제 CMS 서버, 실제 HML/ZIP 해석, AI, 배포 수신, 필기 인식, 실제 서비스 채점",
+    "전체 71개 UI 변형의 픽셀 일치",
+    "모든 입력 조합과 브라우저별 파일 저장 정책"
+  ]
+}

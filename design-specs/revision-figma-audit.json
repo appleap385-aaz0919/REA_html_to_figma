@@ -36,5 +36,62 @@
       "originalVectorAspectErrors"
     ],
     "freshCheckScope": "Text bounds and same-frame description overlap throughout the 30 current screen sections; all 52 precise modal tags; math tab visual review"
+  },
+  "latestApprovedDelta": {
+    "id": "ITEM-STATUS-EDIT-20261119",
+    "date": "2026-11-19",
+    "scope": "REV_ITM_02 main frame and approved state panel only",
+    "textOutside": 0,
+    "descriptionTextOverlaps": 0,
+    "imageAspectErrors": 0,
+    "obsoleteStateEditInstructions": 0,
+    "evidence": "item-status-sync-verification.json",
+    "earlierWholeFileAuditPreserved": true
+  },
+  "latestAnnotationCorrection": {
+    "date": "2026-11-19",
+    "status": "verified",
+    "screen": "REV_ITM_02",
+    "figmaFrame": "8:16538",
+    "descriptionNumbers": [
+      8
+    ],
+    "removedNumbers": [
+      13,
+      14
+    ],
+    "label08AtMainSave": true,
+    "label08AboveImage": true,
+    "descriptionRows": 12,
+    "textOutside": 0,
+    "textOverlaps": 0,
+    "evidence": "policy-evidence/request1-status08-consolidated.json",
+    "screenshot": "policy-evidence/2026-11-19-status08-consolidated.png",
+    "businessPolicyChanged": false
+  },
+  "latestPolicyDelta": {
+    "id": "PAPER-ITEM-DEPLOYMENT-20261120",
+    "date": "2026-11-20",
+    "status": "html_figma_descriptions_applied_verified",
+    "summary": "사용(Y) 문항만 배포. 폐기(D)는 평가지 배포·선행 배포·Service 존재 검사에서 제외. 포함 문항의 선행 배포 필요. Master 평가지 자동 폐기·미사용(N) 및 관리자 수동 복귀. 사용 중지=미사용(N).",
+    "authorization": {
+      "scope": "PAPER-ITEM-DEPLOYMENT-20261120",
+      "skipIntermediateApproval": true,
+      "userInstruction": "이번에만 승인 없이 HTML·Figma·Description 모두 반영",
+      "futureRequestsRequireExistingApprovalFlow": true,
+      "reviewRequestsAutoApproved": false
+    },
+    "policyArtifact": "paper-item-deployment-policy-20261120.json",
+    "verificationArtifact": "deployment-policy-sync-verification.json",
+    "storyboardApplied": true,
+    "mockupApplied": true,
+    "cmsApplied": false,
+    "newNumberedDescriptions": 0,
+    "existingDescriptionsUpdated": 8,
+    "url": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19545",
+    "itemUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+    "editUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-19677",
+    "rollback": "../rollback/before-deployment-policy-20261120",
+    "figmaRollbackFrame": "36:2"
   }
 }

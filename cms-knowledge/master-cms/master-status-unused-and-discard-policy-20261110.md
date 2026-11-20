@@ -1,5 +1,7 @@
 # Master 승인미사용 N·폐기 D의 실제 전환과 편집 경계
 
+> 2026-11-19 후속 승인: 상태 정보의 초기 편집·저장 활성화·허용 전환은 [사용자 승인 정책](item-status-edit-approved-policy-20261119.md)을 따릅니다. 아래는 당시 실제 CMS 관찰 기록이며 보존합니다. 승인된 변경을 실제 CMS에 적용했다는 뜻은 아닙니다.
+
 작성일은 2026-11-10이며, 이 보고서의 새 실행 범위는 phase58의 2864~2877과 phase60의 2903~2922입니다. 자체 단건 COPY2089239를 R→N으로, Definition에서 생성된 자체 F문항2089375를 F→D로 정상 상태 수정 UI에서 각각 한 번 저장했습니다. N 문항은 2089019, D 문항은 2089082라는 같은 상세 버전을 유지했습니다. 업무 누계는 78회이고 Service 배포는 없습니다. 이 작업은 로컬 근거·보존 소스만 읽어 새 보고서와 보충맵을 작성했습니다. [phase58](session-20261110-phase58.json#L1), [phase60](session-20261110-phase60.json#L1), [N 의도](own-single-copy-unused-approval-intent-20261110.json#L1), [D 의도](own-definition-failed-item375-discard-intent-20261110.json#L1)
 
 **현재 계정에서 관찰한 전이 선택지**

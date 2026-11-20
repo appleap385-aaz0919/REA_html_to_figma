@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "nativePermission": true,
+  "transport": "Real native folder picker and disk I/O; terminal-send replaced (no actual conversation delivery).",
+  "checks": [
+    "Ordinary file:// Chrome grants the real native folder handle and connects without a server",
+    "Browser request reaches a durable job and accepted receipt returns to that browser",
+    "Real begin/result files and after capture reach the original external browser",
+    "Result file is acknowledged only after browser application",
+    "Native directory handle and request/result survive a page reload",
+    "Only a user approval emits the separate document synchronization job"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "files": {
+    "review.js": "c56803d77e323c75293722dacc88527ad0480932d745c4770d0e2d6107144d5b",
+    "review_file_bridge.js": "ba2f0dc2a3a52f830ad096b9f2f985e45014ae0bf8d83cf91208249eab33a1ef",
+    "review_agent.py": "42e2fd9853349c063a1376c7d01b809d864818abfce30e44154e5fb268a59d02"
+  }
+}

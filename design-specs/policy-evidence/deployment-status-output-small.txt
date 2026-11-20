@@ -1,0 +1,6 @@
+const raw=figma.root.getPluginData('cmsDeploymentPolicyApplied');
+const v=raw?JSON.parse(raw):null;print('DEPLOYMENT_STATUS '+JSON.
+stringify({applied:!!v,backup:v?.backup,changes:v?.changes.
+length,frames:v?.frames,newNumberedDescriptions:v?.
+newNumberedDescriptions}));
+ 

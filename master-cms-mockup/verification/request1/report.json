@@ -1,0 +1,60 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Initial state has editable fields, a gray disabled save and no edit/cancel controls",
+      "status": "passed"
+    },
+    {
+      "name": "Each field and combined reversions compare actual values with the saved baseline",
+      "status": "passed"
+    },
+    {
+      "name": "Cancel preserves input; confirmed save refreshes the service view and resets the baseline",
+      "status": "passed"
+    },
+    {
+      "name": "Discarded items lock every status field and save, including direct handler calls",
+      "status": "passed"
+    },
+    {
+      "name": "Existing approval validation still runs before the save confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "Set-wide state propagation and warning are preserved after the new save flow",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation warns only while values differ, and stops warning after a full reversion",
+      "status": "passed"
+    },
+    {
+      "name": "Question pauses work; answer persists, resumes the same request and stays visible in the main card",
+      "status": "passed"
+    },
+    {
+      "name": "A replaced file snapshot retries with a fresh handle and recovers without flashing an English warning",
+      "status": "passed"
+    },
+    {
+      "name": "A result prompts manual reload, stays visible when the panel closes, and preserves the result after reload",
+      "status": "passed"
+    },
+    {
+      "name": "Status controls and save remain usable at 390px",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "files": {
+    "app.js": "29336164286796a8dcb2cbfbaa71b5918ad691956a832dbde484e762037debba",
+    "styles.css": "5efcc5b3341f1ebd4b8b4a56762a1fca94cd0b594f82e2fc7820b9c4a634c8a0",
+    "review.js": "e10899da853a74c0f93d2310343ff0fa0c4aaf1b2d4f072cc2590bd968f374e7",
+    "review.css": "ee19cc0b5efe5941952e082ec0f935cb84b4c6ba8b21cb11ffe14e1fc81b6e09",
+    "review_file_bridge.js": "7b115a071f5ef370967be441a389279d7d545b1ea03a74362c619ed900b55a0d",
+    "review_agent.py": "dfc1773c02f3e2ceca32187aca30a0d13b1bac93da953b6098318390315d4c11"
+  }
+}

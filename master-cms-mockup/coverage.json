@@ -1,0 +1,1555 @@
+{
+  "date": "2026-11-13",
+  "source": "../design-specs/revision-aligned-plan.json + revision-modal-plan.json",
+  "screenCount": 30,
+  "modalCount": 52,
+  "screens": [
+    {
+      "id": "REV_HOME_01",
+      "title": "홈·공통 메뉴",
+      "route": "/home",
+      "elementCount": 3
+    },
+    {
+      "id": "REV_ITM_01",
+      "title": "전체 문항 목록",
+      "route": "/items",
+      "elementCount": 4
+    },
+    {
+      "id": "REV_ITM_02",
+      "title": "문항 상세",
+      "route": "/items/2100001",
+      "elementCount": 12
+    },
+    {
+      "id": "REV_ITM_03",
+      "title": "문항 수정 · 메타정보 수정",
+      "route": "/items/2100001/edit/meta",
+      "elementCount": 11
+    },
+    {
+      "id": "REV_ITM_04",
+      "title": "문항 수정 · 한글(HML) 수정",
+      "route": "/items/2100001/edit/hml",
+      "elementCount": 2
+    },
+    {
+      "id": "REV_ITM_05",
+      "title": "문항 수정 · HTML 수정",
+      "route": "/items/2100001/edit/html",
+      "elementCount": 8
+    },
+    {
+      "id": "REV_ITM_06",
+      "title": "문항 수정 · OMR 수정",
+      "route": "/items/2100001/edit/omr",
+      "elementCount": 6
+    },
+    {
+      "id": "REV_ITM_07",
+      "title": "별도 한글(HML) 편집기",
+      "route": "/items/2100001/edit/hml",
+      "elementCount": 3
+    },
+    {
+      "id": "REV_LAB_01",
+      "title": "랩 목차·관리자 도구",
+      "route": "/lab",
+      "elementCount": 5
+    },
+    {
+      "id": "REV_LAB_02",
+      "title": "수식 입력기 데모",
+      "route": "/lab/math",
+      "elementCount": 4
+    },
+    {
+      "id": "REV_LAB_03",
+      "title": "OMR 전체 유형 갤러리",
+      "route": "/lab/omr",
+      "elementCount": 5
+    },
+    {
+      "id": "REV_LAB_04",
+      "title": "OMR 복원 테스트 (JSON → 화면)",
+      "route": "/lab/restore",
+      "elementCount": 4
+    },
+    {
+      "id": "REV_LAB_05",
+      "title": "편집기 격리 테스트 (기존 ↔ iframe)",
+      "route": "/lab/isolation",
+      "elementCount": 3
+    },
+    {
+      "id": "MST_HML_C01",
+      "title": "HML 문항 등록 목록",
+      "route": "/hml",
+      "elementCount": 3
+    },
+    {
+      "id": "MST_HML_C02",
+      "title": "HML 신규 등록",
+      "route": "/hml/new",
+      "elementCount": 6
+    },
+    {
+      "id": "MST_HML_C03",
+      "title": "HML 상세 · 초안 검수",
+      "route": "/hml/6001",
+      "elementCount": 4
+    },
+    {
+      "id": "MST_HML_C04",
+      "title": "HML 상세 · 처리 결과 조회",
+      "route": "/hml/6003",
+      "elementCount": 4
+    },
+    {
+      "id": "MST_DIFI_C01",
+      "title": "디피니션 문항 등록 목록",
+      "route": "/definition",
+      "elementCount": 3
+    },
+    {
+      "id": "MST_DIFI_C02",
+      "title": "ZIP 신규 등록",
+      "route": "/definition/new",
+      "elementCount": 7
+    },
+    {
+      "id": "MST_DIFI_C03",
+      "title": "디피니션 상세 · 초안 검수",
+      "route": "/definition/7001",
+      "elementCount": 4
+    },
+    {
+      "id": "MST_DIFI_C04",
+      "title": "디피니션 상세 · 처리 결과 조회",
+      "route": "/definition/7002",
+      "elementCount": 5
+    },
+    {
+      "id": "MST_TWN_C01",
+      "title": "쌍둥이 그룹 관리 목록",
+      "route": "/twins",
+      "elementCount": 2
+    },
+    {
+      "id": "MST_TWN_C02",
+      "title": "쌍둥이 그룹 상세",
+      "route": "/twins/3001",
+      "elementCount": 2
+    },
+    {
+      "id": "REV_PAP_LIST",
+      "title": "평가지 관리",
+      "route": "/papers",
+      "elementCount": 8
+    },
+    {
+      "id": "REV_PAP_DETAIL",
+      "title": "평가지 상세",
+      "route": "/papers/5001",
+      "elementCount": 10
+    },
+    {
+      "id": "REV_PAP_EDIT",
+      "title": "평가지 수정",
+      "route": "/papers/5001/edit",
+      "elementCount": 11
+    },
+    {
+      "id": "REV_SRC_LIST",
+      "title": "문항 출처 관리",
+      "route": "/sources",
+      "elementCount": 8
+    },
+    {
+      "id": "REV_SRC_FORM",
+      "title": "출처 등록",
+      "route": "/sources/new",
+      "elementCount": 12
+    },
+    {
+      "id": "REV_SRC_DETAIL",
+      "title": "출처 상세",
+      "route": "/sources/8001",
+      "elementCount": 9
+    },
+    {
+      "id": "REV_SRC_EDIT",
+      "title": "출처 수정",
+      "route": "/sources/8001/edit",
+      "elementCount": 9
+    }
+  ],
+  "modals": [
+    {
+      "id": "REV_HOME_LOGOUT",
+      "title": "로그아웃",
+      "screen": "REV_HOME_01",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "로그아웃"
+      ],
+      "variants": [
+        "보존 DOM 상태"
+      ],
+      "route": "/home",
+      "implementation": {
+        "file": "app.js",
+        "entry": "logout → confirm"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_DETAIL_OMR",
+      "title": "OMR 미리보기",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "유형별 응답 영역",
+        "채점 결과",
+        "정답 보기"
+      ],
+      "buttons": [
+        "닫기"
+      ],
+      "variants": [
+        "정답 보기 꺼짐; 1~5 답란과 채점하기·닫기·X"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "previewOmr"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_STATUS_SAVE",
+      "title": "상태 정보 저장",
+      "screen": "REV_ITM_02",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장",
+        "닫기(X)"
+      ],
+      "variants": [
+        "단건 저장",
+        "세트 상태 저장",
+        "단건 폐기",
+        "세트 전체 폐기"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "status-save → confirm"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_STATUS_LEAVE",
+      "title": "이동",
+      "screen": "REV_ITM_02",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "이동"
+      ],
+      "variants": [
+        "보존 DOM 상태"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "go / hashchange navigation guard"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_PRODUCT",
+      "title": "출처 관리",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "현재 출처",
+        "출처 추가",
+        "페이지",
+        "용도",
+        "출처코드/출처명",
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "학기"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "추가",
+        "수정",
+        "해제"
+      ],
+      "variants": [
+        "현재 출처",
+        "출처 추가"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "itemSources"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_PAPERS",
+      "title": "평가지 목록",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "평가지 ID",
+        "평가지명",
+        "생성 방식",
+        "상태",
+        "등록자 · 등록일"
+      ],
+      "buttons": [
+        "닫기"
+      ],
+      "variants": [
+        "연결된 평가지 없음"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "item-papers"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_DEPLOY",
+      "title": "문항 배포",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "배포 대상",
+        "AI출제마법사 CMS",
+        "개발 서비스"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "배포"
+      ],
+      "variants": [
+        "동일 버전·승인 대기; 배포 비활성"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "deploy"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_DRAFT",
+      "title": "임시 저장 확인",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "임시저장 시각"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "variants": [
+        "취소 / 임시저장 수정하기 / 검수완료 수정하기 / X 모두 온전함"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "item-edit draft chooser"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "TWN_C03_CURRENT_ADD",
+      "title": "쌍둥이 문항 관리",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "문항 ID·세트 ID(세트일 때)",
+        "현재 쌍둥이 / 쌍둥이 추가 탭",
+        "현재 표: 문항 ID·문제·단원코드·형태/난이도·상태·해제",
+        "검색 기준: 문항 ID/지문/문제/출처코드/등록자 ID/원본 파일명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·난이도·형태1/2/3",
+        "세트 여부(단일/세트)·상태(R/F/Y/N/D)",
+        "결과 표: 문항 ID·문제·형태/난이도·세트 ID(문항수)·상태·매핑 정보·추가"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "현재 쌍둥이",
+        "쌍둥이 추가",
+        "초기화",
+        "조회",
+        "추가",
+        "해제",
+        "닫기"
+      ],
+      "variants": [
+        "단건 · 현재 쌍둥이",
+        "세트 · 현재 쌍둥이",
+        "쌍둥이 추가"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "openTwins"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "TWN_C03_GENERATE",
+      "title": "쌍둥이 문항 생성",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "생성 방식: 복제(COPY, 기본 선택) / AI 생성",
+        "세트일 때: 세트에 속한 모든 문항이 함께 생성됨 안내"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "취소",
+        "생성 시작"
+      ],
+      "variants": [
+        "단건 · 복제 선택",
+        "단건 · AI 생성 선택",
+        "세트 · 복제 선택"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "twin-generate"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "TWN_C03_HISTORY",
+      "title": "쌍둥이 생성 이력",
+      "screen": "REV_ITM_02",
+      "fields": [
+        "문항 ID·방식·요청자·생성일시 표",
+        "세트는 한 생성 묶음의 자식 ID별 행과 방식/요청자/일시 병합 셀"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "닫기"
+      ],
+      "variants": [
+        "단건 생성 이력",
+        "세트 생성 이력"
+      ],
+      "route": "/items/2100001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "twin-history"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_UNIT",
+      "title": "단원코드 추가 (검색)",
+      "screen": "REV_ITM_03",
+      "fields": [
+        "단원 코드/단원명",
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "학기",
+        "조회 결과 선택"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "단원코드 추가"
+      ],
+      "variants": [
+        "초기 미조회 상태"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "app.js",
+        "entry": "unitPicker"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_ACHIEVEMENT",
+      "title": "성취기준 추가 (검색)",
+      "screen": "REV_ITM_03",
+      "fields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "조회 결과 선택"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "성취기준 추가"
+      ],
+      "variants": [
+        "초기 미조회 상태"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "mapping-add + mapping-search"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_DOMAIN",
+      "title": "내용영역 추가 (검색)",
+      "screen": "REV_ITM_03",
+      "fields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "과목",
+        "학년",
+        "조회 결과 선택"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "내용영역 추가"
+      ],
+      "variants": [
+        "검색 결과와 취소/내용영역 추가"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "mapping-add + mapping-search"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_COMPETENCY",
+      "title": "교과역량 추가 (검색)",
+      "screen": "REV_ITM_03",
+      "fields": [
+        "교육과정",
+        "학교급",
+        "과목군",
+        "조회 결과 선택"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "교과역량 추가"
+      ],
+      "variants": [
+        "검색 결과와 취소/교과역량 추가"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "mapping-add + mapping-search"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_BEHAVIOR",
+      "title": "행동영역 추가 (검색)",
+      "screen": "REV_ITM_03",
+      "fields": [
+        "과목군",
+        "조회 결과 선택"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "행동영역 추가"
+      ],
+      "variants": [
+        "이해 선택; 검색 결과와 취소/행동영역 추가"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "mapping-add + mapping-search"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_TEMP",
+      "title": "임시 저장",
+      "screen": "REV_ITM_03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "임시 저장"
+      ],
+      "variants": [
+        "임시 저장하시겠습니까?; 취소/임시 저장/X"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "item-temp"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_APPLY",
+      "title": "전체 반영",
+      "screen": "REV_ITM_03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장"
+      ],
+      "variants": [
+        "저장하시겠습니까?; 취소/저장/X"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "item-apply"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_CANCEL",
+      "title": "문항 수정 취소",
+      "screen": "REV_ITM_03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "저장하지 않고 이동하시겠습니까?; 취소/저장 하지 않고 이동/X"
+      ],
+      "route": "/items/2100001/edit/meta",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_PARAGRAPH",
+      "title": "문단 설정 (pt)",
+      "screen": "REV_ITM_05",
+      "fields": [
+        "왼쪽 여백",
+        "오른쪽 여백",
+        "첫 줄 (음수: 내어쓰기)",
+        "문단 앞",
+        "문단 뒤",
+        "줄간격 (배율)"
+      ],
+      "buttons": [
+        "적용",
+        "취소"
+      ],
+      "variants": [
+        "문단 설정 (pt); 모든 입력과 적용/취소"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: paragraph"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_MATH",
+      "title": "수식 편집",
+      "screen": "REV_ITM_05",
+      "fields": [
+        "비주얼 편집",
+        "LaTeX 소스",
+        "한글 크기",
+        "수식 본문",
+        "미리보기 (KaTeX — 실서비스 렌더)"
+      ],
+      "buttons": [
+        "⌨ 팔레트",
+        "비주얼 편집",
+        "LaTeX 소스",
+        "취소",
+        "확인"
+      ],
+      "variants": [
+        "비주얼 편집",
+        "LaTeX 소스"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: math"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_IMAGE_URL",
+      "title": "이미지 URL 입력 · 브라우저 prompt",
+      "screen": "REV_ITM_05",
+      "fields": [
+        "추가할 이미지의 전체 URL을 입력하세요. (http:// 또는 https://)"
+      ],
+      "buttons": [
+        "확인",
+        "취소"
+      ],
+      "variants": [
+        "https:// 기본값; 확인/취소"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: image_url"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_SYMBOL",
+      "title": "특수문자 팔레트",
+      "screen": "REV_ITM_05",
+      "fields": [],
+      "buttons": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "㉠",
+        "㉡",
+        "㉢",
+        "㉣",
+        "㉤",
+        "㉥",
+        "㉦",
+        "㉧",
+        "㉮",
+        "㉯",
+        "㉰",
+        "㉱",
+        "㉲",
+        "□",
+        "■",
+        "○",
+        "●",
+        "△",
+        "▲",
+        "▽",
+        "◇",
+        "◆",
+        "☆",
+        "★",
+        "→",
+        "←",
+        "↑",
+        "↓",
+        "↔",
+        "⇒",
+        "※",
+        "·",
+        "…",
+        "～",
+        "〈",
+        "〉",
+        "《",
+        "》",
+        "「",
+        "」",
+        "『",
+        "』"
+      ],
+      "variants": [
+        "특수문자 2행 팔레트"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: symbol"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_OVERLAP",
+      "title": "글자 겹치기",
+      "screen": "REV_ITM_05",
+      "fields": [
+        "겹칠 글자",
+        "모양",
+        "글자를 한 자리에 포개기",
+        "미리보기"
+      ],
+      "buttons": [
+        "취소",
+        "확인"
+      ],
+      "variants": [
+        "겹칠 글자/모양/한 자리에 포개기/미리보기/취소/확인"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: overlap"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_HTML_TEXTBOX",
+      "title": "글상자 편집",
+      "screen": "REV_ITM_05",
+      "fields": [
+        "내부 본문 편집",
+        "너비",
+        "높이",
+        "최소 높이"
+      ],
+      "buttons": [
+        "취소",
+        "적용"
+      ],
+      "variants": [
+        "글상자 편집; 줄 정렬/내용/너비/높이/최소 높이/취소/적용"
+      ],
+      "route": "/items/2100001/edit/html",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "rich-tool: textbox"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_ITM_OMR_PREVIEW",
+      "title": "OMR 미리보기",
+      "screen": "REV_ITM_06",
+      "fields": [
+        "유형별 학생 응답",
+        "채점 결과",
+        "정답 보기 상태"
+      ],
+      "buttons": [
+        "닫기"
+      ],
+      "variants": [
+        "정답 보기 꺼짐; 1~5 답란과 채점하기·닫기·X"
+      ],
+      "route": "/items/2100001/edit/omr",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "previewOmr"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_HML_SAVED",
+      "title": "한글 편집",
+      "screen": "REV_ITM_07",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "확인"
+      ],
+      "variants": [
+        "vendor-saved"
+      ],
+      "route": "/items/2100001/edit/hml",
+      "implementation": {
+        "file": "editor.js",
+        "entry": "hml-open save → alertBox"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_LAB_BUNDLE",
+      "title": "외부 번들 버전",
+      "screen": "REV_LAB_01",
+      "fields": [
+        "번들",
+        "버전",
+        "donga-question-viewer",
+        "donga-question-editor"
+      ],
+      "buttons": [
+        "닫기"
+      ],
+      "variants": [
+        "보존 DOM 상태"
+      ],
+      "route": "/lab",
+      "implementation": {
+        "file": "lab.js",
+        "entry": "lab-bundle"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_LAB_CACHE",
+      "title": "캐시 reload",
+      "screen": "REV_LAB_01",
+      "fields": [
+        "전체",
+        "공통코드",
+        "단원",
+        "사이트"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "reload"
+      ],
+      "variants": [
+        "보존 HTML 속성 기준 초기 선택 상태"
+      ],
+      "route": "/lab",
+      "implementation": {
+        "file": "lab.js",
+        "entry": "lab-cache"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_LAB_SESSION",
+      "title": "역할별 로그아웃",
+      "screen": "REV_LAB_01",
+      "fields": [
+        "전체",
+        "[MASTER] 관리자 (ADMIN)",
+        "[MASTER] 사용자 (USER)",
+        "[DOUCLASS] 관리자 (ADMIN)",
+        "[DOUCLASS] 사용자 (USER)"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "로그아웃"
+      ],
+      "variants": [
+        "보존 HTML 속성 기준 초기 선택 상태"
+      ],
+      "route": "/lab",
+      "implementation": {
+        "file": "lab.js",
+        "entry": "lab-session"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_LAB_MATH",
+      "title": "수식입력기",
+      "screen": "REV_LAB_02",
+      "fields": [
+        "키보드",
+        "손글씨",
+        "수식 입력",
+        "숫자·연산·기호",
+        "알파벳·그리스 문자",
+        "손글씨 캔버스",
+        "인식 결과",
+        "오류 안내"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "적용",
+        "한 획 지우기",
+        "전체 지우기",
+        "인식하기"
+      ],
+      "variants": [
+        "키보드; 9 입력",
+        "손글씨"
+      ],
+      "route": "/lab/math",
+      "implementation": {
+        "file": "lab.js",
+        "entry": "openMath"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_LAB_MATRIX",
+      "title": "행렬 선택",
+      "screen": "REV_LAB_02",
+      "fields": [
+        "행",
+        "열"
+      ],
+      "buttons": [
+        "닫기",
+        "추가"
+      ],
+      "variants": [
+        "보존 HTML 속성 기준 초기 선택 상태"
+      ],
+      "route": "/lab/math",
+      "implementation": {
+        "file": "lab.js",
+        "entry": "math-matrix"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C02_SOURCE",
+      "title": "출처 조회",
+      "screen": "MST_HML_C02",
+      "fields": [
+        "검색 기준: 출처코드/출처명",
+        "검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·용도",
+        "선택 라디오와 출처 결과 표·페이지"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "취소",
+        "선택"
+      ],
+      "variants": [
+        "출처 조회"
+      ],
+      "route": "/hml/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "sourcePicker"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C02_UNIT",
+      "title": "단원 코드 조회",
+      "screen": "MST_HML_C02",
+      "fields": [
+        "검색 기준: 단원 코드/단원명",
+        "검색어",
+        "교육과정·학교급·과목군·과목·학년·학기",
+        "단원 코드·대/중/소/소소단원 결과 표·페이지"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "닫기"
+      ],
+      "variants": [
+        "단원 조회"
+      ],
+      "route": "/hml/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "unitPicker(lookupOnly)"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C02_CANCEL",
+      "title": "HML 등록 취소",
+      "screen": "MST_HML_C02",
+      "fields": [],
+      "buttons": [
+        "닫기(X)",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "등록 취소"
+      ],
+      "route": "/hml/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C03_UNJUDGED",
+      "title": "시험지 승인",
+      "screen": "MST_HML_C03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "승인"
+      ],
+      "variants": [
+        "미검수 문항 안내",
+        "전체 폐기 상태 안내",
+        "평가지 정보 누락",
+        "승인 확인"
+      ],
+      "route": "/hml/6001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "doc-approve guards"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C03_REASON",
+      "title": "시험지 폐기",
+      "screen": "MST_HML_C03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "폐기"
+      ],
+      "variants": [
+        "폐기 사유 누락",
+        "폐기 확인"
+      ],
+      "route": "/hml/6001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "doc-discard"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "HML_C04_DRAFT",
+      "title": "임시 저장 확인",
+      "screen": "MST_HML_C04",
+      "fields": [
+        "임시 저장 시각"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "variants": [
+        "임시저장본 선택"
+      ],
+      "route": "/hml/6003",
+      "implementation": {
+        "file": "app.js",
+        "entry": "item-edit draft chooser"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C02_SOURCE",
+      "title": "출처 조회",
+      "screen": "MST_DIFI_C02",
+      "fields": [
+        "출처코드/출처명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기·용도",
+        "라디오 선택·출처 결과 표·페이지"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "취소",
+        "선택"
+      ],
+      "variants": [
+        "출처 조회"
+      ],
+      "route": "/definition/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "sourcePicker"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C02_UNIT",
+      "title": "단원 코드 조회",
+      "screen": "MST_DIFI_C02",
+      "fields": [
+        "단원 코드/단원명·검색어",
+        "교육과정·학교급·과목군·과목·학년·학기",
+        "단원 코드·대/중/소/소소단원 결과 표·페이지"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "초기화",
+        "조회",
+        "닫기"
+      ],
+      "variants": [
+        "단원 조회"
+      ],
+      "route": "/definition/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "unitPicker(lookupOnly)"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C02_CANCEL",
+      "title": "ZIP 등록 취소",
+      "screen": "MST_DIFI_C02",
+      "fields": [],
+      "buttons": [
+        "닫기(X)",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "등록 취소"
+      ],
+      "route": "/definition/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C03_ALL_D",
+      "title": "시험지 승인",
+      "screen": "MST_DIFI_C03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "승인"
+      ],
+      "variants": [
+        "전체 폐기 상태 안내",
+        "승인 확인"
+      ],
+      "route": "/definition/7001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "doc-approve all D guard"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C03_REASON",
+      "title": "시험지 폐기",
+      "screen": "MST_DIFI_C03",
+      "fields": [],
+      "buttons": [
+        "닫기",
+        "취소",
+        "폐기"
+      ],
+      "variants": [
+        "폐기 사유 누락",
+        "폐기 확인"
+      ],
+      "route": "/definition/7001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "doc-discard"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "DIFI_C04_DRAFT",
+      "title": "임시 저장 확인",
+      "screen": "MST_DIFI_C04",
+      "fields": [
+        "임시 저장 시각"
+      ],
+      "buttons": [
+        "닫기(X)",
+        "취소",
+        "임시저장 수정하기",
+        "검수완료 수정하기"
+      ],
+      "variants": [
+        "임시저장본 선택"
+      ],
+      "route": "/definition/7002",
+      "implementation": {
+        "file": "app.js",
+        "entry": "item-edit draft chooser"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_PAP_DEPLOY",
+      "title": "평가지 배포",
+      "screen": "REV_PAP_DETAIL",
+      "fields": [
+        "폐기 문항 제외 안내",
+        "배포 대상: AI출제마법사 CMS / 개발 서비스",
+        "대상별 선행 문항 배포 검사",
+        "사용 중지·초안·실패 차단 사유",
+        "재배포 안내"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "배포"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/papers/5001",
+      "implementation": {
+        "file": "app.js",
+        "entry": "deploy(isPaper=true)"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_PAP_ADD",
+      "title": "문항 추가",
+      "screen": "REV_PAP_EDIT",
+      "fields": [
+        "문항 ID/지문/문제/등록자 ID/원본 파일명 검색",
+        "교육과정·학교급·과목군·과목·학년·학기·난이도·형태1~3·상태 필터",
+        "결과: 선택·문항 ID·문제·형태/난이도·단원 코드·문항 상태·선택 불가 사유",
+        "후보 선택·전체 선택",
+        "사용/미사용·같은 출처·세트 단위 추가 안내"
+      ],
+      "buttons": [
+        "닫기",
+        "초기화",
+        "조회",
+        "취소",
+        "추가"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/papers/5001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "paper-add"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_PAP_REMOVE",
+      "title": "문항 제외",
+      "screen": "REV_PAP_EDIT",
+      "fields": [
+        "제외 대상: 문항 ID 또는 지문 ID·문항 수"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "제외"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/papers/5001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "paper-remove"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_PAP_CANCEL",
+      "title": "평가지 수정 취소",
+      "screen": "REV_PAP_EDIT",
+      "fields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/papers/5001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_PAP_DISCARD",
+      "title": "평가지 저장",
+      "screen": "REV_PAP_EDIT",
+      "fields": [
+        "폐기한 평가지는 다시 수정할 수 없습니다."
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/papers/5001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "paper-save discard confirmation"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_SRC_CREATE_CANCEL",
+      "title": "출처 등록 취소",
+      "screen": "REV_SRC_FORM",
+      "fields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/sources/new",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_SRC_USE_IMPACT",
+      "title": "영향 범위 확인",
+      "screen": "REV_SRC_EDIT",
+      "fields": [
+        "출처코드·출처명",
+        "매핑 문항 수",
+        "기존 매핑 문항 정보 유지(서비스 노출 유지) 안내",
+        "신규 문항 등록의 출처 선택에서 제외 안내"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "미사용(N)으로 변경"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/sources/8001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "source status change impact confirmation"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    },
+    {
+      "id": "REV_SRC_EDIT_CANCEL",
+      "title": "출처 수정 취소",
+      "screen": "REV_SRC_EDIT",
+      "fields": [
+        "저장하지 않고 이동하시겠습니까?"
+      ],
+      "buttons": [
+        "닫기",
+        "취소",
+        "저장 하지 않고 이동"
+      ],
+      "variants": [
+        "기본 상태"
+      ],
+      "route": "/sources/8001/edit",
+      "implementation": {
+        "file": "app.js",
+        "entry": "cancel-edit"
+      },
+      "implementationKind": "offline mock / confirmation / editable UI",
+      "verificationClaim": "기능별 검증 결과와 시드 검수 보고서를 별도로 확인합니다. 모든 UI 변형의 픽셀 일치를 뜻하지 않습니다."
+    }
+  ],
+  "deviations": [
+    "실제 HML/ZIP 파서와 벤더 HML 엔진 대신 예시 변환과 텍스트 편집",
+    "AI·배포·캐시·역할별 로그아웃은 로컬 모의 처리",
+    "MathML 기본 수식과 목업용 OMR 모델/채점 사용",
+    "정상 디피니션 세트 ZIP은 규격 미확정으로 신규 단건 예시만 제공",
+    "입력 유실·숨은 서버 오류·오래된 폼 덮어쓰기는 재현하지 않고 입력 보존과 충돌 안내 제공",
+    "50문항 초과 정책의 정확히 50문항과 문항 수 산정은 실제 구현 전 확정 필요"
+  ]
+}

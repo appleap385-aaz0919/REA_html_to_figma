@@ -501,5 +501,39 @@
     "latestStoryboardDelivery": "../../design-specs/figma-storyboard-revision-delivery.json",
     "masterStoryboardIndexUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=9-20632",
     "storyboardRevisionStatus": "v0.4 revised_verified_ready_for_user_review 2026-11-12"
-  }
+  },
+  "approvedDesignChanges": [
+    {
+      "id": "ITEM-STATUS-EDIT-20261119",
+      "date": "2026-11-19",
+      "userApproved": true,
+      "document": "item-status-edit-approved-policy-20261119.md",
+      "structuredPolicy": "../../design-specs/item-status-approved-policy.json",
+      "figmaUrl": "https://www.figma.com/design/xCjdhdFkSbToMiRVlXVN2V/?node-id=8-16538",
+      "realCmsApplied": false,
+      "observedHistoryPreserved": true
+    }
+  ],
+  "userConfirmedPolicyAdditions": [
+    {
+      "id": "PAPER-ITEM-DEPLOYMENT-20261120",
+      "date": "2026-11-20",
+      "document": "paper-item-deployment-policy-20261120.md",
+      "artifact": "../../design-specs/paper-item-deployment-policy-20261120.json",
+      "confirmed": "문항은 사용(Y)만 배포 가능. 사용 중지=미사용(N). 폐기(D)는 배포·선행 배포·Service DB 존재 검사에서 제외. 평가지 자동 폐기·사용 중지·수동 복귀는 Master CMS에 적용.",
+      "paperStatus": "confirmed",
+      "cmsApplied": false,
+      "mockupAppliedInThisTask": true,
+      "figmaAppliedInThisTask": true,
+      "status": "html_figma_descriptions_applied_verified",
+      "verification": "../../design-specs/deployment-policy-sync-verification.json",
+      "authorization": {
+        "scope": "PAPER-ITEM-DEPLOYMENT-20261120",
+        "skipIntermediateApproval": true,
+        "userInstruction": "이번에만 승인 없이 HTML·Figma·Description 모두 반영",
+        "futureRequestsRequireExistingApprovalFlow": true,
+        "reviewRequestsAutoApproved": false
+      }
+    }
+  ]
 }
